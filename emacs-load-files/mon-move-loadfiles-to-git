@@ -1,0 +1,294 @@
+#!/bin/sh
+#
+#
+### ==============================
+### :FILE-CREATED <Timestamp: #{2011-04-20T19:24:08-04:00Z}#{11163} - by MON KEY>
+### :FILE emacs-load-files/mon-move-loadfiles-to-git
+### ==============================
+### :NOTE This script won't work unless $DEVHOME is in your environment 
+### elisp> (getenv "DEVHOME")
+### shell> $DEVHOME
+###
+### No doubt there are better ways of doing this with a shell script, but... 
+### I F*CKING HATE SHELL SCRIPTING!!!
+### ==============================
+
+
+EMACS_LOAD_FILES_SRC=$DEVHOME/emacs-load-files
+NAF_MODE=$EMACS_LOAD_FILES_SRC/naf-mode
+EBAY=$NAF_MODE/ebay-template-mode
+
+EMACS_LOAD_FILES_GIT=$DEVHOME/emacs-load-files-GIT
+EMACS_LOAD_FILES_DEST=$EMACS_LOAD_FILES_GIT/emacs-load-files
+NAF_MODE_GIT=$EMACS_LOAD_FILES_DEST/naf-mode
+EBAY_GIT=$NAF_MODE_GIT/ebay-template-mode
+
+# TESTING
+NOT_GIT_DIR=$EMACS_LOAD_FILES_DEST/non-existent-dir 
+
+EMACS_EMPTY_DIRS=".emacsMon-gnu.d
+local-emacs-temp
+no-site-lisp
+site-lisp"
+
+# EMACS_LOAD_FILES_SRC EMACS_LOAD_FILES_DEST EMACS_LOAD_FILES
+EMACS_LOAD_FILES="mon-default-loads.el
+mon-default-start-loads.el
+mon-keybindings.el
+mon-post-load-hooks.el
+mon-w32-load.el
+mon-move-loadfiles-to-git" # this-non-existent-file
+
+
+# NAF_MODE NAF_MODE_GIT NAF_MODE_FILES
+NAF_MODE_FILES="mon-doc-help-undocd.el
+mon-doc-help-char-encoding-lossage.el
+mon-aliases.el
+mon-doc-help-CL.el
+mon-time-utils.el
+mon-line-utils.el
+mon-utils.el
+mon-doc-help-utils.el
+mon-insertion-utils.el
+mon-buffer-utils.el
+mon-regexp-symbols.el
+mon-type-utils-vars.el
+mon-seq-utils.el
+mon-region-utils.el
+mon-testme-utils.el
+mon-replacement-utils.el
+mon-url-utils.el
+mon-dir-utils.el
+mon-macs.el
+mon-error-utils.el
+mon-color-utils.el
+mon-env-proc-utils.el
+mon-dir-locals-alist.el
+google-define-redux.el
+mon-type-utils.el
+mon-alphabet-list-utils.el
+mon-randomize-utils.el
+naf-mode.el
+mon-bzr-utils.el
+mon-window-utils.el
+mon-event-utils.el
+mon-get-freenode-lisp-logs.el
+mon-string-utils.el
+mon-plist-utils.el
+naf-mode-dates.el
+naf-mode-english-roles.el
+naf-mode-faces.el
+naf-mode-xrefs.el
+mon-button-utils.el
+naf-mode-ulan-utils.el
+mon-dbc-xml-utils.el
+mon-doc-help-css.el
+mon-dir-utils-local.el
+mon-cl-compat.el
+mon-text-property-utils.el
+mon-tramp-utils.el
+mon-hash-utils.el
+mon-rename-image-utils.el
+mon-image-utils.el
+mon-loaddefs.el
+mon-name-utils.el
+mon-word-syntax-utils.el
+mon-rectangle-utils.el
+mon-boxcutter.el
+mon-empty-registers.el
+mon-get-mon-packages.el
+naf-mode-insertion-utils.el
+mon-cifs-utils.el
+mon-drive-transfer-utils.el
+mon-iptables-vars.el
+mon-jg-directory-creator.el
+naf-mode-ulan-help-docs.el
+naf-mode-wordfreq.el
+naf-skeletons.el
+mon-css-complete.el
+mon-animate-nursery-rhymes.el
+mon-cl-compat-regexps.el
+mon-css-check.el
+mon-doc-help-mail.el
+mon-doc-help-pacman.el
+mon-doc-help-proprietary.el
+mon-eight-bit-raw-utils.el
+mon-iptables-regexps.el
+naf-mode-state-names.el
+mon-doc-help-tidy.el
+mon-elisp-fileset.el
+naf-mccarthy-facts.el
+mon-mysql-utils.el
+mon-ps-pdf-utils.el
+mon-wget-utils.el
+naf-mode-french-months.el
+naf-mode-french-roles.el
+naf-mode-group-period-styles.el
+naf-mode-abbrevs.el
+naf-mode-art-keywords.el
+naf-mode-awards-prizes.el
+naf-mode-benezit-flags.el
+naf-mode-bibliograpbhic-entry.el
+naf-mode-city-names-us.el
+naf-mode-classes.el
+naf-mode-db-fields.el
+naf-mode-db-flags.el
+naf-mode-events.el
+naf-mode-institution.el
+naf-mode-intnl-city-names.el
+naf-mode-nationality-english.el
+naf-mode-nationality-french.el
+naf-mode-nation-english.el
+naf-mode-nation-french.el
+naf-mode-publications-periodicals-english.el
+naf-mode-publications-periodicals-french.el
+naf-mode-publications-periodicals-intnl.el
+naf-mode-regions.el
+naf-mode-students-of-julian.el"
+
+# EBAY EBAY_GIT EBAY_TEMPLATE_FILES
+EBAY_TEMPLATE_FILES="ebay-template-tools.el
+ebay-template-mode.el
+ebay-template-html-utils.el"
+
+# $EMACS_LOAD_FILES_SRC $NAF_MODE $EBAY $EMACS_LOAD_FILES_GIT $EMACS_LOAD_FILES_GIT $EMACS_LOAD_FILES_GIT/.git
+ensure_abort_dirs () 
+{
+    #for j in `echo "$EMACS_LOAD_FILES_SRC $NAF_MODE $EBAY $EMACS_LOAD_FILES_GIT $EMACS_LOAD_FILES_GIT EMACS_LOAD_FILES_DEST.git"`;do
+    for j in `echo "$EMACS_LOAD_FILES_SRC $NAF_MODE $EBAY $EMACS_LOAD_FILES_GIT $EMACS_LOAD_FILES_GIT"`;do
+        if [ ! -d "$j" ]
+            then 
+            echo "A required directory was non-existent: $j";
+            printf "\tdeclining to proceed further\n";
+            exit 1;
+        fi
+  done; 
+}
+
+ensure_dirs ()
+{
+    #for j in "$@"; do
+    for j in `echo "$EMACS_LOAD_FILES_DEST  $NAF_MODE_GIT $EBAY_GIT"`;do
+        if [ -d "$j" ]
+          then
+            echo "Found directory: $j";
+            echo
+            else
+            mkdir -p "$j";
+            echo "Created non-existent directory: $j"
+            echo
+        fi
+    done;
+}
+
+copy_dot_emacs ()
+{
+ if [ ! -e ~/.emacs ]
+  then
+  echo "could not locate ~/.emacs -- now you have two problems";
+  exit 1;
+  else
+     echo "copying ~/.emacs to $EMACS_LOAD_FILES_DEST/.emacs"
+     echo 
+     cp ~/.emacs $EMACS_LOAD_FILES_DEST/.emacs;
+  fi   
+}
+
+ensure_readme ()
+{
+ if [ ! -e $EMACS_LOAD_FILES_DEST/README ]
+  then
+     echo "Creaating empty file: $EMACS_LOAD_FILES_GIT/README"
+     echo 
+     touch $EMACS_LOAD_FILES_GIT/README
+  fi
+}
+
+ensure_empty_dirs ()
+{
+for j in $EMACS_EMPTY_DIRS; do
+    if [ ! -d "$EMACS_LOAD_FILES_DEST/$j" ]
+    then
+        mkdir -p "$EMACS_LOAD_FILES_DEST/$j";
+        echo "Created non-existent directory: $EMACS_LOAD_FILES_DEST/$j";
+        echo
+        continue;
+    fi
+done;
+}
+
+# EMACS_LOAD_FILES_SRC EMACS_LOAD_FILES_DEST EMACS_LOAD_FILES
+copy_emacs_load_files ()
+{ 
+ for f in $EMACS_LOAD_FILES; do 
+     if [ ! -e "$EMACS_LOAD_FILES_SRC/$f" ]                     # Check if file exists.
+     then
+        echo "FILE: $EMACS_LOAD_FILES_SRC/$f does not exist";  
+        echo
+        else                         # On to next.
+         cp "$EMACS_LOAD_FILES_SRC/$f" "$EMACS_LOAD_FILES_DEST/$f";
+         echo "Copied :FILE $f"; 
+         echo "From   :SOURCE $EMACS_LOAD_FILES_SRC/ to :DEST $EMACS_LOAD_FILES_DEST/";
+         echo
+     fi
+ done;
+}
+
+# NAF_MODE NAF_MODE_GIT $NAF_MODE_FILES
+copy_naf_mode_files ()
+{
+ for f in $NAF_MODE_FILES; do 
+     if [ ! -e "$NAF_MODE/$f" ]                     # Check if file exists.
+      then
+        echo "FILE: $NAF_MODE/$f does not exist";  
+        echo
+      else
+         cp "$NAF_MODE/$f" "$NAF_MODE_GIT/$f";
+         echo "Copied :FILE $f"; 
+         echo "From   :SOURCE $NAF_MODE/ to :DEST $NAF_MODE_GIT/";
+         echo
+     fi
+ done;
+}
+
+# $EBAY $EBAY_GIT $EBAY_TEMPLATE_FILES
+copy_ebay_template_files ()
+{
+ for f in $EBAY_TEMPLATE_FILES; do 
+     if [ ! -e "$EBAY/$f" ]                     # Check if file exists.
+      then
+        echo "FILE: $EBAY/$f does not exist";  
+        echo
+      else
+         cp "$EBAY/$f" "$EBAY_GIT/$f";
+         echo "Copied :FILE $f"; 
+         echo "From   :SOURCE $EBAY/ to :DEST $EBAY_GIT/";
+         echo
+     fi
+ done;
+}
+
+
+etags_after_copy ()
+{
+ find $EMACS_LOAD_FILES_DEST -name '*.el' -print | xargs etags -o $EMACS_LOAD_FILES_DEST/TAGS --language=lisp
+ echo "etags created $EMACS_LOAD_FILES_DEST/TAGS"
+ echo
+}
+
+
+ensure_abort_dirs
+ensure_dirs
+copy_dot_emacs
+ensure_empty_dirs
+ensure_readme
+copy_emacs_load_files
+copy_naf_mode_files
+copy_ebay_template_files
+etags_after_copy
+
+exit 0
+
+### ==============================
+### EOF
+

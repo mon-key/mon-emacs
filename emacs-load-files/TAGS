@@ -1,0 +1,2692 @@
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/mon-post-load-hooks.el,599
+(defgroup mon-post-load-hooks 126,3798
+(defcustom *mon-post-load-hooks-xrefs* 141,4414
+(defun mon-purge-cl-symbol-buffers-on-load 177,6156
+(defvar *mon-post-load-hook-trigger-buffer* 219,8416
+(defun mon-run-post-load-hooks 238,9415
+(defun mon-purge-doc-view-cache-directory 312,13572
+(defun mon-purge-thumbs-directory 330,14589
+(defun mon-purge-slime-swank-port-file 350,15586
+(defun mon-purge-tramp-persistency-file 367,16395
+(defun mon-purge-temporary-file-directory 384,17361
+(defvar *mon-purge-emacs-temp-file-dir-fncns* 408,18568
+(defun mon-purge-emacs-temp-files-on-quit 431,19722
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/mon-keybindings.el,456
+(defgroup mon-keybindings 204,7249
+(defcustom *mon-keybindings-xrefs* 219,7832
+(defun mon-keybind-globally 247,9308
+(defun mon-keybind-dired-mode 379,14930
+(defun mon-keybind-completions 426,17460
+(defun mon-keybind-w3m 539,21805
+(defun mon-keybind-emacs-lisp-mode 661,27476
+(defun mon-keybind-lisp-interaction-mode 713,30692
+(defun mon-keybind-slime 749,32753
+(defun mon-keybind-slime-inspector 946,42874
+(defun mon-keybind-conf-mode 990,44851
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/mon-w32-load.el,525
+(defun mon-maximize-frame-w32 118,3602
+(defun mon-minimize-frame 127,3952
+(defun mon-restore-frame 138,4365
+(defun mon-menu-bar 147,4773
+(defun mon-open-abbyy 169,5621
+(defun mon-open-notepad++ 187,6288
+(defun mon-open-fastone 202,6905
+(defun mon-open-photoshop 218,7481
+(defun mon-open-explorer 235,8168
+(defalias 'mon-explorer-open mon-explorer-open249,8721
+(defun mon-open-images-ed-swap 255,8904
+(defun mon-open-program-files 272,9795
+(defun mon-open-moz-down 286,10449
+(defun mon-open-workspace 305,11322
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/mon-default-start-loads.el,2378
+(defgroup mon-default-start-loads 190,7854
+(defcustom *mon-default-start-loads-xrefs* 241,10318
+(defvar *mon-default-start-load-sanity* 289,12838
+(defvar *mon-default-start-load-sanity-WARN-ONLY* 301,13457
+(defun mon-build-path-for-load-path 314,14157
+(defmacro mon-default-start-error/sane 322,14633
+(defun mon-set-load-path-init 381,17536
+(defun mon-set-color-themes-init 413,18836
+(defun mon-toggle-show-point-mode 462,21113
+(defun mon-set-emacs-temp-file/dir-init 488,22445
+(defun mon-set-infopath-init 559,26225
+(defun mon-set-bookmark-file-init 613,29045
+(defun mon-set-woman-manpath-init 672,32112
+(defun mon-set-C-source-directory-init 728,35019
+(defun mon-set-unicodedata-init 783,38088
+(defun mon-set-doc-view-programs-init 824,39999
+(defun mon-set-thumbs-conversion-program-init 879,42493
+(defun mon-set-boxcutter-init 938,45739
+(defun mon-set-image-dired-init 975,47663
+(defun mon-set-ispell-init 1134,53271
+(defun mon-set-help-mode-init 1172,54875
+(defun mon-set-ibuffer-init 1225,57451
+(defun mon-set-ido-init 1249,58504
+(defun mon-set-org-init 1332,62669
+(defun mon-set-custom-customizations-init 1356,63432
+(defun mon-set-customizations-before-custom-file-init 1400,65981
+(defun mon-set-custom-file-init-w32-configs 1483,69618
+(defun mon-set-custom-file-init 1525,71559
+(defun mon-set-common-lisp-hspec-init 1571,74230
+(defun mon-set-show-paren-init 1610,76464
+(defun mon-set-lisp-init 1643,78275
+(defun mon-set-proced-init 1702,81410
+(defun mon-set-auctex-init 1725,82405
+(defun mon-set-dvc-init 1748,83418
+(defun mon-set-erc-configs-init 1802,86274
+(defun mon-set-url-pkg-init 1849,88083
+(defun mon-set-google-maps-init 1901,90253
+(defun mon-set-w3m-init 1930,91570
+(defun mon-set-browser-init 1969,93495
+(defun mon-set-buffer-local-comment-start 2005,95558
+(defun mon-set-buffer-local-comment-start-init 2029,96883
+(defun mon-set-css-path-init 2072,99011
+(defun mon-set-longlines-init 2112,100969
+(defun mon-rst-mode-facification 2135,101898
+(defun mon-set-rst-mode-faces-init 2151,102782
+(defun mon-set-apache-mode-init 2171,103595
+(defun mon-set-traverselisp-init 2197,104917
+(defun mon-load-cedet 2223,106125
+(defun mon-keybind-w32-init 2242,106959
+(defun mon-keybind-put-hooks-init 2279,108737
+(defun mon-set-mon-feature-customs-init 2311,110412
+(defun mon-set-system-specific-and-load-init 2372,113040
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-french-months.el,42
+(defconst naf-mode-french-months 84,3038
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-word-syntax-utils.el,452
+(defun mon-get-syntax-at 143,4923
+(defun mon-get-syntax-class-at 168,6156
+(defun mon-line-test-content 199,7484
+(defun mon-word-get-next 330,15862
+(defun mon-word-get-list-in-buffer 359,16912
+(defun mon-word-reverse-region 413,19407
+(defun mon-word-iterate-over 455,21090
+(defun mon-word-count-analysis 484,22344
+(defun mon-word-count-occurrences 524,24420
+(defun mon-word-count-region 632,30596
+(defun mon-word-count-chars-region 649,31260
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-seq-utils.el,2147
+(defgroup mon-seq-utils 253,8163
+(defcustom *mon-seq-utils-xrefs* 268,8745
+(defun mon-elt-> 305,10778
+(defun mon-elt-< 319,11493
+(defun mon-elt->elt 335,12378
+(defun mon-elt-<elt 350,13150
+(defun mon-maybe-cons 386,15213
+(defun mon-delq-cons 408,16294
+(defun mon-list-nshuffle 445,18027
+(defun mon-list-shuffle-safe 503,21249
+(defun mon-delq-dups 556,23930
+(defun mon-deleql-dups 587,25350
+(defun mon-delete-first 619,26967
+(defun mon-list-last 653,28536
+(defun mon-list-make-unique 692,30273
+(defun mon-remove-dups 733,32688
+(defun mon-list-filter 758,33872
+(defun mon-list-match-tails 790,35309
+(defun mon-list-add-non-nil 824,37113
+(defun mon-list-ensure 871,39481
+(defun %mon-list-reorder 893,40308
+(defun mon-list-reorder 918,41356
+(defun mon-union 1028,47307
+(defun mon-member-if 1063,48888
+(defun mon-delete-if 1090,50168
+(defun mon-remove-if-not 1127,51775
+(defun mon-remove-if 1157,53313
+(defun mon-intersection 1191,55173
+(defun mon-set-difference 1288,60142
+(defun mon-pairlis 1342,62830
+(defun mon-map 1372,64416
+(defun mon-map1 1470,70474
+(defun mon-mapc 1547,74509
+(defun mon-mapcar 1574,75820
+(defun mon-mapcan 1617,77623
+(defun mon-mapl 1659,79559
+(defun mon-mapcon 1708,81861
+(defun mon-maplist 1728,83000
+(defun mon-subseq 1768,85099
+(defun mon-sublist 1863,89580
+(defun mon-sublist-gutted 1892,91084
+(defun mon-map-append 1921,92700
+(defun mon-assoc-replace 1944,94056
+(defmacro mon-moveq 1971,95706
+(defun mon-flatten 1995,96957
+(defun mon-list-flatten-rotated 2038,99164
+(defun mon-transpose 2057,99997
+(defun mon-list-intersperse 2083,101285
+(defun mon-every 2119,102995
+(defun* mon-mismatch 2172,105725
+(defun mon-maptree 2198,107381
+(defun mon-recursive-apply 2232,109155
+(defun mon-list-merge 2257,110605
+(defun mon-combine 2282,111772
+(defun mon-list-variant-forms 2328,114267
+(defun mon-list-permute-variants 2360,115793
+(defun mon-list-permute-1 2382,116826
+(defun mon-list-permute-2 2418,118757
+(defun mon-permute-combine 2445,120007
+(defun mon-permute-combine-1 2487,122112
+(defun mon-list-string-longest 2536,124642
+(defun mon-bool-vector-pp 2574,126693
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-hash-utils.el,835
+(defun mon-hash-get-symbol-name-if 172,6142
+(defun mon-hash<-vector 314,12742
+(defun mon-hash-make-size 329,13577
+(defun mon-hash-from-alist 357,14997
+(defun mon-hash-to-alist 377,15928
+(defun mon-hash-add-uniquify 396,16824
+(defun mon-hash-readlines-file 424,18138
+(defun mon-hash-readlines-buffer 444,19089
+(defun mon-hash-all-values 477,20643
+(defun mon-hash-all-keys 492,21317
+(defun mon-hash-to-list 507,21991
+(defmacro mon-hash-get-keys 529,22958
+(defmacro mon-hash-get-items 571,25114
+(defmacro mon-hash-get-values 591,26121
+(defmacro mon-hash-get-symbol-keys 611,27137
+(defmacro mon-hash-get-string-keys 654,29493
+(defmacro mon-hash-has-key 686,30922
+(defmacro mon-hash-put-CL 706,31859
+(defun mon-hash-describe 745,33674
+(defun mon-hash-describe-descend 786,35403
+(defun mon-hash-table-complete 810,36304
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-buffer-utils.el,974
+(defgroup mon-buffer-utils 146,5121
+(defcustom *mon-buffer-utils-xrefs* 160,5648
+(defcustom *mon-get-hidden-buffers-known* 187,6968
+(defun mon-g2be 241,9412
+(defun mon-buffer-sub-no-prop 330,13833
+(defun mon-buffer-sub-no-prop-check 375,16101
+(defun mon-buffer-narrowed-p 524,25563
+(defun mon-buffer-empty-p 581,28562
+(defun mon-buffer-exists-so-kill 608,29756
+(defun mon-buffer-name-is-file-name-p 630,30965
+(defun mon-get-buffer-hidden 695,34305
+(defun mon-get-buffer-hidden-if 755,37154
+(defun mon-buffer-kill-hidden-if 776,38253
+(defun mon-get-buffer-window-if 801,39581
+(defun mon-print-buffer-object-readably 819,40516
+(defun mon-get-buffer-w-mode 854,42246
+(defun mon-buffer-check-local-value 884,43951
+(defun mon-buffer-check-major-mode 917,45810
+(defun mon-buffer-longlines-mode-p 937,47002
+(defun mon-buffer-name->kill-ring 982,48967
+(defun mon-append-to-buffer 1020,50789
+(defun mon-make-shell-buffer 1056,52324
+(defun mon-shell 1098,54271
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-bzr-utils.el,351
+(defgroup mon-bzr-utils 117,3395
+(defcustom *mon-bzr-utils-xrefs* 132,3974
+(defun mon-help-bzr-topics 176,5825
+(defun mon-help-bzr-usage 303,12874
+(defun mon-help-bzr-aliases 350,14986
+(defun mon-help-bzr-init 379,15884
+(defun mon-bzr-log-last 611,24148
+(defvar *mon-hgignore-template* 623,24660
+(defun mon-insert-hgignore-template 775,29329
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-doc-help-proprietary.el,301
+(defvar *mon-compromise-my-ms-W32-virginity* 67,1924
+(defvar *mon-help-w32-CMD-commands* 76,2483
+(defun mon-help-w32-cmd-commands 88,3210
+(defun mon-bind-doc-help-proprietery-vars-at-loadtime 113,4539
+(defun mon-help-w32-shell-execute 153,6875
+(defvar *mon-help-w32-CMD-commands-TEMP* 382,19005
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-skeletons.el,229
+(define-skeleton book-naf128,4489
+(define-skeleton artist-naf202,5762
+(define-skeleton people-naf253,6589
+(define-skeleton author-naf307,7354
+(define-skeleton brand-naf357,8062
+(define-skeleton benezit-naf-template417,8939
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-students-of-julian.el,1202
+(defvar *naf-mode-students-of-julian-xrefs* 109,3843
+(defvar *naf-students-of-julian-french*133,4705
+(defconst naf-mode-students-of-julian-french 206,9120
+(defvar *naf-students-of-julian-us*228,9940
+(defconst naf-mode-students-of-julian-us266,11643
+(defvar *naf-students-of-julian-germany*287,12408
+(defconst naf-mode-students-of-julian-germany302,12960
+(defvar *naf-students-of-julian-brazil*324,13784
+(defconst naf-mode-students-of-julian-brazil335,14203
+(defvar *naf-students-of-julian-canada*356,15012
+(defconst naf-mode-students-of-julian-canada376,15833
+(defvar *naf-students-of-julian-misc*397,16640
+(defconst naf-mode-students-of-julian-misc435,19653
+(defvar *naf-students-of-julian-finland*456,20440
+(defconst naf-mode-students-of-julian-finland465,20765
+(defvar *naf-students-of-julian-norway*486,21586
+(defconst naf-mode-students-of-julian-norway 498,22039
+(defvar *naf-students-of-julian-uk*519,22854
+(defconst naf-mode-students-of-julian-uk531,23277
+(defvar *naf-students-of-julian-russia*552,24041
+(defconst naf-mode-students-of-julian-russia564,24529
+(defvar *naf-students-of-julian-switzerland*585,25338
+(defconst naf-mode-students-of-julian-switzerland597,25770
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-wordfreq.el,43
+(defconst *naf-mode-wordfreq-words*33,863
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/ebay-template-mode/ebay-template-tools.el,991
+(defvar *mon-html-ebay-template* 150,5510
+(defvar *mon-html-domain-for-ebay-template*160,5844
+(defvar *mon-ebay-image-linkify-templates*173,6456
+(defun mon-insert-ebay-template 187,7078
+(defvar *mon-ebay-template* 223,9061
+(defun mon-choose-ebay-delims 304,12056
+(defun mon-choose-ebay-account 324,13354
+(defun mon-make-html-tree 341,14155
+(defun mon-insert-ebay-html-tree 361,14962
+(defun mon-make-ebay-dir-list 373,15558
+(defun mon-make-ebay-dir-list-2 397,16609
+(defun mon-insert-ebay-dirs 454,19276
+(defun mon-insert-ebay-dbc-file 502,21914
+(defun mon-check-ebay-template-path 522,22981
+(defun mon-insert-ebay-dbc-template 617,29659
+(defun mon-ebay-field-trigger 675,32710
+(defun mon-insert-ebay-field-trigger-r 717,34787
+(defun mon-insert-ebay-field-trigger-l 733,35411
+(defun mon-insert-ebay-field-trigger-l-and-r 749,36035
+(defun mon-insert-ebay-photo-per-scan-descr 771,36865
+(defun mon-ebay-image-linkify 797,38204
+(defun mon-ebay-image-linkify-lite 852,41084
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/ebay-template-mode/ebay-template-mode.el,613
+(defconst *mon-ebay-template-mode-version* 154,5069
+(defgroup ebay-template-mode 160,5335
+(defgroup ebay-template-mode-faces 170,5661
+(defcustom *mon-ebay-account-ids* 181,6017
+(defcustom *mon-ebay-comment-prefix* 197,6702
+(defvar *mon-ebay-field-entry* 206,7035
+(defvar *mon-ebay-field-delims* 251,9121
+(defvar *mon-ebay-line-delims* 268,9957
+(defvar *mon-ebay-template-font-lock-keywords* 317,12152
+(defvar *mon-ebay-template-mode-map*345,13590
+(defvar *mon-ebay-template-mode-hook* 388,15931
+(defvar *mon-ebay-template-mode-syntax-table*399,16263
+(define-derived-mode ebay-template-mode 417,17007
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/ebay-template-mode/ebay-template-html-utils.el,735
+(defvar xmlgen-escape-attribute-vals 165,4945
+(defvar xmlgen-escape-elm-vals 169,5070
+(defvar xmlgen-escapees173,5190
+(defun xmlgen 182,5437
+(defun xmlgen-string-escape 234,7230
+(defun xmlgen-attr-to-string 246,7637
+(defun xmlgen-extract-plist 267,8438
+(defgroup html-lite 389,13025
+(defcustom html-lite-doctype 395,13190
+(defconst html-lite-version 407,13760
+(defconst html-lite-doctype-alist410,13831
+(defmacro html-lite-define-elements 435,14928
+(defun html-lite-make-element 455,15633
+(defmacro with-html-lite-header 488,16527
+(defun html-lite-escape-string 500,16868
+(defun html-doctype 507,17166
+(defun html-lite-make-name 516,17515
+(defun html-lite-write-tree 521,17660
+(defun html-lite-browse-tree 535,18040
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-mysql-utils.el,1004
+(defun mon-cln-pipes-get-field-col 137,4722
+(defalias 'mon-mysql-get-field-col mon-mysql-get-field-col206,8336
+(defun %subst% 217,8860
+(defun mon-cln-pipes 256,10414
+(defalias 'mon-mysql-cln-pipes mon-mysql-cln-pipes445,20783
+(defun mon-cln-pipes-map-field-pairs 473,21911
+(defalias 'mon-mysql-cln-pipes-map-col-field mon-mysql-cln-pipes-map-col-field525,24177
+(defun mon-csv-string-to-list 552,25333
+(defalias 'mon-mysql-csv-to-list mon-mysql-csv-to-list587,27158
+(defun mon-csv-string-map-list 595,27457
+(defalias 'mon-mysql-csv-map-list mon-mysql-csv-map-list610,28287
+(defun mon-csv-map-col-field-pairs 620,28761
+(defalias 'mon-mysql-csv-map-col-field mon-mysql-csv-map-col-field645,29975
+(defun mon-csv-split-string 665,30739
+(defalias 'mon-mysql-csv-split-string mon-mysql-csv-split-string699,32346
+(defvar *regexp-clean-mysql* 704,32549
+(defun mon-bind-mysql-help-table-loadtime 737,34299
+(defun mon-help-mysql-complete 913,46899
+(defun mon-help-mysql-commands 940,48179
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-nation-french.el,127
+(defvar *naf-mode-nation-french-xrefs* 83,2670
+(defvar *naf-nation-french*101,3335
+(defconst naf-mode-nation-french270,7190
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-drive-transfer-utils.el,339
+(defvar *mon-drive-transfer-template-src-dest-log* 125,4136
+(defun mon-drive-transfer-template-subst-src-dest-log 184,7539
+(defvar *mon-drive-transfer-template* 205,8525
+(defun mon-insert-drive-transfer-template 261,11506
+(defun mon-drive-transfer-template-cln-log-dest 283,12394
+(defun mon-drive-transfer-template-cln-all 348,15649
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-insertion-utils.el,2239
+(defgroup mon-insertion-utils 211,9225
+(defcustom *mon-insertion-utils-xrefs*225,9732
+(defun mon-insert-dirs-in-path 264,11914
+(defun mon-insert-file-in-dirs 293,13405
+(defun mon-insert-whitespace 371,17468
+(defun mon-insert-newlines 395,18653
+(defun mon-insert-string-n-fancy-times 426,20205
+(defun mon-insert-string-n-times 563,27418
+(defun mon-line-number-region 609,29413
+(defun mon-string-incr 641,30922
+(defun mon-insert-string-ify 795,39353
+(defun mon-insert-unicode 813,40245
+(defun mon-split-designator 905,45640
+(defun mon-comment-divider 928,46511
+(defun mon-comment-divider-to-col 957,47964
+(defun mon-comment-lisp-to-col 1059,53586
+(defun mon-comment-divider-to-col-four 1079,54623
+(defun mon-insert-php-comment-divider 1096,55271
+(defun mon-insert-user-name-cond 1111,55964
+(defun mon-insert-system-type-cond 1144,57551
+(defun mon-insert-regexp-template 1165,58506
+(defun mon-insert-regexp-template-yyyy 1184,59414
+(defun mon-lisp-CL-package-complete 1233,61769
+(defun mon-insert-lisp-CL-mode-line-template 1269,63554
+(defun mon-insert-lisp-CL-file-template 1374,69172
+(defun mon-insert-lisp-CL-package-template 1455,73399
+(defun mon-insert-lisp-CL-eval-when 1546,78620
+(defun mon-insert-lisp-CL-debug 1589,80597
+(defun mon-insert-lisp-doc-eg-xref 1621,82165
+(defun mon-insert-lisp-CL-jump-doc 1709,86712
+(defun mon-insert-lisp-CL-eol-tilde 1840,93867
+(defun mon-insert-lisp-CL-eol-tilde-no-at 1865,94938
+(defun mon-insert-lisp-stamp 1890,96045
+(defun mon-build-copyright-string 1925,97924
+(defun mon-insert-copyright 2015,102963
+(defun mon-insert-file-template 2057,105175
+(defvar *mon-gnu-license-header* 2161,110294
+(defvar *mon-gnu-license-header-emacs* 2197,112093
+(defvar *mon-mit-license-header* 2219,113121
+(defcustom *mon-bsd-license-header-COPYRIGHT-HOLDER* 2262,115358
+(defvar *mon-bsd-license-header* 2281,116381
+(defvar *mon-gnu-license-header-gfdl* 2336,119441
+(defun mon-build-copyright-string-license 2369,121238
+(defun mon-insert-gnu-licence 2425,124242
+(defun mon-insert-gnu-licence-gfdl 2456,125718
+(defun mon-insert-defclass-template 2496,127803
+(defun mon-insert-texi-template 2604,133045
+(defun mon-comput-45 2711,136890
+(defun mon-comput-33 2740,137910
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-get-freenode-lisp-logs.el,134
+(defvar *freenode-lisp-logs* 124,3896
+(defun mon-wget-freenode-lisp-logs 135,4437
+(defun mon-get-freenode-lisp-logs-dates 170,6122
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-cifs-utils.el,909
+(defvar *mon-CIFS-misc-path-alist*163,6098
+(defvar *mon-CIFS-auth-protocol* 202,8265
+(defvar *mon-CIFS-workgroup* 217,8918
+(defvar *mon-CIFS-domain* 224,9142
+(defvar *mon-CIFS-user* 243,10070
+(defvar *mon-CIFS-pass* 255,10566
+(defvar *mon-CIFS-mount-root* 266,11050
+(defvar *mon-CIFS-vars-unbound* 279,11606
+(defvar *mon-CIFS-mount-points* 302,12778
+(defun mon-map-cifs-domain->local-mount 336,14906
+(defun mon-get-cifs-credentials 383,17625
+(defun mon-build-cifs-credentials 428,20020
+(defun mon-get-cifs-mount-points 461,21772
+(defun mon-mount-cifs 490,23132
+(defun mon-unmount-cifs 555,26642
+(defun mon-verify-cifs-credentials 571,27492
+(defun mon-inform-cifs-credentials-unbound 599,28897
+(defun mon-bind-cifs-vars-at-loadtime 663,32703
+(defvar *mon-auth-source-debug-var* 745,37473
+(defvar *mon-auth-source-cache-debug-var* 756,38074
+(defun mon-spit-auth-source-debug->var 785,39697
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-awards-prizes.el,137
+(defvar *naf-mode-awards-prizes-xrefs*76,2641
+(defvar *naf-awards-prizes-names*88,3156
+(defconst naf-mode-awards-prizes-names106,3692
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-institution.el,674
+(defvar *naf-mode-institution-xrefs* 94,3099
+(defconst naf-mode-benezit-museum-short 116,3956
+(defvar *naf-institution-museum-names*136,4812
+(defconst naf-mode-institution-museum-names 180,6215
+(defvar *naf-institution-names-anchored*200,6948
+(defconst naf-mode-inst-names-anchored 303,9598
+(defvar *naf-institution-names-generic* 320,10395
+(defconst naf-mode-institution-names-generic 351,11276
+(defvar *naf-academy-name* 367,11929
+(defconst naf-mode-academy-names 395,13087
+(defvar *naf-school-names-intnl*415,13790
+(defconst naf-mode-school-names-intnl 455,15834
+(defvar *naf-school-names-english*472,16553
+(defconst naf-mode-school-names-english 511,17987
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-type-utils-vars.el,421
+(defgroup mon-type-utils-vars 130,4139
+(defcustom *mon-type-utils-vars-xrefs*145,4706
+(defvar *mon-special-forms-types*176,5928
+(defvar *mon-non-mappable-object-types* 212,7484
+(defcustom *mon-equality-or-predicate-function-types*253,9438
+(defvar *mon-function-object-types* 313,11634
+(defvar *mon-ascii-alpha-chars* 327,12385
+(defcustom *mon-ascii-punct-chars*351,13497
+(defvar *mon-whitespace-chars* 372,14408
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-group-period-styles.el,48
+(defconst naf-mode-group-period-styles172,4316
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-plist-utils.el,263
+(defgroup mon-plist-utils 125,3527
+(defcustom *mon-plist-utils-xrefs* 137,3996
+(defun mon-plist-keys 190,6085
+(defun mon-plist-values 216,7207
+(defun mon-plist-remove! 255,9127
+(defun mon-plist-remove-consing 305,11470
+(defun mon-plist-remove-if 327,12573
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-event-utils.el,1051
+(defcustom *mon-popup-pos-x-offset* 162,5884
+(defun mon-inhibit-read-only 174,6220
+(defun mon-inhibit-modification-hooks 204,7546
+(defun mon-inhibit-point-motion-hooks 221,8321
+(defun mon-toggle-read-only-point-motion 240,9218
+(defun mon-toggle-truncate-line 258,10008
+(defun mon-scroll-down-in-place 282,11057
+(defun mon-scroll-up-in-place 295,11612
+(defun mon-line-move-n 315,12497
+(defun mon-line-move-next 332,13259
+(defun mon-line-move-prev 347,13997
+(defun mon-read-keys-as-string 363,14785
+(defun mon-read-multiple 406,16888
+(defun mon-postion-for-x-popup-menu 502,22647
+(defun mon-choose-from-menu 519,23472
+(defun mon-test-keypresses 547,24730
+(defun mon-decode-meta-key-event 577,26234
+(defun mon-catch-meta-key 597,27098
+(defun mon-abort-recursive-edit 643,29306
+(defun mon-abort-autosave-when-fucked 660,30031
+(defvar *mon-ascii-cursor-state* 704,32534
+(defun mon-rotate-ascii-cursor 712,32918
+(defun mon-kill-appending 761,35316
+(defun mon-append-to-register 775,35894
+(defun mon-multi-isearch-rmv-hook 797,37118
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-insertion-utils.el,1110
+(defvar *naf-mode-insertion-utils-xrefs* 110,4180
+(defun naf-tab-region 148,5631
+(defun naf-comment-line 156,5875
+(defun naf-uncomment-line 167,6199
+(defun naf-comment-region 179,6541
+(defun naf-uncomment-region 189,6897
+(defun non-posting-source 200,7335
+(defalias 'nps nps218,8096
+(defun non-posting-ebay-source 228,8523
+(defalias 'npes npes255,9701
+(defun non-posting-wiki-source 263,9998
+(defalias 'npws npws285,10988
+(defun non-posting-philsp-source 294,11298
+(defalias 'npps npps320,12452
+(defun non-posting-imdb-source 331,12791
+(defun non-posting-benezit-source 365,14204
+(defun non-posting-internet-source 405,16433
+(defun mon-insert-naf-file-in-dirs 449,19006
+(defun mon-insert-naf-mode-class-template 498,21472
+(defun mon-build-naf-mode-xref 526,22878
+(defun mon-insert-naf-mode-xref-template 568,25121
+(defun mon-insert-naf-mode-var-const-template 605,26889
+(defun mon-insert-naf-mode-constant-template 651,29063
+(defun mon-insert-naf-mode-face-template 691,31373
+(defun mon-insert-naf-mode-faces-as-displayed 739,33913
+(defvar *naf-mode-faces-as-displayed* 756,34737
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-eight-bit-raw-utils.el,38
+(defun mon-cln-eight-bit-raw 88,2792
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-jg-directory-creator.el,173
+(defvar *mon-jg-file-template* 118,3646
+(defun* mon-make-jg-dir-in-path 151,5042
+(defun mon-write-jg-file-in-path 247,9812
+(defun mon-format-jg-file-for-write 272,11118
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-regexp-symbols.el,2562
+(defgroup mon-regexp-symbols 163,6413
+(defcustom *mon-regexp-symbols-xrefs* 177,7018
+(defcustom *regexp-whitespace-chars*211,9061
+(defcustom *regexp-clean-xml-parse* 235,10241
+(defcustom *regexp-clean-mon-file-keywords*261,11459
+(defcustom *regexp-symbol-defs* 357,15265
+(defcustom *regexp-symbol-defs-big* 406,17771
+(defcustom *regexp-ansicl-info*459,20358
+(defcustom *regexp-line-to-consed-pair* 489,21354
+(defcustom *regexp-abrv-dotted-month->canonical*502,21978
+(defcustom *regexp-simple-abrv-month->canonical*530,23569
+(defcustom *regexp-clean-ebay-time-chars* 557,25068
+(defcustom *regexp-clean-ebay-month->canonical-style1*598,26640
+(defcustom *regexp-clean-ebay-month->canonical-style2* 637,28259
+(defcustom *regexp-clean-ebay-month->canonical-style3* 678,30138
+(defcustom *regexp-bound-month->canonical*726,32687
+(defcustom *regexp-month->canonical-ws*754,34089
+(defcustom *regexp-month->MM*825,37920
+(defcustom *regexp-MM->month*849,39085
+(defcustom *regexp-MM->month-whitespace-aware*872,40345
+(defcustom *regexp-philsp-months*944,44748
+(defcustom *regexp-philsp-apos*975,46225
+(defcustom *regexp-philsp-location*998,47252
+(defcustom *regexp-philsp-swap-location*1022,48357
+(defcustom *regexp-philsp-fix-month-dates* 1041,49239
+(defcustom *regexp-clean-irc-logs* 1073,51255
+(defcustom *regexp-clean-wikipedia*1087,51924
+(defcustom *regexp-clean-whitespace*1177,55613
+(defcustom *regexp-clean-big-whitespace*1198,56499
+(defcustom *regexp-clean-imdb*1220,57488
+(defcustom *regexp-clean-loc*1245,58484
+(defcustom *regexp-clean-gilt-group* 1295,61661
+(defcustom *regexp-ital-to-eng* 1316,62512
+(defcustom *regexp-defranc-dates*1351,64052
+(defcustom *regexp-defranc-places* 1416,67017
+(defcustom *regexp-defranc-benezit*1554,71595
+(defcustom *regexp-clean-benezit-fields*1634,74519
+(defcustom *regexp-german-to-eng*1668,76081
+(defcustom *regexp-clean-bib*1694,77121
+(defcustom *regexp-common-abbrevs*1724,78239
+(defcustom *regexp-wrap-url-schemes* 1790,80947
+(defcustom *regexp-rgb-hex*1841,83764
+(defcustom *regexp-percent-encoding-reserved-chars*1880,85755
+(defvar *regexp-cp1252-to-latin1*1903,86806
+(defconst *google-define-html-entry-table*1926,88080
+(defvar *regexp-clean-html-decimal-char-entity* 2015,93866
+(defvar *regexp-clean-html-named-char-entity* 2044,95482
+(defvar *regexp-clean-ulan-diacritics*2072,97010
+(defvar *regexp-clean-ulan*2158,102156
+(defvar *regexp-clean-ulan-fields*2205,104833
+(defvar *regexp-clean-ulan-dispatch-chars* 2313,109843
+(defvar *regexp-ulan-contribs* 2358,112261
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-xrefs.el,80
+(defgroup naf-mode-xrefs 115,3367
+(defcustom *naf-mode-xref-of-xrefs*127,3831
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-css-complete.el,4060
+(defvar *css-complete-at-ids* 151,7586
+(defvar *css-complete-tag-ids* 174,8658
+(defvar *css-complete-media-ids* 229,11165
+(defvar *css-complete-property-ids* 251,12249
+(defvar *css-complete-pseudo-ids* 269,13069
+(defvar *css-complete-props-and-vals* 286,13815
+(defvar *css-complete-look-back-regexp* 457,23283
+(defvar *css-complete-popup-pos-x-offset* 494,25122
+(defmacro css-complete-collect 519,26108
+(defmacro css-delete-partial 567,28277
+(defmacro css-complete-menu-generate 625,31262
+(defmacro css-delims-maybe-generate 648,32467
+(defmacro css-popup-generate 673,33473
+(defmacro css-at-p-generate 692,34413
+(defun css-vals-for-prop 715,35466
+(defun css-prop-for-point 728,36153
+(defun css-vals-for-point 744,36922
+(defun css-delims-maybe-part-generic 755,37499
+(defalias 'css-delims-maybe-part-prop-at-point css-delims-maybe-part-prop-at-point776,38324
+(defalias 'css-delims-maybe-part-pseudo-at-point css-delims-maybe-part-pseudo-at-point788,38849
+(defalias 'css-delims-maybe-part-at-at-point css-delims-maybe-part-at-at-point800,39384
+(defun css-delims-maybe-part-val-at-point 817,40062
+(defun css-maybe-part-val-at-point 837,40848
+(defun css-possible-value-completions 847,41321
+(defun css-possible-value-completions-at-point 866,42181
+(defun css-delete-partial-value 875,42617
+(defun css-value-popup-completions 884,43086
+(defun css-value-completion-menu 894,43584
+(defun css-pos-for-x-popup-menu 912,44322
+(defun css-complete-value 927,45034
+(defun css-at-value-p 943,45840
+(defun css-at-prop-p 959,46592
+(defun css-maybe-part-prop-at-point 970,47187
+(defun css-possible-prop-completions 982,47700
+(defun css-possible-prop-completions-at-point 993,48204
+(defun css-props-for-point 1001,48609
+(defun css-delete-partial-prop 1010,49013
+(defun css-prop-popup-completions 1019,49482
+(defun css-prop-completion-menu 1026,49851
+(defun css-complete-prop 1043,50475
+(defun css-at-pseudo-id-p 1061,51360
+(defun css-maybe-part-pseudo-at-point 1073,51856
+(defun css-possible-pseudo-completions 1084,52369
+(defun css-possible-pseudo-completions-at-point 1095,52879
+(defun css-pseudos-for-point 1101,53223
+(defun css-delete-partial-pseudo 1109,53575
+(defun css-pseudo-popup-completions 1119,54054
+(defun css-pseudo-completion-menu 1127,54476
+(defun css-complete-pseudo 1142,55074
+(defun css-at-tag-id-p 1157,55798
+(defun css-delims-maybe-part-tag-at-point 1169,56392
+(defun css-maybe-part-tag-at-point 1189,57263
+(defun css-tags-for-point 1200,57766
+(defun css-possible-tag-completions 1207,58073
+(defun css-possible-tag-completions-at-point 1218,58573
+(defun css-delete-partial-tag 1224,58904
+(defun css-tag-popup-completions 1233,59348
+(defun css-tag-completion-menu 1244,59877
+(defun css-complete-tag 1257,60465
+(defun css-at-at-id-p 1273,61249
+(defun css-maybe-part-at-at-point 1283,61668
+(defun css-ats-for-point 1293,62168
+(defun css-possible-at-completions 1300,62473
+(defun css-possible-at-completions-at-point 1311,62969
+(defun css-delete-partial-at 1317,63293
+(defun css-at-popup-completions 1326,63745
+(defun css-at-completion-menu 1334,64111
+(defun css-complete-at 1349,64676
+(defun css-at-string-p 1372,65708
+(defun css-at-filename-p 1380,66115
+(defun css-complete-filename 1388,66497
+(defun css-at-comment-p 1395,66825
+(defun css-after-at-p 1403,67248
+(defun css-complete-after-at 1420,67984
+(defun css-media-for-point 1444,69085
+(defun css-media-completion-menu 1451,69399
+(defun css-complete-media 1467,70046
+(defun css-media-popup-completions 1482,70723
+(defun css-complete 1492,71182
+(defun css-electric-left-brace 1526,72915
+(defun css-electric-left-bracket 1538,73259
+(defun css-electric-left-paren 1549,73564
+(defun css-electric-quotes 1559,73862
+(defun css-electric-semicolon 1568,74118
+(define-key css-mode-map 1577,74372
+(define-key css-mode-map 1578,74423
+(define-key css-mode-map 1579,74485
+(define-key css-mode-map 1580,74549
+(define-key css-mode-map 1581,74607
+(define-key css-mode-map 1582,74669
+(defun mon-css-complete-loadtime 1588,74860
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-wget-utils.el,368
+(defvar *mon-show-wget-script-temp* 121,3695
+(defun mon-wget-list-to-script 131,4210
+(defun mon-wget-list-to-script-TEST 183,6782
+(defun mon-wget-list-to-script-shell-command 238,9754
+(defun mon-wget-list-give-script-to-shell-command 275,11845
+(defun mon-wget-rfc 315,13922
+(defun mon-wget-unicodedata-files 347,15338
+(defvar *mon-unidata-file-list* 381,17141
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-dir-utils-local.el,1234
+(defvar *mon-img-hash* 172,6719
+(defvar *mon-nef-img-hash* 191,7498
+(defvar *mon-bmp-img-hash* 210,8376
+(defvar *mon-jpg-img-hash* 229,9236
+(defun* mon-file-map-elisp-fileset 255,10462
+(defun mon-dir-save-current 367,16856
+(defun mon-dir-save-current-to-file 404,18565
+(defun mon-explorer-naf-artist 452,20707
+(defun mon-explorer-naf-brand 482,22066
+(defun mon-dired-naf-artist-letter 514,23716
+(defun mon-dired-naf-brand-letter 540,24897
+(defun mon-dired-naf-image-dir 576,26651
+(defun mon-dir-nef-update-photos-alist 622,29131
+(defun mon-bind-nefs-photos-at-loadtime 684,32647
+(defun mon-dir-nef-ranges 711,33940
+(defun mon-dir-nef-name-to-head 744,35825
+(defun mon-dir-nef-remove-if-empty 770,37176
+(defun mon-dir-nef-find-dups 802,38950
+(defun mon-dir-nef-conc-dups 841,41061
+(defun mon-dir-nef-converge 874,42830
+(defun mon-dir-nef-conc-ranges 909,44673
+(defun mon-dir-nef-keep-3 939,46247
+(defun mon-dir-nef-big 984,48770
+(defun mon-dired-nef-dir 1008,49873
+(defun mon-dir-hash-images 1038,51282
+(defun mon-dir-hashed-complete 1094,53817
+(defun mon-dir-try-comp 1121,55173
+(defun mon-file-path-for-bug 1158,56915
+(defun mon--local-url-for-bug 1210,59733
+(defun mon-get-local-url-for-bug 1215,59977
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-randomize-utils.el,317
+(defun mon-next-almost-prime 140,4590
+(defun mon-gensym-counter-randomizer 194,6714
+(defun mon-mix-fields 299,11838
+(defun mon-make-random-state 316,12457
+(defun mon-generate-prand-id 343,13546
+(defun mon-generate-prand-seed 376,15011
+(defun mon-string-wonkify 433,17828
+(defun mon-generate-WPA-key 490,20791
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-replacement-utils.el,3415
+(defgroup mon-replacement-utils 193,7888
+(defcustom *mon-replacement-utils-xrefs* 208,8519
+(defun mon-is-naf-mode-p 259,11732
+(defvar *naf-mode-buffer-local-llm* 306,14003
+(defun mon-is-naf-mode-and-llm-p 314,14380
+(defvar *iso-latin-1-approximation* 370,16911
+(defun mon-make-iso-latin-1-approximation 377,17306
+(defun mon-make-iso-latin-1-approximation-loadtime 397,18243
+(defun mon-cln-iso-latin-1 409,18898
+(defmacro deftransmogrify 428,19881
+(defun mon-transmogrify 444,20553
+(defun mon-walk-regexps-in-file 480,22455
+(defun mon-replace-regexps-in-file-list 506,23689
+(defun mon-replace-strings 554,26189
+(defun mon-replace-regexp-while 587,27997
+(defun mon-replace-string-while 596,28414
+(defun mon-regexp-filter 604,28719
+(defun mon-string-canonical 625,29693
+(defun replace-string-pairs-region3 692,33707
+(defun replace-string-pairs-region-no-props 723,35186
+(defun mon-replace-string-pairs-region-no-insert 753,36637
+(defun mon-get-list-yorp 798,38486
+(defun mon-get-list-norp 816,39374
+(defun mon-replace-region-regexp-lists-nonint 832,40091
+(defun mon-replace-region-regexp-lists 870,41991
+(defun mon-regexp-map-match 925,44871
+(defun mon-regexp-map-match-in-region 967,46931
+(defvar *mon-regexp-unintern* 1058,51620
+(defun mon-replace-unintern-w-query 1128,54849
+(defun mon-cln-mail-headers 1223,59372
+(defun mon-cln-csv-fields 1369,66585
+(defun mon-cln-freenode-log 1542,75314
+(defun mon-cln-file-name-string 1563,76174
+(defun mon-cln-html-chars 1590,77384
+(defun mon-cln-html-tags 1607,78169
+(defun mon-cln-xml-escapes 1647,80309
+(defun mon-cln-xml<-parsed 1685,82283
+(defun mon-cln-tgm-xml-LF 1715,83670
+(defun mon-cln-xml<-parsed-strip-nil 1735,84411
+(defun mon-cln-up-colon 1765,85782
+(defun mon-downcase-hex-values 1836,89316
+(defun mon-upcase-commented-lines 1852,90106
+(defun mon-zippify-region 1869,90993
+(defun mon-toggle-case-query-user 1887,91646
+(defun mon-toggle-case-regexp-region 1933,94068
+(defun mon-toggle-case-regexp 1976,96382
+(defun mon-downcase-regexp-region 2033,99281
+(defun mon-upcase-regexp-region 2052,100422
+(defun mon-downcase-regexp 2072,101576
+(defun mon-upcase-regexp 2094,102686
+(defun mon-cln-BIG-whitespace 2119,103908
+(defun mon-cln-whitespace 2168,106333
+(defun mon-cln-trail-whitespace 2189,107292
+(defun mon-kill-whitespace 2209,108120
+(defun mon-cln-blank-lines 2224,108787
+(defun mon-cln-spc-tab-eol 2245,109730
+(defun mon-cln-spc-tab-at-eol-in-region 2262,110485
+(defun mon-cln-uniq-lines 2288,111498
+(defun mon-exchange-slash-and-backslash 2322,112977
+(defun mon-cln-control-M 2342,113996
+(defun mon-cln-piped-list 2362,114797
+(defun mon-delete-back-up-list 2411,116943
+(defun naf-backup-the-list 2453,118957
+(defun mon-cln-philsp 2463,119316
+(defun mon-cln-ulan 2500,121357
+(defun mon-cln-imdb 2579,125633
+(defun mon-cln-loc 2601,126610
+(defun mon-cln-wiki 2623,127790
+(defun mon-cln-bib 2640,128596
+(defun mon-num-to-month 2655,129212
+(defun mon-num-to-month-whitespace 2674,130017
+(defun mon-month-to-num 2693,130945
+(defun mon-abr-to-month 2711,131697
+(defun mon-trans-cp1252-to-latin1 2730,132516
+(defun mon-ital-date-to-eng 2749,133312
+(defun mon-defranc-dates 2765,134019
+(defun mon-defranc-places 2782,134807
+(defun mon-cln-benezit 2801,135662
+(defun mon-cln-benezit-fields 2819,136519
+(defun mon-replace-common-abbrevs 2835,137220
+(defun bug-cln-gilt-group 2858,138384
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-benezit-flags.el,151
+(defconst naf-mode-benezit-section-flag92,3122
+(defconst naf-mode-benezit-currency-acronym99,3525
+(defvar *naf-mode-benezit-currency-alist*171,6386
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-doc-help-undocd.el,40
+(defun mon-help-doc-no-docd 1607,64034
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/google-define-redux.el,758
+(defgroup google-define-redux 187,6729
+(defgroup google-define-redux-faces 209,7751
+(defcustom *google-define-redux-xrefs* 226,8446
+(defcustom *google-define-get-buffer* 281,11316
+(defcustom *google-define-buffer-suffix* 299,12149
+(defvar *get-google-defined* 318,13075
+(defface gg-def-base337,14008
+(defface gg-def-delim 353,14698
+(defface gg-def-num 369,15419
+(defface gg-def-inition382,16005
+(defface gg-def-defined398,16798
+(defcustom *regexp-google-defined-fontlock*410,17316
+(defun google-define-get-command 451,19887
+(defun google-define-parse-buffer 506,22732
+(defun google-define-font-lock 629,29689
+(defun google-define 660,31437
+(defun google-define-kill-def-buffers 702,33508
+(defconst *google-define-html-entry-table*835,39747
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-french-roles.el,100
+(defconst naf-mode-french-roles-primary182,5653
+(defconst naf-mode-french-roles-secondary296,8989
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-art-keywords.el,123
+(defvar *naf-mode-art-keywords-xrefs*79,2813
+(defvar *naf-art-keywords*87,3210
+(defconst naf-mode-art-keywords 153,4635
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-get-mon-packages.el,68
+(defvar *mon-el-library*94,2840
+(defun mon-wget-mon-pkgs 240,6951
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-ps-pdf-utils.el,193
+(defvar *mon-pdftotext-exec-path* 185,5550
+(defvar *mon-pdfinfo-exec-path* 218,7017
+(defun* mon-get-pdftotext 253,8430
+(defun* mon-get-ps2ascii 332,12643
+(defun* mon-get-pdfinfo 351,13611
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mccarthy-facts.el,454
+(defun facts 22,1143
+(defun period 237,10612
+(defun rot 243,10775
+(defun mvmult 248,10916
+(defun vplus 252,11038
+(defun vminus 256,11172
+(defun scap 260,11311
+(defun svmult 264,11440
+(defun addup 267,11542
+(defconst zerovec 273,11652
+(defun length 276,11737
+(defconst Imatrix 278,11806
+(defun smmult 280,11867
+(defun mplus 283,11964
+(defun mminus 286,12076
+(defun mmult 289,12191
+(defun multiplyup 294,12381
+(defun wind-power 337,13431
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-doc-help-char-encoding-lossage.el,876
+(defgroup mon-doc-help-char-encoding-lossage 139,4526
+(defun mon-make-encoding-position-lossage-table 154,5163
+(defcustom *mon-doc-help-char-encoding-lossage-xrefs*196,7568
+(defcustom *8859-1-8859-15-lossage*224,8994
+(defcustom *8859-1-8859-15-lossage-rules*255,10833
+(defcustom *cp1252-8859-15-lossage*270,11485
+(defcustom *cp1252-8859-15-lossage-rules*304,13644
+(defcustom *cp1252-8859-1-lossage*321,14395
+(defcustom *cp1252-8859-1-lossage-rules*351,16281
+(defun mon-get-encoding-codepoint 368,17104
+(defun mon-get-encoding-position-lossage 431,21218
+(defun mon-get-encoding-point-hist 472,23928
+(defun mon-get-encoding-map-results 509,25925
+(defun* mon-get-encoding-point-hist-map-plists 541,27548
+(defun mon-help-cp1252-iso-8859-1-lossage 587,30138
+(defun mon-help-iso-8859-1-8859-15-lossage 615,31609
+(defun mon-help-cp1252-iso-8859-15-lossage 641,32997
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-animate-nursery-rhymes.el,135
+(defvar *mon-nursery-rhymes* 85,2652
+(defun mon-animate-nursery-rhyme-sequence 912,36434
+(defun mon-animate-nursery-rhyme 934,37446
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-aliases.el,22072
+(defalias 'atomp atomp271,10896
+(defalias 'line-join-previous line-join-previous275,11024
+(defalias 'stringp-or-null stringp-or-null279,11175
+(defalias 'char-or-stringp char-or-stringp283,11320
+(defalias 'string-or-characterp string-or-characterp287,11475
+(defalias 'character-or-strinp character-or-strinp291,11633
+(defalias 'shell-command-async shell-command-async295,11790
+(defalias 'asynchronous-shell-command asynchronous-shell-command299,11964
+(defalias 'menubar-mode menubar-mode303,12117
+(defalias 'make-array make-array322,13073
+(defalias 'macrop macrop329,13325
+(defalias 'mon-string-combine-and-quote mon-string-combine-and-quote347,13848
+(defalias 'mon-string-split-and-unquote mon-string-split-and-unquote351,14040
+(defalias 'mon-replace-char-in-region mon-replace-char-in-region355,14227
+(defalias 'mon-delq-alist mon-delq-alist362,14516
+(defalias 'mon-string-set-char-at-idx mon-string-set-char-at-idx369,14831
+(defalias 'mon-string-insert-string-at-idx mon-string-insert-string-at-idx380,15435
+(defalias 'mon-skip-whitespace mon-skip-whitespace401,16383
+(defalias 'mon-save-restricton mon-save-restricton423,17355
+(defalias 'mon-sort-alist mon-sort-alist427,17508
+(defalias 'mon-macrop mon-macrop435,17832
+(defalias 'mon-string-prefix-p mon-string-prefix-p439,17977
+(defalias 'mon-list-chop mon-list-chop451,18525
+(defalias 'mon-buffer-do-with-undo-disabled mon-buffer-do-with-undo-disabled463,19103
+(defalias 'mon-window-get-if-buffer mon-window-get-if-buffer467,19318
+(defalias 'mon-buffer-name-print-readably mon-buffer-name-print-readably471,19532
+(defalias 'mon-buffer-get-w-mode mon-buffer-get-w-mode475,19742
+(defalias 'mon-functionp mon-functionp479,19893
+(defalias 'mon-one-or-zerop mon-one-or-zerop483,20043
+(defalias 'mon-1-or-0-p mon-1-or-0-p487,20182
+(defalias 'mon-1-or-0-p mon-1-or-0-p491,20317
+(defalias 'mon-zerop-or-one mon-zerop-or-one495,20460
+(defalias 'mon-boolean-to-binary mon-boolean-to-binary499,20617
+(defalias 'mon-t-to-1 mon-t-to-1503,20763
+(defalias 'mon-true-to-one mon-true-to-one507,20908
+(defalias 'mon-nil-to-0 mon-nil-to-0511,21052
+(defalias 'mon-false-to-zero mon-false-to-zero515,21203
+(defalias 'mon-split-string mon-split-string519,21357
+(defalias 'mon-string->symbol mon-string->symbol523,21509
+(defalias 'mon-symbol->string mon-symbol->string527,21667
+(defalias 'mon-string-from-symbol mon-string-from-symbol531,21836
+(defalias 'mon-string<-symbol mon-string<-symbol535,21997
+(defalias 'mon-sequence-to-string mon-sequence-to-string539,22165
+(defalias 'mon-seq->string mon-seq->string543,22324
+(defalias 'mon-string-suffix-p mon-string-suffix-p547,22485
+(defalias 'mon-replace-char-in-string mon-replace-char-in-string551,22661
+(defalias 'mon-remove-char-in-string mon-remove-char-in-string555,22844
+(defalias 'mon-indent-lines-from-to-col mon-indent-lines-from-to-col559,23031
+(defalias 'mon-generate-wonky mon-generate-wonky563,23208
+(defalias 'mon-hex-list-as-string mon-hex-list-as-string567,23372
+(defalias 'mon-string-escape-lisp-region mon-string-escape-lisp-region571,23559
+(defalias 'mon-lisp-escape-region mon-lisp-escape-region575,23744
+(defalias 'mon-string-unescape-lisp-region mon-string-unescape-lisp-region579,23940
+(defalias 'mon-lisp-unescape-region mon-lisp-unescape-region583,24133
+(defalias 'mon-string-ify-current-line mon-string-ify-current-line587,24326
+(defalias 'with-print-gensyms with-print-gensyms602,24745
+(defalias 'nshuffle-vector nshuffle-vector606,24921
+(defalias 'with-gensyms with-gensyms611,25176
+(defalias 'buffer-exists-p buffer-exists-p618,25483
+(defalias 'mon-buffer-print-in-if mon-buffer-print-in-if624,25700
+(defalias 'mon-get-text-properties-region->kill-ring mon-get-text-properties-region->kill-ring639,26176
+(defalias 'mon-kill-ring-save-w-props mon-kill-ring-save-w-props643,26394
+(defalias 'mon-help-face-next-property-change mon-help-face-next-property-change647,26613
+(defalias 'mon-remove-text-with-property mon-remove-text-with-property651,26821
+(defalias 'mon-remove-text-properties-region-all mon-remove-text-properties-region-all655,27040
+(defalias 'mon-remove-all-text-properties-region mon-remove-all-text-properties-region659,27266
+(defalias 'write-string write-string674,27712
+(defalias 'mon-prin1-char->?char mon-prin1-char->?char679,27880
+(defalias 'buffer-narrowed-p buffer-narrowed-p701,28732
+(defalias 'get-buffer-window-if get-buffer-window-if705,28917
+(defalias 'goto-line-25% goto-line-25%709,29093
+(defalias 'goto-line-50% goto-line-50%713,29255
+(defalias 'goto-line-75% goto-line-75%717,29417
+(defalias 'mon-buffer-end mon-buffer-end723,29615
+(defalias 'mon-get-hidden-buffers mon-get-hidden-buffers727,29764
+(defalias 'mon-help-hidden-buffers mon-help-hidden-buffers731,29936
+(defalias 'mon-buffer-get-hidden mon-buffer-get-hidden735,30105
+(defalias 'mon-longlines-mode-p mon-longlines-mode-p739,30273
+(defalias 'mon-buffer-append-to mon-buffer-append-to743,30443
+(defalias 'mon-buffer-make-shell mon-buffer-make-shell747,30608
+(defalias 'mon-buffer-get-shell mon-buffer-get-shell751,30773
+(defalias 'mon-kill-hidden-buffer-if mon-kill-hidden-buffer-if755,30935
+(defalias 'mon-buffer-get-hidden-if mon-buffer-get-hidden-if759,31116
+(defvaralias '*mon-help-hidden-buffers-known* *mon-help-hidden-buffers-known*764,31331
+(defalias 'next-almost-prime next-almost-prime779,31781
+(defalias 'mon-get-next-almost-prime mon-get-next-almost-prime785,32009
+(defalias 'mon-rectangle-kill-w-longest-line mon-rectangle-kill-w-longest-line800,32475
+(defalias 'mon-line-keep-match mon-line-keep-match815,32914
+(defalias 'mon-line-delete-match mon-line-delete-match819,33070
+(defalias 'mon-line-count-match mon-line-count-match823,33226
+(defalias 'mon-line-join-previous mon-line-join-previous827,33383
+(defalias 'mon-line-same-p mon-line-same-p832,33567
+(defalias 'mon-get-window-plist mon-get-window-plist847,33985
+(defalias 'mon-window-map-active-to-plist mon-window-map-active-to-plist851,34170
+(defalias 'mon-buffer-get-scratch mon-buffer-get-scratch855,34349
+(defalias 'mon-buffer-get-messages mon-buffer-get-messages859,34511
+(defalias 'mon-buffer-kill-completions mon-buffer-kill-completions863,34693
+(defalias 'mon-window-flip mon-window-flip867,34853
+(defalias 'mon-window-split-horiz mon-window-split-horiz871,35011
+(defalias 'mon-window-split-vert mon-window-split-vert875,35177
+(defalias 'delq-dups delq-dups890,35579
+(defalias 'mon-string-longest-in-list mon-string-longest-in-list896,35792
+(defalias 'mon-reorder-vector mon-reorder-vector900,35962
+(defalias 'mon-sequence-reorder mon-sequence-reorder904,36120
+(defalias 'mon-list-union mon-list-union908,36267
+(defalias 'mon-list-member-if mon-list-member-if912,36410
+(defalias 'mon-list-delete-if mon-list-delete-if916,36562
+(defalias 'mon-list-remove-if-not mon-list-remove-if-not920,36720
+(defalias 'mon-list-remove-if mon-list-remove-if924,36878
+(defalias 'mon-list-intersect mon-list-intersect928,37029
+(defalias 'mon-list-set-diff mon-list-set-diff932,37182
+(defalias 'mon-list-nqueue mon-list-nqueue936,37331
+(defalias 'mon-list-flatten mon-list-flatten940,37493
+(defalias 'mon-rotate-flatten-list mon-rotate-flatten-list944,37649
+(defalias 'mon-list-mismatch mon-list-mismatch948,37815
+(defalias 'mon-list-combine mon-list-combine952,37959
+(defalias 'mon-map-combine mon-map-combine956,38099
+(defalias 'mon-list-permute-combine mon-list-permute-combine960,38256
+(defalias 'mon-list-permute-combine-1 mon-list-permute-combine-1964,38434
+(defalias 'mon-list-recurse-apply mon-list-recurse-apply968,38610
+(defalias 'mon-merge-list mon-merge-list972,38762
+(defalias 'mon-list-delq-dups mon-list-delq-dups976,38907
+(defalias 'mon-delete-dups-eql mon-delete-dups-eql980,39061
+(defalias 'mon-list-deleql-dups mon-list-deleql-dups984,39219
+(defalias 'mon-list-delete-first mon-list-delete-first988,39382
+(defalias 'mon-list-remove-dups mon-list-remove-dups992,39542
+(defalias 'mon-list-transpose mon-list-transpose996,39696
+(defalias 'mon-bool-vector-to-list mon-bool-vector-to-list1000,39856
+(defalias 'mon-list-ify-bool-vector mon-list-ify-bool-vector1004,40031
+(defalias 'mon-boolean-vector-to-list mon-boolean-vector-to-list1008,40204
+(defalias 'mon-pop2 mon-pop21012,40348
+(defalias 'mon-list-pop2 mon-list-pop21023,40703
+(defalias 'mon-region-append-to-register mon-region-append-to-register1042,41317
+(defalias 'mon-append-next-kill mon-append-next-kill1046,41491
+(defalias 'mon-register-append mon-register-append1050,41650
+(defalias 'mon-read-keys-last-event mon-read-keys-last-event1054,41823
+(defalias 'mon-string-from-keyboard-input mon-string-from-keyboard-input1058,42010
+(defalias 'alpha-char-p alpha-char-p1073,42434
+(defalias 'zerop-or-one zerop-or-one1077,42569
+(defalias 'proper-list-p proper-list-p1081,42706
+(defalias 'string-or-null-and-zerop string-or-null-and-zerop1086,42871
+(defalias 'stringp-and-zerop-or-null stringp-and-zerop-or-null1090,43057
+(defalias 'string-not-null-or-zerop string-not-null-or-zerop1094,43242
+(defalias 'stringp-not-null-nor-zerop stringp-not-null-nor-zerop1098,43431
+(defalias 'mon-is-alpha-char mon-is-alpha-char1104,43674
+(defalias 'mon-proper-list-p mon-proper-list-p1108,43824
+(defalias 'mon-dotted-list-p mon-dotted-list-p1112,43975
+(defalias 'mon-list-dotted-and-proper-p mon-list-dotted-and-proper-p1116,44148
+(defalias 'mon-list-mappable-p mon-list-mappable-p1120,44326
+(defalias 'mon-mappable-sequence-p mon-mappable-sequence-p1124,44498
+(defalias 'mon-list-all-booleanp mon-list-all-booleanp1128,44669
+(defalias 'mon-byte-table-bits mon-byte-table-bits1133,44917
+(defalias 'mon-bit-table-bits mon-bit-table-bits1137,45072
+(defalias 'mon-char-coerce mon-char-coerce1141,45213
+(defalias 'mon-symbol-cells-boundp mon-symbol-cells-boundp1145,45365
+(defalias 'mon-capitalize-region mon-capitalize-region1161,45831
+(defalias 'mon-region-reverse-chars mon-region-reverse-chars1165,46028
+(defalias 'mon-region-wrap mon-region-wrap1169,46183
+(defalias 'mon-string-split-commas mon-string-split-commas1173,46346
+(defalias 'mon-split-region-at-commas mon-split-region-at-commas1177,46528
+(defalias 'mon-indent-refill-region mon-indent-refill-region1181,46709
+(defalias 'mon-indent-region-refill mon-indent-region-refill1185,46889
+(defalias 'mon-region-refill-indent mon-region-refill-indent1189,47069
+(defalias 'mon-region-count-regexp-matches mon-region-count-regexp-matches1193,47262
+(defalias 'mon-string-at-point mon-string-at-point1206,47645
+(defalias 'mon-permute-string mon-permute-string1228,48227
+(defalias 'mon-buffer-get-word-list mon-buffer-get-word-list1241,48629
+(defalias 'mon-region-reverse-words mon-region-reverse-words1245,48811
+(defalias 'mon-reverse-region-words mon-reverse-region-words1249,49013
+(defalias 'mon-buffer-get-word-count mon-buffer-get-word-count1253,49195
+(defalias 'mon-make-list-alphabet mon-make-list-alphabet1268,49649
+(defalias 'file-truename-p file-truename-p1283,50071
+(defalias 'file-attributes-plist file-attributes-plist1287,50231
+(defalias 'directory-attributes-plist directory-attributes-plist1291,50417
+(defalias 'find-buffer-visiting-other-live-frame find-buffer-visiting-other-live-frame1295,50632
+(defalias 'get-buffer-visiting-other-live-frame get-buffer-visiting-other-live-frame1299,50866
+(defalias 'frame-live-visible-graphic-p frame-live-visible-graphic-p1303,51082
+(defalias 'mon-move-file mon-move-file1311,51408
+(defalias 'mon-mv-file mon-mv-file1315,51538
+(defalias 'mon-file-move mon-file-move1319,51670
+(defalias 'mon-file-mv mon-file-mv1323,51801
+(defalias 'mon-rename-file mon-rename-file1327,51934
+(defalias 'mon-rnm-file mon-rnm-file1331,52068
+(defalias 'mon-file-rename mon-file-rename1335,52205
+(defalias 'mon-file-rnm mon-file-rnm1339,52339
+(defalias 'dired-find-file-other-frame dired-find-file-other-frame1345,52560
+(defalias 'dired-up-here dired-up-here1349,52727
+(defalias 'dired-uninsert-subdir dired-uninsert-subdir1353,52899
+(defalias 'dired-subdir-uninsert dired-subdir-uninsert1357,53070
+(defalias 'dired-uninsert-subdir-all dired-uninsert-subdir-all1361,53249
+(defalias 'dired-subdir-uninsert-all dired-subdir-uninsert-all1365,53436
+(defalias 'mon-get-buffer-visiting-other-live-frame mon-get-buffer-visiting-other-live-frame1371,53709
+(defalias 'mon-file-attributes-plist mon-file-attributes-plist1375,53925
+(defalias 'mon-directory-attributes-plist mon-directory-attributes-plist1379,54126
+(defalias 'mon-dired-toggle-dwim-target mon-dired-toggle-dwim-target1383,54325
+(defalias 'mon-dired-kill-files-to-list mon-dired-kill-files-to-list1387,54521
+(defalias 'mon-dired-copy-files-to-list mon-dired-copy-files-to-list1391,54716
+(defalias 'mon-dired-kill-files-to-strings mon-dired-kill-files-to-strings1395,54917
+(defalias 'mon-dired-copy-files-to-strings mon-dired-copy-files-to-strings1399,55123
+(defalias 'mon-directory-get-size mon-directory-get-size1403,55311
+(defalias 'mon-buffer-get-new-w-stamp mon-buffer-get-new-w-stamp1407,55486
+(defalias 'mon-dir-name-absolute mon-dir-name-absolute1411,55664
+(defalias 'mon-dir-name-relative-w-absolute mon-dir-name-relative-w-absolute1415,55858
+(defalias 'mon-file-copy-in-sub-dirs mon-file-copy-in-sub-dirs1419,56051
+(defalias 'mon-file-copy-multiple mon-file-copy-multiple1423,56230
+(defalias 'mon-make-path mon-make-path1427,56384
+(defalias 'mon-buffer-string-split-name mon-buffer-string-split-name1431,56551
+(defalias 'mon-buffer-string-split-parent-dir mon-buffer-string-split-parent-dir1435,56760
+(defalias 'mon-buffer-string-split-parent-dir mon-buffer-string-split-parent-dir1439,56980
+(defalias 'mon-buffer-get-parent-dir mon-buffer-get-parent-dir1443,57182
+(defalias 'mon-dir-name-truncate-for-prompt mon-dir-name-truncate-for-prompt1447,57380
+(defalias 'mon-dir-recurse-string-split mon-dir-recurse-string-split1451,57580
+(defalias 'mon-buffer-string-split-dir-recurse mon-buffer-string-split-dir-recurse1455,57790
+(defalias 'mon-get-dir-common-path mon-get-dir-common-path1459,57983
+(defalias 'mon-buffer-subdirs-insert mon-buffer-subdirs-insert1463,58160
+(defalias 'mon-dir-get-subdir mon-dir-get-subdir1467,58333
+(defalias 'mon-file-rename-serial mon-file-rename-serial1471,58505
+(defalias 'mon-file-copy-path mon-file-copy-path1475,58670
+(defalias 'mon-buffer-file-copy-path mon-buffer-file-copy-path1479,58847
+(defalias 'mon-buffer-get-directories mon-buffer-get-directories1483,59026
+(defalias 'mon-dir-get-subdirs-descend mon-dir-get-subdirs-descend1487,59217
+(defalias 'mon-get-directory-and-subdirs-list mon-get-directory-and-subdirs-list1491,59412
+(defalias 'mon-dir-async-du mon-dir-async-du1495,59585
+(defalias 'mon-directory-du-async mon-directory-du-async1499,59745
+(defalias 'mon-du-async-dir mon-du-async-dir1503,59899
+(defalias 'w3m-copy-this-url-as-kill w3m-copy-this-url-as-kill1519,60322
+(defalias 'w3m-copy-current-url-as-kill w3m-copy-current-url-as-kill1523,60504
+(defalias 'mon-url-escape mon-url-escape1527,60664
+(defalias 'mon-encode-url mon-encode-url1531,60803
+(defalias 'mon-url-unescape mon-url-unescape1535,60946
+(defalias 'mon-decode-url mon-decode-url1539,61087
+(defalias 'mon-search-wiki mon-search-wiki1543,61228
+(defalias 'mon-buffer-get-retrieved-url mon-buffer-get-retrieved-url1547,61402
+(defalias 'mon-get-w3m-dired-file mon-get-w3m-dired-file1551,61587
+(defalias 'mon-w3m-get-url-at-point-maybe mon-w3m-get-url-at-point-maybe1555,61771
+(defalias 'mon-w3m-get-url-at-point mon-w3m-get-url-at-point1559,61962
+(defalias 'mon-get-w3m-read-gnu-lists-nxt-prv mon-get-w3m-read-gnu-lists-nxt-prv1563,62161
+(defalias 'mon-line-strings-region-delimited mon-line-strings-region-delimited1579,62637
+(defalias 'mon-line-strings-get-delimited-region mon-line-strings-get-delimited-region1583,62854
+(defalias 'mon-function-arity mon-function-arity1587,63037
+(defalias 'mon-function-args mon-function-args1591,63197
+(defalias 'mon-insert-documentation mon-insert-documentation1595,63368
+(defalias 'mon-help-reference-sheet mon-help-reference-sheet1599,63553
+(defalias 'mon-help-finder-keywords mon-help-finder-keywords1603,63726
+(defalias 'mon-help-directory-file-functions-usage mon-help-directory-file-functions-usage1607,63937
+(defalias 'mon-help-network-process mon-help-network-process1611,64140
+(defalias 'mon-help-types mon-help-types1615,64304
+(defalias 'mon-help-face-functions mon-help-face-functions1619,64472
+(defalias 'mon-help-charset-coding-functions mon-help-charset-coding-functions1623,64659
+(defalias 'mon-help-ascii-chars mon-help-ascii-chars1627,64846
+(defalias 'mon-help-ecma-48-chars-cntl->hex mon-help-ecma-48-chars-cntl->hex1631,65034
+(defalias 'mon-help-cntl->hex->ecma-35 mon-help-cntl->hex->ecma-351635,65225
+(defalias 'mon-help-time-iso-8601 mon-help-time-iso-86011639,65402
+(defalias 'mon-help-elisp-info mon-help-elisp-info1643,65563
+(defvaralias '*reference-sheet-help-A-HAWLEY* *reference-sheet-help-A-HAWLEY*1648,65772
+(defvaralias '*doc-cookie* *doc-cookie*1652,65946
+(defalias 'mon-help-cl-packages mon-help-cl-packages1665,66301
+(defalias 'mon-help-slime-keys mon-help-slime-keys1669,66451
+(defalias 'mon-help-swank-functions mon-help-swank-functions1673,66615
+(defalias 'mon-help-cl-symbols mon-help-cl-symbols1677,66779
+(defalias 'mon-hyperspec-lookup mon-hyperspec-lookup1681,66933
+(defalias 'mon-help-csstidy mon-help-csstidy1696,67350
+(defalias 'mon-help-bzr-commands mon-help-bzr-commands1711,67762
+(defalias 'mon-stamp-date-only mon-stamp-date-only1726,68182
+(defalias 'mon-today-stamp mon-today-stamp1730,68329
+(defvaralias '*mon-emacs2html-temp* *mon-emacs2html-temp*1749,68993
+(defalias 'comment-divider comment-divider1769,69526
+(defalias 'mon-string-n-fancy-times mon-string-n-fancy-times1775,69751
+(defalias 'mon-string-insert-n-times mon-string-insert-n-times1779,69939
+(defalias 'mon-comment-divider->col mon-comment-divider->col1783,70121
+(defalias 'mon-lisp-comment-to-col mon-lisp-comment-to-col1787,70301
+(defalias 'mon-insert-doc-xref-eg mon-insert-doc-xref-eg1791,70474
+(defalias 'mon-CL-package-complete mon-CL-package-complete1795,70653
+(defalias 'mon-insert-CL-mode-line-template mon-insert-CL-mode-line-template1799,70852
+(defalias 'mon-add-lisp-CL-file-local-prop-template mon-add-lisp-CL-file-local-prop-template1803,71085
+(defalias 'mon-insert-CL-file-template mon-insert-CL-file-template1807,71301
+(defalias 'mon-insert-CL-package-template mon-insert-CL-package-template1811,71504
+(defalias 'mon-insert-CL-eval-when mon-insert-CL-eval-when1816,71700
+(defalias 'mon-insert-CL-debug mon-insert-CL-debug1820,71873
+(defalias 'mon-insert-jump-lisp-doc mon-insert-jump-lisp-doc1824,72048
+(defalias 'bug-insert-copyright bug-insert-copyright1830,72301
+(defalias 'mon-insert-naf-mode-file-template mon-insert-naf-mode-file-template1838,72702
+(defvaralias '*regexp-version-alist* *regexp-version-alist*1852,73123
+(defvaralias '*whitespace-chars* *whitespace-chars*1857,73311
+(defvaralias '*mon-digit-chars* *mon-digit-chars*1861,73480
+(defalias 'replace-char-in-string-mon replace-char-in-string-mon1888,74490
+(defalias 'replace-in-string-mon replace-in-string-mon1892,74662
+(defalias 'mon-replace-char-in-string mon-replace-char-in-string1900,74958
+(defalias 'mon-canonical-string mon-canonical-string1908,75248
+(defalias 'mon-map-regexp-matches mon-map-regexp-matches1912,75415
+(defalias 'mon-map-regexp-matches-in-region mon-map-regexp-matches-in-region1916,75596
+(defalias 'mon-region-increment-line-numbers mon-region-increment-line-numbers1920,75808
+(defalias 'mon-region-increment-numbered-lines mon-region-increment-numbered-lines1924,76022
+(defalias 'mon-cln-duplicate-lines mon-cln-duplicate-lines1929,76215
+(defalias 'mon-remove-duplicate-lines mon-remove-duplicate-lines1933,76402
+(defalias 'naf-delete-back-up-list naf-delete-back-up-list1938,76587
+(defalias 'mon-defranc-benezit mon-defranc-benezit1942,76755
+(defalias 'mon-defranc-benezit-fields mon-defranc-benezit-fields1946,76925
+(defalias 'mon-cln-common-abbrevs mon-cln-common-abbrevs1951,77104
+(defalias 'list-colors-defined list-colors-defined1968,77595
+(defalias 'mon-color-list-defined mon-color-list-defined1976,77871
+(defalias 'mon-color-read mon-color-read1981,78064
+(defalias 'mon-color-list-duplicates mon-color-list-duplicates1985,78222
+(defalias 'mon-color-list-display mon-color-list-display1989,78397
+(defalias 'get-bmps-in-dir get-bmps-in-dir2006,78887
+(defalias 'get-nefs-in-dir get-nefs-in-dir2010,79040
+(defalias 'mon-get-ebay-bmps-list mon-get-ebay-bmps-list2018,79323
+(defalias 'mon-rotate-images mon-rotate-images2035,79822
+(defalias 'mon-identify-image mon-identify-image2039,79975
+(defalias 'boxcutter-verify-image-type boxcutter-verify-image-type2057,80468
+(defalias 'naf-drive-dired-artist-letter naf-drive-dired-artist-letter2070,80868
+(defalias 'naf-dired-artist-letter naf-dired-artist-letter2074,81053
+(defalias 'naf-drive-dired-brand-letter naf-drive-dired-brand-letter2078,81256
+(defalias 'naf-dired-brand-letter naf-dired-brand-letter2082,81437
+(defalias 'slot-makunbound slot-makunbound2096,81950
+(defalias 'slime-next-xref slime-next-xref2107,82285
+(defalias 'slime-prev-xref slime-prev-xref2111,82432
+(defalias 'mon-slime-insert-arglist mon-slime-insert-arglist2115,82597
+(defalias 'mon-slime-quit-description mon-slime-quit-description2119,82780
+(defalias 'slime-compile-defun-for-debug slime-compile-defun-for-debug2123,82978
+(defalias 'slime-copy-presentation-at-point-to-kill-ring-no-props slime-copy-presentation-at-point-to-kill-ring-no-props2128,83278
+(defalias 'slime-copy-presentation-to-kill-ring-no-props slime-copy-presentation-to-kill-ring-no-props2132,83555
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-doc-help-mail.el,40
+(defun mon-help-mail-functons 110,3254
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-db-flags.el,513
+(defvar *naf-mode-db-flags-xrefs* 144,4858
+(defconst naf-mode-timestamp-flag 165,5594
+(defconst naf-mode-accessed-by-flag191,6699
+(defconst naf-mode-url-flag 233,8409
+(defconst naf-mode-url-wrapper-flag 263,9649
+(defconst naf-mode-db-numbers-flag281,10582
+(defconst naf-mode-db-field-flags-bnf337,12834
+(defconst naf-mode-db-field-flags358,13796
+(defvar naf-alternate-name-flags372,14410
+(defconst naf-mode-alternate-name-flags 396,15686
+(defvar *naf-x-of*413,16448
+(defconst *naf-mode-x-of*449,18130
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-doc-help-css.el,190
+(defun mon-help-css-check 141,4679
+(defun mon-help-css-complete 282,9928
+(defun mon-help-css-mode 392,13333
+(defun mon-help-css-color 447,15214
+(defun mon-help-css-properties 548,18462
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-time-utils.el,939
+(defun mon-comment-divider-w-len 304,13214
+(defun* mon-date-stamp 361,16352
+(defun mon-get-current-year 416,19393
+(defun mon-format-iso-8601-time 439,20446
+(defun mon-file-older-than-file-p 499,23878
+(defun mon-get-file-mod-times 543,26125
+(defun mon-conv-time-flt-pnt 595,29097
+(defun mon-comp-times-flt-pnt 617,30212
+(defun mon-accessed-time-stamp 644,31539
+(defun* mon-timestamp 661,32321
+(defun mon-stamp 746,37183
+(defun mon-accessed-stamp 771,38293
+(defun* mon-stamp-in-context 802,39726
+(defun mon-lisp-stamp 894,45294
+(defun mon-file-stamp-vrfy-put-eof 963,49041
+(defun mon-file-stamp 1013,51743
+(defun mon-file-stamp-minibuffer 1221,63764
+(defun mon-file-stamp-buffer-filename 1272,66013
+(defun mon-convert-ebay-time 1328,69318
+(defun mon-convert-ebay-time-mvb 1363,71217
+(defun mon-cln-ebay-time-string 1388,72465
+(defun mon-calculate-ebay-timezone-diff 1542,80655
+(defun calendar-goto-doomsday 1587,83009
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-empty-registers.el,783
+(defvar *mon-register-config-tags* 140,4819
+(defun* mon-set-register->tags 190,7395
+(defun mon-set-register->tags-semic 226,9424
+(defun mon-set-register->tags-sharp 236,9846
+(defun mon-make-set-register->tags-docs 246,10267
+(defun mon-set-register-tags-loadtime 293,12300
+(defvar *mon-cntl-char-registers* 365,16520
+(defun mon-cntl-char-registers-loadtime 384,17351
+(defvar *mon-digit-registers* 447,21006
+(defvar *mon-digit-shifted-registers* 472,22215
+(defvar *mon-symbol-registers* 499,23606
+(defvar *mon-upper-case-registers* 523,24907
+(defvar *mon-lower-case-registers* 551,26272
+(defvar *mon-registr-of-registers* 582,27940
+(defun mon-query-replace-register1<-reg2 614,29421
+(defun* mon-reset-registers 643,30910
+(defun mon-set-all-registers-to-char 717,33982
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode.el,356
+(defgroup naf-mode 209,6415
+(defgroup naf-mode-faces 220,6776
+(defconst *naf-mode-version* 235,7274
+(defcustom *naf-comment-prefix* 241,7559
+(defvar naf-font-lock-keywords251,7909
+(defvar naf-mode-syntax-table381,16073
+(defvar naf-mode-map406,17131
+(defun new-naf 887,42903
+(defvar naf-mode-hook 908,43856
+(define-derived-mode naf-mode 914,44076
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-string-utils.el,1229
+(defgroup mon-string-utils 173,6559
+(defcustom *mon-string-utils-xrefs* 185,7033
+(defun mon-string-split 215,8717
+(defun mon-string-spread 276,12310
+(defun mon-string-justify-left 377,17243
+(defun mon-string-fill-to-col 483,22712
+(defun mon-string-index 502,23517
+(defun mon-string-upto-index 536,25003
+(defun mon-string-after-index 549,25697
+(defun mon-string-sort-descending 564,26442
+(defun mon-string-position 583,27416
+(defun mon-string-has-suffix 597,28146
+(defun mon-string-chop-spaces 659,31731
+(defun mon-string-ify-list 681,32783
+(defun mon-string-split-on-regexp 703,33740
+(defun mon-string-replace-char 731,35086
+(defun mon-string-sub-old->new 752,36140
+(defun mon-string-repeat 791,38212
+(defun mon-string-to-hex-list-cln-chars 829,39813
+(defun* mon-string-to-hex-string 856,41225
+(defun mon-string-from-hex-list 905,43716
+(defun mon-string-to-hex-list 939,45373
+(defun mon-string-infix 982,47527
+(defun mon-string-explode 1016,49236
+(defun mon-string-permute 1034,50015
+(defun mon-string-permute-line 1077,51992
+(defun mon-string-splice-sep 1116,53573
+(defun mon-string->strings-splice-sep 1191,57431
+(defun mon-string-to-regexp 1229,59422
+(defun mon-string-match-in-list-p 1265,61128
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-alphabet-list-utils.el,390
+(defvar *mon-alphabet-as-type-generate* 195,7631
+(defun mon-alphabet-as-type 222,9165
+(defmacro mon-alphabet-as-defun 417,19067
+(defun mon-alphabet-as-bc 439,20128
+(defun mon-alphabet-as-map-bc 463,21220
+(defun mon-alphabet-as-doc-loadtime 519,23476
+(defun mon-alphabet-as-map-fun-prop 577,27154
+(defun mon-alphabet-as-unintern-fun 598,28297
+(defun mon-string-alpha-list 676,32454
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-tramp-utils.el,638
+(defvar *mon-tramp-mode-line-buffer-ident* 262,10349
+(defvar *mon-tramp-putty-private-keys* 293,11921
+(defvar *mon-tramp-paths-alist* 314,12998
+(defvar *mon-tramp-default-methods-l* 342,14625
+(defun mon-tramp-plink-example 386,17323
+(defun mon-tramp-add-default-methods 417,19035
+(defun mon-tramp-utils-loadtime 441,20351
+(defun mon-tramp-putty-conf-status 451,20744
+(defun mon-tramp-add-pageant-keys 483,22350
+(defun mon-ssh-add-p 516,23898
+(defun mon-tramp-read-conns 534,24666
+(defun mon-tramp-connect 566,26240
+(defun mon-tramp-disconnect 581,26857
+(defun mon-tramp-su-local 595,27448
+(defun mon-tramp-syntax 622,28548
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-button-utils.el,830
+(defgroup mon-button-utils 123,3513
+(defcustom *mon-button-utils-xrefs* 134,3963
+(defvar *mon-default-button-map*155,4822
+(define-button-type 'mon-default-button mon-default-button166,5202
+(defun mon-button-at-point-p 180,5715
+(defun mon-button-at-point-describe-button-plist 220,7868
+(defun mon-button-get-plist 240,8869
+(defun mon-button-get-plist-props 280,11067
+(defalias 'mon-get-button-plist-props mon-get-button-plist-props302,12097
+(defun mon-follow-button 310,12355
+(defun tt--make-test-button 376,14608
+(defvar *naf-button-map* 402,15555
+(defface naf-mode-artist-face-inverted416,16014
+(define-button-type 'naf-dirnaf-dir432,16472
+(define-button-type 'naf-artist naf-artist448,17064
+(defun insert-naf-artist-button 475,18054
+(defun naf-btn-activate 496,18800
+(defun naf-next-label-button 511,19280
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-rectangle-utils.el,347
+(defun mon-rectangle-columns 136,4284
+(defun mon-rectangle-sum-column 161,5271
+(defun mon-rectangle-operate-on 192,6738
+(defun mon-rectangle-apply-on-region-points 226,8209
+(defun mon-rectangle-downcase 248,9188
+(defun mon-rectangle-upcase 257,9611
+(defun mon-rectangle-capitalize 265,9933
+(defun mon-kill-rectangle-w-beer-belly 278,10651
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-env-proc-utils.el,567
+(defgroup mon-env-proc-utils 137,4621
+(defcustom *mon-env-proc-utils-xrefs* 152,5234
+(defun mon-get-system-specs 176,6627
+(defun mon-get-env-vars-symbols 211,8209
+(defun mon-get-env-vars-strings 244,9906
+(defun mon-get-env-vars-emacs 290,12105
+(defun mon-get-sys-proc-list 366,16314
+(defun mon-insert-sys-proc-list 391,17445
+(defun mon-get-proc-w-name 411,18254
+(defun mon-get-process 453,20469
+(defun mon-escape-string-for-cmd 499,22631
+(defun mon-terminal 519,23668
+(defun mon-cmd 538,24644
+(defun mon-firefox 557,25551
+(defun mon-conkeror 568,25972
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-iptables-vars.el,39
+(defconst *mon-iptables-alst*117,3468
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-window-utils.el,429
+(defgroup mon-window-utils 145,4955
+(defcustom *mon-window-utils-xrefs*158,5429
+(defun mon-frame-live-visible-graphic-p 184,6442
+(defun mon-map-windows->plist 213,7956
+(defun mon-twin-horizontal 285,11769
+(defun mon-twin-vertical 295,12103
+(defun mon-toggle-menu-bar 306,12419
+(defun mon-scratch 322,13091
+(defun mon-switch-to-messages 344,14091
+(defun mon-kill-completions 353,14439
+(defun mon-flip-windows 365,14817
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-dates.el,978
+(defgroup naf-mode-dates 143,4823
+(defcustom *naf-mode-date-xrefs* 155,5288
+(defcustom naf-weekday-alist188,6385
+(defcustom naf-month-abbrev-alist 233,8088
+(defcustom naf-mode-english-dates299,10908
+(defcustom naf-mode-english-days355,13083
+(defcustom naf-mode-french-dates391,14359
+(defcustom naf-mode-french-days442,16337
+(defcustom naf-mode-simple-date 475,17370
+(defcustom naf-mode-year-range490,18014
+(defcustom naf-mode-date-string518,18938
+(defcustom naf-mode-lifespan 550,20107
+(defcustom naf-mode-circa-dates565,20795
+(defcustom naf-mode-benezit-date 600,22037
+(defcustom naf-active-date-flags 614,22530
+(defcustom naf-mode-active-date638,23098
+(defcustom naf-active-date-flags-paren 654,23694
+(defcustom naf-mode-active-date-flags-paren 682,24299
+(defcustom naf-active-date-flags-solo 701,25202
+(defcustom naf-mode-active-date-flags-solo 715,25638
+(defcustom *regexp-french-date-prefix* 730,26221
+(defcustom *regexp-french-date-siecle* 763,27077
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-ulan-utils.el,614
+(defgroup naf-mode-ulan-help-utils 154,5528
+(defcustom *mon-ulan-utils-xrefs* 166,5987
+(defcustom *ulan-sample-data* 190,6956
+(defvar *ulan-associative-roles* 202,7456
+(defconst *naf-mode-db-numbers-flag-ulan* 216,7974
+(defun mon-get-next-ulan-record 231,8640
+(defconst *naf-mode-db-numbers-flag-ulan-loc-naf* 271,10570
+(defconst naf-mode-db-field-flags-ulan-paren286,11384
+(defun mon-rotate-ulan-triples 322,12698
+(defun mon-invert-ulan-triples 339,13405
+(defun mon-ulan-tsv-assc-rels-type->list 393,15389
+(defconst *naf-mode-ulan-rltd-ppl-corp* 466,18441
+(defconst *naf-mode-x-of-ulan-bol*502,20425
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-state-names.el,83
+(defvar *naf-mode-state-to-postal*82,2964
+(defconst naf-mode-state-names146,4813
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-boxcutter.el,754
+(defgroup mon-boxcutter 246,9906
+(defcustom *boxcutter-conversion-program* 257,10339
+(defcustom *boxcutter-path* 279,11755
+(defcustom *boxcutter-captures* 305,12949
+(defcustom *boxcutter-title-bar-vig* 329,14009
+(defcustom *boxcutter-counter* 348,14809
+(defcustom *boxcutter-tstamp* 357,15163
+(defvar *boxcutter-captured-last* 368,15615
+(defun boxcutter-gen-tstamp 377,16066
+(defun boxcutter-incr-cntr 388,16507
+(defun boxcutter-mkdir-loadtime 405,17205
+(defun boxcutter-gen-fname 423,18162
+(defun boxcutter-big-n-small 462,20204
+(defun boxcutter-get-win-coords 493,21730
+(defun boxcutter-get-frame-coords 546,24363
+(defun* boxcutter-capture 589,26462
+(defun boxcutter-capture-set-crop 665,30195
+(defun boxcutter-call-convert 681,30827
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-nation-english.el,129
+(defvar *naf-mode-nation-english-xrefs* 81,2678
+(defvar *naf-nation-english*98,3343
+(defconst naf-mode-nation-english326,7291
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-abbrevs.el,74
+(define-abbrev-table 'naf-mode-abbrev-tablenaf-mode-abbrev-table59,1791
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-db-fields.el,252
+(defconst naf-mode-delim 119,4858
+(defconst naf-mode-comment-delim 132,5437
+(defconst naf-mode-name-divider 145,6073
+(defconst naf-mode-db-entry 200,7738
+(defconst naf-mode-field-names-bnf434,15812
+(defconst naf-mode-db-field-flags-bnf 464,17237
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-rename-image-utils.el,1052
+(defun mon-get-ebay-bmps-in-dir 448,19698
+(defun mon-get-nefs-in-dir 471,20797
+(defun mon-insert-ebay-bmps-in-file 489,21760
+(defun mon-get-ebay-jpgs-list 510,22693
+(defun mon-insert-ebay-jpgs-in-file 537,23976
+(defun mon-get-ebay-jpgs-count 555,24799
+(defun mon-get-ebay-bmps-count 572,25500
+(defun mon-get-ebay-img-count-verify 589,26203
+(defun mon-cln-img-magic-hex 613,27269
+(defun mon-get-ebay-img-css 672,30279
+(defun mon-get-ebay-img-name-to-col 732,33252
+(defun mon-get-ebay-css-pp-region-to-file 759,34276
+(defun mon-get-ebay-css-pp 793,35747
+(defun mon-insert-css-colors 853,37953
+(defun mon-rename-imgs-in-dir 897,40034
+(defun mon-check-image-type 955,42867
+(defun mon-ebay-image-directory-not-ok 976,43870
+(defun mon-ebay-image-directory-ok-p 1013,45500
+(defun mon-image-rename-propertize 1078,48299
+(defun mon-parse-rename-images 1194,55945
+(defun mon-shorten-rename-image-path 1212,56809
+(defun mon-parse-rename-lengths 1224,57449
+(defun mon-pad-rename-lengths 1254,58886
+(defun mon-build-rename-buffer 1332,63437
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-url-utils.el,1709
+(defgroup mon-url-utils 201,7788
+(defcustom *mon-url-utils-xrefs* 215,8342
+(defcustom *mon-url-search-paths* 253,10444
+(defcustom *mon-purge-on-its-all-text-on-quit* 297,12653
+(defcustom *mon-purge-htmlfontify-dir-on-quit* 318,13549
+(defcustom *regexp-hexcolor-keywords* 335,14303
+(defun mon-its-all-text-purge-on-quit 365,15693
+(defun mon-html-fontify-generate-file-name 416,18591
+(defun mon-htmlfontify-dir-purge-on-quit 447,20314
+(defun mon-htmlfontify-buffer-to-firefox 495,23305
+(defun mon-htmlfontify-region-to-firefox 529,24950
+(defun mon-hexcolor-add-to-font-lock 564,26624
+(defun mon-url-encode 578,27496
+(defun mon-url-decode 602,28643
+(defun mon-search-ulan 630,30091
+(defun mon-search-ulan-for-name 701,34131
+(defun mon-search-wikipedia 710,34489
+(defun mon-search-loc 735,35669
+(defun mon-search-bnf 752,36529
+(defun mon-insert-dbc-link 767,37284
+(defun mon-insert-dbc-doc-link 780,37820
+(defun mon-wrap-one-url 821,39438
+(defun mon-wrap-all-urls 875,42192
+(defun mon-wrap-url 922,44644
+(defun mon-wrap-span 946,45582
+(defun mon-make-html-table-string 971,46324
+(defun mon-make-html-table 1000,47561
+(defun mon-url-retrieve-to-new-buffer 1026,48716
+(defun mon-get-host-address 1042,49601
+(defun mon-w3m-dired-file 1076,51011
+(defun mon-w3m-kill-url-at-point 1089,51614
+(defun mon-get-w3m-url-at-point-maybe 1105,52386
+(defun mon-get-w3m-url-at-point 1126,53498
+(defun mon-w3m-goto-url-at-point 1150,54652
+(defun mon-w3m-read-gnu-lists-nxt-prv 1175,55932
+(defcustom *mon-tld-list* 1289,61248
+(defsubst mon-tld-tld 1587,73645
+(defsubst mon-tld-name 1593,73873
+(defun mon-tld-find-tld 1601,74177
+(defun mon-tld-find-name 1613,74635
+(defun mon-tld 1624,75011
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-regions.el,95
+(defconst naf-mode-region-names-other193,5117
+(defconst naf-mode-region-names-french345,8507
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-city-names-us.el,79
+(defvar *naf-city-names-us*92,3338
+(defconst naf-mode-city-names-us 209,5408
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-nationality-french.el,141
+(defvar *naf-mode-nationality-french-xrefs*81,2657
+(defvar *naf-nationality-french*100,3391
+(defconst naf-mode-nationality-french180,4798
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-error-utils.el,967
+(defgroup mon-error-utils 142,5147
+(defgroup mon-error-warn 156,5715
+(defcustom *mon-error-utils-xrefs* 164,6007
+(defvar *mon-error-gather* 194,7622
+(defcustom *mon-message-function* 206,8228
+(defun mon-format 229,9325
+(defun* mon-message 560,29698
+(defun* mon-string-not-null-nor-zerop-ERROR 598,31729
+(defun* mon-symbol-void-ERROR 643,34510
+(defun* mon-vectorp-ERROR 689,37335
+(defun* mon-file-non-existent-ERROR 727,39408
+(defun* mon-buffer-non-existent-ERROR 761,41316
+(defun* mon-list-proper-p-ERROR 800,43554
+(defun mon-truncate-path-for-prompt 886,47089
+(defun mon-display-warning 911,48263
+(defun mon-error-toplevel 921,48806
+(defun* mon-error 947,50098
+(defun mon-error-string-err 1012,53751
+(defun mon-error-string-err-format 1041,54983
+(defun mon-error-gather 1112,59303
+(defun mon-error-gather-peek 1129,60098
+(defun mon-error-gather-reset 1150,61040
+(defun mon-error-gather-finalize 1164,61647
+(defun* mon-write-string 1286,67374
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-elisp-fileset.el,36
+(defun mon-map-elisp-fileset 7,279
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-utils.el,1656
+(defgroup mon-base 464,25678
+(defgroup mon-xrefs 480,26248
+(defvar *mon-utils-post-load-requires* 537,29233
+(defcustom *mon-xrefs-xrefs*603,31657
+(defcustom *mon-default-comment-start* 636,33598
+(defcustom *mon-default-comment-divider* 674,35621
+(defcustom *mon-timestamp-cond* 688,36271
+(defvar *mon-recover-nil-t-default-plist* 702,37002
+(defun mon-recover-nil-t-default-plist 717,37831
+(defmacro mon-check-feature-for-loadtime 770,40794
+(defun mon-utils-require-features-at-loadtime 824,43485
+(defun mon-after-mon-utils-loadtime 849,44783
+(defun mon-match-at-point 942,50260
+(defun mon-looking-back-p 980,51862
+(defun mon-string-read-match-string 1014,53255
+(defun mon-view-help-source 1059,55454
+(defun mon-map-obarray-symbol-plist-props 1089,56828
+(defun mon-escape-lisp-string-region 1158,60879
+(defun mon-unescape-lisp-string-region 1190,62144
+(defun mon-quote-sexp 1212,63064
+(defun mon-toggle-eval-length 1236,63948
+(defun mon-pretty-print-sexp-at-point 1277,65832
+(defun mon-princ-cb 1338,68395
+(defun mon-eval-sexp-at-point 1352,68996
+(defun mon-eval-print-last-sexp 1380,70127
+(defun mon-eval-expression 1393,70614
+(defun mon-extend-selection 1429,72227
+(defun mon-semnav-up 1454,73128
+(defun mon-show-columns 1474,73692
+(defun mon-nuke-and-eval 1510,75418
+(defun mon-unbind-defun 1543,76858
+(defun mon-unbind-symbol 1556,77466
+(defun mon-unbind-function 1569,78076
+(defun mon-unbind-command 1579,78548
+(defun mon-unbind-variable 1589,79014
+(defun mon-dump-object-to-file 1611,80081
+(defun mon-byte-compile-and-load 1643,81639
+(defun mon-compile-when-needed 1661,82457
+(defun mon-load-or-alert 1689,83992
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-publications-periodicals-english.el,323
+(defvar *naf-mode-publications-periodicals-english-xrefs*83,2717
+(defvar *naf-publications-periodicals-english* 101,3540
+(defconst naf-mode-publications-periodicals-english419,12225
+(defvar *naf-publications-periodicals-english-one-word* 434,13035
+(defconst naf-mode-publications-periodicals-english-one-word455,13428
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-publications-periodicals-intnl.el,177
+(defvar *naf-mode-publications-periodicals-intnl-xrefs*98,3220
+(defvar *naf-publications-periodicals-intnl*117,4073
+(defconst naf-mode-publications-periodicals-intnl175,6958
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-doc-help-tidy.el,31
+(defun mon-help-tidy 111,3285
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-text-property-utils.el,1947
+(defsubst mon-insert-w-text-properties 175,7398
+(defun* mon-get-text-property-intervals 184,7786
+(defun %mon-set-buffer-substring 321,16129
+(defun %mon-set-buffer-substring-no-properties 347,17404
+(defsetf buffer-substring-no-properties 356,17935
+(defun mon-remove-text-property 369,18631
+(defun mon-remove-single-text-property 383,19450
+(defun mon-nuke-text-properties-region 411,20928
+(defun mon-get-face-at-point 438,22282
+(defun mon-get-text-properties-region-prop 470,23886
+(defun mon-get-text-properties-region-prop-list 489,24868
+(defun mon-search-text-properties-prop 515,26352
+(defun mon-get-text-properties-region-to-kill-ring 540,27418
+(defun mon-get-text-properties-category 569,28754
+(defun mon-list-all-properties-in-buffer 587,29591
+(defun mon-nuke-text-properties-buffer 617,31196
+(defun mon-get-next-face-property-change 644,32874
+(defun mon-get-next-face-property-change-if 677,34668
+(defun mon-get-text-properties-region 713,36445
+(defun mon-get-text-properties-print 743,38199
+(defun mon-get-text-properties-read-temp 763,39104
+(defun mon-get-text-properties-elisp-string-pp 791,40440
+(defun mon-get-text-properties-elisp-string 826,42034
+(defun mon-get-text-properties-parse-prop-val-type-chk 858,43702
+(defun mon-get-text-properties-parse-buffer 904,45698
+(defun mon-get-text-properties-parse-sym 966,49048
+(defun* mon-get-text-properties-parse-buffer-or-sym 1002,50948
+(defun mon-get-text-properties-map-ranges 1062,54316
+(defun mon-get-text-properties-map-ranges-string 1086,55440
+(defun mon-get-text-property-bounds 1118,57088
+(defun mon-get-text-property-remove-all 1145,58531
+(defun mon-overlay-flash-region 1169,59544
+(defun mon-get-overlays-region 1218,62322
+(defun mon-get-overlays-region-map-props 1263,64294
+(defun mon-get-overlays-map-props 1313,66676
+(defun mon-get-overlays-buffer 1349,68434
+(defun mon-set-overlay-range 1375,69722
+(defun mon-nuke-overlay-buffer 1395,70746
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-css-check.el,719
+(defgroup css-check 166,6137
+(defface css-check-unapplied-face176,6587
+(defface css-check-applied-face187,7039
+(defvar *css-check-map* 198,7485
+(defvar *css-check-follow-mode* 221,8504
+(defvar *css-check-csstidy-path* 230,8990
+(defvar *css-check-file* 246,9801
+(defvar *CSS-CHECK* 258,10403
+(defun css-check-kill-buffer-hook 273,11115
+(defun css-check-toggle-follow 288,11859
+(defun css-check-next-line 307,12790
+(defun css-check-prev-line 323,13556
+(defun css-check-goto-line-at-p 338,14217
+(defun css-check-apply-line-at-p 365,15638
+(defun css-check-undo-application-at-p 413,18058
+(defun css-check-buffer-mode-css-p 465,20710
+(defun css-check-buffer-offer-save 491,21951
+(defun css-check 510,22810
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-events.el,605
+(defvar *naf-mode-events-xrefs* 102,3452
+(defvar *naf-art-events-generic*211,7612
+(defconst naf-mode-art-events-generic 224,8185
+(defvar *naf-art-events-generic-french*236,8751
+(defconst naf-mode-art-events-generic-french 254,9282
+(defvar *naf-art-events-french*266,9904
+(defconst naf-mode-art-events-french 295,11422
+(defvar *naf-art-events-generic-english*308,11987
+(defconst naf-mode-art-events-generic-english 337,12747
+(defvar *naf-art-events-english*350,13380
+(defconst naf-mode-art-events-english 380,14927
+(defvar *naf-world-events*394,15498
+(defconst naf-mode-world-events 416,16049
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-cl-compat-regexps.el,251
+(defvar *regexp-clean-cl-symbols* 189,7939
+(defvar *clean-cl-symbols-with-regexp*227,9847
+(defun mon-CL-escape-star 438,19148
+(defun mon-CL-escape-regexp 479,20958
+(defun mon-CL-namespace-colonic 519,22968
+(defun mon-CL-cln-colon-swap 535,23894
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-classes.el,787
+(defclass naf-mode-base 82,2701
+(defclass naf-mode-obj-timestamp-abst-intrfc 105,3334
+(defmethod naf-timestamp-on-obj 116,3712
+(defclass naf-mode-obj-uid-abst-intrfc 122,3988
+(defmethod naf-uid-on-obj 134,4442
+(defclass naf-mode-instance-doc-abst-intrfc 140,4715
+(defclass naf-mode-xrefs-keyword-abst-intrfc 151,5054
+(defclass naf-mode-xrefs-face-abst-intrfc 164,5455
+(defclass naf-mode-xrefs-function-abst-intrfc 177,5844
+(defclass naf-mode-xrefs-constant-abst-intrfc 190,6246
+(defclass naf-mode-xrefs-variable-abst-intrfc 203,6655
+(defclass naf-mode-xrefs-package-abst-intrfc 216,7064
+(defclass naf-mode-xrefs-abst-intrfc 229,7491
+(defclass naf-mode-keyword-abst-intrfc 266,9086
+(defclass naf-mode-kwrd-face-abst-intrfc 318,10708
+(defclass naf-nation-english 344,11414
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-intnl-city-names.el,99
+(defconst naf-mode-intnl-auction-city-names110,3128
+(defconst naf-mode-intnl-city-names390,10688
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-dir-utils.el,2516
+(defgroup mon-dir-utils 271,13428
+(defcustom *mon-dir-utils-xrefs* 285,13972
+(defcustom *mon-add-subdirs-to-list-ignorables*329,16584
+(defcustom *regexp-add-subdirs-to-list-filter-ignorables* 352,17754
+(defun mon-file-truename-p 382,19387
+(defun mon-file-dir-attributes->plist 508,25693
+(defun mon-file-ensure-extension-is-el 582,29595
+(defun mon-file-get-load-history-if 630,32471
+(defun mon-find-buffer-visiting-other-live-frame 693,36042
+(defun mon-dired-find-file-other-frame 747,38181
+(defun mon-copy-file-dired-as-list 775,39748
+(defun mon-copy-file-dired-as-string 801,40987
+(defun mon-toggle-dired-dwim-target 835,42690
+(defun mon-dired-buffers-complete 867,44041
+(defun mon-dired-other-window 1039,53689
+(defun mon-dired-srt-alph 1052,54366
+(defun mon-dired-srt-chrn 1063,54890
+(defun mon-dired-srt-type 1074,55436
+(defun mon-dired-srt-type-alph 1085,55954
+(defun mon-dired-srt-type-chrn 1096,56490
+(defun mon-dired-up-directory-this-buffer 1111,57226
+(defun mon-dired-uninsert-subdir 1129,57989
+(defun mon-dired-uninsert-subdir-all 1150,59024
+(defun mon-dired-insert-dirs-recursive 1174,60198
+(defun mon-dired-unmark-elc 1185,60770
+(defun mon-async-du-dir 1218,62443
+(defun mon-get-dir-size 1248,63795
+(defun mon-dir-make-xargs-arg-file 1283,65467
+(defun mon-get-new-buffer-w-stamp 1322,67657
+(defun mon-get-dir-name-absolute 1377,70617
+(defun mon-get-relative-w-absolute 1409,72233
+(defun mon-copy-files-in-sub-dirs 1461,75195
+(defun mon-copy-file-multiple 1529,79028
+(defun* mon-file-reduce-name 1558,80474
+(defun mon-build-path 1607,82912
+(defun mon-buffer-written-p 1681,86932
+(defun mon-string-split-buffer-name 1714,88605
+(defun mon-string-split-buffer-parent-dir-quick 1745,90072
+(defun mon-string-split-buffer-parent-dir 1771,91355
+(defun mon-get-buffer-parent-dir 1819,93910
+(defun mon-string-split-dir-recurse 1886,97332
+(defun mon-dir-common-paths 1931,99688
+(defun mon-dir-get-subdirs 1963,101314
+(defun %mon-dir-get-subdirs-filter-full 2004,103710
+(defun %mon-dir-get-subdirs-filter-no-full 2021,104605
+(defun mon-add-subdirs-to-list 2043,105844
+(defun mon-find-file 2128,110756
+(defun mon-insert-subdirs-in-buffer 2150,111601
+(defun mon-get-dir-subdir-default 2183,113251
+(defun mon-rename-file-serial 2236,116079
+(defun mon-copy-file-path 2281,117954
+(defun mon-get-buffers-directories 2349,120877
+(defun mon-proc-buffers-directories 2400,123605
+(defun mon-get-proc-buffers-directories 2458,126137
+(defun mon-dir-build-list 2535,129840
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-dir-locals-alist.el,1107
+(defgroup mon-dir-locals 146,4995
+(defcustom *mon-bind-dir-locals-alist* 162,5676
+(defcustom *mon-dir-locals-alist-xrefs*172,6073
+(defcustom *mon-HG-root-path* 200,7527
+(defcustom *mon-smith-poster-HG-path* 213,8050
+(defcustom *mon-CL-scratch-path* 234,8930
+(defcustom *bug-HG-path* 250,9567
+(defcustom *mon-record-current-directory* 266,10188
+(defcustom *emacs2html-temp* 283,10851
+(defcustom *mon-html-fontify-file-name-template* 299,11599
+(defcustom *mon-artist-naf-path* 314,12362
+(defcustom *mon-brand-naf-path* 339,13365
+(defcustom *mon-nef-scan-drive* 358,14112
+(defcustom *mon-nef-scan-base-path* 370,14700
+(defcustom *mon-nef-scan-path* 391,15686
+(defcustom *mon-nef-scan-nefs-path* 407,16339
+(defvar *mon-nefs_photos_nefs-alist* 428,17381
+(defcustom *mon-nef-scan-nef2-path* 439,18008
+(defcustom *mon-ebay-images-path* 456,18762
+(defcustom *mon-ebay-images-bmp-path* 474,19559
+(defcustom *mon-ebay-images-jpg-path* 493,20430
+(defcustom *mon-ebay-images-temp-path* 512,21317
+(defcustom *mon-ebay-images-lookup-path* 533,22335
+(defcustom *mon-buffer-mode-defaults* 564,23995
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-faces.el,3985
+(defcustom *naf-mode-faces-xrefs* 233,10590
+(defun mon-face-bold->normal 334,13985
+(defvar *naf-face-props* 346,14485
+(defvar *naf-face-prop-vals* 370,15649
+(defvar *naf-face-prop-keywords* 389,16640
+(defvar *naf-face-vals-alist* 407,17620
+(defvar *naf-face-keyword->vals* 438,19330
+(defun mon-bind-naf-face-vars-loadtime 451,20002
+(defun naf-facercise-prop-val 553,25081
+(defun naf-face-prop-val-p 590,27085
+(defun naf-map-face-key->val 638,29796
+(defun mon-help-naf-mode-faces 680,31842
+(defface naf-mode-db-entry-face965,40581
+(defvar naf-mode-db-entry-fface 977,41077
+(defface naf-mode-delim-face989,41550
+(defvar naf-mode-delim-fface 1001,42060
+(defface naf-mode-name-divider-face1013,42535
+(defvar naf-mode-name-divider-fface 1025,43053
+(defface naf-mode-field-url-flag-face1037,43544
+(defvar naf-mode-field-url-flag-fface 1049,44054
+(defface naf-mode-delimit-url-flag-face1063,44632
+(defvar naf-mode-delimit-url-flag-fface 1074,45098
+(defface naf-mode-timestamp-face1088,45689
+(defvar naf-mode-timestamp-fface 1102,46298
+(defface naf-mode-accessed-by-face1117,46875
+(defvar naf-mode-accessed-by-fface 1130,47424
+(defface naf-mode-field-face1150,48175
+(defvar naf-mode-field-fface 1161,48616
+(defface naf-mode-db-field-entry-face1174,49165
+(defvar naf-mode-db-field-entry-fface 1187,49696
+(defface naf-mode-field-bnf-face 1202,50356
+(defvar naf-mode-field-bnf-fface 1212,50761
+(defface naf-mode-db-field-entry-bnf-face1226,51345
+(defvar naf-mode-db-field-entry-bnf-fface 1237,51876
+(defface naf-mode-field-ulan-face1254,52708
+(defvar naf-mode-field-ulan-fface 1264,53101
+(defface naf-mode-db-field-entry-ulan-face1278,53751
+(defvar naf-mode-db-field-entry-ulan-fface 1288,54222
+(defface naf-mode-ulan-ppl-corp-face1304,55010
+(defvar naf-mode-ulan-ppl-corp-fface 1315,55468
+(defface naf-mode-date-face1331,56236
+(defvar naf-mode-date-fface 1347,56986
+(defface naf-mode-date-active-face1364,57758
+(defvar naf-mode-date-active-fface 1374,58142
+(defface naf-mode-benezit-face1387,58635
+(defvar naf-mode-benezit-fface 1400,59214
+(defface naf-mode-place-face1413,59782
+(defvar naf-mode-place-fface 1428,60462
+(defface naf-mode-nationality-face1443,61097
+(defvar naf-mode-nationality-fface 1455,61584
+(defface naf-mode-publication-periodical-face1470,62157
+(defvar naf-mode-publication-periodical-fface 1497,63353
+(defface naf-mode-publication-periodical-french-face1526,64670
+(defvar naf-mode-publication-periodical-french-fface 1541,65320
+(defface naf-mode-publication-periodical-english-face 1560,66248
+(defvar naf-mode-publication-periodical-english-fface 1573,66775
+(defface naf-mode-publication-periodical-english-one-word-face1593,67709
+(defvar naf-mode-publication-periodical-english-one-word-fface 1608,68382
+(defface naf-mode-publication-periodical-intnl-face1629,69394
+(defvar naf-mode-publication-periodical-intnl-fface 1644,70044
+(defface naf-mode-event-face1662,70892
+(defvar naf-mode-event-fface 1674,71374
+(defface naf-mode-group-period-style-face1686,71830
+(defvar naf-mode-group-period-style-fface 1697,72324
+(defface naf-mode-institution-face1709,72829
+(defvar naf-mode-institution-fface 1724,73531
+(defface naf-mode-alternate-name-face1740,74210
+(defvar naf-mode-alternate-name-fface 1753,74758
+(defface naf-mode-primary-role-face1766,75308
+(defvar naf-mode-primary-role-fface 1778,75793
+(defface naf-mode-secondary-role-face1791,76281
+(defvar naf-mode-secondary-role-fface 1803,76787
+(defface naf-mode-art-keywords-role-face1816,77303
+(defvar naf-mode-art-keywords-role-fface 1827,77789
+(defface naf-mode-awards-prizes-face1839,78287
+(defvar naf-mode-awards-prizes-fface 1850,78756
+(defface naf-mode-artist-face1871,79574
+(defvar naf-mode-artist-fface 1886,80112
+(defface naf-mode-artist-student-of-face1903,80772
+(defvar naf-mode-artist-student-of-fface 1915,81278
+(defface naf-mode-artist-student-of-julian-face1937,82194
+(defvar naf-mode-artist-student-of-julian-fface 1948,82684
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-cl-compat.el,5222
+(defun cl::cl-simple-expr-p 262,10553
+(defun cl::cl-simple-exprs-p 277,11143
+(defun cl::cl-safe-expr-p 285,11364
+(defun cl::cl-const-expr-p 298,11898
+(defun cl::cl-const-exprs-p 309,12265
+(defun cl::cl-const-expr-val 316,12457
+(defun cl::cl-expr-access-order 321,12634
+(defun cl::cl-expr-contains 332,12992
+(defun cl::cl-expr-contains-any 343,13345
+(defun cl::cl-expr-depends-p 350,13586
+(defun cl::gensym 359,13865
+(defun cl::gentemp 371,14314
+(defun cl::cl-defun-expander 382,14766
+(defun cl::cl-do-proclaim 390,14998
+(defun cl::cl-defsubst-expand 427,16574
+(defun cl::cl-transform-function-property 467,18684
+(defvar bind-block)478,19208
+(defvar bind-inits)479,19269
+(defun cl::cl-transform-lambda 483,19404
+(defun cl::cl-do-arglist 539,22218
+(defun cl::cl-arglist-args 673,27309
+(defun cl::cl-compile-time-too 687,27847
+(defun cl::cl-byte-compile-block 703,28508
+(defun cl::cl-byte-compile-throw 718,29173
+(defun cl::compiler-macroexpand 732,29701
+(defun cl::cl-byte-compile-compiler-macro 748,30315
+(defun cl::cl-make-type-test 755,30573
+(defun cl::reduce 793,32278
+(defun cl::fill 814,33117
+(defun cl::replace 834,33745
+(defun cl::remove* 877,35547
+(defun cl::remove-if 923,37297
+(defun cl::remove-if-not 932,37679
+(defun cl::delete* 941,38073
+(defun cl::delete-if 985,39706
+(defun cl::delete-if-not 993,40058
+(defun cl::remove-duplicates 1001,40422
+(defun cl::delete-duplicates 1008,40695
+(defun cl::cl-delete-duplicates 1014,40953
+(defun cl::substitute 1055,42651
+(defun cl::substitute-if 1077,43533
+(defun cl::substitute-if-not 1086,43952
+(defun cl::nsubstitute 1095,44383
+(defun cl::nsubstitute-if 1129,45784
+(defun cl::nsubstitute-if-not 1137,46175
+(defun cl::find 1145,46578
+(defun cl::find-if 1154,46933
+(defun cl::find-if-not 1162,47243
+(defun cl::position 1170,47565
+(defun cl::cl-position 1179,47981
+(defun cl::position-if 1201,48802
+(defun cl::position-if-not 1209,49133
+(defun cl::count 1217,49476
+(defun cl::count-if 1232,50119
+(defun cl::count-if-not 1239,50380
+(defun cl::mismatch 1246,50653
+(defun cl::search 1277,52068
+(defun cl::sort* 1304,53239
+(defun cl::stable-sort 1319,53824
+(defun cl::merge 1327,54138
+(defun cl::member* 1345,54944
+(defun cl::member-if 1360,55487
+(defun cl::member-if-not 1368,55781
+(defun cl::cl-adjoin 1377,56149
+(defun cl::assoc* 1385,56421
+(defun cl::assoc-if 1401,57008
+(defun cl::assoc-if-not 1408,57263
+(defun cl::rassoc* 1415,57533
+(defun cl::rassoc-if 1429,58054
+(defun cl::rassoc-if-not 1436,58311
+(defun cl::union 1443,58583
+(defun cl::nunion 1464,59452
+(defun cl::intersection 1475,59938
+(defun cl::nintersection 1498,61296
+(defun cl::set-difference 1508,61760
+(defun cl::nset-difference 1528,62554
+(defun cl::set-exclusive-or 1539,63050
+(defun cl::nset-exclusive-or 1552,63704
+(defun cl::subsetp 1565,64324
+(defun cl::subst-if 1580,64862
+(defun cl::subst-if-not 1588,65232
+(defun cl::nsubst 1596,65614
+(defun cl::nsubst-if 1605,65986
+(defun cl::nsubst-if-not 1613,66366
+(defun cl::sublis 1623,66844
+(defvar cl::alist)1631,67205
+(defun cl::cl-sublis-rec 1632,67224
+(defun cl::nsublis 1646,67733
+(defun cl::cl-nsublis-rec 1656,68157
+(defun cl::tree-equal 1671,68835
+(defun cl::cl-tree-equal-rec 1679,69178
+(defun cl::cl-set-substring 1692,69580
+(defun cl::cl-macroexpand 1707,70144
+(defun cl::cl-compiling-file 1725,70972
+(defun cl::proclaim 1735,71357
+(defun cl::cl-random-time 1742,71601
+(defun cl::list* 1749,71837
+(defun cl::ldiff 1764,72364
+(defun cl::floatp-safe 1775,72727
+(defun cl::plusp 1783,73009
+(defun cl::minusp 1789,73151
+(defun cl::oddp 1796,73333
+(defun cl::evenp 1803,73524
+(defun cl::subst 1809,73677
+(defun cl::cl-do-subst 1820,74207
+(defun cl::copy-list 1831,74596
+(defun cl::acons 1844,75040
+(defun cl::pairlis 1852,75320
+(defun cl::mapcar* 1861,75705
+(defun cl::subseq 1885,76645
+(defun cl::coerce 1913,77629
+(defun cl::typep 1931,78351
+(defun cl::gcd 1940,78636
+(defun cl::lcm 1951,78942
+(defun cl::isqrt 1964,79273
+(defun cl::floor* 1978,79677
+(defun cl::ceiling* 1987,79992
+(defun cl::truncate* 1997,80377
+(defun cl::round* 2006,80729
+(defun cl::mod* 2027,81397
+(defun cl::rem* 2034,81591
+(defun cl::signum 2041,81790
+(defun cl::cl-mapcar-many 2049,82070
+(defun cl::map 2084,83125
+(defun cl::maplist 2094,83514
+(defun cl::cl-mapc 2116,84214
+(defun cl::mapl 2127,84557
+(defun cl::mapcan 2139,84953
+(defun cl::mapcon 2147,85247
+(defun cl::some 2155,85538
+(defun cl::every 2173,86172
+(defun cl::notany 2189,86711
+(defun cl::notevery 2197,86985
+(defun cl::concatenate 2205,87264
+(defun cl::revappend 2216,87680
+(defun cl::nreconc 2223,87853
+(defun cl::list-length 2230,88029
+(defun cl::tailp 2240,88402
+(defun cl::get* 2250,88767
+(define-compiler-macro cl::get* 2260,89169
+(defun cl::cl-set-getf 2270,89421
+(defun cl::cl-do-remf 2278,89702
+(defun cl::cl-remprop 2286,89982
+(defun cl::cl-prettyprint 2300,90483
+(defun cl::cl-do-prettyprint 2318,91072
+(defvar cl::cl-macroexpand-cmacs 2348,92130
+(defvar cl::cl-closure-vars 2349,92168
+(defun cl::cl-macroexpand-all 2351,92216
+(defun cl::cl-macroexpand-body 2436,96053
+(defun cl-prettyexpand 2442,96264
+(defun mon-cl-compat-loadtime 2455,96823
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-iptables-regexps.el,401
+(defvar *mon-iptables-alist-as-sym* 125,4067
+(defvar *regexp-clean-iptables* 146,5094
+(defun mon-iptables-make-regexps 161,5958
+(defun mon-iptables-make-regexps-long 190,7302
+(defun mon-cln-iptables-short-form 217,8563
+(defun mon-cln-iptables-long-form 284,11505
+(defun mon-iptables-pp-key 350,14530
+(defun mon-iptables-pp-as-sym 379,15868
+(defun mon-bind-iptables-vars-at-loadtime 401,16636
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-macs.el,1148
+(defgroup mon-macs 162,5507
+(defcustom *mon-macs-xrefs* 177,6003
+(defmacro mon-error-protect 205,7534
+(defmacro %mon-format-chk-keys 257,10096
+(defmacro handler-case 312,12665
+(defmacro mon-copy-list-mac 376,16242
+(defmacro mon-mapcar-mac 473,21739
+(defmacro mon-nshuffle-vector 534,25018
+(defmacro mon-list-sift 572,26651
+(defmacro mon-foreach 614,28722
+(defmacro mon-for 630,29421
+(defmacro mon-loop 652,30278
+(defmacro mon-equality-for-type 667,30773
+(defmacro mon-gensym 702,32151
+(defmacro mon-with-gensyms 741,34231
+(defmacro mon-with-print-gensyms 799,36815
+(defmacro defconstant 835,38251
+(defmacro defparameter 862,39675
+(defmacro mon-set-text-properies-region 906,41701
+(defmacro mon-get-face-at-posn 923,42453
+(defmacro mon-with-file-buffer 951,43646
+(defmacro mon-buffer-exists-p 992,45481
+(defmacro mon-with-buffer-undo-disabled 1044,48336
+(defmacro mon-print-in-buffer-if-p 1086,50239
+(defmacro mon-with-inhibit-buffer-read-only 1116,51698
+(defmacro mon-toggle-restore-llm 1166,54363
+(defmacro mon-naf-mode-toggle-restore-llm 1226,57511
+(defmacro* mon-line-dolines 1246,58545
+(defmacro mon-cat 1285,60374
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-ulan-help-docs.el,46
+(defun mon-help-naf-mode-ulan-flags 107,3411
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-line-utils.el,2063
+(defgroup mon-line-utils 228,8688
+(defcustom *mon-line-utils-xrefs*240,9153
+(defun mon-line-get-next 276,11187
+(defun mon-line-find-duplicates 297,12104
+(defun mon-line-find-duplicates-cln 326,13565
+(defun mon-line-previous-duplicate 372,15759
+(defun mon-line-count-region 410,17627
+(defun mon-line-count-buffer 420,18075
+(defun mon-line-count-matchp 460,19998
+(defun mon-line-length-max 488,21173
+(defun mon-line-strings 513,22130
+(defun mon-line-strings-region 568,24047
+(defun mon-line-strings-qt-region 620,26058
+(defun mon-line-strings-bq-qt-sym-bol 681,29171
+(defun mon-line-strings-pipe-bol 744,32707
+(defun mon-line-strings-indent-to-col 795,34796
+(defun mon-line-indent-from-to-col 876,38422
+(defun mon-line-strings-pipe-to-col 951,41972
+(defun mon-line-pipe-lines 1002,44474
+(defun mon-line-strings-to-conses 1060,46532
+(defun mon-line-strings-to-list 1094,47953
+(defun mon-line-strings-one-list 1175,52351
+(defun mon-line-string-rotate-name 1200,53554
+(defun mon-line-string-rotate-namestrings 1243,55931
+(defun mon-line-string-unrotate-namestrings 1300,58130
+(defun mon-line-string-rotate-namestrings-combine 1375,61409
+(defun mon-line-string-insert-chars-under 1430,63565
+(defun mon-line-drop-in-words 1476,65840
+(defun mon-line-string-incr-padded 1540,69831
+(defun mon-line-number-region-incr 1579,71928
+(defun mon-line-string-get 1625,74101
+(defun mon-line-string-split 1651,75365
+(defun mon-spacep 1704,77989
+(defun mon-spacep-not-bol 1733,79453
+(defun mon-spacep-is-bol 1753,80408
+(defun mon-spacep-is-after-eol 1774,81415
+(defun mon-spacep-is-after-eol-then-graphic 1792,82354
+(defun mon-spacep-at-eol 1821,83903
+(defun mon-spacep-first 1840,84870
+(defun mon-line-bol-is-eol 1858,85603
+(defun mon-line-previous-bol-is-eol 1879,86696
+(defun mon-line-next-bol-is-eol 1907,88111
+(defun mon-line-eol-is-eob 1931,89225
+(defun mon-line-end-or-code-end 1959,90588
+(defun mon-backspace 1986,91754
+(defun mon-goto-line-25% 1996,92066
+(defun mon-goto-line-50% 2009,92677
+(defun mon-goto-line-75% 2022,93267
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-nationality-english.el,144
+(defvar *naf-mode-nationality-english-xrefs*81,2647
+(defvar *naf-nationality-english*100,3387
+(defconst naf-mode-nationality-english199,5072
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-image-utils.el,318
+(defgroup mon-image-utils 143,4811
+(defcustom *mon-image-identify-delim* 155,5235
+(defun mon-image-identify 168,5768
+(defun mon-image-rotate 214,7956
+(defun mon-image-verify-type 236,9204
+(defun mon-get-image-dimensions 309,13100
+(defun mon-get-image-dimensions-im 323,13754
+(defun mon-get-image-md5 345,14772
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-doc-help-utils.el,8179
+(defgroup mon-doc-help-utils 455,22402
+(defgroup mon-doc-help-utils-faces 476,23365
+(defcustom *mon-doc-help-utils-xrefs*509,25172
+(defcustom *mon-doc-cookie* 604,31264
+(defcustom *mon-help-docstring-help-bffr* 625,32182
+(defcustom *mon-help-custom-faces-builtins-tags*640,32775
+(defcustom *mon-help-mon-tags-alist* 672,34662
+(defcustom *mon-help-reference-keywords* 781,40552
+(defcustom *regexp-mon-doc-help-pointer-tags*850,45183
+(defcustom *regexp-mon-doc-help-docstring-tags-URL*892,46840
+(defcustom *regexp-mon-doc-help-docstring-tags-DYNAMIC* 933,48865
+(defcustom *regexp-mon-doc-help-docstring-tags-TABLES*959,50079
+(defcustom *regexp-mon-doc-help-docstring-tags*989,51503
+(defcustom *regexp-mon-doc-help-comment-tags*1016,52799
+(defcustom *regexp-mon-doc-help-meta-tags*1043,54029
+(defcustom *regexp-mon-doc-help-builtin-dynamic-tags* 1075,55578
+(defcustom *regexp-mon-doc-help-builtin-static-tags*1102,56893
+(defcustom *mon-help-side-effect-free* 1129,58225
+(defcustom *mon-help-side-effect-and-error-free* 1219,63493
+(defcustom *mon-help-pure-functions* 1291,67842
+(defvar *mon-help-subrs* 1361,71372
+(defvar *mon-help-subrs-false* 1380,72404
+(defun mon-map-subrs-and-hash 1402,73497
+(defvar *mon-help-byte-optimizer-vals* 1478,76782
+(defcustom *mon-help-risky-local-variables*1499,77811
+(defvar *mon-help-permanent-locals* 1526,79215
+(defun mon-help-permanent-locals-find 1545,80262
+(defun mon-help-byte-optimizer-find 1614,83878
+(defface mon-help-KEY-tag1657,86060
+(defface mon-help-DYNATAB-tag1674,86834
+(defface mon-help-META-tag1691,87702
+(defface mon-help-PNTR-tag1707,88446
+(defface mon-help-INNER-KEY-tag1742,90030
+(defface mon-help-URL-wrap-tag1761,90819
+(defface mon-help-BUILTIN-tag1781,91637
+(defface mon-help-OLAY-RESULT1809,92755
+(defface mon-help-OLAY-RESULT-string-show1829,93531
+(defface mon-help-OLAY-RESULT-match-show1851,94338
+(defcustom *mon-help-propertize-tags-triples*1875,95244
+(defun mon-help-propertize-tags 1912,97523
+(defun* mon-help-mon-tags 1965,100486
+(defun mon-help-insert-tags 2028,103711
+(defun mon-help-insert-tags-comment 2089,107009
+(defun mon-help-overlay-for-example 2102,107697
+(defun mon-help-delimited-region 2204,114163
+(defun mon-help-overlay-on-region 2280,117890
+(defun mon-help-overlay-result 2304,119126
+(defun mon-help-find-result-for-overlay 2364,122166
+(defun mon-help-temp-docstring-display 2415,124403
+(defun mon-help-buffer-spc-*DOC* 2465,126997
+(defun mon-help-get-mon-help-buffer 2518,129672
+(defun mon-help-view-file 2534,130330
+(defcustom *mon-tags-table-list* 2567,132046
+(defun mon-update-tags-tables 2602,133593
+(defun mon-update-tags-tables-loadtime 2657,136438
+(defun mon-tags-naf-apropos 2671,137160
+(defun mon-tags-apropos 2680,137538
+(defun mon-insert-doc-help-cookie 2690,137876
+(defmacro mon-help-put-var-doc-val->func 2723,139334
+(defmacro mon-help-swap-var-doc-const-val 2796,143437
+(defun mon-help-xref-symbol-value 2953,152143
+(defun* mon-help-function-spit-doc 2989,154107
+(defun mon-insert-doc-help-tail 3116,161891
+(defun mon-help-message-intrp 3227,168398
+(defun mon-help-function-arity 3282,171065
+(defcustom *mon-help-emacs-errors* 3337,173367
+(defun mon-help-errors 3418,177473
+(defun mon-help-function-args 3610,187005
+(defcustom *mon-help-interactive-spec-alist* 3654,189106
+(defun mon-help-parse-interactive-spec 3782,195207
+(defun mon-help-insert-documentation 3830,197635
+(defun mon-help-help-functions 3913,201805
+(defun mon-help-mon-help 4005,204834
+(defun mon-help-mon-functions 4218,210740
+(defun mon-help-ebay-template-mode 4877,226961
+(defun mon-help-emacs-introspect 4948,229437
+(defcustom *mon-emacs-external-programs-vars* 5160,235417
+(defun mon-help-package-keywords 5227,239159
+(defun mon-help-regexp-syntax 5319,243404
+(defun mon-help-syntax-class 5380,246065
+(defun mon-help-syntax-functions 5443,249063
+(defun mon-help-search-functions 5563,252496
+(defun mon-help-hooks 5695,256070
+(defun mon-help-file-dir-functions 5851,260015
+(defun mon-help-file-dir-functions-usage 6182,269054
+(defun mon-help-process-functions 6353,275330
+(defun mon-help-make-network-process 6466,278257
+(defun mon-help-server-functions 6551,282002
+(defun mon-help-inhibit-functions 6642,284602
+(defun mon-help-buffer-functions 6701,286525
+(defun mon-help-frame-functions 6951,293092
+(defun mon-help-window-functions 7188,298649
+(defun mon-help-mode-functions 7361,303766
+(defun mon-help-xml-functions 7445,306188
+(defun mon-help-eieio-defclass 7490,307487
+(defun mon-help-eieio-functions 7546,309988
+(defun mon-help-eieio-methods 7685,316536
+(defun mon-help-type-predicates 7845,325730
+(defun mon-help-number-functions 7970,331608
+(defun mon-help-predicate-functions 8098,333894
+(defun mon-help-sequence-functions 8377,340282
+(defun mon-help-key-functions 8539,343418
+(defun mon-help-load-functions 8906,353045
+(defun mon-help-read-functions 8986,355180
+(defun mon-help-print-functions 9109,361442
+(defun mon-help-marker-functions 9238,365236
+(defun mon-help-hash-functions 9303,366950
+(defun mon-help-plist-functions 9421,371025
+(defun mon-help-plist-properties 9499,373363
+(defun mon-help-faces-themes 9713,379179
+(defun mon-help-faces 9833,384745
+(defun mon-help-faces-basic 9973,394418
+(defun mon-help-faces-font-lock 10027,396450
+(defun mon-help-font-lock-functions 10072,398129
+(defun mon-help-font-lock 10201,402349
+(defun mon-help-overlay-functions 10268,406033
+(defun mon-help-text-property-functions 10347,408494
+(defun mon-help-text-property-properties 10442,415287
+(defun mon-help-text-property-stickyness 10532,421976
+(defun mon-help-text-property-functions-ext 10602,425696
+(defun mon-help-color-functions 10663,428037
+(defun mon-help-color-chart 10751,430620
+(defun mon-help-easy-menu 10915,443079
+(defun mon-help-widgets 10969,446521
+(defun mon-help-custom-keywords 11109,456611
+(defun mon-help-char-functions 11209,460775
+(defun mon-help-char-charset-functions 11333,464767
+(defun mon-help-char-coding-functions 11446,467997
+(defun mon-help-char-table-functions 11536,471681
+(defun mon-help-display-table-functions 11615,474234
+(defun mon-help-char-unidata-table 11683,476572
+(defun mon-help-char-composition 11820,481140
+(defun mon-help-char-ascii 11990,488673
+(defun mon-help-char-iso-8859-1 12082,494274
+(defun mon-help-char-ecma-48 12154,498861
+(defun mon-help-char-ecma-35 12212,501885
+(defun mon-help-diacritics 12269,504646
+(defun mon-help-char-logic 12435,510245
+(defun mon-help-char-representation 12478,511866
+(defun mon-help-char-raw-bytes 12641,519209
+(defun mon-help-binary-representation 12718,522513
+(defun mon-help-symbol-functions 12954,532644
+(defun mon-help-byte-compile-functions 13274,542617
+(defun mon-help-byte-code-vector-symbols 13639,554770
+(defun mon-help-ipv4-header 13689,557322
+(defun mon-help-nclose-functions 13788,562681
+(defun mon-help-iso-8601 13844,564785
+(defun mon-help-time-functions 13949,569587
+(defun mon-help-mon-time-functions 14044,572272
+(defun mon-help-bookmark-functions 14143,575312
+(defun mon-help-info-incantation 14281,579228
+(defun mon-help-tar-incantation 14302,580218
+(defun mon-help-rename-incantation 14339,581568
+(defcustom *regexp-clean-du-flags* 14368,582542
+(defun mon-help-du-incantation 14414,584239
+(defun mon-help-install-info-incantation 14463,586411
+(defun mon-help-hg-archive 14496,588062
+(defun mon-help-crontab 14543,590152
+(defun mon-help-permissions 14628,594714
+(defun mon-help-unix-commands 14719,600602
+(defun mon-help-format-width 14900,608314
+(defun mon-index-elisp-symbol 14930,609756
+(defun mon-help-w32-functions 14951,610502
+(defcustom *w32-env-variables-alist* 15008,612350
+(defun mon-help-w32-env 15114,619368
+(defvar *mon-help-reference-keys* 15185,622717
+(defun mon-help-bind-help-keys-loadtime 16458,668853
+(defun mon-help-keys 16524,672384
+(defun mon-help-keys-wikify-anchors 16537,672862
+(defun mon-help-keys-wikify-heading 16595,675840
+(defun mon-help-keys-wikify 16623,677274
+(defun mon-help-escape-for-ewiki 16742,683596
+(defun mon-help-unescape-for-ewiki 16788,685501
+(defun mon-help-utils-loadtime 16833,687463
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-testme-utils.el,2508
+(defgroup mon-testme-utils 171,6769
+(defcustom *mon-testme-utils-xrefs* 185,7345
+(defun mon-insert-lisp-testme 223,9548
+(defun mon-insert-test-cases 298,13190
+(defun mon-gensym-counter-randomizer-TEST 338,15199
+(defun mon-list-nshuffle-TEST 385,17735
+(defun mon-line-strings-to-list-TEST 420,19455
+(defun mon-with-inhibit-buffer-read-only-PP-TEST 460,21138
+(defun mon-with-inhibit-buffer-read-only-TEST 485,22328
+(defun mon-line-dolines-setup-TEST 526,24389
+(defun mon-line-dolines-TEST 579,26870
+(defun mon-with-buffer-undo-disabled-TEST 652,30797
+(defun mon-string-split-TEST 684,32378
+(defun mon-line-strings-bq-qt-sym-bol-TEST 723,34391
+(defun mon-help-CL-wget-pkgs-TEST 761,36293
+(defun mon-build-copyright-string-TEST 822,39365
+(defun google-define-get-command-TEST 911,44690
+(defun mon-permute-combine-functions-TEST 935,45815
+(defun mon-write-string-reset-bind-TEST 1012,49593
+(defun mon-region-capitalize-TEST 1088,53309
+(defun naf-mode-state-to-postal-TEST 1128,55150
+(defun mon-booleanp-to-binary-TEST 1143,55859
+(defun mon-sequence-all-booleanp-TEST 1179,57597
+(defun mon-string-or-null-and-zerop-TEST 1228,60517
+(defun mon-error-protect-PP-EXPAND-TEST 1263,62183
+(defun mon-line-string-rotate-name-TEST 1281,62831
+(defun mon-line-indent-from-to-col-TEST 1317,64826
+(defun mon-line-strings-pipe-to-col-TEST 1361,67238
+(defun mon-line-string-insert-chars-under-TEST 1396,69051
+(defun mon-list-reorder-TEST 1425,70485
+(defun mon-regexp-clean-ulan-dispatch-chars-TEST 1494,74441
+(defun mon-set-buffer-substring-no-properties-TEST 1564,77778
+(defun mon-plist-keys-TEST 1599,79254
+(defun mon-plist-values-TEST 1617,79989
+(defun mon-help-propertize-regexp-symbol-defs-TEST 1649,81491
+(defun mon-help-regexp-symbol-defs-TEST 1689,83841
+(defun mon-help-propertize-tags-TEST 1855,91123
+(defun mon-help-keys-wikify-TEST 1941,96294
+(defun mon-drive-transfer-template-TEST 1965,97453
+(defun mon-build-mon-emacsd-example 1999,99094
+(defun mon-build-misc-path-example 2045,101631
+(defun mon-build-user-name-example 2135,106073
+(defun mon-user-system-conditionals-TEST 2194,109188
+(defun mon-build-user-name-example-TEST 2248,112469
+(defun mon-cln-xml-escapes-TEST 2281,113987
+(defun* mon-up/down-case-regexp-TEST 2309,115389
+(defun mon-hash-get-symbol-keys-TEST 2392,119832
+(defun mon-file-stamp-buffer-filename-TEST 2411,120756
+(defun mon-cln-freenode-log-TEST 2438,121955
+(defun mon-align-conses-EXAMPLE 2486,124351
+(defun mon-align-conses-TEST 2523,126333
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-english-roles.el,145
+(defgroup naf-mode-english-roles 90,3035
+(defconst naf-mode-english-roles-primary206,5790
+(defconst naf-mode-english-roles-secondary626,15235
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-type-utils.el,1355
+(defgroup mon-type-utils 193,7845
+(defcustom *mon-type-utils-xrefs*208,8363
+(defun mon-function-object-p 264,11152
+(defun mon-symbol-cells-bound-p 433,20841
+(defun mon-equality-or-predicate 526,26205
+(defun mon-booleanp 573,28724
+(defun mon-xor 622,31157
+(defun mon-bitset-ternary 632,31541
+(defun mon-string-or-null-and-zerop 667,32842
+(defun mon-string-not-null-nor-zerop 694,34154
+(defun mon-zero-or-onep 718,35492
+(defun mon-booleanp-to-binary 765,37624
+(defun mon-sequence-all-booleanp 818,39979
+(defun mon-list-proper-p 954,48264
+(defun mon-list-dotted-p 989,49899
+(defun mon-list-proper-and-dotted-p 1014,51061
+(defun mon-sequence-mappable-p 1041,52569
+(defun mon-hash-or-mappable-p 1188,60850
+(defvar *mon-bit-table* 1199,61348
+(defun mon-get-bit-table 1211,61848
+(defun mon-fractionp 1296,66010
+(defun mon-integer-and-chacterp 1322,67071
+(defun mon-char-code 1332,67483
+(defun mon-alpha-char-p 1359,68598
+(defun mon-is-digit 1383,69656
+(defun mon-is-letter 1422,71296
+(defun mon-is-alphanum 1452,72667
+(defun mon-is-digit-simp 1480,74079
+(defun mon-is-letter-simp 1499,75098
+(defun mon-is-alphanum-simp 1518,75962
+(defun mon-coerce->char 1546,77267
+(defun mon-string-to-symbol 1649,82961
+(defun mon-symbol-to-string 1738,87595
+(defun mon-string-to-sequence 1773,89305
+(defun mon-string-from-sequence 1817,91708
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-name-utils.el,633
+(defmacro mon-intern-artist 146,5234
+(defun mon-string-rotate-name 166,6082
+(defun mon-make-lastname-firstname 213,8052
+(defun mon-make-names-list 249,9692
+(defun mon-string-csv-rotate 280,11021
+(defun mon-string-csv-regexp 295,11672
+(defun mon-csv-to-perms 316,12669
+(defvar *rotate-text-rotations* 372,15783
+(defun mon-rotate-region 397,16861
+(defun mon-rotate-string 431,18873
+(defun mon-rotate-next 465,20923
+(defun mon-rotate-get-rotations-for 501,23016
+(defun mon-string-rotate-to-regexp 523,24368
+(defun mon-indent-or-rotate 550,25681
+(defun mon-make-name-return 571,26616
+(defun mon-make-name-lispy 580,26998
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-doc-help-pacman.el,199
+(defvar *regexp-clean-pacman-Q* 113,3498
+(defun mon-help-pacman-Q 153,5861
+(defvar *regexp-clean-pacman-S* 271,11918
+(defun mon-help-pacman-S 316,14717
+(defun mon-help-pacman-commands 453,21997
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-publications-periodicals-french.el,180
+(defvar *naf-mode-publications-periodicals-french-xrefs*80,2637
+(defvar *naf-publications-periodicals-french* 98,3460
+(defconst naf-mode-publications-periodicals-french230,6479
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-doc-help-CL.el,3194
+(defgroup mon-doc-help-CL 201,8392
+(defgroup mon-doc-help-CL-hspec-parse 217,9061
+(defcustom  *mon-doc-help-CL-xrefs* 232,9716
+(defcustom *mon-help-CL-cmu-ai-repo* 280,12612
+(defcustom *mon-help-CL-ext-pkg-map* 321,14731
+(defun mon--CL-no-pull-p 672,35907
+(defcustom *mon-help-CL-ext-pkg-map-no-pull* 685,36515
+(defun mon-help-CL-pkgs 723,38328
+(defun mon-bind-mon-help-CL-pkgs-loadtime 767,40433
+(defun mon-help-CL-wget-pkgs 829,43752
+(defun mon-help-CL-wget-pkgs-for-shell-command 924,48710
+(defcustom *mon-hspec-root-dir* 1181,61119
+(defcustom *mon-hspec-parse-buffer* 1210,62670
+(defcustom  *mon-hspec-unparse-buffer* 1230,63741
+(defun mon-hspec-href-p 1248,64612
+(defun mon-hspec-header-line-p 1275,66176
+(defun mon-hspec-it-p 1345,70705
+(defun mon-hspec-bld-p 1370,72118
+(defun mon-hspec-plain-p 1395,73539
+(defun mon-hspec-w3m-spec-p 1420,74944
+(defun mon-hspec-prop-type 1434,75746
+(defun mon-hspec-out 1464,77470
+(defun mon-hspec-stk-n-mv 1481,78486
+(defun mon-hspec-parse-w3m 1518,80546
+(defun mon-hspec-find-w3m 1547,82018
+(defun mon-hspec-unparse-w3m 1633,86618
+(defun mon-hspec-unparse-w3m-to-buffer 1709,90498
+(defun mon-help-CL-emacs-functions 2172,106468
+(defun mon-help-CL-file-dir-functions 2198,107667
+(defun mon-help-CL-stream-keywords 2309,110770
+(defun mon-help-CL-error-condition-restart 2388,113940
+(defun mon-help-CL-sequence-predicates 2564,119738
+(defun mon-help-CL-bit-byte-bool-logic 2602,121478
+(defun mon-help-CL-loop 2718,126325
+(defun mon-help-CL-loop-usage 2921,132751
+(defun mon-help-CL-do 3322,148176
+(defun mon-help-CL-time 3391,151573
+(defun mon-help-CL-sequences 3424,152998
+(defun mon-help-CL-iteration 3477,154650
+(defun mon-help-CL-conses 3512,156111
+(defun mon-help-CL-hash-tables 3633,158879
+(defun mon-help-CL-print 3686,161056
+(defun mon-help-CL-streams 3774,164189
+(defun mon-help-CL-reader 3862,166642
+(defun mon-help-CL-chars 3909,168386
+(defun mon-help-CL-strings 3961,170147
+(defun mon-help-CL-structures 4002,171713
+(defun mon-help-CL-arrays 4034,173180
+(defun mon-help-CL-numbers 4101,175179
+(defun mon-help-CL-lambda-list 4214,177613
+(defun mon-help-CL-object-CLOS 4296,181141
+(defun mon-help-CL-control-flow 4370,183701
+(defun mon-help-CL-eval-compile 4470,186047
+(defun mon-help-CL-load-compile 4529,187881
+(defun mon-help-CL-environment 4570,189515
+(defun mon-help-CL-package-functions 4630,191400
+(defun mon-help-CL-intern-symbol 4689,193324
+(defun mon-help-CL-types 4740,195104
+(defun mon-help-CL-type-declarations 4880,199459
+(defun mon-help-CL-sharpsign-syntax 4921,201343
+(defun mon-help-CL-format 4974,204079
+(defun mon-help-CL-format-usage 5170,209582
+(defun mon-help-slime-functions 5275,212746
+(defun mon-help-CL-slime-keys 6440,242363
+(defun mon-help-CL-swank-functions 6574,246991
+(defun mon-help-CL-local-time 6618,248518
+(defun mon-help-CL-minion 6766,254862
+(defvar *clhs-symbol-v3-or-v7* 6852,258764
+(defun mon-help-utils-CL-loadtime 8875,363365
+(defvar *mon-help-CL-symbols* 8902,364612
+(defun mon-help-CL-symbols 8950,366707
+(defun mon-help-CL-lispdoc 9013,370396
+(defun mon-cln-ansi-info 9073,373576
+(defcustom *mon-CL-indent-specs* 9124,375817
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-color-utils.el,715
+(defun mon-color-mix 161,5774
+(defun mon-color-mix-display 191,7305
+(defun mon-defined-colors-without-duplicates 222,8892
+(defun mon-rgb-to-hsv 253,10339
+(defvar *mon-colorcomp-ewoc* 312,13105
+(defvar *mon-colorcomp-data* 314,13142
+(defvar *mon-colorcomp-mode-map* 316,13179
+(defvar *mon-colorcomp-labels* 318,13220
+(defun mon-colorcomp-pp 322,13335
+(defun mon-colorcomp 344,14272
+(defun mon-colorcomp-mod 381,15809
+(defun mon-colorcomp-R-more 397,16539
+(defun mon-colorcomp-G-more 407,16984
+(defun mon-colorcomp-B-more 416,17428
+(defun mon-colorcomp-R-less 425,17871
+(defun mon-colorcomp-G-less 434,18312
+(defun mon-colorcomp-B-less 443,18755
+(defun mon-colorcomp-copy-as-kill-and-exit 454,19274
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-dbc-xml-utils.el,48
+(defun mon-dbc-xml-parse-clean-fields 116,3245
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-region-utils.el,492
+(defun mon-region-position 146,5113
+(defun mon-region-length 186,7173
+(defun mon-decode-coding-region-utf-8-unix 215,8592
+(defun mon-region-indent-refill 233,9375
+(defun mon-region-unfill 291,13016
+(defun mon-region-capitalize 303,13467
+(defun mon-region-reverse 337,15023
+(defun mon-wrap-selection 361,16116
+(defun mon-wrap-text 397,17616
+(defun mon-wrap-with 428,18937
+(defun mon-region-split-commas 440,19553
+(defun mon-align-conses 496,21828
+(defun mon-sha1-region 524,23228
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/mon-default-loads.el,917
+(defgroup mon-default-loads 142,4618
+(defvar *IS-MON-OBARRAY* 153,5071
+(defvar *IS-MON-OBARRAY-SYMS* 172,5812
+(defcustom *mon-default-loads-xrefs* 186,6385
+(defun mon-get-mon-emacsd-paths 219,8245
+(defconst IS-W32-P283,11786
+(defvaralias 'win32p win32p304,12803
+(defconst IS-GNU-P312,13028
+(defvaralias 'gnu-linuxp gnu-linuxp333,14074
+(defconst IS-BUG-P 342,14309
+(defconst IS-BUG-P-REMOTE 355,14971
+(defconst IS-MON-P-W32 368,15654
+(defconst IS-MON-P-GNU 382,16356
+(defconst IS-MON-P 395,17043
+(defconst IS-NOT-A-MON-SYSTEM411,17864
+(defconst IS-MON-SYSTEM-P433,19077
+(defvar set-emacs-root 467,20857
+(defconst *mon-emacs-root* 568,27161
+(defconst *mon-site-lisp-root* 589,28277
+(defconst *mon-naf-mode-root* 610,29424
+(defconst *mon-naf-mode-notes* 632,30569
+(defconst *mon-ebay-tmplt-mode-root* 653,31716
+(defconst *mon-user-emacsd*675,33024
+(defconst *mon-local-emacs-temp-dir*702,34619
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-loaddefs.el,0
+
+/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-bibliograpbhic-entry.el,0
