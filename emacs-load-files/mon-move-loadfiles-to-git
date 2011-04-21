@@ -35,10 +35,10 @@ site-lisp"
 EMACS_LOAD_FILES="mon-default-loads.el
 mon-default-start-loads.el
 mon-keybindings.el
+slime-loads-GNU-clbuild.el
 mon-post-load-hooks.el
 mon-w32-load.el
 mon-move-loadfiles-to-git" # this-non-existent-file
-
 
 # NAF_MODE NAF_MODE_GIT NAF_MODE_FILES
 NAF_MODE_FILES="mon-doc-help-undocd.el
