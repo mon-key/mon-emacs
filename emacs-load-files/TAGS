@@ -1,5 +1,5 @@
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/mon-post-load-hooks.el,599
+mon-post-load-hooks.el,599
 (defgroup mon-post-load-hooks 126,3798
 (defcustom *mon-post-load-hooks-xrefs* 141,4414
 (defun mon-purge-cl-symbol-buffers-on-load 177,6156
@@ -13,7 +13,7 @@
 (defvar *mon-purge-emacs-temp-file-dir-fncns* 408,18568
 (defun mon-purge-emacs-temp-files-on-quit 431,19722
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/mon-keybindings.el,456
+mon-keybindings.el,456
 (defgroup mon-keybindings 204,7249
 (defcustom *mon-keybindings-xrefs* 219,7832
 (defun mon-keybind-globally 247,9308
@@ -26,7 +26,7 @@
 (defun mon-keybind-slime-inspector 946,42874
 (defun mon-keybind-conf-mode 990,44851
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/mon-w32-load.el,525
+mon-w32-load.el,525
 (defun mon-maximize-frame-w32 118,3602
 (defun mon-minimize-frame 127,3952
 (defun mon-restore-frame 138,4365
@@ -42,7 +42,7 @@
 (defun mon-open-moz-down 286,10449
 (defun mon-open-workspace 305,11322
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/slime-loads-GNU-clbuild.el,2852
+slime-loads-GNU-clbuild.el,2852
 (defgroup mon-slime 299,10943
 (defcustom *mon-slime-xrefs*333,12276
 (defgroup mon-qucklisp 387,14897
@@ -99,7 +99,7 @@
 (defun slime-echo-arglist-behave-or-back-to-your-cage 2238,105645
 (defun slime-echo-arglist-STFU 2249,106191
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/mon-default-start-loads.el,2378
+mon-default-start-loads.el,2378
 (defgroup mon-default-start-loads 190,7854
 (defcustom *mon-default-start-loads-xrefs* 241,10318
 (defvar *mon-default-start-load-sanity* 289,12838
@@ -153,10 +153,10 @@
 (defun mon-set-mon-feature-customs-init 2311,110412
 (defun mon-set-system-specific-and-load-init 2372,113040
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-french-months.el,42
+naf-mode/naf-mode-french-months.el,42
 (defconst naf-mode-french-months 84,3038
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-word-syntax-utils.el,452
+naf-mode/mon-word-syntax-utils.el,452
 (defun mon-get-syntax-at 143,4923
 (defun mon-get-syntax-class-at 168,6156
 (defun mon-line-test-content 199,7484
@@ -169,7 +169,7 @@
 (defun mon-word-count-region 632,30596
 (defun mon-word-count-chars-region 649,31260
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-seq-utils.el,2147
+naf-mode/mon-seq-utils.el,2147
 (defgroup mon-seq-utils 253,8163
 (defcustom *mon-seq-utils-xrefs* 268,8745
 (defun mon-elt-> 305,10778
@@ -233,7 +233,7 @@
 (defun mon-list-string-longest 2536,124642
 (defun mon-bool-vector-pp 2574,126693
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-hash-utils.el,835
+naf-mode/mon-hash-utils.el,835
 (defun mon-hash-get-symbol-name-if 172,6142
 (defun mon-hash<-vector 314,12742
 (defun mon-hash-make-size 329,13577
@@ -256,7 +256,7 @@
 (defun mon-hash-describe-descend 786,35403
 (defun mon-hash-table-complete 810,36304
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-buffer-utils.el,974
+naf-mode/mon-buffer-utils.el,974
 (defgroup mon-buffer-utils 146,5121
 (defcustom *mon-buffer-utils-xrefs* 160,5648
 (defcustom *mon-get-hidden-buffers-known* 187,6968
@@ -281,7 +281,7 @@
 (defun mon-make-shell-buffer 1056,52324
 (defun mon-shell 1098,54271
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-bzr-utils.el,351
+naf-mode/mon-bzr-utils.el,351
 (defgroup mon-bzr-utils 117,3395
 (defcustom *mon-bzr-utils-xrefs* 132,3974
 (defun mon-help-bzr-topics 176,5825
@@ -292,7 +292,7 @@
 (defvar *mon-hgignore-template* 623,24660
 (defun mon-insert-hgignore-template 775,29329
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-doc-help-proprietary.el,301
+naf-mode/mon-doc-help-proprietary.el,301
 (defvar *mon-compromise-my-ms-W32-virginity* 67,1924
 (defvar *mon-help-w32-CMD-commands* 76,2483
 (defun mon-help-w32-cmd-commands 88,3210
@@ -300,7 +300,7 @@
 (defun mon-help-w32-shell-execute 153,6875
 (defvar *mon-help-w32-CMD-commands-TEMP* 382,19005
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-skeletons.el,229
+naf-mode/naf-skeletons.el,229
 (define-skeleton book-naf128,4489
 (define-skeleton artist-naf202,5762
 (define-skeleton people-naf253,6589
@@ -308,7 +308,7 @@
 (define-skeleton brand-naf357,8062
 (define-skeleton benezit-naf-template417,8939
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-students-of-julian.el,1202
+naf-mode/naf-mode-students-of-julian.el,1202
 (defvar *naf-mode-students-of-julian-xrefs* 109,3843
 (defvar *naf-students-of-julian-french*133,4705
 (defconst naf-mode-students-of-julian-french 206,9120
@@ -333,10 +333,10 @@
 (defvar *naf-students-of-julian-switzerland*585,25338
 (defconst naf-mode-students-of-julian-switzerland597,25770
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-wordfreq.el,43
+naf-mode/naf-mode-wordfreq.el,43
 (defconst *naf-mode-wordfreq-words*33,863
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/ebay-template-mode/ebay-template-tools.el,991
+naf-mode/ebay-template-mode/ebay-template-tools.el,991
 (defvar *mon-html-ebay-template* 150,5510
 (defvar *mon-html-domain-for-ebay-template*160,5844
 (defvar *mon-ebay-image-linkify-templates*173,6456
@@ -360,7 +360,7 @@
 (defun mon-ebay-image-linkify 797,38204
 (defun mon-ebay-image-linkify-lite 852,41084
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/ebay-template-mode/ebay-template-mode.el,613
+naf-mode/ebay-template-mode/ebay-template-mode.el,613
 (defconst *mon-ebay-template-mode-version* 154,5069
 (defgroup ebay-template-mode 160,5335
 (defgroup ebay-template-mode-faces 170,5661
@@ -375,7 +375,7 @@
 (defvar *mon-ebay-template-mode-syntax-table*399,16263
 (define-derived-mode ebay-template-mode 417,17007
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/ebay-template-mode/ebay-template-html-utils.el,735
+naf-mode/ebay-template-mode/ebay-template-html-utils.el,735
 (defvar xmlgen-escape-attribute-vals 165,4945
 (defvar xmlgen-escape-elm-vals 169,5070
 (defvar xmlgen-escapees173,5190
@@ -396,7 +396,7 @@
 (defun html-lite-write-tree 521,17660
 (defun html-lite-browse-tree 535,18040
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-mysql-utils.el,1004
+naf-mode/mon-mysql-utils.el,1004
 (defun mon-cln-pipes-get-field-col 137,4722
 (defalias 'mon-mysql-get-field-col mon-mysql-get-field-col206,8336
 (defun %subst% 217,8860
@@ -417,12 +417,12 @@
 (defun mon-help-mysql-complete 913,46899
 (defun mon-help-mysql-commands 940,48179
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-nation-french.el,127
+naf-mode/naf-mode-nation-french.el,127
 (defvar *naf-mode-nation-french-xrefs* 83,2670
 (defvar *naf-nation-french*101,3335
 (defconst naf-mode-nation-french270,7190
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-drive-transfer-utils.el,339
+naf-mode/mon-drive-transfer-utils.el,339
 (defvar *mon-drive-transfer-template-src-dest-log* 125,4136
 (defun mon-drive-transfer-template-subst-src-dest-log 184,7539
 (defvar *mon-drive-transfer-template* 205,8525
@@ -430,7 +430,7 @@
 (defun mon-drive-transfer-template-cln-log-dest 283,12394
 (defun mon-drive-transfer-template-cln-all 348,15649
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-insertion-utils.el,2239
+naf-mode/mon-insertion-utils.el,2239
 (defgroup mon-insertion-utils 211,9225
 (defcustom *mon-insertion-utils-xrefs*225,9732
 (defun mon-insert-dirs-in-path 264,11914
@@ -481,12 +481,12 @@
 (defun mon-comput-45 2711,136890
 (defun mon-comput-33 2740,137910
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-get-freenode-lisp-logs.el,134
+naf-mode/mon-get-freenode-lisp-logs.el,134
 (defvar *freenode-lisp-logs* 124,3896
 (defun mon-wget-freenode-lisp-logs 135,4437
 (defun mon-get-freenode-lisp-logs-dates 170,6122
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-cifs-utils.el,909
+naf-mode/mon-cifs-utils.el,909
 (defvar *mon-CIFS-misc-path-alist*163,6098
 (defvar *mon-CIFS-auth-protocol* 202,8265
 (defvar *mon-CIFS-workgroup* 217,8918
@@ -509,12 +509,12 @@
 (defvar *mon-auth-source-cache-debug-var* 756,38074
 (defun mon-spit-auth-source-debug->var 785,39697
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-awards-prizes.el,137
+naf-mode/naf-mode-awards-prizes.el,137
 (defvar *naf-mode-awards-prizes-xrefs*76,2641
 (defvar *naf-awards-prizes-names*88,3156
 (defconst naf-mode-awards-prizes-names106,3692
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-institution.el,674
+naf-mode/naf-mode-institution.el,674
 (defvar *naf-mode-institution-xrefs* 94,3099
 (defconst naf-mode-benezit-museum-short 116,3956
 (defvar *naf-institution-museum-names*136,4812
@@ -530,7 +530,7 @@
 (defvar *naf-school-names-english*472,16553
 (defconst naf-mode-school-names-english 511,17987
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-type-utils-vars.el,421
+naf-mode/mon-type-utils-vars.el,421
 (defgroup mon-type-utils-vars 130,4139
 (defcustom *mon-type-utils-vars-xrefs*145,4706
 (defvar *mon-special-forms-types*176,5928
@@ -541,10 +541,10 @@
 (defcustom *mon-ascii-punct-chars*351,13497
 (defvar *mon-whitespace-chars* 372,14408
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-group-period-styles.el,48
+naf-mode/naf-mode-group-period-styles.el,48
 (defconst naf-mode-group-period-styles172,4316
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-plist-utils.el,263
+naf-mode/mon-plist-utils.el,263
 (defgroup mon-plist-utils 125,3527
 (defcustom *mon-plist-utils-xrefs* 137,3996
 (defun mon-plist-keys 190,6085
@@ -553,7 +553,7 @@
 (defun mon-plist-remove-consing 305,11470
 (defun mon-plist-remove-if 327,12573
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-event-utils.el,1051
+naf-mode/mon-event-utils.el,1051
 (defcustom *mon-popup-pos-x-offset* 162,5884
 (defun mon-inhibit-read-only 174,6220
 (defun mon-inhibit-modification-hooks 204,7546
@@ -580,7 +580,7 @@
 (defun mon-append-to-register 775,35894
 (defun mon-multi-isearch-rmv-hook 797,37118
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-insertion-utils.el,1110
+naf-mode/naf-mode-insertion-utils.el,1110
 (defvar *naf-mode-insertion-utils-xrefs* 110,4180
 (defun naf-tab-region 148,5631
 (defun naf-comment-line 156,5875
@@ -608,16 +608,16 @@
 (defun mon-insert-naf-mode-faces-as-displayed 739,33913
 (defvar *naf-mode-faces-as-displayed* 756,34737
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-eight-bit-raw-utils.el,38
+naf-mode/mon-eight-bit-raw-utils.el,38
 (defun mon-cln-eight-bit-raw 88,2792
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-jg-directory-creator.el,173
+naf-mode/mon-jg-directory-creator.el,173
 (defvar *mon-jg-file-template* 118,3646
 (defun* mon-make-jg-dir-in-path 151,5042
 (defun mon-write-jg-file-in-path 247,9812
 (defun mon-format-jg-file-for-write 272,11118
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-regexp-symbols.el,2562
+naf-mode/mon-regexp-symbols.el,2562
 (defgroup mon-regexp-symbols 163,6413
 (defcustom *mon-regexp-symbols-xrefs* 177,7018
 (defcustom *regexp-whitespace-chars*211,9061
@@ -671,11 +671,11 @@
 (defvar *regexp-clean-ulan-dispatch-chars* 2313,109843
 (defvar *regexp-ulan-contribs* 2358,112261
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-xrefs.el,80
+naf-mode/naf-mode-xrefs.el,80
 (defgroup naf-mode-xrefs 115,3367
 (defcustom *naf-mode-xref-of-xrefs*127,3831
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-css-complete.el,4060
+naf-mode/mon-css-complete.el,4060
 (defvar *css-complete-at-ids* 151,7586
 (defvar *css-complete-tag-ids* 174,8658
 (defvar *css-complete-media-ids* 229,11165
@@ -768,7 +768,7 @@
 (define-key css-mode-map 1582,74669
 (defun mon-css-complete-loadtime 1588,74860
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-wget-utils.el,368
+naf-mode/mon-wget-utils.el,368
 (defvar *mon-show-wget-script-temp* 121,3695
 (defun mon-wget-list-to-script 131,4210
 (defun mon-wget-list-to-script-TEST 183,6782
@@ -778,7 +778,7 @@
 (defun mon-wget-unicodedata-files 347,15338
 (defvar *mon-unidata-file-list* 381,17141
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-dir-utils-local.el,1234
+naf-mode/mon-dir-utils-local.el,1234
 (defvar *mon-img-hash* 172,6719
 (defvar *mon-nef-img-hash* 191,7498
 (defvar *mon-bmp-img-hash* 210,8376
@@ -810,7 +810,7 @@
 (defun mon--local-url-for-bug 1210,59733
 (defun mon-get-local-url-for-bug 1215,59977
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-randomize-utils.el,317
+naf-mode/mon-randomize-utils.el,317
 (defun mon-next-almost-prime 140,4590
 (defun mon-gensym-counter-randomizer 194,6714
 (defun mon-mix-fields 299,11838
@@ -820,7 +820,7 @@
 (defun mon-string-wonkify 433,17828
 (defun mon-generate-WPA-key 490,20791
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-replacement-utils.el,3415
+naf-mode/mon-replacement-utils.el,3415
 (defgroup mon-replacement-utils 193,7888
 (defcustom *mon-replacement-utils-xrefs* 208,8519
 (defun mon-is-naf-mode-p 259,11732
@@ -903,15 +903,15 @@
 (defun mon-replace-common-abbrevs 2835,137220
 (defun bug-cln-gilt-group 2858,138384
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-benezit-flags.el,151
+naf-mode/naf-mode-benezit-flags.el,151
 (defconst naf-mode-benezit-section-flag92,3122
 (defconst naf-mode-benezit-currency-acronym99,3525
 (defvar *naf-mode-benezit-currency-alist*171,6386
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-doc-help-undocd.el,40
+naf-mode/mon-doc-help-undocd.el,40
 (defun mon-help-doc-no-docd 1607,64034
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/google-define-redux.el,758
+naf-mode/google-define-redux.el,758
 (defgroup google-define-redux 187,6729
 (defgroup google-define-redux-faces 209,7751
 (defcustom *google-define-redux-xrefs* 226,8446
@@ -931,27 +931,27 @@
 (defun google-define-kill-def-buffers 702,33508
 (defconst *google-define-html-entry-table*835,39747
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-french-roles.el,100
+naf-mode/naf-mode-french-roles.el,100
 (defconst naf-mode-french-roles-primary182,5653
 (defconst naf-mode-french-roles-secondary296,8989
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-art-keywords.el,123
+naf-mode/naf-mode-art-keywords.el,123
 (defvar *naf-mode-art-keywords-xrefs*79,2813
 (defvar *naf-art-keywords*87,3210
 (defconst naf-mode-art-keywords 153,4635
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-get-mon-packages.el,68
+naf-mode/mon-get-mon-packages.el,68
 (defvar *mon-el-library*94,2840
 (defun mon-wget-mon-pkgs 240,6951
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-ps-pdf-utils.el,193
+naf-mode/mon-ps-pdf-utils.el,193
 (defvar *mon-pdftotext-exec-path* 185,5550
 (defvar *mon-pdfinfo-exec-path* 218,7017
 (defun* mon-get-pdftotext 253,8430
 (defun* mon-get-ps2ascii 332,12643
 (defun* mon-get-pdfinfo 351,13611
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mccarthy-facts.el,454
+naf-mode/naf-mccarthy-facts.el,454
 (defun facts 22,1143
 (defun period 237,10612
 (defun rot 243,10775
@@ -971,7 +971,7 @@
 (defun multiplyup 294,12381
 (defun wind-power 337,13431
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-doc-help-char-encoding-lossage.el,876
+naf-mode/mon-doc-help-char-encoding-lossage.el,876
 (defgroup mon-doc-help-char-encoding-lossage 139,4526
 (defun mon-make-encoding-position-lossage-table 154,5163
 (defcustom *mon-doc-help-char-encoding-lossage-xrefs*196,7568
@@ -990,12 +990,12 @@
 (defun mon-help-iso-8859-1-8859-15-lossage 615,31609
 (defun mon-help-cp1252-iso-8859-15-lossage 641,32997
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-animate-nursery-rhymes.el,135
+naf-mode/mon-animate-nursery-rhymes.el,135
 (defvar *mon-nursery-rhymes* 85,2652
 (defun mon-animate-nursery-rhyme-sequence 912,36434
 (defun mon-animate-nursery-rhyme 934,37446
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-aliases.el,22072
+naf-mode/mon-aliases.el,22072
 (defalias 'atomp atomp271,10896
 (defalias 'line-join-previous line-join-previous275,11024
 (defalias 'stringp-or-null stringp-or-null279,11175
@@ -1319,10 +1319,10 @@
 (defalias 'slime-copy-presentation-at-point-to-kill-ring-no-props slime-copy-presentation-at-point-to-kill-ring-no-props2128,83278
 (defalias 'slime-copy-presentation-to-kill-ring-no-props slime-copy-presentation-to-kill-ring-no-props2132,83555
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-doc-help-mail.el,40
+naf-mode/mon-doc-help-mail.el,40
 (defun mon-help-mail-functons 110,3254
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-db-flags.el,513
+naf-mode/naf-mode-db-flags.el,513
 (defvar *naf-mode-db-flags-xrefs* 144,4858
 (defconst naf-mode-timestamp-flag 165,5594
 (defconst naf-mode-accessed-by-flag191,6699
@@ -1336,14 +1336,14 @@
 (defvar *naf-x-of*413,16448
 (defconst *naf-mode-x-of*449,18130
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-doc-help-css.el,190
+naf-mode/mon-doc-help-css.el,190
 (defun mon-help-css-check 141,4679
 (defun mon-help-css-complete 282,9928
 (defun mon-help-css-mode 392,13333
 (defun mon-help-css-color 447,15214
 (defun mon-help-css-properties 548,18462
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-time-utils.el,939
+naf-mode/mon-time-utils.el,939
 (defun mon-comment-divider-w-len 304,13214
 (defun* mon-date-stamp 361,16352
 (defun mon-get-current-year 416,19393
@@ -1368,7 +1368,7 @@
 (defun mon-calculate-ebay-timezone-diff 1542,80655
 (defun calendar-goto-doomsday 1587,83009
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-empty-registers.el,783
+naf-mode/mon-empty-registers.el,783
 (defvar *mon-register-config-tags* 140,4819
 (defun* mon-set-register->tags 190,7395
 (defun mon-set-register->tags-semic 226,9424
@@ -1387,7 +1387,7 @@
 (defun* mon-reset-registers 643,30910
 (defun mon-set-all-registers-to-char 717,33982
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode.el,356
+naf-mode/naf-mode.el,356
 (defgroup naf-mode 209,6415
 (defgroup naf-mode-faces 220,6776
 (defconst *naf-mode-version* 235,7274
@@ -1399,7 +1399,7 @@
 (defvar naf-mode-hook 908,43856
 (define-derived-mode naf-mode 914,44076
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-string-utils.el,1229
+naf-mode/mon-string-utils.el,1229
 (defgroup mon-string-utils 173,6559
 (defcustom *mon-string-utils-xrefs* 185,7033
 (defun mon-string-split 215,8717
@@ -1431,7 +1431,7 @@
 (defun mon-string-to-regexp 1229,59422
 (defun mon-string-match-in-list-p 1265,61128
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-alphabet-list-utils.el,390
+naf-mode/mon-alphabet-list-utils.el,390
 (defvar *mon-alphabet-as-type-generate* 195,7631
 (defun mon-alphabet-as-type 222,9165
 (defmacro mon-alphabet-as-defun 417,19067
@@ -1442,7 +1442,7 @@
 (defun mon-alphabet-as-unintern-fun 598,28297
 (defun mon-string-alpha-list 676,32454
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-tramp-utils.el,638
+naf-mode/mon-tramp-utils.el,638
 (defvar *mon-tramp-mode-line-buffer-ident* 262,10349
 (defvar *mon-tramp-putty-private-keys* 293,11921
 (defvar *mon-tramp-paths-alist* 314,12998
@@ -1459,7 +1459,7 @@
 (defun mon-tramp-su-local 595,27448
 (defun mon-tramp-syntax 622,28548
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-button-utils.el,830
+naf-mode/mon-button-utils.el,830
 (defgroup mon-button-utils 123,3513
 (defcustom *mon-button-utils-xrefs* 134,3963
 (defvar *mon-default-button-map*155,4822
@@ -1479,7 +1479,7 @@
 (defun naf-btn-activate 496,18800
 (defun naf-next-label-button 511,19280
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-rectangle-utils.el,347
+naf-mode/mon-rectangle-utils.el,347
 (defun mon-rectangle-columns 136,4284
 (defun mon-rectangle-sum-column 161,5271
 (defun mon-rectangle-operate-on 192,6738
@@ -1489,7 +1489,7 @@
 (defun mon-rectangle-capitalize 265,9933
 (defun mon-kill-rectangle-w-beer-belly 278,10651
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-env-proc-utils.el,567
+naf-mode/mon-env-proc-utils.el,567
 (defgroup mon-env-proc-utils 137,4621
 (defcustom *mon-env-proc-utils-xrefs* 152,5234
 (defun mon-get-system-specs 176,6627
@@ -1506,10 +1506,10 @@
 (defun mon-firefox 557,25551
 (defun mon-conkeror 568,25972
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-iptables-vars.el,39
+naf-mode/mon-iptables-vars.el,39
 (defconst *mon-iptables-alst*117,3468
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-window-utils.el,429
+naf-mode/mon-window-utils.el,429
 (defgroup mon-window-utils 145,4955
 (defcustom *mon-window-utils-xrefs*158,5429
 (defun mon-frame-live-visible-graphic-p 184,6442
@@ -1522,7 +1522,7 @@
 (defun mon-kill-completions 353,14439
 (defun mon-flip-windows 365,14817
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-dates.el,978
+naf-mode/naf-mode-dates.el,978
 (defgroup naf-mode-dates 143,4823
 (defcustom *naf-mode-date-xrefs* 155,5288
 (defcustom naf-weekday-alist188,6385
@@ -1546,7 +1546,7 @@
 (defcustom *regexp-french-date-prefix* 730,26221
 (defcustom *regexp-french-date-siecle* 763,27077
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-ulan-utils.el,614
+naf-mode/naf-mode-ulan-utils.el,614
 (defgroup naf-mode-ulan-help-utils 154,5528
 (defcustom *mon-ulan-utils-xrefs* 166,5987
 (defcustom *ulan-sample-data* 190,6956
@@ -1561,11 +1561,11 @@
 (defconst *naf-mode-ulan-rltd-ppl-corp* 466,18441
 (defconst *naf-mode-x-of-ulan-bol*502,20425
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-state-names.el,83
+naf-mode/naf-mode-state-names.el,83
 (defvar *naf-mode-state-to-postal*82,2964
 (defconst naf-mode-state-names146,4813
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-boxcutter.el,754
+naf-mode/mon-boxcutter.el,754
 (defgroup mon-boxcutter 246,9906
 (defcustom *boxcutter-conversion-program* 257,10339
 (defcustom *boxcutter-path* 279,11755
@@ -1585,15 +1585,15 @@
 (defun boxcutter-capture-set-crop 665,30195
 (defun boxcutter-call-convert 681,30827
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-nation-english.el,129
+naf-mode/naf-mode-nation-english.el,129
 (defvar *naf-mode-nation-english-xrefs* 81,2678
 (defvar *naf-nation-english*98,3343
 (defconst naf-mode-nation-english326,7291
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-abbrevs.el,74
+naf-mode/naf-mode-abbrevs.el,74
 (define-abbrev-table 'naf-mode-abbrev-tablenaf-mode-abbrev-table59,1791
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-db-fields.el,252
+naf-mode/naf-mode-db-fields.el,252
 (defconst naf-mode-delim 119,4858
 (defconst naf-mode-comment-delim 132,5437
 (defconst naf-mode-name-divider 145,6073
@@ -1601,7 +1601,7 @@
 (defconst naf-mode-field-names-bnf434,15812
 (defconst naf-mode-db-field-flags-bnf 464,17237
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-rename-image-utils.el,1052
+naf-mode/mon-rename-image-utils.el,1052
 (defun mon-get-ebay-bmps-in-dir 448,19698
 (defun mon-get-nefs-in-dir 471,20797
 (defun mon-insert-ebay-bmps-in-file 489,21760
@@ -1627,7 +1627,7 @@
 (defun mon-pad-rename-lengths 1254,58886
 (defun mon-build-rename-buffer 1332,63437
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-url-utils.el,1709
+naf-mode/mon-url-utils.el,1709
 (defgroup mon-url-utils 201,7788
 (defcustom *mon-url-utils-xrefs* 215,8342
 (defcustom *mon-url-search-paths* 253,10444
@@ -1670,20 +1670,20 @@
 (defun mon-tld-find-name 1613,74635
 (defun mon-tld 1624,75011
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-regions.el,95
+naf-mode/naf-mode-regions.el,95
 (defconst naf-mode-region-names-other193,5117
 (defconst naf-mode-region-names-french345,8507
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-city-names-us.el,79
+naf-mode/naf-mode-city-names-us.el,79
 (defvar *naf-city-names-us*92,3338
 (defconst naf-mode-city-names-us 209,5408
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-nationality-french.el,141
+naf-mode/naf-mode-nationality-french.el,141
 (defvar *naf-mode-nationality-french-xrefs*81,2657
 (defvar *naf-nationality-french*100,3391
 (defconst naf-mode-nationality-french180,4798
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-error-utils.el,967
+naf-mode/mon-error-utils.el,967
 (defgroup mon-error-utils 142,5147
 (defgroup mon-error-warn 156,5715
 (defcustom *mon-error-utils-xrefs* 164,6007
@@ -1709,10 +1709,10 @@
 (defun mon-error-gather-finalize 1164,61647
 (defun* mon-write-string 1286,67374
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-elisp-fileset.el,36
+naf-mode/mon-elisp-fileset.el,36
 (defun mon-map-elisp-fileset 7,279
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-utils.el,1656
+naf-mode/mon-utils.el,1656
 (defgroup mon-base 464,25678
 (defgroup mon-xrefs 480,26248
 (defvar *mon-utils-post-load-requires* 537,29233
@@ -1753,22 +1753,22 @@
 (defun mon-compile-when-needed 1661,82457
 (defun mon-load-or-alert 1689,83992
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-publications-periodicals-english.el,323
+naf-mode/naf-mode-publications-periodicals-english.el,323
 (defvar *naf-mode-publications-periodicals-english-xrefs*83,2717
 (defvar *naf-publications-periodicals-english* 101,3540
 (defconst naf-mode-publications-periodicals-english419,12225
 (defvar *naf-publications-periodicals-english-one-word* 434,13035
 (defconst naf-mode-publications-periodicals-english-one-word455,13428
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-publications-periodicals-intnl.el,177
+naf-mode/naf-mode-publications-periodicals-intnl.el,177
 (defvar *naf-mode-publications-periodicals-intnl-xrefs*98,3220
 (defvar *naf-publications-periodicals-intnl*117,4073
 (defconst naf-mode-publications-periodicals-intnl175,6958
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-doc-help-tidy.el,31
+naf-mode/mon-doc-help-tidy.el,31
 (defun mon-help-tidy 111,3285
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-text-property-utils.el,1947
+naf-mode/mon-text-property-utils.el,1947
 (defsubst mon-insert-w-text-properties 175,7398
 (defun* mon-get-text-property-intervals 184,7786
 (defun %mon-set-buffer-substring 321,16129
@@ -1808,7 +1808,7 @@
 (defun mon-set-overlay-range 1375,69722
 (defun mon-nuke-overlay-buffer 1395,70746
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-css-check.el,719
+naf-mode/mon-css-check.el,719
 (defgroup css-check 166,6137
 (defface css-check-unapplied-face176,6587
 (defface css-check-applied-face187,7039
@@ -1828,7 +1828,7 @@
 (defun css-check-buffer-offer-save 491,21951
 (defun css-check 510,22810
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-events.el,605
+naf-mode/naf-mode-events.el,605
 (defvar *naf-mode-events-xrefs* 102,3452
 (defvar *naf-art-events-generic*211,7612
 (defconst naf-mode-art-events-generic 224,8185
@@ -1843,7 +1843,7 @@
 (defvar *naf-world-events*394,15498
 (defconst naf-mode-world-events 416,16049
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-cl-compat-regexps.el,251
+naf-mode/mon-cl-compat-regexps.el,251
 (defvar *regexp-clean-cl-symbols* 189,7939
 (defvar *clean-cl-symbols-with-regexp*227,9847
 (defun mon-CL-escape-star 438,19148
@@ -1851,7 +1851,7 @@
 (defun mon-CL-namespace-colonic 519,22968
 (defun mon-CL-cln-colon-swap 535,23894
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-classes.el,787
+naf-mode/naf-mode-classes.el,787
 (defclass naf-mode-base 82,2701
 (defclass naf-mode-obj-timestamp-abst-intrfc 105,3334
 (defmethod naf-timestamp-on-obj 116,3712
@@ -1869,11 +1869,11 @@
 (defclass naf-mode-kwrd-face-abst-intrfc 318,10708
 (defclass naf-nation-english 344,11414
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-intnl-city-names.el,99
+naf-mode/naf-mode-intnl-city-names.el,99
 (defconst naf-mode-intnl-auction-city-names110,3128
 (defconst naf-mode-intnl-city-names390,10688
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-dir-utils.el,2516
+naf-mode/mon-dir-utils.el,2516
 (defgroup mon-dir-utils 271,13428
 (defcustom *mon-dir-utils-xrefs* 285,13972
 (defcustom *mon-add-subdirs-to-list-ignorables*329,16584
@@ -1930,7 +1930,7 @@
 (defun mon-get-proc-buffers-directories 2458,126137
 (defun mon-dir-build-list 2535,129840
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-dir-locals-alist.el,1107
+naf-mode/mon-dir-locals-alist.el,1107
 (defgroup mon-dir-locals 146,4995
 (defcustom *mon-bind-dir-locals-alist* 162,5676
 (defcustom *mon-dir-locals-alist-xrefs*172,6073
@@ -1956,7 +1956,7 @@
 (defcustom *mon-ebay-images-lookup-path* 533,22335
 (defcustom *mon-buffer-mode-defaults* 564,23995
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-faces.el,3985
+naf-mode/naf-mode-faces.el,3985
 (defcustom *naf-mode-faces-xrefs* 233,10590
 (defun mon-face-bold->normal 334,13985
 (defvar *naf-face-props* 346,14485
@@ -2040,7 +2040,7 @@
 (defface naf-mode-artist-student-of-julian-face1937,82194
 (defvar naf-mode-artist-student-of-julian-fface 1948,82684
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-cl-compat.el,5222
+naf-mode/mon-cl-compat.el,5222
 (defun cl::cl-simple-expr-p 262,10553
 (defun cl::cl-simple-exprs-p 277,11143
 (defun cl::cl-safe-expr-p 285,11364
@@ -2193,7 +2193,7 @@
 (defun cl-prettyexpand 2442,96264
 (defun mon-cl-compat-loadtime 2455,96823
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-iptables-regexps.el,401
+naf-mode/mon-iptables-regexps.el,401
 (defvar *mon-iptables-alist-as-sym* 125,4067
 (defvar *regexp-clean-iptables* 146,5094
 (defun mon-iptables-make-regexps 161,5958
@@ -2204,7 +2204,7 @@
 (defun mon-iptables-pp-as-sym 379,15868
 (defun mon-bind-iptables-vars-at-loadtime 401,16636
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-macs.el,1148
+naf-mode/mon-macs.el,1148
 (defgroup mon-macs 162,5507
 (defcustom *mon-macs-xrefs* 177,6003
 (defmacro mon-error-protect 205,7534
@@ -2235,10 +2235,10 @@
 (defmacro* mon-line-dolines 1246,58545
 (defmacro mon-cat 1285,60374
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-ulan-help-docs.el,46
+naf-mode/naf-mode-ulan-help-docs.el,46
 (defun mon-help-naf-mode-ulan-flags 107,3411
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-line-utils.el,2063
+naf-mode/mon-line-utils.el,2063
 (defgroup mon-line-utils 228,8688
 (defcustom *mon-line-utils-xrefs*240,9153
 (defun mon-line-get-next 276,11187
@@ -2288,12 +2288,12 @@
 (defun mon-goto-line-50% 2009,92677
 (defun mon-goto-line-75% 2022,93267
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-nationality-english.el,144
+naf-mode/naf-mode-nationality-english.el,144
 (defvar *naf-mode-nationality-english-xrefs*81,2647
 (defvar *naf-nationality-english*100,3387
 (defconst naf-mode-nationality-english199,5072
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-image-utils.el,318
+naf-mode/mon-image-utils.el,318
 (defgroup mon-image-utils 143,4811
 (defcustom *mon-image-identify-delim* 155,5235
 (defun mon-image-identify 168,5768
@@ -2303,7 +2303,7 @@
 (defun mon-get-image-dimensions-im 323,13754
 (defun mon-get-image-md5 345,14772
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-doc-help-utils.el,8179
+naf-mode/mon-doc-help-utils.el,8179
 (defgroup mon-doc-help-utils 455,22402
 (defgroup mon-doc-help-utils-faces 476,23365
 (defcustom *mon-doc-help-utils-xrefs*509,25172
@@ -2479,7 +2479,7 @@
 (defun mon-help-unescape-for-ewiki 16788,685501
 (defun mon-help-utils-loadtime 16833,687463
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-testme-utils.el,2508
+naf-mode/mon-testme-utils.el,2508
 (defgroup mon-testme-utils 171,6769
 (defcustom *mon-testme-utils-xrefs* 185,7345
 (defun mon-insert-lisp-testme 223,9548
@@ -2532,12 +2532,12 @@
 (defun mon-align-conses-EXAMPLE 2486,124351
 (defun mon-align-conses-TEST 2523,126333
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-english-roles.el,145
+naf-mode/naf-mode-english-roles.el,145
 (defgroup naf-mode-english-roles 90,3035
 (defconst naf-mode-english-roles-primary206,5790
 (defconst naf-mode-english-roles-secondary626,15235
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-type-utils.el,1355
+naf-mode/mon-type-utils.el,1355
 (defgroup mon-type-utils 193,7845
 (defcustom *mon-type-utils-xrefs*208,8363
 (defun mon-function-object-p 264,11152
@@ -2574,7 +2574,7 @@
 (defun mon-string-to-sequence 1773,89305
 (defun mon-string-from-sequence 1817,91708
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-name-utils.el,633
+naf-mode/mon-name-utils.el,633
 (defmacro mon-intern-artist 146,5234
 (defun mon-string-rotate-name 166,6082
 (defun mon-make-lastname-firstname 213,8052
@@ -2592,19 +2592,19 @@
 (defun mon-make-name-return 571,26616
 (defun mon-make-name-lispy 580,26998
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-doc-help-pacman.el,199
+naf-mode/mon-doc-help-pacman.el,199
 (defvar *regexp-clean-pacman-Q* 113,3498
 (defun mon-help-pacman-Q 153,5861
 (defvar *regexp-clean-pacman-S* 271,11918
 (defun mon-help-pacman-S 316,14717
 (defun mon-help-pacman-commands 453,21997
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-publications-periodicals-french.el,180
+naf-mode/naf-mode-publications-periodicals-french.el,180
 (defvar *naf-mode-publications-periodicals-french-xrefs*80,2637
 (defvar *naf-publications-periodicals-french* 98,3460
 (defconst naf-mode-publications-periodicals-french230,6479
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-doc-help-CL.el,3194
+naf-mode/mon-doc-help-CL.el,3194
 (defgroup mon-doc-help-CL 201,8392
 (defgroup mon-doc-help-CL-hspec-parse 217,9061
 (defcustom  *mon-doc-help-CL-xrefs* 232,9716
@@ -2680,7 +2680,7 @@
 (defun mon-cln-ansi-info 9073,373576
 (defcustom *mon-CL-indent-specs* 9124,375817
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-color-utils.el,715
+naf-mode/mon-color-utils.el,715
 (defun mon-color-mix 161,5774
 (defun mon-color-mix-display 191,7305
 (defun mon-defined-colors-without-duplicates 222,8892
@@ -2700,10 +2700,10 @@
 (defun mon-colorcomp-B-less 443,18755
 (defun mon-colorcomp-copy-as-kill-and-exit 454,19274
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-dbc-xml-utils.el,48
+naf-mode/mon-dbc-xml-utils.el,48
 (defun mon-dbc-xml-parse-clean-fields 116,3245
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-region-utils.el,492
+naf-mode/mon-region-utils.el,492
 (defun mon-region-position 146,5113
 (defun mon-region-length 186,7173
 (defun mon-decode-coding-region-utf-8-unix 215,8592
@@ -2718,7 +2718,7 @@
 (defun mon-align-conses 496,21828
 (defun mon-sha1-region 524,23228
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/mon-default-loads.el,917
+mon-default-loads.el,917
 (defgroup mon-default-loads 142,4618
 (defvar *IS-MON-OBARRAY* 153,5071
 (defvar *IS-MON-OBARRAY-SYMS* 172,5812
@@ -2744,6 +2744,6 @@
 (defconst *mon-user-emacsd*675,33024
 (defconst *mon-local-emacs-temp-dir*702,34619
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/mon-loaddefs.el,0
+naf-mode/mon-loaddefs.el,0
 
-/home/sp/HG-Repos/emacs-load-files-GIT/emacs-load-files/naf-mode/naf-mode-bibliograpbhic-entry.el,0
+naf-mode/naf-mode-bibliograpbhic-entry.el,0

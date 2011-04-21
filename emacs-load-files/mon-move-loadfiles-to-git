@@ -115,7 +115,7 @@ mon-doc-help-proprietary.el
 mon-eight-bit-raw-utils.el
 mon-iptables-regexps.el
 naf-mode-state-names.el
-mon-doc-help-tidy.el
+mon-doc-help-tidy.el1
 mon-elisp-fileset.el
 naf-mccarthy-facts.el
 mon-mysql-utils.el
@@ -271,7 +271,8 @@ copy_ebay_template_files ()
 
 etags_after_copy ()
 {
- find $EMACS_LOAD_FILES_DEST -name '*.el' -print | xargs etags -o $EMACS_LOAD_FILES_DEST/TAGS --language=lisp
+ cd $EMACS_LOAD_FILES_DEST
+ find . -name '*.el' -print | xargs etags -o ./TAGS --language=lisp
  echo "etags created $EMACS_LOAD_FILES_DEST/TAGS"
  echo
 }
