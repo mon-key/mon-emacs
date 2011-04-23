@@ -13,7 +13,6 @@
 ### I F*CKING HATE SHELL SCRIPTING!!!
 ### ==============================
 
-
 EMACS_LOAD_FILES_SRC=$DEVHOME/emacs-load-files
 NAF_MODE=$EMACS_LOAD_FILES_SRC/naf-mode
 EBAY=$NAF_MODE/ebay-template-mode
@@ -277,6 +276,7 @@ etags_after_copy ()
  echo
 }
 
+cd $EMACS_LOAD_FILES_SRC
 
 ensure_abort_dirs
 ensure_dirs

@@ -1109,6 +1109,40 @@ Evaluates `slime-setup', `slime-require'.\n
   ;;
   (add-to-list 'auto-mode-alist  '("\\.kif\\'" . lisp-interaction-mode))
   ;; 
+  ;; :NOTE If this block fails, move it into `mon-slime-setup-init'.
+  (eval-after-load "slime-repl"
+  (progn
+    
+    (defslime-repl-shortcut nil ("asdf-systems" "asdf-all")
+      (:handler 'slime-inspect-asdf-defined-systems)
+      (:one-liner "inspect all defined systems"))
+
+    (defslime-repl-shortcut nil ("asdf-system" "asdf-sys")
+      (:handler (lambda (&optional preserve) 
+                  ;; allow McClim2 to pass through without zapping case 
+                  ;; w/ e.g. M-2 , sys McClim2
+                  (interactive "P")
+                  (slime-inspect-asdf-system (read-string "system: ") 
+                                             current-prefix-arg)))
+      (:one-liner "inspect asdf system"))
+
+    (defslime-repl-shortcut nil ("ql-systems-all" "ql-all-sys")
+      (:handler 'slime-inspect-quicklisp-systems)
+      (:one-liner "inspect all quicklisp systems"))
+    
+    (defslime-repl-shortcut nil ("ql-system" "ql-sys")
+      (:handler 'slime-inspect-quicklisp-system)
+      (:one-liner "inspect a quicklisp system"))
+
+    ;; (defslime-repl-shortcut nil ("ql-all-dists" "all-dists")
+    ;;   (:handler 'slime-inspect-quicklisp-dists-all)
+    ;;   (:one-liner "inspect all quicklisp dists"))
+
+    ;; (defslime-repl-shortcut nil ("ql-enabled-dists" "enabled-dists")
+    ;;   (:handler 'slime-inspect-quicklisp-dists-enabled)
+    ;;   (:one-liner "inspect enabled quicklisp dists"))
+
+    ))
   )
 
 ;; (mon-slime-setup-init)
@@ -1430,6 +1464,8 @@ Return value is:
 ;;  (add-hook '*slime-show-description-hook* '<MY-FOO> t t)
 ;;
 (defvar *slime-show-description-hook* nil)
+
+(defvar *slime-local-show-description-hook* nil)
 ;;
 ;; We add a new function which sets some buffer local variables on entry to the
 ;; *slime description* buffer
@@ -2151,41 +2187,6 @@ If INSPECTED-PARTS is null minibuffer-message that ther is nothing to inspect.\n
 
 ;; (let ((qdfs (ql-dist:find-system "yason"))) 
 ;;   (and qdfs (slot-boundp qdfs 'QL-DIST:RELEASE) (slot-value qdfs 'QL-DIST:RELEASE)))
-
-;; :NOTE If this block fails, move it into `mon-slime-setup-init'.
-(eval-after-load "slime-repl"
-  (progn
-    
-    (defslime-repl-shortcut nil ("asdf-systems" "asdf-all")
-      (:handler 'slime-inspect-asdf-defined-systems)
-      (:one-liner "inspect all defined systems"))
-
-    (defslime-repl-shortcut nil ("asdf-system" "asdf-sys")
-      (:handler (lambda (&optional preserve) 
-                  ;; allow McClim2 to pass through without zapping case 
-                  ;; w/ e.g. M-2 , sys McClim2
-                  (interactive "P")
-                  (slime-inspect-asdf-system (read-string "system: ") 
-                                             current-prefix-arg)))
-      (:one-liner "inspect asdf system"))
-
-    (defslime-repl-shortcut nil ("ql-systems-all" "ql-all-sys")
-      (:handler 'slime-inspect-quicklisp-systems)
-      (:one-liner "inspect all quicklisp systems"))
-    
-    (defslime-repl-shortcut nil ("ql-system" "ql-sys")
-      (:handler 'slime-inspect-quicklisp-system)
-      (:one-liner "inspect a quicklisp system"))
-
-    ;; (defslime-repl-shortcut nil ("ql-all-dists" "all-dists")
-    ;;   (:handler 'slime-inspect-quicklisp-dists-all)
-    ;;   (:one-liner "inspect all quicklisp dists"))
-
-    ;; (defslime-repl-shortcut nil ("ql-enabled-dists" "enabled-dists")
-    ;;   (:handler 'slime-inspect-quicklisp-dists-enabled)
-    ;;   (:one-liner "inspect enabled quicklisp dists"))
-
-    ))
 
 ;;; ==============================
 ;; :WAS `slime-fancy'

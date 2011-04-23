@@ -42,7 +42,7 @@ mon-w32-load.el,525
 (defun mon-open-moz-down 286,10449
 (defun mon-open-workspace 305,11322
 
-slime-loads-GNU-clbuild.el,2852
+slime-loads-GNU-clbuild.el,2909
 (defgroup mon-slime 299,10943
 (defcustom *mon-slime-xrefs*333,12276
 (defgroup mon-qucklisp 387,14897
@@ -62,42 +62,43 @@ slime-loads-GNU-clbuild.el,2852
 (defun mon-lisp-set-indent 918,42885
 (defun mon-lisp-set-indent-hook 932,43503
 (defun mon-slime-setup-init 967,44814
-(defun slime-highlight-sexp 1175,54370
-(defun mon-slime-compile-defun-for-debug 1257,58177
-(defun mon-insert-slime-arglist 1277,59007
-(defun %slime-insert-integer-at-point 1304,59918
-(defun slime-insert-integer-at-point 1307,60016
-(defun mon-next-xref-slime 1329,60995
-(defun mon-prev-xref-slime 1344,61735
-(defun mon-quit-slime-description-window 1359,62392
-(defun mon-slime-description-view-source-file 1385,63643
-(defvar *slime-show-description-hook* 1432,65529
-(defun mon-slime-setup-show-description-buffer-locals 1436,65685
-(defun mon-slime-show-description 1447,66403
-(defun mon-slime-copy-presentation-at-point-to-kill-ring-no-props 1473,67590
-(defun mon-slime-copy-presentation-to-kill-ring-no-props 1486,68274
-(defun mon-slime-start-sbcl 1504,69177
-(defun slime-inspect-asdf-defined-systems 1590,74283
-(defun slime-inspect-asdf-system 1603,74900
-(defun slime-inspect-quicklisp-systems 1673,78584
-(defvar *slime-quicklisp-systems* 1717,80275
-(defun slime-make-quicklisp-completion-table 1744,81453
-(defun slime-quicklisp-get-process-start-time 1791,83976
-(defun slime-quicklisp-completion-table-put-hash-meta 1821,85332
-(defun slime-quicklisp-completion-table-get-hash-meta 1861,87598
-(defun slime-quicklisp-completion-table-get-hash-count 1887,88824
-(defun slime-quicklisp-completion-table-get-hashed-last 1915,90304
-(defun slime-quicklisp-completion-table-compare-hashed-last 1937,91432
-(defun slime-quicklisp-completion-table-get-ql-hash-count 1973,93294
-(defun slime-quicklisp-completion-table-compare-hash-counts 1993,94267
-(defun slime-get-quicklisp-system-completions 2021,95617
-(defun slime-inspect-quicklisp-system 2082,98752
-(defun slime-quicklisp-open-inspector-if 2110,100134
-(defun slime-inspect-quicklisp-release 2119,100605
-(defun slime-inspect-quicklisp-apropos 2133,101198
-(defvar *slime-echo-arglist-STFU* 2224,104981
-(defun slime-echo-arglist-behave-or-back-to-your-cage 2238,105645
-(defun slime-echo-arglist-STFU 2249,106191
+(defun slime-highlight-sexp 1209,55785
+(defun mon-slime-compile-defun-for-debug 1291,59592
+(defun mon-insert-slime-arglist 1311,60422
+(defun %slime-insert-integer-at-point 1338,61333
+(defun slime-insert-integer-at-point 1341,61431
+(defun mon-next-xref-slime 1363,62410
+(defun mon-prev-xref-slime 1378,63150
+(defun mon-quit-slime-description-window 1393,63807
+(defun mon-slime-description-view-source-file 1419,65058
+(defvar *slime-show-description-hook* 1466,66944
+(defvar *slime-local-show-description-hook* 1468,66988
+(defun mon-slime-setup-show-description-buffer-locals 1472,67150
+(defun mon-slime-show-description 1483,67868
+(defun mon-slime-copy-presentation-at-point-to-kill-ring-no-props 1509,69055
+(defun mon-slime-copy-presentation-to-kill-ring-no-props 1522,69739
+(defun mon-slime-start-sbcl 1540,70642
+(defun slime-inspect-asdf-defined-systems 1626,75748
+(defun slime-inspect-asdf-system 1639,76365
+(defun slime-inspect-quicklisp-systems 1709,80049
+(defvar *slime-quicklisp-systems* 1753,81740
+(defun slime-make-quicklisp-completion-table 1780,82918
+(defun slime-quicklisp-get-process-start-time 1827,85441
+(defun slime-quicklisp-completion-table-put-hash-meta 1857,86797
+(defun slime-quicklisp-completion-table-get-hash-meta 1897,89063
+(defun slime-quicklisp-completion-table-get-hash-count 1923,90289
+(defun slime-quicklisp-completion-table-get-hashed-last 1951,91769
+(defun slime-quicklisp-completion-table-compare-hashed-last 1973,92897
+(defun slime-quicklisp-completion-table-get-ql-hash-count 2009,94759
+(defun slime-quicklisp-completion-table-compare-hash-counts 2029,95732
+(defun slime-get-quicklisp-system-completions 2057,97082
+(defun slime-inspect-quicklisp-system 2118,100217
+(defun slime-quicklisp-open-inspector-if 2146,101599
+(defun slime-inspect-quicklisp-release 2155,102070
+(defun slime-inspect-quicklisp-apropos 2169,102663
+(defvar *slime-echo-arglist-STFU* 2225,105034
+(defun slime-echo-arglist-behave-or-back-to-your-cage 2239,105698
+(defun slime-echo-arglist-STFU 2250,106244
 
 mon-default-start-loads.el,2378
 (defgroup mon-default-start-loads 190,7854
