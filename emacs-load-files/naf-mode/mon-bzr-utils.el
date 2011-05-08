@@ -58,7 +58,8 @@
 ;;
 ;; THIRD-PARTY-CODE:
 ;;
-;; URL: http://www.emacswiki.org/emacs/mon-bzr-utils.el
+;; URL: https://github.com/mon-key/mon-emacs/raw/master/emacs-load-files/naf-mode/mon-bzr-utils.el
+;; EMACSWIKI-URL: http://www.emacswiki.org/emacs/mon-bzr-utils.el
 ;; FIRST-PUBLISHED:
 ;;
 ;; EMACSWIKI: { URL of an EmacsWiki describing mon-bzr-utils. }
@@ -119,8 +120,11 @@
 :SEE-ALSO .\n►►►"
   ;; :prefix "<PREFIX>"
   :link '(url-link 
-          :tag ":EMACSWIKI-FILE (URL `http://www.emacswiki.org/emacs/mon-bzr-utils.el')" 
+          :tag ":EMACSWIKI-FILE" 
           "http://www.emacswiki.org/emacs/mon-bzr-utils.el")
+  :link '(url-link 
+          :tag ":GITHUB-FILE" 
+          "https://github.com/mon-key/mon-emacs/raw/master/emacs-load-files/naf-mode/mon-bzr-utils.el")
   :link '(emacs-library-link 
           :tag ":FILE mon-bzr-utils.el"
           "mon-bzr-utils.el")

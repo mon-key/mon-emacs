@@ -147,7 +147,9 @@
 ;;        [kbd "<KEY>")|[vector-of-key-chars]|"\KEY-key*\KEY-key*\"]
 ;;    'some-function-name)))
 ;;
-;; URL: http://www.emacswiki.org/emacs/mon-keybindings.el
+;;
+;; URL: https://github.com/mon-key/mon-emacs/raw/master/emacs-load-files/mon-keybindings.el
+;; EMACSWIKI-URL: http://www.emacswiki.org/emacs/mon-keybindings.el
 ;; FIRST-PUBLISHED:
 ;;
 ;; HEADER-ADDED: <Timestamp: #{2009-09-14T14:59:44-04:00Z}#{09381} - by MON KEY>
@@ -206,8 +208,11 @@
 :SEE-ALSO .\n►►►"
   ;; :prefix "<PREFIX>"
   :link '(url-link 
-          :tag ":EMACSWIKI-FILE http://www.emacswiki.org/emacs/mon-keybindings.el" 
+          :tag ":EMACSWIKI-FILE (URL `http://www.emacswiki.org/emacs/mon-keybindings.el')" 
           "http://www.emacswiki.org/emacs/mon-keybindings.el")
+  :link '(url-link 
+          :tag ":GITHUB-FILE (URL `https://github.com/mon-key/mon-emacs/raw/master/emacs-load-files/mon-keybindings.el')" 
+          "https://github.com/mon-key/mon-emacs/raw/master/emacs-load-files/mon-keybindings.el")
   :link '(emacs-library-link 
           :tag ":FILE mon-keybindings.el"
           "mon-keybindings.el")

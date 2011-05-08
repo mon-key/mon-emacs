@@ -127,7 +127,8 @@
 ;; `google-define-ascii-entry'
 ;; `google-define-number-entry'
 ;;
-;; URL: http://www.emacswiki.org/emacs/google-define-redux.el
+;; URL: https://github.com/mon-key/mon-emacs/raw/master/emacs-load-files/naf-mode/google-define-redux.el
+;; EMACSWIKI-URL: http://www.emacswiki.org/emacs/google-define-redux.el
 ;; FIRST-PUBLISHED: <Timestamp: #{2010-02-04T21:39:15-05:00Z}#{10055} - by MON>
 ;;
 ;; EMACSWIKI: 
@@ -197,6 +198,9 @@
   :link '(url-link 
           :tag ":EMACSWIKI-LINK (URL `http://www.emacswiki.org/emacs/google-define-redux.el')" 
           "http://www.emacswiki.org/emacs/google-define-redux.el")
+  :link '(url-link 
+          :tag ":GITHUB-FILE (URL `https://github.com/mon-key/mon-emacs/raw/master/emacs-load-files/naf-mode/google-define-redux.el')" 
+          "https://github.com/mon-key/mon-emacs/raw/master/emacs-load-files/naf-mode/")
   :link '(emacs-library-link 
           :tag ":FILE google-define-redux.el"
           "google-define-redux.el"))

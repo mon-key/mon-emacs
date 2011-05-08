@@ -128,7 +128,8 @@
 ;;
 ;; THIRD PARTY CODE:
 ;;
-;; URL: http://www.emacswiki.org/emacs/mon-default-start-loads.el
+;; URL: https://github.com/mon-key/mon-emacs/raw/master/emacs-load-files/mon-default-start-loads.el
+;; EMACSWIKI-URL: http://www.emacswiki.org/emacs/mon-default-start-loads.el
 ;; FIRST-PUBLISHED: <Timestamp: #{2009-09-23T12:18:55-04:00Z}#{09393} - by MON>
 ;;
 ;; EMACSWIKI:
@@ -193,6 +194,9 @@
   :prefix "mon-set-"
   :link '(url-link 
           :tag ":EMACSWIKI-FILE" "http://www.emacswiki.org/emacs/mon-default-start-loads.el")
+  :link '(url-link 
+          :tag ":GITHUB-FILE (URL `https://github.com/mon-key/mon-emacs/raw/master/emacs-load-files/mon-default-start-loads.el')" 
+          "https://github.com/mon-key/mon-emacs/raw/master/emacs-load-files/mon-default-start-loads.el")
   :link '(emacs-library-link "mon-default-start-loads.el")
   :group 'mon-base)
 

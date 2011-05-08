@@ -136,7 +136,8 @@ Return value has the format:\n
         (dolist (r `(("^\\([[:blank:]]+\\)?<field Field=" . 
                       ,(concat "\n" (mon-comment-divider t) "\n;; :FIELD "))
                      ;; :NOTE (make-string (+ (length ":FIELD ") 2) 32) =>  "         "
-                     (" Type="    . "\n;;\n;;         :TYPE ")
+                     ;; :WAS (" Type="    . "\n;;\n;;         :TYPE ")
+                     (" Type="    . " :TRANSFORM\n;;\n;;         :TYPE ")
                      (" Null="    . "\n;;         :NULL-P ")
                      (" Key="     . "\n;;         :KEY ")
                      (" Default=" . "\n;;         :DEFAULT ")

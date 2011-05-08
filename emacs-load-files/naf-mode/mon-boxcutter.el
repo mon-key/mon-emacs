@@ -177,7 +177,8 @@
 ;; boxcutter executables, boxcutter.exe boxcutter-fs.exe
 ;; ImageMagic executables
 ;;
-;; URL: http://www.emacswiki.org/emacs/mon-boxcutter.el
+;; URL: https://github.com/mon-key/mon-emacs/raw/master/emacs-load-files/naf-mode/mon-boxcutter.el
+;; EMACSWIKI-URL: http://www.emacswiki.org/emacs/mon-boxcutter.el
 ;; FIRST-PUBLISHED: <Timestamp: #{2009-11-06T18:23:43-05:00Z}#{09455} - by MON>
 ;;
 ;; EMACSWIKI: { URL of an EmacsWiki describing mon-boxcutter. }
@@ -246,7 +247,12 @@
 (defgroup mon-boxcutter nil
   "Customizations for mon-boxcutter related features.\n
 ►►►"
-  :link  '(url-link :tag ":EMACSWIKI-FILE" "http://www.emacswiki.org/emacs/mon-boxcutter.el")
+  :link '(url-link 
+          :tag ":EMACSWIKI-FILE (URL `http://www.emacswiki.org/emacs/mon-boxcutter.el')" 
+          "http://www.emacswiki.org/emacs/mon-boxcutter.el")
+  :link '(url-link 
+          :tag ":GITHUB-FILE (URL `https://github.com/mon-key/mon-emacs/raw/master/emacs-load-files/naf-mode/mon-boxcutter.el')" 
+          "https://github.com/mon-key/mon-emacs/raw/master/emacs-load-files/naf-mode/mon-boxcutter.el")
   :link  '(emacs-library-link "mon-boxcutter.el")
   :prefix "boxcutter-"
   :group 'mon-base)

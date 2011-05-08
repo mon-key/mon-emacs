@@ -52,6 +52,7 @@
 ;; `slime-quicklisp-completion-table-compare-hash-counts',
 ;; `slime-insert-integer-at-point',
 ;; `mon-add-lisp-system-paths-to-tags-table-list',
+;; `slime-macroexpand-again-fix',
 ;; FUNCTIONS:◄◄◄
 ;; 
 ;; MACROS:
@@ -235,10 +236,9 @@
 ;; THIRD-PARTY-CODE: 
 ;; :SEE comments above. 
 ;;
-;; URL: http://www.emacswiki.org/emacs/slime-loads-GNU-clbuild.el
+;; URL: https://github.com/mon-key/mon-emacs/raw/master/emacs-load-files/slime-loads-GNU-clbuild.el
+;; EMACSWIKI-URL: http://www.emacswiki.org/emacs/slime-loads-GNU-clbuild.el
 ;; FIRST-PUBLISHED: <Timestamp: #{2010-09-07T11:31:31-04:00Z}#{10362} - by MON>
-;;
-;; EMACSWIKI: { URL of an EmacsWiki describing slime-loads-GNU-clbuild. }
 ;;
 ;; FILE-CREATED:
 ;; <Timestamp: #{2009-09-06T10:19:19-04:00Z}#{09367} - by MON KEY>
@@ -321,11 +321,13 @@
   :link '(url-link 
           :tag "\n:EMACSWIKI-FILE (URL `http://www.emacswiki.org/emacs/slime-loads-GNU-clbuild.el')" 
           "http://www.emacswiki.org/emacs/slime-loads-GNU-clbuild.el")
+  :link '(url-link 
+          :tag "\n:GITHUB-FILE (URL `https://github.com/mon-key/mon-emacs/raw/master/emacs-load-files/slime-loads-GNU-clbuild.el')" 
+          "https://github.com/mon-key/mon-emacs/raw/master/emacs-load-files/slime-loads-GNU-clbuild.el")
   :link '(emacs-library-link 
           :tag "\n:FILE slime-loads-GNU-clbuild.el" 
           "slime-loads-GNU-clbuild.el")
   :group 'mon-base)
-
 
 ;;; ==============================
 ;;; :CHANGESET 2389
@@ -361,6 +363,7 @@
     slime-quicklisp-completion-table-compare-hash-counts
     slime-insert-integer-at-point
     mon-add-lisp-system-paths-to-tags-table-list
+    slime-macroexpand-again-fix
     ;; :VARIABLES
     *slime-echo-arglist-STFU*
     *quicklisp-path* *quicklisp-systems*
@@ -851,7 +854,8 @@ Plist has the following form:\n
   :system-paths     \(<SYSTEM-DIRECTORY-NAME>*\)\)\n
 <ROOT-DIRECTORY-NAMESTRING> is a pathname to a directory containing
 base-system-path it should not end in a trailing slash.\n
-<SUB-DIRECTORY-NAMESTRING> is an immediate subdirectory of <ROOT-DIRECTORY-NAMESTRING> it should not end in a trailing slash.
+<SUB-DIRECTORY-NAMESTRING> is an immediate subdirectory of
+<ROOT-DIRECTORY-NAMESTRING> it should not end in a trailing slash.
 When the directory named by <ROOT-DIRECTORY-NAMESTRING> is the immediate
 parent-directory of all <SYSTEM-DIRECTORY-NAME> values then
 base-syst<SUB-DIRECTORY-NAMESTRING> should be provided the emtpy string.\n
@@ -882,13 +886,13 @@ To customize this variable the following are sufficient:
 (defun mon-add-lisp-system-paths-to-tags-table-list (&optional tags-paths-only)
   "Add TAGS file pathnames to `tags-table-list'.\n
 Return `tags-table-list'.\n
-TAGS file pathnames constructed from elements of plist in variable `*mon-lisp-system-paths*'.\n
+TAGS file pathnames constructed from elts of plist in variable `*mon-lisp-system-paths*'.\n
 Pathnames are added as if by `add-to-list' with the optional arg APPEND non-nil.
 Pathnames are only added if the constructed TAGS file satisfies `file-exists-p'.
 Custom is notified of the changes as if by `custom-note-var-changed'.\n
 When optional arg TAGS-PATHS-ONLY is non-nil do not add generated TAGS file
-pathnames to `tags-table-list' instead only return a list of what would have been
-added.\n
+pathnames to `tags-table-list' instead only return a list of what would have
+been added.\n
 :EXAMPLE\n\n\(mon-add-lisp-system-paths-to-tags-table-list t\)\n
 :SEE-ALSO .\n►►►"
   (let* ((paths-plist (bound-and-true-p *mon-lisp-system-paths*))
@@ -978,7 +982,7 @@ Evaluates `slime-setup', `slime-require'.\n
 `mon-help-CL-slime-keys', `slime-cheat-sheet', `mon-slime-setup-init',
 `mon-keybind-lisp-interaction-mode', `mon-keybind-emacs-lisp-mode',
 `slime-setup-contribs', `slime-load-contribs', `slime-required-modules'.\n►►►"
-  ;; :NOTE sb-ext:*runtime-pathname* returns the current sbcl runtime
+  ;; :NOTE sb-ext:*runtime-pathname* returns the current SBCL runtime
   (set-language-environment "UTF-8")
   ;; :QUICKLISP-SLIME-PATH
   (let ((this-swank (quicklisp-current-swank-loader)))
@@ -986,21 +990,6 @@ Evaluates `slime-setup', `slime-require'.\n
     (add-to-list 'load-path  (cadr this-swank))
     (add-to-list 'load-path  (cadr this-swank))
     ) ;;(load (locate-library "slime")))
-  ;; ==============================
-  ;; :SLIME-LOADS-FOR-CLBUILD
-  ;; :CLBUILD-SLIME-PATH
-  ;; Add this to your ~/.emacs to use clbuild and its slime:
-  ;; possibly controversial as a global default, but shipping a lisp
-  ;; that dies trying to talk to slime is stupid, so:
-  ;; (set-language-environment "UTF-8")
-  ;; ;; (setq slime-net-coding-system 'iso-latin-1-unix)
-  ;; (setq slime-net-coding-system 'utf-8-unix)
-  ;; (add-to-list 'load-path "/<CL-SYSTEMS-PATH>/clbuild/source/slime/contrib" t)
-  ;; (add-to-list 'load-path "/<CL-SYSTEMS-PATH>/clbuild/source/slime" t)
-  ;; (setq slime-backend "/<CL-SYSTEMS-PATH>/clbuild/.swank-loader.lisp")
-  ;; (load "/<CL-SYSTEMS-PATH>/clbuild/source/slime/slime")
-  ;; (setq inferior-lisp-program "/<CL-SYSTEMS-PATH>/clbuild/clbuild lisp")
-  ;; ==============================
   (custom-set-variables
    '(inferior-lisp-program (executable-find "sbcl"))  
    ;; '(slime-net-coding-system 'iso-latin-1-unix))
@@ -1018,13 +1007,12 @@ Evaluates `slime-setup', `slime-require'.\n
    ;; '(slime-repl-history-file "~/.slime/.slime-history.eld") :DEFAULT "~/.slime-history.eld"
    ;; `comint-replace-by-expanded-filename', `comint-dynamic-complete-as-filename'
    '(slime-when-complete-filename-expand t)
-
-   ;; '(slime-asdf-collect-notes t)
    ;;
+   ;; '(slime-asdf-collect-notes t)
    )
   (setq slime-lisp-modes '(lisp-mode lisp-interaction-mode))
-  ;; (setq slime-selector-other-window t) ;; :DEFAULT nil
   ;;
+  ;; (setq slime-selector-other-window t) ;; :DEFAULT nil
   (progn 
     (require 'slime)
     (when (or (slime-bytecode-stale-p)
@@ -1153,6 +1141,24 @@ Evaluates `slime-setup', `slime-require'.\n
 ;; before-save-hook
 ;; before-save-hook 
 ;; after-save-hook
+
+;;; ==============================
+;;; Fix to prevent slime-macroexpans-again from clobbering contents of current buffer.
+;;; Can be removed if the buggy `slime-macroexpans-again' in slime.el is ever fixed...
+;;; :SEE (URL `https://bugs.launchpad.net/slime/+bug/777405')
+;;; :CHANGESET 2439
+;;; :CREATED <Timestamp: #{2011-05-07T21:41:20-04:00Z}#{11186} - by MON KEY>
+(defun slime-macroexpand-again-fix ()
+  "Reperform the last macroexpansion."
+  (interactive)
+  (slime-eval-async slime-eval-macroexpand-expression 
+    (slime-rcurry #'slime-initialize-macroexpansion-buffer 
+                  ;; :WAS (current-buffer)
+                  (slime-buffer-name :macroexpansion))))
+;;
+(eval-after-load "slime" 
+  (fset 'slime-macroexpand-again (symbol-function 'slime-macroexpand-again-fix)))
+
 
 ;;; ==============================
 ;; :NOTES re a TAB completion style binding of `minibuffer-complete' on entry

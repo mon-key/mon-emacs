@@ -86,7 +86,8 @@
 ;;
 ;; THIRD-PARTY-CODE:
 ;;
-;; URL: http://www.emacswiki.org/emacs/mon-buffer-utils.el
+;; URL: https://github.com/mon-key/mon-emacs/raw/master/emacs-load-files/naf-mode/mon-buffer-utils.el
+;; EMACSWIKI-URL: http://www.emacswiki.org/emacs/mon-buffer-utils.el
 ;; FIRST-PUBLISHED: <Timestamp: #{2010-11-25T02:27:00-05:00Z}#{10476} - by MON>
 ;;
 ;; EMACSWIKI: { URL of an EmacsWiki describing mon-buffer-utils. }
@@ -148,7 +149,11 @@
 :SEE-ALSO .\n►►►"
   ;; :prefix "<PREFIX>"
   :link '(url-link 
-          :tag ":EMACSWIKI-FILE" "http://www.emacswiki.org/emacs/mon-buffer-utils.el")
+          :tag ":EMACSWIKI-FILE" 
+          "http://www.emacswiki.org/emacs/mon-buffer-utils.el")
+  :link '(url-link 
+          :tag ":GITHUB-FILE" 
+          "https://github.com/mon-key/mon-emacs/raw/master/emacs-load-files/naf-mode/mon-buffer-utils.el")
   :link '(emacs-library-link 
           :tag ":FILE mon-buffer-utils.el"
           "mon-buffer-utils.el")

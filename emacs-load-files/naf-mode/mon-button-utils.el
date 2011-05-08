@@ -61,7 +61,8 @@
 ;;
 ;; THIRD-PARTY-CODE:
 ;;
-;; URL: http://www.emacswiki.org/emacs/mon-button-utils.el
+;; URL: https://github.com/mon-key/mon-emacs/raw/master/emacs-load-files/naf-mode/mon-button-utils.el
+;; EMACSWIKI-URL:  http://www.emacswiki.org/emacs/mon-button-utils.el
 ;; FIRST-PUBLISHED:<Timestamp: #{2010-09-14T20:58:02-04:00Z}#{10372} - by MON>
 ;;
 ;; EMACSWIKI: { URL of an EmacsWiki describing mon-button-utils. }
@@ -125,6 +126,9 @@
 :SEE-ALSO .\n►►►"
   :link '(url-link 
           :tag ":EMACSWIKI-FILE" "http://www.emacswiki.org/emacs/mon-button-utils.el")
+  :link '(url-link 
+          :tag ":GITHUB-FILE" 
+          "https://github.com/mon-key/mon-emacs/raw/master/emacs-load-files/naf-mode/mon-button-utils.el")
   :link '(emacs-library-link "mon-button-utils.el")
   :group 'mon-base)
 

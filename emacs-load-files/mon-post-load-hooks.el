@@ -65,7 +65,9 @@
 ;;
 ;; THIRD-PARTY-CODE:
 ;;
-;; URL: http://www.emacswiki.org/emacs/mon-post-load-hooks.el
+;; 
+;; URL: https://github.com/mon-key/mon-emacs/raw/master/emacs-load-files/mon-post-load-hooks.el
+;; EMACSWIKI-URL: http://www.emacswiki.org/emacs/mon-post-load-hooks.el
 ;; FIRST-PUBLISHED: <Timestamp: #{2010-03-27T22:59:00-04:00Z} - by MON>
 ;;
 ;; EMACSWIKI: { URL of an EmacsWiki describing mon-post-load-hooks. }
@@ -130,6 +132,9 @@
   :link '(url-link 
           :tag ":EMACSWIKI-FILE (URL `http://www.emacswiki.org/emacs/mon-post-load-hooks.el')" 
           "http://www.emacswiki.org/emacs/mon-post-load-hooks.el")
+  :link '(url-link 
+          :tag ":GITHUB-FILE (URL `https://github.com/mon-key/mon-emacs/raw/master/emacs-load-files/mon-post-load-hooks.el')" 
+          "https://github.com/mon-key/mon-emacs/raw/master/emacs-load-files/mon-post-load-hooks.el")
   :link '(emacs-library-link 
           :tag ":FILE mon-post-load-hooks.el" 
           "mon-post-load-hooks.el")

@@ -81,7 +81,8 @@
 ;; AUTHOR: MON KEY
 ;; MAINTAINER: MON KEY
 ;;
-;; URL: http://www.emacswiki.org/emacs/mon-default-loads.el
+;; URL: https://github.com/mon-key/mon-emacs/raw/master/emacs-load-files/mon-default-loads.el
+;; EMACSWIKI-URL: http://www.emacswiki.org/emacs/mon-default-loads.el
 ;; FIRST-PUBLISHED: <Timestamp: #{2009-09-23T12:22:19-04:00Z}#{09393} - by MON>
 ;;
 ;; FILE-CREATED:
@@ -144,6 +145,9 @@
 :SEE-ALSO .\n►►►"
   :link '(url-link 
           :tag ":EMACSWIKI-FILE" "http://www.emacswiki.org/emacs/mon-default-loads.el")
+  :link '(url-link 
+          :tag ":GITHUB-FILE (URL `https://github.com/mon-key/mon-emacs/raw/master/emacs-load-files/mon-default-loads.el')" 
+          "https://github.com/mon-key/mon-emacs/raw/master/emacs-load-files/mon-default-loads.el")
   :link '(emacs-library-link "mon-default-loads.el")
   :group 'mon-base)
 

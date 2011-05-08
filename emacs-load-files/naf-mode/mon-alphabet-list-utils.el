@@ -108,10 +108,10 @@
 ;;
 ;; THIRD-PARTY-CODE:
 ;;
-;; URL: http://www.emacswiki.org/emacs/mon-alphabet-list-utils.el
+;; URL: https://github.com/mon-key/mon-emacs/raw/master/emacs-load-files/naf-mode/mon-alphabet-list-utils.el
+;; EMACSWIKI-URL: http://www.emacswiki.org/emacs/mon-alphabet-list-utils.el
 ;; FIRST-PUBLISHED:
 ;;
-;; EMACSWIKI: { URL of an EmacsWiki describing mon-alphabet-list-utils. }
 ;;
 ;; FILE-CREATED:
 ;; <Timestamp: #{2010-11-05T14:50:52-04:00Z}#{10445} - by MON KEY>
