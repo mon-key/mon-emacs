@@ -196,11 +196,11 @@
   :group 'google-define
   :prefix "google-define-"
   :link '(url-link 
-          :tag ":EMACSWIKI-LINK (URL `http://www.emacswiki.org/emacs/google-define-redux.el')" 
-          "http://www.emacswiki.org/emacs/google-define-redux.el")
+          :tag ":GITHUB-FILE" 
+          "https://github.com/mon-key/mon-emacs/raw/master/emacs-load-files/naf-mode/google-define-redux.el")
   :link '(url-link 
-          :tag ":GITHUB-FILE (URL `https://github.com/mon-key/mon-emacs/raw/master/emacs-load-files/naf-mode/google-define-redux.el')" 
-          "https://github.com/mon-key/mon-emacs/raw/master/emacs-load-files/naf-mode/")
+          :tag ":EMACSWIKI-FILE"
+          "http://www.emacswiki.org/emacs/google-define-redux.el")
   :link '(emacs-library-link 
           :tag ":FILE google-define-redux.el"
           "google-define-redux.el"))

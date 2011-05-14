@@ -83,7 +83,8 @@
 ;;
 ;; THIRD-PARTY-CODE:
 ;;
-;; URL: http://www.emacswiki.org/emacs/mon-word-syntax-utils.el
+;; URL: https://github.com/mon-key/mon-emacs/raw/master/emacs-load-files/naf-mode/mon-word-syntax-utils.el
+;; EMACSWIKI-URL: http://www.emacswiki.org/emacs/mon-word-syntax-utils.el
 ;; FIRST-PUBLISHED: <Timestamp: #{2010-11-25T02:27:00-05:00Z}#{10476} - by MON>
 ;;
 ;; EMACSWIKI: { URL of an EmacsWiki describing mon-word-syntax-utils. }

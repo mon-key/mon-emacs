@@ -2042,12 +2042,281 @@ Default is to return with 68 char length comment dividers.\n
 ;;; :TEST-ME (let ((IS-BUG-P t)) (bug-insert-copyright t))
 ;;; :TEST-ME (let ((IS-BUG-P t)) (bug-insert-copyright))
 
+
+;;; :FIXME Originally URL field was an emacswiki URL. We now default
+;;; the URL field to a github URL and assume that mift-fname resides
+;;; under the naf-mode/ directory which is most wrong!
+;;; We need to instead to either:
+;;;
+;;;  a) Split mift-fname according to value of *mon-emacs-root*
+;;;
+;;;  b) Define a github specific variable
+;;;  `*mon-github-pathname-default*', and then frob the relative
+;;;  pathname of mift-fname to relative to that.
+;;; :NOTE That we can't use `expand-file-name' to do this b/c it will expand to either a local pathname:
+;;; (expand-file-name "some-file-name.el" 
+;;;                    "https://github.com/mon-key/mon-emacs/raw/master/emacs-load-files/naf-mode/")
+;;; Or, expand to a remote pathname prefixed by "/ssh:"
+;;;  (expand-file-name "some-file-name.el" 
+;;;                    "/https://github.com/mon-key/mon-emacs/raw/master/emacs-load-files/naf-mode/")
+;;; Or, expand to a pathname prefixed by "//https:"
+;;;  (expand-file-name "some-file-name.el" 
+;;;                    "//https://github.com/mon-key/mon-emacs/raw/master/emacs-load-files/naf-mode/")
+;;; Better to use something like this: 
+;;;  (file-truename (file-relative-name "some-file-name.el" "../emacs-load-files"))
+;;; where the relative directory is either gleaned directly from the value of
+;;; `*mon-github-pathname-url*' or from a second variable `*mon-github-pathname-default*'
+;;; (expand-file-name "../naf-mode/some-file-name.el" 
+;;;                   "//https://github.com/mon-key/mon-emacs/raw/master/emacs-load-files/naf-mode/")
+;;; 
+;;; "naf-mode")
+;;; (file-truename 
+;;
+;; (let ((f-r-n (file-relative-name "some-file-name.el" "../emacs-load-files")))
+;; (concat "https://github.com/mon-key/mon-emacs/raw/master/emacs-load-files/"      
+;; (cond (string-match-p "../" 
+ ;; (mon-set-difference 
+ ;;  ;; (mon-string-split-pathname "")
+ ;;  (mon-string-split-pathname (file-relative-name "some-file-name.el" "../emacs-load-files"))
+ ;;  (mon-string-split-pathname "https://github.com/mon-key/mon-emacs/raw/master/emacs-load-files/")
+ ;;  #'string=)
+
+;; (mon-string-split-pathname (file-relative-name "some-file-name.el" "../emacs-load-files"))
+
+;; *mon-github-username-for-pathname*
+(defcustom *mon-github-username-for-pathname* nil
+  "A Github username for constructing github URL pathname references when inserting file-templates.\n
+The username component of a github pathname occurs just after the 
+\"https://github.com/\" portion of the following URL:\n
+ \"https://github.com/mon-key/mon-emacs/raw/master/emacs-load-files/\"
+                      ^^^^^^^\n
+It should not be contained of leading or traling \"/\" characters.\n
+:EXAMPLE\n\"https://github.com/<USERNAME>/mon-emacs/raw/master/emacs-load-files/\"\n
+:SEE-ALSO `*mon-github-pathname-url*', `*mon-github-username-for-pathname*',
+`*mon-github-repository-name-for-pathname*',
+`*mon-github-repository-default-pathname*', `mon-insert-file-template',
+`mon-build-github-repo-path-defaults', `mon-build-github-default',
+`mon-set-github-paths-init'.\n►►►"
+  :type 'string
+  :group 'mon-insertion-utils
+  :group 'mon-dir-utils
+  :group 'mon-dir-locals)
+
+;; *mon-github-repository-name-for-pathname*
+(defcustom *mon-github-repository-name-for-pathname* nil
+  "The default github repository-name for constructing github URL pathname
+references when inserting file-templates.\n
+A repository-name component of a github URL pathname occurs just after the
+username component, e.g.:
+ \"https://github.com/mon-key/mon-emacs/raw/master/emacs-load-files/\"
+                              ^^^^^^^^^\n
+It should not be contained of leading or trialing \"/\" characters.\n
+:EXAMPLE\n
+ \"https://github.com/mon-key/<REPOSITORY-NAME>/raw/master/emacs-load-files/\"
+:SEE-ALSO `*mon-github-pathname-url*', `*mon-github-username-for-pathname*',
+`*mon-github-repository-name-for-pathname*',
+`*mon-github-repository-default-pathname*', `mon-insert-file-template',
+`mon-build-github-repo-path-defaults', `mon-build-github-default',
+`mon-set-github-paths-init'.\n►►►"
+  :type 'string
+  :group 'mon-insertion-utils
+  :group 'mon-dir-utils
+  :group 'mon-dir-locals)
+
+(defcustom *mon-github-repository-default-pathname*  nil ;;  "emacs-load-files"
+  "A string naming a default subdir (if any) for the Github repo specified as
+  the value of `*mon-github-repository-name-for-pathname*'.
+If the default directory for file references into the repo specified
+`*mon-github-repository-name-for-pathname*' is equivalent to the following:\n
+ \"https://github.com/<USER-NAME>/<REPO-NAME>/raw/master/<SOME-FILE>\"\n
+do not provide a value for this variable.\n
+If the default directory for file references into the repo matches the following:
+ \"https://github.com/<USER-NAME>/<REPO-NAME>/raw/master/<REPO-SUBDIR>/<SOME-FILE>\"\n
+                                                        ^^^^^^^^^^^^^
+Provided a string value wich is not be contained of leading or traling \"/\" characters.
+String provied may have have internal occurences of \"/\" characters, e.g. the
+following is correct:\n
+ \"emacs-load-files/naf-mode/ebay-template-mode\"
+whereas this is not:\n
+ \"/emacs-load-files/naf-mode/ebay-template-mode/\"\n
+The correct value will generate yield a valid github URL when expanded, e.g.: 
+ https://github.com/<USER-NAME>/<REPOSITORY-NAME>/raw/master/emacs-load-files/naf-mode/ebay-template-mode/\"
+whereas the incorrect value would yield an invalid github URL when expanded, e.g:
+ https://github.com/<USER-NAME>/<REPOSITORY-NAME>/raw/master//emacs-load-files/naf-mode/ebay-template-mode//\"
+:EXAMPLE\n\n
+ \"https://github.com/<USER-NAME>/<REPOSITORY-NAME>/raw/master/<DEFAULT-REPO-SUBDIR>/\"\n
+                                                               ^^^^^^^^^^^^^^^^^^^^^
+:SEE-ALSO `*mon-github-pathname-url*', `*mon-github-username-for-pathname*',
+`*mon-github-repository-name-for-pathname*',
+`*mon-github-repository-default-pathname*', `mon-insert-file-template',
+`mon-build-github-repo-path-defaults', `mon-build-github-default',
+`mon-set-github-paths-init'.\n►►►"
+  :type 'string
+  :group 'mon-insertion-utils
+  :group 'mon-dir-utils
+  :group 'mon-dir-locals)
+
+;; *mon-github-pathname-url*
+(defcustom *mon-github-pathname-url* nil
+  "A URL pathname to a github user directory which contains git repositories
+Pathname should have one of the following forms:
+ \"https://github.com/mon-key/mon-emacs/raw/master/emacs-load-files/\"\n
+ \"https://github.com/mon-key/mon-emacs/raw/master/\"\n
+and match either of the follwoing patterns:
+\"https://github.com/<GITHUB-USER-NAME>/<REPOSITORY>/raw/master/\"
+\"https://github.com/<GITHUB-USER-NAME>/<REPOSITORY>/raw/master/<REPO-SUBDIR>/\"
+Where the <SUBDIR> component is optional.\n
+The <GITHUB-USER-NAME> component is equivalent to the value of:\n
+ `*mon-github-username-for-pathname*'\n
+The <REPOSITORY> component is equivalent to the value of:\n
+ `*mon-github-repository-name-for-pathname*'\n
+The <REPO-SUBDIR> component is (if required) equivalent to the value of:\n
+ `*mon-github-repository-name-for-pathname*'\n
+When the above variables are present and evaluate to a string the value of this variable may be set with
+either of the following forms:\n
+ \(mon-build-github-default\)
+ \(progn
+   \(setq *mon-github-pathname-url*
+         \(mon-build-github-repo-path-defaults *mon-github-username-for-pathname* 
+                                              *mon-github-repository-name-for-pathname*
+                                              *mon-github-repository-default-pathname*\)\)
+   \(custom-note-var-changed '*mon-github-pathname-url*\)\)\n
+:SEE-ALSO `*mon-github-pathname-url*', `*mon-github-username-for-pathname*',
+`*mon-github-repository-name-for-pathname*',
+`*mon-github-repository-default-pathname*', `mon-insert-file-template',
+`mon-build-github-repo-path-defaults', `mon-build-github-default',
+`mon-set-github-paths-init'.\n►►►"
+
+                 :type  'string
+                 :group 'mon-insertion-utils
+                 :group 'mon-dir-utils
+                 :group 'mon-dir-locals)
+
+;;; ==============================
+;;; :CHANGESET 2442
+;;; :CREATED <Timestamp: #{2011-05-14T16:54:16-04:00Z}#{11196} - by MON KEY>
+(defun mon-build-github-default (&optional no-set-custom)
+  "Set customization value of `*mon-github-pathname-url*'.
+Optional arg NO-SET-CUSTOM when non-nil will not evaluate `custom-set-variables'
+for `*mon-github-pathname-url*'. 
+Default is to bind it \(when all constraints are met\).\n
+:EXAMPLE\n\n\(mon-build-github-default t\)\n
+:NOTE When IS-MON-P `mon-set-github-paths-init' ensures this function is
+evaluated at loadtime.\n
+:SEE-ALSO `*mon-github-pathname-url*', `*mon-github-username-for-pathname*',
+`*mon-github-repository-name-for-pathname*',
+`*mon-github-repository-default-pathname*', `mon-insert-file-template',
+`mon-build-github-repo-path-defaults', `mon-build-github-default',
+`mon-set-github-paths-init'.\n►►►"
+  (let ((mbgd-if  
+         (and (equal 
+               (mapcar #'(lambda (x) (and 
+                                      (bound-and-true-p x)
+                                      (or (and (stringp x) 
+                                               (not (zerop (length x))))
+                                          (null x))))
+                       `(,*mon-github-username-for-pathname* 
+                         ,*mon-github-repository-name-for-pathname*
+                         ,*mon-github-repository-default-pathname*))
+               '(t t t))
+              (when (or (not (bound-and-true-p *mon-github-pathname-url*))
+                        (null *mon-github-pathname-url*)
+                        (and (stringp *mon-github-pathname-url*) 
+                             (not (string-match-p "https://github.com/" *mon-github-pathname-url*))))
+                (mon-build-github-repo-path-defaults *mon-github-username-for-pathname* 
+                                                     *mon-github-repository-name-for-pathname*
+                                                     *mon-github-repository-default-pathname*)))))
+    (if no-set-custom 
+        mbgd-if
+      (when mbgd-if 
+        (setq *mon-github-pathname-url* mbgd-if)
+        (custom-note-var-changed '*mon-github-pathname-url*)))))
+
+;;; ==============================
+;;; :CHANGESET 2442
+;;; :CREATED <Timestamp: #{2011-05-14T16:20:07-04:00Z}#{11196} - by MON KEY>  
+(defun mon-build-github-repo-path-defaults (&optional username-component
+                                                      reponame-component
+                                                      reponame-subdir-component)
+  "Return a URL for a github pathname suitable for insertion in file templates.\n
+Optional arg USERNAME-COMPONENT is a string naming Github username.
+Default is value of `*mon-github-username-for-pathname*'.\n
+Optional arg REPONAME-COMPONENT is a string naming Github repository name. 
+It should not be contained of leading or traling \"/\" characters.\n
+Default is value of `*mon-github-repository-name-for-pathname*'.\n
+Optional arg REPONAME-SUBDIR-COMPONENT is a Github repository subdir name.
+It should not be contained of leading or traling \"/\" characters, but may have
+have internal occurences, e.g. the following is correct:\n
+ \"emacs-load-files/naf-mode/ebay-template-mode\"
+whereas this is not:\n
+ \"/emacs-load-files/naf-mode/ebay-template-mode/\"\n
+Default is value of `*mon-github-repository-default-pathname*'.\n
+:EXAMPLE\n\n
+ \(mon-build-github-repo-path-defaults \"<USERNAME-COMPONENT>\" 
+                                      \"<REPONAME-COMPONENT>\" 
+                                      \"<REPONAME-SUBDIR-COMPONENT>\"\)
+ \(mon-build-github-repo-path-defaults *mon-github-username-for-pathname* 
+                                       *mon-github-repository-name-for-pathname* 
+                                       *mon-github-repository-default-pathname*\)\n
+ \(mon-build-github-repo-path-defaults \"bubba\" \"bubba-repo\" \"subdir-in-repo\"\)\n
+ \(mon-build-github-repo-path-defaults \"\" \"\" \"\"\)\n
+ \(mon-build-github-repo-path-defaults nil nil nil\)\n
+ \(mon-build-github-repo-path-defaults nil \"bubba\" nil\)\n
+:SEE-ALSO `*mon-github-pathname-url*', `*mon-github-username-for-pathname*',
+`*mon-github-repository-name-for-pathname*',
+`*mon-github-repository-default-pathname*', `mon-insert-file-template',
+`mon-build-github-repo-path-defaults', `mon-build-github-default',
+`mon-set-github-paths-init'.\n►►►"
+  ;; (declare-special *mon-github-username-for-pathname* 
+  ;;                  *mon-github-repository-name-for-pathname* 
+  ;;                  *mon-github-repository-default-pathname*)
+  (let* ((mbgrpd-default "https://github.com/")
+         (mbgrpd-user (or (and username-component 
+                               (stringp username-component)
+                               (not (zerop (length username-component)))
+                               (concat username-component "/"))
+                          (and *mon-github-username-for-pathname*
+                               (concat *mon-github-username-for-pathname* "/"))))
+         (mbgrpd-repo (and mbgrpd-user 
+                           (or (and reponame-component 
+                                    (stringp reponame-component)
+                                    (not (zerop (length reponame-component)))
+                                    (concat reponame-component "/"))
+                               (and *mon-github-repository-name-for-pathname*
+                                    (concat *mon-github-repository-name-for-pathname* "/")))))
+         (mbgrpd-repo-sub-default
+          (or (and mbgrpd-repo
+                   (and reponame-subdir-component
+                        (stringp reponame-subdir-component)
+                        (not (zerop (length reponame-subdir-component)))
+                        (concat "raw/master/" reponame-subdir-component "/")))
+              (and mbgrpd-repo
+                   (if (and *mon-github-repository-default-pathname*
+                            (string= (concat *mon-github-repository-name-for-pathname* "/")
+                                     mbgrpd-repo))
+                       (concat "raw/master/" *mon-github-repository-default-pathname* "/")))
+              "raw/master/")))
+    (concat mbgrpd-default mbgrpd-user mbgrpd-repo mbgrpd-repo-sub-default)))
+
+;; 
+;; :TODO find the common paths of the github path and the files path
+;; (defun mon-build-git-path-for-file-template (w-fname)
+;; (mon-set-difference
+;; (mon-intersection
+;;  (mon-string-split-pathname (mon-build-github-repo-path-defaults)) 
+;;  (mon-string-split-pathname (buffer-file-name)))
+;;  #'string=)
+
+
 ;;; ==============================
 ;;; :TODO This procedure should be refactored to accomodate other types of
 ;;;  ``known'' files.  If this is dont the curent elisp specific version should
 ;;;  be renamed `mon-insert-file-template-elisp'
 ;;;
+;;; 
+;;;
 ;;; :RENAMED `mon-insert-naf-mode-file-template' -> `mon-insert-file-template'
+;;; :CHANGESET 2442 <Timestamp: #{2011-05-14T13:25:00-04:00Z}#{11196} - by MON KEY>
 ;;; :MODIFICATIONS <Timestamp: #{2010-03-03T15:34:05-05:00Z}#{10093} - by MON KEY>
 ;;; :MODIFICATIONS <Timestamp: #{2010-02-01T16:33:23-05:00Z}#{10051} - by MON KEY>
 ;;; :MODIFICATIONS <Timestamp: #{2009-10-24T13:49:28-04:00Z}#{09436} - by MON KEY>
@@ -2080,6 +2349,8 @@ helps ensure multi-os portability.\n
                        (concat (file-name-sans-extension (read-string "Filename for template: ")) ".el"))
                       ((and (mon-buffer-written-p) (string-match-p ".*\\.el" mift-cur-nm)) mift-cur-nm)
                       (t "<PKG-NAME>.el")))
+
+         ;; (mift-fname-github-pathname *mon-github-pathname-default*)
          (mift-fnm-sans (file-name-sans-extension mift-fname))
          (mift-tmplt
           (concat
@@ -2116,7 +2387,8 @@ helps ensure multi-os portability.\n
            ";; SNIPPETS:\n;;\n"
            ";; REQUIRES:\n;;\n"
            ";; THIRD-PARTY-CODE:\n;;\n" 
-           ";; URL: http://www.emacswiki.org/emacs/" mift-fname "\n"
+           ";; URL: https://github.com/mon-key/mon-emacs/raw/master/emacs-load-files/naf-mode/" mift-fname "\n"
+           ";; EMACSWIKI-URL: http://www.emacswiki.org/emacs/" mift-fname "\n"
            ";; FIRST-PUBLISHED:\n;;\n"
            ";; EMACSWIKI: { URL of an EmacsWiki describing " mift-fnm-sans ". }\n;;\n"
            ";; FILE-CREATED:\n;; <Timestamp: " (mon-timestamp :naf t) "\n;;\n"

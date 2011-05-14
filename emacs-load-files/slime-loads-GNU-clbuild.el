@@ -285,6 +285,10 @@
 ;;; ==============================
 
 ;;; CODE:
+;; (file-truename (file-relative-name "some-file-name.el" "../emacs-load-files"))
+;; (file-truename (file-relative-name "some-file-name.el" "../emacs-load-files") )
+;; (file-relative-name "some-file-name.el" "../emacs-load-files")  => "some-file-name.el"
+;; (file-name-directory  (file-relative-name "some-file-name.el" "../emacs-load-files")) => nil
 
 
 (eval-when-compile (require 'cl))
@@ -991,7 +995,7 @@ Evaluates `slime-setup', `slime-require'.\n
     (add-to-list 'load-path  (cadr this-swank))
     ) ;;(load (locate-library "slime")))
   (custom-set-variables
-   '(inferior-lisp-program (executable-find "sbcl"))  
+   '(inferior-lisp-program (concat (executable-find "sbcl") " --noinform --no-linedit"))
    ;; '(slime-net-coding-system 'iso-latin-1-unix))
    '(slime-net-coding-system 'utf-8-unix)
    '(slime-backend (quicklisp-write-dot-swank-loader-if))
@@ -1145,6 +1149,8 @@ Evaluates `slime-setup', `slime-require'.\n
 ;;; ==============================
 ;;; Fix to prevent slime-macroexpans-again from clobbering contents of current buffer.
 ;;; Can be removed if the buggy `slime-macroexpans-again' in slime.el is ever fixed...
+;; An alternative approach would be to make `slime-macroexpans-again' non-interactive and 
+;; (define-key slime-macroexpansion-minor-mode-map "g" #'(lambda () (interactive) (slime-macroexpand-again)))
 ;;; :SEE (URL `https://bugs.launchpad.net/slime/+bug/777405')
 ;;; :CHANGESET 2439
 ;;; :CREATED <Timestamp: #{2011-05-07T21:41:20-04:00Z}#{11186} - by MON KEY>
@@ -2256,7 +2262,7 @@ Evaluate `slime-echo-arglist-STFU' to tone down the minibuffer noise.\n
 (defun slime-echo-arglist-STFU ()
   "Silence `slime-space's invocation of `slime-echo-arglist' in current-buffer.\n
 Evaluate `slime-echo-arglist-behave-or-back-to-your-cage' to turn it back on.\n
-Evaluate `slime-show-arglist' explicitly if an arglist is needed.
+Evaluate `slime-show-arglist' explicitly if an arglist is needed.\n
 :SEE-ALSO `*slime-echo-arglist-STFU*', `slime-echo-arglist-function'.\n►►►"
   (interactive)
   (with-current-buffer (current-buffer)

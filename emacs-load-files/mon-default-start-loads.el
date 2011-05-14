@@ -51,6 +51,7 @@
 ;; `mon-set-boxcutter-init', `mon-set-mon-feature-customs-init',
 ;; `mon-set-image-dired-init', `mon-set-org-init',
 ;; `mon-set-custom-customizations-init', `mon-set-show-paren-init',
+;; `mon-set-github-paths-init', `mon-set-bbdb-init',
 ;; FUNCTIONS:◄◄◄
 ;; 
 ;; MACROS:
@@ -280,6 +281,8 @@ The symbols contained of this list are defined in :FILE mon-default-start-loads.
           mon-set-custom-customizations-init 
           mon-set-image-dired-init
           mon-set-show-paren-init
+          mon-set-github-paths-init
+          mon-set-bbdb-init
           ;; :VARIABLES 
           *mon-default-start-load-sanity*
           *mon-default-start-load-sanity-WARN-ONLY*
@@ -407,6 +410,8 @@ function is already a member of variable `*mon-default-start-load-sanity*' as pe
 ;; 
 ;; (mon-set-load-path-init t)
 (mon-set-load-path-init)
+
+
 
 ;;; ==============================
 ;; :FONT-LOCK/COLOR-THEME
@@ -819,8 +824,56 @@ Sets the following variables:
 ;; (mon-set-unicodedata-init)
 ;; (mon-set-unicodedata-init)
 
+
+
 ;;; ==============================
-;; :EXECUTABLES
+;;; :CHANGESET 2442
+;;; :CREATED <Timestamp: #{2011-05-13T19:30:08-04:00Z}#{11195} - by MON KEY>
+;; :SEE bbdb-com.el bbdb.el
+(defun mon-set-bbdb-init (&optional warn-only)
+  (mon-default-start-error/sane 
+   'mon-set-bbdb-init warn-only  ;nil
+   (let* ((mon-bbdb-lisp-dir (expand-file-name "bbdb-GIT/lisp" *mon-site-lisp-root*))
+          (mon-bbdb-dir (expand-file-name "bbdb-shared/" *mon-emacs-root*))
+          (bbdb-file-name-pfx
+            (or (cadr (assoc 7 (or (and IS-MON-P *MON-NAME*)
+                                   (and IS-BUG-P *BUG-NAME*))))))
+          (name-for-bbdb-file 
+           (concat ".bbdb"
+                   (and bbdb-file-name-pfx (concat "-" (downcase bbdb-file-name-pfx))))))
+     (when (file-exists-p mon-bbdb-lisp-dir)
+       (add-to-list 'load-path mon-bbdb-lisp-dir t)
+       (when (file-exists-p mon-bbdb-dir)
+         (setq name-for-bbdb-file (expand-file-name name-for-bbdb-file mon-bbdb-dir))
+         (setq bbdb-file name-for-bbdb-file)
+         (custom-note-var-changed 'bbdb-file))
+       ;; (setq bbdb-print-file (expand-file-name "bbdb.tex" mon-bbdb-dir))
+       ;; (custom-note-var-changed 'bbdb-print-file)
+       ;; (bbdb-default-domain (assoc 2 *MON-ORG-NAME*))  ;; (getenv "DOMAINNAME")
+       (custom-set-variables '(bbdb-default-country "United States")
+                             ;; '(bbdb-default-area-code <INT>)
+                             )
+       (custom-set-variables 
+        '(bbdb-default-label-list '("company" "institution" "home" "work" "other"))
+        '(bbdb-address-label-list '("company" "institution" "person-home" "person-work" "other"))
+        '(bbdb-phone-label-list  '("company" "institution" "home" "work" "fax" "mobile" "other"))
+        ;;
+        ;; bbdb-label-completion-list bbdb-%s-label-list
+        ;; 
+        ;; bbdb-anniv-alist
+        ;; bbdb-print-file 
+        ))
+    (require 'bbdb)
+    (require 'bbdb-com)
+    (require 'bbdb-migrate)
+    (require 'bbdb-anniv)
+   )))
+
+;; (mon-set-bbdb-init)
+
+
+;;; ==============================
+;; :executables
 ;;; :NOTE Following are inits that rely on external executables in path.
 
 ;;; ==============================
@@ -2309,6 +2362,35 @@ Evaluated at init time by `mon-set-system-specific-and-load-init'.\n
    ))
 
 
+;; (mon-build-github-default t)
+
+;;; ==============================
+;;; :CHANGESET 2442
+;;; :CREATED <Timestamp: #{2011-05-14T17:47:22-04:00Z}#{11196} - by MON KEY>
+(defun mon-set-github-paths-init (&optional warn-only)
+  "Set customizations for github path related variables.\n
+Set the value of following values at loadtime:\n
+ `*mon-github-username-for-pathname*'
+ `*mon-github-repository-name-for-pathname*'
+ `*mon-github-repository-default-pathname*'\n
+Ensure that `mon-build-github-default' is evaluated after
+:FILE `mon-insertion-utils.el' is present which in turn ensures that the
+customization value of `*mon-github-pathname-url*' is bound correctly.\n
+:SEE-ALSO `mon-build-github-repo-path-defaults'.\n►►►"
+  (mon-default-start-error/sane 
+   'mon-set-github-paths-init warn-only  
+   (when (and (intern-soft "IS-MON-P" obarray) ;; *IS-MON-OBARRAY*
+              (bound-and-true-p IS-MON-P)
+              (intern-soft "*MON-NAME*" obarray) ;; *IS-MON-OBARRAY*
+              (bound-and-true-p *MON-NAME*))
+     (custom-set-variables
+       '(*mon-github-username-for-pathname* "mon-key")
+       '(*mon-github-repository-name-for-pathname* "mon-emacs")
+       '(*mon-github-repository-default-pathname* "emacs-load-files"))
+     (eval-after-load "mon-insertion-utils"
+       '(mon-build-github-default)))))
+
+;; (mon-build-github-default)
 ;;; ==============================
 ;;; :CHANGESET 2289
 ;;; :CREATED <Timestamp: #{2010-11-08T20:17:53-05:00Z}#{10451} - by MON KEY>
@@ -2323,7 +2405,7 @@ Evaluate `mon-set-boxcutter-init'.\n
 :SEE-ALSO .\n►►►"
   (mon-default-start-error/sane 
    'mon-set-mon-feature-customs-init warn-only  
-   (when (and (intern-soft "IS-MON-P" obarray)   ;; *IS-MON-OBARRAY*
+   (when (and (intern-soft "IS-MON-P" obarray) ;; *IS-MON-OBARRAY*
               (bound-and-true-p IS-MON-P)
               (intern-soft "*MON-NAME*" obarray) ;; *IS-MON-OBARRAY*
               (bound-and-true-p *MON-NAME*))
@@ -2339,7 +2421,11 @@ Evaluate `mon-set-boxcutter-init'.\n
           (,(file-name-nondirectory 
              (file-name-sans-extension 
               (locate-library "mon-time-utils")))
-           ,(cadr (assoc 6 *MON-NAME*)))))))
+           ,(cadr (assoc 6 *MON-NAME*))))))
+     ;; '(*mon-github-username-for-pathname* "mon-key")
+     ;; '(*mon-github-repository-name-for-pathname* "mon-emacs")
+     ;; '(*mon-github-repository-default-pathname* "emacs-load-files")
+     )
    ;;
    (custom-set-variables 
     `(*mon-default-comment-start*   ,(concat (make-string 3 59) " "))
@@ -2435,6 +2521,8 @@ When `IS-MON-P-GNU' intiate Slime/Swank hyperspec related stuff.\n
    (mon-set-traverselisp-init)
    (mon-set-apache-mode-init)
    (mon-set-erc-configs-init)
+   (mon-set-github-paths-init t)
+   (mon-set-bbdb-init)
    ;; ==============================
    ;;
    ;; :REQUIRE-PACKAGES

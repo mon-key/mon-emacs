@@ -2,7 +2,7 @@
 ;; -*- mode: EMACS-LISP; -*-
 
 ;;; ================================================================
-;; Copyright © 2010 MON KEY. All rights reserved.
+;; Copyright © 2010-2011 MON KEY. All rights reserved.
 ;;; ================================================================
 
 ;; FILENAME: mon-doc-help-mail.el
@@ -24,7 +24,7 @@
 ;; file pathnames, info-nodes, etc. 
 ;;
 ;; FUNCTIONS:►►►
-;; `mon-help-mail-functons'
+;; `mon-help-mail-functons', `mon-help-bbdb-functons',
 ;; FUNCTIONS:◄◄◄
 ;;
 ;; MACROS:
@@ -57,10 +57,9 @@
 ;;
 ;; THIRD-PARTY-CODE:
 ;;
-;; URL: http://www.emacswiki.org/emacs/mon-doc-help-mail.el
+;; URL: https://github.com/mon-key/mon-emacs/raw/master/emacs-load-files/naf-mode/mon-doc-help-mail.el
+;; EMACSWIKI-URL: http://www.emacswiki.org/emacs/mon-doc-help-mail.el
 ;; FIRST-PUBLISHED:
-;;
-;; EMACSWIKI: { URL of an EmacsWiki describing mon-doc-help-mail. }
 ;;
 ;; FILE-CREATED:
 ;; <Timestamp: #{2010-08-10T13:14:49-04:00Z}#{10322} - by MON KEY>
@@ -98,12 +97,45 @@
 ;; Foundation Web site at:
 ;; (URL `http://www.gnu.org/licenses/fdl-1.3.txt').
 ;;; ==============================
-;; Copyright © 2010 MON KEY 
+;; Copyright © 2010-2011 MON KEY 
 ;;; ==============================
 
 ;;; CODE:
 
 (eval-when-compile (require 'cl))
+
+;;; 
+;; (defgroup mon-doc-help-mail nil
+;;   "Extensions for mail related help and documentation related procedures.\n
+;; :SEE-ALSO `mon-doc-help-utils-faces'.\n►►►"
+;;   :link '(url-link 
+;;           :tag ":GITHUB-FILE" 
+;;           "https://github.com/mon-key/mon-emacs/raw/master/emacs-load-files/naf-mode/mon-doc-help-utils.el")
+;;   :link '(url-link 
+;;           :tag ":EMACSWIKI-FILE" 
+;;           "http://www.emacswiki.org/emacs/mon-doc-help-mail.el")
+;;   :link '(emacs-library-link 
+;;           :tag ":FILE mon-doc-help-utils.el" 
+;;           "mon-doc-help-utils.el")
+;;   :group 'mon-doc-help-utils)
+
+;; (defcustom *mon-doc-help-mail-xrefs*
+;; '(mon-help-mail-functons mon-help-bbdb-functons 
+;;  *mon-doc-help-mail-xrefs*)
+;; "Xrefing list of mail related `mon-help-*' symbols, functions constants, and variables.\n
+;; The symbols contained of this list are defined in :FILE mon-doc-help-mail.el\n
+;; :SEE-ALSO `*mon-default-loads-xrefs*', `*mon-default-start-loads-xrefs*',
+;; `*mon-dir-locals-alist-xrefs*', `*mon-keybindings-xrefs*',
+;; `*mon-testme-utils-xrefs*', `*mon-button-utils-xrefs*', `*mon-bzr-utils-xrefs*'
+;; `*mon-buffer-utils-xrefs*', `*mon-error-utils-xrefs*', `*mon-line-utils-xrefs*',
+;; `*mon-macs-xrefs*', `*mon-plist-utils-xrefs*', `*mon-post-load-hooks-xrefs*', 
+;; `*mon-seq-utils-xrefs*', `*mon-string-utils-xrefs*', `*mon-type-utils-xrefs*',
+;; `*mon-window-utils-xrefs*', `*naf-mode-xref-of-xrefs*', `*mon-slime-xrefs*',
+;; `*naf-mode-faces-xrefs*', `*naf-mode-date-xrefs*', `*mon-ulan-utils-xrefs*',
+;; `*mon-xrefs-xrefs'.\n►►►"
+  ;; :type  '(repeat symbol)
+  ;; :group 'mon-xrefs
+  ;; :group 'mon-doc-help-mail)
 
 ;;; ==============================
 ;;; :CREATED <Timestamp: #{2010-08-10T14:22:56-04:00Z}#{10322} - by MON KEY>
@@ -217,7 +249,6 @@ SMTPSERVER
 `smtpmail-cred-user'
 `smtpmail-cred-cert'
 `smtpmail-cred-passwd'
-
 
 ;; :MAIL-VARIABLES-SMTPMAIL
 `smtpmail-default-smtp-server'
@@ -344,7 +375,7 @@ password-read
 :SEE RFC-1524
 :SEE RFC-2104
 
-:SEE-ALSO .\n►►►"
+:SEE-ALSO `mon-help-bbdb-functions'.\n►►►"
 (interactive "i\nP")
   (if (or insertp intrp)
       (mon-help-function-spit-doc 'mon-help-mail-functons :insertp t)
@@ -354,6 +385,76 @@ password-read
 ;;; :TEST-ME (mon-help-mail-functons )
 ;;; :TEST-ME (mon-help-mail-functons )
 ;;; :TEST-ME (mon-help-mail-functons )
+
+;;; ==============================
+;;; :CHANGESET 2442
+;;; :CREATED <Timestamp: #{2011-05-14T12:48:57-04:00Z}#{11196} - by MON KEY>
+(defun mon-help-bbdb-functons (&optional insertp intrp)
+"BBDB v3 related functions, variables, pathnames, info-nodes, groups, etc.\n
+
+;; :BBDB-FUNCTIONS-USER-COMMANDS
+;; :BBDB-FUNCTIONS-INTERAL
+;; bbdb
+;; bbdb-create
+;;
+;; bbdb-records
+;; bbdb-get-records
+;; bbdb-record-list
+;; bbdb-do-records
+;; bbdb-do-all-records
+;; bbdb-search
+;;
+;; bbdb-search-name
+;; bbdb-search-organization
+;; bbdb-search-address
+;; bbdb-search-mail
+;; bbdb-search-phone
+;; bbdb-search-notes
+;; bbdb-search-changed
+;; bbdb-delete-duplicate-mails
+;; bbdb-search-duplicate-mails
+;; bbdb-timestamp-older
+;; bbdb-timestamp-newer
+;; bbdb-creation-older
+;; bbdb-creation-newer
+;; bbdb-creation-no-change
+;;
+;; bbdb-insert-field
+;; bbdb-edit-field
+;; bbdb-delete-field-or-record
+;; bbdb-delete-records
+;; bbdb-display-all-records
+;; bbdb-toggle-records-layout
+;; bbdb-display-records-completely
+;; bbdb-display-records-with-layout
+;; bbdb-omit-record
+;; bbdb-merge-records
+;; bbdb-sort-addresses
+;; bbdb-sort-phones
+;; bbdb-sort-notes
+;; bbdb-add-mail-alias
+;; bbdb-mail-aliases
+;; bbdb-get-mail-aliases
+;; bbdb-copy-records-as-kill
+;; bbdb-help
+;; bbdb-print
+;; :BBDB-VARIABLES-CUSTOMIZABLE
+;; :BBDB-VARIABLES-INTERNAL
+:SEE :FILE bbdb.el
+:SEE :FILE bbdb
+:SEE :FILE
+:SEE :FILE
+:SEE-ALSO `mon-set-bbdb-init'.\n►►►"
+  (interactive "i\nP")
+  (if (or insertp intrp)
+      (mon-help-function-spit-doc 'mon-help-bbdb-functons :insertp t)
+    (mon-help-message-intrp "mon-help-bbdb-functons")))
+;;
+;;; :TEST-ME (mon-help-bbdb-functons )
+;;; :TEST-ME (mon-help-bbdb-functons )
+;;; :TEST-ME (mon-help-bbdb-functons )
+
+
 
 
 ;;; ==============================

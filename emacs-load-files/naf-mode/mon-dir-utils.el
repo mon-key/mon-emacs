@@ -48,6 +48,7 @@
 ;; `%mon-dir-get-subdirs-filter-no-full', `%mon-dir-get-subdirs-filter-full',
 ;; `mon-dir-get-subdirs', `mon-async-du-dir', `mon-dir-make-xargs-arg-file',
 ;; `mon-dired-buffers-complete', `mon-find-file', `mon-file-get-load-history-if',
+;; `mon-string-split-pathname',
 ;; FUNCTIONS:◄◄◄
 ;;
 ;; MACROS:
@@ -195,7 +196,8 @@
 ;;
 ;; THIRD PARTY CODE:
 ;; 
-;; URL: http://www.emacswiki.org/emacs/mon-dir-utils.el
+;; URL: "https://github.com/mon-key/mon-emacs/raw/master/emacs-load-files/naf-mode/mon-dir-utils.el"
+;; EMACSWIKI-URL: http://www.emacswiki.org/emacs/mon-dir-utils.el
 ;; FILE-PUBLISHED: <Timestamp: #{2009-09-02} - by MON KEY>
 ;; 
 ;; FILE-CREATED:
@@ -272,7 +274,10 @@
   "Defaults for variables accessed by various `mon-*' functions.\n
 :SEE-ALSO .\n►►►"
   :link '(url-link 
-          :tag ":EMACSWIKI-FILE (URL `http://www.emacswiki.org/emacs/mon-dir-utils.el')" 
+          :tag ":GITHUB-FILE" 
+          "https://github.com/mon-key/mon-emacs/raw/master/emacs-load-files/naf-mode/mon-dir-utils.el")
+  :link '(url-link 
+          :tag ":EMACSWIKI-FILE" 
           "http://www.emacswiki.org/emacs/mon-dir-utils.el")
   :link '(emacs-library-link 
           :tag ":FILE mon-dir-utils.el" 
@@ -303,7 +308,8 @@
     mon-insert-subdirs-in-buffer mon-path mon-proc-buffers-directories
     mon-rename-file-serial mon-string-split-buffer-name
     mon-string-split-buffer-parent-dir mon-string-split-buffer-parent-dir-quick
-    mon-string-split-dir-recurse mon-toggle-dired-dwim-target
+    mon-string-split-dir-recurse mon-string-split-pathname 
+    mon-toggle-dired-dwim-target
     ;; :VARIABLES
     *regexp-add-subdirs-to-list-filter-ignorables*
     *mon-add-subdirs-to-list-ignorables*
@@ -1408,7 +1414,7 @@ If NEW-BUFFER-W-NAME is an existing file in default-directory signal an error.\n
 ;;; :CREATED <Timestamp: #{2009-12-30T18:26:28-05:00Z}#{09533} - by MON KEY>
 (defun mon-get-relative-w-absolute (match-pattern file-or-dir)
   "Return FILE-OR-DIR as a two element list of strings split on MATCH-PATTERN.\n
-Useful for comparing a path difference by diffing the elets of list1 with list2.\n
+Useful for comparing a path difference by diffing the elts of list1 with list2.\n
 :EXAMPLE\n
 \(mon-get-relative-w-absolute \(file-truename \(getenv \"HOME\"\)\) default-directory\)\n
 :ALIASED-BY `mon-dir-name-relative-w-absolute'\n
@@ -1879,65 +1885,141 @@ It might not.\n
 ;;; :TEST-ME (mon-get-buffer-parent-dir nil t)
 ;;; :TEST-ME (call-interactively 'mon-get-buffer-parent-dir)
 
+
+;;; ==============================
+;;; :CHANGESET 2442
+;;; :CREATED <Timestamp: #{2011-05-14T14:33:05-04:00Z}#{11196} - by MON KEY>
+(defun mon-string-split-pathname (pathname &optional keep-relative-prefixes)
+  "Split PATHNAME into a list of strings.\n
+Unlike `mon-string-split-dir-recurse' this function is indiscriminate w/r/t
+whether PATHNAME names an existent file or dir.\n
+PATHNAME is any object satisfying `stringp', signal an error if not.\n
+Following relative pathname prefixes are removed from return value:\n
+ \".\" \"..\" \"~\"\n
+When optional arg KEEP-RELATIVE-PREFIXES is non-nil do not remove the relative
+pathname prefixes.\n
+:EXAMPLE\n\n
+\(mon-string-split-pathname \(buffer-file-name\)\)\n
+\(mon-string-split-pathname \"/user/non-existent-dir/some-file\"\)\n
+\(mon-string-split-pathname \(file-relative-name \"/user/non-existent-dir/some-file\" \"../\"\)\)\
+\(mon-string-split-pathname \(file-truename \"~/\"\)\)\n
+\(mon-string-split-pathname \"~/some-dir/some-file\" t\)\n
+\(mon-string-split-pathname \"../some-dir/some-file\"\)\n
+\(mon-string-split-pathname \"./some-dir/some-file\"\)\n
+\(mon-string-split-pathname \"../some-dir/some-file\" t\)\n
+\(mon-string-split-pathname \"./some-dir/some-file\" t\)\n
+\(mon-string-split-pathname \"\"\)\n
+\(mon-string-split-pathname nil\)\n
+;; Following successfully signals an error:\n
+ \(mon-string-split-pathname 'mon-string-split-pathname\)\n
+:SEE-ALSO `string-split', `file-truename', `expand-file-name', `file-relative-name'.\n►►►"
+  (catch 'mon-string-split-pathname 
+    (let ((mssp-list
+           (if (or (stringp pathname) 
+                   (null pathname))
+               (if (null pathname)
+                   (throw 'mon-string-split-pathname nil)
+                 (case system-type 
+                   ((gnu gnu/linux gnu/kfreebsd) (save-match-data (split-string pathname "/" t)))
+                   ((windows-nt cygwin ms-dos ) (save-match-data (split-string pathname "/\\" t)))
+                   (darwin (save-match-data (split-string pathname "/" t)))
+                   ;; :NOTE Likely Darwin and the Unix variants could be with combined with the above clause
+                   ;; However, in case of some future re-factorization this is problably cleaner:
+                   ((aix berkeley-unix hpux irix  usg-unix-v) ;; lynxos 3.0.1
+                    (save-match-data (split-string pathname "/" t)))))
+             (mon-format :w-fun  #'error 
+                         :w-spec '(":FUNCTION `mon-string-split-pathname' " 
+                                   "-- keyword :w-fun does not satisfy either `stringp' or `null', \n"
+                                   "got: %s\ntype-of: %s")
+                         :w-args `(,pathname ,(type-of pathname)))))
+          (mssp-pfx '("." ".." "~")))
+      (or (and keep-relative-prefixes mssp-list)
+        (and mssp-list 
+             (mon-delete-if #'(lambda (mssp-L-0) (member mssp-L-0  '("." ".." "~")))
+                            mssp-list))))))
+
 
 ;;; ==============================
 ;;; :PREFIX "mssdr-"
+;;; :MODIFICATIONS <Timestamp: #{2011-05-14T14:13:21-04:00Z}#{11196} - by MON KEY>
 ;;; :CREATED <Timestamp: Saturday May 23, 2009 @ 08:37.50 PM - by MON>
-(defun mon-string-split-dir-recurse (&optional alt-path reverse-path)
+(defun mon-string-split-dir-recurse (&optional alt-path reverse-path w-no-error)
   "Return default-directory as list of recursively split strings.\n
-When ALT-PATH (a directory name string) is non-nil use it instead.
+Use to walk up the directory or buffers path.\n
+When ALT-PATH \(a directory name string\) is non-nil use it instead.\n
 Signal an error if ALT-PATH doesn't exist.\n
-When REVERSE-PATH is non-nil return the result in reversed format.
-The REVERSE-PATH arg is useful for faster comparison of two trees.
 Default is to split buffer's current directory.\n
-Use to walk up the directory or buffers path.
+When REVERSE-PATH is non-nil return the result in reversed format.\n
+The REVERSE-PATH arg is useful for faster comparison of two directory trees.\n
+When optional arg W-NO-ERROR is non-nil and ALT-PATH does not exists do not
+signal an error instead return nil.\n
 :EXAMPLE\n\n\(mon-string-split-dir-recurse\)\n
-\(mon-string-split-dir-recurse nil t\)
+\(mon-string-split-dir-recurse nil t\)\n
 \(mon-string-split-dir-recurse user-emacs-directory\)\n
 \(mon-string-split-dir-recurse user-emacs-directory t\)\n
 \(mon-string-split-dir-recurse \(expand-file-name \"~/\"\)\)\n
 \(mon-string-split-dir-recurse \(expand-file-name \"~/\"\) t\)\n
+\(mon-string-split-dir-recurse \"non-existent-path\" nil t\)\n
+\(and \(null \(ignore-errors  \(mon-string-split-dir-recurse \"non-existent-path\"\)\)\)
+              \(princ \":FUNCTION `mon-string-split-dir-recurse' errored\"\)\)\n
+\(when \(and \(intern-soft \"*mon-ebay-images-bmp-path*\"\) 
+           \(bound-and-true-p *mon-ebay-images-bmp-path*\)\) 
+  \(mon-string-split-dir-recurse *mon-ebay-images-bmp-path*\)\)\n
 :ALIASED-BY `mon-dir-recurse-string-split'
 :ALIASED-BY `mon-buffer-string-split-dir-recurse'\n
 :SEE-ALSO `mon-dir-common-paths', `expand-file-name', `file-expand-wildcards'.\n►►►"
   (interactive)
-  (let* ((mssdr-alt-pth 
-          (when alt-path
-            (if (file-exists-p (directory-file-name alt-path))
-                (directory-file-name alt-path)
-              (mon-file-non-existent-ERROR :w-error t                             
-                                           :fun-name "mon-string-split-dir-recurse"
-                                           :locus    "alt-path"
-                                           :got-val   alt-path))))
-	 (mssdr-wlk-bfr-dirs (if mssdr-alt-pth 
-                                 (save-match-data (split-string mssdr-alt-pth "/" t))
-                               (mon-string-split-buffer-parent-dir)))
-	 mssdr-gthr)
-    (while mssdr-wlk-bfr-dirs
-      (push (mapconcat #'identity mssdr-wlk-bfr-dirs "/") mssdr-gthr)
-      (setq mssdr-wlk-bfr-dirs (nreverse mssdr-wlk-bfr-dirs))
-      (pop mssdr-wlk-bfr-dirs)
-      (setq mssdr-wlk-bfr-dirs (nreverse mssdr-wlk-bfr-dirs)))
-    (if reverse-path (nreverse mssdr-gthr) mssdr-gthr)))
+  (catch 'mon-string-split-dir-recurse-CATCH
+    (let* ((mssdr-alt-pth 
+            (when alt-path
+              (if (file-exists-p (directory-file-name alt-path))
+                  (directory-file-name alt-path)
+                (if w-no-error 
+                    (throw 'mon-string-split-dir-recurse-CATCH nil)
+                  (mon-file-non-existent-ERROR :w-error t                             
+                                               :fun-name "mon-string-split-dir-recurse"
+                                               :locus    "alt-path"
+                                               :got-val   alt-path)))))
+           (mssdr-wlk-bfr-dirs (if mssdr-alt-pth 
+                                   (save-match-data (split-string mssdr-alt-pth "/" t))
+                                 (mon-string-split-buffer-parent-dir)))
+           (mssdr-gthr '()))
+      (while mssdr-wlk-bfr-dirs
+        (push (mapconcat #'identity mssdr-wlk-bfr-dirs "/") mssdr-gthr)
+        (setq mssdr-wlk-bfr-dirs (nreverse mssdr-wlk-bfr-dirs))
+        (pop mssdr-wlk-bfr-dirs)
+        (setq mssdr-wlk-bfr-dirs (nreverse mssdr-wlk-bfr-dirs)))
+      (if reverse-path 
+          (nreverse mssdr-gthr) 
+        mssdr-gthr))))
 ;;
 ;;; :TEST-ME (mon-string-split-dir-recurse) 
 ;;; :TEST-ME (mon-string-split-dir-recurse nil t)
 ;;; :TEST-ME (mon-string-split-dir-recurse (expand-file-name "~/"))
 ;;; :TEST-ME (mon-string-split-dir-recurse (expand-file-name "~/") t)
+;;; :TEST-ME  (when (and (intern-soft "*mon-ebay-images-bmp-path*") 
+;;;                      (bound-and-true-p *mon-ebay-images-bmp-path*)) 
+;;;             (mon-string-split-dir-recurse *mon-ebay-images-bmp-path*))
+;;; :TEST-ME (and (null (ignore-errors  (mon-string-split-dir-recurse "non-existent-path")))
+;;;               (princ ":FUNCTION `mon-string-split-dir-recurse' errored"))
+;;;  :TEST-ME (mon-string-split-dir-recurse "non-existent-path" nil t)
 
 ;;; ==============================
 ;;; :PREFIX "mdcp-"
 ;;; :CREATED <Timestamp: Wednesday May 27, 2009 @ 04:28.57 PM - by MON>
 (defun mon-dir-common-paths (path-is path-in)
   "Given two paths return an ascending list of the most common parents of two.\n
-Comparison made as a test if PATH-IS (the unknown path) has a common parent
-directory in PATH-IN (the target path).\n
+Comparison made as a test if PATH-IS \(the unknown path\) has a common parent
+directory in PATH-IN \(the target path\).\n
 The car retrun value is the the first deepest directory.\n
 The last elt or return value is least deepest directory.\n
 :EXAMPLE\n\n\(mon-dir-common-paths *mon-ebay-images-bmp-path* *mon-ebay-images-path*\)\n
 \(mon-dir-common-paths user-emacs-directory \(getenv \"HOME\"\)\)\n
+:NOTE This function calls `mon-string-split-dir-recurse' be careful when
+recursing into deeply nested paths when either arg is on a non-default mount
+point, e.g. other than \"/\"!\n
 :ALIASED-BY `mon-get-dir-common-path'\n
-:SEE-ALSO `mon-string-split-dir-recurse', `mon-get-buffer-parent-dir',
+:SEE-ALSO `mon-get-buffer-parent-dir',
 `mon-add-subdirs-to-list', `mon-insert-subdirs-in-buffer',
 `mon-get-dir-subdir-default'.\n►►►"
   (let ((mdcp-pth-A (mon-string-split-dir-recurse path-is t)) ;; Longer - reversed.
@@ -1956,6 +2038,7 @@ The last elt or return value is least deepest directory.\n
     mdcp-got))
 ;;
 ;;; :TEST-ME (mon-dir-common-paths *mon-ebay-images-bmp-path* *mon-ebay-images-path*)
+
 
 ;;; ==============================
 ;;; :CHANGESET 2261

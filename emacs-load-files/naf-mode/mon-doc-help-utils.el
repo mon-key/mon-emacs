@@ -373,7 +373,8 @@
 ;; from Pascal Bourguignon but I can no longer find the reference
 ;; to the source... I have it elsewhere as `escape-lisp-string-region'.
 ;;
-;; URL: http://www.emacswiki.org/emacs/mon-doc-help-utils.el
+;; URL: https://github.com/mon-key/mon-emacs/raw/master/emacs-load-files/naf-mode/mon-doc-help-utils.el
+;; EMACSWIKI-URL: http://www.emacswiki.org/emacs/mon-doc-help-utils.el
 ;; FILE-PUBLISHED: <Timestamp: #{2009-08-15} - by MON KEY>
 ;;
 ;; PUBLIC-LINK: (URL `http://www.emacswiki.org/emacs/MonDocHelpUtilsDictionary')
@@ -456,15 +457,17 @@
   "Extensions for help and documentation related procedures.\n
 :SEE (URL `http://www.emacswiki.org/emacs/MonDocHelpUtilsDictionary')\n
 :SEE-ALSO `mon-doc-help-utils-faces', `mon-doc-help-CL'.\n►►►"
-  :link '(url-link 
-          :tag ":EMACSWIKI-FILE (URL `http://www.emacswiki.org/emacs/mon-doc-help-utils.el')" 
+:link '(url-link 
+          :tag ":GITHUB-FILE" 
+          "https://github.com/mon-key/mon-emacs/raw/master/emacs-load-files/naf-mode/mon-doc-help-utils.el")  
+:link '(url-link 
+          :tag ":EMACSWIKI-FILE" 
           "http://www.emacswiki.org/emacs/mon-doc-help-utils.el")
   :link '(url-link 
           :tag ":EMACSWIKI-DICTIONARY (URL `http://www.emacswiki.org/emacs/MonDocHelpUtilsDictionary')" 
           "http://www.emacswiki.org/emacs/MonDocHelpUtilsDictionary")
   :link '(emacs-library-link 
-          :tag ":FILE mon-doc-help-utils.el" 
-          "mon-doc-help-utils.el")
+          :tag ":FILE mon-doc-help-utils.el"  "mon-doc-help-utils.el")
   :link '(custom-group-link mon-doc-help-utils-faces)
   :prefix "mon-help-"
   :group 'mon-base
@@ -16875,8 +16878,8 @@ When predicate `IS-MON-SYSTEM-P' returns non-nil evaluate:\n
              (when (mon-check-feature-for-loadtime 'mon-doc-help-tidy) 
                (push ":REQUIRED `mon-doc-help-tidy'" myb-msg-usr)
                (setq w-msg-user t)) 
-             (when (mon-check-feature-for-loadtime 'mon-doc-help-mail) 
-               (push ":REQUIRED `mon-doc-help-mail'" myb-msg-usr)               
+             (when (mon-check-feature-for-loadtime 'mon-doc-help-mail)
+               (push ":REQUIRED `mon-doc-help-mail'" myb-msg-usr)
                (setq w-msg-user t))
              ;; Load doc functions which can't possibly be GPL/GFDL e.g MS-C0RP API etc.
              (when (mon-check-feature-for-loadtime 'mon-doc-help-proprietary)

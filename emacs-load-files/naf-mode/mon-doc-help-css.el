@@ -2,7 +2,7 @@
 ;; -*- mode: EMACS-LISP; -*-
 
 ;;; ================================================================
-;; Copyright © 2010 MON KEY. All rights reserved.
+;; Copyright © 2010-2011 MON KEY. All rights reserved.
 ;;; ================================================================
 
 ;; FILENAME: mon-doc-help-css.el
@@ -38,6 +38,10 @@
 ;; FACES:
 ;;
 ;; VARIABLES:
+;; `*mon-doc-help-css-xrefs*'
+;;
+;; GROUPS:
+;; `mon-doc-help-css'
 ;;
 ;; ALIASED/ADVISED/SUBST'D:
 ;; `mon-help-csstidy'      -> `mon-help-css-check'
@@ -73,10 +77,9 @@
 ;;
 ;; THIRD-PARTY-CODE:
 ;;
-;; URL: http://www.emacswiki.org/emacs/mon-doc-help-css.el
+;; URL: https://github.com/mon-key/mon-emacs/raw/master/emacs-load-files/naf-mode/mon-doc-help-css.el
+;; EMACSWIKI-URL: http://www.emacswiki.org/emacs/mon-doc-help-css.el
 ;; FIRST-PUBLISHED: <Timestamp: #{2010-06-08T18:57:54-04:00Z}#{10232} - by MON>
-;;
-;; EMACSWIKI: { URL of an EmacsWiki describing mon-doc-help-css. }
 ;;
 ;; FILE-CREATED:
 ;; <Timestamp: #{2010-06-04T15:42:39-04:00Z}#{10225} - by MON KEY>
@@ -114,7 +117,7 @@
 ;; Foundation Web site at:
 ;; (URL `http://www.gnu.org/licenses/fdl-1.3.txt').
 ;;; ==============================
-;; Copyright © 2010 MON KEY 
+;; Copyright © 2010-2011 MON KEY 
 ;;; ==============================
 
 ;;; CODE:
@@ -134,6 +137,42 @@
 ;;             ;; (featurep 'css-check) 
 ;;             (featurep 'mon-css-check))
 ;;; ==============================
+(defgroup mon-doc-help-css nil
+  "Extends mon-doc-help-utils with CSS related help.\n
+:SEE-ALSO .\n►►►"
+  :link '(url-link 
+          :tag ":GITHUB-FILE" 
+          "https://github.com/mon-key/mon-emacs/raw/master/emacs-load-files/naf-mode/mon-doc-help-css.el")  
+  :link '(url-link 
+          :tag ":EMACSWIKI-FILE" 
+          "http://www.emacswiki.org/emacs/mon-doc-help-css.el")
+  :link '(emacs-library-link 
+          :tag ":FILE mon-doc-help-css.el"  "mon-doc-help-css.el")
+  :group 'mon-doc-help-utils)
+
+(defcustom *mon-doc-help-css-xrefs* 
+  '(mon-help-css-check
+    mon-help-css-properties
+    mon-help-css-color
+    mon-help-css-complete
+    mon-help-css-mode
+    *mon-doc-help-css-xrefs*)
+  "Xrefing list of CSS related `mon-help-*' symbols, functions constants, and variables.\n
+The symbols contained of this list are defined in :FILE mon-doc-help-css.el\n
+:SEE-ALSO `*mon-doc-help-utils-xrefs*', `*mon-default-loads-xrefs*',
+`*mon-default-start-loads-xrefs*', `*mon-dir-locals-alist-xrefs*',
+`*mon-keybindings-xrefs*', `*mon-testme-utils-xrefs*',
+`*mon-button-utils-xrefs*', `*mon-bzr-utils-xrefs*' `*mon-buffer-utils-xrefs*',
+`*mon-error-utils-xrefs*', `*mon-line-utils-xrefs*', `*mon-macs-xrefs*',
+`*mon-plist-utils-xrefs*', `*mon-post-load-hooks-xrefs*',
+`*mon-seq-utils-xrefs*', `*mon-string-utils-xrefs*', `*mon-type-utils-xrefs*',
+`*mon-window-utils-xrefs*', `*naf-mode-xref-of-xrefs*', `*mon-slime-xrefs*',
+`*naf-mode-faces-xrefs*', `*naf-mode-date-xrefs*', `*mon-ulan-utils-xrefs*',
+`*mon-xrefs-xrefs'.\n►►►"
+  :type  '(repeat symbol)
+  :group 'mon-xrefs
+  :group 'mon-doc-help-css)
+
 
 
 ;;; ==============================
