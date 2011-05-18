@@ -198,6 +198,7 @@ The symbols contained of this list are defined in :FILE mon-buffer-utils.el\n
    " *changelog-resolve-1*" " *changelog-resolve-2*"
    " *Compiler Input*"  " *Compiler Output*" " *Custom-Work*"  
    " *Deletions*"  " *dired-check-process output*" " *dot-dired*" " *DOC*"  
+   " *entity*"    ;; :SEE `url-insert-entities-in-string' :FILE lisp/url/url-util.el
    " *tip*" " *dvc-log*" ;; DVC package
    " *gnus work*"
    " *icalendar-work*" " *ido session*" " *IDO Trace*" 
@@ -216,6 +217,7 @@ The symbols contained of this list are defined in :FILE mon-buffer-utils.el\n
    " *w3m cache*" " widget-choose"
    " *xgit-process*" " *xgit-errors*"
    " *Unicode Data*" " *url-work"
+   " *urlparse-temp*"
    ;;  :NOTE Following have match patterns
    ;;  " *Echo Area [0-9]+*"    ;; " *Echo Area <N>*" 
    ;;  " *Format Temp [0-9]+*"  ;; " *Format Temp <N>*"
@@ -715,6 +717,7 @@ buffers include:\n
  \" *Compiler Input*\"  \" *Compiler Output*\" \" *Custom-Work*\"  
  \" *Deletions*\"  \" *dired-check-process output*\" \" *dot-dired*\" \" *DOC*\"  
  \" *tip*\" \" *dvc-log*\" ;; DVC package
+ \" *entity*\"    ;; :SEE `url-insert-entities-in-string' :FILE lisp/url/url-util.el
  \" *Echo Area <N>*\" \" *Format Temp <N>*\" 
  \" *gnus work*\"
  \" *icalendar-work*\" \" *ido session*\" \" *IDO Trace*\" 
@@ -738,8 +741,8 @@ buffers include:\n
 \(mapcar #'cdr \(mon-get-hidden-buffers\)\)\n
 :ALIASED-BY `mon-get-hidden-buffers'\n
 :ALIASED-BY `mon-help-hidden-buffers'\n
-:SEE-ALSO `mon-get-buffer-hidden-if', `mon-buffer-kill-hidden-if',
-`ido-ignore-buffers', `mon-help-buffer-spc-*DOC*',
+:SEE-ALSO `*mon-get-hidden-buffers-known*', `mon-get-buffer-hidden-if',
+`mon-buffer-kill-hidden-if', `ido-ignore-buffers', `mon-help-buffer-spc-*DOC*',
 `mon-abort-autosave-when-fucked', `mon-abort-recursive-edit'.\n►►►"
   (interactive "P")
   (let ((mgbh-bl (buffer-list (selected-frame))) ;; do current-frame first

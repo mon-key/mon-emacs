@@ -1,5 +1,5 @@
 ;;; mon-insertion-utils.el --- insertion utils, licences, file templates, etc.
-;; -*- mode: EMACS-LISP; -*-
+ ;; -*- mode: EMACS-LISP; -*-
 
 ;;; ================================================================
 ;; Copyright © 2009-2011 MON KEY. All rights reserved.

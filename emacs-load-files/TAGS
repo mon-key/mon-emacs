@@ -264,26 +264,26 @@ naf-mode/mon-buffer-utils.el,974
 (defgroup mon-buffer-utils 147,5233
 (defcustom *mon-buffer-utils-xrefs* 165,5929
 (defcustom *mon-get-hidden-buffers-known* 192,7249
-(defun mon-g2be 246,9693
-(defun mon-buffer-sub-no-prop 335,14114
-(defun mon-buffer-sub-no-prop-check 380,16382
-(defun mon-buffer-narrowed-p 529,25844
-(defun mon-buffer-empty-p 586,28843
-(defun mon-buffer-exists-so-kill 613,30037
-(defun mon-buffer-name-is-file-name-p 635,31246
-(defun mon-get-buffer-hidden 700,34586
-(defun mon-get-buffer-hidden-if 760,37435
-(defun mon-buffer-kill-hidden-if 781,38534
-(defun mon-get-buffer-window-if 806,39862
-(defun mon-print-buffer-object-readably 824,40797
-(defun mon-get-buffer-w-mode 859,42527
-(defun mon-buffer-check-local-value 889,44232
-(defun mon-buffer-check-major-mode 922,46091
-(defun mon-buffer-longlines-mode-p 942,47283
-(defun mon-buffer-name->kill-ring 987,49248
-(defun mon-append-to-buffer 1025,51070
-(defun mon-make-shell-buffer 1061,52605
-(defun mon-shell 1103,54552
+(defun mon-g2be 248,9800
+(defun mon-buffer-sub-no-prop 337,14221
+(defun mon-buffer-sub-no-prop-check 382,16489
+(defun mon-buffer-narrowed-p 531,25951
+(defun mon-buffer-empty-p 588,28950
+(defun mon-buffer-exists-so-kill 615,30144
+(defun mon-buffer-name-is-file-name-p 637,31353
+(defun mon-get-buffer-hidden 702,34693
+(defun mon-get-buffer-hidden-if 763,37661
+(defun mon-buffer-kill-hidden-if 784,38760
+(defun mon-get-buffer-window-if 809,40088
+(defun mon-print-buffer-object-readably 827,41023
+(defun mon-get-buffer-w-mode 862,42753
+(defun mon-buffer-check-local-value 892,44458
+(defun mon-buffer-check-major-mode 925,46317
+(defun mon-buffer-longlines-mode-p 945,47509
+(defun mon-buffer-name->kill-ring 990,49474
+(defun mon-append-to-buffer 1028,51296
+(defun mon-make-shell-buffer 1064,52831
+(defun mon-shell 1106,54778
 
 naf-mode/mon-bzr-utils.el,351
 (defgroup mon-bzr-utils 118,3504
@@ -435,61 +435,61 @@ naf-mode/mon-drive-transfer-utils.el,339
 (defun mon-drive-transfer-template-cln-all 348,15649
 
 naf-mode/mon-insertion-utils.el,2580
-(defgroup mon-insertion-utils 211,9225
-(defcustom *mon-insertion-utils-xrefs*225,9732
-(defun mon-insert-dirs-in-path 264,11914
-(defun mon-insert-file-in-dirs 293,13405
-(defun mon-insert-whitespace 371,17468
-(defun mon-insert-newlines 395,18653
-(defun mon-insert-string-n-fancy-times 426,20205
-(defun mon-insert-string-n-times 563,27418
-(defun mon-line-number-region 609,29413
-(defun mon-string-incr 641,30922
-(defun mon-insert-string-ify 795,39353
-(defun mon-insert-unicode 813,40245
-(defun mon-split-designator 905,45640
-(defun mon-comment-divider 928,46511
-(defun mon-comment-divider-to-col 957,47964
-(defun mon-comment-lisp-to-col 1059,53586
-(defun mon-comment-divider-to-col-four 1079,54623
-(defun mon-insert-php-comment-divider 1096,55271
-(defun mon-insert-user-name-cond 1111,55964
-(defun mon-insert-system-type-cond 1144,57551
-(defun mon-insert-regexp-template 1165,58506
-(defun mon-insert-regexp-template-yyyy 1184,59414
-(defun mon-lisp-CL-package-complete 1233,61769
-(defun mon-insert-lisp-CL-mode-line-template 1269,63554
-(defun mon-insert-lisp-CL-file-template 1374,69172
-(defun mon-insert-lisp-CL-package-template 1455,73399
-(defun mon-insert-lisp-CL-eval-when 1546,78620
-(defun mon-insert-lisp-CL-debug 1589,80597
-(defun mon-insert-lisp-doc-eg-xref 1621,82165
-(defun mon-insert-lisp-CL-jump-doc 1709,86712
-(defun mon-insert-lisp-CL-eol-tilde 1840,93867
-(defun mon-insert-lisp-CL-eol-tilde-no-at 1865,94938
-(defun mon-insert-lisp-stamp 1890,96045
-(defun mon-build-copyright-string 1925,97924
-(defun mon-insert-copyright 2015,102963
-(defcustom *mon-github-username-for-pathname* 2087,106569
-(defcustom *mon-github-repository-name-for-pathname* 2106,107545
-(defcustom *mon-github-repository-default-pathname* 2126,108494
-(defcustom *mon-github-pathname-url* 2160,110531
-(defun mon-build-github-default 2198,112528
-(defun mon-build-github-repo-path-defaults 2238,114709
-(defun mon-insert-file-template 2326,119889
-(defvar *mon-gnu-license-header* 2433,125202
-(defvar *mon-gnu-license-header-emacs* 2469,127001
-(defvar *mon-mit-license-header* 2491,128029
-(defcustom *mon-bsd-license-header-COPYRIGHT-HOLDER* 2534,130266
-(defvar *mon-bsd-license-header* 2553,131289
-(defvar *mon-gnu-license-header-gfdl* 2608,134349
-(defun mon-build-copyright-string-license 2641,136146
-(defun mon-insert-gnu-licence 2697,139150
-(defun mon-insert-gnu-licence-gfdl 2728,140626
-(defun mon-insert-defclass-template 2768,142711
-(defun mon-insert-texi-template 2876,147953
-(defun mon-comput-45 2983,151798
-(defun mon-comput-33 3012,152818
+(defgroup mon-insertion-utils 211,9226
+(defcustom *mon-insertion-utils-xrefs*225,9733
+(defun mon-insert-dirs-in-path 264,11915
+(defun mon-insert-file-in-dirs 293,13406
+(defun mon-insert-whitespace 371,17469
+(defun mon-insert-newlines 395,18654
+(defun mon-insert-string-n-fancy-times 426,20206
+(defun mon-insert-string-n-times 563,27419
+(defun mon-line-number-region 609,29414
+(defun mon-string-incr 641,30923
+(defun mon-insert-string-ify 795,39354
+(defun mon-insert-unicode 813,40246
+(defun mon-split-designator 905,45641
+(defun mon-comment-divider 928,46512
+(defun mon-comment-divider-to-col 957,47965
+(defun mon-comment-lisp-to-col 1059,53587
+(defun mon-comment-divider-to-col-four 1079,54624
+(defun mon-insert-php-comment-divider 1096,55272
+(defun mon-insert-user-name-cond 1111,55965
+(defun mon-insert-system-type-cond 1144,57552
+(defun mon-insert-regexp-template 1165,58507
+(defun mon-insert-regexp-template-yyyy 1184,59415
+(defun mon-lisp-CL-package-complete 1233,61770
+(defun mon-insert-lisp-CL-mode-line-template 1269,63555
+(defun mon-insert-lisp-CL-file-template 1374,69173
+(defun mon-insert-lisp-CL-package-template 1455,73400
+(defun mon-insert-lisp-CL-eval-when 1546,78621
+(defun mon-insert-lisp-CL-debug 1589,80598
+(defun mon-insert-lisp-doc-eg-xref 1621,82166
+(defun mon-insert-lisp-CL-jump-doc 1709,86713
+(defun mon-insert-lisp-CL-eol-tilde 1840,93868
+(defun mon-insert-lisp-CL-eol-tilde-no-at 1865,94939
+(defun mon-insert-lisp-stamp 1890,96046
+(defun mon-build-copyright-string 1925,97925
+(defun mon-insert-copyright 2015,102964
+(defcustom *mon-github-username-for-pathname* 2087,106570
+(defcustom *mon-github-repository-name-for-pathname* 2106,107546
+(defcustom *mon-github-repository-default-pathname* 2126,108495
+(defcustom *mon-github-pathname-url* 2160,110532
+(defun mon-build-github-default 2198,112529
+(defun mon-build-github-repo-path-defaults 2238,114710
+(defun mon-insert-file-template 2326,119890
+(defvar *mon-gnu-license-header* 2433,125203
+(defvar *mon-gnu-license-header-emacs* 2469,127002
+(defvar *mon-mit-license-header* 2491,128030
+(defcustom *mon-bsd-license-header-COPYRIGHT-HOLDER* 2534,130267
+(defvar *mon-bsd-license-header* 2553,131290
+(defvar *mon-gnu-license-header-gfdl* 2608,134350
+(defun mon-build-copyright-string-license 2641,136147
+(defun mon-insert-gnu-licence 2697,139151
+(defun mon-insert-gnu-licence-gfdl 2728,140627
+(defun mon-insert-defclass-template 2768,142712
+(defun mon-insert-texi-template 2876,147954
+(defun mon-comput-45 2983,151799
+(defun mon-comput-33 3012,152819
 
 naf-mode/mon-get-freenode-lisp-logs.el,134
 (defvar *freenode-lisp-logs* 124,3896
@@ -921,25 +921,54 @@ naf-mode/naf-mode-benezit-flags.el,151
 naf-mode/mon-doc-help-undocd.el,40
 (defun mon-help-doc-no-docd 1607,64034
 
-naf-mode/google-define-redux.el,758
-(defgroup google-define-redux 188,6844
-(defgroup google-define-redux-faces 213,7964
-(defcustom *google-define-redux-xrefs* 230,8659
-(defcustom *google-define-get-buffer* 285,11529
-(defcustom *google-define-buffer-suffix* 303,12362
-(defvar *get-google-defined* 322,13288
-(defface gg-def-base341,14221
-(defface gg-def-delim 357,14911
-(defface gg-def-num 373,15632
-(defface gg-def-inition386,16218
-(defface gg-def-defined402,17011
-(defcustom *regexp-google-defined-fontlock*414,17529
-(defun google-define-get-command 455,20100
-(defun google-define-parse-buffer 510,22945
-(defun google-define-font-lock 633,29902
-(defun google-define 664,31650
-(defun google-define-kill-def-buffers 706,33721
-(defconst *google-define-html-entry-table*839,39960
+naf-mode/google-define-redux.el,2416
+(defgroup google-define-redux 209,7933
+(defgroup google-define-redux-faces 234,9053
+(defcustom *google-define-redux-xrefs* 251,9748
+(defcustom *google-define-get-buffer* 299,12292
+(defcustom *google-define-buffer-suffix* 317,13125
+(defvar *get-google-defined* 336,14051
+(defvar *regexp-google-define-headings* 356,14945
+(defvar *regexp-google-define-itemized*380,15855
+(defvar *regexp-google-define-dictionary-heading-tag*410,17457
+(defvar *regexp-google-define-next-url-in-heading*445,18564
+(defvar *regexp-google-define-source-ref*491,20199
+(defface gg-def-base559,22328
+(defface gg-def-delim 575,23018
+(defface gg-def-heading593,23760
+(defface gg-def-num 606,24320
+(defface gg-def-inition619,24906
+(defface gg-def-defined635,25699
+(defcustom *regexp-google-defined-fontlock*647,26217
+(defun google-define-get-command 692,28931
+(defun %google-define-verify-query-url-lang-params 751,31761
+(defun %google-define-verify-query-url-xref-type-params 770,32580
+(defun google-define-clean-string 787,33302
+(defun %google-define-clean-term-for-split 831,35783
+(defun %google-define-clean-heading-for-replace 851,36812
+(defun* google-define-make-query-url 864,37558
+(defun google-define-parse-buffer 918,40533
+(defun google-define-font-lock 1055,48239
+(defun %google-define-set-url-current-object 1088,50005
+(defun google-define 1119,51569
+(defun google-define-kill-def-buffers 1174,54421
+(defun google-define-button-action 1216,56198
+(defun google-define-button-do-xref 1226,56603
+(defun google-define-insert-xref-button 1234,56887
+(define-button-type 'google-define-buttongoogle-define-button1245,57417
+(define-button-type 'google-related-lang-buttongoogle-related-lang-button1249,57518
+(defun google-define-find-next-heading 1289,58852
+(defun google-define-make-heading-replacement 1319,60365
+(defun google-define-find-next-url-in-heading 1344,61516
+(defun google-define-find-headings 1389,63285
+(defun %google-define-find-itemized-regexp-for-search-term 1425,64924
+(defun google-define-find-itemized 1448,65742
+(defun google-define-parse-related-languages 1475,66629
+(defun %google-define-find-next-related-lang-regexp-for-search-term 1497,67531
+(defun google-define-find-next-related-language-xref 1553,69560
+(defun google-define-related-language-url 1565,70131
+(defun google-define-related-language-xref 1595,71771
+(defconst *google-define-html-entry-table*1737,78337
 
 naf-mode/naf-mode-french-roles.el,100
 (defconst naf-mode-french-roles-primary182,5653
@@ -1669,19 +1698,19 @@ naf-mode/mon-url-utils.el,1709
 (defun mon-make-html-table-string 971,46324
 (defun mon-make-html-table 1000,47561
 (defun mon-url-retrieve-to-new-buffer 1026,48716
-(defun mon-get-host-address 1042,49601
-(defun mon-w3m-dired-file 1076,51011
-(defun mon-w3m-kill-url-at-point 1089,51614
-(defun mon-get-w3m-url-at-point-maybe 1105,52386
-(defun mon-get-w3m-url-at-point 1126,53498
-(defun mon-w3m-goto-url-at-point 1150,54652
-(defun mon-w3m-read-gnu-lists-nxt-prv 1175,55932
-(defcustom *mon-tld-list* 1289,61248
-(defsubst mon-tld-tld 1587,73645
-(defsubst mon-tld-name 1593,73873
-(defun mon-tld-find-tld 1601,74177
-(defun mon-tld-find-name 1613,74635
-(defun mon-tld 1624,75011
+(defun mon-get-host-address 1046,49849
+(defun mon-w3m-dired-file 1080,51259
+(defun mon-w3m-kill-url-at-point 1093,51862
+(defun mon-get-w3m-url-at-point-maybe 1109,52634
+(defun mon-get-w3m-url-at-point 1130,53746
+(defun mon-w3m-goto-url-at-point 1154,54900
+(defun mon-w3m-read-gnu-lists-nxt-prv 1179,56180
+(defcustom *mon-tld-list* 1293,61496
+(defsubst mon-tld-tld 1591,73893
+(defsubst mon-tld-name 1597,74121
+(defun mon-tld-find-tld 1605,74425
+(defun mon-tld-find-name 1617,74883
+(defun mon-tld 1628,75259
 
 naf-mode/naf-mode-regions.el,95
 (defconst naf-mode-region-names-other193,5117

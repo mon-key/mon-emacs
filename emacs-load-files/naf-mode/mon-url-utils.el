@@ -1028,11 +1028,15 @@ Into the following html table:\n
 Fetches URL as with `url-retrieve-synchronously'.\n
 :EXAMPLE\n\n\(mon-url-retrieve-to-new-buffer 
  \"http://tools.ietf.org/rfc/rfc2822.txt\")\n
+:NOTE The retrieving process takes it encoding information from multiple
+non-descript sources and the returned data may have its encoding clobbered.\n
 :ALIASED-BY `mon-buffer-get-retrieved-url'\n
 :SEE-ALSO `url-copy-file', `url-retrieve', `url-retrieve-synchronously', 
 `url-http', `mon-get-w3m-url-at-point-maybe', `google-define',
 `mon-get-host-address', `mon-url-encode', `mon-url-decode',
 `mon-get-w3m-url-at-point', `mon-w3m-dired-file'.\n►►►"
+  ;; :SEE `process-coding-system' process
+  ;; `url-http-chunked-encoding-after-change-function'
   (let ((murtnb-bfr (url-retrieve-synchronously fetch-this-url)))
     (when (get-buffer murtnb-bfr) (display-buffer murtnb-bfr t))))
 
