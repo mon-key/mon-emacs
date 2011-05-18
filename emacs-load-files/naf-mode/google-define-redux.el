@@ -1106,11 +1106,14 @@ or reconstruct the whole thing with `url-recreate-url', e.g.:\n
  \(url-recreate-url url-current-object\)\n
 :SEE-ALSO .\n►►►"
   (let ( ;; paranoia
-        (gdsuco-bfr (get-buffer ggdfn-dfb)))
+        (gdsuco-bfr (get-buffer definition-buffer)))
     (and gdsuco-bfr
          (with-current-buffer gdsuco-bfr
            (setq url-current-object
-                 (url-generic-parse-url (concat "http://" (car ggdfn-params) (cdr ggdfn-params))))))))
+                 (url-generic-parse-url 
+                  (concat "http://" 
+                          (car url-current-object-params) 
+                          (cdr url-current-object-params))))))))
 
 ;;; ==============================
 ;;; :PREFIX "ggdfn-"

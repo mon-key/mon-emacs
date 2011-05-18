@@ -950,25 +950,25 @@ naf-mode/google-define-redux.el,2416
 (defun google-define-parse-buffer 918,40533
 (defun google-define-font-lock 1055,48239
 (defun %google-define-set-url-current-object 1088,50005
-(defun google-define 1119,51569
-(defun google-define-kill-def-buffers 1174,54421
-(defun google-define-button-action 1216,56198
-(defun google-define-button-do-xref 1226,56603
-(defun google-define-insert-xref-button 1234,56887
-(define-button-type 'google-define-buttongoogle-define-button1245,57417
-(define-button-type 'google-related-lang-buttongoogle-related-lang-button1249,57518
-(defun google-define-find-next-heading 1289,58852
-(defun google-define-make-heading-replacement 1319,60365
-(defun google-define-find-next-url-in-heading 1344,61516
-(defun google-define-find-headings 1389,63285
-(defun %google-define-find-itemized-regexp-for-search-term 1425,64924
-(defun google-define-find-itemized 1448,65742
-(defun google-define-parse-related-languages 1475,66629
-(defun %google-define-find-next-related-lang-regexp-for-search-term 1497,67531
-(defun google-define-find-next-related-language-xref 1553,69560
-(defun google-define-related-language-url 1565,70131
-(defun google-define-related-language-xref 1595,71771
-(defconst *google-define-html-entry-table*1737,78337
+(defun google-define 1122,51676
+(defun google-define-kill-def-buffers 1177,54528
+(defun google-define-button-action 1219,56305
+(defun google-define-button-do-xref 1229,56710
+(defun google-define-insert-xref-button 1237,56994
+(define-button-type 'google-define-buttongoogle-define-button1248,57524
+(define-button-type 'google-related-lang-buttongoogle-related-lang-button1252,57625
+(defun google-define-find-next-heading 1292,58959
+(defun google-define-make-heading-replacement 1322,60472
+(defun google-define-find-next-url-in-heading 1347,61623
+(defun google-define-find-headings 1392,63392
+(defun %google-define-find-itemized-regexp-for-search-term 1428,65031
+(defun google-define-find-itemized 1451,65849
+(defun google-define-parse-related-languages 1478,66736
+(defun %google-define-find-next-related-lang-regexp-for-search-term 1500,67638
+(defun google-define-find-next-related-language-xref 1556,69667
+(defun google-define-related-language-url 1568,70238
+(defun google-define-related-language-xref 1598,71878
+(defconst *google-define-html-entry-table*1740,78444
 
 naf-mode/naf-mode-french-roles.el,100
 (defconst naf-mode-french-roles-primary182,5653
