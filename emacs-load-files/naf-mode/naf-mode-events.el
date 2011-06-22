@@ -5,9 +5,9 @@
 ;;; naf-mode-events lists terms which flag on events which had bearin on art
 ;;; Styles or movements. Used for `naf-mode' font-locking.
 ;;;
-;;; FUNCTIONS:►►►
+;;; FUNCTIONS:▶▶▶
 ;;;
-;;; FUNCTIONS:◄◄◄
+;;; FUNCTIONS:◀◀◀
 ;;;
 ;;; MACROS:
 ;;;

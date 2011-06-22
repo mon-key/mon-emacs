@@ -21,7 +21,7 @@
 ;; DESCRIPTION:
 ;; Utils for rotation on name-forms. Used with `naf-mode'
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;; `mon-string-rotate-name', `mon-make-name-return', `mon-make-name-lispy',
 ;; `mon-make-names-list', `mon-permute-combine', ,
 ;; `mon-list-variant-forms', `mon-list-permute-variants', `mon-list-permute-1',
@@ -32,7 +32,7 @@
 ;; `mon-rotate-region', `mon-rotate-string', `mon-rotate-next',
 ;; `mon-rotate-get-rotations-for', `mon-string-rotate-to-regexp', 
 ;; `mon-indent-or-rotate', 
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;; `mon-intern-artist'
@@ -151,7 +151,7 @@ Else uses @artist:\n
  => ⍟:Cappiello\n
  (⍟:Cappiello)\n => Cappiello (Leonetto)\n
 :NOTE \(describe-char \(point\)\)⍟\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   (let ((pre-insert-char
          (if (char-displayable-p ?\u235F)
              "⍟:"
@@ -170,7 +170,7 @@ Else uses @artist:\n
 :SEE-ALSO `mon-line-string-unrotate-namestrings',
 `mon-line-string-rotate-namestrings', `mon-line-strings-to-list',
 `mon-make-lastname-firstname', `mon-make-name-lispy',
-`mon-make-names-list'.\n►►►"
+`mon-make-names-list'.\n▶▶▶"
   (interactive "r\ni\ni\np")
   (let (msrn-str)
     (setq msrn-str 
@@ -214,7 +214,7 @@ Else uses @artist:\n
   "Return region as a list of names.\n
 Region should contain two name instances \"Firstname\" \"Lastname\"  per line.\n
 :EXMAMPLE\n\n\(save-excursion 
-  \(goto-char \(1+ \(search-forward-regexp \"^►\" nil t\)\)\)
+  \(goto-char \(1+ \(search-forward-regexp \"^▶\" nil t\)\)\)
   \(let \(\(botp #'\(lambda \(\) 
                   `\(,\(line-beginning-position\) . ,\(line-end-position\)\)\)\)
         \(mhor #'\(lambda \(bd shw\) 
@@ -223,10 +223,10 @@ Region should contain two name instances \"Firstname\" \"Lastname\"  per line.\n
       \(let \(\(bdN \(funcall botp\)\)\)
         \(funcall mhor bdN \(mon-make-lastname-firstname \(car bdN\) \(cdr bdN\)\)\)
         \(line-move-1 1\)\)\)\)\)\n
-►\nFirstname1 Lastname1\nFirstname2 Firstname2\nFirstname3 Lastname3\n◄\n
+▶\nFirstname1 Lastname1\nFirstname2 Firstname2\nFirstname3 Lastname3\n◀\n
 :SEE-ALSO `mon-line-strings-to-list', `mon-line-string-rotate-namestrings',
 `mon-line-string-unrotate-namestrings', `mon-make-name-lispy',
-`mon-make-names-list'.\n►►►"
+`mon-make-names-list'.\n▶▶▶"
   (interactive "r\np")
   (let ((get-mmlf (mon-buffer-sub-no-prop start end)))
     (setq get-mmlf
@@ -249,11 +249,11 @@ Region should contain two name instances \"Firstname\" \"Lastname\"  per line.\n
 (defun mon-make-names-list (start end &optional insrtp intrp)
   "Return list of names escaped for double quotes and parens.\n
 :EXAMPLE\n\n\(mon-make-names-list
- \(1+ \(search-forward-regexp \"►\"\)\) \(- \(search-forward-regexp \"◄\"\) 2\)\)
-►\nSome \(Dude1 Name1\)\nSome \(Dude2 Name2\)\nSome \(Dude3 Name3\)\n◄\n
+ \(1+ \(search-forward-regexp \"▶\"\)\) \(- \(search-forward-regexp \"◀\"\) 2\)\)
+▶\nSome \(Dude1 Name1\)\nSome \(Dude2 Name2\)\nSome \(Dude3 Name3\)\n◀\n
 :SEE-ALSO `mon-line-strings-to-list', `mon-line-string-rotate-namestrings',
 `mon-line-string-unrotate-namestrings', `mon-make-lastname-firstname',
-`mon-make-name-lispy'.\n►►►"
+`mon-make-name-lispy'.\n▶▶▶"
   (interactive "r\nP\np")
   (let ((mmnl-rspr3
          (mon-replace-string-pairs-region-no-insert start end
@@ -264,14 +264,14 @@ Region should contain two name instances \"Firstname\" \"Lastname\"  per line.\n
           (t mmnl-rspr3))))
 
 ;;; :TEST-ME (mon-make-names-list  
-;;;         (1+ (search-forward-regexp "►")) (- (search-forward-regexp "►") 2))
+;;;         (1+ (search-forward-regexp "▶")) (- (search-forward-regexp "▶") 2))
 ;;
 ;;,---- :UNCOMMENT-T0-TEST
-;;| ►
+;;| ▶
 ;;| Some (Dude1 Name1)
 ;;| Some (Dude2 Name2)
 ;;| Some (Dude3 Name3)
-;;| ►
+;;| ▶
 ;;`----
 
 ;;; =======================
@@ -280,7 +280,7 @@ Region should contain two name instances \"Firstname\" \"Lastname\"  per line.\n
 (defun mon-string-csv-rotate (csv-string &optional intrp)
   "Returns CSV-STRING \(Comma seperated string\) list in regexp optimized form.\n
 CSV-STRING may be a comma-separated string.\n
-:SEE-ALSO `mon-string-csv-regexp'.\n►►►"
+:SEE-ALSO `mon-string-csv-regexp'.\n▶▶▶"
   (interactive "sKeywords (comma-separated) :\np")
   (let ((rtn (concat "\\(" (mon-string-csv-regexp csv-string) "\\)")))
     (if intrp 
@@ -300,7 +300,7 @@ CSV-STRING may be a comma-separated string.\n
 ;=> Somedudes.*name\\\\|name.*Somedudes\n
 :SEE-ALSO `mon-permute-combine', , `mon-list-variant-forms',
 `mon-permute-combine-functions-TEST', `mon-list-permute-variants', `mon-string-permute',
-`mon-list-permute-1'.\n►►►"
+`mon-list-permute-1'.\n▶▶▶"
   ;;(let* ((l (mon-list-permute-1 (split-string str ",\\s-*"))))
   (let* ((mscr-lst (mon-list-permute-variants 
                     (save-match-data (split-string csv-string ",\\s-*")))))
@@ -318,7 +318,7 @@ CSV-STRING may be a comma-separated string.\n
 :EXAMPLE\n\nSomedudes, name\n transfromed to:\nSomedudes, name | name, Somedudes
 :SEE-ALSO `mon-permute-combine', , `mon-list-variant-forms',
 `mon-permute-combine-functions-TEST', `mon-list-permute-variants', `mon-string-permute',
-`mon-list-permute-1'.\n►►►"
+`mon-list-permute-1'.\n▶▶▶"
   ;; (let* ((l (mon-list-permute-1 (split-string str ",\\s-*"))))
   ;; why let*?
   (let* ((mctp-prm-lst (mon-list-permute-variants 
@@ -379,7 +379,7 @@ CSV-STRING may be a comma-separated string.\n
          \(\"zero\" \"one\" \"two\"\)\)\)\n
 :CALLED-BY `mon-rotate-region', `mon-rotate-string', `mon-rotate-next',
 `mon-rotate-get-rotations-for'\n
-:SEE-ALSO .\n►►►")
+:SEE-ALSO .\n▶▶▶")
 ;;)
 
 ;;; :TEST-ME
@@ -407,7 +407,7 @@ return value for ROTATE-STRING may have be case altered if this is not what is
 wanted do not pass a non-nil value for w-case-ignored.\n
 :SEE-ALSO `mon-rotate-string', `mon-rotate-next', `mon-rotate-region',
 `mon-rotate-get-rotations-for', `mon-string-rotate-to-regexp',
-`mon-list-flatten-rotated', `mon-indent-or-rotate'.\n►►►"
+`mon-list-flatten-rotated', `mon-indent-or-rotate'.\n▶▶▶"
   (interactive "r")
   (if (and (null rotations) (null *rotate-text-rotations*))
       (error (concat ":FUNCTION `mon-rotate-region' "
@@ -441,7 +441,7 @@ return value for ROTATE-STRING may have be case altered if this is not what is
 wanted do not pass a non-nil value for w-case-ignored.\n
 :SEE-ALSO `mon-rotate-string', `mon-rotate-next', `mon-rotate-region',
 `mon-rotate-get-rotations-for', `mon-string-rotate-to-regexp',
-`mon-list-flatten-rotated', `mon-indent-or-rotate'.\n►►►"
+`mon-list-flatten-rotated', `mon-indent-or-rotate'.\n▶▶▶"
   (if (and (null rotations) (null *rotate-text-rotations*))
       (error (concat ":FUNCTION `mon-rotate-string' "
                      "-- arg ROTATIONS and/or variable `*rotate-text-rotations*' null"))
@@ -470,7 +470,7 @@ When optional arg W-CASE-IGNORED is non-nil membership of next element
 is as if by `member-ignore-case' default is as if by `member'.
 :SEE-ALSO `mon-rotate-after-string', `mon-rotate-next', `mon-rotate-region',
 `mon-rotate-get-rotations-for', `mon-after-string-rotate-to-regexp',
-`mon-list-flatten-rotated', `mon-indent-or-rotate'.\n►►►"
+`mon-list-flatten-rotated', `mon-indent-or-rotate'.\n▶▶▶"
   (if (and (null rotations) (null *rotate-text-rotations*))
       (error (concat ":FUNCTION `mon-rotate-next' "
                      "-- arg ROTATIONS and/or variable `*rotate-text-rotations*' null"))
@@ -506,7 +506,7 @@ When optional arg W-CASE-IGNORED is non-nil test for STRING membership in the
 rotations list is as if by `member-ignore-case' default is as if by `member'.
 :SEE-ALSO `mon-rotate-string', `mon-rotate-next', `mon-rotate-region',
 `mon-rotate-get-rotations-for', `mon-string-rotate-to-regexp',
-`mon-list-flatten-rotated', `mon-indent-or-rotate'.\n►►►"
+`mon-list-flatten-rotated', `mon-indent-or-rotate'.\n▶▶▶"
   (if (and (null rotations) (null *rotate-text-rotations*))
       (error (concat ":FUNCTION `mon-rotate-get-rotations-for' "
                      "-- arg ROTATIONS and/or variable `*rotate-text-rotations*' null"))
@@ -531,7 +531,7 @@ ROTATIONS is a list(s) strings.\n
    \(\"rot\" \"ate\" \"tol\" \"ist\" \"ais\" \"Thi\" \"s\"\)\)\)\n
 :SEE-ALSO `mon-rotate-string', `mon-rotate-next', `mon-rotate-region',
 `mon-rotate-get-rotations-for', `mon-string-rotate-to-regexp',
-`mon-list-flatten-rotated', `mon-indent-or-rotate'.\n►►►"
+`mon-list-flatten-rotated', `mon-indent-or-rotate'.\n▶▶▶"
   (regexp-opt (mon-list-flatten-rotated rotations)))
 ;;
 ;; ,---- :UNCOMMENT-BELOW-TO-TEST
@@ -551,7 +551,7 @@ ROTATIONS is a list(s) strings.\n
   "If point is at end of a word rotate else indent the line.\n
 :SEE-ALSO `mon-rotate-region', `mon-rotate-string', `mon-rotate-next', 
 `mon-rotate-get-rotations-for', `mon-string-rotate-to-regexp',
-`mon-list-flatten-rotated', `mon-indent-or-rotate'.\n►►►"
+`mon-list-flatten-rotated', `mon-indent-or-rotate'.\n▶▶▶"
   (interactive)
   (if (looking-at-p "\\>")
       (mon-rotate-region 
@@ -570,7 +570,7 @@ ROTATIONS is a list(s) strings.\n
 ;;; :NOTE The dog looked to me and said, "Why are you here?"
 (defun mon-make-name-return (name-region)
   "mon-make-name-return\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
    (let* ((mmnr-rgn name-region)
           (mmnr-tmp-nm (save-match-data (split-string mmnr-rgn)))
           (mmnr-to-put (reverse (cons (butlast mmnr-tmp-nm) (last mmnr-tmp-nm)))))
@@ -583,7 +583,7 @@ Names rotated as:
  (\"Lastname\" (\"&restnames\")) to parens with quote ' escaped by two slashes.\n
 :SEE-ALSO `mon-line-strings-to-list', `mon-line-string-rotate-namestrings',
 `mon-line-string-unrotate-namestrings', `mon-make-lastname-firstname',
-`mon-make-name-lispy', `mon-make-names-list'.\n►►►"
+`mon-make-name-lispy', `mon-make-names-list'.\n▶▶▶"
    (setq lispy-name-region  
          (if (string-match "'" lispy-name-region)
              (replace-match "\\'" nil t lispy-name-region)))

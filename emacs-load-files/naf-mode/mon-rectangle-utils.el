@@ -21,7 +21,7 @@
 ;; DESCRIPTION:
 ;; mon-rectangle-utils procedures for manipulating rectangles
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;; `mon-rectangle-capitalize'
 ;; `mon-rectangle-upcase'
 ;; `mon-rectangle-downcase'
@@ -31,7 +31,7 @@
 ;; `mon-rectangle-columns'
 ;; `mon-kill-rectangle-w-beer-belly'
 ;;
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;;
@@ -136,7 +136,7 @@
 (defun mon-rectangle-columns (start end)
   "Return column positions at START and END.\n
 Mostly useful as a code template for rectangle related functions.\n
-:SEE-ALSO `mon-rectangle-sum-column'.\n►►►"
+:SEE-ALSO `mon-rectangle-sum-column'.\n▶▶▶"
   (interactive "r")
   (let ((mrc-col-beg (make-marker))
 	(mrc-col-end (make-marker))
@@ -163,7 +163,7 @@ Mostly useful as a code template for rectangle related functions.\n
 Numbers which can be read include (nonexhaustive):\n
  2 +2 -2 2. +2. -2. 2.0 +2.0 -2.0 2e0 +2e0 -2e0 2E0 2e+0 2e-0, 2.e0, 2.0e0, etc.\n
 :SEE-ALSO `mon-rectangle-columns', `mon-line-string-incr-padded',
-`mon-line-number-region', `mon-string-incr', `mon-line-number-region-incr'.\n►►►"
+`mon-line-number-region', `mon-string-incr', `mon-line-number-region-incr'.\n▶▶▶"
   (interactive "r\np")
   (let ((rec-sumd 0))
     (save-excursion
@@ -196,7 +196,7 @@ rectangle, plus ARGS extra arguments.\
 Point is at the beginning of line when REC-FUN is called.\n
 :SEE `apply-on-rectangle' in :FILE rect.el
 :SEE-ALSO `mon-rectangle-operate-on', `mon-rectangle-apply-on-region-points',
-`mon-rectangle-downcase', `mon-rectangle-upcase', `mon-rectangle-capitalize'.\n►►►"
+`mon-rectangle-downcase', `mon-rectangle-upcase', `mon-rectangle-capitalize'.\n▶▶▶"
   (let (mroo-beg-col mroo-end-col mroo-beg-pnt mroo-end-pnt)
     (save-excursion
       (save-restriction
@@ -228,7 +228,7 @@ Point is at the beginning of line when REC-FUN is called.\n
 W-FUN is a symbol naming function to apply to region from START to END.\n
 W-ARGS are additional args to pass to W-FUN.\n
 :SEE-ALSO`mon-rectangle-operate-on', `mon-rectangle-apply-on-region-points',
-`mon-rectangle-downcase' `mon-rectangle-upcase' `mon-rectangle-capitalize'.\n►►►"
+`mon-rectangle-downcase' `mon-rectangle-upcase' `mon-rectangle-capitalize'.\n▶▶▶"
   (mon-rectangle-operate-on
    #'(lambda (mraorp-L-1-bcol mraorp-L-1-ecol)
        (apply w-fun
@@ -248,7 +248,7 @@ W-ARGS are additional args to pass to W-FUN.\n
 (defun mon-rectangle-downcase (beg end)
   "Convert the marked rectangle to lower case.\n
 :SEE-ALSO `mon-rectangle-upcase', `mon-rectangle-capitalize',
-`mon-rectangle-operate-on', `mon-rectangle-apply-on-region-points'.\n►►►"
+`mon-rectangle-operate-on', `mon-rectangle-apply-on-region-points'.\n▶▶▶"
   (interactive "r")
   (mon-rectangle-apply-on-region-points 'downcase-region beg end))
 
@@ -265,7 +265,7 @@ W-ARGS are additional args to pass to W-FUN.\n
 (defun mon-rectangle-capitalize (beg end)
   "Convert the marked rectangle to Title case.\n
 :SEE-ALSO `mon-rectangle-downcase', `mon-rectangle-upcase', `mon-rectangle-capitalize'
-`mon-rectangle-operate-on', `mon-rectangle-apply-on-region-points'.\n►►►"
+`mon-rectangle-operate-on', `mon-rectangle-apply-on-region-points'.\n▶▶▶"
   (interactive "r")
   (mon-rectangle-apply-on-region-points 'mon-region-capitalize beg end))
 
@@ -295,7 +295,7 @@ in order to get the cursor there?\n
 :SEE-ALSO `mon-rectangle-apply-on-region-points', `mon-rectangle-capitalize',
 `mon-rectangle-columns', `mon-rectangle-downcase', `mon-rectangle-operate-on',
 `mon-rectangle-sum-column', `mon-rectangle-upcase', `mon-line-length-max',
-`mon-line-indent-from-to-col', `mon-line-strings-indent-to-col'.\n►►►"
+`mon-line-indent-from-to-col', `mon-line-strings-indent-to-col'.\n▶▶▶"
   (interactive "r\n")
   (let ((max-len 0)
         fat-belly)

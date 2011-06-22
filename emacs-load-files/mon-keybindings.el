@@ -21,12 +21,12 @@
 ;; DESCRIPTION:
 ;; This file defines standard keybindings used across MON site systems.
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;; `mon-keybind-globally', `mon-keybind-w3m', `mon-keybind-emacs-lisp-mode',
 ;; `mon-keybind-slime', `mon-keybind-lisp-interaction-mode',
 ;; `mon-keybind-dired-mode', `mon-keybind-conf-mode', 
 ;; `mon-keybind-slime-inspector',
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;; 
 ;; VARIABLES:
 ;; `*mon-keybindings-xrefs*'
@@ -205,7 +205,7 @@
 ;;; :CREATED <Timestamp: #{2011-01-12T13:31:53-05:00Z}#{11023} - by MON KEY>
 (defgroup mon-keybindings nil
   "Customization group for variables and functions of :FILE mon-keybindings.el\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   ;; :prefix "<PREFIX>"
   :link '(url-link 
           :tag ":EMACSWIKI-FILE (URL `http://www.emacswiki.org/emacs/mon-keybindings.el')" 
@@ -235,7 +235,7 @@ The symbols contained of this list are defined in :FILE mon-keybindings.el\n
 `*mon-string-utils-xrefs*', `*mon-type-utils-xrefs*',
 `*mon-window-utils-xrefs*', `*naf-mode-xref-of-xrefs*',
 `*naf-mode-faces-xrefs*', `*naf-mode-date-xrefs*', `*mon-ulan-utils-xrefs*',
-`*mon-xrefs-xrefs'.\n►►►"
+`*mon-xrefs-xrefs'.\n▶▶▶"
   :type '(repeat symbol)
   :group 'mon-keybindings
   :group 'mon-xrefs)
@@ -255,7 +255,7 @@ When `IS-MON-SYSTEM-P' evaluated at init by `mon-keybind-put-hooks-init' which
 establishes an `eval-after-load' form for :FILE mon-keybindings.el\n
 :SEE-ALSO `mon-keybind-w3m', `mon-keybind-dired-mode', `mon-keybind-w32-init',
 `mon-keybind-lisp-interaction-mode', `mon-keybind-emacs-lisp-mode',
-`mon-help-key-functions', `mon-help-keys'.\n►►►"
+`mon-help-key-functions', `mon-help-keys'.\n▶▶▶"
   (interactive)
   (when (and (intern-soft "IS-MON-SYSTEM-P" obarray) ;; *IS-MON-OBARRAY*
              (bound-and-true-p IS-MON-SYSTEM-P))
@@ -388,7 +388,7 @@ Added to the `dired-mode-hook' at intit with `mon-keybind-put-hooks-init'.\n
 \(remove-hook 'dired-mode-hook 'mon-keybind-dired-mode\)\n
 :SEE-ALSO `mon-keybind-w3m', `mon-keybind-dired-mode', `mon-keybind-w32-init',
 `mon-keybind-lisp-interaction-mode', `mon-keybind-emacs-lisp-mode',
-`mon-help-key-functions', `mon-help-keys'.\n►►►"
+`mon-help-key-functions', `mon-help-keys'.\n▶▶▶"
   (set (make-local-variable 'minor-mode-overriding-map-alist)
        `(ido-mode keymap (remap ,@(remove '(find-file-other-frame . ido-find-file-other-frame)
                                    (cdaddr ido-minor-mode-map-entry)))))
@@ -434,7 +434,7 @@ Binds `mon-line-move-next', `mon-line-move-prev', and `scroll-up'.\n
 :SEE-ALSO `mon-keybind-put-hooks-init', `mon-keybind-dired-mode',
 `mon-keybind-completions', `mon-keybind-emacs-lisp-mode',
 `mon-keybind-lisp-interaction-mode', `mon-keybind-slime', `mon-keybind-w3m',
-`mon-keybind-w32-init', `mon-help-key-functions', `mon-help-keys'.\n►►►"
+`mon-keybind-w32-init', `mon-help-key-functions', `mon-help-keys'.\n▶▶▶"
   (define-key completion-list-mode-map "n"          'mon-line-move-next)
   (define-key completion-list-mode-map "p"          'mon-line-move-prev)
   (define-key completion-list-mode-map (kbd "SPC")  'scroll-up)
@@ -564,7 +564,7 @@ Can be manually removed later with:
  \(remove-hook 'w3m-mode-hook 'mon-keybind-w3m\)\n
 :SEE-ALSO `mon-keybind-dired-mode', `mon-keybind-w32-init',
 `mon-keybind-lisp-interaction-mode', `mon-keybind-emacs-lisp-mode',
-`mon-help-key-functions', `mon-help-keys'.\n►►►"
+`mon-help-key-functions', `mon-help-keys'.\n▶▶▶"
   (let ((mkw3-msg (concat
                     ":FUNCTION `mon-keybind-w3m' "
                     "-- evaluated on `w3m-mode-hook")))
@@ -668,7 +668,7 @@ Can be manually removed later with:
 Run on the `emacs-lisp-mode-hook'\n
 :EXAMPLE\n\n\(symbol-function 'mon-keybind-emacs-lisp-mode\)\n
 :SEE-ALSO `mon-keybind-w3m', `mon-keybind-dired-mode', `mon-keybind-w32-init'
-`mon-keybind-lisp-interaction-mode', `mon-help-key-functions', `mon-help-keys'.\n►►►"
+`mon-keybind-lisp-interaction-mode', `mon-help-key-functions', `mon-help-keys'.\n▶▶▶"
   ;; `recenter-top-bottom' was changed significantly w/ v23, I can't deal.
   ;; :SEE :FILE lisp/window.el 
   ;; :SEE :VARIABLE `resize-mini-windows'
@@ -725,7 +725,7 @@ Added to the `lisp-interaction-mode-hook' at init with `mon-keybind-put-hooks-in
 \(symbol-value 'lisp-interaction-mode-map\)\n
 :SEE-ALSO `mon-keybind-emacs-lisp-mode', `mon-keybind-dired-mode',
 `mon-keybind-w3m', `mon-keybind-w32-init', `mon-help-key-functions',
-`mon-help-keys'.\n►►►"
+`mon-help-keys'.\n▶▶▶"
   (let ((mklim-msg (and w-msg
                         (cons 
                          (concat ":FUNCTION `mon-keybind-lisp-interaction-mode' "
@@ -814,7 +814,7 @@ always easy.\n As a friendly reminder, here is how it is done:\n
 :SEE-ALSO `mon-help-CL-slime-keys', `slime-cheat-sheet', `mon-slime-setup-init',
 `mon-keybind-lisp-interaction-mode', `mon-keybind-emacs-lisp-mode',
 `mon-keybind-dired-mode', `mon-keybind-w3m', `mon-keybind-w32-init',
-`mon-help-key-functions', `mon-help-keys'.\n►►►"
+`mon-help-key-functions', `mon-help-keys'.\n▶▶▶"
   (let ((mkb-slm-msg (and w-msg 
                           (cons 
                            (concat ":FUNCTION `mon-keybind-slime' "
@@ -952,7 +952,7 @@ always easy.\n As a friendly reminder, here is how it is done:\n
   "Run on the `slime-inspector-mode-hook'.\n
 :EXAMPLE\n\n
 :SEE-ALSO `slime-inspector-show-source', `slime-inspector-mode',
-`slime-inspector-mode-map', `slime-inspector-mode-hook'.\n►►►"
+`slime-inspector-mode-map', `slime-inspector-mode-hook'.\n▶▶▶"
   (local-unset-key "d" )        ;; :WAS 'slime-inspector-describe
   (local-unset-key "l")         ;; :WAS `slime-inspector-pop'
   (local-unset-key "n")         ;; :WAS `slime-inspector-next'
@@ -997,7 +997,7 @@ always easy.\n As a friendly reminder, here is how it is done:\n
 Change C-c C-c mapping from `conf-colon-mode' to `comment-region'.\n
 Add binding for C-cst for `mon-stamp-in-context'.\n
 Run on the `conf-mode-hook' when `IS-MON-P'.\n
-:SEE-ALSO `conf-mode'.\n►►►"
+:SEE-ALSO `conf-mode'.\n▶▶▶"
   (local-unset-key "\C-c\C-c") ;; '`conf-colon-mode' :NOTE still bound to "\C-c:"
   (define-key conf-mode-map "\C-cc"     'comment-region)
   (define-key conf-mode-map "\C-cst" #'(lambda (w-changed)

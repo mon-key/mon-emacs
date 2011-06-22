@@ -22,9 +22,9 @@
 ;; naf-mode-dates provides regexp variables for matching dates in `naf-mode'
 ;; name authority files.
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;;
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;;
@@ -142,7 +142,7 @@
 ;;; :CREATED <Timestamp: #{2011-01-11T18:19:47-05:00Z}#{11022} - by MON KEY>
 (defgroup naf-mode-dates nil
   "Customization group for variables and functions of :FILE naf-mode-dates.el\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   ;; :prefix "<PREFIX>"
   :link '(url-link 
           :tag ":EMACSWIKI-FILE" "http://www.emacswiki.org/emacs/naf-mode-dates.el")
@@ -179,7 +179,7 @@
 :SEE-ALSO `*mon-default-loads-xrefs*', `*mon-default-start-loads-xrefs*',
 `*mon-dir-locals-alist-xrefs*', `*mon-testme-utils-xrefs*',
 `*mon-button-utils-xrefs*', `*naf-mode-xref-of-xrefs*', 
-`*naf-mode-faces-xrefs*', `*mon-ulan-utils-xrefs*', `*mon-xrefs-xrefs'.\n►►►"
+`*naf-mode-faces-xrefs*', `*mon-ulan-utils-xrefs*', `*mon-xrefs-xrefs'.\n▶▶▶"
   :type '(repeat symbol)
   :group 'naf-mode-dates
   :group 'mon-xrefs)
@@ -220,7 +220,7 @@ Included abbreviated and downcased forms. Index is 0 based beginning with Sunday
 \(eq \(cdr \(assoc-string \"jeudi\" naf-weekday-alist\)\)
     \(cdr \(assoc-string \"Thursday\" naf-weekday-alist\)\)\)\n
 :USED-IN `naf-mode'.\n
-:SEE-ALSO `naf-mode-french-days', `naf-mode-english-days', `naf-month-abbrev-alist'.\n►►►"
+:SEE-ALSO `naf-mode-french-days', `naf-mode-english-days', `naf-month-abbrev-alist'.\n▶▶▶"
  :type '(alist :key-type string :value-type integer)
  :group 'naf-mode-dates)
 ;;
@@ -279,7 +279,7 @@ Index is 1 based beginning with January.\n
 \(eq \(cdr \(assoc-string \"février\" naf-month-abbrev-alist\)\)
      \(cdr \(assoc-string \"February\" naf-month-abbrev-alist\)\)\)\n
 :USED-IN `naf-mode'.\n
-:SEE-ALSO `naf-mode-french-dates', `naf-weekday-alist'.\n►►►"
+:SEE-ALSO `naf-mode-french-dates', `naf-weekday-alist'.\n▶▶▶"
   :type '(alist :key-type string :value-type integer)
   :group 'naf-mode-dates)
 ;;
@@ -323,7 +323,7 @@ Index is 1 based beginning with January.\n
  Nov. 4th, 1901\n November 21st, 1920
  Dec. 3rd, 1901\n December 14, 1825\n
 :USED-IN `naf-mode'.\n
-:SEE-ALSO `naf-mode-french-dates', `naf-month-abbrev-alist', `naf-mode-english-days'.\n►►►"
+:SEE-ALSO `naf-mode-french-dates', `naf-month-abbrev-alist', `naf-mode-english-days'.\n▶▶▶"
 :type '(regexp)
 :group 'naf-mode-dates)
 ;;
@@ -361,7 +361,7 @@ Index is 1 based beginning with January.\n
     \(when \(eq \(match-end 0\) \(point\)\) \(incf cnt 1\)\)\)\)\n
  Monday\n Tuesday\n Wednesday\n Thursday\n Friday\n Saturday\n Sunday\n
 :USED-IN `naf-mode'.\n
-:SEE-ALSO `naf-mode-french-days', `naf-weekday-alist', `naf-mode-english-dates'.\n►►►"
+:SEE-ALSO `naf-mode-french-days', `naf-weekday-alist', `naf-mode-english-dates'.\n▶▶▶"
 :type '(regexp)
 :group 'naf-mode-dates)
 ;;
@@ -410,7 +410,7 @@ Index is 1 based beginning with January.\n
  10 Octobre 1910\n 21 Novembre 1921\n 31 Décembre 1931\n
 :USED-IN `naf-mode'.\n
 :SEE-ALSO `naf-mode-english-dates', `naf-month-abbrev-alist',
-`naf-mode-french-days'.\n►►►"
+`naf-mode-french-days'.\n▶▶▶"
   :type '(regexp)
   :group 'naf-mode-dates)
 ;;
@@ -449,7 +449,7 @@ Index is 1 based beginning with January.\n
  Dimanche\n Lundi\n Mardi\n Mercredi\n Jeudi\n Vendredi\n Samedi\n
 :USED-IN `naf-mode'.\n
 :SEE-ALSO `naf-mode-english-days', `naf-weekday-alist',
-`naf-mode-french-dates'.\n►►►"
+`naf-mode-french-dates'.\n▶▶▶"
   :type '(regexp)
   :group 'naf-mode-dates)
 ;;
@@ -477,7 +477,7 @@ Index is 1 based beginning with January.\n
 :EXAMPLE\n\n\(search-forward-regexp naf-mode-simple-date\)\n\n ' 1999 '\n
 :USED-IN `naf-mode'.\n
 :SEE-ALSO `naf-mode-lifespan', `naf-mode-year-range',
-`naf-mode-date-string'.\n►►►"
+`naf-mode-date-string'.\n▶▶▶"
   :type '(regexp)
   :group 'naf-mode-dates)
 ;;
@@ -496,7 +496,7 @@ Index is 1 based beginning with January.\n
      \(when \(eq \(match-end 0\) \(point\)\) \(incf cnt 1\)\)\)\)\n
  \(1899-\) \(-1999\) \(1899\) \(1899-1999\)\n
 :USED-IN `naf-mode'.\n
-:SEE-ALSO `naf-mode-simple-date', `naf-mode-date-string'.\n►►►"
+:SEE-ALSO `naf-mode-simple-date', `naf-mode-date-string'.\n▶▶▶"
   :type '(regexp)
   :group 'naf-mode-dates)
 ;;
@@ -525,7 +525,7 @@ Index is 1 based beginning with January.\n
  08-07-1998\n 08/07/1998\n 1998-08-07\n 1998/08/07\n
 :USED-IN `naf-mode'.\n
 :SEE-ALSO `naf-mode-simple-date', `naf-mode-year-range', `naf-mode-lifespan',
-`naf-mode-circa-dates'.\n►►►"
+`naf-mode-circa-dates'.\n▶▶▶"
   :type '(regexp)
   :group 'naf-mode-dates)
 ;; 
@@ -552,7 +552,7 @@ Index is 1 based beginning with January.\n
 :EXAMPLE\n\n\(search-forward-regexp naf-mode-lifespan nil t\)\n\(1800-1901\)\n
 :USED-IN `naf-mode'.\n
 :SEE-ALSO `naf-mode-circa-dates', `naf-mode-simple-date', `naf-mode-year-range',
-`naf-mode-date-string'.\n►►►"
+`naf-mode-date-string'.\n▶▶▶"
   :type '(regexp)
   :group 'naf-mode-dates)
 ;;
@@ -572,7 +572,7 @@ Index is 1 based beginning with January.\n
  active ca.\n ca.\n circa\n d. 1888\n b. 1999\n
 :USED-IN `naf-mode'.\n
 :SEE-ALSO `naf-mode-lifespan', `naf-mode-simple-date', `naf-mode-year-range',
-`naf-mode-date-string'.\n►►►"
+`naf-mode-date-string'.\n▶▶▶"
   :type '(regexp)
   :group 'naf-mode-dates)
 ;;
@@ -602,7 +602,7 @@ Index is 1 based beginning with January.\n
 :FACE-FONT-LOCKING-WITH `naf-mode-date-face'.
 :FACE-DOCUMENTED-IN `naf-mode-date-fface'.
 :USED-IN `naf-mode'.\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   :type '(regexp)
   :group 'naf-mode-dates)
 ;;
@@ -631,7 +631,7 @@ Index is 1 based beginning with January.\n
 :FACE-FONT-LOCKING-WITH `naf-mode-date-face'.
 :FACE-DOCUMENTED-IN `naf-mode-date-fface'.
 :USED-IN `naf-mode'.\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   :type '(repeat string)
   :group 'naf-mode-dates)
 ;;
@@ -642,7 +642,7 @@ Index is 1 based beginning with January.\n
 :FACE-FONT-LOCKING-WITH `naf-mode-date-face'. 
 :FACE-DOCUMENTED-IN `naf-mode-date-fface'.\n
 :SEE-ALSO `naf-mode-active-date-flags-paren',
-`naf-mode-active-date-flags-solo'.\n►►►"
+`naf-mode-active-date-flags-solo'.\n▶▶▶"
   :type '(regexp)
   :group 'naf-mode-dates)
 ;;
@@ -675,7 +675,7 @@ Index is 1 based beginning with January.\n
 :FACE-FONT-LOCKING-WITH `naf-mode-date-face'. 
 :FACE-DOCUMENTED-IN `naf-mode-date-fface'.\n
 :USED-IN `naf-mode'.\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
 :type '(repeat string)
 :group 'naf-mode-dates)
 ;;
@@ -688,7 +688,7 @@ Index is 1 based beginning with January.\n
 \(active circa\n\(active Circa\n\(active c.\n\(active ca.\n\(active ca
 \(active cca.\n\(Active c.\n\(Active ca.\n\(Active ca\n\(Active cca.
 \(c\n\(c.\n\(ca.\n\(ca\n\(cca.\n\(ca.\n\(ca\n\(cca.\n
-:SEE-ALSO `naf-mode-active-date', `naf-mode-active-date-flags-solo'.\n►►►"
+:SEE-ALSO `naf-mode-active-date', `naf-mode-active-date-flags-solo'.\n▶▶▶"
   :type '(regexp)
   :group 'naf-mode-dates)
 ;;
@@ -708,7 +708,7 @@ Index is 1 based beginning with January.\n
 :REGEXPS-IN naf-mode-active-date-flags-solo
 :FACE-FONT-LOCKING-WITH `naf-mode-date-face'
 :FACE-DOCUMENTED-IN `naf-mode-date-fface'.\n
-:SEE-ALSO `naf-mode-active-date-flags-paren',`naf-mode-active-date'.\n►►►"
+:SEE-ALSO `naf-mode-active-date-flags-paren',`naf-mode-active-date'.\n▶▶▶"
   :type '(repeat string)
   :group 'naf-mode-dates)
 ;;
@@ -719,7 +719,7 @@ Index is 1 based beginning with January.\n
 :FACE-FONT-LOCKING-WITH `naf-mode-date-face'.
 :FACE-DOCUMENTED-IN `naf-mode-date-fface'.\n
 :EXAMPLE\n\n
-:SEE-ALSO `naf-mode-active-date-flags-paren' , `naf-mode-active-date'.\n►►►"
+:SEE-ALSO `naf-mode-active-date-flags-paren' , `naf-mode-active-date'.\n▶▶▶"
   :type '(regexp)
   :group 'naf-mode-dates)
 ;;
@@ -740,7 +740,7 @@ Index is 1 based beginning with January.\n
     ("Née le")) ;; Century
   "List of Benezit styled French birth/deatch strings.\n
 :USED-IN `naf-mode'.\n
-:SEE-ALSO `*regexp-french-date-prefix*'.\n►►►"
+:SEE-ALSO `*regexp-french-date-prefix*'.\n▶▶▶"
   :type '(repeat (list string))
   :group 'naf-mode-dates)
 
@@ -775,7 +775,7 @@ Index is 1 based beginning with January.\n
   "List of Benezit styled French century and century range strings.\n
 :NOTE List includes Roman numeral suffixed by char #x364: `\x364'.\n
 :USED-IN `naf-mode'.\n
-:SEE-ALSO `*regexp-french-date-prefix*'.\n►►►"
+:SEE-ALSO `*regexp-french-date-prefix*'.\n▶▶▶"
   :type '(repeat string)
   :group 'naf-mode-dates)
 

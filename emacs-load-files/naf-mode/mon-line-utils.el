@@ -21,7 +21,7 @@
 ;; DESCRIPTION:
 ;; mon-line-utils provides line centric procedures for mon-*utils features
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;; `mon-line-length-max'
 ;; `mon-line-count-matchp'
 ;; `mon-line-count-buffer'
@@ -75,7 +75,7 @@
 ;; `mon-goto-line-50%'
 ;; `mon-goto-line-75%'
 ;;
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;;
@@ -227,7 +227,7 @@
 ;;; :CREATED <Timestamp: #{2011-01-11T18:53:00-05:00Z}#{11022} - by MON KEY>
 (defgroup mon-line-utils nil
   "Customization group for variables and functions of :FILE mon-line-utils.el\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   ;; :prefix "<PREFIX>"
   :link '(url-link 
           :tag ":EMACSWIKI-FILE" "http://www.emacswiki.org/emacs/mon-line-utils.el")
@@ -263,7 +263,7 @@ The symbols contained of this list are defined in :FILE mon-line-utils.el\n
 `*mon-button-utils-xrefs*', `*mon-buffer-utils-xrefs*',
 `*mon-window-utils-xrefs*', `*naf-mode-xref-of-xrefs*',
 `*naf-mode-faces-xrefs*', `*naf-mode-date-xrefs*', `*mon-ulan-utils-xrefs*',
-`*mon-xrefs-xrefs'.\n►►►"
+`*mon-xrefs-xrefs'.\n▶▶▶"
   :type '(repeat symbol)
   :group 'mon-line-utils
   :group 'mon-xrefs)
@@ -278,7 +278,7 @@ The symbols contained of this list are defined in :FILE mon-line-utils.el\n
 Return nil at `end-of-buffer'.\n
 :EXAMPLE\n\n(mon-line-get-next)\nBubba on a line.\n
 \(save-excursion \(equal \(mon-line-get-next\) \"\"\)\)\n
-:SEE-ALSO `mon-string-ify-current-line'.\n►►►"
+:SEE-ALSO `mon-string-ify-current-line'.\n▶▶▶"
   (let (mlgn-start)
     (setq mlgn-start (progn (forward-line 0) (point)))
     (forward-line 1)
@@ -302,7 +302,7 @@ removing, i.e. situations of type: `uniquify-maybe'.\n
 Can extend `find-duplicate-lines' by comparing its result list with one or more
 list comparison procedures `set-difference', `union', `mon-intersection', etc.\n
 :SEE-ALSO `mon-line-find-duplicates-cln', `mon-cln-uniq-lines',
-`mon-cln-blank-lines', `mon-line-get-next', `uniq', `uniq-region'.\n►►►"
+`mon-cln-blank-lines', `mon-line-get-next', `uniq', `uniq-region'.\n▶▶▶"
   (interactive "i\np")
   (let ((mlfd-pnt-mx (line-number-at-pos (mon-g2be 1 t)))
 	mlfd-gthr)
@@ -332,7 +332,7 @@ before CLN-FROM.\n
 safe to evaluate in `naf-mode' buffers.\n
 :ALIASED-BY `mon-cln-duplicate-lines'
 :ALIASED-BY `mon-remove-duplicate-lines'\n
-:SEE-ALSO `mon-line-find-duplicates', `mon-cln-uniq-lines'.\n►►►"
+:SEE-ALSO `mon-line-find-duplicates', `mon-cln-uniq-lines'.\n▶▶▶"
   (interactive "r\ni\np")
   (mon-toggle-restore-llm nil
     (let ((mlfdc-rgn (mon-buffer-sub-no-prop cln-from cln-to))
@@ -386,7 +386,7 @@ at point. Does not move point.\n
 \(mon-with-inhibit-buffer-read-only 
     \(progn \(beginning-of-line -1\)
     \(apply #'mon-line-previous-duplicate '\(nil nil t\)\)\)\)\n
-:SEE-ALSO `mon-line-get-next', `mon-line-string-insert-chars-under'.\n►►►"
+:SEE-ALSO `mon-line-get-next', `mon-line-string-insert-chars-under'.\n▶▶▶"
   (interactive "*P\ni\np")
   (save-excursion
     (let ((mlpd-psns `(,(progn (forward-line -1) (point)) .
@@ -411,7 +411,7 @@ at point. Does not move point.\n
   "Return a mini-buffer message with regions' number of lines and characters.\n
 :SEE-ALSO `mon-line-count-buffer', `mon-word-count-chars-region',
 `mon-word-count-region', `mon-word-count-analysis',
-`mon-word-count-occurrences'.\n►►►"
+`mon-word-count-occurrences'.\n▶▶▶"
   (interactive "r")
   (count-lines-region start end))
 
@@ -441,7 +441,7 @@ that buffer. Default is current-buffer.\n
 `mon-line-count-matchp', `mon-word-count-analysis',
 `mon-word-count-chars-region', `mon-word-count-occurrences',
 `mon-word-count-region', `count-lines', `buffer-size',
-`line-number-at-pos'.\n►►►"
+`line-number-at-pos'.\n▶▶▶"
   (interactive "i\np")
   (let (mlcb-cnt)
     (setq mlcb-cnt (if some-other-buffer
@@ -462,7 +462,7 @@ that buffer. Default is current-buffer.\n
 Arg TEST-FROM is a buffer pos to start counting from.\n
 :SEE-ALSO `mon-word-count-chars-region', `mon-word-count-region',
 `mon-line-count-buffer', `mon-word-count-analysis',
-`mon-word-count-occurrences'.\n►►►"
+`mon-word-count-occurrences'.\n▶▶▶"
   ;;(interactive "r")
   (save-excursion
     (let ((rg-start (line-number-at-pos test-from))
@@ -489,7 +489,7 @@ Arg TEST-FROM is a buffer pos to start counting from.\n
   "Return the maximum line length of the current buffer.\n
 When called-interactively return message in mini-buffer:
 \"The longest line in buffer `mon-utils.el' ends at column 115.\"\n
-:SEE-ALSO `mon-line-count-buffer', `mon-region-length'.\n►►►"
+:SEE-ALSO `mon-line-count-buffer', `mon-region-length'.\n▶▶▶"
   (interactive "p")
   (let ((max-len 0))
     (save-excursion
@@ -516,12 +516,12 @@ Each line is replaced with a quoted string.
 When called-interactively or INSRTP is non-nil replace region with strings and 
 move point to START.\n
 :EXAMPLE\n(mon-help-overlay-for-example 'mon-line-strings 5 'line)\n
-►\nHassan-i Sabbah\nTristan and Iseult\nBroder Rusche
-Pier Gerlofs Donia\nBöŏvarr Bjarki\n◄\n
+▶\nHassan-i Sabbah\nTristan and Iseult\nBroder Rusche
+Pier Gerlofs Donia\nBöŏvarr Bjarki\n◀\n
 :SEE-ALSO `mon-line-strings-to-list', `mon-line-strings-region',
 `mon-line-strings-region-delimited',
 `mon-line-strings-qt-region',`mon-line-drop-in-words',
-`mon-string-ify-list',`mon-string-ify-current-line'.\n►►►"
+`mon-string-ify-list',`mon-string-ify-current-line'.\n▶▶▶"
   (interactive "r\ni\np")
   (let ((mls-str-beg (make-marker))
         (mls-str-end (make-marker))
@@ -548,18 +548,18 @@ Pier Gerlofs Donia\nBöŏvarr Bjarki\n◄\n
 ;;
 ;;; :TEST-ME
 ;;; (let ((legs)
-;;;       (legb (1+ (search-forward-regexp "►")))
-;;;       (lege (- (search-forward-regexp "◄") 2)))
+;;;       (legb (1+ (search-forward-regexp "▶")))
+;;;       (lege (- (search-forward-regexp "◀") 2)))
 ;;;   (setq legs (mon-line-strings legb lege)))
 ;;
 ;; ,---- :UNCOMMENT-BELOW-TO-TEST
-;; |►
+;; |▶
 ;; |Hassan-i Sabbah
 ;; |Tristan and Iseult
 ;; |Broder Rusche
 ;; |Pier Gerlofs Donia
 ;; |Böŏvarr Bjarki
-;; |◄
+;; |◀
 ;; `----
 
 ;;; ==============================
@@ -571,12 +571,12 @@ When called-interactively or INSRTP is non-nil insert strings at point.
 Does not move point.\n
 Use with concat for formated indentation in source.\n
 :EXAMPLE\n\(mon-help-overlay-for-example 'mon-line-strings-region 4 'line)\n
-►\nI-will-be-a-string\nI too will be a string.\nMe as well.
-More stringification here\n◄\n
+▶\nI-will-be-a-string\nI too will be a string.\nMe as well.
+More stringification here\n◀\n
 :SEE-ALSO `mon-line-strings', `mon-line-strings-to-list',
 `mon-line-strings-region-delimited', `mon-line-strings-bq-qt-sym-bol',
 `mon-string-ify-list', `mon-string-ify-current-line', `mon-string-split-line',
-`mon-line-drop-in-words', `mon-cln-up-colon'.\n►►►"
+`mon-line-drop-in-words', `mon-cln-up-colon'.\n▶▶▶"
   (interactive "r\ni\np")
   (let ((mlsr-ln-rgn-beg (make-marker))
         (mlsr-ln-rgn-end (make-marker))
@@ -602,15 +602,15 @@ More stringification here\n◄\n
     ))
 ;;
 ;;; :TEST-ME (mon-line-strings-region
-;;;           (1+ (search-forward-regexp "►")) (- (search-forward-regexp "◄") 2))
+;;;           (1+ (search-forward-regexp "▶")) (- (search-forward-regexp "◀") 2))
 ;;
 ;; ,---- :UNCOMMENT-BELOW-TO-TEST
-;; |►
+;; |▶
 ;; |I-will-be-a-string
 ;; |I too will be a string.
 ;; |Me as well.
 ;; |More stringification here
-;; |◄
+;; |◀
 ;; `----
 
 
@@ -628,14 +628,14 @@ When following characters are at BOL no replacement is peformed on symbol:
 :NOTE will not quote symbols containing whitespace.\n
 :EXAMPLE\n\n\(mon-help-overlay-for-example 'mon-line-strings-qt-region 4 'line\)
 \(princ (mon-line-strings-qt-region
- \(1+ \(search-forward-regexp \"►\"\)\) \(- \(search-forward-regexp \"◄\"\) 2\)\)\)
-\n►\nI-will-be-a-string\n\"I-am-almost-a-string\nI-am-a-half-string\"
-I-am-not-a-string'\n◄\n 
+ \(1+ \(search-forward-regexp \"▶\"\)\) \(- \(search-forward-regexp \"◀\"\) 2\)\)\)
+\n▶\nI-will-be-a-string\n\"I-am-almost-a-string\nI-am-a-half-string\"
+I-am-not-a-string'\n◀\n 
 :SEE-ALSO `mon-line-strings-bq-qt-sym-bol', `mon-line-strings-pipe-bol',
 `mon-line-strings-region-delimited', `mon-cln-up-colon',
 `mon-line-strings',`mon-line-strings-indent-to-col', `mon-line-strings-to-list',
 `mon-line-strings-region', `mon-string-ify-list', `mon-string-ify-current-line',
-`mon-string-split-line', `mon-line-drop-in-words'.\n►►►"
+`mon-string-split-line', `mon-line-drop-in-words'.\n▶▶▶"
   (interactive "r\ni\np")
   (let (mlsqr-rtn)
     (setq mlsqr-rtn (mon-buffer-sub-no-prop start end))
@@ -662,14 +662,14 @@ I-am-not-a-string'\n◄\n
 ;;
 ;;; :TEST-ME
 ;;; (princ (mon-line-strings-qt-region
-;;;  (1+ (search-forward-regexp "►")) (- (search-forward-regexp "►") 2)))
+;;;  (1+ (search-forward-regexp "▶")) (- (search-forward-regexp "▶") 2)))
 ;; ,---- :UNCOMMENT-TO-TEST first case should pass, the rest fail
-;; |►
+;; |▶
 ;; |I-will-be-a-string
 ;; |"I-am-almost-a-string
 ;; |I-am-a-half-string"
 ;; |I-am-not-a-string'
-;; |►
+;; |▶
 ;; `----
 
 ;;; ==============================
@@ -683,20 +683,20 @@ I-am-not-a-string'\n◄\n
 When INSRTP is non-nil or called-interactively replace active region and
 move point to region-beginning.\n
 When following characters are at BOL no replacement is peformed on symbol:\n
-^ ; , . ( ) < > ` ' # ► \| Likewise, do not replace if ' follows symbol.\n
+^ ; , . ( ) < > ` ' # ▶ \| Likewise, do not replace if ' follows symbol.\n
 :EXAMPLE\n\n(mon-line-strings-bq-qt-sym-bol
- \(1+ \(search-forward-regexp \"►\"\)\) \(- \(search-forward-regexp \"◄\"\) 2\)\)\n
-►\ncall-next-method &rest replacement-args
+ \(1+ \(search-forward-regexp \"▶\"\)\) \(- \(search-forward-regexp \"◀\"\) 2\)\)\n
+▶\ncall-next-method &rest replacement-args
 call-next-method &rest replacement-args
 `call-next-method &rest replacement-args
-call-next-method' &rest replacement-args\n◄\n
+call-next-method' &rest replacement-args\n◀\n
 \(mon-line-strings-bq-qt-sym-bol-TEST\)\n
 :SEE-ALSO `mon-line-strings-bq-qt-sym-bol-TEST', `mon-line-strings',
 `mon-line-strings-qt-region', `mon-cln-up-colon',
 `mon-line-strings-region-delimited', `mon-line-strings-pipe-bol',
 `mon-line-strings-indent-to-col', `mon-line-strings-to-list',
 `mon-line-strings-region', `mon-string-ify-list', `mon-string-ify-current-line',
-`mon-string-split-line', `mon-line-drop-in-words'.\n►►►"
+`mon-string-split-line', `mon-line-drop-in-words'.\n▶▶▶"
   (interactive "r\ni\np")
   (let (mlsbqsb-rtn)
     (setq mlsbqsb-rtn ;; :WAS (buffer-substring-no-properties start end))
@@ -708,27 +708,27 @@ call-next-method' &rest replacement-args\n◄\n
             (while (not (= (line-end-position) (buffer-end 1)))
               (beginning-of-line)            
               (save-match-data
-                (when (looking-at "^\\([^;,.()<>`'#► ]\\)[\\[:graph:]]+[^']$")
+                (when (looking-at "^\\([^;,.()<>`'#▶ ]\\)[\\[:graph:]]+[^']$")
                   (replace-match (concat "`" (match-string-no-properties 0) "'"))))
               (forward-line 1)
               (save-match-data
                 (when (and (= (line-end-position) (buffer-end 1))       
-                           (looking-at "^\\([^;,.()<>`'#► ]\\)[\\[:graph:]]+[^' ]$"))
+                           (looking-at "^\\([^;,.()<>`'#▶ ]\\)[\\[:graph:]]+[^' ]$"))
                   (replace-match  (concat "`" (match-string-no-properties 0) "'"))))
               (save-match-data
                 (when (and (= (line-end-position) (buffer-end 1))
-                           (looking-at "^\\([^;,.()<>`'#► ]\\)[\\[:graph:]]+[^' ]$"))
+                           (looking-at "^\\([^;,.()<>`'#▶ ]\\)[\\[:graph:]]+[^' ]$"))
                   (replace-match  (concat "`" (match-string-no-properties 0) "'")))))
             (mon-g2be -1) ;; (goto-char (buffer-end 0))
             ;; :WAS            
             ;; (search-forward-regexp 
-            ;;  "^\\([^;,.()<>`'#►\|\\[:blank:]][\\[:graph:]]+[^'\\[:blank:]]+\\)\\( \\)\\(.*\\)$" nil t) 
+            ;;  "^\\([^;,.()<>`'#▶\|\\[:blank:]][\\[:graph:]]+[^'\\[:blank:]]+\\)\\( \\)\\(.*\\)$" nil t) 
             ;;  (replace-match "`\\1'\\2\\3"))
-            ;; :WAS "^\\([^;,.()<>`'#►\|\\[:blank:]]\\)\\([\\[:graph:]]+[^']\\)\\([^^']\\)\\([ ]\\{1,2\\}\\)\\(.*\\)$" nil t)
+            ;; :WAS "^\\([^;,.()<>`'#▶\|\\[:blank:]]\\)\\([\\[:graph:]]+[^']\\)\\([^^']\\)\\([ ]\\{1,2\\}\\)\\(.*\\)$" nil t)
             ;;       (replace-match "`\\1\\2' \\5"))
             (while 
                 (search-forward-regexp 
-                 "^\\([^;,.()<>`'#►\|\\[:blank:]]\\)\\([\\[:graph:]]+[^']\\)\\([^^ ']\\)\\([ ]\\{1,2\\}\\)\\(.*\\)$" nil t)
+                 "^\\([^;,.()<>`'#▶\|\\[:blank:]]\\)\\([\\[:graph:]]+[^']\\)\\([^^ ']\\)\\([ ]\\{1,2\\}\\)\\(.*\\)$" nil t)
               ;; ^^^^1^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^2^^^^^^^^^^^^^^^^^^^^^^^3^^^^^^^^^^4^^^^^^^^^^^^^^^^^5^^^^^
               (replace-match "`\\1\\2\\3' \\5"))
             ;; :WAS (buffer-substring-no-properties (buffer-end 0) (buffer-end 1)) ))
@@ -746,13 +746,13 @@ call-next-method' &rest replacement-args\n◄\n
 When INSRTP is non-nil or called-interactively replace active region and
 move point to region-beginning.\n
 :EXAMPLE\n\(save-excursion\n \(mon-line-strings-pipe-bol
-   \(1+ \(search-forward-regexp \"►\"\)\)
-   \(- \(search-forward-regexp \"◄\"\) 2\)\)\)\n
-►\n Craig Balding\n Emmanuel Bouillon\n Bernardo Damele Assumpcao Guimarase
- Jean-Paul Fizaine\n Rob Havelt\n Chris Wysopal\n◄\n 
+   \(1+ \(search-forward-regexp \"▶\"\)\)
+   \(- \(search-forward-regexp \"◀\"\) 2\)\)\)\n
+▶\n Craig Balding\n Emmanuel Bouillon\n Bernardo Damele Assumpcao Guimarase
+ Jean-Paul Fizaine\n Rob Havelt\n Chris Wysopal\n◀\n 
 :SEE-ALSO `mon-line-strings-pipe-to-col', `mon-line-strings-bq-qt-sym-bol', 
 `mon-line-strings', `mon-line-strings-qt-region',  `mon-line-strings-region', 
-`mon-line-strings-indent-to-col', `mon-line-strings-to-list'.\n►►►"
+`mon-line-strings-indent-to-col', `mon-line-strings-to-list'.\n▶▶▶"
   (interactive "r\ni\np")
   (let ((mlspb-rgn-beg (make-marker))
         (mlspb-rgn-end (make-marker))
@@ -776,17 +776,17 @@ move point to region-beginning.\n
           mlspb-rplc)))
 ;;
 ;;; :TEST-ME (save-excursion (mon-line-strings-pipe-bol
-;;;          (1+ (search-forward-regexp "►")) (- (search-forward-regexp "◄") 2)))
+;;;          (1+ (search-forward-regexp "▶")) (- (search-forward-regexp "◀") 2)))
 ;;
 ;; ,---- :UNCOMMENT-TO-TEST
-;; |►
+;; |▶
 ;; | Craig Balding
 ;; | Emmanuel Bouillon
 ;; | Bernardo Damele Assumpcao Guimarase
 ;; | Jean-Paul Fizaine
 ;; | Rob Havelt
 ;; | Chris Wysopal
-;; |◄
+;; |◀
 ;; `----
 
 ;;; ==============================
@@ -799,20 +799,20 @@ col-numumn number. When prefix arg is nil prompt for COL-NUM.\n
 When INSRTP is non-nil or called-interactively replace active region and
 move point to region-beginning.\n
 :NOTE following example used in conjunction with `mon-line-strings-pipe-bol'.\n
-:EXAMPLE\n\(let \(\(rs \(1+ \(search-forward-regexp \"►\"\)\)\)
-      \(re \(- \(search-forward-regexp \"◄\"\) 2\)\)\n      \(tmp\)\)
+:EXAMPLE\n\(let \(\(rs \(1+ \(search-forward-regexp \"▶\"\)\)\)
+      \(re \(- \(search-forward-regexp \"◀\"\) 2\)\)\n      \(tmp\)\)
   \(setq tmp \(buffer-substring-no-properties rs re\)\)
   \(setq tmp \(with-temp-buffer \n              \(insert tmp\)
               \(mon-line-strings-pipe-bol \(buffer-end 0\) \(buffer-end 1\) t\)
               \(mon-line-strings-indent-to-col \(buffer-end 0\) \(buffer-end 1\) 7 t\)
               \(buffer-substring-no-properties \(buffer-end 0\) \(buffer-end 1\)\)\)\)
-  tmp\)\n\n►\nCraig Balding\nEmmanuel Bouillon\nBernardo Damele Assumpcao Guimaraes
-Jean-Paul Fizaine\nRob Havelt\nChris Wysopal\n◄\n
+  tmp\)\n\n▶\nCraig Balding\nEmmanuel Bouillon\nBernardo Damele Assumpcao Guimaraes
+Jean-Paul Fizaine\nRob Havelt\nChris Wysopal\n◀\n
 :SEE-ALSO `mon-line-indent-from-to-col', `mon-line-strings-pipe-to-col',
 `mon-comment-divider->col', `mon-comment-lisp-to-col',
 `mon-line-strings', `mon-string-fill-to-col',
 `mon-line-strings-qt-region', `mon-line-strings-region', 
-`mon-line-strings-bq-qt-sym-bol',`mon-line-strings-to-list'.\n►►►"
+`mon-line-strings-bq-qt-sym-bol',`mon-line-strings-to-list'.\n▶▶▶"
   (interactive "r\nP\ni\np")
   (let ((mlsitc-col-n (if (and intrp (or (not col-num) 
                                          (not (integerp col-num))
@@ -851,22 +851,22 @@ Jean-Paul Fizaine\nRob Havelt\nChris Wysopal\n◄\n
 ;;
 ;;; :TEST-ME 
 ;;; (save-excursion 
-;;;   (let ((rs (1+ (search-forward-regexp "►")))
-;;;         (re (- (search-forward-regexp "◄") 2)))
+;;;   (let ((rs (1+ (search-forward-regexp "▶")))
+;;;         (re (- (search-forward-regexp "◀") 2)))
 ;;;     (goto-char rs)
 ;;;     (mon-line-strings-pipe-bol rs re t)
 ;;;     (goto-char rs)
 ;;;     (mon-line-strings-indent-to-col rs re 7 t)))
 ;;
 ;; ,---- :UNCOMMENT-TO-TEST
-;; ,►
+;; ,▶
 ;; |Craig Balding
 ;; |Emmanuel Bouillon
 ;; |Bernardo Damele Assumpcao Guimaraes
 ;; |Jean-Paul Fizaine
 ;; |Rob Havelt
 ;; |Chris Wysopal
-;; |◄
+;; |◀
 ;; `----
 
 ;;; ==============================
@@ -882,26 +882,26 @@ When called-interactively prompt for column numer of FROM-COL and TO-COL.\n
           \(nd-pnt \(make-marker\)\)
           \(fndr  #'\(lambda \(y\) \(search-forward-regexp y nil t\)\)\)\)
       \(save-excursion
-        \(set-marker st-pnt \(funcall fndr \"^►\"\)\)
-        \(set-marker nd-pnt \(funcall fndr \"◄$\"\)\)
+        \(set-marker st-pnt \(funcall fndr \"^▶\"\)\)
+        \(set-marker nd-pnt \(funcall fndr \"◀$\"\)\)
         \(goto-char st-pnt\)
         \(mon-line-indent-from-to-col 24 32 st-pnt nd-pnt\)
         \(goto-char st-pnt\)
         \(mon-line-indent-from-to-col 46 58 st-pnt nd-pnt\)
         \(set-marker st-pnt nil\)
         \(set-marker nd-pnt nil\)\)\)\)\n
-►emacsen.auto_apart     001           001
+▶emacsen.auto_apart     001           001
 emacsen.rug_compat_42   00            00
 emacsen.rug_compt_adorn 00            00       
 emacsen.cache_empire    080           080      
 emacsen.hashdelimiter   no-hash       no-hash
-emacsen.rookie_romain   no value      no value◄\n
+emacsen.rookie_romain   no value      no value◀\n
 \(mon-line-indent-from-to-col-TEST\)\n
 :NOTE Does not work for one line regions.\n
 :SEE :FILE align.el for alternative approaches.\n
 :ALIASED-BY `mon-indent-lines-from-to-col'\n
 :SEE-ALSO `mon-line-strings-indent-to-col', `mon-line-strings-pipe-to-col',
-`mon-string-fill-to-col', `mon-comment-divider->col', `mon-comment-lisp-to-col'.\n►►►"
+`mon-string-fill-to-col', `mon-comment-divider->col', `mon-comment-lisp-to-col'.\n▶▶▶"
   (interactive "i\ni\ni\ni\np")
   (let ((mliftc-frm-c (cond (from-col from-col)
                             ((or intrp t)
@@ -952,21 +952,21 @@ emacsen.rookie_romain   no value      no value◄\n
   "Return region's BOL piped and indented to column number.\n
 When TO-COL is non-nil return region indented TO-COL, default column number 7.
 When called-interactively or INSRTP is non-nil replace region.\n
-:EXAMPLE\n\n\(let \(\(reb \(1+ \(search-forward-regexp \"►\"\)\)\)
-      \(ree \(- \(search-forward-regexp \"◄\"\) 2\)\)\)
+:EXAMPLE\n\n\(let \(\(reb \(1+ \(search-forward-regexp \"▶\"\)\)\)
+      \(ree \(- \(search-forward-regexp \"◀\"\) 2\)\)\)
   \(momentary-string-display
    \(concat \"\\n\\n=> TO-THE-19th-COL-!\\n\\n\"
            \(mon-line-strings-pipe-to-col reb ree 19\)
            \"\\n\\n... and beyond ... :\)\\n\"\) \(point\)\)\)\n
 \(mon-help-overlay-for-example 'mon-line-strings-pipe-to-col nil 'region 28\)\n
-►\nWilliam Gibson\nBruce Sterling\nDan Brown\nNeal Stephenson\nLoyd Blankenship
-Erik Gordon Corley\n◄\n
+▶\nWilliam Gibson\nBruce Sterling\nDan Brown\nNeal Stephenson\nLoyd Blankenship
+Erik Gordon Corley\n◀\n
 \(mon-line-strings-pipe-to-col-TEST\)\n
 :SEE :FILE align.el for alternative approaches.\n
 :SEE-ALSO `mon-line-strings-pipe-to-col-TEST', `mon-line-strings-pipe-bol',
 `mon-line-strings-indent-to-col', `mon-line-strings',
 `mon-line-indent-from-to-col', `mon-comment-divider->col',
-`mon-comment-lisp-to-col'.\n►►►"
+`mon-comment-lisp-to-col'.\n▶▶▶"
   (interactive "i\n\i\nP\ni\np")
   (let  ((mlsptc-rgn-beg (make-marker))
          (mlsptc-rgn-end (make-marker))
@@ -1007,7 +1007,7 @@ Useful for building piped lists in sections of `naf-mode' .naf files including:
 :NOTE Item on last line in region should be an empty line.\n
 :SEE-ALSO `mon-cln-piped-list',`mon-line-strings-pipe-bol',
 `mon-line-strings-pipe-to-col', `naf-backup-the-list',
-`mon-delete-back-up-list'.\n►►►"
+`mon-delete-back-up-list'.\n▶▶▶"
   (interactive "r\np")
   (save-excursion
     (save-restriction
@@ -1067,14 +1067,14 @@ Matchin regexp at car of `*regexp-line-to-consed-pair*' replacing with its cdr.\
           \(setq rng \(cadr \(nth 1 \(mon-line-strings-region-delimited t\)\)\)\)
           \(mon-line-strings-to-conses \(car rng\) \(cdr rng\)\)\)
       \(help-mode\)\)\)\n
-►
+▶
 some-symbol-at-bol        some-symbol-further-on
 some-symbol-at-bol1     some-symbol-further-on1
 some-symbol-at-bol2        some-symbol-further-on2
-◄\n
+◀\n
 :SEE-ALSO `mon-line-strings-to-list', `mon-line-strings-one-list'
 `mon-align-conses', `mon-align-conses-EXAMPLE', `mon-align-conses-TEST',
-`align-let'.\n►►►"
+`align-let'.\n▶▶▶"
   (interactive "r")
   (save-excursion
     (save-restriction
@@ -1112,7 +1112,7 @@ Mon Key\nMON\nMon\nMON KEY\n\n;; When W-CDR nil:
 `mon-line-string-rotate-namestrings-combine', `mon-make-lastname-firstname',
 `mon-make-name-lispy', `mon-make-names-list', `mon-string-ify-current-line',
 `mon-line-strings-qt-region', `mon-string-ify-list', `mon-string-split-line',
-`mon-line-strings', `mon-line-strings-region', `mon-line-drop-in-words'.\n►►►"
+`mon-line-strings', `mon-line-strings-region', `mon-line-drop-in-words'.\n▶▶▶"
   ;; (<REGION> &optional <W-CDR> <W-WRAP> <INSRTP> <INTRP>)
   (interactive "r\ni\nP\ni\np") ;; (interactive "r\nP\ni\ni\np") make w-cdr the pref arg
   (let ((mlstl-rgn-beg start)
@@ -1177,7 +1177,7 @@ Mon Key\nMON\nMon\nMON KEY\n\n;; When W-CDR nil:
 When optional arg insrtp is non-nil or called-interactively replace region with
 the list. Does not move point.\n
 :SEE-ALSO `mon-line-strings-to-list', `mon-line-strings',
-`mon-line-strings-region-delimited', `mon-string-ify-list'.\n►►►"
+`mon-line-strings-region-delimited', `mon-string-ify-list'.\n▶▶▶"
   (interactive "r\ni\np")
   (let ((mlsol-lst (mon-buffer-sub-no-prop start end)))
     ;; :WAS (let (mlsol-lst) (setq mlsol-lst (mon-buffer-sub-no-prop start end))
@@ -1217,7 +1217,7 @@ holding a string containing one nameform.\n
 `mon-line-string-rotate-namestrings', `mon-line-string-unrotate-namestrings',
 `mon-line-string-rotate-namestrings-combine', `mon-make-lastname-firstname',
 `mon-make-name-lispy', `mon-make-names-list', `mon-line-strings-region',
-`mon-line-string-rotate-name-TEST'.\n►►►"
+`mon-line-string-rotate-name-TEST'.\n▶▶▶"
   (let* ((mlsrn-nm-elt (if (atom name-str-or-elt)
                         name-str-or-elt
                       (let ((mlsrn-hd name-str-or-elt))
@@ -1250,7 +1250,7 @@ Does not move point.\n
 :SEE-ALSO `mon-line-string-unrotate-namestrings', `mon-line-string-rotate-name', 
 `mon-line-string-rotate-namestrings-combine', `mon-line-strings-to-list',
 `mon-make-lastname-firstname', `mon-make-names-list', `mon-make-name-lispy',
-`mon-line-strings-region'.\n►►►"
+`mon-line-strings-region'.\n▶▶▶"
   (interactive "r\nP\ni\np")
   (let ((mlsrn-rot-nm-beg start)
 	(mlsrn-rot-nm-end  end)
@@ -1277,11 +1277,11 @@ Does not move point.\n
 ;; ,---- :UNCOMMENT-BELOW-TO-TEST
 ;; |
 ;; | (mon-line-string-rotate-namestrings 
-;; |  (1+ (search-forward-regexp "►")) (- (search-forward-regexp "◄") 2))
+;; |  (1+ (search-forward-regexp "▶")) (- (search-forward-regexp "◀") 2))
 ;; | (mon-line-string-rotate-namestrings 
-;; |  (1+ (search-forward-regexp "◄")) (- (search-forward-regexp "◄") 2) t)
+;; |  (1+ (search-forward-regexp "◀")) (- (search-forward-regexp "◀") 2) t)
 ;; | 
-;; |►
+;; |▶
 ;; |George Charles Aid
 ;; |Thomas Pollock Anshutz
 ;; |Cecilia Beaux
@@ -1290,7 +1290,7 @@ Does not move point.\n
 ;; |Saul Bernstein
 ;; |George Biddle
 ;; |Gutzon Borglum
-;; |◄
+;; |◀
 ;; | 
 ;; `----
 
@@ -1304,14 +1304,14 @@ Return `Firstname Middlename Lastname'
 When INSRTP is non-nil or Called-interactively insert rotated names at point.
 Does not move point. When AS-STRINGS is non-nil return rotated names as strings.\n
 :EXAMPLE\n\(mon-line-string-unrotate-namestrings 
-   (1+ \(search-forward-regexp \"►\"\)) \(- \(search-forward-regexp \"◄\"\) 2\)\)\n
-►\nKennan (George Frost)\nAlbert (Lukács János)\nAchesonn (Dean Gooderham)
+   (1+ \(search-forward-regexp \"▶\"\)) \(- \(search-forward-regexp \"◀\"\) 2\)\)\n
+▶\nKennan (George Frost)\nAlbert (Lukács János)\nAchesonn (Dean Gooderham)
 Harriman (William Averell)\nMcCloy (John Jay)\nBohlen (Charles Eustis)
-Lovett (Robert Abercrombie)\n◄\n
+Lovett (Robert Abercrombie)\n◀\n
 :SEE-ALSO `mon-line-string-rotate-name', `mon-line-string-rotate-namestrings',
 `mon-line-string-rotate-namestrings-combine', `mon-line-strings-to-list',
 `mon-make-lastname-firstname', `mon-make-name-lispy', `mon-make-names-list',
-`mon-line-strings-region'.\n►►►"
+`mon-line-strings-region'.\n▶▶▶"
   (interactive "r\nP\ni\np")
   (let ((mlsun-rgn-beg start)
         (mlsun-rgn-end end)
@@ -1356,9 +1356,9 @@ Lovett (Robert Abercrombie)\n◄\n
 ;;
 ;;,---- :UNCOMMENT-TO-TEST:
 ;;| (mon-line-string-unrotate-namestrings 
-;;|   (1+ (search-forward-regexp "►")) (- (search-forward-regexp "►") 2))
+;;|   (1+ (search-forward-regexp "▶")) (- (search-forward-regexp "▶") 2))
 ;;| 
-;;| ►
+;;| ▶
 ;;| George Frost Kennan
 ;;| Dean Gooderham Acheson
 ;;| William Averell Harriman
@@ -1366,7 +1366,7 @@ Lovett (Robert Abercrombie)\n◄\n
 ;;| John Jay McCloy
 ;;| Charles Eustis Bohlen 
 ;;| Robert Abercrombie Lovett
-;;| ◄
+;;| ◀
 ;;`----
 
 ;;; ==============================
@@ -1377,14 +1377,14 @@ Lovett (Robert Abercrombie)\n◄\n
 Elements of list returned have the form:\n
  \(\"Fname Lname\" \"Lname \(Fname\)\"\)\n
 :EXAMPLE\n\n\(mon-line-string-rotate-namestrings-combine
-   (1+ \(search-forward-regexp \"►\"\)) \(- \(search-forward-regexp \"◄\"\) 2\)\)\n
-►\nEmil Max Hödel\nJohn Wilkes Booth\nLeon Frank Czolgosz\nLee Harvey Oswald
+   (1+ \(search-forward-regexp \"▶\"\)) \(- \(search-forward-regexp \"◀\"\) 2\)\)\n
+▶\nEmil Max Hödel\nJohn Wilkes Booth\nLeon Frank Czolgosz\nLee Harvey Oswald
 Dmitry Grigoriyevich Bogrov\nPaul Gorguloff\nJohn Bellingham
-Charles Julius Guiteau\n◄\n
+Charles Julius Guiteau\n◀\n
 :SEE-ALSO `mon-line-string-rotate-namestrings',
 `mon-line-string-unrotate-namestrings', `mon-make-lastname-firstname',
 `mon-make-name-lispy', `mon-make-names-list', `mon-line-string-rotate-name',
-`mon-line-strings-to-list', `mon-line-string-insert-chars-under'.\n►►►"
+`mon-line-strings-to-list', `mon-line-string-insert-chars-under'.\n▶▶▶"
   (interactive "r\ni\np")
   (let ((mlsrnc-rotd-nms (mon-line-string-rotate-namestrings start end t))
         mlsrnc-unrotd
@@ -1410,9 +1410,9 @@ Charles Julius Guiteau\n◄\n
 ;; ,---- :UNCOMMENT-TO-TEST
 ;; | 
 ;; | (mon-line-string-rotate-namestrings-combine
-;; |    (1+ (search-forward-regexp "►")) (- (search-forward-regexp "◄") 2))
+;; |    (1+ (search-forward-regexp "▶")) (- (search-forward-regexp "◀") 2))
 ;; | 
-;; | ►
+;; | ▶
 ;; | Emil Max Hödel
 ;; | John Wilkes Booth
 ;; | Leon Frank Czolgosz
@@ -1421,7 +1421,7 @@ Charles Julius Guiteau\n◄\n
 ;; | Paul Gorguloff
 ;; | John Bellingham
 ;; | Charles Julius Guiteau
-;; | ◄
+;; | ◀
 ;; `----
 
 ;;; ==============================
@@ -1436,11 +1436,11 @@ When called-interactively with prefix-arg prompt for a char to use.\n
 \(mon-with-inhibit-buffer-read-only \(mon-line-string-insert-chars-under\)\)\n
 \(mon-with-inhibit-buffer-read-only \(mon-line-string-insert-chars-under 9658\)\)\n
 \(mon-with-inhibit-buffer-read-only \(mon-line-string-insert-chars-under 9668\)\)\n
-\(mon-with-inhibit-buffer-read-only \(mon-line-string-insert-chars-under \"►\"\)\)\n
+\(mon-with-inhibit-buffer-read-only \(mon-line-string-insert-chars-under \"▶\"\)\)\n
 \(mon-with-inhibit-buffer-read-only \(mon-line-string-insert-chars-under t t\)\)\n
 \(mon-line-string-insert-chars-under-TEST\)\n
 :SEE-ALSO `mon-line-previous-duplicate', `mon-line-get-next',
-`mon-line-strings-to-list', `mon-line-strings-region-delimited'.\n►►►"
+`mon-line-strings-to-list', `mon-line-strings-region-delimited'.\n▶▶▶"
 (interactive "P\np")
   (let ((mlsicu-ln-spec
          (save-match-data
@@ -1482,7 +1482,7 @@ When optional arg KEEP-NULLS is non-nil keep zero length substrings.\n
 The split line inserted with each word on a new line in `current-buffer'.\n
 :SEE-ALSO `mon-line-strings-to-list', `mon-string-ify-list',
 `mon-insert-string-ify', `mon-line-string-get',
-`mon-word-get-list-in-buffer'.\n►►►"
+`mon-word-get-list-in-buffer'.\n▶▶▶"
   (interactive "i\nP\ni\ni\np")
   (let ((mldiw-ln-strs 
          #'(lambda (mldiw-L-1)
@@ -1547,7 +1547,7 @@ When INSRTP is non-nil or called-interactively insert current-buffer.
 Does not move point.\n
 :EXAMPLE\n\n\(mon-line-string-incr-padded 88 120 1\)\n
 :SEE-ALSO `mon-string-incr',`mon-line-number-region', `mon-line-number-region-incr', 
-`mon-rectangle-sum-column', `mon-string-justify-left', `mon-line-indent-from-to-col'.\n►►►"
+`mon-rectangle-sum-column', `mon-string-justify-left', `mon-line-indent-from-to-col'.\n▶▶▶"
   (interactive "n:FUNCTION `mon-line-string-incr-padded' -- start-num: \nnend-num: \nP\ni\np")
   (let* ((msip-add-fncn (if (<= start-num end-num) '1+ '1-))
          (msip-cmp-fncn (if (<= start-num end-num) '<= '>=))
@@ -1586,7 +1586,7 @@ Useful for re-numbering out of sequence numbers in filenames.\n
 :SEE-ALSO `mon-string-incr',`mon-line-string-incr-padded', `mon-line-number-region',
 `mon-rectangle-sum-column', `mon-line-count-region', `mon-line-count-matchp',
 `mon-line-length-max', `mon-line-count-buffer',
-`mon-line-find-duplicates'.\n►►►"
+`mon-line-find-duplicates'.\n▶▶▶"
   (interactive "r\nP\np")
   (mon-toggle-restore-llm nil  
        (let ((mlnri-cnt-rep 
@@ -1629,7 +1629,7 @@ Does not move-point.\n
 :SEE-ALSO `mon-line-strings-qt-region', `mon-line-strings-to-list',
 `mon-stringify-list', `mon-insert-string-ify', `mon-line-drop-in-words',
 `mon-line-string-split',`mon-word-get-list-in-buffer',
-`mon-string-replace-char'.\n►►►"
+`mon-string-replace-char'.\n▶▶▶"
   (interactive "i\nb\np")
   (let (mssl-splt-str-s mssl-splt-str-e mssl-splt-str)  
     (save-excursion    
@@ -1663,7 +1663,7 @@ Neither SPLIT-ON nor DELIM have an effect when invoked interactively.\n
 :SEE-ALSO `mon-line-strings-qt-region', `mon-line-strings-to-list',
 `mon-string-ify-list', `mon-insert-string-ify', `mon-line-string-get',
 `mon-line-drop-in-words', `mon-word-get-list-in-buffer',
-`mon-string-replace-char'.\n►►►"
+`mon-string-replace-char'.\n▶▶▶"
   (interactive "p")
   (let* ((mls-str (if split-on " "))
 	 (mls-dlm (cond (delim delim)
@@ -1710,7 +1710,7 @@ point is a 'space'.\n
 :SEE-ALSO `mon-spacep-is-bol', `mon-spacep-not-bol', `mon-line-bol-is-eol',
 `mon-line-next-bol-is-eol', `mon-line-previous-bol-is-eol',
 `mon-spacep-is-after-eol', `mon-cln-spc-tab-eol', `*mon-whitespace-chars*',
-`*regexp-whitespace-chars*'.\n►►►"
+`*regexp-whitespace-chars*'.\n▶▶▶"
   (let* ((mspcp-look-pnt 
           (and w-psn 
                (or 
@@ -1735,7 +1735,7 @@ point is a 'space'.\n
 :SEE-ALSO `mon-spacep-is-bol', `mon-spacep', `mon-line-bol-is-eol',
 `mon-spacep-is-after-eol', `mon-spacep-is-after-eol-then-graphic',
 `mon-spacep-at-eol', `mon-cln-spc-tab-eol', `*mon-whitespace-chars*',
-`*regexp-whitespace-chars*'.\n►►►"
+`*regexp-whitespace-chars*'.\n▶▶▶"
   (interactive "p")
   (let* ((mspnb-char-bol (char-after (point-at-bol)))
 	 (mspnb-not-spc (not (memq mspnb-char-bol *mon-whitespace-chars*))))
@@ -1756,7 +1756,7 @@ point is a 'space'.\n
 `mon-line-next-bol-is-eol', `mon-line-previous-bol-is-eol',
 `mon-spacep-is-after-eol', `mon-spacep-is-after-eol-then-graphic',
 `mon-spacep-at-eol', `mon-cln-spc-tab-eol', `*mon-whitespace-chars*',
-`*regexp-whitespace-chars*'.\n►►►"
+`*regexp-whitespace-chars*'.\n▶▶▶"
   (interactive "p")
   (let* ((msib-chr-bol (char-after (point-at-bol)))
 	 (msib-is-spc (and (car (memq msib-chr-bol *mon-whitespace-chars*)))))
@@ -1777,7 +1777,7 @@ point is a 'space'.\n
 `mon-line-bol-is-eol', `mon-line-next-bol-is-eol',
 `mon-line-previous-bol-is-eol', `mon-spacep-is-after-eol-then-graphic',
 `mon-spacep-at-eol', `mon-cln-spc-tab-eol', `*mon-whitespace-chars*',
-`*regexp-whitespace-chars*'.\n►►►"
+`*regexp-whitespace-chars*'.\n▶▶▶"
   (interactive "p")
   (let* ((msiae-aftr-eol (char-after (1+ (line-end-position))))
 	 (msiae-is-spc (and (car (memq msiae-aftr-eol *mon-whitespace-chars*)))))
@@ -1796,7 +1796,7 @@ point is a 'space'.\n
 :SEE-ALSO `mon-spacep-is-bol', `mon-spacep-not-bol', `mon-spacep',
 `mon-line-bol-is-eol', `mon-line-next-bol-is-eol',
 `mon-line-previous-bol-is-eol', `mon-spacep-at-eol', `mon-cln-spc-tab-eol',
-`*mon-whitespace-chars*', `*regexp-whitespace-chars*'.\n►►►"
+`*mon-whitespace-chars*', `*regexp-whitespace-chars*'.\n▶▶▶"
   (interactive "p")
   (let* ((msiaetg-aftr-eol (char-after (1+ (line-end-position))))
 	 (msiaetg-eol-then (char-after (+ (line-end-position) 2)))
@@ -1824,7 +1824,7 @@ point is a 'space'.\n
 `mon-line-bol-is-eol', `mon-line-next-bol-is-eol',
 `mon-line-previous-bol-is-eol',`mon-spacep-at-eol', `mon-spacep-is-after-eol',
 `mon-spacep-is-after-eol-then-graphic', `*mon-whitespace-chars*',
-`*regexp-whitespace-chars*'.\n►►►"
+`*regexp-whitespace-chars*'.\n▶▶▶"
   (interactive "p")
   (let ((rtrn  (or (= (char-before (point-at-eol)) 9)
                    (= (char-before (point-at-eol)) 32))))
@@ -1845,7 +1845,7 @@ Test is as if by `back-to-indentation'.\n
 `mon-line-previous-bol-is-eol', `mon-spacep-is-after-eol',
 `mon-spacep-is-after-eol-then-graphic', `mon-spacep-at-eol',
 `mon-cln-spc-tab-eol', `*mon-whitespace-chars*',
-`*regexp-whitespace-chars*'.\n►►►"
+`*regexp-whitespace-chars*'.\n▶▶▶"
   (let (mspcf-pnt)
     (setq mspcf-pnt (point))
     (save-excursion
@@ -1862,7 +1862,7 @@ Test is as if by `back-to-indentation'.\n
 `mon-line-previous-bol-is-eol', `mon-spacep-is-after-eol',
 `mon-spacep-is-after-eol-then-graphic', `mon-spacep-at-eol',
 `mon-cln-spc-tab-eol', `*mon-whitespace-chars*',
-`*regexp-whitespace-chars*'.\n►►►"
+`*regexp-whitespace-chars*'.\n▶▶▶"
   (interactive "p")
   (let ((mlbie-bol-eol (= (line-end-position) (line-beginning-position))))
     (cond (intrp (concat ":FUNCTION `mon-line-bol-is-eol' "
@@ -1883,7 +1883,7 @@ When not called-interactively MOVE-TIMES arg examines Nth previous line.\n
 `mon-line-bol-is-eol', `mon-line-next-bol-is-eol', `mon-spacep-is-after-eol',
 `mon-spacep-is-after-eol-then-graphic',
 `mon-spacep-at-eol',`mon-cln-spc-tab-eol', `*mon-whitespace-chars*',
-`*regexp-whitespace-chars*'.\n►►►"
+`*regexp-whitespace-chars*'.\n▶▶▶"
   (interactive "p")
   (let ((mlpbie-p-bol-eol (save-excursion 
                      ;;(previous-line) move-times) 
@@ -1911,7 +1911,7 @@ When not called-interactively MOVE-TIMES arg examines Nth previos line.\n
 `mon-line-bol-is-eol', `mon-line-previous-bol-is-eol',
 `mon-spacep-is-after-eol', `mon-spacep-is-after-eol-then-graphic',
 `mon-spacep-at-eol', `mon-cln-spc-tab-eol', `*mon-whitespace-chars*',
-`*regexp-whitespace-chars*'.\n►►►"
+`*regexp-whitespace-chars*'.\n▶▶▶"
   (interactive "p")
   (let ((mlnbie-n-bol-eol (save-excursion 
                      (forward-line (if move-times move-times))
@@ -1935,7 +1935,7 @@ When not called-interactively MOVE-TIMES arg examines Nth previos line.\n
 `mon-line-bol-is-eol', `mon-line-next-bol-is-eol',
 `mon-line-previous-bol-is-eol', `mon-line-eol-is-eob' `mon-spacep-at-eol',
 `mon-spacep-is-after-eol', `mon-spacep-is-after-eol-then-graphic',
-`*mon-whitespace-chars*', `*regexp-whitespace-chars*'.\n►►►"
+`*mon-whitespace-chars*', `*regexp-whitespace-chars*'.\n▶▶▶"
   (interactive "p")
   (let ((mleie-rtrn (= (point-at-eol) (mon-g2be 1 t)))) ;(buffer-end 1) )))
     (cond (intrp
@@ -1965,7 +1965,7 @@ Instances of such chars are be skipped.\n
 `mon-spacep', `mon-line-bol-is-eol', `mon-line-next-bol-is-eol',
 `mon-line-previous-bol-is-eol', `mon-spacep-is-after-eol',
 `mon-spacep-is-after-eol-then-graphic', `mon-spacep-at-eol',
-`mon-cln-spc-tab-eol'.\n►►►"
+`mon-cln-spc-tab-eol'.\n▶▶▶"
   (skip-chars-backward " \t")
   (let ((mleoce-pt (point))
         (mleoce-lbp (line-beginning-position))
@@ -2002,7 +2002,7 @@ Like `goto-line' but point is not moved to `line-beginning-position'.\n
 redisplay is painfully slow.\n
 :ALIASED-BY `goto-line-25%'\n
 :SEE-ALSO `mon-goto-line-25%', `mon-goto-line-50%', `mon-goto-line-75%',
-`mon-g2be', `goto-line', `line-number-at-pos', `count-lines'.\n►►►"
+`mon-g2be', `goto-line', `line-number-at-pos', `count-lines'.\n▶▶▶"
   (interactive)
  (line-number-at-pos (goto-char (/ (mon-g2be 1 t) 4))))
 ;;
@@ -2015,7 +2015,7 @@ Like `goto-line' but point is not moved to `line-beginning-position'.\n
 redisplay is painfully slow.\n
 :ALIASED-BY `goto-line-50%'\n
 :SEE-ALSO `mon-goto-line-25%', `mon-goto-line-50%', `mon-goto-line-75%',
-`mon-g2be', `goto-line', `count-lines'.\n►►►"
+`mon-g2be', `goto-line', `count-lines'.\n▶▶▶"
   (interactive)
   (line-number-at-pos (goto-char (/ (mon-g2be 1 t) 2))))
 ;;
@@ -2028,7 +2028,7 @@ Like `goto-line' but point is not moved to `line-beginning-position'.\n
 redisplay is painfully slow.\n
 :ALIASED-BY `goto-line-75%'\n
 :SEE-ALSO `mon-goto-line-25%', `mon-goto-line-50%', `mon-g2be', `goto-line',
-`count-lines'.\n►►►"
+`count-lines'.\n▶▶▶"
   (interactive)
   (let ((mgl7-chr-cnt (mon-g2be 1 t)))
     (line-number-at-pos (goto-char (- mgl7-chr-cnt (/ mgl7-chr-cnt 3))))))

@@ -28,13 +28,13 @@
 ;; :SEE (URL `http://repo.or.cz/w/ShellArchive.git/blob_plain/master:/xmlgen.el')
 ;; :SEE (URL `http://repo.or.cz/w/ShellArchive.git/blob_plain/master:/xmlgen.etest')
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;; `xmlgen', `xmlgen-attr-to-string', `xmlgen-extract-plist',
 ;; `html-lite-doctype', `html-lite-doctype-alist', `html-lite-define-elements',
 ;; `html-lite-make-element', `with-html-lite-header', `with-html-lite-header',
 ;; `html-doctype', `html-lite-make-name', `html-lite-write-tree',
 ;; `html-lite-browse-tree',
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;;
@@ -209,7 +209,7 @@ Produces this (though wrapped):\n
    </body>
  </html>\n
 :SEE-ALSO `mon-help-ebay-template-mode', `xmlgen-escapees',
-`xmlgen-attr-to-string',`xmlgen-extract-plist', `xmlgen-string-escape'.\n►►►"
+`xmlgen-attr-to-string',`xmlgen-extract-plist', `xmlgen-string-escape'.\n▶▶▶"
   (let ((level (or level 0)))
     (cond
       ((numberp form) (number-to-string form))
@@ -234,7 +234,7 @@ Produces this (though wrapped):\n
 (defun xmlgen-string-escape (string)
   "Escape STRING for inclusion in some XML.\n
 :SEE-ALSO `mon-help-ebay-template-mode', `xml-gen', `xmlgen-escapees',
-`xmlgen-attr-to-string',`xmlgen-extract-plist', `xmlgen-string-escape'.\n►►►"
+`xmlgen-attr-to-string',`xmlgen-extract-plist', `xmlgen-string-escape'.\n▶▶▶"
   (when (stringp string)
     (mapc
      '(lambda (e)
@@ -246,7 +246,7 @@ Produces this (though wrapped):\n
 (defun xmlgen-attr-to-string (plist)
   "Convert a plist to xml style attributes.\n
 :SEE-ALSO `mon-help-ebay-template-mode', `xml-gen', `xmlgen-escapees',
-`xmlgen-attr-to-string',`xmlgen-extract-plist', `xmlgen-string-escape'.\n►►►"
+`xmlgen-attr-to-string',`xmlgen-extract-plist', `xmlgen-string-escape'.\n▶▶▶"
   (let ((res ""))
     (while plist
       (let* ((sym (pop plist))
@@ -267,7 +267,7 @@ Produces this (though wrapped):\n
 (defun xmlgen-extract-plist (list)
   "Extract a plist from LIST returning the original list without the plist and the plist.\n
 :SEE-ALSO `mon-help-ebay-template-mode', `xml-gen', `xmlgen-escapees',
-`xmlgen-attr-to-string',`xmlgen-extract-plist', `xmlgen-string-escape'.\n►►►"
+`xmlgen-attr-to-string',`xmlgen-extract-plist', `xmlgen-string-escape'.\n▶▶▶"
   (let ((nlist '())
         (plist '())
         (last-keyword nil))

@@ -21,7 +21,7 @@
 ;; DESCRIPTION:
 ;; mon-string-utils provides string frobbing procedures for mon-*utils features
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;; `mon-string-justify-left', `mon-string-fill-to-col', 
 ;; `mon-string-chop-spaces', `mon-string-split-on-regexp',
 ;; `mon-string-split',
@@ -35,7 +35,7 @@
 ;; `mon-string-to-hex-list-cln-chars',
 ;; `mon-string-from-hex-list',
 ;; `mon-string-infix',
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;;
@@ -172,7 +172,7 @@
 ;;; :CREATED <Timestamp: #{2011-01-11T19:05:30-05:00Z}#{11022} - by MON KEY>
 (defgroup mon-string-utils  nil
   "Customization group for variables and functions of :FILE mon-string-utils.el\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   ;; :prefix "<PREFIX>"
   :link '(url-link 
           :tag ":EMACSWIKI-FILE" "http://www.emacswiki.org/emacs/mon-string-utils.el")
@@ -201,7 +201,7 @@ The symbols contained of this list are defined in :FILE mon-string-utils.el\n
 `*mon-line-utils-xrefs*', `*mon-plist-utils-xrefs*'
 `*mon-seq-utils-xrefs*', `*mon-window-utils-xrefs*', `*naf-mode-xref-of-xrefs*',
 `*naf-mode-faces-xrefs*', `*naf-mode-date-xrefs*', `*mon-ulan-utils-xrefs*',
-`*mon-xrefs-xrefs'.\n►►►"
+`*mon-xrefs-xrefs'.\n▶▶▶"
   :type '(repeat symbol)
   :group 'mon-string-utils 
   :group 'mon-xrefs)
@@ -235,7 +235,7 @@ return value of following form will always be equal W-STRING-TO-SPLIT:\n
 :SEE-ALSO `mon-string-split-TEST', `mon-region-split-commas',
 `mon-string-to-symbol', `mon-string-ify-list', `mon-string-chop-spaces',
 `mon-string-replace-char', `mon-string-from-sequence', `mon-string-to-sequence',
-`mon-string-justify-left', `mon-string-index', `mon-string-position'.\n►►►"
+`mon-string-justify-left', `mon-string-index', `mon-string-position'.\n▶▶▶"
   (let ((mch-max (length w-string-to-split)))
     (if (or (and limit-to (= limit-to 0))
             (not (string-match-p split-pattern w-string-to-split))
@@ -309,7 +309,7 @@ If SPREAD-LENGTH is too short STRING-BAG is concatenated and result truncated.\n
 `mon-string-index', `mon-string-upto-index', `mon-string-after-index',
 `mon-string-position', `mon-string-has-suffix', `mon-string-chop-spaces',
 `mon-string-ify-list', `mon-string-replace-char', `mon-string-sub-old->new',
-`mon-string-repeat'.\n►►►"
+`mon-string-repeat'.\n▶▶▶"
   (let* ((mss-str-bag 
           ;; :NOTE This `eval' seems ugly, is there a better way?
           (mapcar #'eval
@@ -415,7 +415,7 @@ Default is to remove any trailing whiespace at end of lines.\n
 `mon-string-set-char-at-idx',
 `mon-string-insert-string-at-idx', `mon-string-index', `mon-string-upto-index',
 `mon-string-after-index', `mon-string-has-suffix', `mon-string-sub-old->new',
-`mon-string-repeat'.\n►►►"
+`mon-string-repeat'.\n▶▶▶"
   (let* ((lft-margin (if (null lft-margin) (or left-margin 0) lft-margin)) 
          (msjl-width (if (null justify-width) (or fill-column 72) justify-width))
          (msjl-string (if (not (stringp justify-string)) 
@@ -485,7 +485,7 @@ Default is to remove any trailing whiespace at end of lines.\n
 :EXAMPLE\n\n\(mon-string-fill-to-col \(mon-get-system-specs\) 72\)\n
 \(mon-string-fill-to-col \(mon-get-system-specs\) 18\)\n
 :SEE-ALSO `mon-line-strings-indent-to-col', `mon-line-indent-from-to-col',
-`mon-string-justify-left', `truncate-string-to-width'.\n►►►"
+`mon-string-justify-left', `truncate-string-to-width'.\n▶▶▶"
   (let (msftc-fstr)  
     (setq msftc-fstr 
           (with-temp-buffer
@@ -508,7 +508,7 @@ Default is to search from start of string.\n
 :EXAMPLE\n\(mon-string-index \"string before ### string after\" \"###\"\)\n
 :SEE-ALSO `mon-string-upto-index', `mon-string-after-index',
 `mon-alphabet-as-type', `mon-string-position', `mon-string-has-suffix',
-`mon-string-chop-spaces', `mon-string-replace-char'.\n►►►"
+`mon-string-chop-spaces', `mon-string-replace-char'.\n▶▶▶"
   (string-match 
    (regexp-quote 
     (cond ((or (characterp needle) (integerp needle)) (format "%c" needle))
@@ -539,7 +539,7 @@ The arg UPTO-STRING is a simple string. No regexps, chars, numbers, lists, etc.\
 :EXAMPLE\n\(mon-string-upto-index \"string before ### string after\" \"###\"\)\n  
 :SEE-ALSO `mon-string-index', `mon-string-after-index'
 `mon-string-position', `mon-string-has-suffix', `mon-string-chop-spaces',
-`mon-string-replace-char'.\n►►►"
+`mon-string-replace-char'.\n▶▶▶"
   (substring in-string 0 (mon-string-index in-string upto-string)))
 ;;
 ;;; :TEST-ME (mon-string-upto-index "string before ### string after" "###")
@@ -552,7 +552,7 @@ AFTER-STR is a simple string. No regexps, chars, numbers, lists, etc.\n
 :EXAMPLE\n\(mon-string-after-index \"string before ### string after\" \"###\"\)\n
 :SEE-ALSO `mon-string-index', `mon-string-upto-index', `mon-string-position',
 `mon-string-has-suffix', `mon-string-chop-spaces',
-`mon-string-replace-char'.\n►►►"
+`mon-string-replace-char'.\n▶▶▶"
   (substring in-str (+ (mon-string-index in-str after-str) (length after-str))))
 ;;
 ;;; :TEST-ME (mon-string-after-index "string before ### string after" "###")
@@ -566,7 +566,7 @@ AFTER-STR is a simple string. No regexps, chars, numbers, lists, etc.\n
 :EXAMPLE\n\n\(let \(\(mk-str-l\)\)
   \(dotimes \(i 16 \(mon-string-sort-descending mk-str-l\)\)
     \(push \(make-string \(random 24\) 42\) mk-str-l\)\)\)\n
-:SEE-ALSO `sort', `stable-sort', `string-lessp'.\n►►►"
+:SEE-ALSO `sort', `stable-sort', `string-lessp'.\n▶▶▶"
   (let ((mssd-srt-l list-to-sort)
         (mssd-srt-pred #'(lambda (mssd-L-1 mssd-L-2) 
                            (let ((mssd-L-1-prd1 (length mssd-L-1))
@@ -587,7 +587,7 @@ If the SUBSTR is not found, then return nil.\n
 :EXAMPLE\n\(mon-string-position \"dogmeat\" \"meat\"\)\n
 :SEE-ALSO `mon-string-index', `mon-string-upto-index', `mon-string-after-index',
 `mon-string-to-sequence', `mon-string-from-sequence',
-`mon-string-replace-char'.\n►►►"
+`mon-string-replace-char'.\n▶▶▶"
   (string-match (regexp-quote find-substr) in-string from-psn))
 ;;
 ;;; :TEST-ME (= (mon-string-position "dogmeat" "meat") 3)
@@ -613,7 +613,7 @@ CHECK-STRING or HAS-SUFFIX is `mon-string-not-null-and-zerop'.\n
 :ALIASED-BY `mon-string-suffix-p'\n
 :SEE-ALSO `mon-string-prefix-p', `mon-string-position', `mon-string-index',
 `mon-string-upto-index', `mon-string-after-index',
-`mon-string-replace-char'.\n►►►"
+`mon-string-replace-char'.\n▶▶▶"
   (and (or (and w-no-empty-strings
                 (or (mon-string-not-null-nor-zerop check-string)
                     (error (concat ":FUNCTION `mon-string-has-suffix' " 
@@ -662,7 +662,7 @@ CHECK-STRING or HAS-SUFFIX is `mon-string-not-null-and-zerop'.\n
 :SEE-ALSO `mon-region-split-commas', `mon-string-split-on-regexp',
 `mon-string-sub-old->new', `mon-string-chop-spaces', `mon-string-position',
 `mon-string-index', `mon-string-upto-index', `mon-string-after-index',
-`mon-alphabet-as-type', `mon-string-replace-char'.\n►►►"
+`mon-alphabet-as-type', `mon-string-replace-char'.\n▶▶▶"
   (let ((mscs-itr 0)
         (mscs-len (1- (length chop-string)))
         (mscs-spc 32))
@@ -684,7 +684,7 @@ CHECK-STRING or HAS-SUFFIX is `mon-string-not-null-and-zerop'.\n
 :SEE-ALSO `mon-stringify-list' ,`mon-insert-string-ify', 
 `mon-line-string-split', `mon-line-get-next', 
 `mon-word-get-list-in-buffer', `mon-alphabet-as-type',
-`mon-string-replace-char'.\n►►►"
+`mon-string-replace-char'.\n▶▶▶"
   (let ((msil-str string-given)
         msil-lst)
     (set-match-data nil)
@@ -705,7 +705,7 @@ CHECK-STRING or HAS-SUFFIX is `mon-string-not-null-and-zerop'.\n
 This function is patterned after the awk split\(\) function.\n
 :EXAMPLE\n\n\(mon-string-split-on-regexp \"split-on-split\" \"-split\"\)\n
 :SEE-ALSO `mon-string-split', `mon-string-chop-spaces', `mon-string-sub-old->new',
-`mon-string-position', `mon-string-index', `mon-string-replace-char'.\n►►►"
+`mon-string-position', `mon-string-index', `mon-string-replace-char'.\n▶▶▶"
   
   (if ;; Either W-SPLIT-STR or AT-REGEXP is null or zero length return nil
       (or (mon-string-or-null-and-zerop w-split-str)
@@ -735,7 +735,7 @@ Signal and error if either TARGET-STRING or FROM-CHAR evaluate non-nil for
 :EXAMPLE\n
 \(mon-string-replace-char 0 \"\x0I'm\x0 an\x0 ugly\x0 string.\")\n
 :SEE-ALSO `subst-char-in-string', `mon-string-from-hex-list', 
-`mon-string-to-hex-string', `mon-help-char-representation'.\n►►►"
+`mon-string-to-hex-string', `mon-help-char-representation'.\n▶▶▶"
   (if (and (characterp from-char) (stringp target-string))
       (let ((msrc-ts (append target-string nil)))
         (setq msrc-ts (apply 'string (remq from-char msrc-ts))))
@@ -754,7 +754,7 @@ Signal and error if either TARGET-STRING or FROM-CHAR evaluate non-nil for
 Signal an error when an arg does not satisfy `stringp'.\n
 :EXAMPLE\n\n\(mon-string-sub-old->new \"old\" \"new\" \"old old new\"\)\n
 :SEE-ALSO `mon-string-split-on-regexp', `mon-string-chop-spaces',
-`mon-string-position', `mon-string-index', `mon-string-replace-char'.\n►►►"
+`mon-string-position', `mon-string-index', `mon-string-replace-char'.\n▶▶▶"
   (and (or (stringp old-str)
            (mon-error-string-err-format  "mon-string-sub-old->new" "old-str" old-str t))
        (or (stringp new-str)
@@ -796,7 +796,7 @@ When W-SPC is non-nil return string with whitespace interspersed.\n
 :EXAMPLE\n\(mon-string-repeat \"bubba\" 3 nil t\)\n
 :SEE-ALSO `mon-insert-string-ify', `mon-string-incr', 
 `mon-insert-string-n-fancy-times', `mon-insert-string-n-times',
-`mon-string-replace-char'.\n►►►"
+`mon-string-replace-char'.\n▶▶▶"
   (interactive 
    (list 
     (replace-regexp-in-string "[\\[:space:]]+$" ""  ;; :WAS "[[:space:]]+$" "" 
@@ -840,7 +840,7 @@ When W-SPC is non-nil return string with whitespace interspersed.\n
  22,00,00,00\n
 :SEE-ALSO `mon-string-to-hex-string', `mon-string-from-hex-list',
 `mon-string-to-hex-list', `url-hexify-string', `url-unhex-string',
-`url-unhex', `slime-net-encode-length', `slime-net-decode-length'.\n►►►"
+`url-unhex', `slime-net-encode-length', `slime-net-decode-length'.\n▶▶▶"
   (car (read-from-string 
         (format "(%s)" (replace-regexp-in-string "00\\|[,\]" " " rep-str)))))
 ;;
@@ -870,7 +870,7 @@ Useful for generating throw-away WPA keys.\n
 `mon-string-to-hex-list-cln-chars', `mon-generate-WPA-key',
 `mon-generate-prand-seed', `mon-string-replace-char',
 `hexl-hex-string-to-integer', `url-hexify-string', `url-unhex-string',
-`url-unhex', `slime-net-encode-length', `slime-net-decode-length'.\n►►►"
+`url-unhex', `slime-net-encode-length', `slime-net-decode-length'.\n▶▶▶"
   (let (msths-rtn)
     (unless prand-hex-len
       ;; :NOTE Consider using (append hxify-str nil) instead of the mapping.
@@ -918,7 +918,7 @@ Useful for working with w32 registry keys of type REG_BINARY.\n
 :SEE-ALSO `mon-string-to-hex-list', `mon-string-to-hex-string',
 `mon-string-to-hex-list-cln-chars', `hexl-hex-string-to-integer',
 `url-hexify-string', `url-unhex-string', `url-unhex'
-`slime-net-encode-length', `slime-net-decode-length'.\n►►►"
+`slime-net-encode-length', `slime-net-decode-length'.\n▶▶▶"
   (eval-when-compile (require 'hexl)) ;; `hexl-hex-string-to-integer'
   (let (msfhl-str msfhl-int)
     (mapc #'(lambda (msfhl-L-1) (push (format "%s" msfhl-L-1) msfhl-str))
@@ -939,13 +939,13 @@ Useful for working with w32 registry keys of type REG_BINARY.\n
 (defun mon-string-to-hex-list (string-hexify)
   "Return string as a list of hex values.\n
 :NOTE Can roundtrip the output of `mon-string-to-hex-list'.\n
-:EXAMPLE\n\n\(mon-string-to-hex-list \"bùbbä_◄\\\"\t\\\"►mô'búbbá\"\)\n
+:EXAMPLE\n\n\(mon-string-to-hex-list \"bùbbä_◀\\\"\t\\\"▶mô'búbbá\"\)\n
 \(mon-string-to-hex-list \"\"\)\n
 ;; Following example of roundtriping string -> hex-list -> string:\n
 \(mon-string-from-hex-list 
   \'(62 f9 62 62 e4 5f 25c4 22 9 22 25ba 6d f4 27 62 fa 62 62 e1\)\)\n
 \(mon-string-from-hex-list 
-  \(mon-string-to-hex-list \"bùbbä_◄\\\"\t\\\"►mô'búbbá\"\)\)\n
+  \(mon-string-to-hex-list \"bùbbä_◀\\\"\t\\\"▶mô'búbbá\"\)\)\n
 ;; Following fails successfully:\n
 \(mon-string-to-hex-list 8\)\n
 :NOTE :HEXADECIMAL 0 1 2 3 4 5 6 7 8 9  A  B  C  D  E  F
@@ -953,7 +953,7 @@ Useful for working with w32 registry keys of type REG_BINARY.\n
 :SEE-ALSO `mon-string-from-hex-list', `mon-generate-prand-id',
 `mon-string-to-hex-list-cln-chars', `mon-string-to-hex-string',
 `hexl-hex-string-to-integer', `url-hexify-string', `url-unhex-string',
-`url-unhex', `slime-net-encode-length', `slime-net-decode-length'.\n►►►"
+`url-unhex', `slime-net-encode-length', `slime-net-decode-length'.\n▶▶▶"
   (if (mon-string-or-null-and-zerop string-hexify)
       nil
     (let (msthl-hexify)
@@ -996,7 +996,7 @@ INFIX-STR is a string to intersperse with.
            \(replace-match \(cdr \(assoc-string \(match-string 1\) rplc-alst\)\)\)\)\)\)\)\)\n\nx y\n
 :NOTE This is similiar to `mapconcat' but without the FUNCTION argument.\n
 :SEE-ALSO `mon-string-splice-sep', `mon-string->strings-splice-sep',
-`mon-string-ify-list' `mon-list-intersperse'.\n►►►"
+`mon-string-ify-list' `mon-list-intersperse'.\n▶▶▶"
   (unless (stringp infix-str) 
     (error (mon-error-string-err-format "mon-string-infix" "infix-str" infix-str)))
   (cond ((null string-lst) "")
@@ -1023,7 +1023,7 @@ INFIX-STR is a string to intersperse with.
                          '\(\"Botho\" \"Bastian\" \"Svenja\" \"Selma\"\)\)\)
  \"-\"\)\n
 :SEE-ALSO `mon-string-split', `mon-string-infix', `mon-string-splice-sep',
-`mon-string->strings-splice-sep'.\n►►►"
+`mon-string->strings-splice-sep'.\n▶▶▶"
   (loop 
    for mse-itr across w-str 
    collect (format "%c" mse-itr)))
@@ -1044,7 +1044,7 @@ a newline. Does not move point.\n
  \(length \(mon-string-permute \"bůḇBá\"\)\)
 :ALIASED-BY `mon-permute-string'\n
 :SEE-ALSO `mon-permute-combine', , `mon-list-variant-forms',
-`mon-permute-combine-functions-TEST', `mon-list-permute-variants', `mon-list-permute-1'.\n►►►"
+`mon-permute-combine-functions-TEST', `mon-list-permute-variants', `mon-list-permute-1'.\n▶▶▶"
   (interactive "i\np")
   ;; :NOTE Maybe let-bind `max-lisp-eval-depth', `max-specpdl-size'?
   ;; NO, better to just remove duplicate chars inside `msprmt-str` initial let binding
@@ -1083,7 +1083,7 @@ a newline. Does not move point.\n
           \(mon-string-permute-line\)
           \(buffer-substring-no-properties \(buffer-end 0\)\(buffer-end 1\)\)
           \(mon-buffer-sub-no-prop\)\)\)\)\n
-:SEE-ALSO `mon-list-permute-variants', `mon-string-ify-current-line'.\n►►►"
+:SEE-ALSO `mon-list-permute-variants', `mon-string-ify-current-line'.\n▶▶▶"
   (interactive)
   (let ((mspl-wrds (car (read-from-string
                      (format "(%s)" 
@@ -1127,7 +1127,7 @@ When INSRTP is non-nil and INSERT-STR is null returan as if by prin1.\n
 \(mon-string-splice-sep '\(\"AAOA\" \"aaoa\" \"AAOA\" \"aaoa\" \"AAOA\" \"aaoa\" \"AAOA\"\) \" |\"\)\n
 \(mon-string-splice-sep '\(\"AAOA\" \"aaoa\" \"AAOA\" \"aaoa\" \"AAOA\" \"aaoa\" \"AAOA\"\) \"_\"\)\n
 \(mon-string-splice-sep '\(\"aaoa\" \"AAOA\" \"aaoa\" \"AAOA\" \"aaoa\" \"AAOA\" \"aaoa\"\) \" - \"\)\n
-:SEE-ALSO `mon-string->strings-splice-sep', `mon-string-infix'.\n►►►"
+:SEE-ALSO `mon-string->strings-splice-sep', `mon-string-infix'.\n▶▶▶"
   (interactive (list
                 (read-string  (concat ":FUNCTION `mon-string-splice-sep' " 
                                       "-- string to splice: "))
@@ -1197,7 +1197,7 @@ Moves point.\n
 When called with prefix arg or W-PRINC is non-nil insert as with princ.
 Moves point.\n
 :SEE-ALSO `mon-string-infix', `mon-string-splice-sep',
-`mon-string-ify-list'.\n►►►"
+`mon-string-ify-list'.\n▶▶▶"
   (interactive (list (read-string 
                       (concat ":FUNCTION `mon-string->strings-splice-sep' "
                               "-- string to splice: " ))
@@ -1231,7 +1231,7 @@ Moves point.\n
 String obtained by splitting read-string from mini-buffer.\n
 :EXAMPLE\n\n(mon-string-to-regexp \"Return a regexp-opt list of strings splitting\")\n
 \(call-interactively 'mon-string-to-regexp\)\n
-:SEE-ALSO `mon-string-rotate-to-regexp', `mon-string-ify-list'.\n►►►"
+:SEE-ALSO `mon-string-rotate-to-regexp', `mon-string-ify-list'.\n▶▶▶"
   (interactive "s:FUNCTION `mon-string-to-regexp' -- string to convert: \nP\np")
   (let*  ((mstr-strngfy (mon-string-ify-list string-to-cnv))
 	  (mstr-cnvrtd (mon-string-rotate-to-regexp mstr-strngfy)))
@@ -1269,7 +1269,7 @@ MATCH-STR is a string to try matching.\n
 When optional arg MATCH-FROM is non-nil match from position in MATCH-STR as if
 by `string-match-p'.\n
 :EXAMPLE\n\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   (assert (and (mon-string-not-null-nor-zerop match-str)
                (or (not match-from)
                    (and match-from (<= match-from (length match-from))))))

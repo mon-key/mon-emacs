@@ -21,7 +21,7 @@
 ;; DESCRIPTION: mon-doc-help-CL provides utils for documenting Common Lisp from
 ;; within Emacs
 ;; 
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;; `mon-help-CL-local-time', `mon-help-CL-loop', `mon-help-CL-time',
 ;; `mon-help-CL-file-dir-functions', `mon-help-CL-minion', `mon-help-CL-symbols', 
 ;; `mon-help-CL-pkgs', `mon-bind-mon-help-CL-pkgs-loadtime',
@@ -48,7 +48,8 @@
 ;; `mon-help-CL-package-functions', `mon-help-CL-intern-symbol',
 ;; `mon-help-CL-sharpsign-syntax', `mon-help-CL-types', `mon-help-CL-format',
 ;; `mon-help-CL-format-usage', `mon-cln-ansi-info', `mon-help-CL-lambda-list',
-;; FUNCTIONS:◄◄◄
+;; `mon-help-CL-method-combination',
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;;
@@ -69,6 +70,7 @@
 ;; `mon-hyperspec-lookup'      -> `mon-help-CL-symbols'
 ;; `mon-help-slime-keys'       -> `mon-help-CL-slime-keys'
 ;; `mon-help-swank-functions'  -> `mon-help-CL-swank-functions'
+;; `mon-help-CL-reader-macro-syntax' -> `mon-help-CL-sharpsign-syntax'
 ;; 
 ;; MOVED:
 ;; `mon-help-CL-time'           <- mon-doc-help-utils.el 
@@ -200,7 +202,7 @@
 ;;; :CREATED <Timestamp: #{2010-08-16T14:30:02-04:00Z}#{10331} - by MON KEY>
 (defgroup mon-doc-help-CL nil
   "Extensions for help and documentation of Common Lisp related procedures.\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   :link '(url-link 
           :tag "\n:EMACSWIKI-FILE (URL `http://www.emacswiki.org/emacs/mon-doc-help-CL.el')" 
           "http://www.emacswiki.org/emacs/mon-doc-help-CL.el")
@@ -216,7 +218,7 @@
 ;;; :CREATED <Timestamp: #{2010-08-16T14:30:45-04:00Z}#{10331} - by MON KEY>
 (defgroup mon-doc-help-CL-hspec-parse nil
   "Use emacs-w3m to parse Common Lisp hyperspec HTML data to lisp forms.\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   :link '(url-link 
           :tag "\n:EMACSWIKI-FILE (URL `http://www.emacswiki.org/emacs/mon-doc-help-CL.el')" 
           "http://www.emacswiki.org/emacs/mon-doc-help-CL.el")
@@ -231,23 +233,25 @@
 ;;; :CREATED <Timestamp: #{2011-01-20T18:47:43-05:00Z}#{11034} - by MON KEY>
 (defcustom  *mon-doc-help-CL-xrefs* 
   '(mon--CL-no-pull-p mon-help-CL-pkgs mon-bind-mon-help-CL-pkgs-loadtime
-    mon-cln-ansi-info mon-help-CL-wget-pkgs mon-help-CL-wget-pkgs-for-shell-command
-    mon-hspec-href-p mon-hspec-header-line-p mon-hspec-it-p mon-hspec-bld-p
-    mon-hspec-plain-p mon-hspec-w3m-spec-p mon-hspec-prop-type mon-hspec-out
-    mon-hspec-stk-n-mv mon-hspec-parse-w3m mon-hspec-find-w3m mon-hspec-unparse-w3m
+    mon-cln-ansi-info mon-help-CL-wget-pkgs
+    mon-help-CL-wget-pkgs-for-shell-command mon-hspec-href-p
+    mon-hspec-header-line-p mon-hspec-it-p mon-hspec-bld-p mon-hspec-plain-p
+    mon-hspec-w3m-spec-p mon-hspec-prop-type mon-hspec-out mon-hspec-stk-n-mv
+    mon-hspec-parse-w3m mon-hspec-find-w3m mon-hspec-unparse-w3m
     mon-hspec-unparse-w3m-to-buffer mon-help-CL-emacs-functions
     mon-help-CL-file-dir-functions mon-help-CL-stream-keywords
     mon-help-CL-error-condition-restart mon-help-CL-sequence-predicates
     mon-help-CL-bit-byte-bool-logic mon-help-CL-loop mon-help-CL-loop-usage
     mon-help-CL-do mon-help-CL-time mon-help-CL-sequences mon-help-CL-iteration
-    mon-help-CL-conses mon-help-CL-hash-tables mon-help-CL-print mon-help-CL-streams
-    mon-help-CL-reader mon-help-CL-chars mon-help-CL-strings mon-help-CL-structures
-    mon-help-CL-arrays mon-help-CL-numbers mon-help-CL-object-CLOS
+    mon-help-CL-conses mon-help-CL-hash-tables mon-help-CL-print
+    mon-help-CL-streams mon-help-CL-reader mon-help-CL-chars mon-help-CL-strings
+    mon-help-CL-structures mon-help-CL-arrays mon-help-CL-numbers
+    mon-help-CL-object-CLOS mon-help-CL-method-combination
     mon-help-CL-control-flow mon-help-CL-eval-compile mon-help-CL-load-compile
-    mon-help-CL-environment mon-help-CL-package-functions mon-help-CL-intern-symbol
-    mon-help-CL-types mon-help-CL-type-declarations mon-help-CL-sharpsign-syntax
-    mon-help-CL-format mon-help-CL-format-usage mon-help-CL-slime-keys
-    mon-help-CL-lambda-list mon-help-slime-functions
+    mon-help-CL-environment mon-help-CL-package-functions
+    mon-help-CL-intern-symbol mon-help-CL-types mon-help-CL-type-declarations
+    mon-help-CL-sharpsign-syntax mon-help-CL-format mon-help-CL-format-usage
+    mon-help-CL-slime-keys mon-help-CL-lambda-list mon-help-slime-functions
     mon-help-CL-swank-functions mon-help-CL-local-time mon-help-CL-minion
     mon-help-utils-CL-loadtime mon-help-CL-symbols mon-help-CL-lispdoc
     ;; :VARIABLES
@@ -269,11 +273,10 @@ The symbols contained of this list are defined in :FILE <FILE>\n
 `*mon-window-utils-xrefs*', `*naf-mode-xref-of-xrefs*', `*mon-slime-xrefs*',
 `*mon-url-utils-xrefs*', `*naf-mode-faces-xrefs*', `*naf-mode-date-xrefs*',
 `*mon-ulan-utils-xrefs*', `*google-define-redux-xrefs*',
-`*mon-xrefs-xrefs'.\n►►►"
+`*mon-xrefs-xrefs'.\n▶▶▶"
   :type '(repeat symbol)
   :group 'mon-doc-help-CL
   :group 'mon-xrefs)
-
 
 ;;; ==============================
 ;;; :CREATED <Timestamp: #{2009-12-23T17:47:48-05:00Z}#{09523} - by MON KEY>
@@ -287,7 +290,7 @@ Following elements in `*mon-help-CL-ext-pkg-map*' contain relative subpaths of t
  dpans3 dpans-clos dpans-amop
  islisp vgrind refcard cl-shell eli\n
 :SEE (URL `http://www.cs.cmu.edu/Groups/AI/0.html').\n
-:SEE-ALSO `*mon-help-CL-ext-pkg-map*', `mon-help-CL-pkgs', `mon-help-CL-wget-pkgs'.\n►►►"
+:SEE-ALSO `*mon-help-CL-ext-pkg-map*', `mon-help-CL-pkgs', `mon-help-CL-wget-pkgs'.\n▶▶▶"
   :type '(choice 
           (string :tag "CMU AI Default path" 
                   :value "http://www.cs.cmu.edu/Groups/AI/0.html")
@@ -366,7 +369,7 @@ when the predicate `IS-MON-SYSTEM-P' returns non-nil.
 The current property valuecan be accessed with the form:\n
  \(get '*mon-help-CL-ext-pkg-map* 'mon-help-CL-pkgs-buffer-name\)\n
 :SEE-ALSO `*mon-help-CL-cmu-ai-repo*', `mon-help-CL-pkgs',
-`mon-help-CL-symbols', `mon-help-CL-lispdoc'.\n►►►"
+`mon-help-CL-symbols', `mon-help-CL-lispdoc'.\n▶▶▶"
   :type '(repeat
           (list (symbol :tag "<KEY>")
                 (string :tag "<DESCRIPTION>")
@@ -673,7 +676,7 @@ The current property valuecan be accessed with the form:\n
   "Predicate helper for `defcustom'izing `*mon-help-CL-ext-pkg-map-no-pull*'.\n
 Return non-nil when SYM-MEM is a `memq'  `*mon-help-CL-ext-pkg-map*'
 :EXAMPLE\n\n\(mon--CL-no-pull-p cl-naggum\)\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   (memq sym-mem (mapcar #'car *mon-help-CL-ext-pkg-map*)))
 ;;
 ;;; TEST-ME \(mon--CL-no-pull-p 'cl-naggum\)
@@ -693,7 +696,7 @@ large file archives. These include:\n
 user is able to yank the URL but `mon-help-CL-wget-pkgs' won't pull them.\n 
 When adding elements of this list via `customize' additions must satisfy the
 predicate `mon--CL-no-pull-p'.\n
-:SEE-ALSO `*mon-help-CL-cmu-ai-repo*'.\n►►►"
+:SEE-ALSO `*mon-help-CL-cmu-ai-repo*'.\n▶▶▶"
   :type '(repeat (restricted-sexp :match-alternatives  (mon--CL-no-pull-p)))
   :group 'mon-doc-help-CL)
 ;;
@@ -778,7 +781,7 @@ Idiomatic loadtime evaulation of this fncn has the following form:\n
  \(eval-after-load \"mon-doc-help-CL\" '\(mon-bind-mon-help-CL-pkgs-loadtime t\)\)\n
 :SEE-ALSO `*mon-help-CL-ext-pkg-map*', `mon-help-utils-CL-loadtime',
 `mon-run-post-load-hooks', `mon-after-mon-utils-loadtime',
-`mon-check-feature-for-loadtime', `mon-CL-cln-colon-swap'.\n►►►"
+`mon-check-feature-for-loadtime', `mon-CL-cln-colon-swap'.\n▶▶▶"
   (setq w-msg-user (or w-msg-user 
                        (null (documentation-property 
                               'mon-help-CL-pkgs 'function-documentation))))
@@ -805,7 +808,7 @@ Idiomatic loadtime evaulation of this fncn has the following form:\n
         ":SEE-ALSO `*mon-help-CL-cmu-ai-repo*', `*mon-help-CL-ext-pkg-map*',\n"
         "`*mon-help-CL-ext-pkg-map-no-pull*', `mon-help-CL-wget-pkgs',\n"
         "`mon-CL-package-complete', `quicklisp-system-complete',\n"
-        "`mon-help-CL-symbols', `mon-help-CL-lispdoc'.\n►►►"))
+        "`mon-help-CL-symbols', `mon-help-CL-lispdoc'.\n▶▶▶"))
   ;; :WAS
   ;; (when w-msg-user 
   ;;   (message 
@@ -861,7 +864,7 @@ loop returns the absent URL's:\n
 `*mon-help-CL-ext-pkg-map*', `mon-wget-list-give-script-to-shell-command',
 `mon-wget-list-to-script', `mon-wget-list-to-script-TEST',
 `mon-wget-list-to-script-shell-command', `mon-wget-mon-pkgs',
-`mon-wget-rfc'.\n►►►"
+`mon-wget-rfc'.\n▶▶▶"
   (let ((rmv-wb-pgs (mapcar #'car *mon-help-CL-ext-pkg-map*))
         (wget-p (executable-find "wget"))
         (cl-wget-fname (if cl-wget-fname cl-wget-fname
@@ -927,7 +930,7 @@ loop returns the absent URL's:\n
 `*mon-help-CL-ext-pkg-map*', `mon-help-CL-wget-pkgs-TEST',
 `mon-wget-list-give-script-to-shell-command', `mon-wget-list-to-script',
 `mon-wget-list-to-script-shell-command', `mon-wget-mon-pkgs', `mon-wget-rfc',
-`mon-wget-unicodedata-files'.\n►►►"
+`mon-wget-unicodedata-files'.\n▶▶▶"
   (let ((fnm-tst-wgt (file-name-nondirectory wget-fname))
         (mjcwpfsc-sys (case system-type
                ((gnu/linux linux gnu/kfreebsd) 'gnu)
@@ -1192,7 +1195,7 @@ This variable defaults to the `common-lisp-hyperspec-root' defined in the
 `mon-hspec-header-line-p', `mon-hspec-href-p', `mon-hspec-w3m-spec-p',
 `mon-hspec-prop-type', `mon-hspec-stk-n-mv', `mon-hspec-out',
 `mon-hspec-parse-w3m', `mon-hspec-unparse-w3m',
-`mon-hspec-unparse-w3m-to-buffer', `mon-hspec-find-w3m'.\n►►►"
+`mon-hspec-unparse-w3m-to-buffer', `mon-hspec-find-w3m'.\n▶▶▶"
   :type 'directory
   :group 'mon-doc-help-CL-hspec-parse)
 ;
@@ -1215,7 +1218,7 @@ Buffer for emacs-w3m text properties from current Common Lisp Hyperspec parse.\n
 `mon-hspec-href-p', `mon-hspec-w3m-spec-p', `mon-hspec-prop-type',
 `mon-hspec-stk-n-mv', `mon-hspec-out', `mon-hspec-parse-w3m',
 `mon-hspec-unparse-w3m', `mon-hspec-unparse-w3m-to-buffer',
-`mon-hspec-find-w3m'.\n►►►"
+`mon-hspec-find-w3m'.\n▶▶▶"
   :type 'string 
   :group 'mon-doc-help-CL-hspec-parse)
 ;;
@@ -1235,7 +1238,7 @@ value generated with `mon-hspec-parse-w3m'.\n
 `mon-hspec-unparse-w3m-to-buffer', `mon-hspec-plain-p', `mon-hspec-bld-p',
 `mon-hspec-it-p', `mon-hspec-header-line-p', `mon-hspec-href-p',
 `mon-hspec-w3m-spec-p', `mon-hspec-prop-type', `mon-hspec-stk-n-mv',
-`mon-hspec-out'.\n►►►"
+`mon-hspec-out'.\n▶▶▶"
   :type 'string 
   :group 'mon-doc-help-CL-hspec-parse)
 ;;
@@ -1256,7 +1259,7 @@ When non-nil return a two element list of the form:\n
 `mon-hspec-unparse-w3m-to-buffer', `mon-hspec-out', `*mon-hspec-parse-buffer*',
 `mon-hspec-find-w3m', `*mon-hspec-root-dir*', `mon-line-test-content',
 `mon-get-text-properties-category', `mon-plist-keys', `mon-list-all-properties-in-buffer',
-`mon-nuke-text-properties-buffer'.\n►►►"
+`mon-nuke-text-properties-buffer'.\n▶▶▶"
   (let (this-xref-prop)
     (when (get-text-property (point) 'w3m-href-anchor)
       (let* ((tp-xrf-frm  (point))
@@ -1285,7 +1288,7 @@ When t return a two element list of the form:\n
 `mon-hspec-unparse-w3m-to-buffer', `mon-hspec-out', `mon-hspec-find-w3m',
 `*mon-hspec-parse-buffer*', `*mon-hspec-root-dir*', `mon-line-test-content',
 `mon-get-text-properties-category', `mon-plist-keys', `mon-list-all-properties-in-buffer',
-`mon-nuke-text-properties-buffer'.\n►►►"
+`mon-nuke-text-properties-buffer'.\n▶▶▶"
   (when (eq (car (get-text-property (point) 'face)) 'w3m-header-line-location-title)
     (let ((loc-info `(:location (,(point) . ,(next-single-property-change (point) 'face)))))
       (setq loc-info `(,(car loc-info) 
@@ -1352,7 +1355,7 @@ When t return a two element list of the form:\n
 `mon-hspec-unparse-w3m',`mon-hspec-unparse-w3m-to-buffer', `mon-hspec-out',
 `mon-hspec-find-w3m', `*mon-hspec-parse-buffer*', `*mon-hspec-root-dir*',
 `mon-line-test-content', `mon-get-text-properties-category', `mon-plist-keys',
-`mon-list-all-properties-in-buffer', `mon-nuke-text-properties-buffer'.\n►►►"
+`mon-list-all-properties-in-buffer', `mon-nuke-text-properties-buffer'.\n▶▶▶"
   (let ((face-it-p (get-text-property (point) 'face)))
     (when (and (member 'w3m-italic face-it-p)
                (and (not (member 'w3m-bold face-it-p))
@@ -1377,7 +1380,7 @@ When t return a two element list of the form:\n
 `mon-hspec-out', `mon-hspec-unparse-w3m', `mon-hspec-unparse-w3m-to-buffer',
 `mon-hspec-find-w3m', `*mon-hspec-parse-buffer*', `*mon-hspec-root-dir*',
 `mon-line-test-content', `mon-get-text-properties-category', `mon-plist-keys',
-`mon-list-all-properties-in-buffer', `mon-nuke-text-properties-buffer'.\n►►►"
+`mon-list-all-properties-in-buffer', `mon-nuke-text-properties-buffer'.\n▶▶▶"
    (let ((face-bold-p (get-text-property (point) 'face)))
      (when (and (member 'w3m-bold face-bold-p)
                 (and (not (member 'w3m-italic face-bold-p))
@@ -1402,7 +1405,7 @@ When t return a two element list of the form:\n
 `mon-hspec-unparse-w3m-to-buffer', `mon-hspec-out', `mon-hspec-find-w3m',
 `*mon-hspec-parse-buffer*', `*mon-hspec-root-dir*', `mon-line-test-content',
 `mon-get-text-properties-category', `mon-plist-keys', `mon-list-all-properties-in-buffer',
-`mon-nuke-text-properties-buffer'.\n►►►"
+`mon-nuke-text-properties-buffer'.\n▶▶▶"
   (when (and (not (get-text-property (point) 'face))
              (not (get-text-property (point) 'w3m-href-anchor))
              (next-property-change (point))
@@ -1426,7 +1429,7 @@ When SPEC-LIST contains SPEC return the sublist of SPEC-LIST as per `memq'.\n
 `mon-hspec-unparse-w3m-to-buffer', `mon-hspec-out', `mon-hspec-find-w3m',
 `*mon-hspec-parse-buffer*', `*mon-hspec-root-dir*', `mon-line-test-content',
 `mon-get-text-properties-category', `mon-plist-keys', `mon-list-all-properties-in-buffer',
-`mon-nuke-text-properties-buffer'.\n►►►"
+`mon-nuke-text-properties-buffer'.\n▶▶▶"
   (memq spec spec-list))
 
 ;;; ==============================
@@ -1445,7 +1448,7 @@ Return one five values conditional on value of text-properties-at-point:\n
 `mon-hspec-unparse-w3m-to-buffer', `mon-hspec-out', `mon-hspec-find-w3m',
 `*mon-hspec-parse-buffer*', `*mon-hspec-root-dir*', `mon-line-test-content',
 `mon-get-text-properties-category', `mon-plist-keys', `mon-list-all-properties-in-buffer',
-`mon-nuke-text-properties-buffer'.\n►►►"
+`mon-nuke-text-properties-buffer'.\n▶▶▶"
   (let ((the-spec (text-properties-at (point)))
         w3m-face-spec)
     (setq w3m-face-spec
@@ -1469,7 +1472,7 @@ Temporary buffer takes the value specified in:\n:VARIABLE `*mon-hspec-parse-buff
 `mon-hspec-prop-type', `mon-hspec-stk-n-mv', `mon-hspec-parse-w3m',
 `mon-hspec-unparse-w3m', `mon-hspec-unparse-w3m-to-buffer', `mon-hspec-find-w3m',
 `*mon-hspec-root-dir*', `mon-line-test-content', `mon-get-text-properties-category', `mon-plist-keys',
-`mon-list-all-properties-in-buffer', `mon-nuke-text-properties-buffer'.\n►►►"
+`mon-list-all-properties-in-buffer', `mon-nuke-text-properties-buffer'.\n▶▶▶"
   (get-buffer-create *mon-hspec-parse-buffer*)
   (terpri (get-buffer *mon-hspec-parse-buffer*))
   (if (null prop)
@@ -1492,7 +1495,7 @@ specifed by `*mon-hspec-parse-buffer*' via the function `mon-hspec-out'.\n
 `mon-hspec-w3m-spec-p', `mon-hspec-prop-type', `mon-hspec-unparse-w3m', 
 `mon-hspec-find-w3m', `*mon-hspec-root-dir*', `mon-line-test-content',
 `mon-get-text-properties-category', `mon-plist-keys', `mon-list-all-properties-in-buffer',
-`mon-nuke-text-properties-buffer'.\n►►►"
+`mon-nuke-text-properties-buffer'.\n▶▶▶"
   (let ((keep-looking t)
         (curr-prop)) 
     (cond ((eq (point) (mon-g2be 1 t))
@@ -1526,7 +1529,7 @@ Contents returned in buffer specified by `*mon-hspec-parse-buffer*'.\n
 `mon-hspec-prop-type', `mon-hspec-stk-n-mv', `mon-hspec-out',
 `mon-hspec-find-w3m', `*mon-hspec-root-dir*', `mon-line-test-content',
 `mon-get-text-properties-category', `mon-plist-keys', `mon-list-all-properties-in-buffer',
-`mon-nuke-text-properties-buffer'.\n►►►"
+`mon-nuke-text-properties-buffer'.\n▶▶▶"
   (progn
     (mon-g2be -1)
     (let ((mhpw-hdr (mon-hspec-header-line-p)))
@@ -1554,7 +1557,7 @@ Preference is weighted to `current-buffer' if it is a w3m buffer.\n
 `mon-hspec-plain-p', `mon-hspec-bld-p', `mon-hspec-it-p', 
 `mon-hspec-header-line-p', `mon-hspec-href-p', `mon-hspec-w3m-spec-p',
 `mon-hspec-prop-type', `mon-hspec-stk-n-mv', `mon-hspec-out',
-`mon-hspec-find-w3m', `*mon-hspec-root-dir*', `*mon-hspec-parse-buffer*'.\n►►►"
+`mon-hspec-find-w3m', `*mon-hspec-root-dir*', `*mon-hspec-parse-buffer*'.\n▶▶▶"
   (let* ((mhfw-wlb (w3m-list-buffers))
          (mhfw-hs-ttl-chk #'(lambda (mhfw-L-1)
                               (unless (null mhfw-L-1)
@@ -1644,7 +1647,7 @@ When the local URL path has been shortened adjust text-property offsets accordin
 `mon-hspec-stk-n-mv', `mon-hspec-out', `mon-hspec-plain-p', `mon-hspec-bld-p',
 `mon-hspec-it-p', `mon-hspec-header-line-p', `mon-hspec-href-p',
 `mon-hspec-w3m-spec-p', `mon-hspec-prop-type', `*mon-hspec-parse-buffer*',
-`*mon-hspec-root-dir*'.\n►►►"
+`*mon-hspec-root-dir*'.\n▶▶▶"
   (let ((unprs-mrk (make-marker))
         (onward t)
         (gthr-unprs 
@@ -1658,18 +1661,18 @@ When the local URL path has been shortened adjust text-property offsets accordin
       (mon-g2be -1)
       (set-marker unprs-mrk (point))
       (mon-g2be 1)
-      (insert "\n(\"►►►\")")
+      (insert "\n(\"▶▶▶\")")
       (newline)
       (while (and unprs-mrk onward)
         (let (prs-sexp)
           (setq prs-sexp (read unprs-mrk))
-          (if (equal "►►►" (car prs-sexp))
+          (if (equal "▶▶▶" (car prs-sexp))
               (setq onward nil)
             (progn      
               (push prs-sexp big-parse)
               (princ (plist-get prs-sexp (car prs-sexp)) gthr-unprs)))))
       (mon-g2be 1)
-      (search-backward-regexp "(\"►►►\")")
+      (search-backward-regexp "(\"▶▶▶\")")
       (replace-match "")
       (mon-g2be -1))
     (setq big-parse (nreverse big-parse))
@@ -1722,7 +1725,7 @@ RETURN-PARSE-IN-BUFFER prior to insertion.\n
 :SEE-ALSO `mon-hspec-stk-n-mv', `mon-hspec-out', `mon-hspec-plain-p',
 `mon-hspec-bld-p', `mon-hspec-it-p', `mon-hspec-header-line-p',
 `mon-hspec-href-p', `mon-hspec-w3m-spec-p', `mon-hspec-prop-type',
-`mon-hspec-find-w3m', `*mon-hspec-parse-buffer*', `*mon-hspec-root-dir*'.\n►►►"
+`mon-hspec-find-w3m', `*mon-hspec-parse-buffer*', `*mon-hspec-root-dir*'.\n▶▶▶"
   ;; mhuwtb-fnd
   (unwind-protect
       (let ((mhuwtb-fnd         (mon-hspec-find-w3m))
@@ -2178,7 +2181,7 @@ RETURN-PARSE-IN-BUFFER prior to insertion.\n
 :SEE-ALSO `mon-help-CL-error-condition-restart',
 `mon-help-CL-file-dir-functions', `mon-help-CL-pkgs', `mon-help-CL-symbols',
 `mon-help-CL-loop', `mon-help-CL-do', `mon-help-CL-time',
-`mon-help-CL-local-time', `mon-help-CL-swank-functions', `mon-help-CL-minion'.\n►►►"
+`mon-help-CL-local-time', `mon-help-CL-swank-functions', `mon-help-CL-minion'.\n▶▶▶"
   (interactive "i\nP")
   (if (or insertp intrp)
       (mon-help-function-spit-doc 'mon-help-CL-emacs-functions :insertp t)
@@ -2289,7 +2292,7 @@ RETURN-PARSE-IN-BUFFER prior to insertion.\n
 :SEE info node `(ansicl) '\n
 :SEE-ALSO `mon-help-CL-local-time', `mon-help-CL-loop', `mon-help-CL-time',
 `mon-help-CL-symbols', `mon-help-CL-lispdoc', `mon-help-CL-slime-keys',
-`mon-help-CL-swank-functions'.\n►►►"
+`mon-help-CL-swank-functions'.\n▶▶▶"
   (interactive "i\nP")
   (if (or insertp intrp)
       (mon-help-function-spit-doc 'mon-help-CL-file-dir-functions :insertp t)
@@ -2369,7 +2372,7 @@ other      implementation-dependent
 `mon-help-CL-error-condition-restart', `mon-help-CL-emacs-functions',
 `mon-help-CL-sequence-predicates', `mon-help-CL-bit-byte-bool-logic',
 `mon-help-CL-slime-keys', `mon-help-CL-swank-functions',
-`mon-help-CL-local-time', `mon-help-CL-lispdoc'.\n►►►"
+`mon-help-CL-local-time', `mon-help-CL-lispdoc'.\n▶▶▶"
   (interactive "i\nP")
   (if (or insertp intrp)
       (mon-help-function-spit-doc 'mon-help-CL-stream-keywords :insertp t)
@@ -2541,7 +2544,7 @@ T
 :SEE-ALSO `mon-help-errors', `*mon-help-emacs-errors*', `mon-help-CL-time',
 `mon-help-CL-local-time', `mon-help-CL-loop', `mon-help-CL-do',
 `mon-help-CL-file-dir-functions', `mon-help-CL-pkgs', `mon-help-CL-symbols',
-`mon-help-CL-lispdoc', `mon-help-CL-swank-functions', `mon-help-CL-slime-keys'.\n►►►"
+`mon-help-CL-lispdoc', `mon-help-CL-swank-functions', `mon-help-CL-slime-keys'.\n▶▶▶"
   (interactive "i\nP")
   (if (or insertp intrp)
       (mon-help-function-spit-doc 'mon-help-CL-error-condition-restart :insertp t)
@@ -2583,7 +2586,7 @@ of a sequence, only about a particular one, if it exists.\n
 `mon-help-CL-loop', `mon-help-CL-do', `mon-help-CL-bit-byte-bool-logic',
 `mon-help-CL-file-dir-functions', `mon-help-CL-pkgs', `mon-help-CL-symbols',
 `mon-help-CL-lispdoc', `mon-help-CL-swank-functions',
-`mon-help-CL-slime-keys'.\n►►►"
+`mon-help-CL-slime-keys'.\n▶▶▶"
   (interactive "i\nP")
   (if (or insertp intrp)
       (mon-help-function-spit-doc 'mon-help-CL-sequence-predicates :insertp t)
@@ -2698,7 +2701,7 @@ of a sequence, only about a particular one, if it exists.\n
 `mon-help-CL-loop', `mon-help-CL-do', `mon-help-CL-sequence-predicates',
 `mon-help-CL-file-dir-functions', `mon-help-CL-pkgs', `mon-help-CL-symbols',
 `mon-help-CL-lispdoc', `mon-help-CL-swank-functions',
-`mon-help-CL-slime-keys'.\n►►►"
+`mon-help-CL-slime-keys'.\n▶▶▶"
   (interactive "i\nP")
   (if (or insertp intrp)
       (mon-help-function-spit-doc 'mon-help-CL-bit-byte-bool-logic :insertp t)
@@ -2905,7 +2908,7 @@ d-type-spec ::= type-specifier | (d-type-spec . d-type-spec)
 :SEE-ALSO `mon-help-CL-loop-usage', `mon-help-CL-time', `mon-help-CL-local-time', 
 `mon-help-CL-do', `mon-help-CL-file-dir-functions', `mon-help-CL-pkgs',
 `mon-help-CL-sequence-predicates', `mon-help-CL-symbols', `mon-help-CL-lispdoc',
-`mon-help-CL-swank-functions', `mon-help-CL-slime-keys'.\n►►►"
+`mon-help-CL-swank-functions', `mon-help-CL-slime-keys'.\n▶▶▶"
   (interactive "i\nP")
   (if (or insertp intrp)
       (mon-help-function-spit-doc 'mon-help-CL-loop :insertp t)
@@ -3305,7 +3308,7 @@ prefix \":CLTL2-LOOP\" are excerpted from from the LaTeX to HTML extraction of:
 :SEE (URL `ftp://ftp.cs.cmu.edu/user/ai/lang/lisp/doc/cltl/cltl_ht.tgz')
 
 
-:SEE-ALSO `mon-help-CL-loop', `mon-help-CL-do', `mon-help-CL-iteration'.\n►►►"
+:SEE-ALSO `mon-help-CL-loop', `mon-help-CL-do', `mon-help-CL-iteration'.\n▶▶▶"
   (interactive "i\nP")
   (if (or insertp intrp)
       (mon-help-function-spit-doc 'mon-help-CL-loop-usage :insertp t)
@@ -3374,7 +3377,7 @@ often doesn't have a statement body - all the work is already finished.\n
 :SEE-ALSO `mon-help-CL-time', `mon-help-CL-local-time', `mon-help-CL-loop',
 `mon-help-CL-do', `mon-help-CL-file-dir-functions', `mon-help-CL-pkgs',
 `mon-help-CL-sequence-predicates', `mon-help-CL-symbols', `mon-help-CL-lispdoc',
-`mon-help-CL-swank-functions', `mon-help-CL-slime-keys'.\n►►►"
+`mon-help-CL-swank-functions', `mon-help-CL-slime-keys'.\n▶▶▶"
 (interactive "i\nP")
   (if (or insertp intrp)
       (mon-help-function-spit-doc 'mon-help-CL-do :insertp t)
@@ -3409,7 +3412,7 @@ CL-USER> \(get-decoded-time\)\n
 :SEE-ALSO `mon-help-CL-time', `mon-help-CL-local-time', `mon-help-CL-loop',
 `mon-help-CL-do', `mon-help-CL-file-dir-functions', `mon-help-CL-pkgs',
 `mon-help-CL-sequence-predicates', `mon-help-CL-symbols', `mon-help-CL-lispdoc',
-`mon-help-CL-swank-functions', `mon-help-CL-slime-keys'.\n►►►"
+`mon-help-CL-swank-functions', `mon-help-CL-slime-keys'.\n▶▶▶"
 (interactive "i\nP")
   (if (or insertp intrp)
       (mon-help-function-spit-doc 'mon-help-CL-time :insertp t)
@@ -3460,7 +3463,7 @@ CL-USER> \(get-decoded-time\)\n
 `mon-help-CL-emacs-functions', `mon-help-CL-sequence-predicates',
 `mon-help-CL-bit-byte-bool-logic', `mon-help-CL-stream-keywords',
 `mon-help-CL-slime-keys', `mon-help-CL-swank-functions',
-`mon-help-CL-local-time', `mon-help-CL-lispdoc'.\n►►►"
+`mon-help-CL-local-time', `mon-help-CL-lispdoc'.\n▶▶▶"
   (interactive "i\nP")
   (if (or insertp intrp)
       (mon-help-function-spit-doc 'mon-help-CL-sequences :insertp t)
@@ -3495,7 +3498,7 @@ CL-USER> \(get-decoded-time\)\n
 `mon-help-CL-emacs-functions', `mon-help-CL-sequence-predicates',
 `mon-help-CL-bit-byte-bool-logic', `mon-help-CL-stream-keywords',
 `mon-help-CL-slime-keys', `mon-help-CL-swank-functions',
-`mon-help-CL-local-time', `mon-help-CL-lispdoc'.\n►►►"
+`mon-help-CL-local-time', `mon-help-CL-lispdoc'.\n▶▶▶"
 (interactive "i\nP")
   (if (or insertp intrp)
       (mon-help-function-spit-doc 'mon-help-CL-iteration :insertp t)
@@ -3616,7 +3619,7 @@ CL-USER> \(get-decoded-time\)\n
 `mon-help-CL-sequence-predicates', `mon-help-CL-bit-byte-bool-logic',
 `mon-help-CL-stream-keywords', `mon-help-CL-slime-keys',
 `mon-help-CL-swank-functions', `mon-help-CL-local-time',
-`mon-help-CL-lispdoc'.\n►►►"
+`mon-help-CL-lispdoc'.\n▶▶▶"
   (interactive "i\nP")
   (if (or insertp intrp)
       (mon-help-function-spit-doc 'mon-help-CL-conses :insertp t)
@@ -3669,7 +3672,7 @@ FOR-AS-HASH ::=
 `mon-help-CL-emacs-functions', `mon-help-CL-sequence-predicates',
 `mon-help-CL-bit-byte-bool-logic', `mon-help-CL-stream-keywords',
 `mon-help-CL-slime-keys', `mon-help-CL-swank-functions',
-`mon-help-CL-local-time', `mon-help-CL-lispdoc'.\n►►►"
+`mon-help-CL-local-time', `mon-help-CL-lispdoc'.\n▶▶▶"
   (interactive "i\nP")
   (if (or insertp intrp)
       (mon-help-function-spit-doc 'mon-help-CL-hash-tables :insertp t)
@@ -3757,7 +3760,7 @@ FOR-AS-HASH ::=
 `mon-help-CL-sequence-predicates', `mon-help-CL-bit-byte-bool-logic',
 `mon-help-CL-stream-keywords', `mon-help-CL-slime-keys',
 `mon-help-CL-swank-functions', `mon-help-CL-local-time',
-`mon-help-CL-lispdoc'.\n►►►"
+`mon-help-CL-lispdoc'.\n▶▶▶"
   (interactive "i\nP")
   (if (or insertp intrp)
       (mon-help-function-spit-doc 'mon-help-CL-print :insertp t)
@@ -3845,7 +3848,7 @@ FOR-AS-HASH ::=
 `mon-help-CL-sequence-predicates', `mon-help-CL-bit-byte-bool-logic',
 `mon-help-CL-stream-keywords', `mon-help-CL-slime-keys',
 `mon-help-CL-swank-functions', `mon-help-CL-local-time',
-`mon-help-CL-lispdoc'.\n►►►"
+`mon-help-CL-lispdoc'.\n▶▶▶"
   (interactive "i\nP")
   (if (or insertp intrp)
       (mon-help-function-spit-doc 'mon-help-CL-streams :insertp t)
@@ -3892,7 +3895,7 @@ FOR-AS-HASH ::=
 `mon-help-CL-emacs-functions', `mon-help-CL-sequence-predicates',
 `mon-help-CL-bit-byte-bool-logic', `mon-help-CL-stream-keywords',
 `mon-help-CL-slime-keys', `mon-help-CL-swank-functions',
-`mon-help-CL-local-time', `mon-help-CL-lispdoc'.\n►►►"
+`mon-help-CL-local-time', `mon-help-CL-lispdoc'.\n▶▶▶"
   (interactive "i\nP")
   (if (or insertp intrp)
       (mon-help-function-spit-doc 'mon-help-CL-reader :insertp t)
@@ -3944,7 +3947,7 @@ FOR-AS-HASH ::=
 `mon-help-CL-emacs-functions', `mon-help-CL-sequence-predicates',
 `mon-help-CL-bit-byte-bool-logic', `mon-help-CL-stream-keywords',
 `mon-help-CL-slime-keys', `mon-help-CL-swank-functions',
-`mon-help-CL-local-time', `mon-help-CL-lispdoc'.\n►►►"
+`mon-help-CL-local-time', `mon-help-CL-lispdoc'.\n▶▶▶"
   (interactive "i\nP")
   (if (or insertp intrp)
       (mon-help-function-spit-doc 'mon-help-CL-chars :insertp t)
@@ -3985,7 +3988,7 @@ FOR-AS-HASH ::=
 `mon-help-CL-emacs-functions', `mon-help-CL-sequence-predicates',
 `mon-help-CL-bit-byte-bool-logic', `mon-help-CL-stream-keywords',
 `mon-help-CL-slime-keys', `mon-help-CL-swank-functions',
-`mon-help-CL-local-time', `mon-help-CL-lispdoc'.\n►►►"
+`mon-help-CL-local-time', `mon-help-CL-lispdoc'.\n▶▶▶"
   (interactive "i\nP")
   (if (or insertp intrp)
       (mon-help-function-spit-doc 'mon-help-CL-strings :insertp t)
@@ -4017,7 +4020,7 @@ FOR-AS-HASH ::=
 `mon-help-CL-emacs-functions', `mon-help-CL-sequence-predicates',
 `mon-help-CL-bit-byte-bool-logic', `mon-help-CL-stream-keywords',
 `mon-help-CL-slime-keys', `mon-help-CL-swank-functions',
-`mon-help-CL-local-time', `mon-help-CL-lispdoc'.\n►►►"
+`mon-help-CL-local-time', `mon-help-CL-lispdoc'.\n▶▶▶"
   (interactive "i\nP")
   (if (or insertp intrp)
       (mon-help-function-spit-doc 'mon-help-CL-structures :insertp t)
@@ -4084,7 +4087,7 @@ FOR-AS-HASH ::=
 `mon-help-CL-emacs-functions', `mon-help-CL-sequence-predicates',
 `mon-help-CL-bit-byte-bool-logic', `mon-help-CL-stream-keywords',
 `mon-help-CL-slime-keys', `mon-help-CL-swank-functions',
-`mon-help-CL-local-time', `mon-help-CL-lispdoc'.\n►►►"
+`mon-help-CL-local-time', `mon-help-CL-lispdoc'.\n▶▶▶"
   (interactive "i\nP")
   (if (or insertp intrp)
       (mon-help-function-spit-doc 'mon-help-CL-arrays :insertp t)
@@ -4196,7 +4199,7 @@ FOR-AS-HASH ::=
 `mon-help-CL-emacs-functions', `mon-help-CL-sequence-predicates',
 `mon-help-CL-bit-byte-bool-logic', `mon-help-CL-stream-keywords',
 `mon-help-CL-slime-keys', `mon-help-CL-swank-functions',
-`mon-help-CL-local-time', `mon-help-CL-lispdoc'.\n►►►"
+`mon-help-CL-local-time', `mon-help-CL-lispdoc'.\n▶▶▶"
   (interactive "i\nP")
   (if (or insertp intrp)
       (mon-help-function-spit-doc 'mon-help-CL-numbers :insertp t)
@@ -4278,9 +4281,20 @@ Following table enumerates Common Lisp lambda lists and their syntax.\n
  |  A: No. They're not real parameters.
  |
  `---- :SEE #lisp 2011-04-06T23:56 Q: <- drdo A: <- pjb\n
-
-:SEE-ALSO .\n►►►"
-
+:SEE-ALSO `mon-help-CL-symbols', `mon-help-CL-sequences', `mon-help-CL-iteration',
+`mon-help-CL-conses', `mon-help-CL-hash-tables', `mon-help-CL-print',
+`mon-help-CL-streams', `mon-help-CL-reader', `mon-help-CL-chars',
+`mon-help-CL-strings', `mon-help-CL-structures', `mon-help-CL-arrays',
+`mon-help-CL-numbers', `mon-help-CL-object-CLOS',
+`mon-help-cl-method-combination', `mon-help-CL-control-flow',
+`mon-help-CL-eval-compile', `mon-help-CL-load-compile',
+`mon-help-CL-environment', `mon-help-CL-package-functions',
+`mon-help-CL-intern-symbol', `mon-help-CL-sharpsign-syntax', `mon-help-CL-loop',
+`mon-help-CL-time', `mon-help-CL-error-condition-restart',
+`mon-help-CL-emacs-functions', `mon-help-CL-sequence-predicates',
+`mon-help-CL-bit-byte-bool-logic', `mon-help-CL-stream-keywords',
+`mon-help-CL-slime-keys', `mon-help-CL-swank-functions',
+`mon-help-CL-local-time', `mon-help-CL-lispdoc'.\n▶▶▶"
   (interactive "i\nP")
   (if (or insertp intrp)
       (mon-help-function-spit-doc 'mon-help-CL-lambda-list :insertp t)
@@ -4296,46 +4310,61 @@ Following table enumerates Common Lisp lambda lists and their syntax.\n
 (defun mon-help-CL-object-CLOS (&optional insertp intrp)
   "
 ;; :CL-FUNCTIONS-OBJECTS
-`function-keywords'
-`ensure-generic-function'
+`add-method'
 `allocate-instance'
-`reinitialize-instance'
-`shared-initialize'
-`update-instance-for-different-class'
-`update-instance-for-redefined-class'
+`call-method'
+`call-next-method'
 `change-class'
+`class-name'
+`class-of'
+`compute-applicable-methods'
+`defclass'
+`defgeneric'
+`define-method-combination'
+`defmethod'
+`ensure-generic-function'
+`find-class'
+`find-method'
+`function-keywords'
+`initialize-instance'
+`make-instance'
+`make-instances-obsolete'
+`make-load-form'
+`make-load-form-saving-slots'
+`method-qualifiers'
+`next-method-p'
+`no-applicable-method'
+`no-next-method'
+`reinitialize-instance'
+`remove-method'
+`shared-initialize'
 `slot-boundp'
 `slot-exists-p'
 `slot-makunbound'
 `slot-missing'
 `slot-unbound'
 `slot-value'
-`method-qualifiers'
-`no-applicable-method'
-`no-next-method'
-`remove-method'
-`make-instance'
-`make-instances-obsolete'
-`make-load-form'
-`make-load-form-saving-slots'
+`unbound-slot'
+`unbound-slot-instance'
+`update-instance-for-different-class'
+`update-instance-for-redefined-class'
 `with-accessors'
 `with-slots'
-`defclass'
-`defgeneric'
-`defmethod'
-`find-class'
-`next-method-p'
-`call-method'
-`call-next-method'
-`compute-applicable-methods'
-`define-method-combination'
-`find-method'
-`add-method'
-`initialize-instance'
-`class-name'
-`class-of'
-`unbound-slot'
-`unbound-slot-instance'\n
+
+;; :CL-CLASS-CLASSES
+`class'
+`built-in-class'
+`generic-function'
+`generic-function'
+`method'
+`method-combination'
+`standard-class'
+`standard-generic-function'
+`standard-method'
+`standard-object'
+`structure-class'
+`structure-object'
+
  :NOTE Following is how to remove-method from a generic function:
  \(remove-method \(fdefinition 'my-generic\) \(find-method #'my-generic nil '\(my-class\) '\(t\)\)\)
  \(remove-method \(fdefinition 'my-generic\) \(find-method #'my-generic nil '\(t\) '\(t\)\)\)
@@ -4353,23 +4382,99 @@ Following table enumerates Common Lisp lambda lists and their syntax.\n
 `mon-help-CL-emacs-functions', `mon-help-CL-sequence-predicates',
 `mon-help-CL-bit-byte-bool-logic', `mon-help-CL-stream-keywords',
 `mon-help-CL-slime-keys', `mon-help-CL-swank-functions',
-`mon-help-CL-local-time', `mon-help-CL-lispdoc'.\n►►►"
+`mon-help-CL-local-time', `mon-help-CL-lispdoc'.\n▶▶▶"
   (interactive "i\nP")
   (if (or insertp intrp)
       (mon-help-function-spit-doc 'mon-help-CL-object-CLOS :insertp t)
     (mon-message :msg-spec '(":FUNCTION `mon-help-CL-object-CLOS' " 
                              "-- pass non-nil for optional arg INTRP"))))
 ;;
-;;; :TEST-ME (mon-help-CL-object-CLOS)     
-;;; :TEST-ME (mon-help-CL-object-CLOS t)   
+;;; :TEST-ME (mon-help-CL-object-CLOS)
+;;; :TEST-ME (mon-help-CL-object-CLOS t)
 ;;; :TEST-ME (mon-help-CL-object-CLOS '(t))
+
+;;; ==============================
+;;; :CHANGESET 2446
+;;; :CREATED <Timestamp: #{2011-05-24T12:18:47-04:00Z}#{11212} - by MON KEY>
+;;;###autoload
+(defun mon-help-CL-method-combination (&optional insertp intrp)
+  "
+;; :CL-STANDARD-METHOD-COMBINATION
+ \(defclass c1 \(\)
+   \(\)\)\n
+ \(defclass c2 \(c1\)
+   \(\)\)\n
+ \(defclass c3 \(c2\)
+   \(\)\)\n
+ :around c3                                    ;; most-specific-first
+  :around c2
+   :around c1
+    :before c3 ------------------------------+ ;; most-specific-first
+     :before c2 ---------------------------+ |
+      :before c1 ------------------------+ | |
+        primary c3   -> call-next-method | | | ;; most-specific-first
+         primary c2  -> call-next-method | | |
+          primary c1                     | | |
+      :after c1--------------------------+ | | ;; most-specific-last
+     :after c2 ----------------------------+ |
+    :after c3 -------------------------------+\n
+
+;; :CL-GENERICS-METHODS
+`add-method'
+`call-method'
+`call-next-method'
+`compute-applicable-methods'
+`defgeneric'
+`define-method-combination'
+`defmethod'
+`ensure-generic-function'
+`find-method'
+`function-keywords'
+`method-qualifiers'
+`next-method-p'
+`no-applicable-method'
+`no-next-method'
+`remove-method'
+`generic-function'
+`method'
+
+;; :CL-GENERICS-METHODS-STANDARD-META-OBJECTS
+`method-combination'
+`standard-generic-function'
+`standard-method'
+
+:SEE info node `(ansicl)Generic Functions and Methods'\n
+:SEE-ALSO `mon-help-CL-object-CLOS', `mon-help-CL-symbols',
+`mon-help-CL-sequences', `mon-help-CL-iteration', `mon-help-CL-conses',
+`mon-help-CL-hash-tables', `mon-help-CL-print', `mon-help-CL-streams',
+`mon-help-CL-reader', `mon-help-CL-chars', `mon-help-CL-strings',
+`mon-help-CL-structures', `mon-help-CL-arrays', `mon-help-CL-numbers',
+`mon-help-CL-object-CLOS', `mon-help-CL-control-flow',
+`mon-help-CL-eval-compile', `mon-help-CL-load-compile',
+`mon-help-CL-environment', `mon-help-CL-package-functions',
+`mon-help-CL-intern-symbol', `mon-help-CL-sharpsign-syntax', `mon-help-CL-loop',
+`mon-help-CL-time', `mon-help-CL-error-condition-restart',
+`mon-help-CL-emacs-functions', `mon-help-CL-sequence-predicates',
+`mon-help-CL-bit-byte-bool-logic', `mon-help-CL-stream-keywords',
+`mon-help-CL-slime-keys', `mon-help-CL-swank-functions',
+`mon-help-CL-local-time', `mon-help-CL-lispdoc'.\n▶▶▶"
+  (interactive "i\nP")
+  (if (or insertp intrp)
+      (mon-help-function-spit-doc 'mon-help-CL-method-combination :insertp t)
+    ;; (mon-message :msg-spec '(":FUNCTION `mon-help-CL-method-combination' " 
+    ;;                          "-- pass non-nil for optional arg INTRP"))))
+    (mon-help-message-intrp "mon-help-CL-method-combination")))
+;;
+;;; :TEST-ME (mon-help-CL-method-combination )
+;;; :TEST-ME (mon-help-CL-method-combination t)
+;;; :TEST-ME (apply #'mon-help-CL-method-combination '(t))
 
 
 ;;; ==============================
 ;;;###autoload
 (defun mon-help-CL-control-flow (&optional insertp intrp)
   "
-;; CL-CONTROL-FLOW
+;; :CL-CONTROL-FLOW
 `apply'
 `defun'
 `fdefinition'
@@ -4453,7 +4558,7 @@ Following table enumerates Common Lisp lambda lists and their syntax.\n
 `mon-help-CL-emacs-functions', `mon-help-CL-sequence-predicates',
 `mon-help-CL-bit-byte-bool-logic', `mon-help-CL-stream-keywords',
 `mon-help-CL-slime-keys', `mon-help-CL-swank-functions',
-`mon-help-CL-local-time', `mon-help-CL-lispdoc'.\n►►►"
+`mon-help-CL-local-time', `mon-help-CL-lispdoc'.\n▶▶▶"
   (interactive "i\nP")
   (if (or insertp intrp)
       (mon-help-function-spit-doc 'mon-help-CL-control-flow :insertp t)
@@ -4512,7 +4617,7 @@ Following table enumerates Common Lisp lambda lists and their syntax.\n
 `mon-help-CL-emacs-functions', `mon-help-CL-sequence-predicates',
 `mon-help-CL-bit-byte-bool-logic', `mon-help-CL-stream-keywords',
 `mon-help-CL-slime-keys', `mon-help-CL-swank-functions',
-`mon-help-CL-local-time', `mon-help-CL-lispdoc'.\n►►►"
+`mon-help-CL-local-time', `mon-help-CL-lispdoc'.\n▶▶▶"
   (interactive "i\nP")
   (if (or insertp intrp)
       (mon-help-function-spit-doc 'mon-help-CL-eval-compile :insertp t)
@@ -4553,7 +4658,7 @@ Following table enumerates Common Lisp lambda lists and their syntax.\n
 `mon-help-CL-emacs-functions', `mon-help-CL-sequence-predicates',
 `mon-help-CL-bit-byte-bool-logic', `mon-help-CL-stream-keywords',
 `mon-help-CL-slime-keys', `mon-help-CL-swank-functions',
-`mon-help-CL-local-time', `mon-help-CL-lispdoc'.\n►►►"
+`mon-help-CL-local-time', `mon-help-CL-lispdoc'.\n▶▶▶"
   (interactive "i\nP")
   (if (or insertp intrp)
       (mon-help-function-spit-doc 'mon-help-CL-load-compile :insertp t)
@@ -4613,7 +4718,7 @@ Following table enumerates Common Lisp lambda lists and their syntax.\n
 `mon-help-CL-emacs-functions', `mon-help-CL-sequence-predicates',
 `mon-help-CL-bit-byte-bool-logic', `mon-help-CL-stream-keywords',
 `mon-help-CL-slime-keys', `mon-help-CL-swank-functions',
-`mon-help-CL-local-time', `mon-help-CL-lispdoc'.\n►►►"
+`mon-help-CL-local-time', `mon-help-CL-lispdoc'.\n▶▶▶"
 (interactive "i\nP")
   (if (or insertp intrp)
       (mon-help-function-spit-doc 'mon-help-CL-environment :insertp t)
@@ -4672,7 +4777,7 @@ Following table enumerates Common Lisp lambda lists and their syntax.\n
 `mon-help-CL-emacs-functions', `mon-help-CL-sequence-predicates',
 `mon-help-CL-bit-byte-bool-logic', `mon-help-CL-stream-keywords',
 `mon-help-CL-slime-keys', `mon-help-CL-swank-functions',
-`mon-help-CL-local-time', `mon-help-CL-lispdoc'.\n►►►"
+`mon-help-CL-local-time', `mon-help-CL-lispdoc'.\n▶▶▶"
   (interactive "i\nP")
   (if (or insertp intrp)
       (mon-help-function-spit-doc 'mon-help-CL-package-functions :insertp t)
@@ -4721,7 +4826,7 @@ Following table enumerates Common Lisp lambda lists and their syntax.\n
 `mon-help-CL-emacs-functions', `mon-help-CL-sequence-predicates',
 `mon-help-CL-bit-byte-bool-logic', `mon-help-CL-stream-keywords',
 `mon-help-CL-slime-keys', `mon-help-CL-swank-functions',
-`mon-help-CL-local-time', `mon-help-CL-lispdoc'.\n►►►"
+`mon-help-CL-local-time', `mon-help-CL-lispdoc'.\n▶▶▶"
   (interactive "i\nP")
   (if (or insertp intrp)
       (mon-help-function-spit-doc 'mon-help-CL-intern-symbol :insertp t)
@@ -4739,7 +4844,8 @@ Following table enumerates Common Lisp lambda lists and their syntax.\n
 ;;;###autoload
 (defun mon-help-CL-types (&optional insertp intrp)
   "The Common Lisp hierarhy of types.\n
-;; :COMMON-LISP-TYPE-HIERARCHY\n
+;; :COMMON-LISP-TYPE-HIERARCHY :SOURCE :FILE ecl/src/doc/types-and-classes\n
+
 T
 *	nil           ;; all types
 *	boolean       ;; ≣ \(MEMBER t nil\)
@@ -4846,8 +4952,101 @@ C		two-way-stream\\n
 			simple-warning \(warning simple-condition\)
 			simple-error \(error simple-condition\)
 			simple-type-error \(type-error simple-condition\)
-:SOURCE :FILE ecl/src/doc/types-and-classes\n
+
+;; :CL-TYPE-CLASS-INTERSECTION
+ ,----
+ | The object system maps the space of classes into the space of types.
+ | Every class that has a proper name has a corresponding type with the
+ | same name. 
+ `---- :SEE info node `(anscil)Integrating Types and Classes'
+t
+`symbol'
+`null'
+`hash-table'
+`package'
+`pathname'
+`logical-pathname'
+`random-state'
+`readtable'
+`character'
+
+;; :CL-CLASS-CLASSES
+`class'
+`built-in-class'
+`standard-class'
+`standard-generic-function'
+`standard-method'
+`standard-object'
+`structure-class'
+`structure-object'
+`function'
+`generic-function'
+`method'
+`method-combination'
+
+;; :CL-NUMBER-CLASSES
+`complex'
+`float'
+`integer'
+`number'
+`ratio'
+`rational'
+`real'
+
+;; :CL-SEQUENCE-CLASSES
+`cons'
+`list'
+`array'
+`bit-vector'
+`sequence'
+`string'
+`vector'
+
+;; :CL-STREAM-CLASSES
+`stream'
+`string-stream'
+`synonym-stream'
+`two-way-stream'
+`broadcast-stream'
+`concatenated-stream'
+`echo-stream'
+`file-stream'
+`restart'
+
+;; :CL-CONDITION-CLASSES
+`arithmetic-error'
+`cell-error'
+`condition'
+`control-error'
+`division-by-zero'
+`end-of-file'
+`error'
+`file-error'
+`floating-point-inexact'
+`floating-point-invalid-operation'
+`floating-point-overflow'
+`floating-point-underflow'
+`package-error'
+`parse-error'
+`print-not-readable'
+`program-error'
+`reader-error'
+`serious-condition'
+`simple-condition'
+`simple-error'
+`simple-type-error'
+`simple-warning'
+`storage-condition'
+`stream-error'
+`style-warning'
+`type-error'
+`unbound-slot'
+`unbound-variable'
+`undefined-function'
+`warning'
+
 :SEE info node `(ansicl)Type Specifiers'\n
+:SEE info node `(anscil)Integrating Types and Classes'
 :SEE-ALSO `mon-help-CL-type-declarations', `mon-help-CL-symbols',
 `mon-help-CL-sequences', `mon-help-CL-iteration', `mon-help-CL-conses',
 `mon-help-CL-hash-tables', `mon-help-CL-print', `mon-help-CL-streams',
@@ -4861,7 +5060,7 @@ C		two-way-stream\\n
 `mon-help-CL-emacs-functions', `mon-help-CL-sequence-predicates',
 `mon-help-CL-bit-byte-bool-logic', `mon-help-CL-stream-keywords',
 `mon-help-CL-slime-keys', `mon-help-CL-swank-functions',
-`mon-help-CL-local-time', `mon-help-CL-lispdoc'.\n►►►"
+`mon-help-CL-local-time', `mon-help-CL-lispdoc'.\n▶▶▶"
   (interactive "i\nP")
   (if (or insertp intrp)
       (mon-help-function-spit-doc 'mon-help-CL-types :insertp t)
@@ -4903,7 +5102,7 @@ C		two-way-stream\\n
 `mon-help-CL-emacs-functions', `mon-help-CL-sequence-predicates',
 `mon-help-CL-bit-byte-bool-logic', `mon-help-CL-stream-keywords',
 `mon-help-CL-slime-keys', `mon-help-CL-swank-functions',
-`mon-help-CL-local-time', `mon-help-CL-lispdoc'.\n►►►"
+`mon-help-CL-local-time', `mon-help-CL-lispdoc'.\n▶▶▶"
   (interactive "i\nP")
   (if (or insertp intrp)
       (mon-help-function-spit-doc 'mon-help-CL-type-declarations :insertp t)
@@ -4940,6 +5139,7 @@ C		two-way-stream\\n
 `#|'   ;<SHARPSIGN-VERTICAL-BAR>      balanced Comment
 `#+'   ;<SHARPSIGN-PLUS>              read-time Conditional
 `#-'   ;<SHARPSIGN-MINUS>             read-time Conditional\n
+:ALIASED-BY `mon-help-CL-reader-macro-syntax'\n
 :SEE info node `(ansicl)Sharpsign'
 :SEE info node `(ansicl)Features'
 :SEE info node `(ansicl)Use of Read-Time Conditionals'\n
@@ -4955,7 +5155,7 @@ C		two-way-stream\\n
 `mon-help-CL-emacs-functions', `mon-help-CL-sequence-predicates',
 `mon-help-CL-bit-byte-bool-logic', `mon-help-CL-stream-keywords',
 `mon-help-CL-slime-keys', `mon-help-CL-swank-functions',
-`mon-help-CL-local-time', `mon-help-CL-lispdoc'.\n►►►"
+`mon-help-CL-local-time', `mon-help-CL-lispdoc'.\n▶▶▶"
   (interactive "i\nP")
   (if (or insertp intrp)
       (mon-help-function-spit-doc 'mon-help-CL-sharpsign-syntax :insertp t)
@@ -5155,7 +5355,7 @@ finding) and the relevant html file names for the relevant hspec nodes.\n
 `mon-help-CL-emacs-functions', `mon-help-CL-sequence-predicates',
 `mon-help-CL-bit-byte-bool-logic', `mon-help-CL-stream-keywords',
 `mon-help-CL-slime-keys', `mon-help-CL-swank-functions',
-`mon-help-CL-local-time', `mon-help-CL-lispdoc'.\n►►►"
+`mon-help-CL-local-time', `mon-help-CL-lispdoc'.\n▶▶▶"
   (interactive "i\nP")
   (if (or insertp intrp)
       (mon-help-function-spit-doc 'mon-help-CL-format :insertp t)
@@ -5256,7 +5456,7 @@ Is roughly equivalent to:
 :SEE info node `(ansicl)Examples of FORMAT'\n
 :SEE-ALSO `slime-format-string-expand', `mon-help-CL-format',
 `mon-help-CL-streams', `mon-help-CL-print', `mon-help-CL-reader',
-`mon-help-CL-strings', `mon-help-CL-chars'.\n►►►"
+`mon-help-CL-strings', `mon-help-CL-chars'.\n▶▶▶"
   (interactive "i\nP")
   (if (or insertp intrp)
       (mon-help-function-spit-doc 'mon-help-CL-format-usage :insertp t)
@@ -6419,7 +6619,7 @@ Is roughly equivalent to:
 `slime-check-symbol-at-point'
 
 :SEE :FILE slime.el
-:SEE-ALSO `mon-help-swank-functions', `mon-help-slime-keys'.\n►►►"
+:SEE-ALSO `mon-help-swank-functions', `mon-help-slime-keys'.\n▶▶▶"
   (interactive "i\nP")
   (if (or insertp intrp)
       (mon-help-function-spit-doc 'mon-help-slime-functions :insertp t)
@@ -6556,7 +6756,7 @@ C-x 4 .		`slime-edit-definition-other-window'\n
 `mon-help-CL-time', `mon-help-CL-local-time', `mon-help-CL-loop',
 `mon-help-CL-do', `mon-help-CL-file-dir-functions', `mon-help-CL-pkgs',
 `mon-help-CL-sequence-predicates', `mon-help-CL-symbols', `mon-help-CL-lispdoc',
-`mon-help-CL-swank-functions', `mon-purge-slime-swank-port-file'.\n►►►"
+`mon-help-CL-swank-functions', `mon-purge-slime-swank-port-file'.\n▶▶▶"
 (interactive "i\nP")
   (if (or insertp intrp)
       (mon-help-function-spit-doc 'mon-help-CL-slime-keys :insertp t)
@@ -6600,7 +6800,7 @@ C-x 4 .		`slime-edit-definition-other-window'\n
 :ALIASED-BY `mon-help-swank-functions'\n
 :SEE-ALSO `mon-help-CL-slime-keys', `mon-keybind-slime', `mon-slime-setup-init',
 `mon-help-CL-file-dir-functions', `mon-help-CL-sequence-predicates',
-`mon-help-CL-symbols', `mon-help-CL-lispdoc'.\n►►►"
+`mon-help-CL-symbols', `mon-help-CL-lispdoc'.\n▶▶▶"
   (interactive "i\nP")
   (if (or insertp intrp)
       (mon-help-function-spit-doc 'mon-help-CL-swank-functions :insertp t)
@@ -6751,7 +6951,7 @@ RFC 1123 timestring format.
 `mon-help-iso-8601', `mon-help-CL-time', `mon-help-CL-loop', `mon-help-CL-do',
 `mon-help-CL-file-dir-functions', `mon-help-CL-pkgs',
 `mon-help-CL-sequence-predicates', `mon-help-CL-symbols', `mon-help-CL-lispdoc',
-`mon-help-CL-swank-functions', `mon-help-CL-slime-keys'.\n►►►"
+`mon-help-CL-swank-functions', `mon-help-CL-slime-keys'.\n▶▶▶"
   (interactive "i\nP")
   (if (or insertp intrp)
       (mon-help-function-spit-doc 'mon-help-CL-local-time :insertp t)
@@ -6829,7 +7029,7 @@ the example directory of cl-irc:
 :SEE-ALSO `mon-wget-freenode-lisp-logs', `mon-help-CL-local-time',
 `mon-help-CL-loop', `mon-help-CL-time', `mon-help-CL-file-dir-functions',
 `mon-help-CL-minion', `mon-help-CL-symbols', `mon-help-CL-slime-keys',
-`mon-help-CL-swank-functions'.\n►►►"
+`mon-help-CL-swank-functions'.\n▶▶▶"
   (interactive "i\nP")
   (if (or insertp intrp)
       (mon-help-function-spit-doc 'mon-help-CL-minion :insertp t)
@@ -8883,7 +9083,7 @@ SEE-ALSO `mon-help-utils-CL-loadtime', `mon-after-mon-utils-loadtime',
 `mon-bind-cifs-vars-at-loadtime',
 `mon-bind-doc-help-proprietery-vars-at-loadtime',
 `mon-bind-iptables-vars-at-loadtime', `mon-set-register-tags-loadtime',
-`mon-CL-cln-colon-swap'.\n►►►"
+`mon-CL-cln-colon-swap'.\n▶▶▶"
   (when (or (intern-soft "*clhs-symbol-v3-or-v7*")
             (boundp '*clhs-symbol-v3-or-v7*))
     (setq w-msg-user t)
@@ -8908,7 +9108,7 @@ value of `common-lisp-hyperspec-root'.\n
 :CALLED-BY `mon-help-CL-lispdoc'\n
 :SEE-ALSO `common-lisp-hyperspec-format-characters',
 `common-lisp-hyperspec-reader-macros', `common-lisp-hyperspec-root',
-`mon-set-common-lisp-hspec-init'.\n►►►")
+`mon-set-common-lisp-hspec-init'.\n▶▶▶")
 ;;;
 (unless (bound-and-true-p *mon-help-CL-symbols*)
   (setq *mon-help-CL-symbols* (make-hash-table :test #'equal :size 1024))
@@ -8967,7 +9167,7 @@ java-applet e.g.\n
 `mon-help-CL-loop', `mon-help-CL-do', `mon-help-CL-local-time',
 `mon-help-CL-swank-functions', `mon-help-CL-slime-keys',
 `common-lisp-hyperspec-root', `mon-help-utils-CL-loadtime',
-`mon-purge-cl-symbol-buffers-on-load', `mon-set-common-lisp-hspec-init'.\n►►►"
+`mon-purge-cl-symbol-buffers-on-load', `mon-set-common-lisp-hspec-init'.\n▶▶▶"
   (interactive "\i\nP\np")
   ;;; :WAS (let ((rd-cl-sym (cond ((and cl-symbol-string (stringp cl-symbol-string))
   ;;;                         (member cl-symbol-string *mon-help-CL-symbols*)
@@ -9025,7 +9225,7 @@ Prompt for the type of search type for lispdoc.com as either:
 `common-lisp-hyperspec-symbol-table' `quicklisp-system-complete',
 `mon-help-CL-pkgs', `mon-help-CL-file-dir-functions', `mon-help-CL-time',
 `mon-help-CL-loop', `mon-help-CL-do', `mon-help-CL-local-time',
-`mon-help-CL-swank-functions', `mon-help-CL-slime-keys'.\n►►►"
+`mon-help-CL-swank-functions', `mon-help-CL-slime-keys'.\n▶▶▶"
   (interactive)
   (let* ((symbol-chk "[A-Za-z0-9*%+-]+") ;; ! not testing scheme         
          (msg-pfx ":FUNCTION `mon-CL-lispdoc' ")
@@ -9073,10 +9273,10 @@ Prompt for the type of search type for lispdoc.com as either:
 (defun mon-cln-ansi-info (start end)
   "Replace formatting chars from ansicl info node from START to END.\n
 Match car of elts in `*regexp-ansicl-info*' replace with cdr.\n
-:EXAMPLE\n;; In following example the region delimited by `►` and `◄` is cleaned.\n
+:EXAMPLE\n;; In following example the region delimited by `▶` and `◀` is cleaned.\n
 \(mon-with-inhibit-buffer-read-only
   \(mon-cln-ansi-info \(mon-g2be -1 t\) \(mon-g2be 1 t\)\)\)\n
-►\n
+▶\n
 The \"extended\" ‘loop’ form:
 
  -- Macro: loop [↓name-clause] {↓variable-clause}* {↓main-clause}* →
@@ -9089,7 +9289,7 @@ The \"extended\" ‘loop’ form:
 ▷ The square root of 4 is 2.
 ▷ Number: done↩
 → NIL
-\n◄\n
+\n◀\n
 :NOTE The above formatting is from the loop section Jesper Harder's dpans2texi.\n
 :SEE info node `(ansicl)loop'\n
 :SEE-ALSO `mon-cln-freenode-log' `mon-cln-BIG-whitespace', `mon-cln-ansi-info',
@@ -9106,7 +9306,7 @@ The \"extended\" ‘loop’ form:
 `mon-cln-spc-tab-eol', `mon-cln-tgm-xml-LF', `mon-cln-trail-whitespace',
 `mon-cln-ulan', `mon-cln-uniq-lines', `mon-cln-up-colon', `mon-cln-whitespace',
 `mon-cln-wiki', `mon-cln-xml-escapes', `mon-cln-xml<-parsed',
-`mon-cln-xml<-parsed-strip-nil'.\n►►►"
+`mon-cln-xml<-parsed-strip-nil'.\n▶▶▶"
   (interactive "r")
   (save-excursion 
     (save-restriction
@@ -9126,7 +9326,7 @@ The \"extended\" ‘loop’ form:
     (dosublists . 1)
     (make-space-instance . 2))
   "Consed list of Common-Lisp function indentation rules.\n
-:SEE-ALSO `mon-lisp-set-indent-hook', `mon-lisp-set-indent'.\n►►►"
+:SEE-ALSO `mon-lisp-set-indent-hook', `mon-lisp-set-indent'.\n▶▶▶"
   :type '(alist :key-type symbol :value-type integer)
   :group 'mon-doc-help-CL
   :group 'mon-base)

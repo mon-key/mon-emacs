@@ -24,9 +24,9 @@
 ;; national DBs but are not headwords and which do not fall under another
 ;; broader class.
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;;
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;;
@@ -163,25 +163,31 @@
 ;;; ==============================
 ;;; :MODIFICATIONS <Timestamp: Wednesday July 29, 2009 @ 03:44.51 PM  - by MON KEY>
 (defconst naf-mode-timestamp-flag 
-  (concat "\\(<Timestamp:\\)\\(.*\\)\\( - by "
-          (regexp-opt
-           (let ((mon-l (number-sequence 1 9))
-                 (bug-l (number-sequence 1 7))
-                 rtn-l)
-             (setq rtn-l '("Ebay"))
-             (dolist (i mon-l)
-               (setq rtn-l (cons (cadr (assoc i *MON-NAME*)) rtn-l)))
-             (dolist (i bug-l)
-               (setq rtn-l (cons (cadr (assoc i *BUG-NAME*)) rtn-l)))
-             rtn-l)
-           'paren)
-          ">\\)")
+  (let ((num-l (cond 
+                (IS-MON-P (number-sequence 1 9))
+                (IS-BUG-P (number-sequence 1 7))
+                (t nil)))
+        (nm-l (cond 
+               (IS-MON-P *MON-NAME*)
+               (IS-BUG-P (let ((ca (copy-alist *BUG-NAME*)))
+                           (assq-delete-all 6 ca)
+                           (push '(6 "") ca)))
+               (t nil)))
+        (rtn-l '("Ebay")))
+    (setq rtn-l          
+          (if (and num-l nm-l)
+              (dolist (i num-l rtn-l)
+                (setq rtn-l (cons (cadr (assq i nm-l)) rtn-l)))
+            rtn-l))
+    (setq rtn-l (regexp-opt rtn-l 'paren))
+    (setq rtn-l (concat "\\(<Timestamp:\\)\\(.*\\)\\( - by " rtn-l ">\\)")))
+                  
   "*Regexp matches name portion \" - NAME\" of time stamp.\n
 Used for fontlocking of timestamps generated with `mon-stamp'.
 :EXAMPLE\n\n<Timestamp: Wednesday July 29, 2009 @ 03:32.43 PM  - by MON KEY>\n
 :USED-IN `naf-mode'.\n
 :SEE-ALSO `mon-timestamp', `mon-accessed-time-stamp', `mon-accessed-stamp',
-`*mon-timestamp-cond*', `naf-mode-accessed-by-flag'.\n►►►")
+`*mon-timestamp-cond*', `naf-mode-accessed-by-flag'.\n▶▶▶")
 ;;
 ;;;(progn (makunbound 'naf-mode-timestamp-flag) 
 ;;;       (unintern 'naf-mode-timestamp-flag) )
@@ -189,17 +195,23 @@ Used for fontlocking of timestamps generated with `mon-stamp'.
 ;;; ==============================
 ;;; :MODIFICATIONS <Timestamp: Wednesday July 29, 2009 @ 03:44.51 PM  - by MON KEY>
 (defconst naf-mode-accessed-by-flag
-  (concat " - "
-          (regexp-opt
-           (let ((mon-l (number-sequence 1 9))
-                 (bug-l (number-sequence 1 7))
-                 rtn-l)
-             (dolist (i mon-l)
-               (setq rtn-l (cons (cadr (assoc i *MON-NAME*)) rtn-l)))
-             (dolist (i bug-l)
-               (setq rtn-l (cons (cadr (assoc i *BUG-NAME*)) rtn-l)))
-             rtn-l)
-           'paren))
+  (let ((num-l (cond 
+                (IS-MON-P (number-sequence 1 9))
+                (IS-BUG-P (number-sequence 1 7))
+                (t nil)))
+        (nm-l (cond 
+               (IS-MON-P *MON-NAME*)
+               (IS-BUG-P (let ((ca (copy-alist *BUG-NAME*)))
+                           (assq-delete-all 6 ca)
+                           (push '(6 "") ca)))
+               (t nil)))
+        (rtn-l '()))
+    (setq rtn-l
+          (if (and num-l nm-l)
+              (dolist (i num-l rtn-l)
+                (setq rtn-l (cons (cadr (assq i nm-l)) rtn-l)))
+            (list "")))
+    (concat " - " (regexp-opt rtn-l 'paren))) 
   "*Regexp to match name portion \" - NAME\" of accessed stamp in `naf-mode'.\n
 Used for fontlocking of timestamps generated with `mon-accessed-stamp'.\n
 :EXAMPLE\n\n\(let \(gthr-eg\)
@@ -213,7 +225,7 @@ accessed: Wednesday July 29, 2009 - MON
 accessed: #{2010-04-01T17:35:01-04:00Z}#{10134} - MON KEY
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^!!!!!!!\n
 :SEE-ALSO `mon-stamp', `mon-timestamp', `mon-accessed-time-stamp',
-`*mon-timestamp-cond*', `naf-mode-timestamp-flag'.\n►►►")
+`*mon-timestamp-cond*', `naf-mode-timestamp-flag'.\n▶▶▶")
 ;;
 ;;,---- :UNCOMMENT-TO-TEST
 ;;| (let ((nmabf (mapconcat 'identity 
@@ -242,7 +254,7 @@ accessed: #{2010-04-01T17:35:01-04:00Z}#{10134} - MON KEY
 :NOTE Specific to a limited set of naf-mode related URLs.\n
 :FACE-FONT-LOCKING-WITH `naf-mode-field-url-flag-face'.
 :FACE-DOCUMENTED-IN `naf-mode-field-url-flag-face'.
-:SEE-ALSO `*regexp-wrap-url-schemes*'.\n►►►")
+:SEE-ALSO `*regexp-wrap-url-schemes*'.\n▶▶▶")
 ;;
 ;;; :TEST-ME (search-forward-regexp naf-mode-url-flag)
 ;;; http://www.bubba.com/bubba.html
@@ -266,7 +278,7 @@ Capture groups \\2{...}\\4 catch one URL on line BOL->EOL with/out traiiling WSP
 e.g. \"^(URL {...}')\" _or_ \"^(URL {...}')    \".
 :FACE-FONT-LOCKING-WITH `naf-mode-delimit-url-flag-face'
 :FACE-DOCUMENTED-IN `naf-mode-delimit-url-flag-fface'.\n
-:SEE-ALSO `naf-mode-url-flag',`*regexp-wrap-url-schemes*'.\n►►►")
+:SEE-ALSO `naf-mode-url-flag',`*regexp-wrap-url-schemes*'.\n▶▶▶")
 ;;
 ;;; :TEST-ME (with-temp-buffer 
 ;;;            (save-excursion (insert "(URL `http://www.google.com')"))
@@ -298,7 +310,7 @@ e.g. \"^(URL {...}')\" _or_ \"^(URL {...}')    \".
 :EXAMPLEn 80126308\nno. 80126308\nn. 80126308\nno 94031775\nn 2005065776\nunk84240548
 \[500006383]\nFRBNF12656015\nFRBNF32759170\n
 :USED-IN `naf-mode'.\n
-:SEE-ALSO .\n►►►")
+:SEE-ALSO .\n▶▶▶")
 ;;
 ;;;(progn (makunbound 'naf-mode-db-numbers-flag) 
 ;;;       (unintern 'naf-mode-db-numbers-flag) )
@@ -342,7 +354,7 @@ EXAMPLE:\n\n\(search-forward-regexp naf-mode-db-field-flags-bnf nil t 3\)\)\n
 forme internationale\nMise à jour :\nmasculin\nféminin\n
 Fontlocking provided by `naf-mode-db-field-entry-bnf-fface'.\n
 :USED-IN `naf-mode'.\n
-:SEE-ALSO `naf-db-field-flags'\n►►►"))
+:SEE-ALSO `naf-db-field-flags'\n▶▶▶"))
 ;;
 ;;;(progn (makunbound 'naf-mode-db-field-flags-bnf)
 ;;;       (unintern   'naf-mode-db-field-flags-bnf) )
@@ -361,7 +373,7 @@ Fontlocking provided by `naf-mode-db-field-entry-bnf-fface'.\n
 db-field names but occur secondary place in those fields.\n
 :EXAMPLE\n\nforme internationale\nMise à jour :\nmasculin\nféminin\nmale\nfemale\n
 :USED-IN `naf-mode'.\n
-:SEE-ALSO .\n►►►"))
+:SEE-ALSO .\n▶▶▶"))
 ;;
 ;;;(progn (makunbound 'naf-mode-db-field-flags) 
 ;;;       (unintern 'naf-mode-db-field-flags) )
@@ -391,7 +403,7 @@ db-field names but occur secondary place in those fields.\n
   "*Keyword list of terms used to designate an identities alternative identifiers.\n
 :REGEXPS-IN `naf-mode-alternate-name-flags'
 :USED-IN `naf-mode'.\n
-:SEE-ALSO `naf-mode-alternate-name-flags'.\n►►►")
+:SEE-ALSO `naf-mode-alternate-name-flags'.\n▶▶▶")
 ;;
 (defconst naf-mode-alternate-name-flags 
   (concat "\\<" (regexp-opt naf-alternate-name-flags 'paren))
@@ -403,7 +415,7 @@ an entities authoritative name form.\n
 Terms typically indicate variant name forms or otherwise help to identify
 alternative, pseudo. or pen names.\n
 :USED-IN `naf-mode'.\n
-:SEE-ALSO .\n►►►")
+:SEE-ALSO .\n▶▶▶")
 ;;
 ;;;(progn (makunbound 'naf-mode-alternate-name-flags) 
 ;;        (unintern 'naf-mode-alternate-name-flags) )
@@ -444,7 +456,7 @@ alternative, pseudo. or pen names.\n
 :REGEXPS-IN `*naf-mode-x-of*'
 :FACE-FONT-LOCKING-WITH `naf-mode-alternate-name-face'
 :FACE-DOCUMENTED-IN `naf-mode-alternate-name-fface'
-:SEE-ALSO `*naf-mode-x-of-ulan-bol*', `*naf-mode-ulan-rltd-ppl-corp*'.\n►►►")
+:SEE-ALSO `*naf-mode-x-of-ulan-bol*', `*naf-mode-ulan-rltd-ppl-corp*'.\n▶▶▶")
 ;;
 (defconst *naf-mode-x-of*
   (concat "\\<" (regexp-opt *naf-x-of* 'paren))
@@ -459,7 +471,7 @@ delimited by whitespace at BOW.  Whereas the keywords of
 postion. Likewise, those of *naf-mode-ulan-rltd-ppl-corp* are identified as
 having the capitalized form ':X-OF'\n
 :NOTE These are primarily from ULAN.\n
-:SEE-ALSO .\n►►►")
+:SEE-ALSO .\n▶▶▶")
 ;;
 ;;;(progn (makunbound '*naf-mode-x-of*) (unintern '*naf-mode-x-of*) )
 

@@ -24,13 +24,13 @@
 ;; e.g. successor to the SMB (Server Message Block) protocol and the Samba.
 ;; :SEE (man "mount.cifs") :SEE (man "umount.cifs") :SEE (man "samba")
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;; `mon-map-cifs-domain->local-mount', `mon-get-cifs-credentials',
 ;; `mon-build-cifs-credentials', `mon-get-cifs-mount-points',
 ;; `mon-mount-cifs', `mon-unmount-cifs', `mon-bind-cifs-vars-at-loadtime',
 ;; `mon-inform-cifs-credentials-unbound', `mon-verify-CIFS-credentials',
 ;; `mon-spit-auth-source-debug->var',
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;;
@@ -178,7 +178,7 @@ _without_ the optinal ARG NO-MAP-MOUNT-POINTS. Additional details regarding
 possible formats for the alist key `the-mnt-maps' are in docstrings of:
 :SEE `mon-mount-cifs'\n:SEE `mon-map-cifs-domain->local-mount'.
 :CALLED-BY `*mon-CIFS-domain*',`*mon-CIFS-mount-root*',`*mon-CIFS-mount-points*'.
-:SEE-ALSO `mon-unmount-cifs'.\n►►►")
+:SEE-ALSO `mon-unmount-cifs'.\n▶▶▶")
 ;;
 (unless (bound-and-true-p *mon-CIFS-misc-path-alist*)
   ;; Build some same safe dummy values for `*mon-CIFS-misc-path-alist*' if not present.
@@ -204,7 +204,7 @@ and value is a string nameing a protocol or port number apropos your site local
 CIFS configuration.\n
 :SEE-ALSO `mon-mount-cifs', `mon-unmount-cifs', `mon-get-cifs-credentials',
 `mon-bind-cifs-vars-at-loadtime', `*mon-CIFS-domain*', `*mon-CIFS-user*',
-`*mon-CIFS-pass*'.\n►►►")
+`*mon-CIFS-pass*'.\n▶▶▶")
 ;;
 ;;; :TEST-ME (assoc 'cifs auth-source-protocols)
 
@@ -215,7 +215,7 @@ CIFS configuration.\n
 (defvar *mon-CIFS-workgroup* nil
   "The CIFS workgroup you wish to engage.\n
 :EXAMPLE\n\n
-:SEE-ALSO .\n►►►")
+:SEE-ALSO .\n▶▶▶")
 
 ;;; ==============================
 ;;; :CREATED <Timestamp: #{2010-01-05T16:22:38-05:00Z}#{10012} - by MON>
@@ -230,7 +230,7 @@ to evaluate the following on the w32 machine:\n
 :SEE `*mon-CIFS-mount-points*' for additional discussion.
 :SEE-ALSO `mon-mount-cifs', `mon-unmount-cifs',
 `mon-bind-cifs-vars-at-loadtime', `mon-get-cifs-credentials',
-`*mon-CIFS-misc-path-alist*',`*mon-CIFS-auth-protocol*'.\n►►►")
+`*mon-CIFS-misc-path-alist*',`*mon-CIFS-auth-protocol*'.\n▶▶▶")
 ;;
 ;;; :TEST-ME *mon-CIFS-domain*
 ;;
@@ -242,7 +242,7 @@ to evaluate the following on the w32 machine:\n
   "*CIFS username to access `*mon-CIFS-domain*' using `*mon-CIFS-pass*'.\n
 :SEE-ALSO `mon-mount-cifs', `mon-unmount-cifs', `mon-get-cifs-credentials',
 `mon-bind-cifs-vars-at-loadtime', `*mon-CIFS-auth-protocol*',
-`*mon-CIFS-pass*'.\n►►►")
+`*mon-CIFS-pass*'.\n▶▶▶")
 ;;
 ;;; :TEST-ME *mon-CIFS-user*
 ;;
@@ -253,7 +253,7 @@ to evaluate the following on the w32 machine:\n
 (defvar *mon-CIFS-pass* nil
   "*CIFS password of `*mon-CIFS-user*' for accessing `*mon-CIFS-domain*'.\n
 :SEE-ALSO `mon-mount-cifs', `mon-unmount-cifs', `mon-get-cifs-credentials',
-`mon-bind-cifs-vars-at-loadtime', `*mon-CIFS-misc-path-alist*'.\n►►►")
+`mon-bind-cifs-vars-at-loadtime', `*mon-CIFS-misc-path-alist*'.\n▶▶▶")
 ;;
 ;;; :TEST-ME *mon-CIFS-pass*
 ;;
@@ -266,7 +266,7 @@ to evaluate the following on the w32 machine:\n
 :SEE-ALSO `mon-mount-cifs', `mon-unmount-cifs',
 `mon-map-cifs-domain->local-mount', `mon-bind-cifs-vars-at-loadtime',
 `*mon-CIFS-misc-path-alist*', `*mon-CIFS-domain*', `*mon-CIFS-user*',
-`*mon-CIFS-pass*'.\n►►►")
+`*mon-CIFS-pass*'.\n▶▶▶")
 ;;
 ;;; :TEST-ME *mon-CIFS-mount-root*
 ;;
@@ -282,7 +282,7 @@ When value is a string the buffer will take this name.\n
  \"*MON-CIFS-VARS-UNBOUND*\".\n
 :SEE-ALSO `mon-mount-cifs', `mon-unmount-cifs', `mon-verify-cifs-credentials',
 `mon-bind-cifs-vars-at-loadtime', `mon-get-cifs-credentials',
-`mon-build-cifs-credentials', `*mon-CIFS-user*', `*mon-CIFS-pass*'.\n►►►")
+`mon-build-cifs-credentials', `*mon-CIFS-user*', `*mon-CIFS-pass*'.\n▶▶▶")
 ;;
 (unless (bound-and-true-p *mon-CIFS-vars-unbound*)
   (setq *mon-CIFS-vars-unbound*
@@ -322,7 +322,7 @@ section of that `mon-map-cifs-domain->local-mount's docstring.\n
 :SEE-ALSO `mon-mount-cifs', `mon-unmount-cifs', `mon-get-cifs-credentials',
 `mon-bind-cifs-vars-at-loadtime', `mon-build-cifs-credentials',
 `mon-get-cifs-mount-points', `*mon-CIFS-misc-path-alist*', `*mon-CIFS-mount-points*',
-`*mon-CIFS-auth-protocol*', `*mon-CIFS-user*', `*mon-CIFS-pass*'.\n►►►")
+`*mon-CIFS-auth-protocol*', `*mon-CIFS-user*', `*mon-CIFS-pass*'.\n▶▶▶")
 ;;
 ;;; :TEST-ME *mon-CIFS-mount-points*
 ;;; :TEST-ME (cdr (assoc 'HG-Repos *mon-CIFS-mount-points*))
@@ -361,7 +361,7 @@ repeatedly evaluate this loop substituting the optional args where needed and
 :SEE-ALSO `mon-get-cifs-credentials' `mon-build-cifs-credentials',
 `mon-get-cifs-mount-points', `mon-bind-cifs-vars-at-loadtime', `mon-mount-cifs',
 `mon-unmount-cifs', `*mon-CIFS-misc-path-alist*', `*mon-CIFS-auth-protocol*',
-`*mon-CIFS-pass*', `*mon-CIFS-user*'.\n►►►"
+`*mon-CIFS-pass*', `*mon-CIFS-user*'.\n▶▶▶"
   (let (map-mnt )
     (dolist (i (or mount-point-list *mon-CIFS-mount-points*) (nreverse map-mnt))
       (push `(,(car i) 
@@ -406,7 +406,7 @@ IOW, to make a CIFS credentials format congruent with  ~/.authinfo.gpg you would
 `mon-build-cifs-credentials', `mon-get-cifs-mount-points', `mon-mount-cifs',
 `mon-unmount-cifs', `mon-bind-cifs-vars-at-loadtime',
 `*mon-CIFS-misc-path-alist*', `*mon-CIFS-mount-points*',
-`*mon-CIFS-auth-protocol*',`*mon-CIFS-mount-root*'.\n►►►"
+`*mon-CIFS-auth-protocol*',`*mon-CIFS-mount-root*'.\n▶▶▶"
   (interactive)
   (let ((cifs-auth (auth-source-user-or-password  '("login" "password")
                                                   *mon-CIFS-domain*
@@ -436,7 +436,7 @@ When optional arg CREDENTIALS-FILE is non-nil returns:\n
 `mon-verify-cifs-credentials', `mon-get-cifs-mount-points', `mon-mount-cifs',
 `mon-unmount-cifs', `mon-bind-cifs-vars-at-loadtime'
 `*mon-CIFS-misc-path-alist*', `*mon-CIFS-mount-points*',
-`*mon-CIFS-auth-protocol*', `*mon-CIFS-mount-root*'.\n►►►"
+`*mon-CIFS-auth-protocol*', `*mon-CIFS-mount-root*'.\n▶▶▶"
   (let (creds)
     (if (and (not (null credentials-file))
              (file-exists-p credentials-file))
@@ -464,7 +464,7 @@ When MOUNT-POINT is nil or called-interactively prompt for MOUNT-POINT key.\n
 `mon-build-cifs-credentials', `mon-verify-cifs-credentials',
 `mon-bind-cifs-vars-at-loadtime', `*mon-CIFS-mount-points*',
 `*mon-CIFS-auth-protocol*', `*mon-CIFS-misc-path-alist*', `*mon-CIFS-domain*',
-`*mon-CIFS-pass*', `*mon-CIFS-user*', `*mon-CIFS-mount-root*'.\n►►►"
+`*mon-CIFS-pass*', `*mon-CIFS-user*', `*mon-CIFS-mount-root*'.\n▶▶▶"
   (interactive "p")
   (let (;;(mnt-root *mon-CIFS-mount-root*)
         (mnt-pnts *mon-CIFS-mount-points*))
@@ -529,7 +529,7 @@ do not execute.\n
 `*mon-CIFS-misc-path-alist*', `*mon-CIFS-mount-points*', `*mon-CIFS-pass*',
 `*mon-CIFS-user*', `*mon-CIFS-mount-root*', `*mon-CIFS-domain*',
 `*mon-CIFS-vars-unbound*', `*mon-CIFS-auth-protocol*',
-`*mon-CIFS-mount-root*'.\n►►►"
+`*mon-CIFS-mount-root*'.\n▶▶▶"
   (interactive "i\nP") 
   (let ((mp (mon-get-cifs-mount-points the-mount)))
     (setq mp (if unmount
@@ -560,7 +560,7 @@ Like `mon-mount-cifs' but only unmounts the CIFS.\n
 `mon-inform-cifs-credentials-unbound' `*mon-CIFS-misc-path-alist*',
 `*mon-CIFS-mount-points*', `*mon-CIFS-pass*', `*mon-CIFS-user*',
 `*mon-CIFS-mount-root*', `*mon-CIFS-domain*', `*mon-CIFS-vars-unbound*',
-`*mon-CIFS-auth-protocol*', `*mon-CIFS-mount-root*'.\n►►►"
+`*mon-CIFS-auth-protocol*', `*mon-CIFS-mount-root*'.\n▶▶▶"
   (interactive "i")
   (shell-command (mon-mount-cifs (or the-mount) t nil t)))
 
@@ -573,7 +573,7 @@ When these are not bound, interactively prompt user if they should be, and if so
 make it so, else message user that `mon-mount-cifs' featuers will be available
 after evaluating `mon-verify-cifs-credentials'.\n
 :SEE-ALSO `mon-mount-cifs', `mon-unmount-cifs', `mon-get-cifs-credentials',
-`mon-build-cifs-credentials', `mon-bind-cifs-vars-at-loadtime'.\n►►►"
+`mon-build-cifs-credentials', `mon-bind-cifs-vars-at-loadtime'.\n▶▶▶"
   (interactive)
   (if (and *mon-CIFS-user*  *mon-CIFS-pass*) 
       (message "The variables `*mon-CIFS-user*' and `*mon-CIFS-pass*' are set")
@@ -625,7 +625,7 @@ in which case we simply signal the following message at load time:\n
 `mon-bind-cifs-vars-at-loadtime', `mon-inform-cifs-credentials-unbound',
 `mon-verify-cifs-credentials', `*mon-CIFS-mount-points*',
 `*mon-CIFS-auth-protocol*', `*mon-CIFS-domain*', `*mon-CIFS-mount-root*',
-`*mon-CIFS-vars-unbound*', `*mon-misc-path-alist*'.\n►►►"
+`*mon-CIFS-vars-unbound*', `*mon-misc-path-alist*'.\n▶▶▶"
   (let ((mcvu *mon-CIFS-vars-unbound*)
         (mcvu-msg 
          (concat 
@@ -692,7 +692,7 @@ o When optional arg NO-MAP-MOUNT-POINTS is non-nil do not evaluate
 `mon-mount-cifs', `mon-unmount-cifs', `mon-get-cifs-mount-points',
 `mon-build-cifs-credentials', `mon-get-cifs-credentials',
 `mon-verify-cifs-credentials', `mon-inform-cifs-credentials-unbound',
-`*mon-CIFS-vars-unbound*'.\n►►►"
+`*mon-CIFS-vars-unbound*'.\n▶▶▶"
   ;; Make sure auth-source is a present feature.
   (unless (featurep 'auth-source) (require 'auth-source))
   ;; Add a new protocol to `auth-source-protocols'
@@ -747,7 +747,7 @@ Also, does double duty as the name of the buffer name that debug logs are
 displayed in.\n
 :WARNING Authentication passwords and login information will persist for this
 Emacs session depending on the value of `*mon-auth-source-cache-debug-var*'.\n
-:SEE-ALSO `auth-source-do-debug', `auth-source-hide-passwords'.\n►►►")
+:SEE-ALSO `auth-source-do-debug', `auth-source-hide-passwords'.\n▶▶▶")
 
 ;;; ==============================
 ;;; :CREATED <Timestamp: #{2010-01-14T22:53:44-05:00Z}#{10024} - by MON>
@@ -755,7 +755,7 @@ Emacs session depending on the value of `*mon-auth-source-cache-debug-var*'.\n
   "*When non-nil maintain a persistent log of auth-source authentications.
 When nil clear `*mon-auth-source-debug-var*' after each invocation of 
 `mon-spit-auth-source-debug->var', this is the default value.\n
-:SEE-ALSO `auth-source-do-debug',`auth-source-hide-passwords'.\n►►►")
+:SEE-ALSO `auth-source-do-debug',`auth-source-hide-passwords'.\n▶▶▶")
 
 ;;; ==============================
 ;;; :NOTE The local variables `tail-msg' and `fmt-msg' are conditional on the
@@ -799,7 +799,7 @@ When you are finished debugging, make sure to kill the buffer named
      \"auth-source-user-or-password: found %s=%s for %s \(%s\)\" 
      '\(\"login\" \"password\"\) '\(\"MY-LOGIN\" \"MY-PASSWORD\"\) 'MY-HOST 'HER-PROTOCOL\)
     \(sit-for 1.5\)\)\)\n
-:SEE-ALSO `netrc-machine-user-or-password'.\n►►►"
+:SEE-ALSO `netrc-machine-user-or-password'.\n▶▶▶"
   (unwind-protect
        (if auth-source-debug
            (let ((dbg-buf (get-buffer-create 

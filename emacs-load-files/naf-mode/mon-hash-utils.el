@@ -30,13 +30,13 @@
 ;; the only act of authorship on MON's part are minor symbol changes additions
 ;; of gensyms and the assembly of these routines in the aggregate.
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;; `mon-hash-all-values',`mon-hash-all-keys',`mon-hash-to-list',
 ;; `mon-hash-key-onto-list',`mon-hash-describe',`mon-hash-describe-descend',
 ;; `mon-hash-readlines-file', `mon-hash-readlines-buffer',
 ;; `mon-hash-make-size', `mon-hash<-vector', `mon-hash-add-uniquify',
 ;; `mon-hash-table-complete', `mon-hash-to-alist', `mon-hash-from-alist',
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;; `mon-hash-get-items',`mon-hash-get-values', `mon-hash-get-symbol-keys',
@@ -245,7 +245,7 @@ HASH-STRING-OR-SYMBOL-NAME is void.
 \(unintern \"tt--qtd-htable\" obarray\)\n
 :SEE-ALSO `mon-hash-or-mappable-p', `mon-sequence-mappable-p',
 `mon-string-not-null-nor-zerop', `mon-sequence-mappable-p',
-`mon-booleanp'.\n►►►"
+`mon-booleanp'.\n▶▶▶"
   (setq as-cons
         `(,as-cons
           ,(or 
@@ -321,7 +321,7 @@ This value will be optimized with `mon-hash-make-size'.\n
 `mon-hash-all-keys', `mon-hash-to-list', `mon-hash-get-items',
 `mon-hash-get-values', `mon-hash-has-key', `mon-hash-get-symbol-keys',
 `mon-hash-get-string-keys', `mon-hash-put-CL', `mon-hash-describe',
-`mon-hash-describe-descend'.\n►►►"
+`mon-hash-describe-descend'.\n▶▶▶"
   (make-vector (if hashsize (max (mon-hash-make-size hashsize) 256) 256) 0))
 ;;
 ;;; ==============================
@@ -344,7 +344,7 @@ string!  So we use powers of 2 so people can optimize the modulo to a mask.
 `mon-hash-readlines-file', `mon-hash-all-values', `mon-hash-all-keys',
 `mon-hash-to-list', `mon-hash-get-items', `mon-hash-get-values',
 `mon-hash-has-key', `mon-hash-get-symbol-keys', `mon-hash-get-string-keys',
-`mon-hash-put-CL', `mon-hash-describe', `mon-hash-describe-descend'.\n►►►"
+`mon-hash-put-CL', `mon-hash-describe', `mon-hash-describe-descend'.\n▶▶▶"
   (let ((mhmi 1))
     (while (< mhmi min-size)
       (setq mhmi (* 2 mhmi)))
@@ -362,7 +362,7 @@ string!  So we use powers of 2 so people can optimize the modulo to a mask.
 `mon-hash-all-keys', `mon-hash-to-list', `mon-hash-get-items',
 `mon-hash-get-values', `mon-hash-has-key', `mon-hash-get-symbol-keys',
 `mon-hash-get-string-keys', `mon-hash-put-CL', `mon-hash-describe',
-`mon-hash-describe-descend'.\n►►►"
+`mon-hash-describe-descend'.\n▶▶▶"
   (let ((mhfa-lst (make-hash-table :size (mon-hash-make-size (length alist)) ;4096 
                                    :test 'equal)))
     (mapc #'(lambda (mhfa-L-1)
@@ -382,7 +382,7 @@ string!  So we use powers of 2 so people can optimize the modulo to a mask.
 `mon-hash-all-keys', `mon-hash-to-list', `mon-hash-get-items',
 `mon-hash-get-values', `mon-hash-has-key', `mon-hash-get-symbol-keys',
 `mon-hash-get-string-keys', `mon-hash-put-CL', `mon-hash-describe',
-`mon-hash-describe-descend'.\n►►►"
+`mon-hash-describe-descend'.\n▶▶▶"
   (let ((mhta-lst nil))
     (maphash #'(lambda (mhta-L-kk mhta-L-vv)
                  (setq mhta-lst (cons (cons mhta-L-kk mhta-L-vv) mhta-lst)))
@@ -403,7 +403,7 @@ When KEY is already present in TABLE generate a new KEY such that:\n
 `mon-hash-all-values', `mon-hash-all-keys', `mon-hash-to-list',
 `mon-hash-get-items', `mon-hash-get-values', `mon-hash-has-key',
 `mon-hash-get-symbol-keys', `mon-hash-get-string-keys', `mon-hash-put-CL',
-`mon-hash-describe', `mon-hash-describe-descend'.\n►►►"
+`mon-hash-describe', `mon-hash-describe-descend'.\n▶▶▶"
   (when (gethash key table)
     (setq key
           (loop for i = 1 then (1+ i)
@@ -429,7 +429,7 @@ When KEY is already present in TABLE generate a new KEY such that:\n
 `mon-hash-all-values', `mon-hash-all-keys', `mon-hash-to-list',
 `mon-hash-get-items', `mon-hash-get-values', `mon-hash-has-key',
 `mon-hash-get-symbol-keys', `mon-hash-get-string-keys', `mon-hash-put-CL',
-`mon-hash-describe', `mon-hash-describe-descend'.\n►►►"
+`mon-hash-describe', `mon-hash-describe-descend'.\n▶▶▶"
   (save-match-data
     (let* ((mhrf-str (with-temp-buffer
                        (insert-file-contents hash-file)
@@ -449,7 +449,7 @@ When KEY is already present in TABLE generate a new KEY such that:\n
 `mon-hash-all-values', `mon-hash-all-keys', `mon-hash-to-list',
 `mon-hash-get-items', `mon-hash-get-values', `mon-hash-has-key',
 `mon-hash-get-symbol-keys', `mon-hash-get-string-keys', `mon-hash-put-CL',
-`mon-hash-describe', `mon-hash-describe-descend'.\n►►►"
+`mon-hash-describe', `mon-hash-describe-descend'.\n▶▶▶"
   (save-match-data
     (let* ((mhrb-str (with-temp-buffer
                        (insert-buffer-substring-no-properties buffer)
@@ -482,7 +482,7 @@ When KEY is already present in TABLE generate a new KEY such that:\n
 `mon-hash-readlines-file', `mon-hash-all-keys', `mon-hash-to-list',
 `mon-hash-get-items', `mon-hash-get-values', `mon-hash-has-key',
 `mon-hash-get-symbol-keys', `mon-hash-get-string-keys', `mon-hash-put-CL',
-`mon-hash-describe', `mon-hash-describe-descend'.\n►►►"
+`mon-hash-describe', `mon-hash-describe-descend'.\n▶▶▶"
   (let (mhav-lst)
     (maphash #'(lambda (mhav-kk mhav-vv) 
                  (push mhav-vv mhav-lst))
@@ -497,7 +497,7 @@ When KEY is already present in TABLE generate a new KEY such that:\n
 `mon-hash-readlines-file', `mon-hash-all-values', `mon-hash-to-list',
 `mon-hash-get-items', `mon-hash-get-values', `mon-hash-has-key',
 `mon-hash-get-symbol-keys', `mon-hash-get-string-keys', `mon-hash-put-CL',
-`mon-hash-describe', `mon-hash-describe-descend'.\n►►►"
+`mon-hash-describe', `mon-hash-describe-descend'.\n▶▶▶"
   (let (mhak-gthr)
     (maphash #'(lambda (mhak-kk mhak-vv)
                  (push mhak-kk mhak-gthr))
@@ -512,7 +512,7 @@ When KEY is already present in TABLE generate a new KEY such that:\n
 `mon-hash-readlines-file', `mon-hash-all-values', `mon-hash-all-keys',
 `mon-hash-get-items', `mon-hash-get-values', `mon-hash-has-key',
 `mon-hash-get-symbol-keys', `mon-hash-get-string-keys', `mon-hash-put-CL',
-`mon-hash-describe', `mon-hash-describe-descend'.\n►►► "
+`mon-hash-describe', `mon-hash-describe-descend'.\n▶▶▶ "
   (let (mhtl-lst)
     (maphash #'(lambda (mhtl-kk mhtl-vv) 
                  (push `(,mhtl-kk . ,mhtl-vv) mhtl-lst))
@@ -536,7 +536,7 @@ Macromatic version of `mon-hash-all-keys'. Unlike `mon-hash-get-string-keys' and
 `mon-hash-readlines-file', `mon-hash-all-values', `mon-hash-to-list',
 `mon-hash-get-items', `mon-hash-get-values', `mon-hash-has-key',
 `mon-hash-get-symbol-keys', `mon-hash-get-string-keys', `mon-hash-put-CL',
-`mon-hash-describe', `mon-hash-describe-descend'.\n►►►"
+`mon-hash-describe', `mon-hash-describe-descend'.\n▶▶▶"
   (let ((mhgk-keys (make-symbol "mhgk-keys")))
     `(let (,mhgk-keys)
        (maphash #'(lambda (mhgk-L-1-kk mhgk-L-1-vv)
@@ -577,7 +577,7 @@ Macromatic version of `mon-hash-all-keys'. Unlike `mon-hash-get-string-keys' and
 `mon-hash-readlines-file', `mon-hash-all-values',  `mon-hash-all-keys',
 `mon-hash-to-list', `mon-hash-get-values',  `mon-hash-has-key', 
 `mon-hash-get-symbol-keys', `mon-hash-get-string-keys', `mon-hash-put-CL',
-`mon-hash-describe', `mon-hash-describe-descend'.\n►►►"
+`mon-hash-describe', `mon-hash-describe-descend'.\n▶▶▶"
   (let ((mhgi-items (make-symbol "mhgi-items")))
     `(let ((,mhgi-items nil)) 
        (maphash #'(lambda (mhgi-L-1 mhgi-L-2) (push (list mhgi-L-1 mhgi-L-2) ,mhgi-items))
@@ -595,7 +595,7 @@ Macromatic version of `mon-hash-all-keys'. Unlike `mon-hash-get-string-keys' and
 `mon-hash-readlines-buffer', `mon-hash-readlines-file', `mon-hash-all-values', 
 `mon-hash-all-keys', `mon-hash-to-list', `mon-hash-get-items',
 `mon-hash-has-key',  `mon-hash-get-symbol-keys', `mon-hash-get-string-keys',
-`mon-hash-put-CL', `mon-hash-describe', `mon-hash-describe-descend'.\n►►►"
+`mon-hash-put-CL', `mon-hash-describe', `mon-hash-describe-descend'.\n▶▶▶"
   (let ((mhgv-val (make-symbol "mhgv-val"))
         (mhgv-all (make-symbol "mhgv-all")))
     `(let ((,mhgv-val nil)
@@ -630,7 +630,7 @@ read that string -> symbol but don't intern it.\n
 `mon-hash-readlines-file', `mon-hash-all-values',  `mon-hash-all-keys',
 `mon-hash-to-list', `mon-hash-get-items', `mon-hash-get-values', 
 `mon-hash-has-key',  `mon-hash-get-string-keys', `mon-hash-put-CL',
-`mon-hash-describe', `mon-hash-describe-descend'.\n►►►"
+`mon-hash-describe', `mon-hash-describe-descend'.\n▶▶▶"
   (let ((mhgsk-keys (make-symbol "mhgsk-keys"))
         (mhgsk-all  (make-symbol "mhgsk-all"))
         (mhgsk-ob   (make-symbol "mhgsk-ob")))
@@ -660,7 +660,7 @@ Like `mon-hash-get-symbol-keys' but return keys as strings.\n
 `mon-hash-readlines-file', `mon-hash-all-values',  `mon-hash-all-keys',
 `mon-hash-to-list', `mon-hash-get-items', `mon-hash-get-values', 
 `mon-hash-has-key',  `mon-hash-get-symbol-keys', `mon-hash-put-CL',
-`mon-hash-describe', `mon-hash-describe-descend'.\n►►►"
+`mon-hash-describe', `mon-hash-describe-descend'.\n▶▶▶"
   (let ((mhgSk-keys (make-symbol "mhgSk-keys"))
         (mhgSk-all  (make-symbol "mhgSk-all"))
         (mhgSk-str  (make-symbol "mhgSk-str")))
@@ -693,7 +693,7 @@ KEY must be a symbol \(not a string\) as test uses `memq'/`eq'.\n
 `mon-hash-readlines-file', `mon-hash-all-values',  `mon-hash-all-keys',
 `mon-hash-to-list', `mon-hash-get-items', `mon-hash-get-values', 
 `mon-hash-get-symbol-keys', `mon-hash-get-string-keys', `mon-hash-put-CL',
-`mon-hash-describe', `mon-hash-describe-descend'.\n►►►"
+`mon-hash-describe', `mon-hash-describe-descend'.\n▶▶▶"
   (let ((mhhk-keys-l (make-symbol "mhhk-keys-l")))
     `(let ((,mhhk-keys-l (mon-hash-get-symbol-keys ,hashtable)))
        (if (memq ,key ,mhhk-keys-l)
@@ -718,7 +718,7 @@ The order of arguments in mon-hash-put-CL is:\n
 `mon-hash-readlines-file', `mon-hash-all-values', `mon-hash-all-keys',
 `mon-hash-to-list', `mon-hash-get-items', `mon-hash-get-values',
 `mon-hash-has-key', `mon-hash-get-symbol-keys', `mon-hash-get-string-keys',
-`mon-hash-describe', `mon-hash-describe-descend'.\n ►►►"
+`mon-hash-describe', `mon-hash-describe-descend'.\n ▶▶▶"
   `(setf (gethash ,key ,table) ,value))
 
 ;; (put 'mon-hash-put-CL 'lisp-indent-function <INT>) 
@@ -753,7 +753,7 @@ it is displayed along with the global value.\n
 `mon-hash-readlines-file', `mon-hash-all-values',  `mon-hash-all-keys',
 `mon-hash-to-list', `mon-hash-get-items', `mon-hash-get-values', 
 `mon-hash-has-key', `mon-hash-get-symbol-keys', `mon-hash-get-string-keys',
-`mon-hash-put-CL', `mon-hash-describe-descend'.\n►►►"
+`mon-hash-put-CL', `mon-hash-describe-descend'.\n▶▶▶"
   (interactive
    (let ((v (variable-at-point))
 	 (enable-recursive-minibuffers t)
@@ -791,7 +791,7 @@ it is displayed along with the global value.\n
 `mon-hash-readlines-file', `mon-hash-all-values', `mon-hash-all-keys',
 `mon-hash-to-list', `mon-hash-get-items', `mon-hash-get-values',
 `mon-hash-has-key', `mon-hash-get-symbol-keys', `mon-hash-get-string-keys',
-`mon-hash-put-CL', `mon-hash-describe'.\n►►►"
+`mon-hash-put-CL', `mon-hash-describe'.\n▶▶▶"
   (maphash (lambda (key value)
 	     (pp key)
 	     (princ " => ")
@@ -816,7 +816,7 @@ it is displayed along with the global value.\n
 `mon-hash-readlines-file', `mon-hash-all-values', `mon-hash-all-keys',
 `mon-hash-to-list', `mon-hash-get-items', `mon-hash-get-values',
 `mon-hash-has-key', `mon-hash-get-symbol-keys', `mon-hash-get-string-keys',
-`mon-hash-put-CL', `mon-hash-describe'.\n►►►"
+`mon-hash-put-CL', `mon-hash-describe'.\n▶▶▶"
   (let ((res nil) 
         (st (upcase string)) 
         (len (length string)))

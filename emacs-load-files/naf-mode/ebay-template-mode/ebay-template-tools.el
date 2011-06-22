@@ -21,7 +21,7 @@
 ;; DESCRIPTION:
 ;; ebay-template-tools provides templating tools to generate auction listings.
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;; `mon-insert-ebay-template', `mon-choose-ebay-delims', `mon-choose-ebay-account',
 ;; `mon-make-html-tree', `mon-insert-ebay-html-tree', 
 ;; `mon-make-ebay-dir-list', `mon-make-ebay-dir-list-2',
@@ -31,7 +31,7 @@
 ;; `mon-insert-ebay-field-trigger-r', `mon-insert-ebay-field-trigger-l-and-r', 
 ;; `mon-insert-ebay-photo-per-scan-descr', 
 ;; `mon-ebay-image-linkify', `mon-ebay-image-linkify-lite',
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;;
@@ -151,7 +151,7 @@
   "An html-light form to evaluate with `mon-insert-ebay-template'.\n
 :EXAMPLE\n\n
  \(html-lite-write-tree \(eval *mon-html-ebay-template*\)\)
-:SEE-ALSO .\n►►►")
+:SEE-ALSO .\n▶▶▶")
 
 
 ;;; ==============================
@@ -164,7 +164,7 @@
   "Default domain for templates Ebay HTML templates.\n
 Domain should be formated without a \"www.\" prefix nor suffixed with \".com\" \(or equivalent\).\n
 :EXAMPLE\n\n
-:SEE-ALSO `*mon-html-ebay-template*'.\n►►►")
+:SEE-ALSO `*mon-html-ebay-template*'.\n▶▶▶")
 
 
 ;;; ==============================
@@ -180,7 +180,7 @@ Domain should be formated without a \"www.\" prefix nor suffixed with \".com\" \
   "Alist for `mon-ebay-image-linkify-lite' and `mon-ebay-image-linkify'.\n
 :EXAMPLE\n\n\(cdr \(assoc 1 *mon-ebay-image-linkify-templates*\)\)\n
 \(cdr \(assoc 2 *mon-ebay-image-linkify-templates*\)\)\n
-:SEE-ALSO .\n►►►")
+:SEE-ALSO .\n▶▶▶")
 
 
 ;;; ==============================
@@ -204,7 +204,7 @@ The follwing features are used from those two packages:
 `*mon-ebay-comment-prefix*', `*mon-ebay-field-delims*',
 `*mon-ebay-field-entry*', `*mon-ebay-images-bmp-path*',
 `*mon-ebay-images-jpg-path*', `*mon-ebay-images-lookup-path*',
-`*mon-ebay-images-temp-path*'.\n►►►"
+`*mon-ebay-images-temp-path*'.\n▶▶▶"
   (if (bound-and-true-p *mon-html-ebay-template*)
       (let ((make-html (html-lite-write-tree (eval *mon-html-ebay-template*))))
          make-html)
@@ -226,7 +226,7 @@ The follwing features are used from those two packages:
 `mon-make-html-tree', `mon-insert-ebay-dbc-file',
 `mon-insert-ebay-dbc-template', `mon-insert-ebay-photo-per-scan-descr',
 `*mon-ebay-template*', `*mon-ebay-images-bmp-path*',
-`*mon-ebay-images-jpg-path*' `*mon-ebay-images-lookup-path*'.\n►►►")
+`*mon-ebay-images-jpg-path*' `*mon-ebay-images-lookup-path*'.\n▶▶▶")
 ;;
 (unless (bound-and-true-p *mon-ebay-template*)
   (let ((ebay-template
@@ -307,7 +307,7 @@ Choices include:
  ◊◊◊◊◊ ♦♦♦♦♦ ΠΠΠΠΠΠ ΦΦΦΦΦ πππππ §§§§§ ≡≡≡≡≡ ˆˆˆˆˆ ΞΞΞΞΞ ººººº
  °°°°° ΔΔΔΔΔ ±±±±± ••••• ····· …………… ∞∞∞∞∞ ¤¤¤¤¤ ‹‹‹››› ««»»»
  ←———→ ××××× ˜˜˜˜˜ -----\n
-:SEE-ALSO `mon-choose-ebay-account'.\n►►►"
+:SEE-ALSO `mon-choose-ebay-account'.\n▶▶▶"
   (let* ((delim-choice '("◊◊◊◊◊" "♦♦♦♦♦" "ΠΠΠΠΠΠ" "ΦΦΦΦΦ" "πππππ" "§§§§§"
                          "≡≡≡≡≡" "ˆˆˆˆˆ" "ΞΞΞΞΞ" "ººººº" "°°°°°" "ΔΔΔΔΔ"
                          "±±±±±" "•••••" "·····" "……………" "∞∞∞∞∞" "¤¤¤¤¤"
@@ -325,7 +325,7 @@ Choices include:
   "Choose from a list of ebay-accounts to insert for the ebay template.\n
 Account choices returned according to variable `*mon-ebay-account-ids*'.\n
 :EXAMPLE\n\n\(mon-choose-ebay-account\)\n
-:SEE-ALSO `mon-choose-ebay-delims'.\n►►►"
+:SEE-ALSO `mon-choose-ebay-delims'.\n▶▶▶"
   (let* ((accnt-choice ;; WAS (cadr (assoc 10 *MON-ORG-NAME*)))
           (or (assq 1 *mon-ebay-account-ids*)))
 	 (chosen (completing-read 
@@ -345,7 +345,7 @@ Account choices returned according to variable `*mon-ebay-account-ids*'.\n
 `html-lite-doctype-alist', `html-lite-define-elements',
 `html-lite-make-element', `with-html-lite-header', `with-html-lite-header',
 `html-doctype', `html-lite-make-name', `html-lite-write-tree',
-`html-lite-browse-tree'.\n►►►"
+`html-lite-browse-tree'.\n▶▶▶"
   (interactive)
   (let ((html-temp)
 	(html-string))
@@ -364,7 +364,7 @@ Use: `mon-insert-ebay-dbc-template' for the full ebay template insertion utility
 This may be deprecated once the additional templating call-outs are incorporated.\n
 :SEE-ALSO `mon-make-html-tree', `mon-insert-ebay-template',
 `mon-make-html-tree', `mon-insert-ebay-dbc-file',
-`mon-insert-ebay-dbc-template'.\n►►►"
+`mon-insert-ebay-dbc-template'.\n▶▶▶"
   (interactive)
   (format "%s" (mon-insert-ebay-template)))
 
@@ -379,7 +379,7 @@ Helper function for `mon-insert-ebay-dirs'.\n
 `mon-make-html-tree', `mon-insert-ebay-dbc-file',
 `mon-insert-ebay-dbc-template',`*mon-ebay-images-bmp-path*',
 `*mon-ebay-images-jpg-path*', `*mon-ebay-images-lookup-path*',
-`*mon-ebay-images-temp-path*'.\n►►►"
+`*mon-ebay-images-temp-path*'.\n▶▶▶"
   (let ((put-dirs)
 	(starting)
 	(prfx (cond ((stringp ff-prefix) ff-prefix)
@@ -400,7 +400,7 @@ Helper function for `mon-insert-ebay-dirs'.\n
 START-FROM (a number) to END-AT (a number).\n
 Optional arg FF-PREFIX (a string) prefixes list with string default prfx is `e'.\n
 Helper function for `mon-insert-ebay-dirs'.\n
-:SEE-ALSO `*mon-ebay-images-temp-path*'.\n►►►"
+:SEE-ALSO `*mon-ebay-images-temp-path*'.\n▶▶▶"
   (let* ((put-dirs)
 	 (starting)
 	 (prfx (cond ((stringp ff-prefix) 
@@ -462,7 +462,7 @@ Used with: `mon-make-ebay-dir-list' interactive list builder.\n
 And,  `mon-insert-ebay-dbc-template' to insert a buffer local template.
 Path determined according to globar var `*mon-ebay-images-temp-path*'.\n
 :SEE-ALSO `*mon-ebay-template*', `mon-insert-ebay-bmps-in-file',
-`mon-insert-ebay-photo-per-scan-descr'.\n►►►"
+`mon-insert-ebay-photo-per-scan-descr'.\n▶▶▶"
   (interactive
    (list (let ((starting (read-number "Ebay Item no. to start from: "))
 	       (ending (read-number "Ebay Item no. to end with: "))
@@ -505,7 +505,7 @@ Don't call this after evaluating it to create the file - it will clobber your fi
 Use `mon-insert-ebay-dbc-template' to insert a buffer local template.
 :SEE-ALSO `mon-insert-ebay-html-tree', `mon-make-html-tree',
 `mon-insert-ebay-dbc-file', `mon-insert-ebay-dbc-template',
-`mon-check-ebay-template-path', `*mon-ebay-images-path*'.\n►►►"
+`mon-check-ebay-template-path', `*mon-ebay-images-path*'.\n▶▶▶"
   (let* ((make-list dir-list)
 	 (into-path (file-name-as-directory *mon-ebay-images-path*)))
     (while make-list
@@ -521,7 +521,7 @@ Use `mon-insert-ebay-dbc-template' to insert a buffer local template.
 ;;; :CREATED <Timestamp: Wednesday July 22, 2009 @ 08:35.33 PM - by MON KEY>
 (defun mon-check-ebay-template-path ()
   "Helper function for `mon-insert-ebay-dbc-template'.\n
-:SEE-ALSO `*mon-ebay-images-path*', `mon-insert-ebay-dbc-file'.\n►►►"
+:SEE-ALSO `*mon-ebay-images-path*', `mon-insert-ebay-dbc-file'.\n▶▶▶"
   (let (check-the-check)
     (while (not check-the-check) 
       (let ((check-path 
@@ -623,7 +623,7 @@ Evaluate the global var `*mon-ebay-template*' and insert ebay html with
 :SEE-ALSO `mon-insert-ebay-dirs', `mon-insert-ebay-dbc-file',
 `mon-insert-ebay-template', `mon-insert-ebay-html-tree', `mon-make-html-tree',
 `mon-insert-ebay-dbc-file', `mon-insert-ebay-dbc-template',
-`mon-check-ebay-template-path'.\n►►►"
+`mon-check-ebay-template-path'.\n▶▶▶"
   (interactive "i\np")
   (let* ((curr-dir (mon-check-ebay-template-path))
          (catch-path 
@@ -661,11 +661,11 @@ Evaluate the global var `*mon-ebay-template*' and insert ebay html with
 ;;; :TEST-ME (mon-insert-ebay-dbc-template)
 
 ;;; ==============================
-;;; :TODO function to capture region between `►►►' `◄◄◄'
-;;; (skip-chars-forward "^►►►" (1- (point-max))) 
-;;; (skip-chars-forward "►►►" (1- (point-max)))
-;;; (skip-chars-forward "^◄◄◄" (1- (point-max)))
-;;; (skip-chars-forward "◄◄◄" (1- (point-max)))
+;;; :TODO function to capture region between `▶▶▶' `◀◀◀'
+;;; (skip-chars-forward "^▶▶▶" (1- (point-max))) 
+;;; (skip-chars-forward "▶▶▶" (1- (point-max)))
+;;; (skip-chars-forward "^◀◀◀" (1- (point-max)))
+;;; (skip-chars-forward "◀◀◀" (1- (point-max)))
 ;;; <Timestamp: Friday May 22, 2009 @ 06:39.18 PM - by MON KEY>
 ;;; ==============================
 
@@ -673,31 +673,31 @@ Evaluate the global var `*mon-ebay-template*' and insert ebay html with
 ;;; :CREATED <Timestamp: Friday May 22, 2009 @ 06:39.18 PM - by MON KEY>
 ;;; :MODIFICATIONS <Timestamp: Monday July 27, 2009 @ 01:53.42 PM - by MON KEY>
 (defun mon-ebay-field-trigger (&optional insertp right-only left-only intrp)
-  "Return ebay temmplate field delimiter. one of `►►►', `◄◄◄', `►►►'<nwln>`◄◄◄'.\n
-Callled interactively inserts `►►►'<nwln>`◄◄◄' at point.
+  "Return ebay temmplate field delimiter. one of `▶▶▶', `◀◀◀', `▶▶▶'<nwln>`◀◀◀'.\n
+Callled interactively inserts `▶▶▶'<nwln>`◀◀◀' at point.
 When INSERTP is non-nil insert delimiter\(s\) according to args.
 When LEFT-AND-RIGHT is non-nil insert as per interactive
-When RIGHT-ONLY is non-nil insert `►►►' - starting field trigger.
-When LEFT-ONLY is non-nil insert optional `◄◄◄' - ending field trigger.\n
+When RIGHT-ONLY is non-nil insert `▶▶▶' - starting field trigger.
+When LEFT-ONLY is non-nil insert optional `◀◀◀' - ending field trigger.\n
 Following are the default values:\n
- ►►►
+ ▶▶▶
  :NAME BLACK RIGHT-POINTING POINTER
  :CODE-POINT 0x25BA
- :CHARACTER ► (9658, #o22672, #x25ba) 
+ :CHARACTER ▶ (9658, #o22672, #x25ba) 
  \(mon-insert-unicode \"25BA\")\n
- ◄◄◄
+ ◀◀◀
  :NAME BLACK LEFT-POINTING POINTER
  :CODE-POINT 0x25C4
- :CHARACTER ◄ (9668, #o22704, #x25c4)
+ :CHARACTER ◀ (9668, #o22704, #x25c4)
  \(mon-insert-unicode \"25C4\")\n
 :EXAMPLE\n\n\(mon-ebay-field-trigger\)\n\(mon-ebay-field-trigger nil t\)\n
 \(mon-ebay-field-trigger nil nil t\)\n
 :SEE-ALSO Convienence functions `mon-insert-ebay-field-trigger-r',
 `mon-insert-ebay-field-trigger-l', `mon-insert-ebay-field-trigger-l-and-r'
-`mon-insert-doc-help-cookie'.\n►►►"
+`mon-insert-doc-help-cookie'.\n▶▶▶"
   (interactive "i\ni\ni\np")
-  (let ((field-trigger-r "►►►")
-	(field-trigger-l "◄◄◄"))
+  (let ((field-trigger-r "▶▶▶")
+	(field-trigger-l "◀◀◀"))
     (cond (intrp  (insert (format "%s\n%s" field-trigger-r field-trigger-l)))
           (insertp (cond (right-only (insert (format "%s" field-trigger-r)))
                          (left-only (insert (format "%s" field-trigger-l)))
@@ -715,32 +715,32 @@ Following are the default values:\n
 
 ;;; ==============================
 (defun mon-insert-ebay-field-trigger-r (&optional insrtp)
-  "Insert the right point ebay field delim `►►►'.\n
+  "Insert the right point ebay field delim `▶▶▶'.\n
 Delim defaults to:\n
  Name: BLACK RIGHT-POINTING POINTER
- ►►► | code point: 0x25BA
- character: ► (9658, #o22672, #x25ba) 
+ ▶▶▶ | code point: 0x25BA
+ character: ▶ (9658, #o22672, #x25ba) 
  \(mon-insert-unicode \"25BA\")\n
 :EXAMPLE\n\n\(mon-insert-ebay-field-trigger-r\)\n
 :NOTE Convienence function for `mon-ebay-field-trigger'.\n
 :SEE-ALSO`mon-insert-ebay-field-trigger-r',
-`mon-insert-ebay-field-trigger-l-and-r', `mon-insert-doc-help-cookie'.\n►►►"
+`mon-insert-ebay-field-trigger-l-and-r', `mon-insert-doc-help-cookie'.\n▶▶▶"
   (interactive "p")
   (if insrtp
       (mon-ebay-field-trigger t t)
     (mon-ebay-field-trigger nil t)))
 ;;
 (defun mon-insert-ebay-field-trigger-l (&optional insrtp)
-  "Insert the right point ebay field delim. `◄◄◄'\n
+  "Insert the right point ebay field delim. `◀◀◀'\n
 Delim defaults to:\n
  Name: BLACK LEFT-POINTING POINTER
- ◄◄◄ | code point: 0x25C4
- character: ◄ (9668, #o22704, #x25c4)
+ ◀◀◀ | code point: 0x25C4
+ character: ◀ (9668, #o22704, #x25c4)
  \(mon-insert-unicode \"25C4\")\n
 :EXAMPLE\n(mon-insert-ebay-field-trigger-l\)\n
 :NOTE Convienence function for `mon-ebay-field-trigger'
 :SEE-ALSO`mon-insert-ebay-field-trigger-r',
-`mon-insert-ebay-field-trigger-l-and-r', `mon-insert-doc-help-cookie'.\n►►►"
+`mon-insert-ebay-field-trigger-l-and-r', `mon-insert-doc-help-cookie'.\n▶▶▶"
   (interactive "p")
   (if insrtp
       (mon-ebay-field-trigger t nil t)
@@ -751,7 +751,7 @@ Delim defaults to:\n
 :EXAMPLE\n\(mon-insert-ebay-field-trigger-l-and-r\)\n
 Convienence function for `mon-ebay-field-trigger'.
 :SEE-ALSO `mon-insert-ebay-field-trigger-r', 
-`mon-insert-ebay-field-trigger-l', `mon-insert-doc-help-cookie'.\n►►►"
+`mon-insert-ebay-field-trigger-l', `mon-insert-doc-help-cookie'.\n▶▶▶"
   (interactive "p")
   (if insrtp
       (mon-ebay-field-trigger t)
@@ -777,14 +777,14 @@ and ITEM-NUMBER arg;\n
 Each item description inserted step item number count eNNNN-N by 1 from 0 e.g.:\n
  ---\n e1018-0.bmp\n Image-title: \n Image-Description: 
 :SEE-ALSO `mon-insert-ebay-bmps-in-file', `mon-insert-ebay-dirs',
-`mon-get-ebay-jpgs-list', `mon-get-ebay-bmps-in-dir'.\n►►►"
+`mon-get-ebay-jpgs-list', `mon-get-ebay-bmps-in-dir'.\n▶▶▶"
   (interactive "nNumber of image descriptions needed :\nnItem number being described :")
   (let ((times times-to-put)
         (item-num item-number)
         (count 0))
     (while (>= times count)
-      (insert (format (concat "\n►►►\nebay-scan: e%d-%d.bmp\n"
-			      "Image-title:\nImage-description:\n◄◄◄\n") item-num  count))
+      (insert (format (concat "\n▶▶▶\nebay-scan: e%d-%d.bmp\n"
+			      "Image-title:\nImage-description:\n◀◀◀\n") item-num  count))
       (setq count (1+ count)))))
 
 ;;; :TEST-ME (mon-insert-ebay-photo-per-scan-descr 3 1143)
@@ -802,7 +802,7 @@ This function requires ImageMagicks \"identify\" command.\n
 :SEE (URL `www.ImageMagick.com')\n
 :SEE-ALSO `mon-ebay-image-linkify-lite',`mon-insert-ebay-template',
 `mon-insert-ebay-html-tree', `mon-make-html-tree', `mon-insert-ebay-dbc-file',
-`mon-insert-ebay-dbc-template'.\n►►►"
+`mon-insert-ebay-dbc-template'.\n▶▶▶"
 (interactive)
   (let (img-file-path 
 	bounds 
@@ -855,7 +855,7 @@ This function requires ImageMagicks \"identify\" command.\n
 :SEE (URL `www.ImageMagick.com')\n
 :SEE-ALSO `mon-ebay-image-linkify'`mon-insert-ebay-template',
 `mon-insert-ebay-html-tree', `mon-make-html-tree', `mon-insert-ebay-dbc-file',
-`mon-insert-ebay-dbc-template'.\n►►►"
+`mon-insert-ebay-dbc-template'.\n▶▶▶"
   (interactive)
   (let (img-file-path 
 	bounds 

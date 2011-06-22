@@ -22,7 +22,7 @@
 ;; mon-testme-utils provides templates for inserting ``;;; :TEST-ME '' and MON
 ;; style `*-TEST' procedures.
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;; `mon-insert-test-cases', `mon-insert-lisp-testme',
 ;; `mon-insert-lisp-testme-fancy', `mon-gensym-counter-randomizer-TEST'
 ;; `mon-list-nshuffle-TEST', `mon-line-strings-to-list-TEST',
@@ -47,7 +47,7 @@
 ;; `mon-hash-get-symbol-keys-TEST', `mon-file-stamp-buffer-filename-TEST',
 ;; `mon-cln-freenode-log-TEST', `mon-align-conses-TEST', `mon-align-conses-EXAMPLE',
 ;; 
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;;
@@ -170,7 +170,7 @@
 ;;; :CREATED <Timestamp: #{2010-10-07T16:02:18-04:00Z}#{10404} - by MON KEY>
 (defgroup mon-testme-utils nil
   "Customization group for `mon-*-TEST' functions.\n
-:SEE-ALSO `*mon-testme-utils-xrefs*'.\n►►►"
+:SEE-ALSO `*mon-testme-utils-xrefs*'.\n▶▶▶"
   :link '(url-link 
           :tag "\n:EMACSWIKI-FILE (URL `http://www.emacswiki.org/emacs/mon-testme-utils.el')" 
           "http://www.emacswiki.org/emacs/mon-testme-utils.el")
@@ -212,7 +212,7 @@ Symbols defined in :FILE mon-testme-utils.el\n
 :SEE-ALSO `*mon-regexp-symbols-xrefs*', `*mon-button-utils-xrefs*',
 `*mon-default-loads-xrefs*', `*mon-default-start-loads-xrefs*',
 `*mon-dir-locals-alist-xrefs*', `*naf-mode-xref-of-xrefs*',
-`*mon-ulan-utils-xrefs*', `*mon-testme-utils-xrefs*'.\n►►►"
+`*mon-ulan-utils-xrefs*', `*mon-testme-utils-xrefs*'.\n▶▶▶"
   :type '(repeat symbol)
   :group 'mon-testme-utils
   :group 'mon-xrefs)
@@ -234,7 +234,7 @@ Regexp held by global var `*regexp-symbol-defs*'.\n
 `mon-insert-doc-help-tail', `mon-insert-lisp-stamp', `mon-insert-copyright',
 `mon-insert-lisp-CL-file-template', `mon-comment-divider',
 `mon-comment-divider-to-col-four', `mon-insert-lisp-evald',
-`*mon-testme-utils-xrefs*'.\n►►►"
+`*mon-testme-utils-xrefs*'.\n▶▶▶"
   (interactive "i\np\ni\np")
   (let* ((get-func)
          (tmc (cond ((and intrp (> test-me-count 1))
@@ -303,7 +303,7 @@ Unbinds all previously bound variables:\n
 Rebinds vars 'default values'.
 Called-interactively or INSERTP non-nil insert test-cases at point.\n
 :EXAMPLE\n\n\(mon-insert-test-cases\)\n
-:SEE-ALSO `mon-insert-lisp-testme', `*mon-testme-utils-xrefs*'.\n►►►"
+:SEE-ALSO `mon-insert-lisp-testme', `*mon-testme-utils-xrefs*'.\n▶▶▶"
   (interactive "i\np") 
   (mapc #'makunbound  '(test-aaa test-bbb test-ccc test-ddd test-aa
                                  test-AA test-ag test-AG test-a4 test-A4))
@@ -342,7 +342,7 @@ Arg W-TEST-STR/SYM is a string or symbol to build results with.\n
 ARG GENERATE-N-RESULTS is the number of results to generate.\n
 :EXAMPLE\n\n(mon-gensym-counter-randomizer-TEST \"bubba\" 10000)\n
 :SEE-ALSO `mon-gensym', `with-gensyms', `mon-gensym-counter-randomizer',
-`*mon-testme-utils-xrefs*'.\n►►►"
+`*mon-testme-utils-xrefs*'.\n▶▶▶"
   (let ((mgcr-tst-buf (get-buffer-create "*MON-GENSYM-COUNTER-RANDOMIZER-TEST*"))
         mlf-dups)
     (with-current-buffer (get-buffer mgcr-tst-buf)
@@ -388,7 +388,7 @@ Return results of applying `mon-list-nshuffle'W-TEST-TIMES in buffer
 named \"*MON-LIST-NSHUFFLE-TEST*\"\n
 :EXAMPLE\n\n\(mon-list-nshuffle-TEST '\(a b c d\) 100\)\n
 \(mon-list-nshuffle '\(\"a\" \"b\" \"c\" \"d\"\) 100\)\n
-:SEE-ALSO `mon-nshuffle-vector', `mon-list-shuffle-safe', `*mon-testme-utils-xrefs*'.\n►►►"
+:SEE-ALSO `mon-nshuffle-vector', `mon-list-shuffle-safe', `*mon-testme-utils-xrefs*'.\n▶▶▶"
   (with-current-buffer (get-buffer-create "*MON-LIST-NSHUFFLE-TEST*")
     (erase-buffer)
     (insert ";; :FUNCTION `mon-list-nshuffle-TEST'\n" 
@@ -422,7 +422,7 @@ named \"*MON-LIST-NSHUFFLE-TEST*\"\n
 :SEE-ALSO `mon-build-copyright-string-TEST', `mon-help-regexp-symbol-defs-TEST', 
 `mon-help-propertize-regexp-symbol-defs-TEST', 
 `mon-help-regexp-symbol-defs-TEST', `mon-help-CL-wget-pkgs-TEST', 
-`mon-help-propertize-tags-TEST', `mon-insert-test-cases', `*mon-testme-utils-xrefs*'.\n►►►"
+`mon-help-propertize-tags-TEST', `mon-insert-test-cases', `*mon-testme-utils-xrefs*'.\n▶▶▶"
   (let ((st01 (make-marker))
         (en01 (make-marker))
         (t-str (concat "hendr erit\norci\nultrices\naugue\nAliquam\n"
@@ -467,7 +467,7 @@ named \"*MON-LIST-NSHUFFLE-TEST*\"\n
 `mon-help-regexp-symbol-defs-TEST', `mon-help-CL-wget-pkgs-TEST',
 `mon-inhibit-read-only-TEST', `mon-line-strings-to-list-TEST',
 `mon-user-system-conditionals-TEST', `mon-wget-list-to-script-TEST',
-`*mon-testme-utils-xrefs*'.\n►►►"
+`*mon-testme-utils-xrefs*'.\n▶▶▶"
   (let ((miro-bfr (get-buffer-create 
                    "*MON-WITH-INHIBIT-BUFFER-READ-ONLY-TEST*")))
     (with-current-buffer miro-bfr
@@ -492,7 +492,7 @@ named \"*MON-LIST-NSHUFFLE-TEST*\"\n
 `mon-help-regexp-symbol-defs-TEST', `mon-help-CL-wget-pkgs-TEST',
 `mon-inhibit-read-only-TEST', `mon-line-strings-to-list-TEST',
 `mon-user-system-conditionals-TEST', `mon-wget-list-to-script-TEST',
-`*mon-testme-utils-xrefs*'.\n►►►"
+`*mon-testme-utils-xrefs*'.\n▶▶▶"
   (let ((mwirot (get-buffer-create "*MON-WITH-INHIBIT-BUFFER-READ-ONLY-TEST*"))
         shw-msg)
     (with-current-buffer mwirot
@@ -526,7 +526,7 @@ named \"*MON-LIST-NSHUFFLE-TEST*\"\n
 (defun mon-line-dolines-setup-TEST ()
   "Helper for `mon-line-dolines' macro's test function `mon-line-dolines-TEST'.\n
 :SEE (URL `http://lists.gnu.org/archive/html/help-gnu-emacs/2009-12/msg00614.html')\n
-:SEE-ALSO `*mon-testme-utils-xrefs*'.\n►►►"
+:SEE-ALSO `*mon-testme-utils-xrefs*'.\n▶▶▶"
   (mon-line-dolines 
       (start end)
       (goto-char start)
@@ -585,7 +585,7 @@ When current-buffer does not have a display or is read-only return additional
 details in buffer named \"*MON-LINE-DOLINES-TEST*\".\n
 :EXAMPLE\n\n\(mon-line-dolines-TEST\)\n
 :SEE (URL `http://lists.gnu.org/archive/html/help-gnu-emacs/2009-12/msg00614.html')\n
-:SEE-ALSO `mon-line-dolines-setup-TEST', `*mon-testme-utils-xrefs*'.\n►►►"
+:SEE-ALSO `mon-line-dolines-setup-TEST', `*mon-testme-utils-xrefs*'.\n▶▶▶"
   (let ((mldt (mapconcat 'identity
                          '(":DATE        :MONTH           :YEAR"
                            ""
@@ -654,7 +654,7 @@ details in buffer named \"*MON-LINE-DOLINES-TEST*\".\n
 When optional arg FORCE-FAIL is non-nil force test failure.\n
 :EXAMPLE\n\n\(mon-with-buffer-undo-disabled-TEST\)\n
 \(mon-with-buffer-undo-disabled-TEST 'force-fail\)\n
-:SEE-ALSO `buffer-undo-list', `*mon-testme-utils-xrefs*'.\n►►►"
+:SEE-ALSO `buffer-undo-list', `*mon-testme-utils-xrefs*'.\n▶▶▶"
   (let ((rnd-char (mon-nshuffle-vector 
                     (vconcat (append (number-sequence 97 122)
                                      (number-sequence 65 90)))))
@@ -684,7 +684,7 @@ When optional arg FORCE-FAIL is non-nil force test failure.\n
 (defun mon-string-split-TEST (&optional w-msg-usr)
   "Test function for `mon-string-split'.\n
 :EXAMPLE\n\n\(mon-string-split-TEST\)\n
-:SEE-ALSO `*mon-testme-utils-xrefs*'.\n►►►"
+:SEE-ALSO `*mon-testme-utils-xrefs*'.\n▶▶▶"
   (let ((w-chk-str "With regexp SPLIT-PATTERN, split W-STRING-TO-SPLIT into a list of substrings.")
         (w-chk-pa '((("s." nil nil) . (16))
                     (("sp" nil nil) . (7 ))
@@ -724,11 +724,11 @@ When optional arg FORCE-FAIL is non-nil force test failure.\n
   "Test function for `mon-line-strings-bq-qt-sym-bol'.\n
 Return restults to buffer named \"*mon-line-strings-bq-qt-sym-bol-TEST*\".\n
 :EXAMPLE\n\n\(mon-line-strings-bq-qt-sym-bol-TEST\)\n
-:SEE-ALSO `*mon-testme-utils-xrefs*'.\n►►►"
+:SEE-ALSO `*mon-testme-utils-xrefs*'.\n▶▶▶"
   (with-current-buffer 
       (get-buffer-create "*MON-LINE-STRINGS-BQ-QT-SYM-BOL-TEST*")
     (let ((mlsbqsb-str  (mapconcat #'identity
-                                   '("►" "call-next-method"  
+                                   '("▶" "call-next-method"  
                                      "call-next-method &rest replacement-args"
                                      "call-next-method  &rest replacement-args"
                                      "`call-next-method  &rest replacement-args"
@@ -736,12 +736,12 @@ Return restults to buffer named \"*mon-line-strings-bq-qt-sym-bol-TEST*\".\n
                                      " call-next-method'  &rest replacement-args"
                                      "`call-next-method" "call-next-method'" 
                                      " call-next-method" " call-next-method'"
-                                     " call-next-method" "◄") "\n"))
+                                     " call-next-method" "◀") "\n"))
           mlsbqsb-mrk)
       (save-excursion (insert mlsbqsb-str))
       (save-excursion 
         (mon-line-strings-bq-qt-sym-bol 
-         (1+ (search-forward-regexp "►"))(search-forward-regexp "◄")  t))
+         (1+ (search-forward-regexp "▶"))(search-forward-regexp "◀")  t))
       (save-excursion 
         (insert ":TESTING `mon-line-strings-bq-qt-sym-bol'.\n"
                 "Original lines commented below.\n"
@@ -771,7 +771,7 @@ Performs the following checks:\n
    /PATH/TO/`default-directory'/tmp-wget-YY-MM-DD\n
 ./  A temp-buffer with the name *SHOW-WGET-TEMP*.\n
 :SEE-ALSO `mon-help-CL-pkgs', `*mon-help-CL-cmu-ai-repo*',
-`*mon-help-CL-ext-pkg-map*', `*mon-testme-utils-xrefs*'.\n►►►"
+`*mon-help-CL-ext-pkg-map*', `*mon-testme-utils-xrefs*'.\n▶▶▶"
   (save-excursion
     (let ((tmp-wget-cl-pkgs (concat default-directory 
                                     "tmp-wget-"
@@ -829,7 +829,7 @@ Performs the following checks:\n
 `*mon-gnu-license-header*', `mon-build-copyright-string-TEST',
 `mon-help-propertize-regexp-symbol-defs-TEST', `mon-help-propertize-tags-TEST',
 `mon-help-regexp-symbol-defs-TEST', `mon-help-CL-wget-pkgs-TEST',
-`mon-line-strings-to-list-TEST', `*mon-testme-utils-xrefs*'.\n►►►"
+`mon-line-strings-to-list-TEST', `*mon-testme-utils-xrefs*'.\n▶▶▶"
   (interactive)
   (let* ((mbcst (get-buffer-create "*COPYRIGHT-STRING-TEST*"))
          (mbcs-args (format "%s\n" (help-function-arglist 'mon-build-copyright-string)))
@@ -915,7 +915,7 @@ display results in buffer named \"*google-define-get-command-TEST*\"
 kill the leftover buffer `*google-define-get-buffer*'.\n
 :EXAMPLE\n\n\(google-define-get-command-TEST\)\n
 :SEE-ALSO `google-define', `google-define-kill-def-buffers',
-`*mon-testme-utils-xrefs*'.\n►►►"
+`*mon-testme-utils-xrefs*'.\n▶▶▶"
   (let ((gdgc-buff 
          (get-buffer 
           (google-define-get-command 
@@ -939,7 +939,7 @@ Test equivalence of return values of following procedures:\n
  `mon-permute-combine', `mon-permute-combine-1', \n
 :EXAMPLE\n\n\(mon-permute-combine-functions-TEST\)\n
 :SEE-ALSO `mon-list-variant-forms', `mon-list-permute-variants',
-`mon-list-permute-1', `mon-list-permute-2', `*mon-testme-utils-xrefs*'.\n►►►"
+`mon-list-permute-1', `mon-list-permute-2', `*mon-testme-utils-xrefs*'.\n▶▶▶"
   (let* ((sab '("StringA" "StringB"))
          (s1-4 '("String1" "String2" "String3" "String4"))
          (s-symab '(a b))
@@ -1013,7 +1013,7 @@ Test equivalence of return values of following procedures:\n
   "Test function for `mon-write-string' w/ keyword arg :RESET-BIND.\n
 Return and display results in buffer named \"*MON-WRITE-STRING-TEST*\".\n
 :EXAMPLE\n\n\(mon-write-string-reset-bind-TEST\)\n
-:SEE-ALSO `*mon-testme-utils-xrefs*'.\n►►►"
+:SEE-ALSO `*mon-testme-utils-xrefs*'.\n▶▶▶"
   (let ((mwst-tst-bfr (get-buffer-create "*MON-WRITE-STRING-TEST*"))
         (mwst-tst-mrk (make-marker))
         mwst-tst-bnd)
@@ -1128,7 +1128,7 @@ Return and display results in buffer named \"*MON-WRITE-STRING-TEST*\".\n
 (defun naf-mode-state-to-postal-TEST ()
   "Test associations forward/backward in variable `*naf-mode-state-to-postal*'.\n
 :EXAMPLE\n\n(naf-mode-state-to-postal-TEST\)\n
-:SEE-ALSO `*mon-testme-utils-xrefs*'.\n►►►"
+:SEE-ALSO `*mon-testme-utils-xrefs*'.\n▶▶▶"
   (let (nmstp) 
     (push (car (assoc-string "Puerto Rico" *naf-mode-state-to-postal*)) nmstp)
     (push (assoc-string (pop nmstp) *naf-mode-state-to-postal*)  nmstp)
@@ -1151,7 +1151,7 @@ Key :passed is non-nil when <TEST-FNCN> passed.\n
 Key :with-args indicates test evaulated predicate <TEST-FNCN> with results of
 invoking `mon-booleanp-to-binary' with <ARG-1> <ARG-2> to satisfy <TEST-VALUE>.\n
 :EXAMPLE\n\n\(mon-booleanp-to-binary-TEST\)\n
-:SEE-ALSO `mon-sequence-all-booleanp-TEST', `*mon-testme-utils-xrefs*'.\n►►►"
+:SEE-ALSO `mon-sequence-all-booleanp-TEST', `*mon-testme-utils-xrefs*'.\n▶▶▶"
   (let ((mbtb-tests '((= nil  nil  0)
                       (=  t   nil  1)
                       (=  0   t    0)
@@ -1182,7 +1182,7 @@ Key :all-tests-passed-p is non-nil if so.\n
 When optional arg W-DISPLAY-BUFFER is non-nil return and display results in
 buffer with name \"*MON-SEQUENCE-ALL-BOOLEANP-TEST*\"\n
 :EXAMPLE\n\n\(mon-sequence-all-booleanp-TEST t\)\n
-:SEE-ALSO `mon-booleanp-to-binary-TEST', `*mon-testme-utils-xrefs*'.\n►►►"
+:SEE-ALSO `mon-booleanp-to-binary-TEST', `*mon-testme-utils-xrefs*'.\n▶▶▶"
   (let (gthr)
     (setq gthr 
           (mapcar #'(lambda (x) 
@@ -1238,7 +1238,7 @@ Return value has the format:\n
 Key :all-tests-passed-p is non-nil if all tests succeeded.\n
 Key :test-passed-p is non-nil if individual test suceeded.\n 
 :EXAMPLE\n\n\(mon-string-or-null-and-zerop-TEST\)\n
-:SEE-ALSO `*mon-testme-utils-xrefs*'.\n►►►"
+:SEE-ALSO `*mon-testme-utils-xrefs*'.\n▶▶▶"
   (let* ((am-zero-str "")
          am-null       
          (am-bigr-str "am bigger")
@@ -1264,7 +1264,7 @@ Key :test-passed-p is non-nil if individual test suceeded.\n
   "Debugging function for macro `mon-error-protect'.\n
 Return and display results to buffer named \"*PP-EXPAND-ALL*\"
 :NOTE Not actually a test.\n
-:SEE-ALSO `*mon-testme-utils-xrefs*'.\n►►►"
+:SEE-ALSO `*mon-testme-utils-xrefs*'.\n▶▶▶"
   (with-current-buffer (get-buffer-create "*PP-EXPAND-ALL*")
     (erase-buffer)
     (save-excursion
@@ -1283,7 +1283,7 @@ Return and display results to buffer named \"*PP-EXPAND-ALL*\"
 Key :all-tests-passed is non-nil if so.\n
 :EXAMPLE\n\n\(mon-line-string-rotate-name-TEST\)\n
 \(and \(cadr \(memq :all-tests-passed \(mon-line-string-rotate-name-TEST\)\)\)\)\n
-:SEE-ALSO `*mon-testme-utils-xrefs*'.\n►►►"
+:SEE-ALSO `*mon-testme-utils-xrefs*'.\n▶▶▶"
   (let* (gthr (*standard-output*  gthr))
     (setq gthr                  
           (nconc
@@ -1319,7 +1319,7 @@ Key :all-tests-passed is non-nil if so.\n
 Key :all-tests-passed is non-nil if so.\n
 :EXAMPLE\n\n\(mon-line-indent-from-to-col-TEST\)\n
 \(and \(cadr \(memq :all-tests-passed \(mon-line-indent-from-to-col-TEST\)\)\)\)\n
-:SEE-ALSO `*mon-testme-utils-xrefs*'.\n►►►"
+:SEE-ALSO `*mon-testme-utils-xrefs*'.\n▶▶▶"
   (let ((fndr  #'(lambda (y) (search-forward-regexp y nil t)))
         (mliftc-T-with
          (mapconcat #'identity 
@@ -1362,10 +1362,10 @@ Key :all-tests-passed is non-nil if so.\n
   "Test function for `mon-line-strings-pipe-to-col'.\n
 Key :all-tests-passed-p is non-nil if so.\n
 :EXAMPLE\n\n\(mon-line-strings-pipe-to-col-TEST\)\n
-:SEE-ALSO `*mon-testme-utils-xrefs*'.\n►►►"
-  (let ((with-names '("►" "William Gibson" "Bruce Sterling" 
+:SEE-ALSO `*mon-testme-utils-xrefs*'.\n▶▶▶"
+  (let ((with-names '("▶" "William Gibson" "Bruce Sterling" 
                       "Dan Brown" "Neal Stephenson"
-                      "Loyd Blankenship" "Erik Gordon Corley" "◄"))
+                      "Loyd Blankenship" "Erik Gordon Corley" "◀"))
         (with-ree (make-marker))
         (with-pad-to 12)
         with-reb)
@@ -1373,8 +1373,8 @@ Key :all-tests-passed-p is non-nil if so.\n
       ,(equal (setq with-reb 
                     (with-temp-buffer
                       (save-excursion (insert (mapconcat #'identity  with-names "\n")))
-                      (setq with-reb (save-excursion (1+ (search-forward-regexp "►"))))
-                      (set-marker with-ree (save-excursion (- (search-forward-regexp "◄") 2)))
+                      (setq with-reb (save-excursion (1+ (search-forward-regexp "▶"))))
+                      (set-marker with-ree (save-excursion (- (search-forward-regexp "◀") 2)))
                       (set-marker-insertion-type with-ree t)
                       (mon-line-strings-pipe-to-col with-reb with-ree with-pad-to t)
                       (prog1 
@@ -1397,7 +1397,7 @@ Key :all-tests-passed-p is non-nil if so.\n
   "Test function for `mon-line-string-insert-chars-under'.\n
 Key :all-tests-passed-p is non-nil if so.\n
 :EXAMPLE\n\n\(mon-line-string-insert-chars-under-TEST\)\n
-:SEE-ALSO `*mon-testme-utils-xrefs*'.\n►►►"  
+:SEE-ALSO `*mon-testme-utils-xrefs*'.\n▶▶▶"  
 (let ((with-value '((nil 43 95 42) . "I will be followed below by "))
       with-check
       with-result)
@@ -1429,7 +1429,7 @@ Key :all-tests-passed-p is non-nil if so.\n
 \(let \(\(gbc \(get-buffer-create \"*mon-list-reorder-TEST*\"\)\)\)
   \(with-current-buffer gbc \(erase-buffer\)\)
   \(pp-display-expression \(mon-list-reorder-TEST\)  \(buffer-name gbc\)\)\)\n
-:SEE-ALSO `%mon-list-reorder', `*mon-testme-utils-xrefs*'.\n►►►"
+:SEE-ALSO `%mon-list-reorder', `*mon-testme-utils-xrefs*'.\n▶▶▶"
  (let ((with-test
         ;; :ARGS                                     :EXPECT
         '(((nil nil t)                                nil)
@@ -1515,7 +1515,7 @@ When a match is made return value is a plist of the form:\n
  \":GRANDPARENT-WAS Van-Winkle, Pappy von  \"
  \"\(Dutch painter and illustrator, 1800-1903\) [500000010]\"\)\)\n
 :USED-IN `naf-mode'.\n
-:SEE-ALSO `mon-cln-ulan', `*mon-testme-utils-xrefs*'.\n►►►"
+:SEE-ALSO `mon-cln-ulan', `*mon-testme-utils-xrefs*'.\n▶▶▶"
   (let* ((the-kwd (if kywd-str
                       (progn
                         (unless ndl-str 
@@ -1565,7 +1565,7 @@ When a match is made return value is a plist of the form:\n
   "Test function for `%mon-set-buffer-substring-no-properties', `%mon-set-buffer-substring'
 Which in turn are requirements to make `buffer-substring-no-properties' `setf'able.
 :EXAMPLE\n\n\(mon-set-buffer-substring-no-properties-TEST\)
-:SEE-ALSO `*mon-testme-utils-xrefs*'.\n►►►"
+:SEE-ALSO `*mon-testme-utils-xrefs*'.\n▶▶▶"
   (with-current-buffer (get-buffer-create "*DEFSETF-BUF-NO-PROPS*")
     (erase-buffer)
     (emacs-lisp-mode)
@@ -1599,7 +1599,7 @@ Which in turn are requirements to make `buffer-substring-no-properties' `setf'ab
 (defun mon-plist-keys-TEST ()
   "Test function for `mon-plist-keys'.\n
 :EXAMPLE\n\n\(mon-plist-keys-TEST\)\n
-:SEE-ALSO `mon-plist-values-TEST', `*mon-testme-utils-xrefs*'.\n►►►"
+:SEE-ALSO `mon-plist-values-TEST', `*mon-testme-utils-xrefs*'.\n▶▶▶"
   (let ((w-plist (mon-alphabet-as-type 'plistD->num))
         gthr)
     (push `(:plist-orig ,w-plist) gthr)
@@ -1618,7 +1618,7 @@ Which in turn are requirements to make `buffer-substring-no-properties' `setf'ab
   "Test function for `mon-plist-values'
 Keyword :all-tests-passed is non-nil if so.\n
 :EXAMPLE\n\n\(mon-plist-values-TEST\)\n
-:SEE-ALSO `mon-plist-keys-TEST', `*mon-testme-utils-xrefs*'.\n►►►"
+:SEE-ALSO `mon-plist-keys-TEST', `*mon-testme-utils-xrefs*'.\n▶▶▶"
   (let ((chk-rtn (mon-alphabet-as-plistD->num)) ;; (mon-alphabet-as-type 'plistD->num)
         rtn)
     (push `(,chk-rtn                    . :plist-orig) rtn)
@@ -1649,7 +1649,7 @@ Keyword :all-tests-passed is non-nil if so.\n
 (defun mon-help-propertize-regexp-symbol-defs-TEST ()
   "Helper function for `mon-help-regexp-symbol-defs-TEST'.\n
 Propertize symbols matched by regexp `*regexp-symbol-defs*'.\n
-:SEE-ALSO `mon-help-overlay-result', `*mon-testme-utils-xrefs*'.\n►►►"
+:SEE-ALSO `mon-help-overlay-result', `*mon-testme-utils-xrefs*'.\n▶▶▶"
   (let ((fnf ;; `font-lock-function-name-face'
          '(defun defun* defmacro defmacro* defsubst defsubst* defclass defadvice
            defgeneric defmethod defsetf defalias))
@@ -1694,7 +1694,7 @@ When optional arg DO-BIG-REGEXP is non-nil use regexps in the
 variable `*regexp-symbol-defs-big*'. Default is `*regexp-symbol-defs*'.\n
 :EXAMPLE\n\n\(mon-help-regexp-symbol-defs-TEST t\)\n
 \(mon-help-regexp-symbol-defs-TEST t t\)\n
-►
+▶
 \(defun some-function \(&optional optional\)
 \(defvar som-bq-list `\(
 \(defun some-function-22 \(&optional optional\)
@@ -1726,11 +1726,11 @@ variable `*regexp-symbol-defs-big*'. Default is `*regexp-symbol-defs*'.\n
 \(defface *some/-face-symbol:->name<-2* \(someface
 \(defgroup *some/-group-symbol:->name<-2* \(somegroup
 \(deftheme *some/-theme-symbol:->name<-2* \(sometheme
-◄
+◀
 
 :SEE-ALSO `mon-help-propertize-regexp-symbol-defs-TEST', `mon-help-overlay-result',
 `lisp-font-lock-keywords', `lisp-font-lock-keywords-1', `lisp-font-lock-keywords-2',
-`*mon-testme-utils-xrefs*'.\n►►►"
+`*mon-testme-utils-xrefs*'.\n▶▶▶"
   (interactive "p")
   (eval-when-compile (require 'boxquote))
   (let ((botp          #'(lambda () `(,(line-beginning-position) . ,(line-end-position))))
@@ -1747,9 +1747,9 @@ variable `*regexp-symbol-defs-big*'. Default is `*regexp-symbol-defs*'.\n
         (mhrsdt-step 1)
         match-report mhrsdt-cnt )
     (save-excursion
-      (funcall srcher "^►" nil)
+      (funcall srcher "^▶" nil)
       (set-marker mhrsdt-bnd-s (point))
-      (funcall srcher "◄$" nil)
+      (funcall srcher "◀$" nil)
       (set-marker mhrsdt-bnd-e (point)))
     (setq mhrsdt-cnt (- (line-number-at-pos (- (marker-position mhrsdt-bnd-e) 2))
                         (line-number-at-pos (marker-position mhrsdt-bnd-s))))
@@ -1811,7 +1811,7 @@ variable `*regexp-symbol-defs-big*'. Default is `*regexp-symbol-defs*'.\n
 ;;|
 ;;| (mon-help-regexp-symbol-defs-TEST t)
 ;;|
-;;|►
+;;|▶
 ;;|(defun some-function (&optional optional)
 ;;|(defvar som-bq-list `(
 ;;|(defun some-function-22 (&optional optional)
@@ -1843,7 +1843,7 @@ variable `*regexp-symbol-defs-big*'. Default is `*regexp-symbol-defs*'.\n
 ;;|(defface *some/-face-symbol:->name<-2* (someface
 ;;|(defgroup *some/-group-symbol:->name<-2* (somegroup
 ;;|(deftheme *some/-theme-symbol:->name<-2* (sometheme
-;;|◄
+;;|◀
 ;;`----
 
 
@@ -1873,7 +1873,7 @@ Test font-locking of the following faces:\n
  `mon-help-KEY-tag', `mon-help-META-tag', `mon-help-PNTR-tag',
  `mon-help-COMMENT-tag', `mon-help-BUILTIN-tag'\n
 :SEE-ALSO `mon-help-mon-tags', `mon-help-insert-tags',
-`*mon-testme-utils-xrefs*'.\n►►►"
+`*mon-testme-utils-xrefs*'.\n▶▶▶"
   (let ((tags-divd (concat "\n" (make-string 68 95) "\n"))
          test-mhpt)
     (setq test-mhpt
@@ -1948,7 +1948,7 @@ Return value displayed in buffer named \"*MON-HELP-KEYS-WIKIFY-TEST*\".\n
 :EXAMPLE\n\n(mon-help-keys-wikify-TEST)\n
 :SEE-ALSO `*mon-help-reference-keywords*', `mon-help-keys',
 `mon-help-escape-for-ewiki', `mon-help-unescape-for-ewiki', 
-`mon-help-key-functions', `*mon-testme-utils-xrefs*'.\n►►►"
+`mon-help-key-functions', `*mon-testme-utils-xrefs*'.\n▶▶▶"
   (let ((mhkwh (mon-help-keys-wikify)))
     (setq mhkwh (mon-help-keys-wikify-heading `(,(cadr mhkwh) ,(caddr mhkwh))
                                               2 "Keybinding Table Sections"))
@@ -1971,7 +1971,7 @@ When optional arg LOG-DEST-TEST is non-nil return results of evaluating
 `mon-insert-drive-transfer-template', `*mon-drive-transfer-template*',
 `*mon-drive-transfer-template-src-dest-log*',
 `mon-drive-transfer-template-subst-src-dest-log',
-`*mon-testme-utils-xrefs*'.\n►►►"
+`*mon-testme-utils-xrefs*'.\n▶▶▶"
   (with-current-buffer (get-buffer-create "*MON-DRIVE-TRANSFER-CLN-TEST*")
     (erase-buffer)
     (if log-dest-test
@@ -2009,7 +2009,7 @@ When `force-bind' is non-nil force the binding even if `*mon-emacsd*' bound.\n
    \(mon-build-mon-emacsd-example\)\)\n\n
 :SEE-ALSO `mon-get-mon-emacsd-paths', `mon-build-misc-path-example'.
 `mon-build-user-name-example', `*mon-emacsd*', `set-emacs-root',
-`*mon-testme-utils-xrefs*'.\n►►►"
+`*mon-testme-utils-xrefs*'.\n▶▶▶"
   (let (gthr-emacsd usr-map)
     (dotimes (p 5) 
       (unless (= p 0)
@@ -2055,7 +2055,7 @@ is already bound.\n
 :SEE-ALSO `mon-get-mon-emacsd-paths', `mon-build-mon-emacsd-example',
 `mon-build-user-name-example', `mon-get-env-vars-emacs',
 `mon-get-env-vars-symbols', `mon-get-env-vars-strings',
-`*mon-testme-utils-xrefs*'.\n►►►"
+`*mon-testme-utils-xrefs*'.\n▶▶▶"
   (let (pth egs)
     (do ((i 1 (1+ i)))
         ((> i 10) i)
@@ -2146,7 +2146,7 @@ Elements of the list might have a form such as this:\n
 \(mon-build-user-name-example-TEST\)\n
 :SEE-ALSO `mon-build-user-name-example-TEST', `mon-get-mon-emacsd-paths',
 `mon-build-misc-path-example' `mon-build-mon-emacsd-example',
-`*mon-testme-utils-xrefs*'.\n►►►"
+`*mon-testme-utils-xrefs*'.\n▶▶▶"
   (let ((wonky-user (mon-string-wonkify
                      (concat (if w-this-var 
                                  (cond ((equal (symbol-name w-this-var) "*MON-NAME*") 
@@ -2213,7 +2213,7 @@ For example:\n
 `mon-help-regexp-symbol-defs-TEST', `mon-help-CL-wget-pkgs-TEST',
 `mon-wget-list-to-script-TEST', `mon-line-strings-to-list-TEST',
 `mon-help-keys-wikify-TEST', `mon-insert-lisp-testme-fancy',
-`mon-insert-lisp-testme', `mon-insert-test-cases', `*mon-testme-utils-xrefs*'.\n►►►"
+`mon-insert-lisp-testme', `mon-insert-test-cases', `*mon-testme-utils-xrefs*'.\n▶▶▶"
   (let* (gthr
          (gthrer #'(lambda (lst-key nm-prop sys-typ usr-rln)
                     (let ((system-type sys-typ)
@@ -2249,7 +2249,7 @@ For example:\n
   "Test function for `mon-build-user-name-example'.\n
 Return value displayed in buffer \"*MON-BUILD-USER-NAME-EXAMPLE-TEST*\".\n
 :SEE-ALSO `mon-user-name-conditionals', `mon-system-type-conditionals',
-`*mon-testme-utils-xrefs*'.\n►►►"
+`*mon-testme-utils-xrefs*'.\n▶▶▶"
   (let* (mbunet-gthr
          (mk-eu #'(lambda (USER-BIND) 
                    (eval (defconst USER-BIND nil
@@ -2282,7 +2282,7 @@ Return value displayed in buffer \"*MON-BUILD-USER-NAME-EXAMPLE-TEST*\".\n
   "Test function for `mon-cln-xml-escapes'.\n
 Return and display results in buffer named \"*MON-CLN-XML-ESCAPES-TEST*\".\n
 :EXAMPLE\n\n\(mon-cln-xml-escapes-TEST\)\n
-:SEE-ALSO `*mon-testme-utils-xrefs*'.\n►►►"
+:SEE-ALSO `*mon-testme-utils-xrefs*'.\n▶▶▶"
   (let ((mcxet (mapconcat #'identity
                           '("e&amp;#769;" "a&amp;#769;" "i&amp;#769;" "o&amp;#769;"
                             "u&amp;#769;" "y&amp;#769;" "w&amp;#769;" "E&amp;#769;"
@@ -2323,7 +2323,7 @@ Keyword TEST-FNCN is one of:\n
 `mon-upcase-regexp-region', `mon-downcase-commented-lines',
 `mon-toggle-case-regexp-region', `mon-downcase-hex-values',
 `mon-rectangle-downcase', `mon-rectangle-upcase',
-`mon-upcase-commented-lines', `*mon-testme-utils-xrefs*'.\n►►►"
+`mon-upcase-commented-lines', `*mon-testme-utils-xrefs*'.\n▶▶▶"
   (let* ((mudcrT-w-fncn
           (case test-fncn
             ;; (upcase-regexp-region    '(up mon-upcase-regexp-region
@@ -2392,7 +2392,7 @@ Keyword TEST-FNCN is one of:\n
 (defun mon-hash-get-symbol-keys-TEST ()
   "Test function for macro `mon-hash-get-symbol-keys'
 :EXAMPLE\n\n\(mon-hash-get-symbol-keys-TEST\)\n
-:SEE-ALSO `*mon-testme-utils-xrefs*'.\n►►►"
+:SEE-ALSO `*mon-testme-utils-xrefs*'.\n▶▶▶"
   (let ((wonky-hash (make-hash-table))
         (wonky-tst (mon-string-wonkify 
                     (concat (mon-nshuffle-vector 
@@ -2412,7 +2412,7 @@ Keyword TEST-FNCN is one of:\n
   "Test function for `mon-file-stamp-buffer-filename'.\n
 :SEE-ALSO `mon-file-stamp', `mon-file-stamp-minibuffer',
 `mon-help-time-functions', `mon-help-mon-time-functions', `mon-help-iso-8601',
-`mon-help-CL-time', `mon-help-CL-local-time', `*mon-testme-utils-xrefs*'.\n►►►"
+`mon-help-CL-time', `mon-help-CL-local-time', `*mon-testme-utils-xrefs*'.\n▶▶▶"
   (dolist (i `("" ".el" ".gz" 
                ,(format-time-string "-%Y-%m-%d.el")
                ,(format-time-string "-%Y-%m-%d.el.gz"))
@@ -2439,7 +2439,7 @@ Keyword TEST-FNCN is one of:\n
   "Test/example function for `mon-cln-freenode-log'.\n
 :EXAMPLE\n\n\(mon-cln-freenode-log-TEST\)\n
 :SEE-ALSO `mon-wget-freenode-lisp-logs', `*regexp-clean-IRC-logs*',
-`*freenode-lisp-logs*', `mon-help-CL-minion', `*mon-testme-utils-xrefs*'.\n►►►"
+`*freenode-lisp-logs*', `mon-help-CL-minion', `*mon-testme-utils-xrefs*'.\n▶▶▶"
   (let ((mcflt-eg
          '("00:03:22 --- join: <USER1> (~<USER1>@some.ip.address.abc) joined #lisp"
            "00:04:52 --- join: <USER2> (~<USER2>@some.ip.address.abc) joined #lisp"
@@ -2488,10 +2488,10 @@ Keyword TEST-FNCN is one of:\n
 Return string of aligned conses.\n
 When optional arg NO-DISPLAY is non-nil don't display example with `display-buffer'.\n
 :EXAMPLE\n\n\(mon-align-conses-EXAMPLE\)\n
-:SEE-ALSO `mon-align-conses-TEST'.\n►►►" 
+:SEE-ALSO `mon-align-conses-TEST'.\n▶▶▶" 
   (let ((mace-bfr (get-buffer-create "*MON-ALIGN-CONSES-EXAMPLE*"))
-        (mace-str (mapconcat #'identity '("►" "((a .   b)" "(qed   . bubbas)"
-                                          "(ab . c)" "(defq . g))" "◄") "\n"))
+        (mace-str (mapconcat #'identity '("▶" "((a .   b)" "(qed   . bubbas)"
+                                          "(ab . c)" "(defq . g))" "◀") "\n"))
         (mace-rng ()))
     (save-window-excursion
       (unwind-protect
@@ -2524,10 +2524,10 @@ When optional arg NO-DISPLAY is non-nil don't display example with `display-buff
   "Example function for `mon-align-conses'.\n
 Return non-nil if test was succesfull
 :EXAMPLE\n\n\(mon-align-conses-TEST\)\n
-:SEE-ALSO `mon-align-conses-EXAMPLE'.\n►►►" 
+:SEE-ALSO `mon-align-conses-EXAMPLE'.\n▶▶▶" 
   (let ((mact-rslt (mon-align-conses-EXAMPLE t))
-        (mact-chk  (mapconcat #'identity '("►" "((a    . b)" " (qed  . bubbas)" 
-                                           " (ab   . c)" " (defq . g))" "◄") "\n")))
+        (mact-chk  (mapconcat #'identity '("▶" "((a    . b)" " (qed  . bubbas)" 
+                                           " (ab   . c)" " (defq . g))" "◀") "\n")))
     (equal mact-rslt mact-chk)))
 
 ;;; ==============================

@@ -6,9 +6,9 @@
 ;;; 
 ;;; naf-mode-name -> naf-mode-place-face.
 ;;;
-;;; FUNCTIONS:►►►
+;;; FUNCTIONS:▶▶▶
 ;;;
-;;; FUNCTIONS:◄◄◄
+;;; FUNCTIONS:◀◀◀
 ;;;
 ;;; MACROS:
 ;;;

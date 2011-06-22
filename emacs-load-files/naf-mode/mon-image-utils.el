@@ -22,11 +22,11 @@
 ;; mon-image-utils provides utility procedures for interfacing with image
 ;; manipulation processes. 
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;; `mon-image-rotate', `mon-image-identify', `mon-image-verify-type',
 ;; `mon-get-image-dimensions', `mon-get-image-dimensions-im',
 ;; `mon-get-image-md5',
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;;
@@ -142,7 +142,7 @@
 ;;; :CREATED <Timestamp: #{2010-11-20T19:24:47-05:00Z}#{10466} - by MON KEY>
 (defgroup mon-image-utils nil
   "Customizations for mon-image-utils related features.\n
-►►►"
+▶▶▶"
   :link  '(url-link :tag ":EMACSWIKI-FILE" "http://www.emacswiki.org/emacs/mon-image-utils.el")
   :link  '(emacs-library-link "mon-image-utils.el")
   :prefix "mon-image-"
@@ -157,7 +157,7 @@
 Used to separate records when multiple records are generated into the buffer.\n
 Default is value of:\n
  \(make-string 68 126\)\n
-:SEE-ALSO `mon-image-rotate', `mon-image-verify-type'.\n►►►"
+:SEE-ALSO `mon-image-rotate', `mon-image-verify-type'.\n▶▶▶"
   :type  'string
   :group 'mon-image-utils)
 
@@ -180,7 +180,7 @@ When optional arg NO-VERBOSE is non-nil do not pass `identify` the -verbose flag
         \(mon-identify-image emacs-png t\)\)\)
 :ALIASED-BY `mon-identify-image'\n
 :SEE-ALSO `mon-image-verify-type', `mon-image-rotate',
-`*mon-image-identify-delim*'.\n►►►"
+`*mon-image-identify-delim*'.\n▶▶▶"
   ;; :NOTE weird stuff seems to happen around the combined interactions of
   ;; `shell-command-to-string', `display-buffer', and `with-current-buffer'
   ;; following works... So, don't go trying to improve it without first
@@ -222,7 +222,7 @@ shell> convert <FILENAME> -rotate <INT> <FILENAME>\n
                                   \"/some/image/file2.jpeg\") 90)
 :ALIASED-BY `mon-rotate-images'\n
 :SEE `jpegtran` for an alternate command.\n
-:SEE-ALSO `mon-image-identify'.\n►►►"  
+:SEE-ALSO `mon-image-identify'.\n▶▶▶"  
   (dolist (mir-rt rotate-list)
     (call-process-shell-command "convert" nil nil nil 
                                 (format "%s -rotate %d %s" mir-rt rotate-degrees mir-rt))))
@@ -254,7 +254,7 @@ convert command could be supported. For a complete list of formats supported:
 :SEE-ALSO `mon-check-image-type', `*boxcutter-conversion-program*',
 `image-type-available-p', `image-type-from-file-name',
 `image-file-name-extensions', `image-type-file-name-regexps',
-`image-file-name-regexps'.\n►►►"
+`image-file-name-regexps'.\n▶▶▶"
   (eval-when-compile (require 'image))
   (let ((v-type verify-image-type))
     (car (member
@@ -309,7 +309,7 @@ convert command could be supported. For a complete list of formats supported:
 (defun mon-get-image-dimensions (img-file-path)
   "Return image file's width and height as a list using function `create-image'.\n
 :NOTE `mon-get-image-dimensions-im' for ImageMagick version which does similarly.\n
-:SEE-ALSO `mon-get-image-md5'.\n►►►"
+:SEE-ALSO `mon-get-image-md5'.\n▶▶▶"
   (let (tmp dimen)
     (if (equal (file-name-extension img-file-path) "bmp")
         (mon-get-image-dimensions-im img-file-path)
@@ -324,7 +324,7 @@ convert command could be supported. For a complete list of formats supported:
   "Return a image file's width and height as a list.\n
 Function requires ImageMagick's \"identity\" shell command.
 :NOTE `mon-get-image-dimensions' which returns same but uses `create-image'.\n
-:SEE-ALSO `mon-get-image-md5'.\n►►►"
+:SEE-ALSO `mon-get-image-md5'.\n▶▶▶"
   (let* ((cmd-name (executable-find "identify"))
          (sh-output 
           (if cmd-name
@@ -347,7 +347,7 @@ Function requires ImageMagick's \"identity\" shell command.
 :EXAMPLE\n\n\(mon-get-image-md5 \"/some/img/path/img.png\"\)\n
 :SEE \(man \"md5sum\"\)\n
 :SEE info node `(coreutils)md5sum invocation'\n
-:SEE-ALSO `md5', `sha1', `mon-get-image-dimensions-im'.\n►►►"
+:SEE-ALSO `md5', `sha1', `mon-get-image-dimensions-im'.\n▶▶▶"
   (let* ((mgim-cmd-nm (or 
                        (executable-find "md5sum") 
                        (error (concat ":FUNCTION `mon-get-image-md5' "
@@ -361,7 +361,8 @@ Function requires ImageMagick's \"identity\" shell command.
                                  img-file-path)))
          (mgim-output (shell-command-to-string (concat mgim-cmd-nm " " mgim-img-exist)))
          (mgim-sum (and (string-match  "\\([A-z0-9]\\{32,32\\}\\)"  mgim-output)
-                        (list (setq mgim-sum (match-string 1 mgim-output))))))
+                        ;;(list (setq mgim-sum (match-string 1 mgim-output))))))
+                        (list (match-string 1 mgim-output)))))
     mgim-output))
     ;; (setq mgim-cmd-nm "md5sum")
     ;; (setq mgim-output (shell-command-to-string (concat mgim-cmd-nm " " img-file-path)))

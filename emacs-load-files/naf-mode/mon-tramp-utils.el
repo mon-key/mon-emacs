@@ -23,13 +23,13 @@
 ;; This package should be compatible with both GNU/LINUX and w32 systems.
 ;; I have no idea if it will work with cygwin. 
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;; `mon-tramp-plink-example', `mon-tramp-add-default-methods', 
 ;; `mon-tramp-putty-conf-status', `mon-tramp-add-pageant-keys',
 ;; `mon-ssh-add-p', `mon-tramp-connect', `mon-tramp-read-conns',
 ;; `mon-tramp-disconnect', `mon-tramp-su-local', `mon-tramp-syntax',
 ;; `mon-tramp-utils-loadtime',
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;;
@@ -270,7 +270,7 @@
   "*Show tramp suitable mode line identification when visiting a tramp buffer.\n
 Run on the `dired-mode-hook' when `IS-MON-SYSTEM-P'.\n
 :NOTE Verbatim from info node `(tramp)Frequently Asked Questions'.\n
-:SEE-ALSO `mode-line-buffer-identification', `mode-line-remote', `file-remote-p'.\n►►►")
+:SEE-ALSO `mode-line-buffer-identification', `mode-line-remote', `file-remote-p'.\n▶▶▶")
 ;;
 (when (and (intern-soft "IS-MON-SYSTEM-P"  obarray) ;; *IS-MON-OBARRAY*
          (bound-and-true-p IS-MON-SYSTEM-P))
@@ -302,7 +302,7 @@ Path should be escaped for `w32-shell-execute' with `\\\\' not as `/'.\n
 :EXAMPLE\n '\(\"C:\\\\SOME\\\\PATH\\\\TO\\\\PUTTY-KEY-1.ppk\"
    \"C:\\\\SOME\\\\PATH\\\\TO\\\\PUTTY-KEY-2.ppk\")\n
 :SEE-ALSO `*mon-tramp-paths-alist*', `*mon-tramp-default-methods-l*',
-`mon-tramp-add-pageant-keys', `mon-tramp-putty-conf-status'\n►►►")
+`mon-tramp-add-pageant-keys', `mon-tramp-putty-conf-status'\n▶▶▶")
 ;;
 ;;; :TEST-ME *mon-tramp-putty-private-keys*
 ;;
@@ -331,7 +331,7 @@ Elements of alist should be as shown below.\n\n:EXAMPLE\n\(let \(\(mta '\(\(<KEY
   \(format \"The keys -> %s\\nThe GNU paths -> %s\\nThe Putty paths -> %s\"
           \(car mta\) \(cadr mta\) \(caddr mta\)\)\)\n
 :SEE-ALSO `*mon-tramp-putty-private-keys*', `*mon-tramp-default-methods-l*',
-`mon-tramp-plink-example'.\n►►►")
+`mon-tramp-plink-example'.\n▶▶▶")
 ;;
 ;;; :TEST-ME *mon-tramp-paths-alist*
 ;;; :TEST-ME (let ((mta (mapcar 'car *mon-tramp-paths-alist*))) mta)
@@ -362,7 +362,7 @@ Each list should contain three strings formatted as per tramps
 `tramp-default-method-alist' e.g. (HOST USER METHOD) and properly escaped as:\n
   \(\"\\\\`HOST\\\\'\" \"\\\\`USER\\\\'\" \"\\\\`METHOD\\\\'\"\)\n
 :SEE-ALSO `*mon-tramp-putty-private-keys*', `*mon-tramp-paths-alist*'
-`mon-tramp-plink-example'.\n►►►")
+`mon-tramp-plink-example'.\n▶▶▶")
 ;;
 (unless (bound-and-true-p *mon-tramp-default-methods-l*)
   (setq *mon-tramp-default-methods-l*
@@ -387,7 +387,7 @@ Each list should contain three strings formatted as per tramps
   "Return a  correct formatting for car of `*mon-tramp-default-methods-l*'.\n
 Return value as with `momentary-string-display'.\n
 :EXAMPLE\n\n(mon-tramp-plink-example)\n
-:SEE-ALSO `*mon-tramp-putty-private-keys*', `*mon-tramp-paths-alist*'.\n►►►"
+:SEE-ALSO `*mon-tramp-putty-private-keys*', `*mon-tramp-paths-alist*'.\n▶▶▶"
   (interactive)
   (let ((h-seq '(34 92 92 96 72 79 83 84 49 92 92 39 34))
         (h-sb '(49 50 51))
@@ -420,7 +420,7 @@ When `IS-MON-P-W32' add the the 'plinkx' methods.\n
 When `IS-MON-P-GNU' add the the ssh-agent style methods.\n
 :NOTE Evaluated at loadtime with `mon-tramp-utils-loadtime' by
 `mon-after-mon-utils-loadtime'.\n
-:SEE-ALSO `tramp-default-method-alist', `tramp-default-method'\n►►►"
+:SEE-ALSO `tramp-default-method-alist', `tramp-default-method'\n▶▶▶"
   ;; (let ((IS-MON-P-GNU t)   ; :FOR-TESTING cross-platform.
   ;;      (IS-MON-P-W32 nil)) ; :FOR-TESTING cross-platform.
   (cond (;;IS-MON-P-W32  
@@ -441,7 +441,7 @@ When `IS-MON-P-GNU' add the the ssh-agent style methods.\n
 (defun mon-tramp-utils-loadtime ()
   "Evalutate `mon-tramp-add-default-methods' at loadtime.\n
 :NOTE Evaluated by `mon-after-mon-utils-loadtime'.\n
-:SEE-ALSO `*mon-tramp-default-methods-l*'.\n►►►"
+:SEE-ALSO `*mon-tramp-default-methods-l*'.\n▶▶▶"
   (mon-tramp-add-default-methods))
 ;;
 ;;; :TEST-ME *mon-tramp-default-methods-l*
@@ -457,7 +457,7 @@ First elt is a formatted string of paths. Second is an alist as same.\n
 \(assoc 'putty \(cadr \(mon-tramp-putty-conf-status\)\)\)\n
 :NOTE Will not return particularly relevant results when the executables
 pageant, putty, or plink are not pressent in current systems path.\n
-:SEE-ALSO `*mon-tramp-putty-private-keys*', `mon-tramp-add-pageant-keys'.\n►►►"
+:SEE-ALSO `*mon-tramp-putty-private-keys*', `mon-tramp-add-pageant-keys'.\n▶▶▶"
   (interactive)
   (let* ((putty-stat-l
           `((pageant ,(or (executable-find "pageant.exe") 
@@ -484,7 +484,7 @@ pageant, putty, or plink are not pressent in current systems path.\n
   "Add all keys in var `*mon-tramp-putty-private-keys*' to the putty agent.\n
 Signal error if symbol pageant is associated in `mon-tramp-putty-conf-status'.\n
 :NOTE Existing putty keys will be over-written.\n
-:SEE-ALSO `mon-ssh-add-p'.\n►►►"
+:SEE-ALSO `mon-ssh-add-p'.\n▶▶▶"
   (interactive)
   (let ((pag (cadr (assoc 'pageant (cadr (mon-tramp-putty-conf-status))))))
     (if pag 
@@ -517,7 +517,7 @@ Signal error if symbol pageant is associated in `mon-tramp-putty-conf-status'.\n
   "On GNU/LINUX return t if ssh-add -l has know identities.\n
 On W32 message user about putty/pagent/plink.\n
 :EXAMPLE\n\n(mon-ssh-add-p)\n
-:SEE-ALSO `mon-tramp-add-pageant-keys'.\n►►►"
+:SEE-ALSO `mon-tramp-add-pageant-keys'.\n▶▶▶"
   (interactive)
   (if (and (intern-soft "IS-MON-P-GNU"  obarray) ;; *IS-MON-OBARRAY*
            (bound-and-true-p IS-MON-P-GNU))
@@ -535,7 +535,7 @@ On W32 message user about putty/pagent/plink.\n
   "Return a tramp connection for `mon-tramp-connect'.
 Return value is conditional on whether `IS-MON-P-W32' or `IS-MON-P-GNU'.\n
 :EXAMPLE\n(mon-tramp-read-conns)\n
-:SEE-ALSO `*mon-tramp-paths-alist*'.\n►►►"
+:SEE-ALSO `*mon-tramp-paths-alist*'.\n▶▶▶"
   (let (;; (IS-MON-P-W32 nil) ; :FOR-TESTING cross-platform.
         ;; (IS-MON-P-GNU t)   ; :FOR-TESTING cross-platform.
         (conn-key (mapcar #'(lambda (x) 
@@ -568,7 +568,7 @@ Return value is conditional on whether `IS-MON-P-W32' or `IS-MON-P-GNU'.\n
 Use `mon-tramp-read-conns' to specify the host.
 Completions return per current system's type `IS-MON-P-W32' or `IS-MON-P-GNU'.
 When TRAMP-PATH is non-nil attempt to connect to specified host.
-:SEE-ALSO `mon-tramp-disconnect', `mon-tramp-su-local'.\n►►►"
+:SEE-ALSO `mon-tramp-disconnect', `mon-tramp-su-local'.\n▶▶▶"
   (interactive "i")
   (if tramp-path
       (dired tramp-path)
@@ -584,7 +584,7 @@ All buffers, which are related to a remote connection, are killed.
 Flushes objects for all active remote connections. For more fine grained control
 :SEE `tramp-cleanup-all-connections', `tramp-cleanup-all-buffers'
 `tramp-cleanup-connection'.
-:SEE-ALSO `mon-tramp-connect', `mon-tramp-read-conns'\n►►►"
+:SEE-ALSO `mon-tramp-connect', `mon-tramp-read-conns'\n▶▶▶"
   (interactive)
   (progn
     (tramp-cleanup-all-connections)
@@ -601,7 +601,7 @@ Steel yourself and quiet those doubts with your best Colonel Kilgore:\n
     If I say its safe to su this CPU, then its safe to su this CPU. 
     I mean I'm not afraid to su this CPU, I'll su this whole fucking CPU! 
     Tramps don't sudo!\n
-:SEE-ALSO `mon-tramp-connect', `mon-tramp-disconnect'.\n►►►"
+:SEE-ALSO `mon-tramp-connect', `mon-tramp-disconnect'.\n▶▶▶"
   (interactive)
   (cond ((and (intern-soft "IS-MON-P-GNU"  obarray) ;; *IS-MON-OBARRAY*
               (bound-and-true-p IS-MON-P-GNU))
@@ -623,7 +623,7 @@ Steel yourself and quiet those doubts with your best Colonel Kilgore:\n
   "Return the format of for current tramp-syntax.\n
 :SEE info node `(tramp)Alternative Syntax'.\n
 :EXAMPLE\n(mon-tramp-syntax)\n
-:SEE-ALSO `mon-tramp-putty-conf-status'.\n►►►"
+:SEE-ALSO `mon-tramp-putty-conf-status'.\n▶▶▶"
   (interactive "p")
   (cond ((eq tramp-syntax 'url) 
          (princ "/ssh://<NAME>@<MACHINE>/path/to/.emacs"))

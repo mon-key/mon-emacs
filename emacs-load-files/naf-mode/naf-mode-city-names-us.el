@@ -6,9 +6,9 @@
 ;;; US City Name keyword highlighting for use with `naf-mode'
 ;;; `naf-mode-city-names-us' uses `naf-mode-place-face'.
 ;;;
-;;; FUNCTIONS:►►►
+;;; FUNCTIONS:▶▶▶
 ;;;
-;;; FUNCTIONS:◄◄◄
+;;; FUNCTIONS:◀◀◀
 ;;;
 ;;; CONSTANTS: 
 ;;; `naf-mode-city-names-us'

@@ -22,10 +22,10 @@
 ;; mon-doc-help-css.el provides extenions to mon-doc-help-utils.el for CSS
 ;; related functions and packages.
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;; `mon-help-css-mode', `mon-help-css-complete', `mon-help-css-check',
 ;; `mon-help-css-properties', `mon-help-css-color',
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;;
@@ -139,7 +139,7 @@
 ;;; ==============================
 (defgroup mon-doc-help-css nil
   "Extends mon-doc-help-utils with CSS related help.\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   :link '(url-link 
           :tag ":GITHUB-FILE" 
           "https://github.com/mon-key/mon-emacs/raw/master/emacs-load-files/naf-mode/mon-doc-help-css.el")  
@@ -168,7 +168,7 @@ The symbols contained of this list are defined in :FILE mon-doc-help-css.el\n
 `*mon-seq-utils-xrefs*', `*mon-string-utils-xrefs*', `*mon-type-utils-xrefs*',
 `*mon-window-utils-xrefs*', `*naf-mode-xref-of-xrefs*', `*mon-slime-xrefs*',
 `*naf-mode-faces-xrefs*', `*naf-mode-date-xrefs*', `*mon-ulan-utils-xrefs*',
-`*mon-xrefs-xrefs'.\n►►►"
+`*mon-xrefs-xrefs'.\n▶▶▶"
   :type  '(repeat symbol)
   :group 'mon-xrefs
   :group 'mon-doc-help-css)
@@ -300,7 +300,7 @@ appears in the two files: misc.cpp and misc.hpp   When the code blocks for
 :SEE (URL `http://github.com/pft/elisp-assorted/blob/master/css-check.el')
 :SEE-ALSO `mon-help-css-properties', `mon-help-css-color', `mon-help-css-mode',
 `mon-help-css-complete', `mon-help-css-check', `mon-help-ebay-template-mode',
-`mon-help-tidy'.\n►►►"
+`mon-help-tidy'.\n▶▶▶"
   (interactive "i\nP")
   (if (or insertp intrp)
       (mon-help-function-spit-doc 'mon-help-css-check :insertp t)
@@ -412,7 +412,7 @@ appears in the two files: misc.cpp and misc.hpp   When the code blocks for
 :SEE (URL `http://github.com/pft/elisp-assorted/blob/master/css-check.el')
 :SEE-ALSO `mon-help-css-properties', `mon-help-css-color', `mon-help-css-mode',
 `mon-help-css-complete', `mon-help-css-check', `mon-help-tidy',
-`mon-help-ebay-template-mode'.\n►►►"
+`mon-help-ebay-template-mode'.\n▶▶▶"
   (interactive "i\nP")
   (if (or insertp intrp)
       (mon-help-function-spit-doc 'mon-help-css-complete :insertp t)
@@ -467,7 +467,7 @@ appears in the two files: misc.cpp and misc.hpp   When the code blocks for
 :SEE :FILE lisp/textmodes/css-mode.el\n
 :SEE-ALSO `mon-help-css-properties', `mon-help-css-color', `mon-help-css-mode',
 `mon-help-css-complete', `mon-help-css-check', `mon-help-ebay-template-mode',
-`mon-help-tidy'.\n►►►"
+`mon-help-tidy'.\n▶▶▶"
   (interactive "i\nP")
   (if (or insertp intrp)
       (mon-help-function-spit-doc 'mon-help-css-mode :insertp t)
@@ -568,7 +568,7 @@ appears in the two files: misc.cpp and misc.hpp   When the code blocks for
 :SEE (URL `http://www.emacswiki.org/emacs/mon-css-color.el')
 :SEE-ALSO `mon-help-css-properties', `mon-help-css-mode',
 `mon-help-css-complete', `mon-help-css-check', `mon-help-ebay-template-mode',
-`mon-help-tidy'.\n►►►"
+`mon-help-tidy'.\n▶▶▶"
   (interactive "i\nP")
   (if (or insertp intrp)
       (mon-help-function-spit-doc 'mon-help-css-color :insertp t)
@@ -2409,7 +2409,7 @@ CR-CSS2-2009-09-09 \"Appendix F. Property index\".
 :SEE (URL `http://www.w3.org/TR/2009/CR-CSS2-20090908/css2.txt')
 :SEE (URL `http://www.w3.org/TR/2009/CR-CSS2-20090908/propidx.html')\n
 :SEE-ALSO `mon-help-css-mode', `mon-help-css-color', `mon-help-css-complete',
-`mon-help-css-check', `mon-help-ebay-template-mode', `mon-help-tidy'.\n►►►"
+`mon-help-css-check', `mon-help-ebay-template-mode', `mon-help-tidy'.\n▶▶▶"
   (interactive "i\nP")
   (if (or insertp intrp)
       (mon-help-function-spit-doc 'mon-help-css-properties :insertp t)

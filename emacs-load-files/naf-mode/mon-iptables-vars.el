@@ -22,9 +22,9 @@
 ;; mon-iptables-vars provides variable `*mon-iptables-alst*' which
 ;; needs to be evaluated before :FILE `mon-iptables-regexps.el'.
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;;
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;;
@@ -592,7 +592,7 @@ For equivalent list with all elts as symbols:
 :SEE (URL `http://www.davep.org/emacs/icmp-info.el')\n
 :SEE-ALSO `mon-help-ipv4-header', `*regexp-clean-iptables*',
 `mon-iptables-pp-key', `mon-iptables-pp-as-sym',
-`mon-iptables-make-regexps', `mon-cln-iptables-short-form'\n►►►")
+`mon-iptables-make-regexps', `mon-cln-iptables-short-form'\n▶▶▶")
 ;;
 ;; :TEST-ME (mapcar 'car *mon-iptables-alst*)
 ;;

@@ -21,9 +21,9 @@
 ;; DESCRIPTION:
 ;; mon-type-utils-vars provides variables useful for interogating lisp objects
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;;
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;;
@@ -129,7 +129,7 @@
 ;;; :CREATED <Timestamp: #{2011-02-19T13:28:47-05:00Z}#{11076} - by MON KEY>
 (defgroup mon-type-utils-vars nil
   "Customization group for variables and functions of :FILE mon-type-utils-vars.el\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   ;; :prefix "<PREFIX>"
   :link '(url-link 
           :tag ":EMACSWIKI-FILE" "http://www.emacswiki.org/emacs/mon-type-utils-vars.el")
@@ -160,7 +160,7 @@ The symbols contained of this list are defined in :FILE mon-type-utils.el\n
 `*mon-line-utils-xrefs*', `*mon-plist-utils-xrefs*'
 `*mon-seq-utils-xrefs*', `*mon-window-utils-xrefs*', `*naf-mode-xref-of-xrefs*',
 `*naf-mode-faces-xrefs*', `*naf-mode-date-xrefs*', `*mon-ulan-utils-xrefs*',
-`*mon-xrefs-xrefs'.\n►►►"
+`*mon-xrefs-xrefs'.\n▶▶▶"
   :type '(repeat symbol)
   :group 'mon-type-utils-vars
   :group 'mon-xrefs)
@@ -203,7 +203,7 @@ These are defined in :FILE lisp/emacs-lisp/byte-run.el\n
 `*mon-help-side-effect-and-error-free*', `*mon-help-pure-functions*',
 `*mon-help-permanent-locals*', `*mon-function-object-types*',
 `*mon-equality-or-predicate-function-types*', `*mon-non-mappable-object-types*',
-`*mon-help-risky-local-variables*', `mon-help-symbol-functions'.\n►►►")
+`*mon-help-risky-local-variables*', `mon-help-symbol-functions'.\n▶▶▶")
 
 
 ;;; ==============================
@@ -244,7 +244,7 @@ provided by the current list.\n
 `*mon-help-pure-functions*', `*mon-help-permanent-locals*',
 `*mon-help-byte-optimizer-vals*', `*mon-help-risky-local-variables*',
 `byte-boolean-vars', `mon-map-obarray-symbol-plist-props',
-`mon-help-byte-optimizer-find'.\n►►►")
+`mon-help-byte-optimizer-find'.\n▶▶▶")
 
 
 ;;; ==============================
@@ -297,7 +297,7 @@ For use with `mon-equality-or-predicate'.\n
 `*mon-help-byte-optimizer-vals*', `*mon-help-permanent-locals*',
 `*mon-help-risky-local-variables*', `*mon-help-emacs-errors*', `mon-booleanp',
 `byte-boolean-vars', `mon-map-obarray-symbol-plist-props',
-`mon-help-byte-optimizer-find'.\n►►►"
+`mon-help-byte-optimizer-find'.\n▶▶▶"
   :type  '(repeat symbol)
   :group 'mon-type-utils
   :group 'mon-base)
@@ -318,7 +318,7 @@ For use with `mon-equality-or-predicate'.\n
            *mon-function-object-types*\)\)\n
 :SEE-ALSO `functionp', `indirect-function', `symbol-function', `apropos-macrop',
 `edebug-macrop', `commandp', `*mon-equality-or-predicate-function-types*',
-`*mon-non-mappable-object-types*', `*mon-help-emacs-errors*'.\n►►►")
+`*mon-non-mappable-object-types*', `*mon-help-emacs-errors*'.\n▶▶▶")
 
 
 ;;; ==============================
@@ -333,7 +333,7 @@ For use with `mon-equality-or-predicate'.\n
          \(append \(number-sequence 65 90\) \(number-sequence 97 122\)\)\)\n
 \(aref *mon-digit-chars* \(car *mon-digit-registers*\)\)\n
 :SEE-ALSO `*mon-digit-chars*', `*mon-whitespace-chars*', `*mon-digit-registers*',
-`*mon-cntl-char-registers*', `mon-help-ascii-chars'.\n►►►")
+`*mon-cntl-char-registers*', `mon-help-ascii-chars'.\n▶▶▶")
 ;;
 (unless (eq (aref *mon-ascii-alpha-chars* ?A) ?A)
   (loop for U from ?A to ?Z ;; A-Z 65-90 
@@ -360,7 +360,7 @@ These are the character integer values in the decimal ranges:\n
 :ENMPLE\n\n\(char-equal \(aref *mon-ascii-punct-chars* 0\) 33\)\n
 \(concat *mon-ascii-punct-chars*\)\n
 :SEE-ALSO `*mon-digit-chars*', `*mon-ascii-alpha-chars*',
-`*regexp-whitespace-chars*', `mon-help-ascii-chars'.\n►►►"
+`*regexp-whitespace-chars*', `mon-help-ascii-chars'.\n▶▶▶"
   :type  'sexp ;; is it possible to do: (vector integer 32)
   :group 'mon-type-utils
   :group 'mon-base)
@@ -395,7 +395,7 @@ a handle for reductive queries which further filter their return value, e.g.:\n
 `mon-line-next-bol-is-eol', `mon-line-previous-bol-is-eol',
 `mon-spacep-is-after-eol', `mon-cln-spc-tab-eol'`mon-skip-whitespace',
 `mon-cln-BIG-whitespace' `mon-cln-trail-whitespace', `mon-cln-whitespace',
-`mon-insert-whitespace', `mon-kill-whitespace'.\n►►►")
+`mon-insert-whitespace', `mon-kill-whitespace'.\n▶▶▶")
 
 ;;; ==============================
 (provide 'mon-type-utils-vars)

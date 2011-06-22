@@ -24,9 +24,9 @@
 ;; isn't particularly relevant to emacs it is better off segregated in its own
 ;; package.
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;; `mon-help-pacman-Q', `mon-help-pacman-S', `mon-help-pacman-commands',
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;;
@@ -113,7 +113,7 @@
 (defvar *regexp-clean-pacman-Q* nil
   "*A list of short and long flags Flags Arch's `pacman -Q' command.\n
 :SEE-ALSO `mon-help-pacman-Q', `*regexp-clean-pacman-S*', 
-`mon-help-pacman-commands'.\n►►►")
+`mon-help-pacman-commands'.\n▶▶▶")
 ;;
 (unless (bound-and-true-p *regexp-clean-pacman-Q*)
   (setq *regexp-clean-pacman-Q* 
@@ -256,7 +256,7 @@
     "    replacements are not checked here. This option works best if the sync\n"
     "    database is refreshed using -Sy.\n\n"
     ":SEE-ALSO `*regexp-clean-pacman-Q*', `mon-help-pacman-commands',\n"
-    "`*regexp-clean-pacman-S*', `mon-help-pacman-S',.\n►►►")))
+    "`*regexp-clean-pacman-S*', `mon-help-pacman-S',.\n▶▶▶")))
 ;)
 ;;
 ;;; :TEST-ME (mon-help-pacman-Q )
@@ -271,7 +271,7 @@
 (defvar *regexp-clean-pacman-S* nil
   "*A list of short and long flags Flags Arch's `pacman -S' command.\n
 :SEE-ALSO `mon-help-pacman-S', `*regexp-clean-pacman-Q*',
-`mon-help-pacman-commands'.\n►►►")
+`mon-help-pacman-commands'.\n▶▶▶")
 ;;
 (unless (bound-and-true-p *regexp-clean-pacman-S*)
   (setq *regexp-clean-pacman-S*
@@ -438,7 +438,7 @@
     "  Directs pacman to ignore upgrades of all packages in group even if there is\n"
     "  one available. Multiple groups can be specified by separating them with a\n"
     "  comma.\n\n"
-    ":SEE-ALSO `*regexp-clean-pacman-S*', `mon-help-pacman-Q'.\n►►►")))
+    ":SEE-ALSO `*regexp-clean-pacman-S*', `mon-help-pacman-Q'.\n▶▶▶")))
 ;;)
 ;;
 ;;; :TEST-ME (mon-help-pacman-S )
@@ -495,7 +495,7 @@ Clean the package cache of packages not currently installed.
  shell> pacman -Sc\n
 :SEE-ALSO `mon-help-pacman-Q', `*regexp-clean-pacman-Q*',
 `mon-help-pacman-S', `*regexp-clean-pacman-S*'.\n
-:SOURCE (URL `http://wiki.archlinux.org/index.php/Pacman')\n►►►"
+:SOURCE (URL `http://wiki.archlinux.org/index.php/Pacman')\n▶▶▶"
   (interactive "i\nP")
   (if (or insertp intrp)
       (mon-help-function-spit-doc 'mon-help-pacman-commands :insertp t)

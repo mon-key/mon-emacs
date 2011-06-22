@@ -21,9 +21,9 @@
 ;; DESCRIPTION:
 ;; mon-macs provides macros for use with mon-*utils features
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;;
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;; `mon-error-protect', `handler-case', `%mon-format-chk-keys',
@@ -161,7 +161,7 @@
 ;;; :CREATED <Timestamp: #{2011-01-14T16:56:07-05:00Z}#{11025} - by MON KEY>
 (defgroup mon-macs nil
   "Customization group for variables and functions of :FILE mon-macs.el\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   ;; :prefix "<PREFIX>"
   :link '(url-link 
           :tag ":EMACSWIKI-FILE (URL `http://www.emacswiki.org/emacs/mon-macs.el')")
@@ -193,7 +193,7 @@ The symbols contained of this list are defined in :FILE mon-macs.el\n
 `*mon-seq-utils-xrefs*', `*mon-string-utils-xrefs*', `*mon-type-utils-xrefs*',
 `*mon-window-utils-xrefs*', `*naf-mode-xref-of-xrefs*', `*mon-slime-xrefs*',
 `*naf-mode-faces-xrefs*', `*naf-mode-date-xrefs*', `*mon-ulan-utils-xrefs*',
-`*mon-xrefs-xrefs'.\n►►►"
+`*mon-xrefs-xrefs'.\n▶▶▶"
   :type '(repeat symbol)
   :group 'mon-macs
   :group 'mon-xrefs)
@@ -239,7 +239,7 @@ ERR-ARG is the form returned from the error condition handler.\n
 `mon-error-string-err-format', `mon-message', `redirect-debugging-output',
 `external-debugging-output', `debug-on-signal', `debug-on-error',
 `debug-ignored-errors', `signal-hook-function', `*mon-emacs-help-errors*',
-`mon-help-errors', `Info-no-error', `mon-help-CL-error-condition-restart'.\n►►►"
+`mon-help-errors', `Info-no-error', `mon-help-CL-error-condition-restart'.\n▶▶▶"
   (let ((bdy-wrap (make-symbol "bdy-wrap")))
     `(let ((,bdy-wrap (or ,@body t)))
        (condition-case nil
@@ -291,7 +291,7 @@ Valid keywords are:\n
                           :w-delim t\)\)\)\n
 ;; Following is without key/value pairs:
 \(pp-macroexpand-expression '\(%mon-format-chk-keys nil\)\)\n
-:SEE-ALSO `destructuring-bind', `edebug-match-&key', `lambda-list-keywords'.\n►►►"
+:SEE-ALSO `destructuring-bind', `edebug-match-&key', `lambda-list-keywords'.\n▶▶▶"
   (declare (indent 0) (debug t))
   (let ((mfchk-keys (make-symbol "--mfchk-keys--"))
         (mfchk-chk-keys '(:w-fun :w-spec :w-args :w-delim))) ;; :w-stream
@@ -320,7 +320,7 @@ CLAUSES ::= <ERROR-CLAUSE> | <NO-ERROR-CLAUSE>
 ERROR-CLAUSE ::= (typespec ([var]) {declaration}* {form}*)
 NO-ERROR-CLAUSE ::= (:no-error LAMBDA-LIST {declaration}* {form}*)
 :EXAMPLE\n\n
-:SEE-ALSO `mon-error-protect', `stack-trace-on-error'.\n►►►"
+:SEE-ALSO `mon-error-protect', `stack-trace-on-error'.\n▶▶▶"
   ;;  (declare (indent 2) (debug t))
   (let* ((var (edebug-gensym "--mon-")) ;; :WAS `gensym'
          ;; :WAS (neclause (assoc :NO-ERROR clauses))         
@@ -443,7 +443,7 @@ Following checks help verify that list copies returned from `mon-copy-list-mac' 
                              \(cadddr  \(assq :setfd-mac chk-equal\)\)\)
                      ,@chk-equal\)\)\)\n
 :SEE-ALSO `mon-mapl', `mon-maplist',  `mon-mapcar', `mon-mapcan', `mon-mapcon',
-`mon-map'.\n►►►"
+`mon-map'.\n▶▶▶"
   ;; (declare (indent 1) (debug t))
   (let ((mclm-res (make-symbol "mclm-res"))
         (mclm-cpy (make-symbol "mclm-cpy")))
@@ -491,7 +491,7 @@ sequence types.\n
     :MON-MAPCAR/PAIRLIS ,rtn-mon-mapcar :CL-PKG/PAIRLIS ,rtn-pairlis\)\)\n
 :NOTE Last example is basically Emacs lisp's version of Common Lisp's `parilis'.\n
 :SEE-ALSO `mon-mapcar', `mon-map1', `mon-mapcan', `mon-mapcon', `mon-mapl',
-`mon-maplist', `mon-maptree', `mon-map-combine', `mon-map-append', `mon-map'.\n►►►"
+`mon-maplist', `mon-maptree', `mon-map-combine', `mon-map-append', `mon-map'.\n▶▶▶"
   ;; (declare (indent 1) (debug t))
   (if (not seqs2_n)
       `(mapcar ,mapmac-fun ,seq1)
@@ -538,7 +538,7 @@ All permutations are equally likely.\n
  '\(mon-nshuffle-vector [37 41 43 47 53 59]\)\)\n
 :ALIASED-BY `nshuffle-vector'\n
 :SEE-ALSO `mon-list-nshuffle', `mon-list-shuffle-safe',`shuffle-vector',
-`slime-shuffle-list'.\n►►►"
+`slime-shuffle-list'.\n▶▶▶"
   ;; :NOTE This is called repeatedly by `mon-*-gensym' procedures so we
   ;; need to gensym the local vars by hand.
   (declare (indent 0) (debug t))
@@ -580,7 +580,7 @@ On a Common Lisp return is as if by values.\n
 \(mon-list-sift '\(1 2 3 -1 -2 -3\) #'plusp #'oddp\)
 ;=> \(3 2 1\) \(-3 -1\) \(-2\)\n
 :SEE-ALSO `mon-list-filter', `mon-list-last', `mon-delete-first',
-`mon-equality-for-type', `mon-equality-or-predicate', `car-less-than-car'.\n►►►"
+`mon-equality-for-type', `mon-equality-or-predicate', `car-less-than-car'.\n▶▶▶"
   ;; Common Lisp version, note the functional `values' in the tail:
   ;; (defmacro list-sift (sift-list &rest sift-tests)
   ;; (let ((mls-gthr-sftd (mapcar #'(lambda (x) (declare (ignore x))
@@ -618,7 +618,7 @@ On a Common Lisp return is as if by values.\n
              \(+ for-var for-var\)\)    ; <- body\n
 \(pp-macroexpand-expression 
  '\(mon-foreach for-var '\(1 2 3 4\) \(+ for-var for-var\)\)\)\n
-:SEE-ALSO `mon-for', `mon-loop', `mon-mapcar'.\n►►►"
+:SEE-ALSO `mon-for', `mon-loop', `mon-mapcar'.\n▶▶▶"
   ;; (declare (indent 1) (debug t))
   `(mapcar #'(lambda (,w-var) ,@body) ,on-list))
 ;;
@@ -631,7 +631,7 @@ On a Common Lisp return is as if by values.\n
   "Execute a simple for loop .\n
 :EXAMPLE\n\n\(mon-for i  1  10  \(print i\)\)\n
 \(pp-macroexpand-expression '\(mon-for i 1 10  \(print i\)\)\)\n
-:SEE-ALSO `mon-foreach', `mon-loop', `mon-mapcar'.\n►►►"
+:SEE-ALSO `mon-foreach', `mon-loop', `mon-mapcar'.\n▶▶▶"
   ;; (declare (indent 1) (debug t))
   (let ((mf-tempvar (make-symbol "mf-tempvar")))
     `(let ((,var ,init)
@@ -651,7 +651,7 @@ On a Common Lisp return is as if by values.\n
 ;;; :MODIFICATIONS <Timestamp: #{2009-09-29T13:35:36-04:00Z}#{09402} - by MON KEY>
 (defmacro mon-loop (clauses &rest body)
   "Macro to execute a loop over clauses.\n
-:SEE-ALSO `mon-foreach', `mon-for', `mon-mapcar'.\n►►►"
+:SEE-ALSO `mon-foreach', `mon-for', `mon-mapcar'.\n▶▶▶"
   ;; (declare (indent 2) (debug t))
   (if (null clauses)
       `(progn ,@body)
@@ -671,7 +671,7 @@ On a Common Lisp return is as if by values.\n
 :SEE-ALSO `mon-equality-or-predicate',
 `*mon-equality-or-predicate-function-types*'
 `mon-get-text-properties-parse-prop-val-type-chk', `deftype', `type-of',
-`typep', `coerce'.\n►►►"
+`typep', `coerce'.\n▶▶▶"
   (declare (indent 0) (debug t))
   (let ((meft-thing (make-symbol "meft-thing")))
     `(let ((,meft-thing (type-of ,thing)))
@@ -713,7 +713,7 @@ Like the `gensym' function in CL package but defined as a macro instead.\n
 byte-compiler warning.\n
 :SEE-ALSO `mon-gensym-counter-randomizer', `mon-with-gensyms',
 `mon-gensym-counter-randomizer-TEST', `edebug-gensym'
-`easy-menu-make-symbol', `easy-menu-item-count'.\n►►►"
+`easy-menu-make-symbol', `easy-menu-item-count'.\n▶▶▶"
   (declare (indent 0) (debug t))
   (let ((mgs-pfix (make-symbol "mgs-pfix"))
         (mgs-num  (make-symbol "mgs-num"))) ;; (print-gensym t))
@@ -820,7 +820,7 @@ byte-compiler warning.\n
      \(setq hld-buba `\(,\(make-symbol \(format \"not-a-sym-%d\" \(random\)\)\)\)\)
      \(prin1 hld-buba \(current-buffer\)\)\)\)\)\n
 :ALIASED-BY `with-print-gensyms'\n
-:SEE-ALSO `mon-gensym', `print-circle', `read-circle', `mon-help-print-functions'.\n►►►"
+:SEE-ALSO `mon-gensym', `print-circle', `read-circle', `mon-help-print-functions'.\n▶▶▶"
   (declare (indent 0) (debug t))
   `(let ((print-gensym t))
      ,@body))
@@ -849,7 +849,7 @@ byte-compiler warning.\n
                      ":SEE-ALSO `defparameter', `defvar', `defcustom', `set-variable',"
                      "`make-local-variable', `make-variable-buffer-local', `make-symbol', `intern',"
                      "`intern-soft', `obarray', `boundp', `bound-and-true-p', `makunbound', `unintern'."
-                     "►►►") "\n")))
+                     "▶▶▶") "\n")))
     (put 'defconstant 'function-documentation defcon-d)))
 ;;
 ;; (put 'defconstant 'lisp-indent-function <INT>) 
@@ -874,7 +874,7 @@ string of kind variable.\n
 :SEE-ALSO `defconstant', `defconst', `defcustom', `set-variable', 
 `make-local-variable', `make-variable-buffer-local', `user-variable-p',
 `make-symbol', `intern', `intern-soft', `obarray', `boundp', `bound-and-true-p',
-`makunbound', `unintern'.\n►►►"
+`makunbound', `unintern'.\n▶▶▶"
   ;; (let ((dp-name "dp-name"))
   ;;   `(let ((,dp-name ,param-name))
   ;; (declare (indent 1) (debug t))
@@ -907,7 +907,7 @@ string of kind variable.\n
   "Execute BODY and add PROPS to all the text it inserts.\n
 More precisely, PROPS are added to the region between the point's positions
 before and after executing BODY.\n
-:SEE-ALSO `mon-insert-w-text-properties'.\n►►►"
+:SEE-ALSO `mon-insert-w-text-properties'.\n▶▶▶"
   ;; (declare (indent 1) (debug t))
   (let ((start (edebug-gensym)))
     `(let ((,start (point)))
@@ -923,7 +923,7 @@ before and after executing BODY.\n
 (defmacro mon-get-face-at-posn (position)
   "Return a list of faces at POSITION.\n
 :SEE-ALSO `mon-get-face-at-point', `mon-help-faces',
-`mon-help-faces-basic', `mon-help-faces-themes'.\n►►►"
+`mon-help-faces-basic', `mon-help-faces-themes'.\n▶▶▶"
   ;; (declare (indent 1) (debug t))
   (let ((mgfap-pos (make-symbol "mgfap-pos")))
     `(let ((,mgfap-pos ,position))
@@ -964,7 +964,7 @@ before and after executing BODY.\n
 `mon-string-split-buffer-name', `mon-string-split-buffer-parent-dir',
 `with-current-buffer', `with-temp-file', `with-temp-buffer',
 `get-file-buffer', `find-buffer-visiting', `buffer-file-truename',
-`mon-help-buffer-functions'.\n►►►"
+`mon-help-buffer-functions'.\n▶▶▶"
   ;; (declare (indent 1) (debug t))
   ;; :WAS (let ((file-var (make-symbol "file"))
   ;;        (buffer-already-there-p-var (make-symbol "buffer-already-there-p")))
@@ -1019,7 +1019,7 @@ without inversion.\n
 `mon-get-buffer-parent-dir', `mon-get-proc-buffers-directories',
 `mon-get-buffers-directories', `mon-string-split-buffer-name',
 `mon-string-split-buffer-parent-dir', `with-current-buffer', `with-temp-file',
-`with-temp-buffer'.\n►►►"
+`with-temp-buffer'.\n▶▶▶"
   (declare (indent 2) (debug t))
   (let ((mbep-bffr-p (make-symbol "mbep-bffr-p")))
     `(let ((,mbep-bffr-p ,buffer-to-check))
@@ -1070,7 +1070,7 @@ is not needed.\n
 `mon-get-buffer-parent-dir', `mon-get-proc-buffers-directories',
 `mon-get-buffers-directories', `mon-string-split-buffer-name',
 `mon-string-split-buffer-parent-dir', `with-current-buffer', `with-temp-file',
-`with-temp-buffer', `mon-help-buffer-functions'.\n►►►"
+`with-temp-buffer', `mon-help-buffer-functions'.\n▶▶▶"
   (declare (indent 2) (debug t))
   `(unwind-protect
        (progn
@@ -1095,7 +1095,7 @@ Otherwise, just return the printed value of form.\n
 `mon-buffer-exists-p', `mon-buffer-name->kill-ring', `mon-with-file-buffer',
 `mon-get-buffer-parent-dir', `mon-get-proc-buffers-directories',
 `mon-get-buffers-directories', `mon-string-split-buffer-name',
-`mon-string-split-buffer-parent-dir'.\n►►►"
+`mon-string-split-buffer-parent-dir'.\n▶▶▶"
   ;; (declare (indent 1) (debug t))
   (let ((mpibip-cb (make-symbol "mpibip-cb")))
     `(let ((,mpibip-cb (get-buffer (current-buffer))))
@@ -1131,7 +1131,7 @@ of `buffer-read-only'.\n
 \(mon-with-inhibit-buffer-read-only-TEST t\)\n
 :SEE-ALSO `mon-inhibit-read-only', `mon-with-inhibit-buffer-read-only-TEST',
 `mon-with-inhibit-buffer-read-only-PP-TEST', `mon-inhibit-modification-hooks',
-`mon-inhibit-point-motion-hooks', `mon-toggle-read-only-point-motion'.\n►►►"
+`mon-inhibit-point-motion-hooks', `mon-toggle-read-only-point-motion'.\n▶▶▶"
   (declare (indent 3) (debug t))
   (let ((mwibro-re-inhib (make-symbol "mwibro-re-inhib")))
     `(let ((,mwibro-re-inhib (buffer-local-value buffer-read-only (current-buffer))))
@@ -1151,7 +1151,7 @@ of `buffer-read-only'.\n
 ;;;   "Wrapper macro to temporarily toggle `longlines-mode' in current-buffer.\n
 ;;; Like `mon-naf-mode-toggle-restore-llm' but doesn't perform `naf-mode' check.
 ;;; :EXAMPLE\n\n\(pp-macroexpand-expression '\(mon-naf-mode-toggle-restore-llm \"bubba\"\)\)\n
-;;; :SEE-ALSO `mon-is-naf-mode-and-llm-p', `mon-is-naf-mode-p'.\n►►►"
+;;; :SEE-ALSO `mon-is-naf-mode-and-llm-p', `mon-is-naf-mode-p'.\n▶▶▶"
 ;;;   (declare (indent 1) (debug t))
 ;;;   (let ((llm-toggled (make-symbol "llm-toggled")))
 ;;;     `(let ((,llm-toggled 
@@ -1175,7 +1175,7 @@ exectute BODY there. Default is `current-buffer'.
             \(longlines-mode\) 
            \(prog1 \(buffer-name\)\(kill-buffer \"*MON-TOGGLE-RESTORE-LLM-TEST*\"\)\)\)\)\)
        \(display-buffer \"*Pp Macroexpand Output*\"\)\)\n
-:SEE-ALSO `mon-is-naf-mode-and-llm-p', `mon-is-naf-mode-p'.\n►►►"
+:SEE-ALSO `mon-is-naf-mode-and-llm-p', `mon-is-naf-mode-p'.\n▶▶▶"
   (declare (indent 1) (debug t))
   (let ((llm-toggled (make-symbol "llm-toggled")))
     `(let ((,llm-toggled 
@@ -1214,7 +1214,7 @@ exectute BODY there. Default is `current-buffer'.
 ;;;   "Wrapper macro to temporarily toggle `longlines-mode' in `naf-mode' buffers.\n
 ;;; :EXAMPLE\n\n\(pp-macroexpand-expression '\(mon-naf-mode-toggle-restore-llm \"bubba\"\)\)\n
 ;;; :SEE-ALSO `mon-toggle-restore-llm', `mon-naf-mode-toggle-restore-llm',
-;;; `mon-is-naf-mode-and-llm-p', `mon-is-naf-mode-p'.\n►►►"
+;;; `mon-is-naf-mode-and-llm-p', `mon-is-naf-mode-p'.\n▶▶▶"
 ;;;   (declare (indent 1) (debug t))
 ;;;   (let ((llm-toggled (make-symbol "llm-toggled")))
 ;;;     `(let ((,llm-toggled (if (mon-is-naf-mode-and-llm-p) t nil)))
@@ -1229,7 +1229,7 @@ When optional arg TOGGLE-BUFFER is non-nil check value in that buffer and
 exectute BODY there. Default is `current-buffer'.
 :EXAMPLE\n\n\(pp-macroexpand-expression '\(mon-naf-mode-toggle-restore-llm nil \"bubba\"\)\)\n
 :SEE-ALSO `mon-toggle-restore-llm', `mon-naf-mode-toggle-restore-llm',
-`mon-is-naf-mode-and-llm-p', `mon-is-naf-mode-p'.\n►►►"
+`mon-is-naf-mode-and-llm-p', `mon-is-naf-mode-p'.\n▶▶▶"
   (declare (indent 1) (debug t))
   `(mon-toggle-restore-llm ,toggle-buffer ,@naf-body))
 ;;
@@ -1248,7 +1248,7 @@ exectute BODY there. Default is `current-buffer'.
 end of each line of the current-buffer in turn.\n
 :EXAMPLE\n\(mon-line-dolines-TEST\)\n
 :SEE (URL `http://lists.gnu.org/archive/html/help-gnu-emacs/2009-12/msg00614.html')\n
-:SEE-ALSO `mon-line-dolines-TEST', `mon-line-dolines-setup-TEST'.\n►►►"
+:SEE-ALSO `mon-line-dolines-TEST', `mon-line-dolines-setup-TEST'.\n▶▶▶"
   (declare (indent 2) (debug t))
   (let ((mld-vline  (make-symbol "mld-vline"))
         (mld-sm     (make-symbol "mld-sm"))
@@ -1290,7 +1290,7 @@ of the file to return. Signal an error if this range is not accessible.\n
 \(mon-cat \"~/.emacs\" 10 253\)\n
 :SEE \(man \"cat\"\)
 :SEE info node `(coreutils)cat invocation'\n
-:SEE-ALSO `insert-file-contents'.\n►►►"
+:SEE-ALSO `insert-file-contents'.\n▶▶▶"
   ;; (declare (indent 1) (debug t))
   (let ((mc-fc (make-symbol "mc-fc")))
     `(let ((mc-fc (with-temp-buffer

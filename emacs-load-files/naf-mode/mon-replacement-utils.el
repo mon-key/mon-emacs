@@ -27,7 +27,7 @@
 ;; :AS-OF <Timestamp: #{2009-12-19T14:11:23-05:00Z}#{09516} - by MON>
 ;; It has been renamed to mon-replacement-utils.el
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;; `mon-replace-regexp-while', `mon-replace-string-while',
 ;; `replace-string-pairs-region3', `replace-string-pairs-region-no-props',
 ;; `mon-get-list-yorp', `mon-get-list-norp',
@@ -57,7 +57,7 @@
 ;; `mon-cln-mail-headers', `mon-cln-xml-escapes',
 ;; `mon-replace-unintern-w-query',
 ;; `mon-make-iso-latin-1-approximation-loadtime', `mon-cln-freenode-log',
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;; 
 ;; MACROS:
 ;; 
@@ -192,7 +192,7 @@
 ;;; :CREATED <Timestamp: #{2011-01-20T18:59:00-05:00Z}#{11034} - by MON KEY>
 (defgroup mon-replacement-utils nil
   "Customization group for variables and functions of :FILE mon-replacement-utils.el\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   ;; :prefix "<PREFIX>"
   :link '(url-link 
           :tag "\n:EMACSWIKI-FILE (URL `http://www.emacswiki.org/emacs/mon-replacement-utils.el')" 
@@ -247,7 +247,7 @@ The symbols contained of this list are defined in :FILE mon-replacement-utils.el
 `*mon-window-utils-xrefs*', `*naf-mode-xref-of-xrefs*', `*mon-slime-xrefs*',
 `*mon-url-utils-xrefs*', `*naf-mode-faces-xrefs*', `*naf-mode-date-xrefs*',
 `*mon-ulan-utils-xrefs*', `*google-define-redux-xrefs*',
-`*mon-xrefs-xrefs'.\n►►►"
+`*mon-xrefs-xrefs'.\n▶▶▶"
   :type '(repeat symbol)
   :group 'mon-replacement-utils
   :group 'mon-xrefs)
@@ -277,7 +277,7 @@ Signal an error if CHECK-NAF-BUFFER does not exist. Default is `current-buffer'.
 `mon-naf-mode-toggle-restore-llm' to test for active naf-mode before running
 additional longlines-mode checks.\n
 :USED-IN `naf-mode'.\n
-:SEE-ALSO `mon-buffer-longlines-mode-p', `mon-toggle-restore-llm'.\n►►►"
+:SEE-ALSO `mon-buffer-longlines-mode-p', `mon-toggle-restore-llm'.\n▶▶▶"
   (and (featurep 'naf-mode)
     (mon-buffer-check-major-mode 'naf-mode (or check-naf-buffer (current-buffer)))))
 ;;
@@ -307,7 +307,7 @@ additional longlines-mode checks.\n
   "Test if `longlines-mode' is active in buffer.\n
 Automatically becomes buffer-local whenever `naf-mode' initiated in buffer.\n
 :USED-IN `naf-mode'.\n
-:SEE-ALSO `mon-is-naf-mode-p' `mon-is-naf-mode-and-llm-p'.\n►►►")
+:SEE-ALSO `mon-is-naf-mode-p' `mon-is-naf-mode-and-llm-p'.\n▶▶▶")
 
 ;;; ==============================
 ;;; :CREATED <Timestamp: #{2009-09-08T12:59:41-04:00Z}#{09372} - by MON KEY>
@@ -333,7 +333,7 @@ Default is `current-buffer'.\n
 to test for active naf-mode before evaluating body.\n
 :USED-IN `naf-mode'.\n
 :SEE-ALSO `mon-toggle-restore-llm', `mon-naf-mode-toggle-restore-llm',
-`mon-is-naf-mode-p'.\n►►►"
+`mon-is-naf-mode-p'.\n▶▶▶"
   ;; (let ((do-nbn 
   ;;        (if naf-buffer-name
   ;;            (if (and naf-buffer-name (get-buffer naf-buffer-name))
@@ -371,13 +371,13 @@ to test for active naf-mode before evaluating body.\n
   "An array mapping ISO-8859-1 characters to ASCII-characters.\n
 :NOTE bound at loadtime with `mon-make-iso-latin-1-approximation-loadtime'.\n
 :SEE-ALSO `mon-cln-iso-latin-1', `mon-make-iso-latin-1-approximation',
-`mon-trans-cp1252-to-latin1'.\n►►►")
+`mon-trans-cp1252-to-latin1'.\n▶▶▶")
 ;;
 ;;; :COURTESY Pascal J. Bourguignon :HIS pjb-strings.el :WAS `make-iso-latin-1-approximation'
 (defun mon-make-iso-latin-1-approximation ()
 "Helper function for `mon-cln-iso-latin-1'.\n
 :SEE-ALSO `*iso-latin-1-approximation*',`mon-make-iso-latin-1-approximation',
-`mon-trans-cp1252-to-latin1', `mon-make-iso-latin-1-approximation-loadtime'.\n►►►"
+`mon-trans-cp1252-to-latin1', `mon-make-iso-latin-1-approximation-loadtime'.\n▶▶▶"
   (setq *iso-latin-1-approximation* (make-vector 256 0))
   (loop for i from 0 to 127 
      do (aset *iso-latin-1-approximation* i i))
@@ -397,7 +397,7 @@ to test for active naf-mode before evaluating body.\n
 (defun mon-make-iso-latin-1-approximation-loadtime ()
   "Loadtime function binds variable `*iso-latin-1-approximation*'.\n
 Variable bound with `mon-make-iso-latin-1-approximation'.\n
-:SEE-ALSO `mon-cln-iso-latin-1'.\n►►►"
+:SEE-ALSO `mon-cln-iso-latin-1'.\n▶▶▶"
   (unless (and (intern-soft "*iso-latin-1-approximation*" obarray)
                (bound-and-true-p *iso-latin-1-approximation*))
     (mon-make-iso-latin-1-approximation)
@@ -413,7 +413,7 @@ This is done only for ISO-5581-1 characters. Return the modified string.\n
 `mon-trans-cp1252-to-latin1', `deftransmogrify', `mon-cln-mail-headers'
 `mon-cln-csv-fields' `mon-cln-file-name-string' `mon-cln-up-colon'
 `mon-cln-whitespace' `mon-cln-uniq-lines' `mon-cln-control-M'
-`mon-cln-piped-list' `mon-delete-back-up-list' `mon-cln-iso-latin-1'.\n►►►"
+`mon-cln-piped-list' `mon-delete-back-up-list' `mon-cln-iso-latin-1'.\n▶▶▶"
   (unless *iso-latin-1-approximation* 
     (mon-make-iso-latin-1-approximation))
   (let ((result (make-string (length string) 0)))
@@ -428,7 +428,7 @@ This is done only for ISO-5581-1 characters. Return the modified string.\n
 (defmacro deftransmogrify (table string language translated-string)
   "A transmogrifier.\n
 :SEE `mon-transmogrify' for implementation details.\n
-:SEE-ALSO `mon-cln-iso-latin-1'.\n►►►"
+:SEE-ALSO `mon-cln-iso-latin-1'.\n▶▶▶"
   `(progn
      (unless (and (boundp (quote ,table)) ,table)
        (setq ,table (make-vector 7 0)))
@@ -466,7 +466,7 @@ This is done only for ISO-5581-1 characters. Return the modified string.\n
 Pascal Bourguignon's functions have extensive examples:
 :SEE `invoice-strings' in :HIS
 :FILE ../site-lisp/pjb/emacs-files/pjb-invoices.el.restore\n
-:SEE-ALSO `deftransmogrify'.\n►►►"
+:SEE-ALSO `deftransmogrify'.\n▶▶▶"
   (let ((sym (intern-soft string table)))
     (if sym (let ((result (get sym language))) 
               (if result 
@@ -482,7 +482,7 @@ Pascal Bourguignon's functions have extensive examples:
 W-FL is a file to find.\n
 W-REP is a list of regexp/replace pairs.\n
 BFR-MRKR is a buffer marker to print match/replace logs to.\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   (let ((the-rg w-rep)
         (map-rg #'(lambda (rg-list bmrk)
                     (let (this-rep-cnt)
@@ -521,7 +521,7 @@ IOW do this:\n
 This is an aggressive procedure; be careful looping over large file-sets
 with poorly formed regexps -- consider invoking this procedure on backups
 first.\n
-:SEE-ALSO `mon-walk-regexps-in-file', `mon-get-file-mod-times'.\n►►►"
+:SEE-ALSO `mon-walk-regexps-in-file', `mon-get-file-mod-times'.\n▶▶▶"
   (let ((mrrifl-fl file-list)
         (mrrifl-rl regexp-list)
         (mrrifl-rep-hst (get-buffer-create "*REGEXP-REPLACE-HISTORY*"))
@@ -558,7 +558,7 @@ REPLACING-ALIST is a list of \(FROM . TO\) pairs, which should be proper argumen
 When W-ALIST-REVERSED is non-nil the pairs are \(TO . FROM\), which allows use of the same
 list in both directions if it contains only literal strings. 
 Optional args BEG and END specify a region of the buffer on which to operate.\n
-:SEE-ALSO `mon-replace-regexp-while', `mon-replace-regexps-in-file-list'.\n►►►"
+:SEE-ALSO `mon-replace-regexp-while', `mon-replace-regexps-in-file-list'.\n▶▶▶"
   (save-excursion
     (save-restriction
       (let ((mrs-beg beg)
@@ -586,7 +586,7 @@ Optional args BEG and END specify a region of the buffer on which to operate.\n
 ;;; :WAS `clsc-replace-regexp' -> `mon-replace-regexp-while'
 (defun mon-replace-regexp-while (w-regexp to-string)
   "Like `replace-regexp', except be silent about it.\n
-:SEE-ALSO `mon-replace-string-while'.\n►►►"
+:SEE-ALSO `mon-replace-string-while'.\n▶▶▶"
   (while (search-forward-regexp w-regexp nil t)
     (replace-match to-string nil nil)))
 
@@ -595,7 +595,7 @@ Optional args BEG and END specify a region of the buffer on which to operate.\n
 ;;; :WAS `clsc-replace-string' -> `mon-replace-string-while'
 (defun mon-replace-string-while (from-string to-string)
   "Like `replace-string', except be silent about it.\n
-:SEE-ALSO `mon-replace-regexp-while'.\n►►►"
+:SEE-ALSO `mon-replace-regexp-while'.\n▶▶▶"
   (while (search-forward-regexp from-string nil t)
     (replace-match to-string nil t)))
 
@@ -606,7 +606,7 @@ Optional args BEG and END specify a region of the buffer on which to operate.\n
 :EXAMPLE\n\(mon-regexp-filter  \"en\"
  \'\(\"one\" \"two\" \"three\" \"four\" \"five\"
    \"six\" \"seven\" \"eight\" \"nine\" \"ten\"\)\)\n
-:SEE-ALSO `filter-buffer-substring'.\n►►►"
+:SEE-ALSO `filter-buffer-substring'.\n▶▶▶"
       (let (mrf-new)
 	(dolist (mrf-str w-filter-lst)
 	  (when (string-match-p w-regexp mrf-str)
@@ -648,7 +648,7 @@ For example the follow are all valid forms:\n
 \(mon-string-canonical \"β\" '\([\"a\"   \"α\"] [\"γ\"   \"g\"] [\"β\"   \"b\"]\)\)\n
 \(mon-string-canonical \"α\" '\(\(\"γ\" . \"g\"\) \(\"b\"   \"β\"\) [\"α\"   \"a\"]\)\)\n
 :ALIASED-BY `mon-canonical-string'\n
-:SEE-ALSO `mon-regexp-filter', `filter-buffer-substring'.\n►►►"
+:SEE-ALSO `mon-regexp-filter', `filter-buffer-substring'.\n▶▶▶"
   (let ((mcs-tbl-type (type-of canon-table))
         (mcs-itm-cnt (length canon-table))
         (mcs-idx-cnt 0)
@@ -699,7 +699,7 @@ NOTE: To clean discarding text-properties use:
  '((\"alpha\" \"A\") (\"beta\" \"B\")))\n
 :USED-IN `naf-mode'.\n
 :SEE-ALSO `replace-string-pairs-region', `mon-replace-region-regexp-lists'
-`mon-replace-region-regexp-lists-nonint', `mon-replace-regexps-in-file-list'.\n►►►"
+`mon-replace-region-regexp-lists-nonint', `mon-replace-regexps-in-file-list'.\n▶▶▶"
   ;; :WAS (let ((rspr3-str (buffer-substring-no-properties start end)))
   (let ((rspr3-str (mon-buffer-sub-no-prop start end)))
     ;;  (setq rspr3-str (buffer-substring start end))
@@ -730,7 +730,7 @@ The cadr may also be a subexp to replace with.\n
 :USED-IN `naf-mode'.\n
 :SEE-ALSO `replace-string-pairs-region',
 `mon-replace-string-pairs-region-no-insert', `mon-replace-region-regexp-lists',
-`mon-replace-region-regexp-lists-nonint'.\n►►►"
+`mon-replace-region-regexp-lists-nonint'.\n▶▶▶"
   (let (rsprnp-str)
     ;; :WAS (setq rsprnp-str (buffer-substring-no-properties start end))
     (setq rsprnp-str (mon-buffer-sub-no-prop start end))
@@ -757,11 +757,11 @@ Search string and replace string are literal.
 car of STR-PAIRS-REPLACE-LST is the target string cadr is the replacement string.
 cadr can be a subexp to replace with.\n
 :EXAMPLE\n\(mon-replace-string-pairs-region-no-insert
- \(1+ \(search-forward-regexp \"►\"\)\) \(- \(search-forward-regexp \"►\"\) 2\)
+ \(1+ \(search-forward-regexp \"▶\"\)\) \(- \(search-forward-regexp \"▶\"\) 2\)
  '((\"^alpha\" \"A\") (\"^beta\" \"B\") (\"^delta\" \"D\") (\"^epsilon\" \"E\")\)\)\n
-►\nalpha\nbeta\ndelta\nepsilon\n►\n
+▶\nalpha\nbeta\ndelta\nepsilon\n▶\n
 :SEE-ALSO `replace-string-pairs-region', `mon-replace-region-regexp-lists',
-`mon-replace-region-regexp-lists-nonint'.\n►►►"
+`mon-replace-region-regexp-lists-nonint'.\n▶▶▶"
   (let (mrsprni-str)
     ;; :WAS (setq mrsprni-str (buffer-substring-no-properties start end))
     (setq mrsprni-str (mon-buffer-sub-no-prop start end))
@@ -779,16 +779,16 @@ cadr can be a subexp to replace with.\n
 ;;
 ;;; :TEST-ME 
 ;;; (mon-replace-string-pairs-region-no-insert
-;;;  (1+ (search-forward-regexp "►")) (- (search-forward-regexp "►") 2)
+;;;  (1+ (search-forward-regexp "▶")) (- (search-forward-regexp "▶") 2)
 ;;;  '(("^alpha" "A") ("^beta" "B") ("^delta" "D") ("^epsilon" "E")))
 ;;
 ;; ,---- :UNCOMMENT-BELOW-TO-TEST
-;; | ►
+;; | ▶
 ;; | alpha 
 ;; | beta
 ;; | delta
 ;; | epsilon
-;; | ►
+;; | ▶
 ;; `----
 
 ;;; ==============================
@@ -799,7 +799,7 @@ cadr can be a subexp to replace with.\n
   "Template for accumulating a list from symbols holding lists.\n
 :NOTE Originally a help function to interactively pass symbol bound regexp lists
  as invoked by `mon-replace-region-regexp-lists'.\n
-:SEE-ALSO `mon-get-list-norp', `mon-replace-region-regexp-lists-nonint'.\n►►►"
+:SEE-ALSO `mon-get-list-norp', `mon-replace-region-regexp-lists-nonint'.\n▶▶▶"
   (interactive)
   ;; :NOTE Why the hell is this calling `eval'? 
   (let* ((mgly-rd-lst 
@@ -818,7 +818,7 @@ cadr can be a subexp to replace with.\n
 :NOTE Originally a help function to interactively pass symbol bound regexp
 lists at invocation. Body is now incorporated in:
 `mon-replace-region-regexp-lists-nonint'.\n
-:SEE-ALSO `mon-get-list-yorp', `mon-replace-region-regexp-lists'.\n►►►"
+:SEE-ALSO `mon-get-list-yorp', `mon-replace-region-regexp-lists'.\n▶▶▶"
   (let ((head-norp get-list-a)
         (tail-norp w-args))
     (while tail-norp
@@ -834,7 +834,7 @@ lists at invocation. Body is now incorporated in:
 Used as a helper function to search over symbol bound regexp lists.\n
 :EXAMPLE\n\(defun hah \(start end\) \(interactive \"r\"\)
 \(mon-replace-region-regexp-lists-nonint test-aaa test-bbb test-ccc test-ddd\)\)\n
-:SEE-ALSO `mon-get-list-yorp', `mon-get-list-norp'.\n►►►"
+:SEE-ALSO `mon-get-list-yorp', `mon-get-list-norp'.\n▶▶▶"
   (let* ((mrrrln-bnds `(,start . ,end))
 	 (mrrrln-lst  (mon-get-list-norp head-lst norp-rest))
 	 (mrrrln-rep-hd  (mapcar #'car mrrrln-lst))
@@ -874,7 +874,7 @@ Replace elts of REGEXP-LIST a symbol holding a list of regexp/replace pairs.
 Forms of symbol are searched across region until elements of supplied lists
 are exhausted. When WITH-RSULTS is non-nil spit replacement results for each
 elt of REGEXP-LIST to *Messages*.\n
-:SEE-ALSO `mon-get-list-yorp', `mon-get-list-norp', `mon-replace-regexps-in-file-list'.\n►►►"
+:SEE-ALSO `mon-get-list-yorp', `mon-get-list-norp', `mon-replace-regexps-in-file-list'.\n▶▶▶"
   (interactive "r\n\i\nP\np")
   (let* (;; mrrrl-rep-rgn
 	 mrrrl-rep-rgn-tmp
@@ -936,7 +936,7 @@ BIG-GRP-END is the match-group to map from.\n
 \(defun some-function-22 \(&optional optional\)
 \(defun *some/-symbol:->name<-2* \(somevar\n
 :ALIASED-BY `mon-map-regexp-matches'\n
-:SEE-ALSO `mon-regexp-map-match-in-region', `mon-walk-regexps-in-file'.\n►►►"
+:SEE-ALSO `mon-regexp-map-match-in-region', `mon-walk-regexps-in-file'.\n▶▶▶"
   (progn (search-forward-regexp big-regexp nil t)
          (mapcar #'(lambda (mrmm-L-1)
                    (cons mrmm-L-1 (match-string-no-properties mrmm-L-1)))
@@ -987,10 +987,10 @@ insert return value in current-buffer at END or region. Does not move point.\n
         \"\\\\|\\\\\\=<[0-9\]\\\\\\={8,10\\\\}\\\\>\"\)\)
       \(mrm-bnd \(nth 1 \(mapcar 'cadr \(mon-help-delimited-region t\)\)\)\)\)
       \(mon-regexp-map-match-in-region \(car mrm-bnd\) \(cdr mrm-bnd\) mrm-wr-eg\)\)\n
-►\n80126308\nno. 80126308\nn. 80126308\nno 94031775\nn 2005065776
-unk84240548\n\[500006383]\nFRBNF12656015\nFRBNF32759170\n◄\n
+▶\n80126308\nno. 80126308\nn. 80126308\nno 94031775\nn 2005065776
+unk84240548\n\[500006383]\nFRBNF12656015\nFRBNF32759170\n◀\n
 :ALIASED-BY `mon-map-regexp-matches-in-region'\n
-:SEE-ALSO `mon-walk-regexps-in-file', `mon-replace-regexps-in-file-list'.\n►►►"
+:SEE-ALSO `mon-walk-regexps-in-file', `mon-replace-regexps-in-file-list'.\n▶▶▶"
   (interactive (list (if (use-region-p) 
                          (region-beginning)
                        (error (concat ":FUNCTION `mon-regexp-map-match-in-region' "
@@ -1077,7 +1077,7 @@ group 5 is the closing paren which must immediately follow the variable.\n
 the most recent invocation of `mon-replace-unintern-w-query'.\n
 \(symbol-plist '*mon-regexp-unintern*\)\n
 \(get '*mon-regexp-unintern* :last-mark\)\n
-:SEE-ALSO .\n►►►")
+:SEE-ALSO .\n▶▶▶")
 ;;
 (if (and (intern-soft "*mon-regexp-unintern*" obarray)
          (bound-and-true-p *mon-regexp-unintern*))
@@ -1149,7 +1149,7 @@ function.\n
  \(unintern   'some:failed/variable\)\n
  \(unintern   '+some-plusd-variable+\)\n
  \(unintern   '--some-dashed--\)\n
-:SEE-ALSO `*mon-regexp-unintern*'.\n►►►"
+:SEE-ALSO `*mon-regexp-unintern*'.\n▶▶▶"
   (interactive)
   (let ((mruwq-bfr (get-buffer-create (upcase (symbol-name '*mon-regexp-unintern*))))
         ;; Initially store a buffer here. Later rebind to match related stuff.
@@ -1241,7 +1241,7 @@ Insert value of `*mon-default-comment-divider*' and replace BOL occurences of:\n
     \(mon-cln-mail-headers \(buffer-end 0\)\(buffer-end 1\)\)
     \(setq eg-str \(buffer-substring-no-properties \(buffer-end 0\)\(buffer-end 1\)\)\)\)
   \(mon-help-overlay-result \(car dlm\) \(cdr dlm\) 78 eg-str\)\)\n
-►
+▶
 from	some-name <some-name@some-domain.com>\nreply-to	reply-val <reply-val@some-domain.com>
 to	other-name@other-domain.com\ncc	more-names <more-names@more-domain.com>
 date	Mon, Jan 00, 2010 at 12:00 AM\nsubject	Some Engaging Subject Matter
@@ -1252,12 +1252,12 @@ show details 3:25 AM \(7 hours ago\)\nhide details 3:25 AM \(7 hours ago\)
 show details 12:25 AM \(7 hours ago\)\nhide details 3:25 AM \(1 hour ago\)
 hide details 12:55 PM \(0 minutes ago\)\nshow details 3:55 PM \(0 minutes ago\)
 hide details 12:55 PM \(1 minute ago\)\nshow details 12:55 AM \(1 minute ago\)
-◄\n
+◀\n
 :SEE RFC-2822 (URL `http://tools.ietf.org/html/rfc2822').
 :SEE RFC-5322 (URL `http://tools.ietf.org/html/rfc5322').\n
 :SEE-ALSO `mon-cln-csv-fields', `mon-cln-file-name-string', `mon-cln-up-colon',
 `mon-cln-whitespace', `mon-cln-uniq-lines', `mon-cln-control-M',
-`mon-cln-piped-list', `mon-delete-back-up-list', `mon-cln-iso-latin-1'.\n►►►"
+`mon-cln-piped-list', `mon-delete-back-up-list', `mon-cln-iso-latin-1'.\n▶▶▶"
   (interactive "r")
   (let ((mcmh-bol-rplc
          '(;; :CapCased-common
@@ -1336,7 +1336,7 @@ hide details 12:55 PM \(1 minute ago\)\nshow details 12:55 AM \(1 minute ago\)
 ;;|     (setq eg-str (buffer-substring-no-properties (buffer-end 0)(buffer-end 1))))
 ;;|   (mon-help-overlay-result (car dlm) (cdr dlm) 78 eg-str))
 ;;| 
-;;| ►
+;;| ▶
 ;;| from	some-name <some-name@some-domain.com>
 ;;| reply-to	reply-val <reply-val@some-domain.com>
 ;;| to	other-name@other-domain.com
@@ -1358,7 +1358,7 @@ hide details 12:55 PM \(1 minute ago\)\nshow details 12:55 AM \(1 minute ago\)
 ;;| show details 3:55 PM (0 minutes ago)
 ;;| hide details 12:55 PM (1 minute ago)
 ;;| show details 12:55 AM (1 minute ago)
-;;| ◄
+;;| ◀
 ;;`----
 
 ;;; ==============================
@@ -1423,7 +1423,7 @@ Zipcode: 000000
 :SEE-ALSO `mon-cln-mail-headers', `mon-cln-csv-fields',
 `mon-cln-file-name-string', `mon-cln-up-colon', `mon-cln-whitespace',
 `mon-cln-uniq-lines', `mon-cln-control-M', `mon-cln-piped-list',
-`mon-delete-back-up-list', `mon-cln-iso-latin-1'.\n►►►"
+`mon-delete-back-up-list', `mon-cln-iso-latin-1'.\n▶▶▶"
   (interactive)
   (save-excursion
     (let* ((mccf-csv-mkr field-list)
@@ -1549,7 +1549,7 @@ NN:NN:NN --- quit: <USER2> (<ACTION-OR-REASON>)
 NN:NN:NN --- part: <USER3> left #<CHANNEL>\n
 :EXAMPLE\n\n\(mon-cln-freenode-log-TEST\)\n
 :SEE-ALSO `mon-cln-freenode-log-TEST', `mon-wget-freenode-lisp-logs',
-`*freenode-lisp-logs*', `mon-help-CL-minion'.\n►►►"
+`*freenode-lisp-logs*', `mon-help-CL-minion'.\n▶▶▶"
   (interactive)
   (save-excursion 
     (while (search-forward-regexp *regexp-clean-irc-logs* nil t)
@@ -1568,7 +1568,7 @@ Cleaned chars include:\n
 `mon-cln-mail-headers', `mon-cln-csv-fields',
 `mon-cln-file-name-string', `mon-cln-up-colon', `mon-cln-whitespace',
 `mon-cln-uniq-lines', `mon-cln-control-M', `mon-cln-piped-list',
-`mon-delete-back-up-list', `mon-cln-iso-latin-1'.\n►►►"
+`mon-delete-back-up-list', `mon-cln-iso-latin-1'.\n▶▶▶"
   (let* ((mcfns-fix-pfx '("/"  ":"  "*"  "?" "\"" "<" ">" "|" "\\\\" ))
 	 (mcfns-fix-str fix-string))
 	 ;;"\\/:*?\"<>|"))
@@ -1590,7 +1590,7 @@ Cleaned chars include:\n
 (defun mon-cln-html-chars (start end)
   "Replace  <  by  &lt;  and other similar HTML chars that needs to be encoded.\n
 Replace  & ,  > ,  <  with their respective encoded representation.\n
-:SEE-ALSO `mon-cln-html-chars', `mon-cln-html-tags', `mon-cln-xml-escapes'.\n►►►"
+:SEE-ALSO `mon-cln-html-chars', `mon-cln-html-tags', `mon-cln-xml-escapes'.\n▶▶▶"
   (interactive "r")
   (replace-string-pairs-region3 start end
 			       '(("&" "&amp;")
@@ -1611,7 +1611,7 @@ Replace  & ,  > ,  <  with their respective encoded representation.\n
 `mon-cln-xml<-parsed', `mon-cln-mail-headers', `mon-cln-csv-fields',
 `mon-cln-file-name-string', `mon-cln-up-colon', `mon-cln-whitespace',
 `mon-cln-uniq-lines', `mon-cln-control-M', `mon-cln-piped-list',
-`mon-delete-back-up-list', `mon-cln-iso-latin-1', `mon-cln-xml-escapes'.\n►►►"
+`mon-delete-back-up-list', `mon-cln-iso-latin-1', `mon-cln-xml-escapes'.\n▶▶▶"
   (interactive "r")
   (let ((mcht-tbl '(("\n"                               . nil) ;; :NOTE is this correct? - MON
 		 ("\\(\\(.>+\\)\\([A-Za-z0-9: :]*\\)\\(</a>\\)\\)" . "\\2 \\3")
@@ -1658,7 +1658,7 @@ esp. when the numeric entity is a combining character, e.g.:\n
 :EXAMPLE\n\n(mon-cln-xml-escapes-TEST\)\n
 :SEE (URL `http://tlt.its.psu.edu/suggestions/international/bylanguage/ipavowels.html')
 :SEE-ALSO `mon-cln-html-tags', `mon-cln-html-chars', `mon-cln-xml<-parsed',
-`mon-cln-xml<-parsed-strip-nil', `mon-url-encode', `mon-url-decode'.\n►►►"
+`mon-cln-xml<-parsed-strip-nil', `mon-url-encode', `mon-url-decode'.\n▶▶▶"
   (let ((case-fold-search nil)
         (mcxe-rep-&AMP '(("e&amp;#769;"   . "é")
                          ("a&amp;#769;"   . "á")
@@ -1688,7 +1688,7 @@ FNAME is an XML filename path to parse and clean.\n
 When INSERTP is non-nil or called-interactively insert pretty printed lisp
 representation of XML file fname at point. Does not move point.\n
 :NOTE Unlike `mon-cln-xml<-parsed-strip-nil' will not strip `nil' from parsed xml.\n
-:SEE-ALSO `mon-cln-tgm-xml-LF', `mon-cln-xml-escapes'\n►►►"
+:SEE-ALSO `mon-cln-tgm-xml-LF', `mon-cln-xml-escapes'\n▶▶▶"
   ;; :WAS (interactive "fXML file to parse: \ni\np")
   (interactive "f:FUNCTION `mon-cln-xml<-parsed' -- XML file to parse: \ni\np")
   (let (mcxp-get-xml)
@@ -1715,7 +1715,7 @@ representation of XML file fname at point. Does not move point.\n
 (defun mon-cln-tgm-xml-LF ()
   "Clean EOL whitespace in tgm->XML conversions.\n
 :SEE-ALSO `mon-cln-xml<-parsed', `mon-cln-xml<-parsed-strip-nil',
-`mon-cln-xml-escapes'.\n►►►"
+`mon-cln-xml-escapes'.\n▶▶▶"
   (interactive)
   (save-excursion
     (mon-g2be -1)
@@ -1739,7 +1739,7 @@ When INSRTP is non-nil or called-interactively insert result at point.\n
 Does not move point.\n
 :NOTE Strips `nil' from parsed xml which may not be what you expect.\n
 :SEE-ALSO `*regexp-clean-xml-parse*', `mon-cln-xml<-parsed',
-`mon-cln-xml-escapes', `mon-cln-tgm-xml-LF'.\n►►►"
+`mon-cln-xml-escapes', `mon-cln-tgm-xml-LF'.\n▶▶▶"
   (interactive "f:FUNCTION `mon-cln-xml<-parsed-strip-nil' -- XML file to parse: \ni\np")
   (let (mcxpsn-get-xml)
     (setq mcxpsn-get-xml
@@ -1780,7 +1780,7 @@ upcase and colonize me \n
 `mon-line-strings-bq-qt-sym-bol', `mon-line-strings-indent-to-col',
 `mon-line-strings-pipe-bol', `mon-line-strings-pipe-to-col',
 `mon-line-strings-qt-region', `mon-cln-mail-headers',
-`mon-cln-file-name-string'.\n►►►"
+`mon-cln-file-name-string'.\n▶▶▶"
   (interactive "i\ni\ni\np") ;; "r\ni\np")
   (let ((mcuc-bl (make-marker))
         (mcuc-el (make-marker))
@@ -1840,7 +1840,7 @@ upcase and colonize me \n
 `mon-line-strings-indent-to-col', `mon-line-strings-pipe-bol',
 `mon-line-strings-pipe-to-col', `url-hexify-string', `url-unhex-string',
 `url-unhex', `hexl-hex-string-to-integer', `*regexp-rgb-hex*',
-`*css-color:hex-chars*', `*regexp-rgb-hex*', `*regexp-css-color-hex*'.\n►►►"
+`*css-color:hex-chars*', `*regexp-rgb-hex*', `*regexp-css-color-hex*'.\n▶▶▶"
   (interactive)
   (save-excursion
     (let ((case-fold-search nil))
@@ -1856,7 +1856,7 @@ Does not move point.\n
 :SEE-ALSO `mon-downcase-commented-lines', `mon-downcase-regexp-region',
 `mon-downcase-hex-values' `mon-cln-up-colon', `mon-line-strings-bq-qt-sym-bol',
 `mon-line-strings-indent-to-col', `mon-line-strings-pipe-bol', 
-`mon-line-strings-pipe-to-col', `mon-region-indent-refill'.\n►►►"
+`mon-line-strings-pipe-to-col', `mon-region-indent-refill'.\n▶▶▶"
   (interactive) ;;  (interactive "r")
   (save-excursion
     (while (search-forward-regexp "^;;; \\(.*\\)" nil t)
@@ -1870,7 +1870,7 @@ Does not move point.\n
   "Randomly capitalize certain words in the region from BEG and END.\n
 Optional third arg RAND-LIMIT means capitalize roughly one out of every
 RAND-LIMIT words.\n
-:SEE-ALSO `mon-string-wonkify'.\n►►►"
+:SEE-ALSO `mon-string-wonkify'.\n▶▶▶"
   (interactive "r\np")
   (or rand-limit (setq rand-limit 8))
   (save-excursion
@@ -1903,7 +1903,7 @@ suitable for use as args to `mon-toggle-case-regexp-region' e.g.:
 `mon-upcase-regexp', `mon-upcase-regexp-region', `mon-downcase-commented-lines',
 `mon-downcase-hex-values', `mon-toggle-case-regexp-region',
 `mon-up/down-case-regexp-TEST', `mon-rectangle-downcase',
-`mon-rectangle-upcase', `mon-upcase-commented-lines'.\n►►►"
+`mon-rectangle-upcase', `mon-upcase-commented-lines'.\n▶▶▶"
   (if w-region
       `(,(if (use-region-p) 
              (region-beginning)
@@ -1947,7 +1947,7 @@ message results of toggling.\n
 `mon-upcase-regexp-region', `mon-downcase-commented-lines',
 `mon-up/down-case-regexp-TEST', `mon-downcase-hex-values',
 `mon-rectangle-downcase', `mon-rectangle-upcase',
-`mon-upcase-commented-lines'.\n►►►"
+`mon-upcase-commented-lines'.\n▶▶▶"
   (interactive (funcall #'mon-toggle-case-query-user t))
   (let (mtcrr-dcrr)
     ;; :WAS (setq mtcrr-dcrr (buffer-substring-no-properties start end)) ;; mdrr-str mdrr-end
@@ -1990,7 +1990,7 @@ When W-RESULTS is non-nil or called-interactively message results.\n
 `mon-upcase-regexp', `mon-upcase-regexp-region', `mon-downcase-commented-lines',
 `mon-toggle-case-regexp-region', `mon-up/down-case-regexp-TEST',
 `mon-downcase-hex-values', `mon-rectangle-downcase', `mon-rectangle-upcase',
-`mon-upcase-commented-lines'.\n►►►"
+`mon-upcase-commented-lines'.\n▶▶▶"
   (interactive (funcall 'mon-toggle-case-query-user))
   (let ((mtcr-m-cnt 0)
         (mtcr-rep-cnt  (cond ((and replace-n (minusp replace-n)) nil)
@@ -2041,7 +2041,7 @@ that were upcased.\n
 `mon-upcase-regexp', `mon-upcase-regexp-region', `mon-downcase-commented-lines',
 `mon-toggle-case-regexp-region', `mon-up/down-case-regexp-TEST',
 `mon-downcase-hex-values', `mon-rectangle-downcase', `mon-rectangle-upcase',
-`mon-upcase-commented-lines'.\n►►►"
+`mon-upcase-commented-lines'.\n▶▶▶"
   (interactive "i\ni\ni\ni\ni\np")
   (if intrp (call-interactively 'mon-toggle-case-regexp-region)
     (eval `(mon-toggle-case-regexp-region 
@@ -2061,7 +2061,7 @@ that were upcased.\n
 `mon-upcase-regexp', `mon-upcase-regexp-region', `mon-downcase-commented-lines',
 `mon-toggle-case-regexp-region', `mon-up/down-case-regexp-TEST',
 `mon-downcase-hex-values', `mon-rectangle-downcase', `mon-rectangle-upcase',
-`mon-upcase-commented-lines'.\n►►►"
+`mon-upcase-commented-lines'.\n▶▶▶"
   (interactive "i\ni\ni\ni\ni\np")
   (if intrp (call-interactively 'mon-toggle-case-regexp-region)
     (eval `(mon-toggle-case-regexp-region 
@@ -2080,7 +2080,7 @@ that were upcased.\n
 `mon-downcase-commented-lines', `mon-toggle-case-regexp-region',
 `mon-up/down-case-regexp-TEST', `mon-downcase-hex-values',
 `mon-rectangle-downcase', `mon-rectangle-upcase',
-`mon-upcase-commented-lines'.\n►►►"
+`mon-upcase-commented-lines'.\n▶▶▶"
   (interactive "i\n\i\ni\np")
   (if intrp 
       (call-interactively 'mon-toggle-case-regexp)
@@ -2102,7 +2102,7 @@ that were upcased.\n
 `mon-upcase-regexp', `mon-upcase-regexp-region', `mon-up/down-case-regexp-TEST',
 `mon-downcase-commented-lines', `mon-toggle-case-regexp-region',
 `mon-downcase-hex-values', `mon-rectangle-downcase', `mon-rectangle-upcase',
-`mon-upcase-commented-lines'.\n►►►"
+`mon-upcase-commented-lines'.\n▶▶▶"
   (interactive "i\n\i\ni\np")
   (if intrp 
       (call-interactively 'mon-toggle-case-regexp)
@@ -2125,7 +2125,7 @@ For interactive cleaning of trailing tabs and spaces of entirety of current-buff
 :USED-IN `naf-mode'.\n
 :SEE-ALSO `mon-cln-imdb', `mon-trans-cp1252-to-latin1',
 `mon-replace-common-abrevs', `mon-abr-to-month', `mon-num-to-month',
-`url-eat-trailing-space', `url-strip-leading-spaces'.\n►►►"
+`url-eat-trailing-space', `url-strip-leading-spaces'.\n▶▶▶"
   (interactive "r\np")
   (mon-toggle-restore-llm nil  
       (save-excursion
@@ -2176,7 +2176,7 @@ It handles leading and trailing wspc, but can't always be trusted to DTRT.\n
 `mon-cln-blank-lines', `mon-cln-mail-headers', `mon-cln-up-colon',
 `mon-cln-imdb', `mon-trans-cp1252-to-latin1', `mon-replace-common-abrevs',
 `mon-abr-to-month', `mon-num-to-month', `url-eat-trailing-space',
-`url-strip-leading-spaces'.\n►►►"
+`url-strip-leading-spaces'.\n▶▶▶"
   (interactive "r\np")
   (mon-replace-region-regexp-lists-nonint start end *regexp-clean-whitespace*)
   (when intrp 
@@ -2194,7 +2194,7 @@ Use `mon-kill-whitespace' to kill tabs to 1 \(one\) space.\n
 For interactive whitespace region adjustment use `mon-cln-BIG-whitespace',
 `mon-cln-blank-lines', or `mon-cln-whitespace'.\n
 :USED-IN `naf-mode'.\n
-:SEE-ALSO `url-eat-trailing-space', `url-strip-leading-spaces'.\n►►►"
+:SEE-ALSO `url-eat-trailing-space', `url-strip-leading-spaces'.\n▶▶▶"
     (interactive)
     (save-excursion
       (mon-g2be -1)
@@ -2212,7 +2212,7 @@ Unlike `mon-cln-trail-whitespace', doesn't convert tabs to spaces.\n
 For interactive whitespace region adjustment use `mon-cln-BIG-whitespace',
 `mon-cln-whitespace', or `mon-cln-blank-lines'.\n
 :USED-IN `naf-mode'.\n
-:SEE-ALSO `mon-cln-uniq-lines', `url-eat-trailing-space', `url-strip-leading-spaces'.\n►►►"
+:SEE-ALSO `mon-cln-uniq-lines', `url-eat-trailing-space', `url-strip-leading-spaces'.\n▶▶▶"
   (interactive)
   (save-excursion
     (mon-g2be -1)
@@ -2224,7 +2224,7 @@ For interactive whitespace region adjustment use `mon-cln-BIG-whitespace',
 (defun mon-cln-blank-lines (start end); &optional intrp)
   "Delete blank and empty lines in region from START to END.\n
 :SEE-ALSO `mon-cln-uniq-lines', `delete-blank-lines',
-`mon-line-find-duplicates-cln', `mon-line-find-duplicates'.\n►►►"
+`mon-line-find-duplicates-cln', `mon-line-find-duplicates'.\n▶▶▶"
   (interactive "r") ;; \np
   (save-excursion
     (let ((mcbl-cln-strt start)
@@ -2248,7 +2248,7 @@ For interactive whitespace region adjustment use `mon-cln-BIG-whitespace',
 `mon-spacep-is-bol', `mon-spacep-not-bol', `mon-spacep',
 `mon-line-bol-is-eol', `mon-line-next-bol-is-eol',
 `mon-line-previous-bol-is-eol', `mon-line-previous-bol-is-eol',
-`mon-spacep-is-after-eol-then-graphic'.\n►►►"
+`mon-spacep-is-after-eol-then-graphic'.\n▶▶▶"
   (interactive); "p")
   (while (mon-spacep-at-eol)
     (goto-char (point-at-eol))
@@ -2263,7 +2263,7 @@ For interactive whitespace region adjustment use `mon-cln-BIG-whitespace',
   "Clean region of TAB (char 9) and SPC (char 32) at EOL.\n
 :CALLED-BY `mon-get-proc-buffers-directories'.\n
 :SEE-ALSO `mon-cln-spc-tab-eol'`mon-spacep-at-eol', `mon-spacep-is-after-eol',
-`mon-spacep-is-after-eol-then-graphic'.\n►►►"
+`mon-spacep-is-after-eol-then-graphic'.\n▶▶▶"
   (interactive "r")
   (save-excursion
     (let ((mcstaeoir-rgn (mon-buffer-sub-no-prop start end))
@@ -2296,7 +2296,7 @@ mitigated those issues.\n
 :SEE :FILE uniq.el for additional details.\n
 :SEE-ALSO `mon-line-find-duplicates-cln', `mon-cln-blank-lines',
 `delete-blank-lines', `mon-cln-mail-headers', `mon-cln-csv-fields',
-`mon-cln-file-name-string', `mon-cln-up-colon', `mon-cln-whitespace'.\n►►►"
+`mon-cln-file-name-string', `mon-cln-up-colon', `mon-cln-whitespace'.\n▶▶▶"
   (interactive "r")
   (let ((mcul-ring kill-ring))
     (unwind-protect
@@ -2322,7 +2322,7 @@ mitigated those issues.\n
 (defun mon-exchange-slash-and-backslash ()
   "Exchange / with \\ and in the current line.\n
 Exchange in region when region-active-p is non-nil.\n
-:SEE-ALSO `mon-cln-file-name-string', `convert-standard-filename'.\n►►►"
+:SEE-ALSO `mon-cln-file-name-string', `convert-standard-filename'.\n▶▶▶"
   (interactive)
   (save-match-data
     (save-excursion
@@ -2343,7 +2343,7 @@ Exchange in region when region-active-p is non-nil.\n
   "Remove ^M at EOL in current-buffer.\n
 :SEE-ALSO `untabify', `mon-cln-spc-tab-eol', `mon-cln-mail-headers'
 `mon-cln-csv-fields' `mon-cln-file-name-string' `mon-cln-up-colon'
-`mon-cln-whitespace' `mon-cln-uniq-lines'.\n►►►"
+`mon-cln-whitespace' `mon-cln-uniq-lines'.\n▶▶▶"
   (interactive "p")
   (let (mccm-msg)
     (save-match-data
@@ -2369,7 +2369,7 @@ Piped lists are used in the naf-mode sections:
 `mon-line-strings-pipe-bol', `mon-line-strings-pipe-to-col',
 `mon-cln-mail-headers', `mon-cln-csv-fields', `mon-cln-file-name-string',
 `mon-cln-up-colon', `mon-cln-whitespace', `mon-cln-uniq-lines',
-`mon-cln-control-M'.\n►►►"
+`mon-cln-control-M'.\n▶▶▶"
   (interactive "r\np")
   (mon-toggle-restore-llm nil  
     (let ((mcpl-strt start)
@@ -2419,7 +2419,7 @@ With each successive previous line deleting until point is no longer greater tha
 `mon-delete-back-up-list', `mon-line-strings-pipe-bol',
 `mon-line-strings-pipe-to-col',  `mon-cln-mail-headers', `mon-cln-csv-fields',
 `mon-cln-file-name-string', `mon-cln-up-colon', `mon-cln-whitespace',
-`mon-cln-uniq-lines', `mon-cln-control-M'.\n►►►"
+`mon-cln-uniq-lines', `mon-cln-control-M'.\n▶▶▶"
   (interactive "r\np") 
   (let* ((mdbul-dlm (cond ((eq delim 1) " ")
                           ((not delim) " ")
@@ -2454,7 +2454,7 @@ With each successive previous line deleting until point is no longer greater tha
   "Dedicated interactive function name for `mon-delete-back-up-list'.\n
 :USED-IN `naf-mode'.\n
 :SEE-ALSO `mon-line-pipe-lines', `mon-cln-piped-list', `mon-line-strings-pipe-bol',
-`mon-line-strings-pipe-to-col'.\n►►►"
+`mon-line-strings-pipe-to-col'.\n▶▶▶"
   (interactive "r")
   (mon-delete-back-up-list start end))
 
@@ -2470,7 +2470,7 @@ Following is the relevant URL containing content apropos this procedure:
 :USED-IN `naf-mode'.\n
 :SEE-ALSO `mon-cln-wiki', `mon-cln-philsp', `mon-cln-imdb',
 `mon-cln-ulan', `mon-cln-wiki', `mon-cln-imdb',`mon-cln-bib', `mon-cln-loc',
-`mon-cln-html-tags'.\n►►►"
+`mon-cln-html-tags'.\n▶▶▶"
   (interactive "r\np")
   (mon-naf-mode-toggle-restore-llm nil
       (save-excursion
@@ -2506,7 +2506,7 @@ For additional specs:\n
 :USED-IN `naf-mode'.\n
 :SEE-ALSO `*regexp-ulan-contribs*', `*regexp-clean-ulan-fields*',
 `*regexp-clean-ulan-diacritics*', `*regexp-clean-ulan-dispatch-chars*',
-`mon-regexp-clean-ulan-dispatch-chars-TEST'.\n►►►"
+`mon-regexp-clean-ulan-dispatch-chars-TEST'.\n▶▶▶"
   (interactive "r\nP\np")
    (let ((mcu-w/rslt with-results)
          mcu-rslt-cnt)
@@ -2586,7 +2586,7 @@ Insert the `non-posting-imdb-source' at end of cleaned region.
 :SEE-ALSO `mon-cln-wiki', `mon-cln-imdb',`mon-cln-bib',`mon-cln-ulan',
 `mon-cln-loc', `mon-cln-philsp', `mon-cln-html-tags',
 `mon-replace-common-abrevs', `mon-abr-to-month', `mon-num-to-month',
-`mon-trans-cp1252-to-latin1'.\n►►►"
+`mon-trans-cp1252-to-latin1'.\n▶▶▶"
   (interactive "r\np")
   (mon-toggle-restore-llm nil  
     (mon-replace-region-regexp-lists-nonint start end *regexp-clean-imdb*)
@@ -2605,7 +2605,7 @@ Insert the `non-posting-imdb-source' at end of cleaned region.
 :USED-IN `naf-mode'.\n
 :SEE-ALSO `mon-cln-wiki', `mon-cln-imdb', `mon-cln-bib', `mon-cln-ulan',
 `mon-cln-philsp', `mon-cln-html-tags', `mon-replace-common-abrevs',
-`mon-abr-to-month', `mon-num-to-month', `mon-trans-cp1252-to-latin1'.\n►►►"
+`mon-abr-to-month', `mon-num-to-month', `mon-trans-cp1252-to-latin1'.\n▶▶▶"
   (interactive "r\np")
   (mon-toggle-restore-llm nil   
     (mon-replace-region-regexp-lists-nonint start end *regexp-clean-loc*))
@@ -2616,8 +2616,8 @@ Insert the `non-posting-imdb-source' at end of cleaned region.
 ;;; ==============================
 ;;; :TODO Build a subr to gather the sections of WIKI `Contents' table and
 ;;;       search buffer for occurences at BOL WSP e.g. "^ Some Contents
-;;;       Section\n" replace each Section with with "►►►SOME CONTENTS
-;;;       SECTION◄◄◄\n"
+;;;       Section\n" replace each Section with with "▶▶▶SOME CONTENTS
+;;;       SECTION◀◀◀\n"
 ;;; :NOTE Newer version tests for longlines.
 ;;; :CREATED <Timestamp: Saturday March 21, 2009 @ 02:57.37 PM - by MON KEY>
 (defun mon-cln-wiki (start end &optional intrp)
@@ -2628,7 +2628,7 @@ Insert the `non-posting-imdb-source' at end of cleaned region.
 :SEE-ALSO `non-posting-wiki-source', `mon-cln-html-tags', `mon-cln-bib',
 `mon-cln-loc', `mon-cln-ulan', `mon-cln-philsp', `mon-cln-imdb',
 `mon-cln-whitespace', `mon-replace-common-abrevs', `mon-abr-to-month',
-`mon-num-to-month', `mon-trans-cp1252-to-latin1'.\n►►►"
+`mon-num-to-month', `mon-trans-cp1252-to-latin1'.\n▶▶▶"
   (interactive "r\np")
   (mon-naf-mode-toggle-restore-llm nil
     (mon-replace-region-regexp-lists-nonint start end *regexp-clean-wikipedia*))
@@ -2643,7 +2643,7 @@ Insert the `non-posting-imdb-source' at end of cleaned region.
 :VARIABLE in :FILE mon-regexp-symbols.el\n
 :USED-IN `naf-mode'.\n
 :SEE-ALSO `mon-cln-wiki', `mon-cln-loc', `mon-cln-imdb',
-`mon-cln-ulan', `mon-cln-philsp', `mon-cln-html-tags'.\n►►►"
+`mon-cln-ulan', `mon-cln-philsp', `mon-cln-html-tags'.\n▶▶▶"
   (interactive "r\np")
   (mon-toggle-restore-llm nil  
     (mon-replace-region-regexp-lists-nonint start end *regexp-clean-bib*))
@@ -2661,7 +2661,7 @@ Only match on month nums 0-9 when zero padded e.g.\n
 :SEE :FILE mon-regexp-symbols.el.\n
 :SEE-ALSO `*regexp-month->MM*', `*regexp-month->canonical-ws*',
 `*regexp-abrv-dotted-month->canonical*', `regexp-simple-abrv-month2canonical',
-`*regexp-philsp-fix-month-dates*'.\n\n:USED-IN `naf-mode'.\n►►►"
+`*regexp-philsp-fix-month-dates*'.\n\n:USED-IN `naf-mode'.\n▶▶▶"
   (interactive "r\np")
   (mon-replace-region-regexp-lists-nonint start end *regexp-MM->month*)
   (when intrp (message 
@@ -2681,7 +2681,7 @@ Only match on month nums 0-9 when zero padded e.g.:\n
 :USED-IN `naf-mode'.\n
 :SEE-ALSO `*regexp-MM->month*', `*regexp-month->canonical-ws*', 
 `*regexp-abrv-dotted-month->canonical*', `regexp-simple-abrv-month2canonical',
-`*regexp-philsp-fix-month-dates*'.\n►►►"
+`*regexp-philsp-fix-month-dates*'.\n▶▶▶"
   (interactive "r\np")
   (mon-toggle-restore-llm nil  
     (mon-replace-region-regexp-lists-nonint start end *regexp-MM->month-whitespace-aware*))
@@ -2697,7 +2697,7 @@ Only match on month nums 0-9 when zero padded e.g.:\n
 :USED-IN `naf-mode'.\n
 :SEE-ALSO `*regexp-MM->month*', `*regexp-month->canonical-ws*', 
 `*regexp-abrv-dotted-month->canonical*', `regexp-simple-abrv-month2canonical',
-`*regexp-philsp-fix-month-dates*'.\n►►►"
+`*regexp-philsp-fix-month-dates*'.\n▶▶▶"
   (interactive "r\np")
   (mon-toggle-restore-llm nil  
     (mon-replace-region-regexp-lists-nonint start end *regexp-month->MM*))
@@ -2716,7 +2716,7 @@ Additionally, will match with/out leading/trailing whitespace.\n
 :SEE :FILE mon-regexp-symbols.el\n
 :USED-IN `naf-mode'.\n
 :SEE-ALSO `mon-num-to-month', `mon-cln-wiki', `mon-cln-imdb',
-`mon-trans-cp1252-to-latin1', `mon-replace-common-abrevs'.\n►►►"
+`mon-trans-cp1252-to-latin1', `mon-replace-common-abrevs'.\n▶▶▶"
   (interactive "r\np")
   (mon-toggle-restore-llm nil  
     (mon-replace-region-regexp-lists-nonint start end *regexp-month->canonical-ws*))
@@ -2734,7 +2734,7 @@ Additionally, will match with/out leading/trailing whitespace.\n
 :USED-IN `naf-mode'.\n
 :SEE-ALSO `mon-make-iso-latin-1-approximation', `mon-cln-iso-latin-1',
 `*iso-latin-1-approximation*', `mon-cln-wiki', `mon-cln-imdb',
-`mon-replace-common-abrevs', `mon-abr-to-month', `mon-num-to-month'.\n►►►"
+`mon-replace-common-abrevs', `mon-abr-to-month', `mon-num-to-month'.\n▶▶▶"
   (interactive "r\np")
   (mon-toggle-restore-llm nil  
     (mon-replace-region-regexp-lists-nonint start end *regexp-cp1252-to-latin1*))
@@ -2752,7 +2752,7 @@ Additionally, will match with/out leading/trailing whitespace.\n
 :SEE :FILE mon-regexp-symbols.el\n
 :USED-IN `naf-mode'.\n
 :SEE-ALSO `mon-cln-wiki', `mon-cln-imdb', `mon-replace-common-abrevs',
-`mon-abr-to-month', `mon-num-to-month', `mon-defranc-places'.\n►►►"
+`mon-abr-to-month', `mon-num-to-month', `mon-defranc-places'.\n▶▶▶"
   (interactive "r")
   (mon-toggle-restore-llm nil  
     (mon-replace-region-regexp-lists-nonint start end *regexp-ital-to-eng*))
@@ -2769,7 +2769,7 @@ Matches day of the week, months, abbrevd months, and months with/out diacritics.
 :SEE :FILE mon-regexp-symbols.el\n
 :USED-IN `naf-mode'.\n
 :SEE-ALSO `naf-mode-french-months', `mon-defranc-places', `mon-defranc-benezit',
-`non-posting-benezit-source', `mon-ital-date-to-eng'.\n►►►"
+`non-posting-benezit-source', `mon-ital-date-to-eng'.\n▶▶▶"
   (interactive "r\np")
   (mon-toggle-restore-llm nil  
     (mon-replace-region-regexp-lists-nonint start end *regexp-defranc-dates*))
@@ -2787,7 +2787,7 @@ Conversions include with/out all uppercase styled names - for Benezit auctions.\
 :SEE :FILE mon-regexp-symbols.el\n
 :USED-IN `naf-mode'.\n
 :SEE-ALSO `mon-defranc-benezit', `mon-defranc-dates', `mon-ital-date-to-eng',
-`non-posting-benezit-source', `naf-mode-french-months'.\n►►►"
+`non-posting-benezit-source', `naf-mode-french-months'.\n▶▶▶"
   (interactive "r\np")
   (mon-toggle-restore-llm nil  
     (mon-replace-region-regexp-lists-nonint start end *regexp-defranc-places*))
@@ -2806,7 +2806,7 @@ Trie to conservatively catch on terms with diacrtics.\n
 :ALIASED-BY `mon-defranc-benezit'\n
 :USED-IN `naf-mode'.\n
 :SEE-ALSO `mon-clean-benezit-fields', `*regexp-clean-benezit-fields*',
-`mon-defranc-dates', `mon-defranc-places', `non-posting-benezit-source'.\n►►►"
+`mon-defranc-dates', `mon-defranc-places', `non-posting-benezit-source'.\n▶▶▶"
   (interactive "r\np")
   (mon-toggle-restore-llm nil  
     (mon-replace-region-regexp-lists-nonint start end *regexp-defranc-benezit*))
@@ -2823,7 +2823,7 @@ Trie to conservatively catch on terms with diacrtics.\n
 :ALIASED-BY `mon-defranc-benezit-fields'
 :USED-IN `naf-mode'.\n
 :SEE-ALSO `mon-defranc-benezit', `mon-defranc-dates', `mon-defranc-places', 
-`non-posting-benezit-source'.\n►►►"
+`non-posting-benezit-source'.\n▶▶▶"
   (interactive "r\np")
   (mon-toggle-restore-llm nil  
    (mon-replace-region-regexp-lists-nonint start end *regexp-clean-benezit-fields*))
@@ -2840,7 +2840,7 @@ Useful for those with `.' at end of string.\n
 :ALIASED-BY `mon-cln-common-abbrevs'\n
 :USED-IN `naf-mode'.\n
 :SEE-ALSO `mon-cln-wiki', `mon-cln-imdb',`mon-abr-to-month', `mon-num-to-month',
-`mon-trans-cp1252-to-latin1'.\n►►►"
+`mon-trans-cp1252-to-latin1'.\n▶▶▶"
   (interactive "r\np")
   (mon-toggle-restore-llm nil  
     (mon-replace-region-regexp-lists-nonint start end *regexp-common-abbrevs*))
@@ -2860,7 +2860,7 @@ Useful for those with `.' at end of string.\n
 Useful to get a working list to pass to a useable wget file e.g.:\n
  \"wget -np -A.jpg -i wget-file\".\n
 :SEE (URL `http://www.gilt.com')\n
-:SEE-ALSO `*regexp-clean-gilt-group*'.\n►►►"
+:SEE-ALSO `*regexp-clean-gilt-group*'.\n▶▶▶"
   (interactive "r")
   (progn
     (mon-replace-region-regexp-lists-nonint start end *regexp-clean-gilt-group*)

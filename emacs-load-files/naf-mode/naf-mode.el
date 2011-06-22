@@ -25,9 +25,9 @@
 ;; etc.  This package provides the core naf-mode facilities and require
 ;; statements for loading other naf-mode-* packages.
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;; `new-naf', `naf-mode',
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;;
@@ -208,7 +208,7 @@
 ;;; ==============================
 (defgroup naf-mode nil
   "Customizations for `naf-mode'.\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   :link  '(url-link 
            :tag ":EMACSWIKI-FILE (URL `http://www.emacswiki.org/emacs/naf-mode.el')" 
            "http://www.emacswiki.org/emacs/naf-mode.el")
@@ -219,7 +219,7 @@
 
 (defgroup naf-mode-faces nil
   "Customization of `naf-mode' font-locking faces.\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   ;; :link (url-link URL)
   :link '(emacs-library-link 
           :tag ":FILE naf-mode-faces.el"
@@ -235,14 +235,14 @@
 (defconst *naf-mode-version* "2011-01-14"
   "Return current version of `naf-mode'.\n
 :SEE-ALSO `naf-mode-hook', `naf-mode-menu' `naf-mode-map', `naf-mode-prefix',
-`naf-mode-syntax-table', `naf-font-lock-keywords', `*naf-mode-version*'.\n►►►")
+`naf-mode-syntax-table', `naf-font-lock-keywords', `*naf-mode-version*'.\n▶▶▶")
 
 ;;; ==============================
 (defcustom *naf-comment-prefix* ";;;"
   "String used by `comment-region' to comment out region in a NAF buffer.
 :USED-IN `naf-mode'.\n
 :SEE-ALSO `naf-mode-hook', `naf-mode-menu' `naf-mode-map', `naf-mode-prefix',
-`naf-mode-syntax-table', `naf-font-lock-keywords'.\n►►►"
+`naf-mode-syntax-table', `naf-font-lock-keywords'.\n▶▶▶"
   :type 'string
   :group 'naf-mode)
 
@@ -369,7 +369,7 @@
 Variables and Constants of this list loaded by `naf-mode' require statments.\n
 These are encapsulated here for easy modification.\n
 :SEE-ALSO `naf-mode-hook', `naf-mode-menu' `naf-mode-map', `naf-mode-prefix',
-`naf-mode-syntax-table', `naf-font-lock-keywords'.\n►►►")
+`naf-mode-syntax-table', `naf-font-lock-keywords'.\n▶▶▶")
 ;;
 ;;; :TEST-ME naf-font-lock-keywords
 ;;
@@ -387,7 +387,7 @@ These are encapsulated here for easy modification.\n
     st)
   "*Syntax table for `naf-mode'.\n
 :SEE-ALSO `naf-mode-hook', `naf-mode-menu' `naf-mode-map', `naf-mode-prefix',
-`naf-mode-syntax-table', `naf-font-lock-keywords'.\n►►►")
+`naf-mode-syntax-table', `naf-font-lock-keywords'.\n▶▶▶")
 
 
 ;;; ==============================
@@ -566,7 +566,7 @@ Globals are included here in order that `describe-mode' in `*Help*'
 buffers can show the global-bindings too as they are still used most by naf-mode.
 Typically naf-mode binds \"\C-c\M-##\".
 :SEE-ALSO `naf-mode-hook', `naf-mode-menu' `naf-mode-map', `naf-mode-prefix',
-`naf-mode-syntax-table', `naf-font-lock-keywords'\n►►►")
+`naf-mode-syntax-table', `naf-font-lock-keywords'\n▶▶▶")
 ;;
 ;;; (unintern "naf-mode-map" obarray) (unintern "naf-mode-prefix" obarray)
 
@@ -578,7 +578,7 @@ Typically naf-mode binds \"\C-c\M-##\".
   naf-mode-menu ;;  <SYMBOL> 
   naf-mode-map  ;; <MAPS> 
   "Menu for `naf-mode' NAF-mode buffers.\n
-:SEE-ALSO `naf-mode-map'.\n►►►" ;; <DOC>
+:SEE-ALSO `naf-mode-map'.\n▶▶▶" ;; <DOC>
   ;; menu item =: [NAME CALLBACK ENABLE]
   ;; 
   '("Naf-mode"
@@ -889,7 +889,7 @@ Typically naf-mode binds \"\C-c\M-##\".
 Optional arg RNM supplies a different name for the new naf buffer.\n
 :USED-IN `naf-mode'.\n
 :SEE-ALSO `artist-naf', `book-naf', `brand-naf', `book-naf', `people-naf',
-`author-naf', `item-naf'.\n►►►"
+`author-naf', `item-naf'.\n▶▶▶"
   (interactive "p\np")
   (let* ((rnm-bp 
           (cond ((and (eq 1 rnm) (eq 1 inter-p))
@@ -908,14 +908,14 @@ Optional arg RNM supplies a different name for the new naf buffer.\n
 (defvar naf-mode-hook nil
   "*Hook called by `naf-mode'.\n
 :SEE-ALSO `naf-mode-menu' `naf-mode-map', `naf-mode-prefix',
-`naf-mode-syntax-table', `naf-font-lock-keywords'.\n►►►")
+`naf-mode-syntax-table', `naf-font-lock-keywords'.\n▶▶▶")
 
 ;;; ==============================
 (define-derived-mode naf-mode fundamental-mode "NAF-mode"
   "A major mode for creating NAFS \(Name Authority Files\).\n
 \\{naf-mode-map}\n
 :SEE-ALSO `naf-mode-hook', `naf-mode-menu' `naf-mode-map', `naf-mode-prefix',
-`naf-mode-syntax-table', `naf-font-lock-keywords', `naf-mode-abbrev-table'.\n►►►"
+`naf-mode-syntax-table', `naf-font-lock-keywords', `naf-mode-abbrev-table'.\n▶▶▶"
   :group 'naf-mode
   :syntax-table naf-mode-syntax-table
   ;;:abbrev-table 'naf-mode-abbrev-table

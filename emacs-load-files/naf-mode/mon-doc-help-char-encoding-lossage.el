@@ -21,14 +21,14 @@
 ;; DESCRIPTION:
 ;; mon-doc-help-char-encoding-lossage provides Show charset encoding lossage
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;; `mon-get-encoding-codepoint', `mon-get-encoding-position-lossage',
 ;; `mon-get-encoding-point-hist', `mon-get-encoding-map-results',
 ;; `mon-get-encoding-point-hist-map-plists',
 ;; `mon-make-encoding-position-lossage-table',
 ;; `mon-help-cp1252-iso-8859-1-lossage', `mon-help-iso-8859-1-8859-15-lossage',
 ;; `mon-help-cp1252-iso-8859-15-lossage',
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;;
@@ -138,7 +138,7 @@
 ;;; :CREATED <Timestamp: #{2011-03-07T16:02:21-05:00Z}#{11101} - by MON KEY>
 (defgroup mon-doc-help-char-encoding-lossage nil
   "Customization group for variables and functions of :FILE mon-doc-help-char-encoding-lossage.el\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   ;; :prefix "<PREFIX>"
   :link '(url-link 
           :tag ":EMACSWIKI-FILE"
@@ -175,7 +175,7 @@ signalled if not.\n
 `mon-help-char-raw-bytes', `mon-help-char-representation',
 `mon-help-char-table-functions', `mon-help-char-unidata-table',
 `mon-help-char-ascii', `mon-help-char-iso-8859-1', `mon-help-char-ecma-35',
-`mon-help-char-ecma-48', `mon-help-char-logic'.\n►►►"
+`mon-help-char-ecma-48', `mon-help-char-logic'.\n▶▶▶"
   (let ((mmeplt-err-str (concat "mapping key as consed pair: %S\n "
                                 "but value neither `integerp' nor `stringp',\n "
                                 "got: %S\n type-of: %s")))
@@ -213,7 +213,7 @@ The symbols contained of this list are defined in :FILE mon-doc-help-char-encodi
 `*mon-line-utils-xrefs*', `*mon-plist-utils-xrefs*'
 `*mon-seq-utils-xrefs*', `*mon-window-utils-xrefs*', `*naf-mode-xref-of-xrefs*',
 `*naf-mode-faces-xrefs*', `*naf-mode-date-xrefs*', `*mon-ulan-utils-xrefs*',
-`*mon-xrefs-xrefs'.\n►►►"
+`*mon-xrefs-xrefs'.\n▶▶▶"
   :type '(repeat symbol)
   :group 'mon-doc-help-char-encoding-lossage
   :group 'mon-xrefs)
@@ -248,7 +248,7 @@ proper names e.g. the city of l'Haÿ-les-Roses or of poet Pierre Louÿs.\n
 :SEE \(URL `http://en.wikipedia.org/wiki/Character_encoding'\)\n
 :SEE-ALSO `*cp1252-8859-15-lossage-rules*', `*cp1252-8859-1-lossage*',
 `*cp1252-8859-1-lossage-rules*', `*8859-1-8859-15-lossage*',
-`*8859-1-8859-15-lossage-rules*'.\n►►►"
+`*8859-1-8859-15-lossage-rules*'.\n▶▶▶"
   :type '(repeat plist)
   :group 'mon-doc-help-char-encoding-lossage)
 ;;
@@ -260,7 +260,7 @@ proper names e.g. the city of l'Haÿ-les-Roses or of poet Pierre Louÿs.\n
 :EXAMPLE\n
  \(assoc 'mon-get-encoding-position-lossage *8859-1-8859-15-lossage-rules*\)\n
 :SEE-ALSO `*cp1252-8859-15-lossage*', `*cp1252-8859-1-lossage*',
-`*cp1252-8859-1-lossage-rules*', `*8859-1-8859-15-lossage-rules*'.\n►►►"
+`*cp1252-8859-1-lossage-rules*', `*8859-1-8859-15-lossage-rules*'.\n▶▶▶"
   :type '(repeat (list function symbol))
   :group 'mon-doc-help-char-encoding-lossage)
 
@@ -297,7 +297,7 @@ proper names e.g. the city of l'Haÿ-les-Roses or of poet Pierre Louÿs.\n
 :SEE \(URL `http://en.wikipedia.org/wiki/Character_encoding'\)\n
 :SEE-ALSO `*cp1252-8859-15-lossage-rules*', `*cp1252-8859-1-lossage*',
 `*cp1252-8859-1-lossage-rules*', `*8859-1-8859-15-lossage*',
-`*8859-1-8859-15-lossage-rules*'.\n►►►"
+`*8859-1-8859-15-lossage-rules*'.\n▶▶▶"
   :type '(repeat plist)
   :group 'mon-doc-help-char-encoding-lossage)
 ;; RULES
@@ -311,7 +311,7 @@ proper names e.g. the city of l'Haÿ-les-Roses or of poet Pierre Louÿs.\n
 :EXAMPLE\n
  \(assoc 'mon-get-encoding-position-lossage *cp1252-8859-15-lossage-rules**\)\n
 :SEE-ALSO `*cp1252-8859-1-lossage*', `*cp1252-8859-1-lossage-rules*',
-`*8859-1-8859-15-lossage*', `*8859-1-8859-15-lossage-rules*'.\n►►►"
+`*8859-1-8859-15-lossage*', `*8859-1-8859-15-lossage-rules*'.\n▶▶▶"
   :type '(repeat sexp)
   :group 'mon-doc-help-char-encoding-lossage)
 
@@ -344,7 +344,7 @@ proper names e.g. the city of l'Haÿ-les-Roses or of poet Pierre Louÿs.\n
 :SEE \(URL `http://en.wikipedia.org/wiki/Character_encoding'\)
 :SEE-ALSO `*cp1252-8859-1-lossage-rules*', `*cp1252-8859-15-lossage*',
 `*cp1252-8859-15-lossage-rules*', `*8859-1-8859-15-lossage*',
-`*8859-1-8859-15-lossage-rules*'.\n►►►"
+`*8859-1-8859-15-lossage-rules*'.\n▶▶▶"
   :type '(repeat plist)
   :group 'mon-doc-help-char-encoding-lossage)
 ;; :RULES
@@ -358,7 +358,7 @@ proper names e.g. the city of l'Haÿ-les-Roses or of poet Pierre Louÿs.\n
 :EXAMPLE\n
  \(assoc 'mon-get-encoding-position-lossage *cp1252-8859-1-lossage-rules*\)\n
 :SEE-ALSO `*cp1252-8859-15-lossage*', `*cp1252-8859-15-lossage-rules*',
-`*8859-1-8859-15-lossage*', `*8859-1-8859-15-lossage-rules*'.\n►►►"
+`*8859-1-8859-15-lossage*', `*8859-1-8859-15-lossage-rules*'.\n▶▶▶"
   :type '(repeat sexp)
   :group 'mon-doc-help-char-encoding-lossage)
 
@@ -400,7 +400,7 @@ lieu of WHEN-NOT-CHAR.\n
 `mon-help-char-raw-bytes', `mon-help-char-representation',
 `mon-help-char-table-functions', `mon-help-char-unidata-table',
 `mon-help-char-ascii', `mon-help-char-iso-8859-1', `mon-help-char-ecma-35',
-`mon-help-char-ecma-48', `mon-help-char-logic'.\n►►►"
+`mon-help-char-ecma-48', `mon-help-char-logic'.\n▶▶▶"
   (let ((mgfe-if (plist-get from-plist w-key)))
     (and mgfe-if 
          (or (and (= (length mgfe-if) 1)
@@ -455,7 +455,7 @@ When W-RAW-BYTE is non-nil cdr of return value will contain \" :RAW-BYTE \".\n
 `mon-help-char-raw-bytes', `mon-help-char-representation',
 `mon-help-char-table-functions', `mon-help-char-unidata-table',
 `mon-help-char-ascii', `mon-help-char-iso-8859-1', `mon-help-char-ecma-35',
-`mon-help-char-ecma-48', `mon-help-char-logic'.\n►►►"
+`mon-help-char-ecma-48', `mon-help-char-logic'.\n▶▶▶"
   (let ((mgp-if (plist-get from-plist key-for-int-val)))
     (cons 
      (and mgp-if
@@ -495,7 +495,7 @@ iteratively within a `mon-get-encoding-map-results' form.\n
 `mon-help-char-raw-bytes', `mon-help-char-representation',
 `mon-help-char-table-functions', `mon-help-char-unidata-table',
 `mon-help-char-ascii', `mon-help-char-iso-8859-1', `mon-help-char-ecma-35',
-`mon-help-char-ecma-48', `mon-help-char-logic'.\n►►►"
+`mon-help-char-ecma-48', `mon-help-char-logic'.\n▶▶▶"
   (let ((rstls '()))
     (dolist (r rules (nreverse rstls))
       (let ((rl-if (apply (car r) w-plist `(,@(cdr r) ,w-raw-byte))))
@@ -518,7 +518,7 @@ Return value inserted in buffer W-BUFFER.\n
 `mon-help-char-raw-bytes', `mon-help-char-representation',
 `mon-help-char-table-functions', `mon-help-char-unidata-table',
 `mon-help-char-ascii', `mon-help-char-iso-8859-1', `mon-help-char-ecma-35',
-`mon-help-char-ecma-48', `mon-help-char-logic'.\n►►►"
+`mon-help-char-ecma-48', `mon-help-char-logic'.\n▶▶▶"
   (with-current-buffer w-buffer
     (insert "\n" (make-string 5 45) "\n")
     (mapc #'(lambda (mgemr-L-0) 
@@ -566,7 +566,7 @@ Keyword arg W-BUFFER-HEADER is a string to insert at beginning of returned buffe
 `mon-help-char-raw-bytes', `mon-help-char-representation',
 `mon-help-char-table-functions', `mon-help-char-unidata-table',
 `mon-help-char-ascii', `mon-help-char-iso-8859-1', `mon-help-char-ecma-35',
-`mon-help-char-ecma-48', `mon-help-char-logic'.\n►►►"
+`mon-help-char-ecma-48', `mon-help-char-logic'.\n▶▶▶"
   (let ((mgephmp-bfr (get-buffer-create (or w-buffer-named "*ENCODING-LOSSAGE*"))))
     (with-current-buffer mgephmp-bfr
       (erase-buffer)
@@ -600,7 +600,7 @@ Results returned to buffer with name: \"*MON-HELP-CP1252-8859-1-LOSSAGE*\".\n
 `mon-help-char-raw-bytes', `mon-help-char-representation',
 `mon-help-char-table-functions', `mon-help-char-unidata-table',
 `mon-help-char-ascii', `mon-help-char-iso-8859-1', `mon-help-char-ecma-35',
-`mon-help-char-ecma-48', `mon-help-char-logic'.\n►►►"
+`mon-help-char-ecma-48', `mon-help-char-logic'.\n▶▶▶"
   (interactive)
   (mon-get-encoding-point-hist-map-plists
    *cp1252-8859-1-lossage* *cp1252-8859-1-lossage-rules* t
@@ -627,7 +627,7 @@ Results returned to buffer with name: \"*MON-HELP-CP1252-8859-1-LOSSAGE*\".\n
 `mon-help-char-raw-bytes', `mon-help-char-representation',
 `mon-help-char-table-functions', `mon-help-char-unidata-table',
 `mon-help-char-ascii', `mon-help-char-iso-8859-1', `mon-help-char-ecma-35',
-`mon-help-char-ecma-48', `mon-help-char-logic'.\n►►►"
+`mon-help-char-ecma-48', `mon-help-char-logic'.\n▶▶▶"
   (interactive)
   (mon-get-encoding-point-hist-map-plists
    *8859-1-8859-15-lossage* *8859-1-8859-15-lossage-rules* t
@@ -656,7 +656,7 @@ Results returned to buffer with name: \"*MON-HELP-CP1252-8859-15-LOSSAGE*\".\n
 `mon-help-char-raw-bytes', `mon-help-char-representation',
 `mon-help-char-table-functions', `mon-help-char-unidata-table',
 `mon-help-char-ascii', `mon-help-char-iso-8859-1', `mon-help-char-ecma-35',
-`mon-help-char-ecma-48', `mon-help-char-logic'.\n►►►"
+`mon-help-char-ecma-48', `mon-help-char-logic'.\n▶▶▶"
   (interactive)
   (mon-get-encoding-point-hist-map-plists
    *cp1252-8859-1-lossage* *cp1252-8859-15-lossage-rules* t

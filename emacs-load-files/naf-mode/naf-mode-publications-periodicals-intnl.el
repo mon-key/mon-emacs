@@ -5,9 +5,9 @@
 ;;; naf-mode-publications-periodicals-intnl 
 ;;; Titles of International Periodicals 
 ;;;
-;;; FUNCTIONS:►►►
+;;; FUNCTIONS:▶▶▶
 ;;;
-;;; FUNCTIONS:◄◄◄
+;;; FUNCTIONS:◀◀◀
 ;;;
 ;;; MACROS:
 ;;;

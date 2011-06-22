@@ -4,9 +4,9 @@
 ;;; DESCRIPTION:
 ;;; naf-mode-publications-periodicals-english
 ;;;
-;;; FUNCTIONS:►►►
+;;; FUNCTIONS:▶▶▶
 ;;;
-;;; FUNCTIONS:◄◄◄
+;;; FUNCTIONS:◀◀◀
 ;;;
 ;;; MACROS:
 ;;;

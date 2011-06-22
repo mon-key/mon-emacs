@@ -21,12 +21,12 @@
 ;; DESCRIPTION:
 ;; mon-randomize-utils provides procedures for generating pseudo randomness
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;; `mon-next-almost-prime', `mon-gensym-counter-randomizer',
 ;; `mon-make-random-state', `mon-generate-prand-id', `mon-generate-prand-seed',
 ;; `mon-mix-fields', `mon-string-wonkify', `mon-generate-WPA-key',
 ;;
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;;
@@ -178,7 +178,7 @@ Useful for generating a reasonable arg for `make-hash-table's :size keyword.\n
 :ALIASED-BY `next-almost-prime'\n
 :SEE-ALSO `mon-gensym-counter-randomizer', `mon-make-random-state',
 `mon-generate-prand-seed', `mon-generate-WPA-key', `mon-generate-prand-id',
-`mon-string-wonkify', `random', `math-primes-table'.\n►►►"
+`mon-string-wonkify', `random', `math-primes-table'.\n▶▶▶"
   (let ((mnapN w-integer))
     (when (= (% mnapN 2) 0) (setq mnapN (1+ mnapN)))
     (when (= (% mnapN 3) 0) (setq mnapN (+ mnapN 2)))
@@ -199,7 +199,7 @@ Helper function for `mon-with-gensyms'.\n
 :NOTE On average this function will return ~45-60 duplicates per 10,000
 invocations per seed symbol. IOW one might create an average of ~9948 unique
 `bubba's if we batched inside a procedure capable of accounting for collisions.\n
-:SEE-ALSO `mon-gensym', `mon-gensym-counter-randomizer-TEST'.\n►►►"
+:SEE-ALSO `mon-gensym', `mon-gensym-counter-randomizer-TEST'.\n▶▶▶"
   (let ((mgcr-pr1
          [37 41 43 47 53 59 61 67 71 73 79 83 89 97 101 103 107 109 113 127 131
           137 139 149 151 157 163 167 173 179 181 191 193 197 199 211 223 227
@@ -299,7 +299,7 @@ invocations per seed symbol. IOW one might create an average of ~9948 unique
 (defun mon-mix-fields (mmf-x mmf-y)
   "
 :EXAMPLE\n\n\(mon-mix-fields 37 41\)\n
-:SEE-ALSO `mon-make-random-state', `mon-gensym-counter-randomizer'.\n►►►" 
+:SEE-ALSO `mon-make-random-state', `mon-gensym-counter-randomizer'.\n▶▶▶" 
   (let ((mmf-xy (+ (* mmf-x 3) mmf-y)))
     (logand most-positive-fixnum ;; 536870911
             (logxor 441516657
@@ -318,7 +318,7 @@ invocations per seed symbol. IOW one might create an average of ~9948 unique
 :EXAMPLE\n\n\(mon-make-random-state\)\n
 :SEE-ALSO `mon-next-almost-prime', `mon-gensym-counter-randomizer', `mon-make-random-state',
 `mon-generate-prand-seed', `mon-generate-WPA-key', `mon-generate-prand-id',
-`mon-string-wonkify', `random'.\n►►►"
+`mon-string-wonkify', `random'.\n▶▶▶"
   (let ((mmrst8 
          (lsh (+ cons-cells-consed 
                  floats-consed 
@@ -354,7 +354,7 @@ b) where UID assignment occurs in parallel with time-stamping we can infer
    when the UID was generated relative the index of previous/subsequent elts.
 Item b is a Featured-Bug®.\n
 :SEE-ALSO `mon-string-to-hex-string', `mon-generate-WPA-key', `mon-string-wonkify',
-`url-hexify-string', `url-unhex-string', `url-unhex'.\n►►►"
+`url-hexify-string', `url-unhex-string', `url-unhex'.\n▶▶▶"
   (eval-when-compile (require 'sha1))
   (let ((mgpi-cnt (if cnt cnt 1))
         mgpi-gthr)
@@ -387,7 +387,7 @@ On MON system min. 0.85 seconds is needed between calls to produce unique id's.\
     \(setq i \(1- i\)\)\)
 \(prin1 k\)\)\n
 :SEE-ALSO `mon-generate-WPA-key', `mon-string-wonkify', `mon-list-nshuffle',
-`mon-nshuffle-vector', `url-cache-create-filename-using-md5'.\n►►►"
+`mon-nshuffle-vector', `url-cache-create-filename-using-md5'.\n▶▶▶"
   ;(eval-when-compile (require 'cookie1))
   (let* ((mgrs-pseudo-r #'(lambda () 
                        (mon-string-to-sequence 
@@ -436,7 +436,7 @@ On MON system min. 0.85 seconds is needed between calls to produce unique id's.\
 \(mon-string-wonkify \"These are some wonky words\" 3\)\n
 :ALIASED-BY `mon-generate-wonky'\n
 :SEE-ALSO `mon-zippify-region', `mon-generate-prand-seed', `mon-generate-prand-id',
-`mon-generate-WPA-key', `mon-nshuffle-vector', `mon-list-nshuffle'\n►►►" 
+`mon-generate-WPA-key', `mon-nshuffle-vector', `mon-list-nshuffle'\n▶▶▶" 
   (let* ((mswnky-wrds wonk-words)
          ;; :PREFIX "wnkusr-"
          (wonk-USR #'(lambda (wnkusr-L-1 wnkusr-L-2) 
@@ -494,7 +494,7 @@ Does not move point.\n
 :EXAMPLE\n\n\(mon-generate-WPA-key\)\n
 :SEE-ALSO `mon-generate-prand-id', `mon-generate-prand-seed',
 `mon-string-wonkify', `mon-string-from-hex-list', `mon-string-to-hex-list',
-`mon-string-to-hex-string', `mon-make-random-state'.\n►►►"
+`mon-string-to-hex-string', `mon-make-random-state'.\n▶▶▶"
   (interactive "i\np")
   (let ((mgWk-hex-str (mon-string-to-hex-string :prand-hex-len 64)))
     (if (or insrtp intrp)

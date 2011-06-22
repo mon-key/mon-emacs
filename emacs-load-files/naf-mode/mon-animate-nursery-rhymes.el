@@ -5,9 +5,9 @@
 ;;; mon-animate-nursery-rhymes provides a list of nursery rhymes.
 ;;; Can be extened for use as a fun session startup animation.
 ;;;
-;;; FUNCTIONS:►►►
+;;; FUNCTIONS:▶▶▶
 ;;; 
-;;; FUNCTIONS:◄◄◄
+;;; FUNCTIONS:◀◀◀
 ;;;
 ;;; MACROS:
 ;;;
@@ -87,7 +87,7 @@
 Converted from material sourced \(mostly\) from content from available at:
 :SEE (URL `http://www.rhymes.org.uk/')
 :SEE (URL `http://www.gutenberg.org/files/24271/24271.txt')\n
-:SEE-ALSO .\n►►►")
+:SEE-ALSO .\n▶▶▶")
 ;;
 (unless (bound-and-true-p *mon-nursery-rhymes*)
   (setq *mon-nursery-rhymes*
@@ -912,7 +912,7 @@ Converted from material sourced \(mostly\) from content from available at:
 (defun mon-animate-nursery-rhyme-sequence (list-of-strings space &optional animate-delay)
   "Display nursery rhyme strings from LIST-OF-STRING with animation in buffer *Mon-Nursery-Rhymes*.
 Strings will be separated from each other by SPACE lines.
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   (let ((vpos (/ (- (window-height)
                     1 ;; For the mode-line
                     (* (1- (length list-of-strings)) space)
@@ -933,7 +933,7 @@ Strings will be separated from each other by SPACE lines.
 ;;; :CREATED <Timestamp: #{2010-01-18T12:30:24-05:00Z}#{10031} - by MON KEY>
 (defun mon-animate-nursery-rhyme (&optional animate-count)
   "Animate a random nursery rhyme contained in the `*mon-nursery-rhymes*' variable.\n
-:SEE-ALSO `animate-sequence'.\n►►►"
+:SEE-ALSO `animate-sequence'.\n▶▶▶"
   (interactive "p")
   (let ((cnt (or animate-count 1))
         (rym-cnt (length *mon-nursery-rhymes*)))

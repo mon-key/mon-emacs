@@ -13,7 +13,7 @@ When TO-FILESET-FILE is non-nil write the return value to the file named:
 When called-interactively or INSRTP is non-nil insert return value at point.
 When INSRTP moves point. When called-interactively does not move point.
 :EXAMPLE\n\n(mon-map-elisp-fileset)\n
-:SEE-ALSO `*mon-el-library*'.\n►►►"
+:SEE-ALSO `*mon-el-library*'.\n▶▶▶"
   (interactive "i\ni\np")
   (let ((mmef (append (directory-files *mon-emacs-root* t ".*\.el$")
                       (directory-files *mon-naf-mode-root* t ".*\.el$")

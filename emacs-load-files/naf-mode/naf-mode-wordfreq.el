@@ -1700,7 +1700,7 @@
     (loves 4996 19 0.0019) (mexico 4997 19 0.0019) (ham 4998 19 0.0019)
     (label 4999 19 0.0019) (ladder 5000 19 0.0019) (dreamed 5001 19 0.0019))
   "List of words with their usage frequencies from Brown Corpus.\n
-:SEE-ALSO .\n►►►")
+:SEE-ALSO .\n▶▶▶")
 
 ;;; ==============================    
 (provide 'naf-mode-wordfreq) 

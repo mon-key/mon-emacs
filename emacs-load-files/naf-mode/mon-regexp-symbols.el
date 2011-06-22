@@ -31,9 +31,9 @@
 ;; :FILE mon-replacement-utils.el
 ;; and is required by that library for it to function correctly. 
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;; `mon-regexp-clean-ulan-dispatch-chars-TEST',
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;;
@@ -162,7 +162,7 @@
 ;;; :CREATED <Timestamp: #{2011-01-11T15:24:47-05:00Z}#{11022} - by MON KEY>
 (defgroup mon-regexp-symbols nil
   "Customization group for variables and functions of :FILE mon-regexp-symbols.el\n
-:SEE-ALSO `*mon-regexp-xrefs'.\n►►►"
+:SEE-ALSO `*mon-regexp-xrefs'.\n▶▶▶"
   :prefix "*regexp-"
   :link '(url-link 
           :tag "\n:EMACSWIKI-FILE (URL `http://www.emacswiki.org/emacs/mon-regexp-symbols.el')" 
@@ -200,7 +200,7 @@
 The symbols contained of this list are defined in :FILE mon-regexp-symbols.el\n
 :SEE-ALSO `*mon-default-loads-xrefs*', `*mon-default-start-loads-xrefs*',
 `*mon-dir-locals-alist-xrefs*', `*mon-testme-utils-xrefs*',
-`*mon-button-utils-xrefs*', `*naf-mode-xref-of-xrefs*'.\n►►►"
+`*mon-button-utils-xrefs*', `*naf-mode-xref-of-xrefs*'.\n▶▶▶"
   :type '(repeat symbol)
   :group 'mon-regexp-symbols
   :group 'mon-xrefs)
@@ -213,20 +213,20 @@ The symbols contained of this list are defined in :FILE mon-regexp-symbols.el\n
                               (reverse *mon-whitespace-chars*) "") "]\\)")
   "A regexp matching chars in `*mon-whitespace-chars*'.\n
 :EXAMPLE\n
-\(let \(\(bnds \(save-excursion \(search-forward-regexp \"◄\"\)\)\)
+\(let \(\(bnds \(save-excursion \(search-forward-regexp \"◀\"\)\)\)
       gthr\)
   \(save-excursion 
     \(while \(search-forward-regexp *regexp-whitespace-chars* bnds t\)
       \(push \(match-string-no-properties 0 \) gthr\)\)\)
   \(mapcar #'string-to-char \(delete-dups \(nreverse  gthr\)\)\)\)
-\x20\x9\xa\xd\xc\xb◄\n
+\x20\x9\xa\xd\xc\xb◀\n
 :SEE-ALSO `mon-skip-whitespace', `mon-cln-BIG-whitespace'
 `mon-cln-trail-whitespace', `mon-cln-whitespace', `mon-insert-whitespace',
 `mon-kill-whitespace', `whitespace-hspace-regexp', `whitespace-space-regexp',
 `whitespace-tab-regexp', `whitespace-trailing-regexp',
 `whitespace-space-before-tab-regexp', `whitespace-space-after-tab-regexp',
 `whitespace-empty-at-eob-regexp', `whitespace-empty-at-bob-regexp',
-`whitespace-indentation-regexp'.\n►►►"
+`whitespace-indentation-regexp'.\n▶▶▶"
   :type  'regexp
   :group 'mon-regexp-symbols)
 
@@ -246,7 +246,7 @@ The is a car regexp the cadr is its replacement.\n
 :CALLED-BY `mon-cln-xml<-parsed'\n
 :SEE-ALSO `mon-cln-xml<-parsed-strip-nil', `mon-cln-html-tags',
 `*regexp-percent-encoding-reserved-chars*', `*regexp-clean-html-decimal-char-entity*',
-`*regexp-clean-html-named-char-entity*'.\n►►►"
+`*regexp-clean-html-named-char-entity*'.\n▶▶▶"
   :type  '(repeat (list regexp string))
   :group 'mon-regexp-symbols)
 
@@ -326,7 +326,7 @@ loops without querying the user, it is easy to alter procedures accidentally.\n
 :SEE-ALSO `mon-help-insert-tags', `mon-help-mon-tags',
 `*mon-help-mon-tags-alist*', `*regexp-mon-doc-help-meta-tags*',
 `*regexp-mon-doc-help-comment-tags*', `*regexp-mon-doc-help-docstring-tags*',
-`*regexp-mon-doc-help-pointer-tags*'.\n►►►"
+`*regexp-mon-doc-help-pointer-tags*'.\n▶▶▶"
   :type  '(repeat (list regexp string))
   :group 'mon-regexp-symbols)
 ;;
@@ -372,7 +372,7 @@ As such, their usage is unlike those of the regexps in:
 :SEE-ALSO `*regexp-symbol-defs-big*', `lisp-font-lock-keywords',
 `lisp-font-lock-keywords-1', `lisp-font-lock-keywords-2',
 `documentation-property', `byte-compile-output-docform', `lambda-list-keywords',
-`subr-arity', `help-function-arglist', `help-add-fundoc-usage'.\n►►►"
+`subr-arity', `help-function-arglist', `help-add-fundoc-usage'.\n▶▶▶"
   :type  'regexp
   :group 'mon-regexp-symbols)
 ;;
@@ -420,7 +420,7 @@ Like `*regexp-symbol-defs*' but covers a broader range of operators.\n
 :SEE-ALSO `*regexp-symbol-defs*', `lisp-font-lock-keywords',
 `lisp-font-lock-keywords-1', `lisp-font-lock-keywords-2',
 `documentation-property', `byte-compile-output-docform', `lambda-list-keywords',
-`subr-arity', `help-function-arglist', `help-add-fundoc-usage'.\n►►►"
+`subr-arity', `help-function-arglist', `help-add-fundoc-usage'.\n▶▶▶"
   :type  'regexp
   :group 'mon-regexp-symbols)
 ;;
@@ -477,7 +477,7 @@ Car of list is a regular expression, cdr is its replacement.\n
 :EXAMPLE\n\n\(assoc-string \"‘\" *regexp-ansicl-info*\)\n
  \(rassoc \" ;=> \" *regexp-ansicl-info*\)\n
 :CALLED-BY `mon-cln-ansi-info'\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   :type '(alist :key-type regexp :value-type string)
   :group 'mon-doc-help-CL
   :group 'mon-regexp-symbols)
@@ -493,7 +493,7 @@ Pair has the form:\n
  ( <REGEXP> . <MATCH-GROUPS> )\n
 :EXAMPLE\n\n\(search-forward-regexp \(car *regexp-line-to-consed-pair*\)  nil t\)\n
 some-symbol-at-bol         some-symbol-further-on\n
-:SEE-ALSO `mon-align-conses'.\n►►►"
+:SEE-ALSO `mon-align-conses'.\n▶▶▶"
   :type '(cons regexp string)
   :group 'mon-regexp-symbols)
 
@@ -513,7 +513,7 @@ The is a car regexp the cadr is its replacement.\n
 :SEE-ALSO `*regexp-bound-month->canonical*', `*regexp-simple-abrv-month->canonical*',
 `*regexp-month->MM*', `*regexp-MM->month*', `*regexp-MM->month-whitespace-aware*',
 `*regexp-philsp-fix-month-dates*',`*regexp-philsp-months*',
-`mon-help-mon-time-functions', `mon-help-time-functions', `mon-help-iso-8601'.\n►►►"
+`mon-help-mon-time-functions', `mon-help-time-functions', `mon-help-iso-8601'.\n▶▶▶"
   :type  '(repeat (list regexp string))
   :group 'mon-regexp-symbols)
 ;;
@@ -542,7 +542,7 @@ Regexp match replace as:\n
 :SEE-ALSO `*regexp-bound-month->canonical*', `*regexp-simple-abrv-month->canonical*',
 `*regexp-month->MM*' `*regexp-MM->month*', `*regexp-MM->month-whitespace-aware*',
 `*regexp-philsp-fix-month-dates*', `*regexp-philsp-months*',
-`mon-help-mon-time-functions', `mon-help-time-functions', `mon-help-iso-8601'.\n►►►"
+`mon-help-mon-time-functions', `mon-help-time-functions', `mon-help-iso-8601'.\n▶▶▶"
   :type  '(repeat (list regexp string))
   :group 'mon-regexp-symbols)
 ;;
@@ -575,7 +575,7 @@ Chars are all associated with char 32 SPC.
 :CALLED-BY `mon-cln-ebay-time-string'.\n
 :SEE-ALSO `*regexp-clean-ebay-month->canonical-style1*',
 `*regexp-clean-ebay-month->canonical-style2*'
-`mon-help-mon-time-functions', `mon-help-time-functions', `mon-help-iso-8601'.\n►►►"
+`mon-help-mon-time-functions', `mon-help-time-functions', `mon-help-iso-8601'.\n▶▶▶"
   :type  '(repeat (list integer integer))
   :group 'mon-regexp-symbols)
 ;;
@@ -623,7 +623,7 @@ Matches abbreviated months occuring inside strings with the format:\n
 :SEE-ALSO: `*regexp-clean-ebay-time-chars*',
 `*regexp-clean-ebay-month->canonical-style3*',
 `*regexp-clean-ebay-month->canonical-style2*', `mon-help-mon-time-functions',
-`mon-help-time-functions', `mon-help-iso-8601'.\n►►►"
+`mon-help-time-functions', `mon-help-iso-8601'.\n▶▶▶"
   :type  '(repeat (list regexp string))
   :group 'mon-regexp-symbols)
 ;;
@@ -646,7 +646,7 @@ The is a car regexp the cadr is its replacement.\n
 :SEE-ALSO: `*regexp-clean-ebay-time-chars*',
 `*regexp-clean-ebay-month->canonical-style3*',
 `*regexp-clean-ebay-month->canonical-style1*', `mon-help-mon-time-functions',
-`mon-help-time-functions', `mon-help-iso-8601'.\n►►►"
+`mon-help-time-functions', `mon-help-iso-8601'.\n▶▶▶"
   :type  '(repeat (list regexp string))
   :group 'mon-regexp-symbols)
 ;;
@@ -686,7 +686,7 @@ The is a car regexp the cadr is its replacement.\n
 :SEE-ALSO `*regexp-clean-ebay-time-chars*',
 `*regexp-clean-ebay-month->canonical-style1*',
 `*regexp-clean-ebay-month->canonical-style2*', `mon-help-mon-time-functions',
-`mon-help-time-functions', `mon-help-iso-8601'.\n►►►"
+`mon-help-time-functions', `mon-help-iso-8601'.\n▶▶▶"
   :type  '(repeat (list regexp string))
   :group 'mon-regexp-symbols)
 ;;
@@ -743,7 +743,7 @@ The match patters of this variable add a prefix \"- \" before the month name.\n
 `*regexp-simple-abrv-month->canonical*', `*regexp-MM->month-whitespace-aware*',
 `*regexp-month->MM*', `*regexp-MM->month*', `*regexp-philsp-fix-month-dates*',
 `mon-help-mon-time-functions', `mon-help-time-functions',
-`mon-help-iso-8601'.\n►►►"
+`mon-help-iso-8601'.\n▶▶▶"
   :type  '(repeat (list regexp string))
   :group 'mon-regexp-symbols)
 ;;
@@ -814,7 +814,7 @@ List includes match pattern combinations for:
 :SEE-ALSO `*regexp-MM->month*', `*regexp-month->MM*',
 `*regexp-MM->month-whitespace-aware*', `*regexp-philsp-months*',
 `*regexp-philsp-fix-month-dates*', `mon-help-mon-time-functions',
-`mon-help-time-functions', `mon-help-iso-8601'.\n►►►"
+`mon-help-time-functions', `mon-help-iso-8601'.\n▶▶▶"
   :type  '(repeat (list regexp string))
   :group 'mon-regexp-symbols)
 ;;    
@@ -836,7 +836,7 @@ Each element of list is a proper list containing two strings of the form:\n
 `*regexp-simple-abrv-month->canonical*', `*regexp-MM->month*',
 `*regexp-MM->month-whitespace-aware*', `*regexp-philsp-months*',
 `*regexp-philsp-fix-month-dates*', `mon-help-mon-time-functions',
-`mon-help-time-functions', `mon-help-iso-8601'.\n►►►"
+`mon-help-time-functions', `mon-help-iso-8601'.\n▶▶▶"
   :type  '(repeat (list regexp string))
   :group 'mon-regexp-symbols)
 ;;
@@ -862,7 +862,7 @@ The is a car regexp the cadr is its replacement.\n
 `*regexp-simple-abrv-month->canonical*', `*regexp-month->MM*',
 `*regexp-MM->month-whitespace-aware*', `*regexp-philsp-months*',
 `*regexp-philsp-fix-month-dates*', `mon-help-mon-time-functions',
-`mon-help-time-functions', `mon-help-iso-8601'.\n►►►"
+`mon-help-time-functions', `mon-help-iso-8601'.\n▶▶▶"
   :type  '(repeat (list regexp string))
   :group 'mon-regexp-symbols)
 ;;
@@ -918,7 +918,7 @@ The is a car regexp the cadr is its replacement.\n
 `*regexp-bound-month->canonical*', `*regexp-abrv-dotted-month->canonical*',
 `*regexp-simple-abrv-month->canonical*', `*regexp-philsp-months*',
 `*regexp-philsp-fix-month-dates*', `mon-help-mon-time-functions',
-`mon-help-time-functions', `mon-help-iso-8601'.\n►►►"
+`mon-help-time-functions', `mon-help-iso-8601'.\n▶▶▶"
   :type  '(repeat (list regexp string))
   :group 'mon-regexp-symbols)
 ;;
@@ -962,7 +962,7 @@ The is a car regexp the cadr is its replacement.\n
 `*regexp-bound-month->canonical*', `*regexp-abrv-dotted-month->canonical*',
 `*regexp-simple-abrv-month->canonical*', `*regexp-month->MM*',
 `*regexp-MM->month*', `mon-help-mon-time-functions', `mon-help-time-functions',
-`mon-help-iso-8601'.\n►►►"
+`mon-help-iso-8601'.\n▶▶▶"
   :type  '(repeat (list regexp string))
   :group 'mon-regexp-symbols)
 ;;
@@ -987,7 +987,7 @@ The is a car regexp the cadr is its replacement.\n
 :SEE-ALSO `*regexp-philsp-months*', `*regexp-philsp-location*',
 `*regexp-philsp-swap-location*', `*regexp-philsp-fix-month-dates*',
 `mon-help-mon-time-functions', `mon-help-time-functions',
-`mon-help-iso-8601'.\n►►►"
+`mon-help-iso-8601'.\n▶▶▶"
   :type  '(repeat (list regexp string))
   :group 'mon-regexp-symbols)
 ;;
@@ -1010,7 +1010,7 @@ The is a car regexp the cadr is its replacement.\n
 :CALLED-BY `mon-cln-philsp' in preparation for `*regexp-philsp-swap-location*'.\n
 :USED-IN `naf-mode'.\n
 :SEE-ALSO `*regexp-philsp-months*', `*regexp-philsp-apos*',
-`*regexp-philsp-swap-location*', `*regexp-philsp-fix-month-dates*'.\n►►►"
+`*regexp-philsp-swap-location*', `*regexp-philsp-fix-month-dates*'.\n▶▶▶"
   :type  '(repeat (list regexp string))
   :group 'mon-regexp-symbols)
 ;;
@@ -1030,7 +1030,7 @@ The is a car regexp the cadr is its replacement.\n
 :CALLED-BY `mon-cln-philsp' :AFTER `*regexp-philsp-location*'\n
 :USED-IN `naf-mode'.\n
 :SEE-ALSO `*regexp-philsp-months*', `*regexp-philsp-apos*',
-`*regexp-philsp-location*', `*regexp-philsp-fix-month-dates*'.\n►►►"
+`*regexp-philsp-location*', `*regexp-philsp-fix-month-dates*'.\n▶▶▶"
   :type  '(repeat (list regexp string))
   :group 'mon-regexp-symbols)
 ;;
@@ -1060,7 +1060,7 @@ The is a car regexp the cadr is its replacement.\n
 `*regexp-bound-month->canonical*', `*regexp-abrv-dotted-month->canonical*',
 `*regexp-simple-abrv-month->canonical*', `*regexp-month->MM*',
 `*regexp-MM->month*', `mon-help-mon-time-functions', `mon-help-time-functions',
-`mon-help-iso-8601'.\n►►►"
+`mon-help-iso-8601'.\n▶▶▶"
   :type  '(repeat (list regexp string))
   :group 'mon-regexp-symbols)
 ;;
@@ -1079,7 +1079,7 @@ NN:NN:NN --- part: <USER3> left #<CHANNEL>\n
 :EXAMPLE\n\n\(mon-cln-freenode-log-TEST\)\n
 :CALLED-BY `mon-cln-freenode-log'.\n
 :SEE-ALSO `mon-cln-freenode-log-TEST', `mon-wget-freenode-lisp-logs',
-`*freenode-lisp-logs*', `mon-help-CL-minion'.\n►►►"
+`*freenode-lisp-logs*', `mon-help-CL-minion'.\n▶▶▶"
   :type  'regexp
   :group 'mon-regexp-symbols)
 
@@ -1164,7 +1164,7 @@ unique to Wikpedia's mutli-user entered text.\n
 :CALLED-BY `mon-cln-wiki'.\n
 :SEE-ALSO `mon-cln-imdb', `mon-trans_cp1252_to_latin1', `mon-cln-loc',
 `mon-help-mon-time-functions', `mon-help-time-functions',
-`mon-help-iso-8601'.\n►►►"
+`mon-help-iso-8601'.\n▶▶▶"
   :type  '(repeat (list regexp string))
   :group 'mon-regexp-symbols)
 ;;
@@ -1187,7 +1187,7 @@ The is a car regexp the cadr is its replacement.\n
 :USED-IN `naf-mode'.\n
 :SEE-ALSO `mon-cln-imdb', `mon-abr-to-month', `mon-num-to-month',
 `mon-replace-common-abrevs',`mon-trans_cp1252_to_latin1',
-`*regexp-clean-big-whitespace*', `whitespace-cleanup'.\n►►►"
+`*regexp-clean-big-whitespace*', `whitespace-cleanup'.\n▶▶▶"
   :type  '(repeat (list regexp string))
   :group 'mon-regexp-symbols)
 ;;
@@ -1209,7 +1209,7 @@ The is a car regexp the cadr is its replacement.\n
 :SEE-ALSO `mon-cln-whitespace',`mon-kill-whitespace',
 `mon-cln-trail-whitespace',`mon-cln-imdb', `mon-trans_cp1252_to_latin1',
 `mon-replace-common-abrevs',`mon-abr-to-month', `mon-num-to-month',
-`*regexp-clean-whitespace*', `whitespace-cleanup'.\n►►►"
+`*regexp-clean-whitespace*', `whitespace-cleanup'.\n▶▶▶"
    :type  '(repeat (list regexp string))
    :group 'mon-regexp-symbols)
 ;;
@@ -1235,7 +1235,7 @@ The is a car regexp the cadr is its replacement.\n
 :SEE \(URL `http://www.imdb.com')\n
 :USED-IN `naf-mode'.\n
 :SEE-ALSO `*regexp-clean-wikipedia*', `*regexp-clean-loc*',
-`*regexp-clean-gilt-group*', `*regexp-clean-ulan-fields*'.\n►►►"
+`*regexp-clean-gilt-group*', `*regexp-clean-ulan-fields*'.\n▶▶▶"
      :type  '(repeat (list regexp string))
      :group 'mon-regexp-symbols)
 ;;
@@ -1283,7 +1283,7 @@ The is a car regexp the cadr is its replacement.\n
 :SEE-ALSO `mon-cln-wiki', `mon-cln-imdb',`regexp-ulan-diacritics',
 `mon-trans_cp1252_to_latin1', `*regexp-clean-wikipedia*', `*regexp-clean-loc*',
 `*regexp-clean-imdb*', `*regexp-clean-gilt-group*',
-`*regexp-clean-ulan-fields*'.\n►►►"
+`*regexp-clean-ulan-fields*'.\n▶▶▶"
   :type  '(repeat (list regexp string))
   :group 'mon-regexp-symbols)
 ;;
@@ -1305,7 +1305,7 @@ Invoke to get a working list to pass to a useable wget include file.\n
 :CALLED-BY `bug-cln-gilt-group'\n
 :SEE \(URL `http://www.gilt.com'\)\n
 :SEE-ALSO `*regexp-clean-wikipedia*', `*regexp-clean-loc*',
-`*regexp-clean-imdb*', `*regexp-clean-ulan-fields*'.\n►►►"
+`*regexp-clean-imdb*', `*regexp-clean-ulan-fields*'.\n▶▶▶"
   :type  '(repeat (list regexp string))
   :group 'mon-regexp-symbols)
 ;;
@@ -1339,7 +1339,7 @@ The is a car regexp the cadr is its replacement.\n
 :SEE-ALSO `mon-cln-wiki', `mon-cln-imdb', `mon-defranc-places',
 `*regexp-defranc-dates*', `mon-replace-common-abrevs',
 `mon-help-mon-time-functions', `mon-help-time-functions',
-`mon-help-iso-8601'.\n►►►"
+`mon-help-iso-8601'.\n▶▶▶"
   :type  '(repeat (list regexp string))
   :group 'mon-regexp-symbols)
 ;;
@@ -1404,7 +1404,7 @@ The is a car regexp the cadr is its replacement.\n
 :USED-IN `naf-mode'.\n
 :SEE-ALSO `naf-mode-french-months', `mon-ital-date-to-eng',
 `*regexp-ital-to-eng*', `mon-help-mon-time-functions',
-`mon-help-time-functions', `mon-help-iso-8601'.\n►►►"
+`mon-help-time-functions', `mon-help-iso-8601'.\n▶▶▶"
   :type  '(repeat (list regexp string))
   :group 'mon-regexp-symbols)
 ;;
@@ -1536,7 +1536,7 @@ The is a car regexp the cadr is its replacement.\n
 :USED-IN `naf-mode'.\n
 :SEE-ALSO `*regexp-defranc-dates*', `*regexp-defranc-benezit*',
 `*regexp-clean-benezit-fields*', `*regexp-defranc-places*',
-`*regexp-clean-benezit-fields*',`*regexp-ital-to-eng*'.\n►►►"
+`*regexp-clean-benezit-fields*',`*regexp-ital-to-eng*'.\n▶▶▶"
   :type  '(repeat (list regexp string))
   :group 'mon-regexp-symbols)
 ;;
@@ -1620,7 +1620,7 @@ The is a car regexp the cadr is its replacement.\n
 :USED-IN `naf-mode'.\n
 :SEE-ALSO `*regexp-clean-benezit-fields*', `mon-cln-benezit-fields',
 `*regexp-defranc-dates*', `*regexp-defranc-benezit*', `*regexp-defranc-places*',
-`*regexp-clean-benezit-fields*'.\n►►►"
+`*regexp-clean-benezit-fields*'.\n▶▶▶"
   :type  '(repeat (list regexp string))
   :group 'mon-regexp-symbols)
 ;;
@@ -1655,7 +1655,7 @@ Fontlocked with `naf-mode-benezit-section-flag'.\n
 :SEE-ALSO `*regexp-defranc-benezit*', `mon-defranc-benezit',
 `*regexp-defranc-dates*', `*regexp-defranc-benezit*', `*regexp-defranc-places*',
 `*regexp-clean-benezit-fields*', `*regexp-defranc-benezit*'.\n
-:USED-IN `naf-mode'.\n►►►"
+:USED-IN `naf-mode'.\n▶▶▶"
   :type  '(repeat (list regexp string))
   :group 'mon-regexp-symbols)
 ;;
@@ -1682,7 +1682,7 @@ The is a car regexp the cadr is its replacement.\n
 :USED-IN `naf-mode'.\n
 :SEE-ALSO `*regexp-ital-to-eng*', `*regexp-defranc-dates*',
 `*regexp-defranc-benezit*', `*regexp-defranc-places*',
-`*regexp-clean-benezit-fields*', `*regexp-defranc-benezit*'.\n►►►"
+`*regexp-clean-benezit-fields*', `*regexp-defranc-benezit*'.\n▶▶▶"
   :type  '(repeat (list regexp string))
   :group 'mon-regexp-symbols)
 ;;
@@ -1712,7 +1712,7 @@ The is a car regexp the cadr is its replacement.\n
 :USED-IN `naf-mode'.\n
 :SEE-ALSO `*regexp-clean-benezit-fields*', `*regexp-clean-imdb*',
 `*regexp-clean-loc*', `*regexp-clean-ulan-fields*',
-`*regexp-clean-wikipedia*'.\n►►►"
+`*regexp-clean-wikipedia*'.\n▶▶▶"
   :type  '(repeat (list regexp string))
   :group 'mon-regexp-symbols)
 ;;
@@ -1774,7 +1774,7 @@ The is a car regexp the cadr is its replacement.\n
  The Etude Bios Composers Musicians Bios - Etude July 1933 p 434.\n
 :CALLED-BY `mon-replace-common-abbrevs'\n
 :USED-IN `naf-mode'.\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
  :type  '(repeat (list regexp string))
   :group 'mon-regexp-symbols)
 ;;
@@ -1798,7 +1798,7 @@ Like `thing-at-point-url-regexp' but includes \"git://\" URI.\n
 :SEE-ALSO `mon-wrap-one-url', `mon-wrap-url', `mon-wrap-text',`mon-wrap-span',
 `mon-wrap-selection', `mon-wrap-with', `thing-at-point-url-at-point',
 `*regexp-clean-xml-parse*', `*regexp-percent-encoding-reserved-chars*',
-`*regexp-clean-html-decimal-char-entity*', `*regexp-clean-html-named-char-entity*'.\n►►►"
+`*regexp-clean-html-decimal-char-entity*', `*regexp-clean-html-named-char-entity*'.\n▶▶▶"
     :type  'regexp
     :group 'mon-regexp-symbols)
 ;;
@@ -1864,7 +1864,7 @@ leading/trailing whitespace.\n
 `mon-string-from-hex-list', `mon-string-to-hex-list',
 `mon-string-to-hex-string', `mon-string-to-hex-list-cln-chars',
 `hexl-hex-string-to-integer', `url-hexify-string', `url-unhex-string',
-`url-unhex'.\n►►►"
+`url-unhex'.\n▶▶▶"
   :type  '(alist :key-type symbol :value-type regexp)
   :group 'mon-css-color
   :group 'mon-regexp-symbols)
@@ -1888,7 +1888,7 @@ leading/trailing whitespace.\n
 `*regexp-percent-encoding-reserved-chars*',
 `*regexp-clean-html-decimal-char-entity*',
 `*regexp-clean-html-named-char-entity*', `*regexp-css-color-html*',
-`url-insert-entities-in-string'.\n►►►"
+`url-insert-entities-in-string'.\n▶▶▶"
   :type  '(repeat (list regexp string))
   :group 'mon-url-utils
   :group 'mon-regexp-symbols)
@@ -1912,7 +1912,7 @@ leading/trailing whitespace.\n
 "*Regexp list to convert cp1252 enchoded chars to latin1-iso-8859-*.\n
 :CALLED-BY `mon-trans-cp1252-to-latin1'.\n
 :SEE-ALSO `mon-make-iso-latin-1-approximation', `mon-cln-iso-latin-1',
-`*iso-latin-1-approximation*', `url-insert-entities-in-string'.\n►►►")
+`*iso-latin-1-approximation*', `url-insert-entities-in-string'.\n▶▶▶")
 ;;
 ;;; :TEST-ME  *regexp-cp1252-to-latin1*
 ;;
@@ -1990,7 +1990,7 @@ vanilla \" \" (char 32) instead.\n
 :SEE-ALSO `*regexp-wrap-url-schemes*', `*regexp-clean-xml-parse*',
 `*regexp-percent-encoding-reserved-chars*',
 `*regexp-clean-html-decimal-char-entity*', `*regexp-clean-ulan-diacritics*',
-`*regexp-cp1252-to-latin1*', `url-insert-entities-in-string'.\n►►►")
+`*regexp-cp1252-to-latin1*', `url-insert-entities-in-string'.\n▶▶▶")
 ;;
 ;;,---- :UNCOMMENT-BELOW-TO-TEST
 ;;|`(:entity ":&#160;" 
@@ -2023,7 +2023,7 @@ cadr is an unescaped character literal.\n
 :SEE-ALSO `*regexp-clean-html-named-char-entity*', `*regexp-wrap-url-schemes*',
 `*regexp-clean-xml-parse*', `*regexp-percent-encoding-reserved-chars*',
 `*regexp-clean-html-decimal-char-entity*', `*regexp-clean-ulan-diacritics*',
-`url-insert-entities-in-string'.\n►►►")
+`url-insert-entities-in-string'.\n▶▶▶")
 ;;
 (unless (and (intern-soft "*regexp-clean-html-decimal-char-entity*" obarray)
              (bound-and-true-p *regexp-clean-html-decimal-char-entity*))
@@ -2052,7 +2052,7 @@ cadr of each sublist is an unescaped character literal.\n
 `*regexp-wrap-url-schemes*', `*regexp-clean-xml-parse*',
 `*regexp-percent-encoding-reserved-chars*', `*regexp-clean-html-decimal-char-entity*',
 `*regexp-clean-ulan-diacritics*', `*regexp-cp1252-to-latin1*',
-`url-insert-entities-in-string'.\n►►►")
+`url-insert-entities-in-string'.\n▶▶▶")
 ;;
 (unless (bound-and-true-p *regexp-clean-html-named-char-entity*)
   (setq *regexp-clean-html-decimal-char-entity*
@@ -2146,7 +2146,7 @@ cadr of each sublist is an unescaped character literal.\n
 `*regexp-percent-encoding-reserved-chars*',
 `*regexp-clean-html-decimal-char-entity*',
 `*regexp-clean-html-named-char-entity*', `*regexp-clean-loc*',
-`*regexp-cp1252-to-latin1*'.\n►►►")
+`*regexp-cp1252-to-latin1*'.\n▶▶▶")
 ;;
 ;;;(progn (makunbound '*regexp-cleann-ulan-diacritics*)
 ;;;       (unintern "*regexp-cleann-ulan-diacritics*" obarray) )
@@ -2187,7 +2187,7 @@ current approach guarantees success.\n
 :SEE-ALSO `*regexp-clean-ulan-fields*',`*regexp-clean-ulan-dispatch-chars*',
 `*regexp-clean-ulan-diacritics*', `*regexp-ulan-contribs*',
 `*regexp-clean-imdb*', `*regexp-clean-loc*', `*regexp-clean-bib*',
-`*regexp-clean-wikipedia*'.\n►►►")
+`*regexp-clean-wikipedia*'.\n▶▶▶")
 ;;
 ;;;(progn (makunbound '*regexp-clean-ulan*)
 ;;;       (unintern "*regexp-clean-ulan*" obarray) )
@@ -2234,7 +2234,7 @@ Elements of list are normalized as follows:\n
 :NOTE ULAN is ©J.Paul Getty Trust
 :SEE \(URL `http://www.getty.edu/research/conducting_research/vocabularies/ulan/').\n
 :SEE-ALSO `*regexp-clean-ulan*',`*regexp-clean-ulan-dispatch-chars*',
-`*regexp-clean-ulan-diacritics*', `*regexp-ulan-contribs*'.\n►►►")
+`*regexp-clean-ulan-diacritics*', `*regexp-ulan-contribs*'.\n▶▶▶")
 ;;
 ;;;(progn (makunbound '*regexp-clean-ulan-fields*)
 ;;;       (unintern "*regexp-clean-ulan-fields*" obarray) )
@@ -2331,7 +2331,7 @@ These occurences should be parsed in an additional separate pass.\n
 :SEE \(URL `http://www.getty.edu/research/conducting_research/vocabularies/ulan/'\).\n
 :SEE-ALSO `*regexp-clean-ulan*', `*regexp-clean-ulan-diacritics*',
 `*regexp-ulan-contribs*', `*regexp-clean-ulan-fields*',
-`mon-regexp-clean-ulan-dispatch-chars-TEST'.\n►►►")
+`mon-regexp-clean-ulan-dispatch-chars-TEST'.\n▶▶▶")
 ;;
 (unless (and (intern-soft "*regexp-clean-ulan-dispatch-chars*" obarray)
              (bound-and-true-p *regexp-clean-ulan-dispatch-chars*))
@@ -2364,7 +2364,7 @@ Lists have the form:\n
 :SEE \(URL `http://www.getty.edu/research/conducting_research/vocabularies/ulan/'\).\n
 :SEE-ALSO `*regexp-clean-ulan*', `*regexp-clean-ulan-fields*',
 `*regexp-clean-ulan-diacritics*',`*regexp-clean-ulan-dispatch-chars*',
-`mon-cln-ulan'.\n►►►")
+`mon-cln-ulan'.\n▶▶▶")
 ;;
 (unless  (and (intern-soft "*regexp-ulan-contribs*" obarray)
               (bound-and-true-p *regexp-ulan-contribs*))

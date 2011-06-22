@@ -21,7 +21,7 @@
 ;; DESCRIPTION:
 ;; mon-buffer-utils provides buffer related procedures for mon-*utils features
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;; `mon-g2be', `mon-buffer-sub-no-prop', `mon-buffer-sub-no-prop-check',
 ;; `mon-buffer-narrowed-p', `mon-buffer-empty-p', `mon-buffer-exists-so-kill',
 ;; `mon-get-buffer-hidden', `mon-get-buffer-window-if',
@@ -31,7 +31,7 @@
 ;; `mon-buffer-check-local-value', `mon-get-buffer-hidden-if',
 ;; `mon-buffer-name-is-file-name-p', `mon-buffer-kill-hidden-if',
 ;;
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;;
@@ -146,7 +146,7 @@
 ;;; :CREATED <Timestamp: #{2011-01-11T18:44:19-05:00Z}#{11022} - by MON KEY>
 (defgroup mon-buffer-utils nil
   "Customization group for variables and functions of :FILE mon-buffer-utils.el\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   ;; :prefix "<PREFIX>"
   :link '(url-link 
           :tag ":EMACSWIKI-FILE" 
@@ -180,7 +180,7 @@ The symbols contained of this list are defined in :FILE mon-buffer-utils.el\n
 `*mon-dir-locals-alist-xrefs*', `*mon-testme-utils-xrefs*',
 `*mon-button-utils-xrefs*', `*mon-window-utils-xrefs*', `*naf-mode-xref-of-xrefs*',
 `*naf-mode-faces-xrefs*', `*naf-mode-date-xrefs*', `*mon-ulan-utils-xrefs*',
-`*mon-xrefs-xrefs'.\n►►►"
+`*mon-xrefs-xrefs'.\n▶▶▶"
   :type '(repeat symbol)
   :group 'mon-buffer-utils
   :group 'mon-xrefs)
@@ -229,7 +229,7 @@ The symbols contained of this list are defined in :FILE mon-buffer-utils.el\n
  "List of names/name-patterns of known hidden buffers.\n
 :EXAMPLE\n\n
 :ALIASED-BY `*mon-help-hidden-buffers-known*'\n
-:SEE-ALSO `mon-get-hidden-buffers'.\n►►►"
+:SEE-ALSO `mon-get-hidden-buffers'.\n▶▶▶"
   :type '(repeat string)
   :group 'mon-buffer-utils
   :group 'mon-xrefs)
@@ -286,7 +286,7 @@ returns the value of the point it moved into as an integer value.\n
 :ALIASED-BY `mon-buffer-end'\n
 :SEE-ALSO `mon-buffer-narrowed-p', `point-min', `point-max', `buffer-end',
 `mon-buffer-narrowed-p', `mon-buffer-sub-no-prop', `mon-buffer-sub-no-prop-check',
-`mon-help-buffer-functions'.\n►►►"
+`mon-help-buffer-functions'.\n▶▶▶"
   ;;(let ((
   ;; (with-current-buffer (current-buffer)
   ;; 
@@ -368,7 +368,7 @@ Following will fail:\n
 `mon-get-buffer-window-if', `mon-get-buffer-hidden',
 `mon-buffer-exists-so-kill', `mon-buffer-exists-p', `mon-get-buffer-w-mode',
 `mon-with-file-buffer', `mon-print-buffer-object-readably',
-`mon-print-in-buffer-if-p', `mon-help-buffer-functions'.\n►►►"
+`mon-print-in-buffer-if-p', `mon-help-buffer-functions'.\n▶▶▶"
   (if ;; (or buf-beg buf-end)
       (and buf-beg buf-end)
       (apply #'buffer-substring-no-properties 
@@ -416,7 +416,7 @@ Following will fail:\n
 `mon-get-buffer-window-if', `mon-get-buffer-hidden',
 `mon-buffer-exists-so-kill', `mon-buffer-exists-p', `mon-get-buffer-w-mode',
 `mon-with-file-buffer', `mon-print-buffer-object-readably',
-`mon-print-in-buffer-if-p', `mon-help-buffer-functions'.\n►►►"
+`mon-print-in-buffer-if-p', `mon-help-buffer-functions'.\n▶▶▶"
   (let ((mbsnpc-err #'(lambda (err-str &rest args) 
                         (apply 'error
                                `(,(concat ":FUNCTION `mon-buffer-sub-no-prop-check' -- " err-str)
@@ -556,7 +556,7 @@ size of the narrowed-region is = `buffer-size', esp. when not
 `mon-buffer-get-w-mode', `mon-buffer-name->kill-ring',
 `mon-buffer-name-print-readably', `mon-buffer-written-p',
 `mon-buffer-append-to', `mon-buffer-do-with-undo-disabled',
-`mon-buffer-end'.\n►►►"
+`mon-buffer-end'.\n▶▶▶"
   (let (chk-bffr or-chk-wdn)
     (with-current-buffer (if buffer-or-name
                              (or (setq chk-bffr (get-buffer buffer-or-name))
@@ -595,7 +595,7 @@ it satisfies `mon-buffer-exists-p' signal an error if not.\n
 :SEE-ALSO `mon-buffer-narrowed-p', `mon-buffer-exists-so-kill',
 `mon-with-file-buffer', `mon-buffer-written-p',
 `mon-buffer-name-is-file-name-p', `mon-get-buffer-window-if',
-`mon-help-buffer-functions'.\n►►►"
+`mon-help-buffer-functions'.\n▶▶▶"
   (with-current-buffer
       (or (and buffer-or-name 
                (or (mon-buffer-exists-p buffer-or-name)
@@ -626,7 +626,7 @@ Return `#<killed buffer>' if buffered killed, else nil.\n
 `mon-get-buffer-parent-dir', `mon-get-proc-buffers-directories',
 `mon-get-buffers-directories', `mon-string-split-buffer-name',
 `mon-string-split-buffer-parent-dir', `with-current-buffer', `with-temp-file',
-`with-temp-buffer', `mon-help-buffer-functions'.\n►►►"
+`with-temp-buffer', `mon-help-buffer-functions'.\n▶▶▶"
   (let ((mbep-sok (mon-buffer-exists-p buffer-to-kill)))
     (if (when mbep-sok (kill-buffer mbep-sok))        
         (get-buffer mbep-sok))))
@@ -666,7 +666,7 @@ existing buffer as per `mon-buffer-exists-p', signal an error if not.\n
 `mon-get-proc-buffers-directories', `mon-get-buffers-directories',
 `mon-string-split-buffer-name', `mon-string-split-buffer-parent-dir',
 `with-current-buffer', `with-temp-file', `with-temp-buffer',
-`mon-help-buffer-functions'.\n►►►"
+`mon-help-buffer-functions'.\n▶▶▶"
   (let (mbnifnp-chk)
     (setq mbnifnp-chk
           (cons 
@@ -743,7 +743,7 @@ buffers include:\n
 :ALIASED-BY `mon-help-hidden-buffers'\n
 :SEE-ALSO `*mon-get-hidden-buffers-known*', `mon-get-buffer-hidden-if',
 `mon-buffer-kill-hidden-if', `ido-ignore-buffers', `mon-help-buffer-spc-*DOC*',
-`mon-abort-autosave-when-fucked', `mon-abort-recursive-edit'.\n►►►"
+`mon-abort-autosave-when-fucked', `mon-abort-recursive-edit'.\n▶▶▶"
   (interactive "P")
   (let ((mgbh-bl (buffer-list (selected-frame))) ;; do current-frame first
         mgbh-rslt)
@@ -770,7 +770,7 @@ Default is to return a list of consed pairs each of the form:\n
 :EXAMPLE\n\n\(mon-get-buffer-hidden-if \" *\"\)\n
 :ALIASED-BY `mon-buffer-get-hidden-if'
 :SEE-ALSO `mon-get-buffer-hidden', `mon-buffer-name-is-file-name-p'
-`mon-buffer-kill-hidden-if'.\n►►►"
+`mon-buffer-kill-hidden-if'.\n▶▶▶"
   (unless (not (mon-string-not-null-nor-zerop hidden-regexp))
     (delete nil (mapcar #'(lambda (mkrib-L-1) 
                             (and (string-match-p hidden-regexp (car mkrib-L-1))
@@ -792,7 +792,7 @@ return a list of what would have been killed with car of returned list as
 :NOTE Usefull regexps for this function may include:\n
  \" \\\\*RNC Input\" \" \\\\*bzr-\" \" \\\\*xgit-\"\n
 :ALIASED-BY `mon-kill-hidden-buffer-if'\n
-:SEE-ALSO`mon-get-buffer-hidden', `mon-buffer-name-is-file-name-p'.\n►►►"
+:SEE-ALSO`mon-get-buffer-hidden', `mon-buffer-name-is-file-name-p'.\n▶▶▶"
   (unless (not (mon-string-not-null-nor-zerop kill-matching-regexp))
     (loop for mbkhi-L in (mon-get-buffer-hidden-if kill-matching-regexp)
           collect (and (buffer-live-p (cdr mbkhi-L))
@@ -816,7 +816,7 @@ When ommitted or nil the default is to search only the `selected-frame'.\n
 :ALIASED-BY `get-buffer-window-if'\n
 :SEE-ALSO `mon-buffer-exists-p', `mon-print-buffer-object-readably',
 `mon-get-buffer-w-mode', `mon-buffer-written-p', `mon-with-file-buffer',
-`mon-buffer-name-is-file-name-p', `mon-window-map-active-to-plist'.\n►►►"
+`mon-buffer-name-is-file-name-p', `mon-window-map-active-to-plist'.\n▶▶▶"
  (let ((myb-wdw (mon-buffer-exists-p buffer-or-name)))
    (when myb-wdw (get-buffer-window myb-wdw))))
 
@@ -839,7 +839,7 @@ Default is to return a lisp form for `eval'.\n
 :ALIASED-BY `mon-buffer-name-print-readably'
 :SEE-ALSO `mon-buffer-exists-p', `mon-get-buffer-window-if'
 `mon-buffer-name-is-file-name-p', `mon-buffer-narrowed-p',
-`mon-buffer-sub-no-prop', `mon-buffer-sub-no-prop-check'.\n►►►"
+`mon-buffer-sub-no-prop', `mon-buffer-sub-no-prop-check'.\n▶▶▶"
   (let ((mpbor-get-bfr (mon-buffer-exists-p buffer-or-name)))
     (cond ((stringp mpbor-get-bfr)
            (or (and as-form
@@ -873,7 +873,7 @@ not already visible. Default is to consider all buffers on all frames.\n
 `mon-get-buffer-parent-dir', `mon-get-proc-buffers-directories',
 `mon-get-buffers-directories', `mon-string-split-buffer-name',
 `mon-string-split-buffer-parent-dir', `with-current-buffer', `with-temp-file',
-`with-temp-buffer', `mon-help-buffer-functions'.\n►►►"
+`with-temp-buffer', `mon-help-buffer-functions'.\n▶▶▶"
   ;; 
   (loop for mgbwm-bfr in (buffer-list)
         when (and (with-current-buffer mgbwm-bfr (eq major-mode w-mode))
@@ -907,7 +907,7 @@ Default is value of current-buffer.\n
 ;; Following successfully signals an error:
 \(mon-buffer-check-local-value 'eq 'major-mode 'help-mode \"Probably-not-a-real-buffer\"\)
 :SEE-ALSO `mon-buffer-exists-p', `mon-buffer-name-is-file-name-p',
-`*mon-equality-or-predicate-function-types*'.\n►►►"
+`*mon-equality-or-predicate-function-types*'.\n▶▶▶"
   (mon-equality-or-predicate 
    w-predicate check-for
    (buffer-local-value 
@@ -935,7 +935,7 @@ Default is value of current-buffer.\n
 ;; Following successfully signals an error:
 \(mon-buffer-check-major-mode 'help-mode \"Probably-not-a-real-buffer\"\)\n
 :SEE-ALSO `mon-get-buffer-w-mode', `mon-buffer-name-is-file-name-p',
-`mon-buffer-check-local-value'.\n►►►"
+`mon-buffer-check-local-value'.\n▶▶▶"
   (mon-buffer-check-local-value 'eq 'major-mode check-mode in-buffer))
 
 ;;; ==============================
@@ -960,7 +960,7 @@ Signal an error if that buffer does not exist. Default is current-buffer.\n
                        \(nreverse ltb-chk\)\)\)
     \(funcall do-ltb\)\)\)\n
 :SEE-ALSO `mon-toggle-restore-llm', `mon-naf-mode-toggle-restore-llm',
-`mon-is-naf-mode-and-llm-p', `mon-is-naf-mode-p'.\n►►►"
+`mon-is-naf-mode-and-llm-p', `mon-is-naf-mode-p'.\n▶▶▶"
   (mon-buffer-check-local-value 'eq 'longlines-mode t llm-in-buffer))
 ;;
 ;; ,---- :UNCOMMENT-TO-TEST
@@ -999,7 +999,7 @@ buffer-name at point. Does not move point.\n
 `mon-with-buffer-undo-disabled', `mon-get-buffer-w-mode',
 `mon-get-buffer-parent-dir', `mon-get-proc-buffers-directories',
 `mon-get-buffers-directories', `mon-string-split-buffer-name',
-`mon-string-split-buffer-parent-dir', `mon-help-buffer-functions'.\n►►►"
+`mon-string-split-buffer-parent-dir', `mon-help-buffer-functions'.\n▶▶▶"
   (interactive "i\nP")
   (let ((mbnkr-kn (kill-new (format "%S" (buffer-name or-buffer)))))
     (if insrtp 
@@ -1034,7 +1034,7 @@ This is an alternative definition of `append-to-buffer' with a \"\n\".\n
 :ALIASED-BY `mon-buffer-append-to'\n
 :SEE-ALSO `mon-append-to-register', `mon-kill-appending', `mon-buffer-exists-p',
 `mon-g2be', `mon-buffer-narrowed-p', `mon-buffer-sub-no-prop',
-`mon-buffer-sub-no-prop-check', `mon-help-buffer-functions'.\n►►►"
+`mon-buffer-sub-no-prop-check', `mon-help-buffer-functions'.\n▶▶▶"
   (interactive `(,(read-buffer 
                    (concat ":FUNCTION `mon-append-to-buffer'"
                            "-- append to buffer: ")
@@ -1075,7 +1075,7 @@ But, this way MON has fine-grain control over the assigned name suffix.\n
 :ALIASED-BY  `mon-buffer-make-shell'
 :SEE-ALSO `generate-new-buffer', `generate-new-buffer-name',
 `mon-make-shell-buffer', `mon-terminal', `mon-help-process-functions',
-`shell'.\n►►►"
+`shell'.\n▶▶▶"
   (let (mmsb-bfrs mmsb-bfrs-str)
     (setq mmsb-bfrs (with-temp-buffer
                       (princ (buffer-list) (current-buffer))
@@ -1108,7 +1108,7 @@ But, this way MON has fine-grain control over the assigned name suffix.\n
 If *shell* exists increment by 1 and return *shell-N*.\n
 :ALIASED-BY `mon-buffer-get-shell'\n
 :SEE-ALSO `mon-make-shell-buffer', `mon-terminal', `mon-help-process-functions',
-`shell'.\n►►►"
+`shell'.\n▶▶▶"
   (interactive)
   (shell (mon-make-shell-buffer)))
 ;;

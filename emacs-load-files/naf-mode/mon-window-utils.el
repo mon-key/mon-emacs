@@ -21,13 +21,13 @@
 ;; DESCRIPTION:
 ;; mon-window-utils provides window related procedures for mon-*utils features
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;; `mon-map-windows->plist', `mon-twin-horizontal', `mon-twin-vertical',
 ;; `mon-toggle-menu-bar', `mon-scratch', `mon-switch-to-messages',
 ;; `mon-kill-completions', `mon-flip-windows', `frame-live-visible-graphic-p',
 ;; `mon-map-windows->plist'
 ;;
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;;
@@ -144,7 +144,7 @@
 ;;; :CREATED <Timestamp: #{2011-01-11T18:38:41-05:00Z}#{11022} - by MON KEY>
 (defgroup mon-window-utils nil
   "Customization group for variables and functions of :FILE mon-window-utils.el\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   ;; :prefix "<PREFIX>"
   :link '(url-link 
           :tag ":EMACSWIKI-FILE" "http://www.emacswiki.org/emacs/mon-window-utils.el")
@@ -172,7 +172,7 @@ The symbols contained of this list are defined in :FILE mon-window-utils.el\n
 `*mon-dir-locals-alist-xrefs*', `*mon-testme-utils-xrefs*',
 `*mon-button-utils-xrefs*', `*mon-window-utils-xrefs*', `*naf-mode-xref-of-xrefs*',
 `*naf-mode-faces-xrefs*', `*naf-mode-date-xrefs*', `*mon-ulan-utils-xrefs*',
-`*mon-xrefs-xrefs'.\n►►►"
+`*mon-xrefs-xrefs'.\n▶▶▶"
   :type '(repeat symbol)
   :group 'mon-window-utils
   :group 'mon-xrefs)
@@ -193,7 +193,7 @@ predicate `frame-visible-p' returns non-nil with a visible frame not of type
 :ALIASED-BY `frame-live-visible-graphic-p'\n
 :SEE-ALSO `mon-find-buffer-visiting-other-live-frame',
 `dired-find-file-other-window', `filtered-frame-list', `make-frame-names-alist',
-`visible-frame-list', `mon-help-frame-functions'.\n►►►"
+`visible-frame-list', `mon-help-frame-functions'.\n▶▶▶"
   (let ((mflvgp-flp (frame-live-p test-frame))
         (mflvgp-fvp (frame-visible-p test-frame)))
     (if (and mflvgp-flp (memq mflvgp-flp '(x w32)) 
@@ -242,7 +242,7 @@ plist elements of returned list have the format:\n
 `posn-at-point', `selected-window', `select-window', `with-selected-window',
 `mon-plist-keys', `mon-map-obarray-symbol-plist-props',
 `mon-list-all-properties-in-buffer', `mon-help-window-functions',
-`mon-help-plist-functions', `mon-help-plist-properties'.\n►►►"
+`mon-help-plist-functions', `mon-help-plist-properties'.\n▶▶▶"
   (let (mmwp-wdo-l)
     (walk-windows
      #'(lambda (window)
@@ -285,7 +285,7 @@ plist elements of returned list have the format:\n
 (defun mon-twin-horizontal () 
   "Split current-buffer horizontally.\n
 :ALIASED-BY `mon-window-split-horiz'\n
-:SEE-ALSO `mon-twin-vertical', `mon-flip-windows'.\n►►►"
+:SEE-ALSO `mon-twin-vertical', `mon-flip-windows'.\n▶▶▶"
   (interactive)
   (delete-other-windows)
   (split-window-horizontally)
@@ -295,7 +295,7 @@ plist elements of returned list have the format:\n
 (defun mon-twin-vertical () 
   "Split current-buffer vertically.\n
 :ALIASED-BY `mon-window-split-vert'\n
-:SEE-ALSO `mon-twin-horizontal', `mon-flip-windows'.\n►►►"
+:SEE-ALSO `mon-twin-horizontal', `mon-flip-windows'.\n▶▶▶"
   (interactive)
   (delete-other-windows)
   (split-window-vertically)
@@ -307,7 +307,7 @@ plist elements of returned list have the format:\n
   "Toggle the top menu bar.\nGets the max editor screen for your money!\n
 :SEE-ALSO `mon-toggle-dired-dwim-target', `mon-toggle-truncate-line'
 `mon-toggle-eval-length', `mon-naf-mode-toggle-restore-llm',
-`mon-toggle-show-point-mode'.\n►►►"
+`mon-toggle-show-point-mode'.\n▶▶▶"
   (interactive)
   (let ((mtmb-height (frame-height)))
     (menu-bar-mode nil)
@@ -326,7 +326,7 @@ When W-THIS-SCRATCH is non-nil or called-interactively with prefix arg if
 current-buffer is \"*scratch*\" erase buffer contents else find an empty scratch buffer.\n
 :EXAMPLE\n\n\(mon-scratch\)\n
 :ALIASED-BY `mon-buffer-get-scratch'
-:SEE-ALSO `mon-switch-to-mesages', `mon-kill-completions'.\n►►►"
+:SEE-ALSO `mon-switch-to-mesages', `mon-kill-completions'.\n▶▶▶"
   (interactive "P")
   (let ((confirm-nonexistent-file-or-buffer nil))
     ;; (same-window-buffer-names '("*scratch*")))
@@ -344,7 +344,7 @@ current-buffer is \"*scratch*\" erase buffer contents else find an empty scratch
 (defun mon-switch-to-messages ()
   "Select buffer *Messages* in the current window.\n
 :ALIASED-BY `mon-buffer-get-messages'
-:SEE-ALSO `mon-scratch', `mon-kill-completions'\n►►►"
+:SEE-ALSO `mon-scratch', `mon-kill-completions'\n▶▶▶"
   (interactive)
   (switch-to-buffer "*Messages*"))
 
@@ -353,7 +353,7 @@ current-buffer is \"*scratch*\" erase buffer contents else find an empty scratch
 (defun mon-kill-completions ()
   "Kill *Completions* buffer without leaving point.\n
 :ALIASED-BY `mon-buffer-kill-completions'\n
-:SEE-ALSO `mon-scratch', `mon-switch-to-messages'.\n►►►"
+:SEE-ALSO `mon-scratch', `mon-switch-to-messages'.\n▶▶▶"
   (interactive)
   (save-excursion
     (when (get-buffer-window "*Completions*")
@@ -365,7 +365,7 @@ current-buffer is \"*scratch*\" erase buffer contents else find an empty scratch
 (defun mon-flip-windows ()
   "Swap current-buffer display with buffer in other window.\n
 :ALIASED-BY `mon-window-flip'\n
-:SEE-ALSO `mon-twin-vertical', `mon-twin-horizontal'.\n►►►"
+:SEE-ALSO `mon-twin-vertical', `mon-twin-horizontal'.\n▶▶▶"
   (interactive)
   (let ((cur-buffer (current-buffer))
         (top-buffer)

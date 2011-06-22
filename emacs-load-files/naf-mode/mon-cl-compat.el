@@ -31,7 +31,7 @@
 ;; (custom-set-default 'byte-compile-warnings (not cl-functions))
 ;; Or, do like slime.el (let ((byte-compile-warnings '())) ... ,@body)
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;; `cl::reduce', `cl::fill', `cl::replace', `cl::remove-duplicates',
 ;; `cl::remove-if-not', `cl::remove-if', `cl::remove',
 ;; `cl::cl-delete-duplicates', `cl::delete-duplicates', `cl::delete-if-not',
@@ -62,7 +62,7 @@
 ;; `cl::compiler-macroexpand', `cl::cl-byte-compile-compiler-macro' 
 ;; `cl::cl-byte-compile-throw', `cl::cl-byte-compile-block',
 ;; `cl::cl-transform-lambda', `cl::cl-transform-function-property'
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;; `cl-parsing-keywords', `cl-check-key',
@@ -2459,7 +2459,7 @@ Symbols with names having these prefixes are removed.\n
 Evaluated at loadtime on an eval-after-load form.\n
 :SEE-ALSO `mon-help-utils-loadtime', `mon-help-utils-CL-loadtime',
 `mon-CL-cln-colon-swap', `mon-check-feature-for-loadtime',
-`mon-after-mon-utils-loadtime'.\n►►►"
+`mon-after-mon-utils-loadtime'.\n▶▶▶"
   ;; :NOTE `byte-compile-noruntime-functions' should be present already.
   ;;  But we guard here just incase.
   (when (and (intern-soft "byte-compile-noruntime-functions")

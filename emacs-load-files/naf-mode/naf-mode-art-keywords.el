@@ -6,9 +6,9 @@
 ;;; Keyword terms that identify art related productions.
 ;;; fontlocked by: `naf-mode-art-keywords-role-face', `naf-mode-art-keywords-role-fface'.
 ;;;
-;;; FUNCTIONS:►►►
+;;; FUNCTIONS:▶▶▶
 ;;;
-;;; FUNCTIONS:◄◄◄
+;;; FUNCTIONS:◀◀◀
 ;;;
 ;;; CONSTANTS:
 ;;; `naf-mode-art-keywords',
@@ -79,7 +79,7 @@
 (defvar *naf-mode-art-keywords-xrefs*
   '(*naf-art-keywords* *naf-mode-art-keywords-xrefs* mon-help-naf-mode-faces)
   "List of symbol names of variables which xref each other in naf-mode-art-keywords
-package. See FILE: \"./naf-mode-art-keywords.el\". ►►►"))
+package. See FILE: \"./naf-mode-art-keywords.el\". ▶▶▶"))
 
 ;;; ==============================
 ;;; MODIFICATIONS: <Timestamp: #{2009-09-14T18:23:37-04:00Z}#{09381} - by MON>

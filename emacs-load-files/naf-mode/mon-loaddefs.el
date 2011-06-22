@@ -121,7 +121,7 @@ List of functions and vars from the help packages.
 
 :FILE help.el help-mode.el help-fns.el help-macro.el 
 :SEE-ALSO `mon-help-mon-help'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -341,7 +341,7 @@ Help `mon-help-*' to help you find help references. Why not! :).
 :ALIASED-BY `mon-help-reference-sheet'
 
 :SEE-ALSO `mon-help-mon-functions'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -985,7 +985,7 @@ Incomplete list of MON functions and their related variables.
 
 
 :SEE-ALSO `mon-help-mon-help', `mon-help-emacs-introspect'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -1052,7 +1052,7 @@ Functions and variables for use with `ebay-template-mode'.
 :SEE (URL `http://www.emacswiki.org/cgi-bin/wiki/download/html-lite.el')
 
 :SEE-ALSO `mon-help-xml-functions', `mon-help-mon-functions', `mon-help-mon-help'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -1278,7 +1278,7 @@ Unless indicated as a '<FUNCTION>' items listed are '<VARIABLE>'.
 
 :SEE-ALSO `mon-help-load-functions', `mon-help-mon-help',
 `mon-help-mon-functions', `mon-help-package-keywords'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -1368,7 +1368,7 @@ x 	      The X Window system.
 
 :SEE :FILE finder.el finder-inf.el
 :SEE-ALSO `mon-help-emacs-introspect', `mon-help-help-functions'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -1424,7 +1424,7 @@ $              -> match EOL
 
 :SEE-ALSO `mon-help-search-functions', `mon-help-syntax-class',
 `mon-help-syntax-functions'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -1486,7 +1486,7 @@ This is different from getting the char's syntax:
 
 :SEE-ALSO `mon-help-syntax-functions', `mon-help-search-functions',
 `mon-help-regexp-syntax'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -1610,7 +1610,7 @@ Functions related to syntax and syntax tables.
 
 :SEE-ALSO `mon-help-syntax-class', `mon-help-regexp-syntax',
 `mon-help-search-functions'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -1749,7 +1749,7 @@ Common functions, vars, commands for searching, replacing, substituting.
 
 :SEE-ALSO `mon-help-regexp-syntax', `mon-help-syntax-functions',
 `mon-help-syntax-class'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -1900,7 +1900,7 @@ A list of common Emacs hooks.
 
 :SEE-ALSO `mon-help-buffer-functions', `mon-help-file-dir-functions',
 `mon-help-file-dir-functions-usage'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -2187,7 +2187,7 @@ List of functions related to files and directories.
 
 :SEE-ALSO `mon-help-file-dir-functions-usage', `mon-help-process-functions',
 `mon-help-buffer-functions', `mon-help-hooks'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -2401,7 +2401,7 @@ Examples of file/directory name related function usage.
 
 :SEE-ALSO `mon-help-file-dir-functions', `mon-help-buffer-functions',
 `mon-help-hooks', `mon-help-process-functions'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -2509,7 +2509,7 @@ Process related functions.
 :SEE-ALSO `mon-help-make-network-process', `mon-help-server-functions',
 `mon-help-file-dir-functions', `mon-help-file-dir-functions',
 `mon-help-buffer-functions', `mon-help-hooks'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -2615,7 +2615,7 @@ Return non-nil if `make-network-process' accepts network option arg <KEYWORD>.
 :SEE-ALSO `mon-help-process-functions', `mon-help-server-functions',
 `mon-help-process-functions', `mon-help-hooks', `mon-help-file-dir-functions',
 `mon-help-buffer-functions'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -2701,7 +2701,7 @@ List of Emacs server related functions and variables.
 :SEE-ALSO `mon-help-ipv4-header', `mon-help-process-functions',
 `mon-help-make-network-process', `mon-help-file-dir-functions',
 `mon-help-buffer-functions', `mon-help-hooks'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -2756,7 +2756,7 @@ List of functions and variables for temporary inhibition of Emacs behavior.
 `mon-with-inhibit-buffer-read-only-TEST'
 
 :SEE-ALSO `mon-help-emacs-introspect'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -3001,7 +3001,7 @@ Buffer related functions.
 :SEE-ALSO `mon-help-window-functions', `mon-help-frame-functions',
 `mon-help-file-dir-functions', `mon-help-hooks',
 `mon-help-process-functions'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -3249,7 +3249,7 @@ Functions for working with frames.
 
 :SEE-ALSO `mon-help-window-functions', `mon-help-buffer-functions',
 `mon-help-emacs-introspect'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -3431,7 +3431,7 @@ Functions for working with windows.
 :SEE :FILE lisp/window.el src/window.c
 
 :SEE-ALSO `mon-help-frame-functions', `mon-help-buffer-functions'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -3514,7 +3514,7 @@ A list regarding definition and access of major/minor modes (non-exhausitve).
 `mon-help-hooks', `mon-help-syntax-functions', `mon-help-faces',
 `mon-help-faces-basic', `mon-help-faces-font-lock', `mon-help-font-lock',
 `mon-help-key-functions', `mon-help-easy-menu', `mon-help-custom-keywords'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -3558,7 +3558,7 @@ XML related functions.
 
 :SEE-ALSO `mon-help-css-mode', `mon-help-css-color', `mon-help-css-complete',
 `mon-help-css-check', `mon-help-ebay-template-mode', `mon-help-tidy'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -3611,7 +3611,7 @@ Routine eieio functions, specs, args, etc.
 :SEE-ALSO `mon-insert-defclass-template', `mon-help-eieio-functions',
 `mon-help-eieio-methods', `mon-help-custom-keywords', `mon-help-faces-themes',
 `mon-help-widgets'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -3759,7 +3759,7 @@ List of interface functions for work with EIEIO system of CEDET.
 :SEE-ALSO `mon-help-eieio-methods', `mon-help-eieio-defclass',
 `mon-insert-defclass-template', `mon-help-custom-keywords',
 `mon-help-faces-themes', `mon-help-widgets'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -4027,7 +4027,7 @@ A generic form can be interrogated with `eieio-generic-form':
 
 :SEE-ALSO `mon-help-eieio-defclass', `mon-help-eieio-functions',
 `mon-help-custom-keywords', `mon-help-faces-themes', `mon-help-widgets'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -4149,7 +4149,7 @@ Using type:
 :SEE info node `(CL)Type Predicates'
 
 :SEE-ALSO `mon-help-predicate-functions', `mon-help-symbol-functions'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -4443,7 +4443,7 @@ of those predicates enumerated with `mon-help-type-predicates'.
 `mon-string-or-null-and-zerop'
 
 :SEE-ALSO `mon-help-type-predicates', `mon-help-CL-sequence-predicates'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -4612,7 +4612,7 @@ List of functions related to sequences list, alist, array, vector, ring, etc.
 
 :SEE-ALSO `mon-help-hash-functions', `mon-help-plist-functions',
 `mon-help-plist-properties', `mon-help-type-predicates'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -4970,7 +4970,7 @@ List of keyboard and key related functions, variables, keymaps.
 :SEE :FILE src/keymap.c lisp/bindings.el
 :SEE-ALSO `mon-help-keys', `mon-help-diacritics', `mon-help-w32-functions',
 `mon-help-CL-slime-keys'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -5051,7 +5051,7 @@ List of functions related to loading elisp files.
 
 :SEE :FILE lread.c loaddefs.el 
 :SEE-ALSO `mon-help-emacs-introspect', `mon-help-read-functions', `mon-help-print-functions'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -5141,7 +5141,7 @@ List of functions for reading.
 :SEE :FILE `lread.c'
 :SEE-ALSO `mon-help-print-functions', `mon-help-load-functions',
 `mon-help-key-functions', `mon-help-char-representation'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -5277,7 +5277,7 @@ Print related functions and variables which affect their output.
 :SEE-ALSO `mon-help-read-functions', `mon-help-marker-functions',
 `mon-help-load-functions', `mon-help-char-representation',
 `mon-help-format-width', `gnus-bind-print-variables'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -5342,7 +5342,7 @@ List of marker related functions and variables.
 
 :SEE-ALSO `mon-help-print-functions', `mon-help-print-functions',
 `mon-help-read-functions'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -5466,7 +5466,7 @@ bubbas-hash
 
 :SEE-ALSO `mon-help-sequence-functions', `mon-help-plist-functions',
 `mon-help-plist-properties', `mon-help-type-predicates'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -5546,7 +5546,7 @@ the plist could be empty in the first place.
 :SEE-ALSO `mon-help-plist-properties', `mon-help-text-property-functions',
 `mon-help-hash-functions', `mon-help-sequence-functions', `mon-help-plist-functions',
 `mon-help-type-predicates'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -5771,7 +5771,7 @@ When a property-name is not also symbol-name it is distinguished as:
 
 :SEE-ALSO `mon-help-plist-functions', `mon-help-text-property-functions',
 `mon-help-text-property-properties'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -5921,7 +5921,7 @@ It has the following format:
 `mon-help-custom-keywords', `mon-help-widgets', `mon-help-easy-menu',
 `mon-help-plist-functions',`mon-help-eieio-defclass',
 `mon-help-eieio-functions', `mon-help-eieio-methods'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -6053,7 +6053,7 @@ Functions, Variables, Properties, etc. for defining faces.
 `mon-help-easy-menu', `mon-help-plist-functions', `mon-help-plist-properties',
 `mon-help-color-chart', `mon-help-eieio-defclass', `mon-help-eieio-functions',
 `mon-help-eieio-methods'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -6066,7 +6066,7 @@ These are the standard Emacs faces are defined in :FILE faces.el
 inherit from one of the basic-faces this practice is encouraged.
 
 :SEE (URL `http://lists.gnu.org/archive/html/emacs-devel/2009-08/msg00525.html').
-►►►
+▶▶▶
 ;; :FACE-BASIC
 \(describe-face 'default)
 \(describe-face 'bold)
@@ -6104,7 +6104,7 @@ inherit from one of the basic-faces this practice is encouraged.
 
 :SEE-ALSO `mon-help-faces-basic', `mon-help-font-lock', `mon-help-faces-themes', 
 `mon-help-font-lock-functions', `mon-help-naf-mode-faces'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -6145,7 +6145,7 @@ List of faces defined specifically for Font Lock mode.
 
 :SEE-ALSO `mon-help-font-lock', `mon-help-font-lock-functions',
 `mon-help-faces', `mon-help-faces-themes', `mon-help-faces-basic'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -6273,7 +6273,7 @@ List of font-lock and jit-lock related functions.
 `mon-help-widgets', `mon-help-easy-menu', `mon-help-plist-functions',
 `mon-help-color-chart', `mon-help-eieio-defclass', `mon-help-eieio-functions',
 `mon-help-eieio-methods'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -6356,7 +6356,7 @@ Following enumeration of elt/\"rule\" patterns is _not_ a formal grammar:
 :SEE-ALSO `mon-help-font-lock-functions', `mon-help-faces-font-lock',
 `mon-help-faces-basic', `mon-help-font-lock', `mon-help-faces-themes',
 `mon-help-naf-mode-faces', `mon-help-overlay-functions'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -6435,7 +6435,7 @@ List of functions, variables, and properties related to overlays.
 `mon-help-font-lock-functions', `mon-help-text-property-functions',
 `mon-help-text-property-properties', `mon-help-text-property-functions-ext',
 `mon-help-text-property-stickyness', `mon-help-plist-functions'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -6522,7 +6522,7 @@ List of text-property related functions and variables.
 `mon-help-text-property-stickyness', `mon-help-text-property-functions-ext',
 `mon-help-overlay-functions', `mon-help-plist-functions',
 `mon-help-plist-properties', `mon-help-widgets'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -6605,7 +6605,7 @@ List of standard and \"special\" text-property properties.
 `mon-help-faces-font-lock', `mon-help-faces-themes',
 `mon-help-font-lock-functions', `mon-help-syntax-functions',
 `mon-help-syntax-class'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -6660,7 +6660,7 @@ text-properties of adjoining text with sticky properties.
 
 :SEE-ALSO `mon-help-text-property-functions', `mon-help-text-property-functions-ext',
 `mon-help-overlay-functions', `mon-help-plist-functions'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -6712,7 +6712,7 @@ provided in Emacs packages outside of lisp/emacs-lisp, and 3rd party packages.
 :SEE-ALSO `mon-help-text-property-functions',
 `mon-help-text-property-stickyness', `mon-help-overlay-functions',
 `mon-help-plist-functions'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -6804,7 +6804,7 @@ Color related functions.
 :SEE :FILE w23fns.c struct colormap_t w32_color_map.
 
 :SEE-ALSO `mon-help-color-chart', `mon-help-css-color'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -6962,7 +6962,7 @@ Chart of Netscape Color Names with their Color Values.
 :SEE :FILE w23fns.c struct colormap_t w32_color_map.
 
 :SEE-ALSO `mon-help-color-functions',`mon-help-css-color'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -7007,7 +7007,7 @@ Following is a mapping for building a menu with easy-menu's `easy-menu-define'.
 `mon-help-faces', `mon-help-faces-basic', `mon-help-faces-themes',
 `mon-help-eieio-defclass', `mon-help-eieio-functions',
 `mon-help-eieio-methods'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -7139,7 +7139,7 @@ Help table for the widget interface.
 `mon-help-faces', `mon-help-faces-basic', `mon-help-faces-themes',
 `mon-help-eieio-defclass', `mon-help-eieio-functions',
 `mon-help-eieio-methods'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -7247,7 +7247,7 @@ To link to an existing file of emacs lisp source code do:
 `mon-help-faces', `mon-help-faces-basic', `mon-help-faces-themes',
 `mon-help-eieio-defclass', `mon-help-eieio-functions',
 `mon-help-eieio-methods'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -7372,7 +7372,7 @@ A list of functions and vars related to chars and their properties.
 `mon-help-char-ascii', `mon-help-char-iso-8859-1', `mon-help-char-ecma-35',
 `mon-help-char-ecma-48', `mon-help-read-functions', `mon-help-print-functions',
 `mon-help-key-functions'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -7502,7 +7502,7 @@ unicode-bmp
 `mon-help-char-ecma-35', `mon-help-char-ecma-48', `mon-help-char-logic',
 `mon-help-key-functions', `mon-help-read-functions',
 `mon-help-print-functions'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -7590,7 +7590,7 @@ A list of functions for working with Emacs character coding-systems.
 `mon-help-char-ecma-35', `mon-help-char-ecma-48', `mon-help-char-logic',
 `mon-help-key-functions', `mon-help-read-functions',
 `mon-help-print-functions'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -7666,7 +7666,7 @@ A list of functions for working with Emacs character char-tables.
 `mon-help-char-ecma-35', `mon-help-char-ecma-48', `mon-help-char-logic',
 `mon-help-key-functions', `mon-help-read-functions',
 `mon-help-print-functions'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -7732,7 +7732,7 @@ A list of functions for working with Emacs character display-tables.
 `mon-help-char-ecma-35', `mon-help-char-ecma-48', `mon-help-char-logic',
 `mon-help-key-functions', `mon-help-read-functions',
 `mon-help-print-functions'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -7866,7 +7866,7 @@ lookups. These include:
 `mon-help-char-ecma-35', `mon-help-char-ecma-48', `mon-help-char-logic',
 `mon-help-key-functions', `mon-help-read-functions',
 `mon-help-print-functions'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -8051,7 +8051,7 @@ the composition.
 `mon-help-char-ecma-35', `mon-help-char-ecma-48', `mon-help-char-logic',
 `mon-help-key-functions', `mon-help-read-functions',
 `mon-help-print-functions'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -8128,7 +8128,7 @@ ASCII Character Tables.
 `mon-help-char-ecma-35', `mon-help-char-ecma-48', `mon-help-char-logic',
 `mon-help-key-functions', `mon-help-read-functions',
 `mon-help-print-functions'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -8185,7 +8185,7 @@ ISO-8859-1 Character Table.
 `mon-help-char-ecma-35', `mon-help-char-ecma-48', `mon-help-char-logic',
 `mon-help-key-functions', `mon-help-read-functions',
 `mon-help-print-functions'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -8232,7 +8232,7 @@ is based on the information from Table 1 of ECMA-48 /ISO/IEC 6429
 `mon-help-char-ecma-35', `mon-help-char-ecma-48', `mon-help-char-logic',
 `mon-help-key-functions', `mon-help-read-functions',
 `mon-help-print-functions'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -8280,13 +8280,13 @@ as a reference for finding which characters match which codes.
 `mon-help-char-ecma-35', `mon-help-char-ecma-48', `mon-help-char-logic',
 `mon-help-key-functions', `mon-help-read-functions',
 `mon-help-print-functions'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
 (autoload 'mon-help-diacritics "mon-doc-help-utils" "\
 Insert commonly used diacritics and their keymaps at point.
-►►►
+▶▶▶
 
 ;; :CX8-DIACRITIC-SYMBOLS-E
 
@@ -8387,7 +8387,7 @@ Insert commonly used diacritics and their keymaps at point.
 ¨ - C-x 8 \" \"
 ¸ - C-x 8 , ,
 \240 - C-x 8 * SPC ; NO-BREAK-SPACE
-► - (ucs-insert \"25BA\")
+▶ - (ucs-insert \"25BA\")
 
 :NOTE C-x 8 RTN is bound to `ucs-insert'
 
@@ -8446,7 +8446,7 @@ XML Entity Definitions for Characters - W3C
 `mon-help-char-ecma-35', `mon-help-char-ecma-48', `mon-help-char-logic',
 `mon-help-key-functions', `mon-help-read-functions',
 `mon-help-print-functions'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -8483,7 +8483,7 @@ Some commonly used characters in propsitional, description, boolean logics.
 `mon-help-char-ecma-35', `mon-help-char-ecma-48', `mon-help-char-logic',
 `mon-help-key-functions', `mon-help-read-functions',
 `mon-help-print-functions'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -8521,8 +8521,8 @@ Help for working with Emacs character representations.
 \"\\u25BA\"
 ?\\u25BA
 \(identity ?\\u25BA)       ;=> 9658
-\(identity \"\\u25BA\")      ;=> \"►\"
-\(char-to-string ?\\u25BA) ;=> \"►\"
+\(identity \"\\u25BA\")      ;=> \"▶\"
+\(char-to-string ?\\u25BA) ;=> \"▶\"
 
 ;; :CHAR-REPESENTATION-BINARY             :SEE info node `(elisp)Integer Basics'
 #b000 -> 0
@@ -8671,7 +8671,7 @@ And may more generally be represented in Emacs as:
 `mon-help-char-ecma-35', `mon-help-char-ecma-48', `mon-help-char-logic',
 `mon-help-key-functions', `mon-help-read-functions',
 `mon-help-print-functions'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -8741,7 +8741,7 @@ The char 4194303 of return value is `max-char'.
 `mon-help-char-ecma-35', `mon-help-char-ecma-48', `mon-help-char-logic',
 `mon-help-key-functions', `mon-help-read-functions',
 `mon-help-print-functions'.
-►►►
+▶▶▶
 
 \(fn &optional INTRP)" t nil)
 
@@ -8971,7 +8971,7 @@ most-positive-fixnum
 `mon-help-char-ecma-35', `mon-help-char-ecma-48', `mon-help-char-logic',
 `mon-help-key-functions', `mon-help-read-functions',
 `mon-help-print-functions'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -9321,7 +9321,7 @@ as per `byte-compile-output-as-comment':
 :SEE :FILE `byte-run.el', `bytecomp.el', `byte-opt.el'
 
 :SEE-ALSO `mon-help-byte-compile-functions' .
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -9705,7 +9705,7 @@ Following are the types of objects that `indirect-function' may return.
 :NOTE Interestingly bytecomp.el makes use of `letf' :)
 :SEE :FILE disass.el bytecomp.el byte-opt.el byte-run.el bytecode.c 
 :SEE-ALSO `mon-help-byte-optimizer-find', `mon-help-symbol-functions'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -9813,14 +9813,14 @@ The IPv4 header as per RFC-791 (more or less).
 :SEE (URL `http://en.wikipedia.org/wiki/IPv4')
 
 :SEE-ALSO `*mon-iptables-alst*'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
 (autoload 'mon-help-nclose-functions "mon-doc-help-utils" "\
 Functions for working with nclosemacs.
 :SEE info node `(nclosemacs)Top'
-►►►
+▶▶▶
 
 ;; :NCLOSE-KNOWCESSING
 `*nclose-suggest*'
@@ -9982,7 +9982,7 @@ elided from the presentation.
 
 :SEE-ALSO `mon-format-iso-8601-time', `mon-help-CL-local-time', 
 `mon-help-time-functions', `mon-help-mon-time-functions'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -10055,7 +10055,7 @@ List of functions and variables related to time calculation conversion.
 :SEE :FILE calendar/parse-time.el calendar/time-date.el
 :SEE-ALSO `mon-help-CL-local-time', `mon-help-time-functions',
 `mon-help-mon-time-functions'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -10157,7 +10157,7 @@ List `mon-*' fncns and variables to convert, match, and insert time values.
 :SEE :FILE mon-time-utils.el mon-regexp-symbols.el naf-mode-dates.el naf-mode-db-flags.el
 
 :SEE-ALSO `mon-help-time-functions', `mon-help-iso-8601', `mon-help-CL-local-time'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -10290,7 +10290,7 @@ List of the bookmark package's functions and variables.
 
 :SEE :FILE bookmark.el
 :SEE-ALSO .
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -10303,7 +10303,7 @@ To jump to an info node with an elisp expression:
 \(info \"(elisp)Documentation Tips\") <- With the \" \" dbl-quotes!.
 :SEE-ALSO `mon-help-tar-incantation', `mon-help-rename-incantation',
 `mon-help-unix-commands', `mon-help-crontab', `mon-help-permissions'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -10334,7 +10334,7 @@ Or, if you prefer, following is equivalent to above:
 :SEE-ALSO `mon-help-rename-incantation', `mon-help-info-incantation',
 `mon-help-du-incantation', `mon-help-unix-commands', `mon-help-permissions',
 `mon-help-crontab'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -10354,7 +10354,7 @@ done
 
 :SEE-ALSO `mon-help-info-incantation',`mon-help-du-incantation',
 `mon-help-unix-commands', `mon-help-permissions', `mon-help-crontab'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -10367,7 +10367,7 @@ M-x shellinstall-info  info-file  \"/usr/info/dir\"
 :SEE-ALSO `mon-help-rename-incantation', `mon-help-info-incantation',
 `mon-help-du-incantation', `mon-help-unix-commands', `mon-help-permissions',
 `mon-help-crontab'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -10414,7 +10414,7 @@ The default is the basename of the archive, with suffixes removed.
 :SEE-ALSO `mon-help-rename-incantation', `mon-help-info-incantation',
 `mon-help-du-incantation', `mon-help-unix-commands', `mon-help-permissions',
 `mon-help-crontab'.
-►►►
+▶▶▶
 
 \(fn INSERTP INTRP)" t nil)
 
@@ -10513,7 +10513,7 @@ user-error, and may even make your CPU to stop working! (Hint just use `:q')
 :SEE (URL `http://wiki.archlinux.org/index.php/Cron')
 :SEE-ALSO `mon-help-unix-commands', `mon-help-permissions',
 `mon-help-tar-incantation', `mon-help-info-incantation'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -10597,7 +10597,7 @@ Emacs permission functions and tables for chown, chmod, chattr, umask, etc.
 
 :SEE-ALSO `mon-help-unix-commands', `mon-help-permissions',
 `mon-help-tar-incantation', `mon-help-info-incantation'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -10775,7 +10775,7 @@ type
 uname     ; :SEE info node `(coreutils)uname invocation'
 whatis
 :SEE-ALSO `mon-help-permissions', `mon-help-crontab', `mon-help-tar-incantation', 
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -10800,7 +10800,7 @@ Invoking `format' control string to specify padding using the width flag.
 `mon-help-char-representation', `format', `mon-string-justify-left',
 `mon-string-fill-to-col', `mon-line-indent-from-to-col',
 `mon-line-strings-pipe-to-col'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -10814,7 +10814,7 @@ Find TOPIC in the indices of the Emacs Lisp Reference Manual.
 
 :SEE-ALSO `finder-by-keyword', `mon-help-unix-commands', 
 `Info-virtual-index-find-node', `Info-virtual-index'.
-►►►
+▶▶▶
 
 \(fn)" t nil)
 
@@ -10924,7 +10924,7 @@ When keyword arg NO-WRITE is non-nil also write the log to the file named:
 :SEE-ALSO `mon-write-jg-file-in-path', `mon-make-jg-dir-in-path',
 `mon-format-jg-file-for-write', `*mon-jg-file-template*',
 `mon-insert-file-in-dirs', `mon-insert-dirs-in-path'.
-►►►
+▶▶▶
 
 \(fn IN-DIR FOLDER-CNT &key NO-WRITE FL-PFX FL-SFX)" nil nil)
 
@@ -10946,7 +10946,7 @@ When optional arg NO-WRITE-FILE is non-nil do not write file.
 :CALLED-BY `mon-make-jg-dir-in-path'
 
 :SEE-ALSO `mon-insert-file-in-dirs', `mon-insert-dirs-in-path'
-►►►
+▶▶▶
 
 \(fn FL-PTH &optional FL-PREFIX FL-SUFFIX NO-WRITE-FILE)" nil nil)
 
@@ -10959,7 +10959,7 @@ Return formatted string and insert in buffer at point. Moves point.
 
 :SEE-ALSO `mon-make-jg-dir-in-path', `mon-insert-file-in-dirs',
 `mon-insert-dirs-in-path'.
-►►►
+▶▶▶
 
 \(fn FNAME-TO-WRITE)" nil nil)
 
@@ -11000,7 +11000,7 @@ test-cases at point.
 :EXAMPLE
 \(mon-insert-test-cases)
 :SEE-ALSO `mon-insert-lisp-testme'.
-►►►
+▶▶▶
 
 \(fn &optional INSERTP INTRP)" t nil)
 
@@ -11018,7 +11018,7 @@ ARG GENERATE-N-RESULTS is the number of results to generate.
 \(mon-gensym-counter-randomizer-TEST \"bubba\" 10000)
 
 :SEE-ALSO `mon-gensym', `with-gensyms', `mon-gensym-counter-randomizer'.
-►►►
+▶▶▶
 
 \(fn W-TEST-STR/SYM GENERATE-N-RESULTS)" nil nil)
 
@@ -11035,7 +11035,7 @@ named \"*MON-LIST-NSHUFFLE-TEST*\"
 \(mon-list-nshuffle '(\"a\" \"b\" \"c\" \"d\") 100)
 
 :SEE-ALSO `mon-nshuffle-vector', `mon-list-shuffle-safe'.
-►►►
+▶▶▶
 
 \(fn W-TEST-TIMES)" nil nil)
 
@@ -11046,7 +11046,7 @@ Test function for `mon-line-strings-to-list'.
 `mon-help-propertize-regexp-symbol-defs-TEST', 
 `mon-help-regexp-symbol-defs-TEST', `mon-help-CL-wget-pkgs-TEST', 
 `mon-help-propertize-tags-TEST', `mon-insert-test-cases'.
-►►►
+▶▶▶
 
 \(fn &optional WITH-CDR WITH-WRAP INSRTP)" nil nil)
 
@@ -11064,7 +11064,7 @@ Test function for `mon-with-inhibit-buffer-read-only'.
 `mon-help-regexp-symbol-defs-TEST', `mon-help-CL-wget-pkgs-TEST',
 `mon-inhibit-read-only-TEST', `mon-line-strings-to-list-TEST',
 `mon-user-system-conditionals-TEST', `mon-wget-list-to-script-TEST'.
-►►►
+▶▶▶
 
 \(fn)" nil nil)
 
@@ -11082,7 +11082,7 @@ Test function for `mon-with-inhibit-buffer-read-only'.
 `mon-help-regexp-symbol-defs-TEST', `mon-help-CL-wget-pkgs-TEST',
 `mon-inhibit-read-only-TEST', `mon-line-strings-to-list-TEST',
 `mon-user-system-conditionals-TEST', `mon-wget-list-to-script-TEST'.
-►►►
+▶▶▶
 
 \(fn &optional W-DISPLAY-BUFFER)" nil nil)
 
@@ -11092,7 +11092,7 @@ Helper for `mon-line-dolines' macro's test function `mon-line-dolines-TEST'.
 :SEE (URL `http://lists.gnu.org/archive/html/help-gnu-emacs/2009-12/msg00614.html')
 
 :SEE-ALSO .
-►►►
+▶▶▶
 
 \(fn)" nil nil)
 
@@ -11115,7 +11115,7 @@ details in buffer named \"*MON-LINE-DOLINES-TEST*\".
 :SEE (URL `http://lists.gnu.org/archive/html/help-gnu-emacs/2009-12/msg00614.html')
 
 :SEE-ALSO `mon-line-dolines-setup-TEST'.
-►►►
+▶▶▶
 
 \(fn)" nil nil)
 
@@ -11131,7 +11131,7 @@ When optional arg FORCE-FAIL is non-nil force test failure.
 \(mon-with-buffer-undo-disabled-TEST 'force-fail)
 
 :SEE-ALSO `buffer-undo-list'.
-►►►
+▶▶▶
 
 \(fn &optional FORCE-FAIL)" nil nil)
 
@@ -11143,7 +11143,7 @@ Test function for `mon-string-split'.
 \(mon-string-split-TEST)
 
 :SEE-ALSO .
-►►►
+▶▶▶
 
 \(fn &optional W-MSG-USR)" nil nil)
 
@@ -11157,7 +11157,7 @@ Return restults to buffer named \"*mon-line-strings-bq-qt-sym-bol-TEST*\".
 \(mon-line-strings-bq-qt-sym-bol-TEST)
 
 :SEE-ALSO .
-►►►
+▶▶▶
 
 \(fn)" nil nil)
 
@@ -11183,7 +11183,7 @@ Performs the following checks:
 ./  A temp-buffer with the name *SHOW-WGET-TEMP*.
 
 :SEE-ALSO `mon-help-CL-pkgs', `*mon-help-CL-cmu-ai-repo*', `*mon-help-CL-ext-pkg-map*'.
-►►►
+▶▶▶
 
 \(fn)" nil nil)
 
@@ -11202,7 +11202,7 @@ Test function for `mon-build-copyright-string'.
 `mon-help-propertize-regexp-symbol-defs-TEST', `mon-help-propertize-tags-TEST',
 `mon-help-regexp-symbol-defs-TEST', `mon-help-CL-wget-pkgs-TEST',
 `mon-line-strings-to-list-TEST'.
-►►►
+▶▶▶
 
 \(fn)" t nil)
 
@@ -11218,7 +11218,7 @@ kill the leftover buffer `*google-define-get-buffer*'.
 \(google-define-get-command-TEST)
 
 :SEE-ALSO `google-define', `google-define-kill-def-buffers'.
-►►►
+▶▶▶
 
 \(fn)" nil nil)
 
@@ -11236,7 +11236,7 @@ Test equivalence of return values of following procedures:
 \(mon-permute-combine-functions-TEST)
 
 :SEE-ALSO `mon-list-variant-forms', `mon-list-permute-variants', `mon-list-permute-1'.
-►►►
+▶▶▶
 
 \(fn)" nil nil)
 
@@ -11250,7 +11250,7 @@ Return and display results in buffer named \"*MON-WRITE-STRING-TEST*\".
 \(mon-write-string-reset-bind-TEST)
 
 :SEE-ALSO .
-►►►
+▶▶▶
 
 \(fn)" nil nil)
 
@@ -11273,7 +11273,7 @@ Test associations forward/backward in variable `*naf-mode-state-to-postal*'.
 \(naf-mode-state-to-postal-TEST)
 
 :SEE-ALSO .
-►►►
+▶▶▶
 
 \(fn)" nil nil)
 
@@ -11298,7 +11298,7 @@ invoking `mon-booleanp-to-binary' with <ARG-1> <ARG-2> to satisfy <TEST-VALUE>.
 \(mon-booleanp-to-binary-TEST)
 
 :SEE-ALSO `mon-sequence-all-booleanp-TEST'.
-►►►
+▶▶▶
 
 \(fn)" nil nil)
 
@@ -11315,7 +11315,7 @@ buffer with name \"*MON-SEQUENCE-ALL-BOOLEANP-TEST*\"
 \(mon-sequence-all-booleanp-TEST t)
 
 :SEE-ALSO `mon-booleanp-to-binary-TEST'.
-►►►
+▶▶▶
 
 \(fn &optional W-DISPLAY-BUFFER)" nil nil)
 
@@ -11343,7 +11343,7 @@ Key :test-passed-p is non-nil if individual test suceeded.
 \(mon-string-or-null-and-zerop-TEST)
 
 :SEE-ALSO .
-►►►
+▶▶▶
 
 \(fn)" nil nil)
 
@@ -11354,7 +11354,7 @@ Return and display results to buffer named \"*PP-EXPAND-ALL*\"
 :NOTE Not actually a test.
 
 :SEE-ALSO .
-►►►
+▶▶▶
 
 \(fn EXPAND-FORM)" nil nil)
 
@@ -11370,7 +11370,7 @@ Key :all-tests-passed is non-nil if so.
 \(and (cadr (memq :all-tests-passed (mon-line-string-rotate-name-TEST))))
 
 :SEE-ALSO .
-►►►
+▶▶▶
 
 \(fn)" nil nil)
 
@@ -11386,7 +11386,7 @@ Key :all-tests-passed is non-nil if so.
 \(and (cadr (memq :all-tests-passed (mon-line-indent-from-to-col-TEST))))
 
 :SEE-ALSO .
-►►►
+▶▶▶
 
 \(fn)" nil nil)
 
@@ -11400,7 +11400,7 @@ Key :all-tests-passed-p is non-nil if so.
 \(mon-line-strings-pipe-to-col-TEST)
 
 :SEE-ALSO .
-►►►
+▶▶▶
 
 \(fn)" nil nil)
 
@@ -11414,7 +11414,7 @@ Key :all-tests-passed-p is non-nil if so.
 \(mon-line-string-insert-chars-under-TEST)
 
 :SEE-ALSO .
-►►►
+▶▶▶
 
 \(fn)" nil nil)
 
@@ -11432,7 +11432,7 @@ Key :all-tests-passed-p is non-nil if so.
   (pp-display-expression (mon-list-reorder-TEST)  (buffer-name gbc)))
 
 :SEE-ALSO `%mon-list-reorder'.
-►►►
+▶▶▶
 
 \(fn)" nil nil)
 
@@ -11475,7 +11475,7 @@ When a match is made return value is a plist of the form:
 :USED-IN `naf-mode'.
 
 :SEE-ALSO `mon-cln-ulan'.
-►►►
+▶▶▶
 
 \(fn &optional KYWD-STR NDL-STR)" nil nil)
 
@@ -11486,7 +11486,7 @@ Which in turn are requirements to make `buffer-substring-no-properties' `setf'ab
 
 \(mon-set-buffer-substring-no-properties-TEST)
 :SEE-ALSO .
-►►►
+▶▶▶
 
 \(fn)" nil nil)
 
@@ -11497,7 +11497,7 @@ Test function for `mon-plist-keys'.
 
 \(mon-plist-keys-TEST)
 :SEE-ALSO `mon-plist-values-TEST'.
-►►►
+▶▶▶
 
 \(fn)" nil nil)
 
@@ -11510,7 +11510,7 @@ Keyword :all-tests-passed is non-nil if so.
 \(mon-plist-values-TEST)
 
 :SEE-ALSO `mon-plist-keys-TEST'.
-►►►
+▶▶▶
 
 \(fn)" nil nil)
 
@@ -11520,7 +11520,7 @@ Helper function for `mon-help-regexp-symbol-defs-TEST'.
 Propertize symbols matched by regexp `*regexp-symbol-defs*'.
 
 :SEE-ALSO `mon-help-overlay-result'.
-►►►
+▶▶▶
 
 \(fn)" nil nil)
 
@@ -11539,7 +11539,7 @@ variable `*regexp-symbol-defs-big*'. Default is `*regexp-symbol-defs*'.
 
 \(mon-help-regexp-symbol-defs-TEST t t)
 
-►
+▶
 \(defun some-function (&optional optional)
 \(defvar som-bq-list `(
 \(defun some-function-22 (&optional optional)
@@ -11571,11 +11571,11 @@ variable `*regexp-symbol-defs-big*'. Default is `*regexp-symbol-defs*'.
 \(defface *some/-face-symbol:->name<-2* (someface
 \(defgroup *some/-group-symbol:->name<-2* (somegroup
 \(deftheme *some/-theme-symbol:->name<-2* (sometheme
-◄
+◀
 
 :SEE-ALSO `mon-help-propertize-regexp-symbol-defs-TEST', `mon-help-overlay-result'
 `lisp-font-lock-keywords', `lisp-font-lock-keywords-1', `lisp-font-lock-keywords-2'.
-►►►
+▶▶▶
 
 \(fn &optional DIS-P DO-BIG-REGEXP)" t nil)
 
@@ -11608,7 +11608,7 @@ Test font-locking of the following faces:
 `mon-help-COMMENT-tag', `mon-help-BUILTIN-tag'
 
 :SEE-ALSO `mon-help-mon-tags', `mon-help-insert-tags'.
-n►►►
+n▶▶▶
 
 \(fn)" nil nil)
 
@@ -11630,7 +11630,7 @@ Return value displayed in buffer named *MON-HELP-KEYS-WIKIFY-TEST*.
 :SEE-ALSO `*mon-help-reference-keywords*', `mon-help-keys',
 `mon-help-escape-for-ewiki', `mon-help-unescape-for-ewiki', 
 `mon-help-key-functions'.
-►►►
+▶▶▶
 
 \(fn)" nil nil)
 
@@ -11645,7 +11645,7 @@ When optional arg LOG-DEST-TEST is non-nil return results of evaluating
 `mon-insert-drive-transfer-template', `*mon-drive-transfer-template*',
 `*mon-drive-transfer-template-src-dest-log*',
 `mon-drive-transfer-template-subst-src-dest-log'.
-►►►
+▶▶▶
 
 \(fn &optional LOG-DEST-TEST)" nil nil)
 
@@ -11675,7 +11675,7 @@ When `force-bind' is non-nil force the binding even if `*mon-emacsd*' bound.
 
 :SEE-ALSO `mon-get-mon-emacsd-paths', `mon-build-misc-path-example'.
 `mon-build-user-name-example', `*mon-emacsd*', `set-emacs-root'.
-►►►
+▶▶▶
 
 \(fn &optional BIND-VAR FORCE-BIND)" nil nil)
 
@@ -11701,7 +11701,7 @@ is already bound.
 :SEE-ALSO `mon-get-mon-emacsd-paths', `mon-build-mon-emacsd-example',
 `mon-build-user-name-example', `mon-get-env-vars-emacs', 
 `mon-get-env-vars-symbols', `mon-get-env-vars-strings'.
-►►►
+▶▶▶
 
 \(fn &optional BIND-VAR FORCE-BIND)" nil nil)
 
@@ -11730,7 +11730,7 @@ Elements of the list might have a form such as this:
 \(mon-build-user-name-example-TEST)
 :SEE-ALSO `mon-build-user-name-example-TEST', `mon-get-mon-emacsd-paths',
 `mon-build-misc-path-example' `mon-build-mon-emacsd-example'.
-►►►
+▶▶▶
 
 \(fn NAME-COUNT &optional W-THIS-VAR BIND-VAR FORCE-BIND)" nil nil)
 
@@ -11765,7 +11765,7 @@ For example:
 `mon-wget-list-to-script-TEST', `mon-line-strings-to-list-TEST',
 `mon-help-keys-wikify-TEST', `mon-insert-lisp-testme-fancy',
 `mon-insert-lisp-testme', `mon-insert-test-cases'.
-►►►
+▶▶▶
 
 \(fn &rest USER-SYSTEM-TEST-WITH)" nil nil)
 
@@ -11775,7 +11775,7 @@ Test function for `mon-build-user-name-example'.
 Return value displayed in buffer \"*MON-BUILD-USER-NAME-EXAMPLE-TEST*\".
 
 :SEE-ALSO `mon-user-name-conditionals',`mon-system-type-conditionals'.
-►►►
+▶▶▶
 
 \(fn)" nil nil)
 
@@ -11805,7 +11805,7 @@ Unbind the `defun' near `point' in `current-buffer'.
 `mon-unbind-variable', `mon-compile-when-needed' `mon-load-or-alert',
 `mon-byte-compile-and-load', `mon-dump-object-to-file', `mon-nuke-and-eval',
 `mon-after-mon-utils-loadtime'.
-►►►
+▶▶▶
 
 \(fn)" t nil)
 
@@ -11818,7 +11818,7 @@ Includes unbinding function binding, variable binding, and property list.
 `mon-unbind-variable', `mon-unbind-defun', `mon-compile-when-needed',
 `mon-load-or-alert', `mon-byte-compile-and-load', `mon-dump-object-to-file',
 `mon-nuke-and-eval', `mon-after-mon-utils-loadtime'.
-►►►
+▶▶▶
 
 \(fn SYMBOL)" t nil)
 
@@ -11829,7 +11829,7 @@ Remove the function binding of FNCN-SYMBOL.
 `mon-unbind-variable', `mon-unbind-defun', `mon-compile-when-needed',
 `mon-load-or-alert', `mon-byte-compile-and-load', `mon-dump-object-to-file',
 `mon-nuke-and-eval', `mon-after-mon-utils-loadtime'.
-►►►
+▶▶▶
 
 \(fn FNCN-SYMBOL)" t nil)
 
@@ -11840,7 +11840,7 @@ Remove the command binding of CMD-SYMBOL.
 `mon-unbind-variable', `mon-unbind-defun', `mon-compile-when-needed',
 `mon-load-or-alert', `mon-byte-compile-and-load', `mon-dump-object-to-file',
 `mon-nuke-and-eval', `mon-after-mon-utils-loadtime'.
-►►►
+▶▶▶
 
 \(fn CMD-SYMBOL)" t nil)
 
@@ -11851,7 +11851,7 @@ Remove the variable binding of VAR-SYMBOL.
 `mon-unbind-variable', `mon-unbind-defun', `mon-compile-when-needed',
 `mon-load-or-alert', `mon-byte-compile-and-load', `mon-dump-object-to-file',
 `mon-nuke-and-eval', `mon-after-mon-utils-loadtime'.
-►►►
+▶▶▶
 
 \(fn VAR-SYMBOL)" t nil)
 
@@ -11870,7 +11870,7 @@ hash-table.
 `mon-unbind-variable', `mon-unbind-defun', `mon-compile-when-needed',
 `mon-load-or-alert', `mon-byte-compile-and-load', `mon-dump-object-to-file',
 `mon-nuke-and-eval', `mon-after-mon-utils-loadtime'.
-►►►
+▶▶▶
 
 \(fn OBJ FILE)" nil nil)
 
@@ -11883,7 +11883,7 @@ The function `byte-compile-file' was only easily accesible from the menu.
 `mon-unbind-variable', `mon-unbind-defun', `mon-compile-when-needed',
 `mon-load-or-alert', `mon-byte-compile-and-load', `mon-dump-object-to-file',
 `mon-nuke-and-eval', `mon-after-mon-utils-loadtime'.
-►►►
+▶▶▶
 
 \(fn)" t nil)
 
@@ -11896,7 +11896,7 @@ Add .el if required, and use `load-path' to find it.
 `mon-unbind-variable', `mon-unbind-defun', `mon-compile-when-needed',
 `mon-load-or-alert', `mon-byte-compile-and-load', `mon-dump-object-to-file',
 `mon-nuke-and-eval', `mon-after-mon-utils-loadtime'.
-►►►
+▶▶▶
 
 \(fn COMP-FNAME)" nil nil)
 
@@ -11911,7 +11911,7 @@ failure.
 `mon-unbind-variable', `mon-unbind-defun', `mon-compile-when-needed',
 `mon-load-or-alert', `mon-byte-compile-and-load', `mon-dump-object-to-file',
 `mon-nuke-and-eval', `mon-after-mon-utils-loadtime'.
-►►►
+▶▶▶
 
 \(fn LIB-NAME &optional COMPILE-WHEN-NEEDED)" nil nil)
 

@@ -5,9 +5,9 @@
 ;;; naf-mode-nationality-english lists nationality terms in English.
 ;;; font-locked with `naf-mode-nationality-fface', `naf-mode-nationality-face'
 ;;; 
-;;; FUNCTIONS:►►►
+;;; FUNCTIONS:▶▶▶
 ;;;
-;;; FUNCTIONS:◄◄◄
+;;; FUNCTIONS:◀◀◀
 ;;;
 ;;; MACROS:
 ;;;

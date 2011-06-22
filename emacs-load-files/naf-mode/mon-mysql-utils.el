@@ -32,13 +32,13 @@
 ;; :SEE (URL `http://www.emacswiki.org/cgi-bin/emacs/download/sql-completion.el')
 ;; :SEE (URL `http://www.emacswiki.org/emacs/mysql.el')
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;; `mon-help-mysql-complete', `mon-help-mysql-commands', `mon-csv-split-string',
 ;; `mon-csv-map-col-field-pairs', `mon-csv-string-to-list',
 ;; `mon-csv-string-map-list', `mon-mysql-cln-pipes',
 ;; `mon-cln-pipes-map-field-pairs', `mon-cln-pipes-get-field-col', `%subst%',
 ;; `mon-bind-mysql-help-table-loadtime',
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;;
@@ -142,11 +142,11 @@ When called-interactively with prefix arg or FIELD-1 is non-nil match FIELD1
 as first field in table header row. Default is \"Field\".\n
 Use to extract fields from mysql command:\nmysql> SHOW COLUMNS FROM THE-DB.TABLE\n
 :EXAMPLE 
-\(let \(\(r-eg `\(,\(1+ \(search-forward-regexp \"^►\" nil t\)\) . 
-                   ,\(- \(search-forward-regexp \"◄$\" nil t\) 3\)\)\)\)
+\(let \(\(r-eg `\(,\(1+ \(search-forward-regexp \"^▶\" nil t\)\) . 
+                   ,\(- \(search-forward-regexp \"◀$\" nil t\) 3\)\)\)\)
   \(mon-cln-pipes-get-field-col \(car r-eg\) \(cdr r-eg\) \"Tables_in_mysql\" t\)
       \(momentary-string-display \(current-kill 0\) \(point\)\)\)
-►\n +---------------------------+ 
+▶\n +---------------------------+ 
  | Tables_in_mysql           | \n +---------------------------+ 
  | columns_priv              | \n | db                        | 
  | event                     | \n | func                      | 
@@ -159,10 +159,10 @@ Use to extract fields from mysql command:\nmysql> SHOW COLUMNS FROM THE-DB.TABLE
  | tables_priv               | \n | time_zone                 | 
  | time_zone_leap_second     | \n | time_zone_name            | 
  | time_zone_transition      | \n | time_zone_transition_type | 
- | user                      | \n +---------------------------+ \n◄\n
+ | user                      | \n +---------------------------+ \n◀\n
 :SEE-ALSO `mon-cln-pipes',`mon-cln-pipes-map-field-pairs'
 `mon-csv-split-string', `mon-csv-string-to-list',`mon-cln-csv-fields',
-`mon-csv-string-map-list',`mon-csv-map-col-field-pairs', .\n►►►"
+`mon-csv-string-map-list',`mon-csv-map-col-field-pairs', .\n▶▶▶"
   (interactive "r\nsFirst field's value: \np")
   (let (flds
         (the-field (if (or intrp field-1) field-1 "Field")))
@@ -226,7 +226,7 @@ Use to extract fields from mysql command:\nmysql> SHOW COLUMNS FROM THE-DB.TABLE
         \(mapcar #'\(lambda \(rnd\)
                     \(mon-string-from-sequence rnd\)\)
                 catch-trip\)\)\)\n
-:SEE-ALSO `subst', `cl-do-subst'.\n►►►"
+:SEE-ALSO `subst', `cl-do-subst'.\n▶▶▶"
   (cond ((eq cl-tree cl-old) cl-new)
 	((consp cl-tree)
 	 (let ((a (%subst% cl-new cl-old (car cl-tree)))
@@ -260,13 +260,13 @@ When called-interactively or TO-KILL is non-nil put retun value on kill-ring.\n
       Converts row values containing whitespace to strings.
       Attempts handling quoted strings in table rows, but may be unreliable.
       May return incorrect results for wrapped lines. Use toggle-truncate-lines.\n
-:EXAMPLE\n\(let \(\(r-eg `\(,\(1+ \(search-forward-regexp \"^►\" nil t\)\) . 
-               ,\(- \(search-forward-regexp \"^◄\" nil t\) 2 \)\)\)
+:EXAMPLE\n\(let \(\(r-eg `\(,\(1+ \(search-forward-regexp \"^▶\" nil t\)\) . 
+               ,\(- \(search-forward-regexp \"^◀\" nil t\) 2 \)\)\)
       \(mmnt\)\)
   \(mon-cln-pipes \(car r-eg\) \(cdr r-eg\) t\)
   \(setq mmnt \(read \(current-kill 0\)\)\)
   \(momentary-string-display \(concat \"\\n=>\\n\" \(pp-to-string mmnt\)\)\(point\)\)\)\n
-►\n+-----------------------+-------+------+----------+
+▶\n+-----------------------+-------+------+----------+
 | COL0                  | COL1  | COL2 | COL3     | 
 +-----------------------+-------+------+----------+
 |                       |       | NULL | \"1200\"   |
@@ -276,11 +276,11 @@ When called-interactively or TO-KILL is non-nil put retun value on kill-ring.\n
 | \"2008-05-25 16:54:04\" |     F | T    | \"bubba\"  |
 +-----------------------+-------+------+----------+
 | 2008-10-25 16:54:04   |  1200 |      | NULL     |
-+-----------------------+-------+------+----------+\n◄\n
++-----------------------+-------+------+----------+\n◀\n
 :SEE-ALSO `mon-cln-pipes-get-field-col', `mon-cln-pipes-map-field-pairs'
 `mon-csv-split-string', `mon-csv-string-to-list', `mon-cln-csv-fields',
 `mon-csv-string-map-list', `mon-csv-map-col-field-pairs',
-`mon-string-csv-rotate'.\n►►►"
+`mon-string-csv-rotate'.\n▶▶▶"
   (interactive "r\np")
   (let (tb mtb)
     (setq tb (buffer-substring-no-properties start end))
@@ -445,15 +445,15 @@ When called-interactively or TO-KILL is non-nil put retun value on kill-ring.\n
 (defalias 'mon-mysql-cln-pipes 'mon-cln-pipes)
 ;;
 ;;; :TEST-ME:
-;;; (let ((r-eg `(,(1+ (search-forward-regexp "^►" nil t)) . 
-;;;                ,(- (search-forward-regexp "^◄" nil t) 2 )))
+;;; (let ((r-eg `(,(1+ (search-forward-regexp "^▶" nil t)) . 
+;;;                ,(- (search-forward-regexp "^◀" nil t) 2 )))
 ;;;       (mmnt))
 ;;;   (mon-cln-pipes (car r-eg) (cdr r-eg) t)
 ;;;   (setq mmnt (read (current-kill 0)))
 ;;;   (pp-to-string mmnt))
 ;;
 ;; ,---- :UNCOMMENT-BELOW-TO-TEST
-;; | ►
+;; | ▶
 ;; | +-----------------------+-------+------+----------+
 ;; | | COL0                  | COL1  | COL2 | COL3     | 
 ;; | +-----------------------+-------+------+----------+
@@ -465,7 +465,7 @@ When called-interactively or TO-KILL is non-nil put retun value on kill-ring.\n
 ;; | +-----------------------+-------+------+----------+
 ;; | | 2008-10-25 16:54:04   |  1200 |      | NULL     |
 ;; | +-----------------------+-------+------+----------+
-;; | ◄
+;; | ◀
 ;; `----
 
 ;;; ==============================
@@ -476,14 +476,14 @@ COL-V-LIST is a list containing the value of columns of first table row.\n
 When INSRTP in non-nil return pretty printed list at point. Does not move point.\n
 Like `mon-csv-map-col-field-pairs' but used with return value of
 `mon-cln-pipes' instead of `mon-csv-string-map-list'.\n
-:EXAMPLE\n\(let \(\(r-eg `\(,\(1+ \(search-forward-regexp \"^►\" nil t\)\) . 
-               ,\(1- \(search-forward-regexp \"◄\" nil t\)\)\)\)
+:EXAMPLE\n\(let \(\(r-eg `\(,\(1+ \(search-forward-regexp \"^▶\" nil t\)\) . 
+               ,\(1- \(search-forward-regexp \"◀\" nil t\)\)\)\)
       \(mmnt\)\)
   \(setq mmnt \(mon-cln-pipes \(car r-eg\) \(cdr r-eg\)\)\)
   \(setq mmnt \(mon-cln-pipes-map-field-pairs \(car mmnt\) \(cdr mmnt\)\)\)
   \(setq mmnt \(pp-to-string mmnt\)\)
   \(momentary-string-display \(concat \"\\n=>\\n\" mmnt\)\(point\)\)\)\n
-►\n+-----------------------+-------+------+----------+
+▶\n+-----------------------+-------+------+----------+
 | COL0                  | COL1  | COL2 | COL3     | 
 +-----------------------+-------+------+----------+
 |                       |       | NULL | \"1200\"   |
@@ -493,11 +493,11 @@ Like `mon-csv-map-col-field-pairs' but used with return value of
 | \"2008-05-25 16:54:04\" |     F | T    | \"bubba\"  |
 +-----------------------+-------+------+----------+
 | 2008-10-25 16:54:04   |  1200 |      | NULL     |
-+-----------------------+-------+------+----------+\n◄
++-----------------------+-------+------+----------+\n◀
 
 :SEE-ALSO `mon-cln-pipes' `mon-cln-pipes-get-field-col',
 `mon-csv-map-col-field-pairs', `mon-csv-split-string',
-`mon-csv-string-to-list', `mon-cln-csv-fields'\n►►►"
+`mon-csv-string-to-list', `mon-cln-csv-fields'\n▶▶▶"
   (let ((hd col-v-list)
         (rows field-v-list)
         (gthr))
@@ -525,14 +525,14 @@ Like `mon-csv-map-col-field-pairs' but used with return value of
 (defalias 'mon-mysql-cln-pipes-map-col-field 'mon-cln-pipes-map-field-pairs)
 ;;
 ;;; :TEST-ME
-;;; (let ((r-eg `(,(1+ (search-forward-regexp "^►" nil t)) . 
-;;;                ,(1- (search-forward-regexp "◄" nil t))))
+;;; (let ((r-eg `(,(1+ (search-forward-regexp "^▶" nil t)) . 
+;;;                ,(1- (search-forward-regexp "◀" nil t))))
 ;;;       (mmnt))
 ;;;   (setq mmnt (mon-cln-pipes (car r-eg) (cdr r-eg)))
 ;;;   (mon-cln-pipes-map-field-pairs (car mmnt) (cdr mmnt)))
 ;;
 ;; ,---- :UNCOMMENT-BELOW-TO-TEST
-;; | ►
+;; | ▶
 ;; | +-----------------------+-------+------+----------+
 ;; | | COL0                  | COL1  | COL2 | COL3     | 
 ;; | +-----------------------+-------+------+----------+
@@ -544,7 +544,7 @@ Like `mon-csv-map-col-field-pairs' but used with return value of
 ;; | +-----------------------+-------+------+----------+
 ;; | | 2008-10-25 16:54:04   |  1200 |      | NULL     |
 ;; | +-----------------------+-------+------+----------+
-;; | ◄
+;; | ◀
 ;; `----
 
 ;;; ==============================
@@ -566,7 +566,7 @@ Primarily useful for tearing down SQL dumps on the way to a pairlis.\n
 :SEE-ALSO `mon-csv-split-string', `mon-clean-pipes-get-field-col',
 `mon-cln-pipes-map-field-pairs', `mon-csv-string-to-list', 
 `mon-cln-csv-fields', `mon-csv-string-map-list', 
-`mon-csv-map-col-field-pairs', `mon-string-csv-rotate'.\n►►►"
+`mon-csv-map-col-field-pairs', `mon-string-csv-rotate'.\n▶▶▶"
   (let ((normalize csv-str))
     (setq normalize (replace-regexp-in-string 
                      ",\\([0-9]+\\)" ",'\\1'" ;; ,DIGIT -> ,'DIGIT'
@@ -602,7 +602,7 @@ Return pretty printed list with each string of CSV-LIST in a list.\n
 :SEE-ALSO `mon-csv-split-string', `mon-clean-pipes-get-field-col',
 `mon-csv-string-to-list', `mon-cln-csv-fields', `mon-csv-string-map-list', 
 `mon-cln-pipes-map-field-pairs', `mon-csv-map-col-field-pairs'
-`mon-string-csv-rotate'.\n►►►"
+`mon-string-csv-rotate'.\n▶▶▶"
   (let (ii)
     (dolist (i csv-list (setq ii (nreverse ii)))
       (push (mon-csv-string-to-list i) ii))))
@@ -625,7 +625,7 @@ Return a list of lists of of key-val -> field-val for each string.\n
 :SEE-ALSO `mon-csv-split-string', `mon-csv-string-to-list', 
 `mon-cln-csv-fields', `mon-csv-string-map-list', `mon-csv-map-col-field-pairs',
 `mon-cln-pipes-map-field-pairs', `mon-clean-pipes-get-field-col',
-`mon-string-csv-rotate'.\n►►►"
+`mon-string-csv-rotate'.\n▶▶▶"
   (let (kvrt)
     (dolist (kv (mon-mysql-csv-map-list csv-field-vals) 
                 (setq kvrt (nreverse kvrt)))
@@ -674,7 +674,7 @@ substring for that.\n
 :NOTE Modifies the match data; use `save-match-data' if necessary.\n
 :SEE-ALSO `mon-clean-pipes-get-field-col', `mon-csv-string-to-list', 
 `mon-csv-string-map-list', `mon-cln-csv-fields', `mon-csv-map-col-field-pairs'
-`mon-cln-pipes-map-field-pairs', `mon-string-csv-rotate'.\n►►►"
+`mon-cln-pipes-map-field-pairs', `mon-string-csv-rotate'.\n▶▶▶"
   (or subexp (setq subexp 0))
   (let ((rexp (or separators "[ \f\t\n\r\v]+"))
 	(start 0)
@@ -724,7 +724,7 @@ Alist keys correpsond to the following `mysql help' categories:\n
 :USER-DEFINED-FUNCTIONS \n:UTILITY \n
 :NOTE When IS-MON-SYSTEM-P bound at loadtime with
 `mon-bind-mysql-help-table-loadtime' by `mon-after-mon-utils-loadtime'.\n
-:SEE-ALSO `mon-help-mysql-complete', `mon-help-mysql-commands'.\n►►►.")
+:SEE-ALSO `mon-help-mysql-complete', `mon-help-mysql-commands'.\n▶▶▶.")
 ;;
 ;;; :TEST-ME (cdr (assoc :STRING-FUNCTIONS *regexp-clean-mysql*))
 ;;; :TEST-ME (mapcar 'car *regexp-clean-mysql*)
@@ -740,7 +740,7 @@ When optional arg W-MSG-USER is non-nil or `*regexp-clean-mysql*' is unbound
 message user that variable was bound.\n
 :NOTE When IS-MON-SYSTEM-P evaluated at loadtime with
 `mon-after-mon-utils-loadtime'.\n
-:SEE-ALSO `mon-help-mysql-complete', `mon-help-mysql-commands'.\n►►►"
+:SEE-ALSO `mon-help-mysql-complete', `mon-help-mysql-commands'.\n▶▶▶"
   (unless  (and (intern-soft "*regexp-clean-mysql*")
                 (bound-and-true-p *regexp-clean-mysql*))
     (when (or (null (bound-and-true-p *regexp-clean-mysql*))
@@ -918,7 +918,7 @@ When MYSQL-KEY (a string or :symbol) is non-nil try completing it instead.\n
 \(mon-help-mysql-complete \":ADMINISTR\"\)
 \(cdr \(assoc \(mon-help-mysql-complete\) *regexp-clean-mysql*\)\)\n
 :SEE `mon-get-process' to access/send a local MySql system (sub)process.\n
-:SEE-ALSO `mon-help-mysql-commands', `mon-bind-mysql-help-table-loadtime'.\n►►►"
+:SEE-ALSO `mon-help-mysql-commands', `mon-bind-mysql-help-table-loadtime'.\n▶▶▶"
   (let (a b)
     (setq a (mapcar #'car *regexp-clean-mysql*))
     (setq b (mapcar #'(lambda (s) (format "%s" s)) a))
@@ -947,7 +947,7 @@ Useful for passing/insertiong to the MySQL CLI e.g. will insert:
 for help finding the topic which accesses the online help from the MySQL client.\n
 :EXAMPLE\n\n\(mon-help-mysql-commands\)\n
 :SEE-ALSO: `mon-help-mysql-complete', `*regexp-clean-mysql*',
-`mon-bind-mysql-help-table-loadtime'.\n►►►"
+`mon-bind-mysql-help-table-loadtime'.\n▶▶▶"
   (interactive "i\np")
   (let ((help-for 
          (completing-read 

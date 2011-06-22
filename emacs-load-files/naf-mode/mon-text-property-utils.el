@@ -21,7 +21,7 @@
 ;; DESCRIPTION:
 ;; mon-text-property-utils provides functions for working manipulating text properties
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;; `mon-get-text-property-remove-all', `mon-get-next-face-property-change',
 ;; `mon-get-next-face-property-change-if', `mon-get-text-properties-region',
 ;; `mon-get-text-properties-print', `mon-get-text-properties-read-temp',
@@ -44,7 +44,7 @@
 ;; `mon-get-text-properties-region-prop-list', 
 ;; `mon-get-text-properties-region-prop', `mon-search-text-properties-prop',
 ;; `%mon-set-buffer-substring-no-properties', `%mon-set-buffer-substring',
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;;
@@ -175,7 +175,7 @@
 (defsubst mon-insert-w-text-properties (props &rest args)
   "Insert ARGS adding text-property PROPS to the inserted text.\n
 :EXAMPLE\n\n
-:SEE-ALSO `mon-set-text-properies-region'.\n►►►"
+:SEE-ALSO `mon-set-text-properies-region'.\n▶▶▶"
   (mon-set-text-properies-region props (apply #'insert args)))
 
 ;;; ==============================
@@ -228,7 +228,7 @@ list property values e.g. 'face, 'font-lock-face, etc.\n
                                              :from     \(mon-g2be -1 t\) 
                                              :to       \(mon-g2be  t\) 
                                              :w-disp  t\)\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   (let ( ;;(mgtpbpi-prop w-prop)
         (mgtpbpi-bfr (or 
                       (and w-buffer
@@ -329,7 +329,7 @@ Used with `%mon-set-buffer-substring-no-properties' to make
 I'm not a bubba\n
 :NOTE this is a verbatim copy of `cl-set-buffer-substring', required so
 byte-compiler will shut its yap about runtime warnings.\n
-:SEE-ALSO `mon-set-buffer-substring-no-properties-TEST', `mon-insert-w-text-properties'.\n►►►" 
+:SEE-ALSO `mon-set-buffer-substring-no-properties-TEST', `mon-insert-w-text-properties'.\n▶▶▶" 
   (save-excursion (delete-region start end)
 		  (goto-char start)
 		  (insert val)
@@ -347,7 +347,7 @@ byte-compiler will shut its yap about runtime warnings.\n
 (defun %mon-set-buffer-substring-no-properties (start end val)  
   "Helper for `defsetf' to make `buffer-substring-no-properties' `setf'able.\n
 :EXAMPLE\n\n\(mon-set-buffer-substring-no-properties-TEST\)\n
-:SEE-ALSO `%mon-set-buffer-substring', `cl-set-buffer-substring', `set-text-properties'.\n►►►"
+:SEE-ALSO `%mon-set-buffer-substring', `cl-set-buffer-substring', `set-text-properties'.\n▶▶▶"
   (set-text-properties 0 (length val) nil val)
   ;; (cl-set-buffer-substring start end val))
   (%mon-set-buffer-substring start end val))
@@ -376,7 +376,7 @@ Return t if the property was actually removed, nil otherwise.\n
 `mon-nuke-text-properties-region', `add-text-properties', `put-text-property',
 `next-single-property-change', `mon-list-all-properties-in-buffer',
 `mon-nuke-overlay-buffer', `mon-help-text-property-functions', 
-`mon-help-text-property-functions-ext'.\n►►►"
+`mon-help-text-property-functions-ext'.\n▶▶▶"
   (remove-text-properties start end (list property) object))
 ;;
 ;;; :WAS `remove-single-text-property' -> ../emacs/lisp/font-lock.el
@@ -388,7 +388,7 @@ Optional argument OBJECT is the string or buffer containing the text.\n
 :SEE-ALSO `remove-text-property', `mon-nuke-text-properties-region',
 `mon-nuke-overlay-buffer', `add-text-properties', `put-text-property',
 `next-single-property-change', `mon-list-all-properties-in-buffer',
-`mon-help-text-property-functions', `mon-help-text-property-functions-ext'.\n►►►"
+`mon-help-text-property-functions', `mon-help-text-property-functions-ext'.\n▶▶▶"
  (let ((start (text-property-not-all start end prop nil object)) next prev)
    (while start
      (setq next (next-single-property-change start prop object end)
@@ -416,7 +416,7 @@ Optional argument OBJECT is the string or buffer containing the text.\n
 :SEE-ALSO `remove-text-property', `mon-remove-single-text-property',
 `mon-nuke-overlay-buffer', `add-text-properties', `put-text-property',
 `next-single-property-change', `mon-list-all-properties-in-buffer',
-`mon-help-text-property-functions'.\n►►►"
+`mon-help-text-property-functions'.\n▶▶▶"
   (interactive "r")
   (save-excursion
     (save-restriction
@@ -444,7 +444,7 @@ e.g. situtations where return value is:\n
  \(font-lock-constant-face font-lock-doc-face\)\n
 and DESCRIBE-IT is non-nil describe the face at car of list.\n
 :SEE-ALSO `mon-get-face-at-posn', `mon-help-faces', `mon-help-faces-basic',
-`mon-help-faces-themes', `read-face-name'.\n►►►"
+`mon-help-faces-themes', `read-face-name'.\n▶▶▶"
   (interactive "d\nP")
   (let ((mgfap-face 
          ;; :NOTE `get-char-property-and-overlay'
@@ -472,7 +472,7 @@ and DESCRIBE-IT is non-nil describe the face at car of list.\n
 Return a list of properties found. Return value has the form:\n
  ( ( <PROP> ( <PROP-START-PSN> . <PROP-END-PSN> ))* )\n
 :EXAMPLE\n\n
-:SEE-ALSO `mon-get-text-properties-region-prop-list', `mon-get-text-properties-region'.\n►►►"
+:SEE-ALSO `mon-get-text-properties-region-prop-list', `mon-get-text-properties-region'.\n▶▶▶"
   (loop for position = (if (get-text-property start prop)
                            start
                            (next-single-property-change start prop))
@@ -500,7 +500,7 @@ Return value has one of the the following two forms:\n
  ;; from `point' or NO-REGION-FROM-PSN non-nil\n
  ( <PROP> ( <PROP-START-PSN> . <PROP-END-PSN> ))\n
 :EXAMPLE\n\n
-:SEE-ALSO `mon-get-text-properties-region-prop', `mon-get-text-properties-region' .\n►►►"
+:SEE-ALSO `mon-get-text-properties-region-prop', `mon-get-text-properties-region' .\n▶▶▶"
   (if (and (use-region-p) (not no-region-from-psn))
       (mon-get-text-properties-region-prop prop (region-beginning) (region-end))
     (let* ((frm-psn (or no-region-from-psn (point)))
@@ -517,7 +517,7 @@ Return value has one of the the following two forms:\n
 Return the value of PROP.\n
 If BACKWARD is non-nil, search backward.\n
 If PROP-VALUE-FN is non-nil use it to extract PROP's value.
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   (let ((next-candidate (if backward 
                             #'previous-single-char-property-change
                           #'next-single-char-property-change))
@@ -549,7 +549,7 @@ leading `#'.\n
 `mon-list-all-properties-in-buffer', `mon-nuke-text-properties-buffer',
 `mon-nuke-text-properties-region', `mon-remove-text-property',
 `mon-remove-single-text-property', `mon-help-text-property-functions',
-`mon-help-text-property-function-ext'.\n►►►"
+`mon-help-text-property-function-ext'.\n▶▶▶"
   (interactive "r\nP")  
   (let (mgtprtkr-str) 
     (setq mgtprtkr-str (format "%S" (buffer-substring start end)))
@@ -570,7 +570,7 @@ leading `#'.\n
   "Test for category text-properties-at point.\n
 :CALLED-BY `mon-view-help-source'\n
 :SEE-ALSO `mon-get-text-properties-category', `mon-view-help-source',
-`mon-line-test-content'.\n►►►"
+`mon-line-test-content'.\n▶▶▶"
   (let* ((to-view ((lambda () (text-properties-at (point)))))
 	 (my-props `(,@to-view))
 	 (prop-value (plist-get my-props 'category)))
@@ -590,7 +590,7 @@ When BUFFER is non-nil list its text-properties instead.\n
 :EXAMPLE\n\n\(mon-list-all-properties-in-buffer\)\n
 :SEE-ALSO `mon-nuke-text-properties-buffer', `mon-plist-keys',
 `mon-plist-remove', `mon-help-plist-functions',
-`mon-help-text-property-functions'.\n►►►"
+`mon-help-text-property-functions'.\n▶▶▶"
   (save-excursion
     (with-current-buffer 
         (if buffer (get-buffer buffer) (current-buffer))
@@ -623,7 +623,7 @@ faces at a low level e.g. `emacs-lisp-mode'.\n
 :SEE-ALSO `mon-remove-text-property', `mon-remove-single-text-property',
 `mon-nuke-text-properties-region', `mon-nuke-overlay-buffer',
 `remove-list-of-text-properties', `mon-list-all-properties-in-buffer',
-`mon-help-text-property-functions', `font-lock-defontify'.\n►►►"
+`mon-help-text-property-functions', `font-lock-defontify'.\n▶▶▶"
   (interactive (list (and current-prefix-arg
                           (read-buffer 
                            (concat ":FUNCTION `mon-nuke-text-properties-buffer' "
@@ -658,7 +658,7 @@ Default is to search from point.\n
 `mon-get-next-face-property-change-if', `mon-get-all-face-property-change'
 `mon-list-all-properties-in-buffer', `mon-nuke-text-properties-buffer',
 `mon-nuke-text-properties-region', `mon-remove-text-property',
-`mon-remove-single-text-property'.\n►►►"
+`mon-remove-single-text-property'.\n▶▶▶"
   (let (mgnfpc-gthr)
      (setq mgnfpc-gthr (next-single-property-change (or from-posn (point)) 'face))
      (when mgnfpc-gthr
@@ -683,7 +683,7 @@ TEST-AT-POSN is a buffer position to examine.\n
 `mon-get-next-face-property-change', `mon-get-next-face-property-change-if',
 `mon-get-all-face-property-change' `mon-list-all-properties-in-buffer',
 `mon-nuke-text-properties-buffer', `mon-nuke-text-properties-region',
-`mon-remove-text-property', `mon-remove-single-text-property'.\n►►►"
+`mon-remove-text-property', `mon-remove-single-text-property'.\n▶▶▶"
   (let ((mgnfpci-prp (plist-get (text-properties-at test-at-posn) 'face)))
     (when mgnfpci-prp 
       (cond ((consp mgnfpci-prp) (memq test-face-symbol mgnfpci-prp))
@@ -718,7 +718,7 @@ TEST-AT-POSN is a buffer position to examine.\n
   \(mon-get-text-properties-region \(car sbr\) \(cdr sbr\)\)\)\n
 :NOTE Indexes are into string not buffer as with return value of:\n
  `mon-get-text-properties-print', `mon-get-text-properties-read-temp'\n
-:SEE-ALSO `mon-get-text-properties-region-to-kill-ring'.\n►►►"
+:SEE-ALSO `mon-get-text-properties-region-to-kill-ring'.\n▶▶▶"
   (interactive "r\np")
   (let (mgtpr-bfr-str mgtpr-tp-lst) 
     (setq mgtpr-bfr-str (substring (format "%S" (buffer-substring start end)) 1))
@@ -747,7 +747,7 @@ When called-interactively insert at point. Moves point.\n
 :SEE-ALSO `mon-get-text-properties-region', `mon-get-text-properties-print',
 `mon-get-text-properties-read-temp', `mon-get-text-properties-elisp-string',
 `mon-get-text-properties-elisp-string-pp',
-`mon-get-text-properties-region-to-kill-ring'.\n►►►"
+`mon-get-text-properties-region-to-kill-ring'.\n▶▶▶"
   (interactive "r\ni\np")
   (let* (mgtpfs-get
          (standard-output mgtpfs-get)
@@ -771,7 +771,7 @@ When non-nil optional arg TP-BUFF names a buffer as required by
 `mon-get-text-properties-elisp-string'.\n
 :SEE-ALSO `mon-get-text-properties-region', `mon-get-text-properties-print',
 `mon-get-text-properties-read-temp', `mon-get-text-properties-elisp-string',
-`mon-get-text-properties-elisp-string-pp'.\n►►►"
+`mon-get-text-properties-elisp-string-pp'.\n▶▶▶"
   (let ((mgtprt-new 
          (if tp-buff tp-buff 
            (get-buffer-create "*MGTPRT-NEW*")))
@@ -792,7 +792,7 @@ When non-nil optional arg TP-BUFF names a buffer as required by
   "Pretty print the string and text property list extracted with
 `mon-get-text-properties-elisp-string'.\n
 :SEE-ALSO `mon-get-text-properties-region', `mon-get-text-properties-print',
-`mon-get-text-properties-read-temp', `mon-get-text-properties-elisp-string'.\n►►►"
+`mon-get-text-properties-read-temp', `mon-get-text-properties-elisp-string'.\n▶▶▶"
   (let* ((mgppespp-split (buffer-name split-buff))
          (mgppespp-buf2
           (concat 
@@ -830,7 +830,7 @@ When non-nil optional arg TP-BUFF names a buffer as required by
 \(mon-get-text-properties-elisp-string *mon-help-reference-keys*\)\n
 :SEE-ALSO `mon-get-text-properties-region', `mon-get-text-properties-print',
 `mon-get-text-properties-read-temp', `mon-get-text-properties-elisp-string',
-`mon-get-text-properties-elisp-string-pp'.\n►►►"
+`mon-get-text-properties-elisp-string-pp'.\n▶▶▶"
   (let ((mgtpfes-buf (get-buffer-create "*MGTPFES*"))
         mgtpes-buf2
         mgtpfes-rd)
@@ -876,7 +876,7 @@ For use with:\n
 `mon-help-text-property-functions', `mon-help-text-property-properties',
 `typecase', `etypecase', `deftype', `typep', `type-of', `mon-function-object-p',
 `mon-sequence-mappable-p', `mon-equality-or-predicate',
-`*mon-equality-or-predicate-function-types*'.\n►►►"
+`*mon-equality-or-predicate-function-types*'.\n▶▶▶"
   (typecase prop-val
     (string  'equal)           
     (integer 'eq)
@@ -914,7 +914,7 @@ Sublists contain two index values and text-property plist of prop val pairs e.g.
 :SEE `mon-get-text-properties-parse-prop-val-type-chk' for PROP-VAL types.\n
 :SEE-ALSO `mon-get-text-properties-region', `mon-get-text-properties-parse-sym',
 `mon-get-text-properties-parse-buffer-or-sym', `mon-help-text-property-functions-ext',
-`mon-help-text-property-functions', `mon-help-text-property-properties'.\n►►►"
+`mon-help-text-property-functions', `mon-help-text-property-properties'.\n▶▶▶"
   (unless (buffer-live-p (get-buffer prop-buffer))
     (error (concat ":FUNCTION `mon-get-text-properties-parse-buffer' "
                    "-- arg PROP-BUFFER does not exist")))
@@ -975,7 +975,7 @@ Format of PROPS-IN-SYM are as per `mon-get-text-properties-parse-buffer-or-sym'.
 :SEE `mon-get-text-properties-parse-prop-val-type-chk' for PROP-VAL types.\n
 :SEE-ALSO `mon-get-text-properties-region', `mon-get-text-properties-parse-buffer',
 `mon-help-text-property-functions-ext', `mon-help-text-property-functions', 
-`mon-help-text-property-properties'.\n►►►"
+`mon-help-text-property-properties'.\n▶▶▶"
   (let ((mgtpps-cmp-typ 
          (mon-get-text-properties-parse-prop-val-type-chk prop-val))
         mgtpps-got)
@@ -1037,7 +1037,7 @@ Sublists contain two index values and text-property plist of prop val pairs e.g.
   mgtppbos-example\)\n
 :SEE-ALSO `mon-get-text-properties-parse-sym', `mon-get-text-properties-parse-buffer',
 `mon-get-text-properties-region', `mon-help-text-property-functions-ext',
-`mon-help-text-property-functions', `mon-help-text-property-properties'.\n►►►"
+`mon-help-text-property-functions', `mon-help-text-property-properties'.\n▶▶▶"
   (let (mgtpbos)
     (cond (read-prop-sym
            (setq mgtpbos (mon-get-text-properties-parse-sym 
@@ -1066,7 +1066,7 @@ Return value is a list of sublists of the form:\n
 :EXAMPLE\n
 :CALLED-BY `mon-get-text-properties-parse-buffer-or-sym'.\n
 :SEE-ALSO `mon-help-text-property-functions-ext',
-`mon-help-text-property-functions', `mon-help-text-property-properties'.\n►►►"
+`mon-help-text-property-functions', `mon-help-text-property-properties'.\n▶▶▶"
   (let (mgtpmmr-rng)
     (setq mgtpmmr-rng
           (mapcar #'(lambda (mgtpmmr-L-1) 
@@ -1088,7 +1088,7 @@ Return value is a list of sublists of the form:\n
 Return value inserted in RANGE-BUFFER.\n
 :EXAMPLE\n\n
 :SEE-ALSO `mon-help-text-property-functions-ext',
-`mon-help-text-property-functions', `mon-help-text-property-properties'.\n►►►"
+`mon-help-text-property-functions', `mon-help-text-property-properties'.\n▶▶▶"
   (let (mgtpmrs-rr mgtpmrs-str
         ;; :NOTE `str-range` apears to be unused.
         str-range) 
@@ -1134,7 +1134,7 @@ PROP is the name of a text property.\n
 `mon-get-text-properties-map-ranges',
 `mon-get-text-properties-parse-buffer-or-sym',
 `mon-help-text-property-functions-ext', `mon-help-text-property-functions',
-`mon-help-text-property-properties', `mon-help-overlay-functions'.\n►►►"
+`mon-help-text-property-properties', `mon-help-overlay-functions'.\n▶▶▶"
   (assert (get-text-property (point) prop))  
   (let ((mgtpb-end (next-single-char-property-change (point) prop)))
     (list (previous-single-char-property-change mgtpb-end prop) mgtpb-end)))
@@ -1145,7 +1145,7 @@ PROP is the name of a text property.\n
 (defun mon-get-text-property-remove-all (txt-prop)
   "Delete all text in the current buffer with text property TXT-PROP.\n
 :ALIASED-BY `mon-remove-text-with-property'\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   (let ((mgtpra-beg (mon-g2be -1 t))
 	mgtpra-end)
     (unless (get-text-property mgtpra-beg txt-prop)
@@ -1232,7 +1232,7 @@ Return value has the format:\n
 `mon-help-overlay-on-region', `mon-help-overlay-result',
 `mon-get-overlays-buffer', `mon-help-overlay-functions',
 `mon-help-text-property-functions', `mon-help-text-property-properties',
-`overlays-in'.\n►►►"
+`overlays-in'.\n▶▶▶"
   (interactive "r\np")
   (let ((mgor-ov-rgn-p 
          ;; :NOTE `or'ing ov-end allows: 
@@ -1284,7 +1284,7 @@ Return value has the format:\n
 `mon-help-find-result-for-overlay', `mon-help-overlay-for-example',
 `mon-help-overlay-on-region', `mon-help-overlay-result',
 `mon-get-overlays-buffer', `mon-help-overlay-functions',
-`mon-help-text-property-functions', `mon-help-text-property-properties'.\n►►►"
+`mon-help-text-property-functions', `mon-help-text-property-properties'.\n▶▶▶"
 ;;mgormp-o-rgn
   (let* ((mgormp-o-rgn (mon-get-overlays-region ov-start ov-end))
          (mgormp-ov-mapd (cadr (memq :OVERLAYS mgormp-o-rgn))))
@@ -1326,7 +1326,7 @@ List elements of retrun value have the format:\n
 `mon-help-find-result-for-overlay', `mon-help-overlay-for-example',
 `mon-help-overlay-on-region', `mon-help-overlay-result',
 `mon-get-overlays-buffer', `mon-help-overlay-functions',
-`mon-help-text-property-functions', `mon-help-text-property-properties'.\n►►►"
+`mon-help-text-property-functions', `mon-help-text-property-properties'.\n▶▶▶"
   (unless (null overlays-lst)
     (let (mgomp-op-gthr)
       (dolist (mgomp-D-1 overlays-lst (setq mgomp-op-gthr (nreverse mgomp-op-gthr)))
@@ -1357,7 +1357,7 @@ overlay center.\n
 `mon-help-find-result-for-overlay', `mon-help-overlay-for-example',
 `mon-help-overlay-on-region', `mon-help-overlay-result',
 `mon-get-overlays-buffer', `mon-help-overlay-functions',
-`mon-help-text-property-functions', `mon-help-text-property-properties',.\n►►►"
+`mon-help-text-property-functions', `mon-help-text-property-properties',.\n▶▶▶"
   (let (mgob-ov-lsts)
     (with-current-buffer 
         (or (and buffer-or-name (get-buffer buffer-or-name))
@@ -1378,7 +1378,7 @@ MV-OLAY is an overlay object.\n
 START-OLAY END-OLAY are overlay positions\n
 Optional arg BUFFER-OR-NAME is as per `move-overlay's optional arg BUFFER.\n
 :EXAMPLE\n\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   ;; :WAS (if after
   (move-overlay mv-olay
                 (min start-olay (overlay-start mv-olay))
@@ -1395,18 +1395,18 @@ Optional arg BUFFER-OR-NAME is as per `move-overlay's optional arg BUFFER.\n
 (defun mon-nuke-overlay-buffer (overlay-prop overlay-val)
   "Remove all overlay props with OVERLAY-NAME and OVERLAY-VAL in current-buffer.\n
 :EXAMPLE\n\n\(unwind-protect
-     \(let* \(\(sb \(save-excursion \(search-forward-regexp \"^►.*◄$\"  nil t\)\)\)
+     \(let* \(\(sb \(save-excursion \(search-forward-regexp \"^▶.*◀$\"  nil t\)\)\)
             \(molay \(make-overlay \(match-beginning 0\) \(match-end 0\) \(current-buffer\)\)\)\)
        \(overlay-put molay 'face 'minibuffer-prompt\)
        \(sit-for 2\)\)
   \(mon-nuke-overlay-buffer 'face 'minibuffer-prompt\)\)\n
-►I'm lingering◄\n
+▶I'm lingering◀\n
 :SEE-ALSO `mon-get-overlays-map-props', `mon-get-overlays-region',
 `mon-get-overlays-region-map-props', `mon-get-overlays-buffer',
 `mon-help-find-result-for-overlay', `mon-help-overlay-for-example',
 `mon-help-overlay-on-region', `mon-help-overlay-result',
 `mon-get-overlays-buffer', `mon-help-overlay-functions',
-`mon-help-text-property-functions', `mon-help-text-property-properties'.\n►►►"
+`mon-help-text-property-functions', `mon-help-text-property-properties'.\n▶▶▶"
   (remove-overlays (mon-g2be -1 t) (mon-g2be 1 t) overlay-prop overlay-val))
 
 
@@ -1453,7 +1453,7 @@ Optional arg BUFFER-OR-NAME is as per `move-overlay's optional arg BUFFER.\n
 ;; `mon-get-next-face-property-change-if', `mon-get-all-face-property-change'
 ;; `mon-list-all-properties-in-buffer', `mon-nuke-text-properties-buffer',
 ;; `mon-nuke-text-properties-region', `mon-remove-text-property',
-;; `mon-remove-single-text-property'.\n►►►"
+;; `mon-remove-single-text-property'.\n▶▶▶"
 ;;   (save-excursion
 ;;     (let ((sfc search-face-symbol)
 ;;           top-st bot-st fc-bnds)

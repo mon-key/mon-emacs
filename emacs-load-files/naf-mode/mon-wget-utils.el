@@ -26,12 +26,12 @@
 ;; 
 ;; Why the *%$!@#*# doesn't Emacs have a better code dictionary/thesaurus!?
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;; `mon-wget-list-to-script', `mon-wget-list-to-script-TEST',
 ;; `mon-wget-list-to-script-shell-command',
 ;; `mon-wget-list-give-script-to-shell-command',
 ;; `mon-wget-rfc', `mon-wget-unicodedata-files',
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;;
@@ -123,7 +123,7 @@
 :SEE-ALSO `mon-wget-list-give-script-to-shell-command', 
 `mon-wget-list-to-script', `mon-wget-list-to-script-TEST',
 `mon-wget-list-to-script-shell-command', `mon-wget-rfc',
-`*mon-show-wget-script-temp*'.\n►►►")
+`*mon-show-wget-script-temp*'.\n▶▶▶")
 
 ;;; ==============================
 ;;; :TODO Add &rest to allow incorporationg other flags, e.g. -w SECONDS
@@ -140,7 +140,7 @@ When non-nil FLAGS are additional flags to pass to wget. These have the form:
 :SEE-ALSO `mon-wget-list-give-script-to-shell-command', 
 `mon-wget-list-to-script', `mon-wget-list-to-script-TEST',
 `mon-wget-list-to-script-shell-command', `mon-wget-rfc',
-`*mon-show-wget-script-temp*'.\n►►►"
+`*mon-show-wget-script-temp*'.\n▶▶▶"
   (let ((wget-p (executable-find "wget"))
         (wget-fname (if wget-fname wget-fname
                       (concat default-directory 
@@ -194,7 +194,7 @@ o Kills temp-buffer and file on exit\n
  o A temp-buffer with the name \"*MON-SHOW-WGET-SCRIPT-TEMP*\".\n
 :SEE-ALSO `mon-wget-list-give-script-to-shell-command', 
 `mon-wget-list-to-script', `mon-wget-list-to-script-shell-command',
-`mon-wget-rfc', `*mon-show-wget-script-temp*'.\n►►►"
+`mon-wget-rfc', `*mon-show-wget-script-temp*'.\n▶▶▶"
   (let* ((mswst-str (symbol-name '*mon-show-wget-script-temp*))
          (tmp-wget-script (concat default-directory 
                                    (substring mswst-str 1 26)
@@ -238,7 +238,7 @@ o Kills temp-buffer and file on exit\n
 (defun mon-wget-list-to-script-shell-command (wget-fname)
   "Return a string\(s\) for passing to `shell-command' for wget'ing.\n
 :SEE-ALSO `mon-wget-list-to-script', `mon-wget-list-to-script-TEST', 
-`mon-wget-list-give-script-to-shell-command', `*mon-show-wget-script-temp*'.\n►►►"
+`mon-wget-list-give-script-to-shell-command', `*mon-show-wget-script-temp*'.\n▶▶▶"
   (let ((fnm-tst-wgt (file-name-nondirectory wget-fname))
         (sys (cond ((eq system-type 'windows-nt) 'wnz)
                    ((or (eq system-type 'gnu/linux)
@@ -282,7 +282,7 @@ W-THIS-LIST, W-BASE-URL, W-WGET-FNAME, and  W-THESE-FLAGS are as per
 directory containing or which is to contain WGET-FNAME.\n
 :SEE-ALSO`mon-wget-list-to-script', `mon-wget-list-to-script-TEST',
 `mon-wget-list-to-script-shell-command', `mon-wget-rfc',
-`*mon-show-wget-script-temp*'.\n►►►"
+`*mon-show-wget-script-temp*'.\n▶▶▶"
   (let ((UCmswst (get-buffer-create (upcase (symbol-name '*mon-show-wget-script-temp*)))))
     ;; If its read-only then we've already been here once.
     ;; Make it writable and erase it.
@@ -320,7 +320,7 @@ When optional arg URL-INSERT is non-nil return the contents of RFC-NUM as if by
 :SEE-ALSO `*mon-url-search-paths*', `mon-wget-list-to-script', `mon-wget-rfc',
 `*mon-show-wget-script-temp*' `mon-wget-list-to-script-TEST',
 `mon-wget-list-to-script-shell-command',
-`mon-wget-list-give-script-to-shell-command'.\n►►►"
+`mon-wget-list-give-script-to-shell-command'.\n▶▶▶"
   (interactive "sRFC number: ")
   (let* ((the-rfc (cond ((stringp rfc-num) rfc-num)
                         ((numberp rfc-num) (number-to-string rfc-num))))
@@ -351,7 +351,7 @@ to.  Fetched urls will be saved to this files directory.  When SAVE-WGET-FILE-NA
 is ommitted and `IS-MON-SYSTEM-P'is null default is to save to default-directory
 and write the wget script to the file named mon-wget-unicode-data-YYYY-MM-DD.\n
 :SEE-ALSO `mon-set-unicodedata-init', `mon-help-diacritics',
-`mon-wget-list-give-script-to-shell-command', `mon-wget-rfc'.\n►►►"
+`mon-wget-list-give-script-to-shell-command', `mon-wget-rfc'.\n▶▶▶"
   (let ((mwucs (cond ((and in-wget-dir save-wget-file-name)
                       `(in-wget-dir . save-wget-file-name))
                      ((intern-soft "IS-MON-SYSTEM-P")
@@ -386,7 +386,7 @@ Character Database \(UCD\) circa Summer/Autumn 2009.\n
 :SEE (URL `http://www.unicode.org/Public/UNIDATA/UnicodeData.txt').
 :SEE (URL `ftp://www.unicode.org/Public/zipped/5.2.0/UCD.zip').
 :SEE-ALSO `describe-char-unicodedata-file', `describe-char-unidata-list',
-`mon-help-diacritics', `mon-help-char-representation'.\n►►►")
+`mon-help-diacritics', `mon-help-char-representation'.\n▶▶▶")
 ;;
 (unless (and (not (intern-soft "IS-MON-SYSTEM-P"))
              (bound-and-true-p *mon-unidata-file-list*))

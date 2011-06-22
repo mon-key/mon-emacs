@@ -21,10 +21,10 @@
 ;; DESCRIPTION:
 ;; mon-plist-utils provides { some description here. }
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;; `mon-plist-keys', `mon-plist-values', `mon-plist-remove-consing',
 ;; `mon-plist-remove-if',
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;;
@@ -124,7 +124,7 @@
 ;;; :CREATED <Timestamp: #{2011-01-11T18:57:02-05:00Z}#{11022} - by MON KEY>
 (defgroup mon-plist-utils nil
   "Customization group for variables and functions of :FILE mon-plist-utils.el\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   ;; :prefix "<PREFIX>"
   :link '(url-link 
           :tag ":EMACSWIKI-FILE" "http://www.emacswiki.org/emacs/mon-plist-utils.el")
@@ -179,7 +179,7 @@ The symbols contained of this list are defined in :FILE mon-plist-utils.el\n
 `*mon-button-utils-xrefs*', `*mon-buffer-utils-xrefs*',
 `*mon-window-utils-xrefs*', `*naf-mode-xref-of-xrefs*',
 `*naf-mode-faces-xrefs*', `*naf-mode-date-xrefs*', `*mon-ulan-utils-xrefs*',
-`*mon-xrefs-xrefs'.\n►►►"
+`*mon-xrefs-xrefs'.\n▶▶▶"
   :type '(repeat symbol)
   :group 'mon-plist-utils
   :group 'mon-xrefs)
@@ -204,7 +204,7 @@ W-PLIST is any proper-list for which satisfies the test:\n
 :SEE-ALSO `mon-plist-values', `mon-help-plist-functions',
 `mon-map-obarray-symbol-plist-props', `mon-plist-remove-if',
 `mon-plist-remove-consing', `mon-plist-remove', `remf', `remprop',
-`mon-plist-keys-TEST'.\n►►►"
+`mon-plist-keys-TEST'.\n▶▶▶"
   (if (null in-plist)
       in-plist
     (cons (car in-plist) (mon-plist-keys (cddr in-plist)))))
@@ -230,7 +230,7 @@ When IN-PLIST is not null and above constraints are not met, signal an error.\n
 \(mon-plist-values \(nconc \(mon-alphabet-as-plistD->num\) 'a\)\)\n
 :SEE-ALSO `mon-plist-keys', `mon-plist-remove', `mon-help-plist-functions',
 `mon-map-obarray-symbol-plist-props', `mon-plist-remove-if',
-`mon-plist-remove-consing', `remf', `remprop', `mon-plist-values-TEST'.\n►►►"
+`mon-plist-remove-consing', `remf', `remprop', `mon-plist-values-TEST'.\n▶▶▶"
   (if (and (or (mon-list-proper-p in-plist)
                (error (concat ":FUNCTION `mon-plist-values' "
                               "-- arg IN-PLIST not `mon-list-proper-p', got: %S type-of: %S")
@@ -266,7 +266,7 @@ Like CL's `cl-remprop' and Common Lisp's `remprop' but without the latter's
     \(mon-plist-remove! the-pl p-rmv\)\)\)\n
 :SEE-ALSO `mon-plist-remove-if',`mon-plist-keys', `mon-plist-remove-consing',
 `remf', `remprop', `mon-remove-if-not', `mon-delete-if', `mon-member-if'
-`mon-help-plist-functions'.\n►►►"
+`mon-help-plist-functions'.\n▶▶▶"
   (let* ((CLDOREMF #'(lambda  (mpr-L1-plst mpr-L1-tag)
                        (let ((mpr-L1-lcl-plst (cdr mpr-L1-plst)))
                          (while (and (cdr mpr-L1-lcl-plst) (not (eq (car (cdr mpr-L1-lcl-plst)) mpr-L1-tag))) 
@@ -309,7 +309,7 @@ Like CL's `cl-remprop' and Common Lisp's `remprop' but without the latter's
 :SEE-ALSO `mon-plist-remove!', `mon-plist-remove-if',
 `mon-plist-remove-consing', `remf', `remprop', `mon-plist-keys',
 `mon-remove-if-not', `mon-delete-if', `mon-member-if',
-`mon-help-plist-functions', `mon-help-plist-properties'.\n►►►"
+`mon-help-plist-functions', `mon-help-plist-properties'.\n▶▶▶"
   (if (eq (car rmv-in-plist) but-key)
       (cdr (cdr rmv-in-plist))
     (cons (car rmv-in-plist) 
@@ -347,7 +347,7 @@ return value is `equal' the initial arg given for PLIST.\n
 \(mon-plist-remove-if '\(\"this\" list-a \"that\" list-b\) \"this\" 'eql t\)\n
 :SEE-ALSO `mon-plist-remove!', `mon-plist-remove-consing', `mon-plist-keys',
 `remf', `remprop', `mon-remove-if-not', `mon-delete-if', `mon-member-if',
-`mon-help-plist-functions', `mon-help-plist-properties'.\n►►►"
+`mon-help-plist-functions', `mon-help-plist-properties'.\n▶▶▶"
    (let* ((pl plist)
           (pred
            (if plist-pred 
@@ -420,7 +420,7 @@ return value is `equal' the initial arg given for PLIST.\n
 ;; (defun mon-plist-remf (plist prop)
 ;;   "Return PLIST with PROP removed using `remf'.\n
 ;; :EXAMPLE (mon-plist-remf \(mon-alphabet-as-type 'plistD->num\) :l)
-;; :SEE-ALSO `mon-plist-remove', `mon-plist-keys'.\n►►►"
+;; :SEE-ALSO `mon-plist-remove', `mon-plist-keys'.\n▶▶▶"
 ;;   (remf plist prop) plist)
 ;;
 ;;; :TEST-ME (mon-plist-remf (mon-alphabet-as-type 'plistD->num) :l)

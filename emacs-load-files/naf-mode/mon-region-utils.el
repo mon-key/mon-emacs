@@ -21,14 +21,14 @@
 ;; DESCRIPTION:
 ;; mon-region-utils provides region oriented procedures for mon-*utils features
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;; `mon-wrap-with', `mon-wrap-text', `mon-wrap-selection', `mon-region-reverse',
 ;; `mon-region-capitalize', `mon-region-unfill', `mon-region-indent-refill',
 ;; `mon-region-length', `mon-region-position',
 ;; `mon-decode-coding-region-utf-8-unix', `mon-region-split-commas',
 ;; `mon-sha1-region', `mon-align-conses',
 ;;
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;;
@@ -162,7 +162,7 @@ minibuffer as if by `message'.\n
 \(save-excursion \(set-mark \(point\)\) \(forward-char 3\) \(mon-region-position nil t\)\)\n
 \(save-excursion \(set-mark \(point\)\) \(forward-char 3\) \(mon-region-position\)\)\n
 :SEE-ALSO `mon-region-indent-refill', `mon-region-unfill',
-`mon-region-capitalize', `mon-region-reverse'.\n►►►"
+`mon-region-capitalize', `mon-region-reverse'.\n▶▶▶"
   (interactive "P\np")
   (let ((mrp-rtn `(:USE-REGION-P    ,(use-region-p) 
                    :REGION-ACTIVE-P ,(region-active-p)  
@@ -192,7 +192,7 @@ When called-interactively and INSRTP is ommitted message the region length.\n
 :EXAMPLE\n\n\(progn\n \(push-mark \(line-beginning-position\) nil t\)
   \(mon-region-length nil t\)\)\n
 :SEE-ALSO `mon-region-unfill', `mon-region-indent-refill',
-`mon-region-capitalize', `mon-region-reverse'.\n►►►"
+`mon-region-capitalize', `mon-region-reverse'.\n▶▶▶"
   (interactive "P\np")
   (unless (region-active-p)
     (error ":FUNCTION `mon-region-length' -- there is no active region"))
@@ -216,7 +216,7 @@ When called-interactively and INSRTP is ommitted message the region length.\n
   "Revert region with `decode-coding-region' with CODING-SYSTEM arg utf-8-unix.\n
 :EXAMPLE\n\n
 :ALIASED-BY 
-:SEE-ALSO `mon-region-indent-refill', `mon-region-unfill'.\n►►►"
+:SEE-ALSO `mon-region-indent-refill', `mon-region-unfill'.\n▶▶▶"
   (interactive "r\np")
   ;; :NOTE the backqouting brouhaha is to allow passing nil nil unreservedly
   ;; without signaling an error
@@ -248,7 +248,7 @@ arg is ignored.\n
 :ALIASED-BY `mon-indent-refill-region'
 :ALIASED-BY `mon-indent-region-refill'
 :ALIASED-BY `mon-region-refill-indent'\n
-:SEE-ALSO `indent-region', `mon-region-unfill', `indent-tabs-mode.\n►►►"
+:SEE-ALSO `indent-region', `mon-region-unfill', `indent-tabs-mode.\n▶▶▶"
   (interactive "r\ni\nP\ni\np")
   (let ((fill-column (or w-fill-column 70))
         (fill-prefix (or (and (mon-string-not-null-nor-zerop w-fill-prefix)
@@ -293,7 +293,7 @@ arg is ignored.\n
 Stuff all paragraphs paragraphs in the current region into long lines.\n
 :SEE-ALSO `mon-region-indent-refill', `mon-line-strings-indent-to-col',
 `mon-line-indent-from-to-col', `mon-string-fill-to-col',
-`mon-comment-divide->col'.\n►►►"
+`mon-comment-divide->col'.\n▶▶▶"
   (interactive "r")
   (let ((fill-column 9000))
     (fill-region start end)))
@@ -316,7 +316,7 @@ lowercase string aNd UPERCASE STRING\n
 :ALIASED-BY `mon-capitalize-region'\n
 :SEE-ALSO `capitalize', `capitalize-region', `mon-region-unfill',
 `mon-region-length', `mon-region-reverse', `mon-upcase-commented-lines'
-`mon-downcase-regexp-region', `mon-upcase-regexp-region'.\n►►►"
+`mon-downcase-regexp-region', `mon-upcase-regexp-region'.\n▶▶▶"
   (interactive "r\ni\np")
   (let ((mrcap-pre (mon-buffer-sub-no-prop start end)))
     (setq mrcap-pre `(:REGION-CAPITAL  ,(capitalize mrcap-pre)
@@ -341,7 +341,7 @@ When INSRTP is non-nil insert the reversed as with princ.
 Insertion does not move point. Insertion is whitespace agnostic.\n
 :ALIASED-BY `mon-region-reverse-chars'\n
 :SEE-ALSO `mon-word-reverse-region', `mon-region-unfill',
-`mon-region-capitalize', `reverse-region'.\n►►►"
+`mon-region-capitalize', `reverse-region'.\n▶▶▶"
   (interactive "r\ni\np")
   (let ((m-reg-rev 
          (apply 'concat 
@@ -369,7 +369,7 @@ Insertion does not move point. Insertion is whitespace agnostic.\n
  Rear's prompt is provided:  ]|
  Return: |[My cats breath smells like catfood]|\n
 :ALIASED-BY `mon-region-wrap'\n
-:SEE-ALSO `mon-wrap-url', `mon-wrap-span', `mon-wrap-text', `mon-wrap-with'.\n►►►"
+:SEE-ALSO `mon-wrap-url', `mon-wrap-span', `mon-wrap-text', `mon-wrap-with'.\n▶▶▶"
   (interactive)
   (let* ((in-front (or front-arg 
                        (read-string (concat ":FUNCTION `mon-wrap-selection' " 
@@ -400,7 +400,7 @@ When optional arg INSRTP is non-nil or called-interactively insert wrapped word
 at point. Does not move point.\n
 :EXAMPLE\n\n\(mon-wrap-text \"\\\\@:artist[\" \"]\"\)Some-Name\n
 :SEE-ALSO `mon-wrap-selection', `mon-wrap-url', `mon-wrap-span',
-`mon-wrap-with'.\n►►►"
+`mon-wrap-with'.\n▶▶▶"
   (interactive "i\ni\ni\np")
   (save-excursion
     (let (mwt-pnt1 mwt-pnt2 mwt-wrap-wrd)
@@ -428,7 +428,7 @@ at point. Does not move point.\n
 (defun mon-wrap-with (front-wrap back-wrap &optional insrtp intrp)
   "Wrap the current word or region with FRONT-WRAP and BACK-WRAP.\n
 :SEE-ALSO `mon-wrap-selection', `mon-wrap-url', `mon-wrap-span',
-`mon-wrap-text', `mon-wrap-with'.\n►►►"
+`mon-wrap-text', `mon-wrap-with'.\n▶▶▶"
   (interactive "sEnter string for front-wrap:\nsEnter String for back-wrap: \ni\np")
   (mon-wrap-text front-wrap back-wrap insrtp intrp))
 
@@ -454,7 +454,7 @@ at point.\n
 :ALIASED-BY `mon-split-region-at-commas'\n
 :SEE-ALSO `mon-string-csv-regexp', `mon-string-csv-rotate', `mon-string-spread',
 `mon-string-replace-char', `mon-string-chop-spaces', `mon-string-splice-sep',
-`mon-string-split-and-unquote', `mon-string-upto-index'.\n►►►"
+`mon-string-split-and-unquote', `mon-string-upto-index'.\n▶▶▶"
   (interactive "r\np")
   (let ((mssc-wspc (concat (reverse *mon-whitespace-chars*) ""))
         mssc-gthr mssc-beg)
@@ -499,7 +499,7 @@ When optional arg NO-INDENT-PP-SEXP is non-nil do not pre-process the region
 with `indent-pp-sexp'.\n
 :EXAMPLE\n\n\(mon-align-conses-EXAMPLE\)\n
 :SEE-ALSO `*regexp-line-to-consed-pair*', `mon-align-conses-EXAMPLE',
-`mon-align-conses-TEST', `align-let'.\n►►►"
+`mon-align-conses-TEST', `align-let'.\n▶▶▶"
   (interactive "r\nP")
   (save-excursion
     (save-restriction 
@@ -525,7 +525,7 @@ with `indent-pp-sexp'.\n
   "Return the sha1sum for contents of region.\n
 When INSRTP is non-nil or called-interactively insert sha1 on newline.\n
 Does not move point.\n
-:SEE-ALSO `sha1-region', `sha1-string'.\n►►►."
+:SEE-ALSO `sha1-region', `sha1-string'.\n▶▶▶."
   (interactive "r\ni\np")
   (eval-when-compile (require 'sha1))
   (let ((sha1-r (sha1-region start end)))

@@ -49,11 +49,11 @@
 ;;
 ;; :NOTE mon-boxcutter is a work in progress. Posting so I don't forget :)
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;; `boxcutter-gen-tstamp', `boxcutter-incr-cntr', `boxcutter-gen-fname',
 ;; `boxcutter-big-n-small', `boxcutter-get-win-coords',
 ;; `boxcutter-get-frame-coords', `boxcutter-capture', `boxcutter-mkdir-loadtime',
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;;
@@ -246,7 +246,7 @@
 ;;; :CREATED <Timestamp: #{2010-11-09T20:22:00-05:00Z}#{10452} - by MON KEY>
 (defgroup mon-boxcutter nil
   "Customizations for mon-boxcutter related features.\n
-►►►"
+▶▶▶"
   :link '(url-link 
           :tag ":EMACSWIKI-FILE (URL `http://www.emacswiki.org/emacs/mon-boxcutter.el')" 
           "http://www.emacswiki.org/emacs/mon-boxcutter.el")
@@ -275,7 +275,7 @@ need to customize this value to the absolute filename.\n
 :SEE Notes in header of :FILE mon-boxcutter.el for additional discussion.\n
 :CALLED-BY `boxcutter-call-convert'\n
 :SEE-ALSO `*boxcutter-path*', `boxcutter-capture', `thumbs-conversion-program',
-`mon-set-thumbs-conversion-program-init'.\n►►►"
+`mon-set-thumbs-conversion-program-init'.\n▶▶▶"
   :type '(file :must-match t)
   :group 'mon-boxcutter)
 
@@ -299,7 +299,7 @@ variable \"SP_BXC\" with:\n
 Or, supply the path dirictly as this variables value, e.g.\n
  (setq *boxcutter-path* <PATH/TO/BOXCTR-EXECS/>\n
 :CALLED-BY `boxcutter-capture'\n
-:SEE-ALSO `*boxcutter-conversion-program*'.\n►►►"
+:SEE-ALSO `*boxcutter-conversion-program*'.\n▶▶▶"
   :type  'directory ;'(file :must-match t)
   :group 'mon-boxcutter)
 ;;
@@ -317,7 +317,7 @@ form held in the cadr of the return value for the key 'the-boxcutter-pth in
  \(cadr \(assoc 'the-boxcutter-pth *mon-misc-path-alist*\)\)\n
 :SEE :FILE mon-site-local-defaults.el
 :CALLED-BY `boxcutter-gen-fname'.\n
-:SEE-ALSO `boxcutter-capture'.\n►►►"
+:SEE-ALSO `boxcutter-capture'.\n▶▶▶"
   :type 'directory
   :group 'mon-boxcutter)
 ;;
@@ -342,7 +342,7 @@ Once the Display Properties dialog is open select:
 :NOTE the 'Size' field, this is the vigorish stolen by MS-Windows manager.\n
 :CALLED-BY `*boxcutter-title-bar-vig*'\n
 :SEE-ALSO `boxcutter-capture', `boxcutter-get-frame-coords',
-`boxcutter-get-win-coords'.\n►►►"
+`boxcutter-get-win-coords'.\n▶▶▶"
   :type 'integer
   :group 'mon-boxcutter)
 ;;
@@ -354,7 +354,7 @@ Once the Display Properties dialog is open select:
 (defcustom *boxcutter-counter* 0
   "*Counter for incrementing screnshots.\n
 :CALLED-BY `boxcutter-incr-cntr', and `boxcutter-gen-fname'.\n
-:SEE-ALSO `*boxcutter-tstamp*', `boxcutter-capture'\n►►►"
+:SEE-ALSO `*boxcutter-tstamp*', `boxcutter-capture'\n▶▶▶"
   :type 'integer
   :group 'mon-boxcutter)
 
@@ -365,7 +365,7 @@ Once the Display Properties dialog is open select:
 Return timestring formatted as yy-mm-dd, e.g. 09-10-17.\n
 :EXAMPLE\n\n\(format-time-string *boxcutter-tstamp*\)\n
 :CALLED-BY `boxcutter-gen-tstamp'
-:SEE-ALSO `boxcutter-capture'.\n►►►"
+:SEE-ALSO `boxcutter-capture'.\n▶▶▶"
   :type  'string
   :group 'mon-boxcutter)
 
@@ -376,7 +376,7 @@ Return timestring formatted as yy-mm-dd, e.g. 09-10-17.\n
 List has the form:\n
  (\"/path/to/capturefile.bmp\" \"/path/to/capturefile.{reduced}\")\n
 List generated with `boxcutter-big-n-small's interface to `boxcutter-gen-fname'.\n
-:SEE-ALSO `*boxcutter-captures*'.\n►►►")
+:SEE-ALSO `*boxcutter-captures*'.\n▶▶▶")
 
 ;;; ==============================
 ;;; :CREATED <Timestamp: #{2009-10-19T18:21:00-04:00Z}#{09431} - by MON>
@@ -384,7 +384,7 @@ List generated with `boxcutter-big-n-small's interface to `boxcutter-gen-fname'.
   "Return a time-string per the `*boxcutter-tstamp*' specs.\n
 :EXAMPLE\n\n(boxcutter-gen-tstmp)\n
 :CALLED-BY `boxcutter-gen-fname'\n
-:SEE-ALSO `boxcutter-incr-cntr',`*boxcutter-counter*',`boxcutter-capture'\n►►►"
+:SEE-ALSO `boxcutter-incr-cntr',`*boxcutter-counter*',`boxcutter-capture'\n▶▶▶"
   (format-time-string *boxcutter-tstamp*))
 ;;
 ;;; :TEST-ME (boxcutter-gen-tstamp)
@@ -396,7 +396,7 @@ List generated with `boxcutter-big-n-small's interface to `boxcutter-gen-fname'.
   "Increment the the current file-name counter by 1 or STEP-VAL.\n
 When RESET is non-nil reset `*boxcutter-counter*' to 0 before incrementing.\n
 :CALLED-BY `boxcutter-gen-fname'.\n
-:SEE-ALSO `boxcutter-gen-tstamp'.\n►►►"
+:SEE-ALSO `boxcutter-gen-tstamp'.\n▶▶▶"
   (when reset (setq *boxcutter-counter* 0))
   (format "%04d" (incf *boxcutter-counter* (or step-val 1))))
 ;;
@@ -412,7 +412,7 @@ When RESET is non-nil reset `*boxcutter-counter*' to 0 before incrementing.\n
   "Create `*boxcutter-captures*' directory at if it doesn't already exist.\n
 May be evaluated at loadtime as if by: 
  \(eval-after-load \"mon-boxcutter\" '\(boxcutter-mkdir-loadtime\)\)\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   (when (bound-and-true-p *boxcutter-captures*)
     (or (and (file-exists-p *boxcutter-captures*)
              (file-directory-p *boxcutter-captures*))
@@ -436,7 +436,7 @@ When RESET is non-nil reset `*boxcutter-counter*' to 0 before incrementing.\n
 \(boxcutter-gen-fname \"reset-me-n-incr-3\" 3 t)\n
 :CALLED-BY `boxcutter-big-n-small'\n
 :SEE-ALSO `boxcutter-capture', `boxcutter-gen-tstamp' `boxcutter-incr-cntr',
-`*boxcutter-counter*',`*boxcutter-tstamp*'.\n►►►"
+`*boxcutter-counter*',`*boxcutter-tstamp*'.\n▶▶▶"
   (let (bxc-gf)
     (unwind-protect
         (setq bxc-gf
@@ -472,7 +472,7 @@ When STEP-VAL is non-nil increment file-number by step-val.
 When RESET is non-nil reset `*boxcutter-counter*' to 0 before incrementing.\n
 :CALLED-BY `boxcutter-capture'\n
 :SEE-ALSO `boxcutter-gen-fname', `*boxcutter-captured-last*', 
-`boxcutter-verify-image-type'.\n►►►"
+`boxcutter-verify-image-type'.\n▶▶▶"
   (let* ((bcg-f  (boxcutter-gen-fname fname-string step-val reset))
          (gen-fname-ok-p *boxcutter-captured-last*)
          (sm-ok-p  (if gen-fname-ok-p
@@ -506,7 +506,7 @@ When INSIDE is non-nil return buffer's window coordinates with
 \(boxcutter-get-win-coords \(get-buffer \"*Help*\"\) t\)\n
 \(boxcutter-get-win-coords \(window-buffer \(previous-window\)\) t\)\n
 :CALLED-BY `boxcutter-capture'\n
-:SEE-ALSO `boxcutter-get-frame-coords', `*boxcutter-title-bar-vig*'.\n►►►"
+:SEE-ALSO `boxcutter-get-frame-coords', `*boxcutter-title-bar-vig*'.\n▶▶▶"
   (let* ((buf-nm buffer)
          (buf-nm-or-cb (get-buffer-window
                         (if buf-nm
@@ -554,7 +554,7 @@ When INSIDE is non-nil return buffer's window coordinates with
 :EXAMPLE\n\n\(car \(boxcutter-get-frame-coords\)\)\n
 \(cdr \(boxcutter-get-frame-coords\)\)\n
 :CALLED-BY `boxcutter-capture', `boxcutter-get-win-coords'.\n
-:SEE-ALSO `*boxcutter-title-bar-vig*'.\n►►►"
+:SEE-ALSO `*boxcutter-title-bar-vig*'.\n▶▶▶"
   (let ((t-frm  (frame-parameter nil 'top))
         (l-frm (frame-parameter nil 'left))
         (fph (frame-pixel-height))      ;text-line height no menu-bars
@@ -620,7 +620,7 @@ INSIDE-EDGE - When non-nil capture the inside of frame or window.\n
 \(boxcutter-capture 'jpg nil nil nil t nil t\)\n
 ;; :DO-OTHER-WINDOW
 \(boxcutter-capture 'jpg nil nil nil t \"mon-doc-help-utils.el\" t\)\n
-:SEE-ALSO `boxcutter-capture-set-crop', `boxcutter-call-convert'.\n►►►"
+:SEE-ALSO `boxcutter-capture-set-crop', `boxcutter-call-convert'.\n▶▶▶"
   (let* ((gen-fname (boxcutter-big-n-small conv->ftype))
          (big-fname (if *boxcutter-captured-last* 
                         (car *boxcutter-captured-last*)
@@ -671,7 +671,7 @@ INSIDE-EDGE - When non-nil capture the inside of frame or window.\n
 (defun boxcutter-capture-set-crop (&optional small-format)
 "Helper function to set the crop for boxcutter capture.\n
 :EXAMPLE\n\n\(boxcutter-capture 'jpg :do-crop t\)\n
-:SEE-ALSO `boxcutter-capture', `boxcutter-call-convert'.\n►►►"
+:SEE-ALSO `boxcutter-capture', `boxcutter-call-convert'.\n▶▶▶"
   (interactive)
   (boxcutter-capture
    (if small-format small-format 'jpg)
@@ -697,7 +697,7 @@ ACTION-PREFIX is the symbol to place before the ACTION command
               \(defaults to '-' but can sometimes be '+'\).
 :NOTE w32 _ought_ to use \"imconvert.exe\"
 :SEE `*boxcutter-conversion-program*'.\n
-:SEE-ALSO `boxcutter-capture', `boxcutter-capture-set-crop'.\n►►►"
+:SEE-ALSO `boxcutter-capture', `boxcutter-capture-set-crop'.\n▶▶▶"
   (call-process *boxcutter-conversion-program* nil nil nil
 		(or action-prefix "-")
 		action

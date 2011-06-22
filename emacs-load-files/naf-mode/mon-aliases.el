@@ -21,9 +21,9 @@
 ;; DESCRIPTION:
 ;; mon-aliases provides consolidated aliases for functions provided by MON
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;;
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;;
@@ -66,8 +66,8 @@
 ;;   -- identify enclosing line markers, where enclosing line markers are
 ;;      (for each relevant file) comprised of the following pair of text forms:
 ;;   --- each local bloc relevant to a file should: 
-;;       ---- begin with a line marker: ";;; mon-*.el►►►"; 
-;;       ---- end with the line marker: ";;; mon-*.el►►►";
+;;       ---- begin with a line marker: ";;; mon-*.el▶▶▶"; 
+;;       ---- end with the line marker: ";;; mon-*.el▶▶▶";
 ;;   -- If no enclosing relevant file line markers are found:
 ;;      --- offer to create them;
 ;;   -- If relevant enclosing file line markers are found, narrow-to-region;
@@ -261,7 +261,7 @@
  
 
 ;;; ==============================
-;;; mon-aliases.el►►►
+;;; mon-aliases.el▶▶▶
 ;;; ==============================
 
 ;;; <UNQUALIFIED-ALIAS> <CORE-SYMBOL>
@@ -309,6 +309,19 @@
 (unless (and (intern-soft "ediff-file-revision" obarray)
              (fboundp 'ediff-file-revision))
   (defalias 'ediff-file-revision 'ediff-revision))
+
+(unless (and (intern-soft "ediff-file-revision" obarray)
+             (fboundp 'ediff-file-revision))
+  (defalias 'ediff-file-revision 'ediff-revision))
+;;
+(unless (and (intern-soft "list-fonts-display" obarray)
+             (fboundp 'list-fonts-display))
+  (defalias 'list-fonts-display 'mon-list-fonts-display))
+;;
+(unless (and (intern-soft "font-at-point" obarray)
+             (fboundp 'font-at-point))
+  (defalias 'font-at-point 'mon-font-at-point))
+
 ;;
 ;;; ==============================
 ;;; :NOTE Is it possible to implement a light-weight CL style `make-array' which
@@ -330,12 +343,12 @@
 
 
 ;;; ==============================
-;;; mon-aliases.el►►►
+;;; mon-aliases.el▶▶▶
 ;;; ==============================
 
 
 ;;; ==============================
-;;; mon-utils.el►►►
+;;; mon-utils.el▶▶▶
 ;;; ==============================
 
 ;;
@@ -373,7 +386,7 @@
 \(mon-string-set-char-at-idx \"bubba\" 4 \\=?s\)\n
 \(mon-string-set-char-at-idx \"bubba\" 5 \\=?s\) ;out of bounds\n
 :NOTE This function appears to retain existing text-properties.\n
-:SEE-ALSO `aset', `aref', `vconcat', `string-to-list', `string-to-vector'.\n►►►"))
+:SEE-ALSO `aset', `aref', `vconcat', `string-to-list', `string-to-vector'.\n▶▶▶"))
 ;;
 (unless (and (intern-soft "mon-string-insert-string-at-idx" obarray) 
               (fboundp 'mon-string-insert-string-at-idx))
@@ -386,7 +399,7 @@
 \(store-substring \"bubba\" 4 \"ba\"\)      ;out of bounds
 \(store-substring \"bubba\" 3 \"bas\"\)     ;out of bounds
 :NOTE This function appears to retain existing text-properties.\n
-:SEE-ALSO `aset', `aref', `vconcat', `string-to-list', `string-to-vector'.\n►►►"))
+:SEE-ALSO `aset', `aref', `vconcat', `string-to-list', `string-to-vector'.\n▶▶▶"))
 
 ;;; ==============================
 ;;; <PREFIX>-<QUALIFIED> <PREFIX>-<CORE-SYMBOL>
@@ -413,7 +426,7 @@ Skips over following chars:\n
 \xc !\n
 :SEE-ALSO `following-char', `char-after', `mon-cln-BIG-whitespace',
 `mon-cln-trail-whitespace', `mon-cln-whitespace', `mon-insert-whitespace',
-`mon-kill-whitespace', `*mon-whitespace-chars*', `*regexp-whitespace-chars*'.\n►►►"))
+`mon-kill-whitespace', `*mon-whitespace-chars*', `*regexp-whitespace-chars*'.\n▶▶▶"))
 ;;
 ;;; ==============================
 ;;; :CHANGESET 2142
@@ -428,7 +441,7 @@ Skips over following chars:\n
     "Return the ALIST sorted with comparison function FUNCTION.\n
 This uses 'sort so the sorting is destructive.
 :EXAMPLE\n\n
-:SEE-ALSO `mon-delq-alist'.\n►►►"))
+:SEE-ALSO `mon-delq-alist'.\n▶▶▶"))
 ;;
 (unless (and (intern-soft "mon-macrop" obarray) 
              (fboundp (intern-soft "mon-macrop" obarray)))
@@ -440,7 +453,7 @@ This uses 'sort so the sorting is destructive.
     "Return non-nil when STRING has PREFIX.\n
 :EXAMPLE\n\n\(mon-string-prefix-p \"mon-\" \"mon-string-prefix-p\"\)\n
 \(mon-string-prefix-p \"mon-\" \"string-mon-prefix-p\"\)\n
-:SEE-ALSO .\n►►►"))
+:SEE-ALSO .\n▶▶▶"))
 ;;
 ;;; ==============================
 ;;; :CHANGESET 2142
@@ -454,7 +467,7 @@ This uses 'sort so the sorting is destructive.
 \(mon-list-chop '\(a b \"c\" d e f) \"c\"\)\n
 \(mon-list-chop '\(a b (c \"c\" \"d\") d e f) '(c \"c\" \"d\"\)\)\n
 \(mon-list-chop '\(a b [c \"c\" \"d\"] d e f\) '[c \"c\" \"d\"]\)
-:SEE-ALSO .\n►►►")))
+:SEE-ALSO .\n▶▶▶")))
 ;;
 ;;; <PREFIX>-<QUALIFIED> <PREFIX>-<NON-CORE-SYMBOL>
 ;;
@@ -587,12 +600,12 @@ This uses 'sort so the sorting is destructive.
 (defalias 'mon-string-ify-current-line 'mon-line-string-split))
 
 ;;; ==============================
-;;; mon-utils.el◄◄◄
+;;; mon-utils.el◀◀◀
 ;;; ==============================
 
 
 ;;; ==============================
-;;; mon-macs.el►►►
+;;; mon-macs.el▶▶▶
 ;;; ==============================
 ;;
 ;;;  <UNQUALIFIED-ALIAS>  <PREFIX>-<NON-CORE-SYMBOL>
@@ -624,12 +637,12 @@ This uses 'sort so the sorting is destructive.
 (defalias 'mon-buffer-print-in-if  'mon-print-in-buffer-if-p))
 
 ;;; ==============================
-;;; mon-macs.el◄◄◄
+;;; mon-macs.el◀◀◀
 ;;; ==============================
 
 
 ;;; ==============================
-;;; mon-text-property-utils.el►►►
+;;; mon-text-property-utils.el▶▶▶
 ;;; ==============================
 ;;
 ;;; <PREFIX>-<QUALIFIED> <PREFIX>-<NON-CORE-SYMBOL>
@@ -659,12 +672,12 @@ This uses 'sort so the sorting is destructive.
 (defalias 'mon-remove-all-text-properties-region 'mon-nuke-text-properties-region))
 
 ;;; ==============================
-;;; mon-text-property-utils.el◄◄◄
+;;; mon-text-property-utils.el◀◀◀
 ;;; ==============================
 
 
 ;;; ==============================
-;;; mon-error-utils.el►►►
+;;; mon-error-utils.el▶▶▶
 ;;; ==============================
 ;;
 ;;; <UNQUALIFIED-ALIAS>  <PREFIX>-<NON-CORE-SYMBOL>
@@ -681,15 +694,15 @@ This uses 'sort so the sorting is destructive.
 If char is not a character, return nil.\n
 :EXAMPLE\n\(prin1-char 32\)\n\(prin1-char 63\)\n\(prin1-char 10\)\n
 :SEE-ALSO `mon-write-string', `prin1-char', `princ', `prin1',
-`with-output-to-string', `mon-help-print-functions'.\n►►►")
+`with-output-to-string', `mon-help-print-functions'.\n▶▶▶")
 
 ;;; ==============================
-;;; mon-error-utils.el◄◄◄
+;;; mon-error-utils.el◀◀◀
 ;;; ==============================
 
 
 ;;; ==============================
-;;; mon-buffer-utils.el►►►
+;;; mon-buffer-utils.el▶▶▶
 ;;; ==============================
 ;;
 ;;;  <UNQUALIFIED-ALIAS>  <PREFIX>-<NON-CORE-SYMBOL>
@@ -764,12 +777,12 @@ If char is not a character, return nil.\n
 (defvaralias '*mon-help-hidden-buffers-known* '*mon-get-hidden-buffers-known*))
 
 ;;; ==============================
-;;; mon-buffer-utils.el◄◄◄
+;;; mon-buffer-utils.el◀◀◀
 ;;; ==============================
 
 
 ;;; ==============================
-;;; mon-randomize-utils.el►►►
+;;; mon-randomize-utils.el▶▶▶
 ;;; ==============================
 ;;
 ;;;  <UNQUALIFIED-ALIAS>  <PREFIX>-<NON-CORE-SYMBOL>
@@ -785,12 +798,12 @@ If char is not a character, return nil.\n
 (defalias 'mon-get-next-almost-prime 'mon-next-almost-prime))
 
 ;;; ==============================
-;;; mon-randomize-utils.el◄◄◄
+;;; mon-randomize-utils.el◀◀◀
 ;;; ==============================
 
 
 ;;; ==============================
-;;; mon-rectangle-utils.el►►►
+;;; mon-rectangle-utils.el▶▶▶
 ;;; ==============================
 ;;
 ;;; <PREFIX>-<QUALIFIED> <PREFIX>-<NON-CORE-SYMBOL>
@@ -800,12 +813,12 @@ If char is not a character, return nil.\n
 (defalias 'mon-rectangle-kill-w-longest-line 'mon-kill-rectangle-w-beer-belly))
 
 ;;; ==============================
-;;; mon-rectangle-utils.el◄◄◄
+;;; mon-rectangle-utils.el◀◀◀
 ;;; ==============================
 
 
 ;;; ==============================
-;;; mon-line-utils.el►►►
+;;; mon-line-utils.el▶▶▶
 ;;; ==============================
 ;;
 ;;; <PREFIX>-<QUALIFIED> <CORE-SYMBOL>
@@ -832,12 +845,12 @@ If char is not a character, return nil.\n
 (defalias 'mon-line-same-p 'slime-same-line-p))
 
 ;;; ==============================
-;;; mon-line-utils.el◄◄◄
+;;; mon-line-utils.el◀◀◀
 ;;; ==============================
 
 
 ;;; ==============================
-;;; mon-window-utils.el►►►
+;;; mon-window-utils.el▶▶▶
 ;;; ==============================
 ;;
 ;;; <PREFIX>-<QUALIFIED> <PREFIX>-<NON-CORE-SYMBOL>
@@ -875,12 +888,12 @@ If char is not a character, return nil.\n
 (defalias 'mon-window-split-vert 'mon-twin-vertical))
 
 ;;; ==============================
-;;; mon-window-utils.el◄◄◄
+;;; mon-window-utils.el◀◀◀
 ;;; ==============================
 
 
 ;;; ==============================
-;;; mon-seq-utils.el►►►
+;;; mon-seq-utils.el▶▶▶
 ;;; ==============================
 ;;
 ;;;  <UNQUALIFIED-ALIAS>  <PREFIX>-<NON-CORE-SYMBOL>
@@ -1016,7 +1029,7 @@ If char is not a character, return nil.\n
 \(let \(\(bubba '\(a 1 3 e\)\)\)
  \(cl-pop2 bubba\)
   bubba\)\n
-:SEE-ALSO `pop', `push', `setf'.\n►►►"))
+:SEE-ALSO `pop', `push', `setf'.\n▶▶▶"))
 ;;
 (unless (and (intern-soft "mon-list-pop2" obarray)
              (fboundp 'mon-list-pop2))
@@ -1027,12 +1040,12 @@ If char is not a character, return nil.\n
   (put 'mon-list-pop2 'function-documentation (get 'mon-pop2 'function-documentation)))
 
 ;;; ==============================
-;;; mon-seq-utils.el◄◄◄
+;;; mon-seq-utils.el◀◀◀
 ;;; ==============================
 
 
 ;;; ==============================
-;;; mon-event-utils.el►►►
+;;; mon-event-utils.el▶▶▶
 ;;; ==============================
 ;;
 ;;; <PREFIX>-<QUALIFIED> <PREFIX>-<NON-CORE-SYMBOL>
@@ -1058,12 +1071,12 @@ If char is not a character, return nil.\n
 (defalias 'mon-string-from-keyboard-input 'mon-read-keys-as-string))
 
 ;;; ==============================
-;;; mon-event-utils.el◄◄◄
+;;; mon-event-utils.el◀◀◀
 ;;; ==============================
 
 
 ;;; ==============================
-;;; mon-type-utils.el►►►
+;;; mon-type-utils.el▶▶▶
 ;;; ==============================
 ;;
 ;;;  <UNQUALIFIED-ALIAS>  <PREFIX>-<NON-CORE-SYMBOL>
@@ -1145,13 +1158,13 @@ If char is not a character, return nil.\n
 (defalias 'mon-symbol-cells-boundp 'mon-symbol-cells-bound-p))
 
 ;;; ==============================
-;;; mon-type-utils.el◄◄◄
+;;; mon-type-utils.el◀◀◀
 ;;; ==============================
 
 
 
 ;;; ==============================
-;;; mon-region-utils.el►►►
+;;; mon-region-utils.el▶▶▶
 ;;; ==============================
 ;;
 ;;; <PREFIX>-<QUALIFIED>       <PREFIX>-<NON-CORE-SYMBOL>
@@ -1193,12 +1206,12 @@ If char is not a character, return nil.\n
 (defalias 'mon-region-count-regexp-matches 'comint-how-many-region))
 
 ;;; ==============================
-;;; mon-region-utils.el◄◄◄
+;;; mon-region-utils.el◀◀◀
 ;;; ==============================
 
 
 ;;; ==============================
-;;; mon-string-utils.el►►►
+;;; mon-string-utils.el▶▶▶
 ;;; ==============================
 
 (unless (and (intern-soft "mon-string-at-point" obarray) 
@@ -1206,21 +1219,21 @@ If char is not a character, return nil.\n
 (defalias 'mon-string-at-point 'comint-extract-string))
 
 ;;; ==============================
-;;; mon-string-utils.el◄◄◄
+;;; mon-string-utils.el◀◀◀
 ;;; ==============================
 
 
 ;;; ==============================
-;;; mon-env-proc-utils.el►►►
+;;; mon-env-proc-utils.el▶▶▶
 ;;; ==============================
 
 ;;; ==============================
-;;; mon-env-proc-utils.el◄◄◄
+;;; mon-env-proc-utils.el◀◀◀
 ;;; ==============================
 
 
 ;;; ==============================
-;;; mon-name-utils.el►►►
+;;; mon-name-utils.el▶▶▶
 ;;; ==============================
 ;;
 (unless (and (intern-soft "mon-permute-string" obarray) 
@@ -1228,12 +1241,12 @@ If char is not a character, return nil.\n
 (defalias 'mon-permute-string 'mon-string-permute))
 
 ;;; ==============================
-;;; mon-name-utils.el◄◄◄
+;;; mon-name-utils.el◀◀◀
 ;;; ==============================
 
 
 ;;; ==============================
-;;; mon-word-syntax-utils.el►►►
+;;; mon-word-syntax-utils.el▶▶▶
 ;;; ==============================
 
 (unless (and (intern-soft "mon-buffer-get-word-list" obarray)
@@ -1253,12 +1266,12 @@ If char is not a character, return nil.\n
 (defalias 'mon-buffer-get-word-count 'mon-word-count-occurrences))
 
 ;;; ==============================
-;;; mon-word-syntax-utils.el◄◄◄
+;;; mon-word-syntax-utils.el◀◀◀
 ;;; ==============================
 
 
 ;;; ==============================
-;;; mon-alphabet-list-utils.el►►►
+;;; mon-alphabet-list-utils.el▶▶▶
 ;;; ==============================
 
 ;;; <PREFIX>-<QUALIFIED> <PREFIX>-<NON-CORE-SYMBOL>
@@ -1268,12 +1281,12 @@ If char is not a character, return nil.\n
 (defalias 'mon-make-list-alphabet 'mon-alphabet-as-type))
 
 ;;; ==============================
-;;; mon-alphabet-list-utils.el◄◄◄
+;;; mon-alphabet-list-utils.el◀◀◀
 ;;; ==============================
 
 
 ;;; ==============================
-;;; mon-dir-utils.el►►►
+;;; mon-dir-utils.el▶▶▶
 ;;; ==============================
 
 ;;; <UNQUALIFIED-ALIAS> <PREFIX>-<NON-CORE-SYMBOL>
@@ -1504,12 +1517,12 @@ If char is not a character, return nil.\n
 
 
 ;;; ==============================
-;;; mon-dir-utils.el◄◄◄
+;;; mon-dir-utils.el◀◀◀
 ;;; ==============================
 
 
 ;;; ==============================
-;;; mon-url-utils.el►►►
+;;; mon-url-utils.el▶▶▶
 ;;; ==============================
 
 ;;; <PREFIX>-<QUALIFIED> <PREFIX>-<NON-CORE-SYMBOL>
@@ -1564,12 +1577,12 @@ If char is not a character, return nil.\n
 
 
 ;;; ==============================
-;;; mon-url-utils.el►►►
+;;; mon-url-utils.el▶▶▶
 ;;; ==============================
 
 
 ;;; ==============================
-;;; mon-doc-help-utils.el►►►
+;;; mon-doc-help-utils.el▶▶▶
 ;;; ==============================
 
 ;;; <PREFIX>-<QUALIFIED> <PREFIX>-<NON-CORE-SYMBOL>
@@ -1652,12 +1665,12 @@ If char is not a character, return nil.\n
 (defvaralias '*doc-cookie* '*mon-doc-cookie*))
 
 ;;; ==============================
-;;; mon-doc-help-utils.el◄◄◄
+;;; mon-doc-help-utils.el◀◀◀
 ;;; ==============================
 
 
 ;;; ==============================
-;;; mon-doc-help-CL.el►►►
+;;; mon-doc-help-CL.el▶▶▶
 ;;; ==============================
 
 (unless (and (intern-soft "mon-help-cl-packages")
@@ -1679,14 +1692,19 @@ If char is not a character, return nil.\n
 (unless (and (intern-soft "mon-hyperspec-lookup") 
              (fboundp 'mon-hyperspec-lookup))
 (defalias 'mon-hyperspec-lookup 'mon-help-CL-symbols))
+;;
+(unless (and (intern-soft "mon-help-CL-reader-macro-syntax") 
+             (fboundp 'mon-help-CL-reader-macro-syntax))
+(defalias 'mon-help-CL-reader-macro-syntax 'mon-help-CL-sharpsign-syntax))
+
 
 ;;; ==============================
-;;; mon-doc-help-CL.el◄◄◄
+;;; mon-doc-help-CL.el◀◀◀
 ;;; ==============================
 
 
 ;;; ==============================
-;;; mon-doc-help-css.el►►►
+;;; mon-doc-help-css.el▶▶▶
 ;;; ==============================
 
 ;;; <PREFIX>-<QUALIFIED> <PREFIX>-<NON-CORE-SYMBOL>
@@ -1701,7 +1719,7 @@ If char is not a character, return nil.\n
 
 
 ;;; ==============================
-;;; mon-bzr-utils.el►►►
+;;; mon-bzr-utils.el▶▶▶
 ;;; ==============================
 
 ;;; <PREFIX>-<QUALIFIED> <PREFIX>-<NON-CORE-SYMBOL>
@@ -1711,12 +1729,12 @@ If char is not a character, return nil.\n
 (defalias 'mon-help-bzr-commands 'mon-help-bzr-topics))
 
 ;;; ==============================
-;;; mon-bzr-utils.el◄◄◄
+;;; mon-bzr-utils.el◀◀◀
 ;;; ==============================
 
 
 ;;; ==============================
-;;; mon-time-utils.el◄◄◄
+;;; mon-time-utils.el◀◀◀
 ;;; ==============================
 
 ;;; <PREFIX>-<QUALIFIED> <PREFIX>-<NON-CORE-SYMBOL>
@@ -1730,12 +1748,12 @@ If char is not a character, return nil.\n
 (defalias 'mon-today-stamp  'mon-date-stamp))
 
 ;;; ==============================
-;;; mon-time-utils.el◄◄◄
+;;; mon-time-utils.el◀◀◀
 ;;; ==============================
 
 
 ;;; ==============================
-;;; mon-dir-locals-alist.el►►►
+;;; mon-dir-locals-alist.el▶▶▶
 ;;; ==============================
 
 ;;; <VARIABLE>
@@ -1749,17 +1767,17 @@ If char is not a character, return nil.\n
 (defvaralias '*mon-emacs2html-temp* '*emacs2html-temp*)))
 
 ;;; ==============================
-;;; mon-dir-locals-alist.el◄◄◄
+;;; mon-dir-locals-alist.el◀◀◀
 ;;; ==============================
 
 
 ;;; ==============================
-;;; mon-dir-locals-alist.el◄◄◄
+;;; mon-dir-locals-alist.el◀◀◀
 ;;; ==============================
 
 
 ;;; ==============================
-;;; mon-insertion-utils.el►►►
+;;; mon-insertion-utils.el▶▶▶
 ;;; ==============================
 
 ;;; <UNQUALIFIED-ALIAS> <PREFIX>-<NON-CORE-SYMBOL>
@@ -1831,19 +1849,19 @@ If char is not a character, return nil.\n
   "Insert a copyright string with relevant details.\n
 Conditional upon `IS-BUG-P' returning non-nil.\n
 :ALIAS-OF `mon-insert-copyright'\n
-:SEE-ALSO `mon-build-copyright-string'.\nUsed in `naf-mode'.\n►►►"))
+:SEE-ALSO `mon-build-copyright-string'.\nUsed in `naf-mode'.\n▶▶▶"))
 ;;
 (unless (and (intern-soft "mon-insert-naf-mode-file-template" obarray) 
              (fboundp 'mon-insert-naf-mode-file-template))
 (defalias 'mon-insert-naf-mode-file-template 'mon-insert-file-template))
 
 ;;; ==============================
-;;; mon-insertion-utils.el◄◄◄
+;;; mon-insertion-utils.el◀◀◀
 ;;; ==============================
 
 
 ;;; ==============================
-;;; mon-regexp-symbols.el►►►
+;;; mon-regexp-symbols.el▶▶▶
 ;;; ==============================
 
 ;;; <VARIABLE>
@@ -1864,15 +1882,15 @@ Conditional upon `IS-BUG-P' returning non-nil.\n
 \(mapcar #'\(lambda \(dgt-chr\)
              \(aref *mon-digit-chars* dgt-chr\)\)
         \(number-sequence 48 57\)\)\n
-:SEE-ALSO `*mon-whitespace-chars*', `*mon-ascii-alpha-chars*', `mon-is-digit'.\n►►►"))
+:SEE-ALSO `*mon-whitespace-chars*', `*mon-ascii-alpha-chars*', `mon-is-digit'.\n▶▶▶"))
 
 ;;; ==============================
-;;; mon-regexp-symbols.el◄◄◄
+;;; mon-regexp-symbols.el◀◀◀
 ;;; ==============================
 
 
 ;;; ==============================
-;;; mon-replacement-utils.el►►►
+;;; mon-replacement-utils.el▶▶▶
 ;;; ==============================
 ;;
 ;;; ==============================
@@ -1951,12 +1969,12 @@ Conditional upon `IS-BUG-P' returning non-nil.\n
 (defalias 'mon-cln-common-abbrevs 'mon-replace-common-abbrevs))
 
 ;;; ==============================
-;;; mon-replacement-utils.el◄◄◄
+;;; mon-replacement-utils.el◀◀◀
 ;;; ==============================
 
 
 ;;; ==============================
-;;; mon-color-utils.el►►►
+;;; mon-color-utils.el▶▶▶
 ;;; ==============================
 
 ;;; ==============================
@@ -1989,12 +2007,12 @@ Conditional upon `IS-BUG-P' returning non-nil.\n
 (defalias 'mon-color-list-display 'list-colors-display))
 
 ;;; ==============================
-;;; mon-color-utils.el◄◄◄
+;;; mon-color-utils.el◀◀◀
 ;;; ==============================
 
 
 ;;; ==============================
-;;; mon-rename-image-utils.el►►►
+;;; mon-rename-image-utils.el▶▶▶
 ;;; ==============================
 
 ;;; ==============================
@@ -2018,12 +2036,12 @@ Conditional upon `IS-BUG-P' returning non-nil.\n
 (defalias 'mon-get-ebay-bmps-list 'mon-get-ebay-bmps-in-dir))
 
 ;;; ==============================
-;;; mon-rename-image-utils.el◄◄◄
+;;; mon-rename-image-utils.el◀◀◀
 ;;; ==============================
 
 
 ;;; ==============================
-;;; mon-image-utils.el►►►
+;;; mon-image-utils.el▶▶▶
 ;;; ==============================
 
 ;;; ==============================
@@ -2039,13 +2057,13 @@ Conditional upon `IS-BUG-P' returning non-nil.\n
 (defalias 'mon-identify-image 'mon-image-identify))
 
 ;;; ==============================
-;;; mon-image-utils.el◄◄◄
+;;; mon-image-utils.el◀◀◀
 ;;; ==============================
 
 
 
 ;;; ==============================
-;;; mon-boxcutter.el►►►
+;;; mon-boxcutter.el▶▶▶
 ;;; ==============================
 
 ;;; ==============================
@@ -2057,12 +2075,12 @@ Conditional upon `IS-BUG-P' returning non-nil.\n
 (defalias 'boxcutter-verify-image-type 'mon-image-verify-type))
 
 ;;; ==============================
-;;; mon-boxcutter.el◄◄◄
+;;; mon-boxcutter.el◀◀◀
 ;;; ==============================
 
 
 ;;; ==============================
-;;; mon-dir-utils-locals.el►►►
+;;; mon-dir-utils-locals.el▶▶▶
 ;;; ==============================
 ;;
 (unless (and (intern-soft "naf-drive-dired-artist-letter" obarray)
@@ -2082,7 +2100,7 @@ Conditional upon `IS-BUG-P' returning non-nil.\n
 (defalias 'naf-dired-brand-letter 'mon-dired-naf-brand-letter))
 
 ;;; ==============================
-;;; mon-dir-utils-locals.el◄◄◄
+;;; mon-dir-utils-locals.el◀◀◀
 ;;; ==============================
 
 
@@ -2097,7 +2115,7 @@ Conditional upon `IS-BUG-P' returning non-nil.\n
 
 
 ;;; ==============================
-;;; slime-loads-GNU-clbuild.el►►►
+;;; slime-loads-GNU-clbuild.el▶▶▶
 ;;; ==============================
 (when (featurep 'slime)
 ;;; <PREFIX>-<QUALIFIED> <PREFIX>-<NON-CORE-SYMBOL>
@@ -2134,7 +2152,7 @@ Conditional upon `IS-BUG-P' returning non-nil.\n
 ) ;; when slime
 
 ;;; ==============================
-;;; slime-loads-GNU-clbuild.el◄◄◄
+;;; slime-loads-GNU-clbuild.el◀◀◀
 ;;; ==============================
 
 ;;; ==============================

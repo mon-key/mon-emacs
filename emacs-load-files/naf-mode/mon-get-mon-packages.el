@@ -8,9 +8,9 @@
 ;; AUTHOR: MON KEY
 ;; MAINTAINER: MON KEY
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;; `mon-wget-mon-pkgs',
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;;
@@ -231,7 +231,7 @@
     "naf-mode-xrefs.el")
   "*A list of MON files published online EmacsWiki.\n
 :SEE (URL `http://www.emacswiki.org/emacs/mon_key')
-:SEE-ALSO `mon-wget-mon-pkgs', `mon-file-map-elisp-fileset'.\n►►►")
+:SEE-ALSO `mon-wget-mon-pkgs', `mon-file-map-elisp-fileset'.\n▶▶▶")
 ;;
 ;;;(progn (makunbound '*mon-el-library*) (unintern '*mon-el-library*) )
 
@@ -241,7 +241,7 @@
   "Invoke wget to pull the elisp files in `*mon-el-library*'.\n
 When non-nil IN-DIR is a directory to wget MON's elisp libraries to.
 If omitted files are are downloaded to `default-directory'.\n
-:SEE-ALSO `mon-wget-list-give-script-to-shell-command'.\n►►►"
+:SEE-ALSO `mon-wget-list-give-script-to-shell-command'.\n▶▶▶"
     (let ((mel (if (and in-dir (stringp in-dir))
                    in-dir 
                    (concat "mon-el-libs"
@@ -289,7 +289,7 @@ If omitted files are are downloaded to `default-directory'.\n
 ;;;   \(erase-buffer\) \(mon-get-mon-pkgs t t\)
 ;;;   \(set \(make-local-variable 'buffer-read-only\) t\)
 ;;;   \(display-buffer \(current-buffer\) t\)\)\n
-;;; :SEE-ALSO `*mon-el-library*'.\n►►►"
+;;; :SEE-ALSO `*mon-el-library*'.\n▶▶▶"
 ;;;   (interactive "i\np")
 ;;;   (let ((mpme (mapconcat 
 ;;;                #'(lambda (el-file) 
@@ -326,7 +326,7 @@ If omitted files are are downloaded to `default-directory'.\n
 ;;; :EXAMPLE\n
 ;;; \(mon-get-mon-pkgs-w-wget_  ;<- underscore prevents evaluation here :)
 ;;;  `\(,default-directory \"tt-wget" "subs\"\)
-;;; :SEE-ALSO .\n►►►"
+;;; :SEE-ALSO .\n▶▶▶"
 ;;;  (let* ((aysn-buff (upcase (symbol-name '*mon-el-library*)))
 ;;;         (sys-g (eq system-type 'gnu))
 ;;;         (idp (when in-dir 

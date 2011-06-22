@@ -6,9 +6,9 @@
 ;;; those French words denoting terms which indicate artistic role. 
 ;;; Keywords are sourced primarily from Benezit.
 ;;;
-;;; FUNCTIONS:►►►
+;;; FUNCTIONS:▶▶▶
 ;;;
-;;; FUNCTIONS:◄◄◄
+;;; FUNCTIONS:◀◀◀
 ;;;
 ;;; CONSTANTS:
 ;;; `naf-mode-french-roles-primary', `naf-mode-french-roles-secondary',

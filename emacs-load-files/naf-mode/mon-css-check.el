@@ -170,7 +170,7 @@
 `css-check-apply-line-at-p', `css-check-undo-application-at-p',
 `*css-check-csstidy-path*', `*css-check-file*', `*css-check-map*',
 `*css-check-follow-mode*', `css-check-applied-face',
-`css-check-unapplied-face'.\n►►►"
+`css-check-unapplied-face'.\n▶▶▶"
   :group 'css)
 
 (defface css-check-unapplied-face
@@ -181,7 +181,7 @@
 :SEE-ALSO `mon-help-css-check', `css-check', `*css-check-csstidy-path*',
 `css-check-toggle-follow', `css-check-next-line', `css-check-prev-line',
 `css-check-goto-line-at-p', `css-check-apply-line-at-p',
-`css-check-undo-application-at-p'.\n►►►"
+`css-check-undo-application-at-p'.\n▶▶▶"
   :group 'css-check)
 
 (defface css-check-applied-face
@@ -192,7 +192,7 @@
 :SEE-ALSO `mon-help-css-check', `css-check', `*css-check-csstidy-path*',
 `css-check-toggle-follow', `css-check-next-line', `css-check-prev-line',
 `css-check-goto-line-at-p', `css-check-apply-line-at-p',
-`css-check-undo-application-at-p'.\n►►►"
+`css-check-undo-application-at-p'.\n▶▶▶"
   :group 'css-check)
 
 (defvar *css-check-map* nil  
@@ -205,7 +205,7 @@
  f   `css-check-toggle-follow'\n
 :SEE-ALSO `mon-help-css-check', `css-check', `*css-check-csstidy-path*',
 `*css-check-file*', `*css-check-map*', `*css-check-follow-mode*',
-`css-check-applied-face', `css-check-unapplied-face'.\n►►►")
+`css-check-applied-face', `css-check-unapplied-face'.\n▶▶▶")
 (unless (bound-and-true-p *css-check-map*)
   (setq *css-check-map*
         (let ((map (make-sparse-keymap)))
@@ -225,7 +225,7 @@
 `css-check-apply-line-at-p', `css-check-undo-application-at-p',
 `*css-check-csstidy-path*', `*css-check-file*', `*css-check-map*',
 `*css-check-follow-mode*', `css-check-applied-face',
-`css-check-unapplied-face'.\n►►►")
+`css-check-unapplied-face'.\n▶▶▶")
 
 (defvar *css-check-csstidy-path* nil
   "Whether the csstidy executable is in path.\n
@@ -236,7 +236,7 @@ When non-nil return value is the path to local csstidy.\n
 `css-check-apply-line-at-p', `css-check-undo-application-at-p',
 `*css-check-csstidy-path*', `*css-check-file*', `*css-check-map*',
 `*css-check-follow-mode*', `css-check-applied-face',
-`css-check-unapplied-face'.\n►►►")
+`css-check-unapplied-face'.\n▶▶▶")
 ;;
 (unless (bound-and-true-p *css-check-csstidy-path*)
   (let ((csstidy-path (or (executable-find "csstidy") 
@@ -250,7 +250,7 @@ When non-nil return value is the path to local csstidy.\n
 `css-check-goto-line-at-p', `css-check-apply-line-at-p',
 `css-check-undo-application-at-p', `*css-check-csstidy-path*',
 `*css-check-file*', `*css-check-map*', `*css-check-follow-mode*',
-`css-check-applied-face', `css-check-unapplied-face'.\n►►►" )
+`css-check-applied-face', `css-check-unapplied-face'.\n▶▶▶" )
 
 ;;; ==============================
 ;;; :CHANGESET 1827
@@ -262,7 +262,7 @@ When non-nil return value is the path to local csstidy.\n
 `css-check-goto-line-at-p', `css-check-apply-line-at-p',
 `css-check-undo-application-at-p', `*css-check-csstidy-path*',
 `*css-check-file*', `*css-check-map*', `*css-check-follow-mode*',
-`css-check-applied-face', `css-check-unapplied-face'.\n►►►")
+`css-check-applied-face', `css-check-unapplied-face'.\n▶▶▶")
 ;;
 (unless (bound-and-true-p *CSS-CHECK*)
   (setq *CSS-CHECK*  (symbol-name '*CSS-CHECK*)))
@@ -278,7 +278,7 @@ Run on the `kill-buffer-hook'.\n
 `css-check-goto-line-at-p', `css-check-apply-line-at-p',
 `css-check-undo-application-at-p', `*css-check-csstidy-path*',
 `*css-check-file*', `*css-check-map*', `*css-check-follow-mode*',
-`css-check-applied-face', `css-check-unapplied-face'.\n►►►"
+`css-check-applied-face', `css-check-unapplied-face'.\n▶▶▶"
   (when (get-buffer *CSS-CHECK*)
     (with-current-buffer (buffer-name (get-buffer *CSS-CHECK*))
       (setq *css-check-file*))))
@@ -292,7 +292,7 @@ Run on the `kill-buffer-hook'.\n
 `css-check-apply-line-at-p', `css-check-undo-application-at-p',
 `*css-check-csstidy-path*',`*css-check-file*', `*css-check-map*',
 `*css-check-follow-mode*', `css-check-applied-face',
-`css-check-unapplied-face'.\n►►►"
+`css-check-unapplied-face'.\n▶▶▶"
   (interactive)
   (with-current-buffer (get-buffer *CSS-CHECK*)
     (set (make-local-variable '*css-check-follow-mode*)
@@ -311,7 +311,7 @@ Run on the `kill-buffer-hook'.\n
 `css-check-apply-line-at-p', `css-check-undo-application-at-p',
 `*css-check-csstidy-path*',`*css-check-file*', `*css-check-map*',
 `*css-check-follow-mode*', `css-check-applied-face',
-`css-check-unapplied-face'.\n►►►"
+`css-check-unapplied-face'.\n▶▶▶"
   (interactive)
   (forward-line 1)
   (when (and (get-buffer *CSS-CHECK*)
@@ -325,7 +325,7 @@ Run on the `kill-buffer-hook'.\n
 :SEE-ALSO `mon-help-css-check', `css-check',
 `css-check-toggle-follow', `css-check-next-line', `css-check-prev-line',
 `css-check-goto-line-at-p', `css-check-apply-line-at-p',
-`css-check-undo-application-at-p'.\n►►►"
+`css-check-undo-application-at-p'.\n▶▶▶"
   (interactive)
   (forward-line -1)
   (when (and (get-buffer *CSS-CHECK*)
@@ -342,7 +342,7 @@ Run on the `kill-buffer-hook'.\n
 `css-check-apply-line-at-p', `css-check-undo-application-at-p',
 `*css-check-csstidy-path*',`*css-check-file*', `*css-check-map*',
 `*css-check-follow-mode*', `css-check-applied-face',
-`css-check-unapplied-face'.\n►►►"
+`css-check-unapplied-face'.\n▶▶▶"
   (interactive)
   ;; (and *css-check-file*
   (and *css-check-file* 
@@ -369,7 +369,7 @@ Run on the `kill-buffer-hook'.\n
 `css-check-apply-line-at-p', `css-check-undo-application-at-p',
 `*css-check-csstidy-path*', `*css-check-file*', `*css-check-map*',
 `*css-check-follow-mode*', `css-check-applied-face',
-`css-check-unapplied-face'.\n►►►"
+`css-check-unapplied-face'.\n▶▶▶"
   (interactive)
   (let ((ccalap-buffer (current-buffer)))
     (if (text-property-any (line-beginning-position) (1+ (line-beginning-position))
@@ -417,7 +417,7 @@ Run on the `kill-buffer-hook'.\n
 `css-check-apply-line-at-p', `css-check-undo-application-at-p',
 `*css-check-csstidy-path*',`*css-check-file*', `*css-check-map*',
 `*css-check-follow-mode*', `css-check-applied-face',
-`css-check-unapplied-face'.\n►►►"
+`css-check-unapplied-face'.\n▶▶▶"
   (interactive)
   (if (text-property-any (line-beginning-position) (1+ (line-beginning-position))
                          'face 'css-check-unapplied-face)
@@ -471,7 +471,7 @@ When optional arg W-PROMPT-IF-NOT is non-nil prompt to make it so.\n
 `css-check-apply-line-at-p', `css-check-undo-application-at-p',
 `*css-check-csstidy-path*',`*css-check-file*', `*css-check-map*',
 `*css-check-follow-mode*', `css-check-applied-face',
-`css-check-unapplied-face'.\n►►►"
+`css-check-unapplied-face'.\n▶▶▶"
   (with-current-buffer (current-buffer)
     (if (not (eq major-mode 'css-mode))
         (when w-prompt-if-not
@@ -496,7 +496,7 @@ When optional arg W-PROMPT-IF-NOT is non-nil prompt to make it so.\n
 `css-check-apply-line-at-p', `css-check-undo-application-at-p',
 `*css-check-csstidy-path*',`*css-check-file*', `*css-check-map*',
 `*css-check-follow-mode*', `css-check-applied-face',
-`css-check-unapplied-face'.\n►►►"
+`css-check-unapplied-face'.\n▶▶▶"
   (with-current-buffer (current-buffer)
     (and (buffer-modified-p)
          (y-or-n-p (format 
@@ -517,7 +517,7 @@ Run csstidy with `call-process-shell-command' for `buffer-file-name'.\n
 `*css-check-csstidy-path*',`*css-check-file*', `*css-check-map*',
 `*css-check-follow-mode*', `css-check-applied-face',
 `css-check-unapplied-face', `mon-help-css-check', `mon-help-css-properties', `mon-help-css-color',
-`mon-help-css-mode', `mon-help-css-complete', `mon-help-tidy'.\n►►►"
+`mon-help-css-mode', `mon-help-css-complete', `mon-help-tidy'.\n▶▶▶"
   (interactive)
   (css-check-buffer-offer-save)
   ;; :WAS

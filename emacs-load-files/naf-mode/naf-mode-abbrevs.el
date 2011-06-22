@@ -5,9 +5,9 @@
 ;;; naf-mode-abbrevs provides abbrevs for use with `naf-mode'
 ;;; 
 ;;;
-;;; FUNCTIONS:►►►
+;;; FUNCTIONS:▶▶▶
 ;;;
-;;; FUNCTIONS:◄◄◄
+;;; FUNCTIONS:◀◀◀
 ;;;
 ;;; CONSTANTS or VARIABLES:
 ;;;

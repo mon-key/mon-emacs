@@ -6,9 +6,9 @@
 ;;; naf-mode-french-months describe the naf-mode-constant font-locked with
 ;;; naf-mode- -face matches French Months - optimized.
 ;;;
-;;; FUNCTIONS:►►►
+;;; FUNCTIONS:▶▶▶
 ;;;
-;;; FUNCTIONS:◄◄◄
+;;; FUNCTIONS:◀◀◀
 ;;;
 ;;; CONSTANTS or VARIABLES:
 ;;; `naf-mode-french-months'

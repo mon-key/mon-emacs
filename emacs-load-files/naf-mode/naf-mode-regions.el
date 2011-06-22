@@ -9,9 +9,9 @@
 ;;;
 ;;; Both constants locked with `naf-mode-place-face', `naf-mode-place-fface'.
 ;;;
-;;; FUNCTIONS:►►►
+;;; FUNCTIONS:▶▶▶
 ;;;
-;;; FUNCTIONS:◄◄◄
+;;; FUNCTIONS:◀◀◀
 ;;;
 ;;; CONSTANTS:
 ;;; `naf-mode-region-names-other'

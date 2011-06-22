@@ -21,13 +21,13 @@
 ;; DESCRIPTION:
 ;; mon-w32-load provides common w32 related utils for MON systems.
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;; `mon-maximize-frame-w32', `mon-minimize-frame', `mon-restore-frame',
 ;; `mon-menu-bar', `mon-open-explorer', `mon-open-program-files',
 ;; `mon-open-abbyy', `mon-open-notepad++', `mon-open-fastone',
 ;; `mon-open-photoshop', `mon-open-images-ed-swap', `mon-open-moz-down',
 ;; `mon-open-workspace',
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;;
@@ -118,7 +118,7 @@
 (defun mon-maximize-frame-w32 ()
   "Maximize the current frame \(w32 only\).\n
 Conditional on evaluation of system type `IS-W32-P', `IS-GNU-P'.\n
-:SEE-ALSO `mon-menu-bar', `mon-restore-frame' `mon-minimize-frame'.\n►►►"
+:SEE-ALSO `mon-menu-bar', `mon-restore-frame' `mon-minimize-frame'.\n▶▶▶"
   (interactive)
   (cond 
    (IS-W32-P  (w32-send-sys-command 61488))
@@ -128,7 +128,7 @@ Conditional on evaluation of system type `IS-W32-P', `IS-GNU-P'.\n
   "Send frame a Windows WM_SYSCOMMAND of type COMMAND - #xf020\n
 Minimize current frame \(w32 only\).\n
 Conditional on evaluation of system type `IS-W32-P', `IS-GNU-P'.\n
-:SEE-ALSO `mon-menu-bar', `mon-restore-frame', `mon-minimize-frame'.\n►►►"
+:SEE-ALSO `mon-menu-bar', `mon-restore-frame', `mon-minimize-frame'.\n▶▶▶"
   (interactive)
   (cond 
     (IS-W32-P
@@ -139,7 +139,7 @@ Conditional on evaluation of system type `IS-W32-P', `IS-GNU-P'.\n
   "Send frame a Windows WM_SYSCOMMAND of type COMMAND - #xf120\n
 Restore current frame \(w32 only\).
 Conditional on evaluation of system type `IS-W32-P', `IS-GNU-P'.\n
-:SEE-ALSO `mon-menu-bar', ,`mon-minimize-frame', `mon-maximize-frame-w32'.\n►►►"
+:SEE-ALSO `mon-menu-bar', ,`mon-minimize-frame', `mon-maximize-frame-w32'.\n▶▶▶"
   (interactive)
   (cond (IS-W32-P (w32-send-sys-command #xf120))
         (IS-GNU-P (message "I'm a GNU - that hurts."))))
@@ -148,7 +148,7 @@ Conditional on evaluation of system type `IS-W32-P', `IS-GNU-P'.\n
   "Send frame a Windows WM_SYSCOMMAND of type COMMAND - #xf120\n
 Restore current frame \(w32 only\).
 Conditional on evaluation of system type `IS-W32-P', `IS-GNU-P'.\n
-:SEE-ALSO `mon-restore-frame' `mon-minimize-frame', `mon-maximize-frame-w32'.\n►►►"
+:SEE-ALSO `mon-restore-frame' `mon-minimize-frame', `mon-maximize-frame-w32'.\n▶▶▶"
   (interactive)
   (cond  (IS-W32-P (w32-send-sys-command #xf100))
          (IS-GNU-P (message "I'm a GNU - that hurts."))))
@@ -169,7 +169,7 @@ Conditional on evaluation of system type `IS-W32-P', `IS-GNU-P'.\n
 (defun mon-open-abbyy ()
   "Launch the ABBYY Finereader OCR editor.\n
 :SEE-ALSO `mon-open-notepad++', `mon-open-fastone', `mon-open-photoshop',
-`*mon-misc-path-alist*'.\n►►►"
+`*mon-misc-path-alist*'.\n▶▶▶"
   (interactive)
   (cond (IS-MON-P-W32
          (w32-shell-execute 
@@ -187,7 +187,7 @@ Conditional on evaluation of system type `IS-W32-P', `IS-GNU-P'.\n
 (defun mon-open-notepad++ ()
   "Launch the notepad++ editor.\n
 :SEE-ALSO `mon-open-abbyy', `mon-open-fastone', `mon-open-photoshop',
-`*mon-misc-path-alist*'.\n►►►"
+`*mon-misc-path-alist*'.\n▶▶▶"
   (interactive)
   (cond (IS-W32-P (w32-shell-execute "open" 
                                    (concat 
@@ -202,7 +202,7 @@ Conditional on evaluation of system type `IS-W32-P', `IS-GNU-P'.\n
 (defun mon-open-fastone ()
   "Launch the fastone screen capture editor.\n
 :SEE-ALSO `mon-open-abbyy', `mon-open-notepad++', `mon-open-photoshop',
-`*mon-misc-path-alist*'.\n►►►"
+`*mon-misc-path-alist*'.\n▶▶▶"
   (interactive)
   (cond (IS-W32-P (w32-shell-execute 
                  "open" 
@@ -218,7 +218,7 @@ Conditional on evaluation of system type `IS-W32-P', `IS-GNU-P'.\n
 (defun mon-open-photoshop ()
   "Launch Ad0be Ph0t0sh0p editor.\n
 :SEE-ALSO `mon-open-abbyy', `mon-open-notepad++', `mon-open-fastone',
-`*mon-misc-path-alist*'.\n►►►"
+`*mon-misc-path-alist*'.\n▶▶▶"
   (interactive)
   (cond (IS-W32-P (w32-shell-execute "open" 
                                    (concat 
@@ -239,7 +239,7 @@ Conditional on evaluation of system type `IS-W32-P', `IS-GNU-P'.\n
 `mon-explorer-naf-artist', 
 `mon-open-program-files', `mon-open-images-ed-swap',
 `mon-open-moz-down', `mon-open-workspace', `w32shell-explorer', 
-`w32shell-explorer-here', `*mon-misc-path-alist*'.\n►►►"
+`w32shell-explorer-here', `*mon-misc-path-alist*'.\n▶▶▶"
   (interactive)
   (cond (IS-W32-P (w32-shell-execute 
                  "explore" 
@@ -256,7 +256,7 @@ Conditional on evaluation of system type `IS-W32-P', `IS-GNU-P'.\n
   "Open the explorer window in \"Images-swap\" folder.
 :SEE-ALSO `mon-open-program-files', `mon-open-explorer', `mon-open-moz-down'
 `mon-open-workspace', `w32shell-explorer', `w32shell-explorer-here',
-`*mon-misc-path-alist*'.\n►►►"
+`*mon-misc-path-alist*'.\n▶▶▶"
   (interactive)
   (cond (IS-W32-P (w32-shell-execute "open" "explorer"
                                    (concat "/e, " (cadr (assoc
@@ -273,7 +273,7 @@ Conditional on evaluation of system type `IS-W32-P', `IS-GNU-P'.\n
   "Open the w32 explorer in the a 'Program Files' folder.\n
 :SEE-ALSO `mon-open-explorer', `mon-open-images-ed-swap',`mon-open-moz-down', 
 `mon-open-workspace', `w32shell-explorer', `w32shell-explorer-here',
-`*mon-misc-path-alist*'.\n►►►"
+`*mon-misc-path-alist*'.\n▶▶▶"
   (interactive)
   (cond (IS-W32-P (w32-shell-execute "open" "explorer" (concat "/e, " "C:\\Program Files")))
    (IS-GNU-P  (message "I'm a GNU - that hurts."))))
@@ -288,7 +288,7 @@ Conditional on evaluation of system type `IS-W32-P', `IS-GNU-P'.\n
   "Open the explorer window of the Mozilla Downloads folder.\n
 :SEE-ALSO `mon-open-program-files', `mon-open-explorer',`mon-open-workspace',
 `mon-open-images-ed-swap'., `w32shell-explorer', `w32shell-explorer-here',
-`*mon-misc-path-alist*'.\n►►►"
+`*mon-misc-path-alist*'.\n▶▶▶"
   (cond (IS-W32-P (w32-shell-execute 
                  "open" 
                  "explorer" 
@@ -306,7 +306,7 @@ Conditional on evaluation of system type `IS-W32-P', `IS-GNU-P'.\n
   "Open the explorer window in Mon_Workspaces folder.\n
 :SEE-ALSO `mon-open-program-files', `mon-open-explorer',  `mon-open-moz-down'
 `mon-open-images-ed-swap', `w32shell-explorer', `w32shell-explorer-here',
-`*mon-misc-path-alist*'.\n►►►"
+`*mon-misc-path-alist*'.\n▶▶▶"
   (interactive)
     (cond (IS-MON-P-W32
 	   (w32-shell-execute  "open" "explorer"

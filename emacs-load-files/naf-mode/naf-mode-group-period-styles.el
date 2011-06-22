@@ -7,9 +7,9 @@
 ;;; or movements. Used for keyword font-locking in `naf-mode'.
 ;;; naf-mode-name uses naf-mode- - face.
 ;;;
-;;; FUNCTIONS:►►►
+;;; FUNCTIONS:▶▶▶
 ;;;
-;;; FUNCTIONS:◄◄◄
+;;; FUNCTIONS:◀◀◀
 ;;;
 ;;; CONSTANTS:
 ;;; `naf-mode-group-period-styles'
@@ -173,7 +173,7 @@
   (concat (regexp-opt naf-subject-periods-styles 'paren))
   "List of terms which flag on artistic groups, periods, styles, or movements.\n
 :USED-BY `naf-mode' for font-locking.\n
-:SEE-ALSO `naf-mode-group-period-style-fface', `naf-mode-group-period-style-face'.\n►►►"))
+:SEE-ALSO `naf-mode-group-period-style-fface', `naf-mode-group-period-style-face'.\n▶▶▶"))
 ;;; ==============================
 
 

@@ -23,9 +23,9 @@
 ;; with user/site conditionals to path. Additionaly some subr's for quickload
 ;; from alists of some directory contents.
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;; 
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;;
@@ -145,7 +145,7 @@
 ;;; :CREATED <Timestamp: #{2010-10-02T18:49:38-04:00Z}#{10396} - by MON KEY>
 (defgroup mon-dir-locals nil
   "Site local directories needed in various `mon-*' functions.\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   :link '(url-link 
           :tag "\n:EMACSWIKI-FILE (URL `http://www.emacswiki.org/emacs/mon-dir-locals-alist.el')" 
           "http://www.emacswiki.org/emacs/mon-dir-locals-alist.el")
@@ -163,7 +163,7 @@
   "Whether to bind variables defined in :FILE mon-dir-locals-alist.el.\n
 When non-nil bind the provided directory/file variables.\n
 Bound at loadtime when `IS-MON-SYSTEM-P'.\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   :type  'boolean
   :group 'mon-dir-locals)
 
@@ -184,7 +184,7 @@ Bound at loadtime when `IS-MON-SYSTEM-P'.\n
 :SEE-ALSO `*mon-regexp-symbols-xrefs*', `*mon-default-loads-xrefs*',
 `*mon-default-start-loads-xrefs*', `*mon-dir-locals-alist-xrefs*',
 `*mon-testme-utils-xrefs*', `*mon-button-utils-xrefs*',
-`*naf-mode-xref-of-xrefs*'.\n►►►"
+`*naf-mode-xref-of-xrefs*'.\n▶▶▶"
   :type '(repeat symbol)
   :group 'mon-xrefs
   :group 'mon-dir-locals)
@@ -200,7 +200,7 @@ Bound at loadtime when `IS-MON-SYSTEM-P'.\n
 (defcustom *mon-HG-root-path* nil
   "Path to the root path for HG repos.\n
 :EXAMPLE\n\n(cons *mon-HG-root-path* \(file-directory-p *mon-HG-root-path*\)\)\n
-:SEE-ALSO `*mon-emacs-root*', `*mon-emacsd*'.\n►►►"
+:SEE-ALSO `*mon-emacs-root*', `*mon-emacsd*'.\n▶▶▶"
   :type 'directory
   :group 'mon-dir-locals)
 ;;         
@@ -220,7 +220,7 @@ in the cadr of the return value for the key 'the-smith-poster-docs-pth in
  \(cadr \(assoc 'the-smith-poster-docs-pth *mon-misc-path-alist*\)\)\n
 :SEE :FILE mon-site-local-defaults.el
 :SUBDIR-OF `*mon-HG-root-path*'\n
-:SEE-ALSO `*mon-emacsd*'.\n►►►"
+:SEE-ALSO `*mon-emacsd*'.\n▶▶▶"
   :type 'directory
   :group 'mon-dir-locals)
 ;;
@@ -237,7 +237,7 @@ Subdir of `*mon-emacs-root*'.\n
 This is used to keep files transferable across machines with Mercurial.\n
 :EXAMPLE\n\n\(cons *mon-CL-scratch-path*
       \(file-directory-p *mon-CL-scratch-path*\)\)\n
-:SEE-ALSO `common-lisp-hyperspec-root'.\n►►►"
+:SEE-ALSO `common-lisp-hyperspec-root'.\n▶▶▶"
   :type 'directory
   :group 'mon-dir-locals)
 ;;
@@ -253,7 +253,7 @@ Used primarily over ERC to exchange paths w32 network share paths.\n
 :EXAMPLE\n\n\(cons *bug-HG-path*
       \(file-directory-p *bug-HG-path*\)\)\n
 :SEE-ALSO `mon--local-url-for-bug', `mon-get-local-url-for-bug',
-`*mon-HG-root-path*'.\n►►►"
+`*mon-HG-root-path*'.\n▶▶▶"
   :type 'directory
   :group 'mon-dir-locals)
 ;;
@@ -269,7 +269,7 @@ EXAMPLE:\n\n\(cons *mon-record-current-directory*
       \(file-exists-p *mon-record-current-directory*\)\)\n
 :SUBDIR-OF `*mon-emacs-root*'\n
 :CALLED-BY `mon-dir-save-current-to-file'.\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   :type 'file
   :group 'mon-dir-locals)
 ;;
@@ -286,7 +286,7 @@ EXAMPLE:\n\n\(cons *mon-record-current-directory*
 :ALIASED-BY `*mon-emacs2html-temp*'\n
 :SEE-ALSO `mon-htmlfontify-region-to-firefox', `mon-htmlfontify-buffer-to-firefox', 
 `mon-htmlfontify-dir-purge-on-quit',  `mon-html-fontify-generate-file-name'
-`*mon-html-fontify-file-name-template*', `*emacs2html-temp*'.\n►►►"
+`*mon-html-fontify-file-name-template*', `*emacs2html-temp*'.\n▶▶▶"
   :type 'directory
   :group 'mon-dir-locals)
 ;;
@@ -302,7 +302,7 @@ Used to generate temporary file-names for `mon-htmlfontify-*' procedures.\n
 :EXAMPLE\n\n\"%s/emacs2firefox-%d.html\"\n
 :SEE-ALSO `mon-htmlfontify-region-to-firefox', `mon-htmlfontify-buffer-to-firefox', 
 `mon-htmlfontify-dir-purge-on-quit',  `mon-html-fontify-generate-file-name'
-`*mon-html-fontify-file-name-template*', `*emacs2html-temp*'.\n►►►"
+`*mon-html-fontify-file-name-template*', `*emacs2html-temp*'.\n▶▶▶"
   :type  'string
   :group 'mon-dir-locals)  
 ;;
@@ -323,7 +323,7 @@ user/system names to local path names.\n
 :CALLED-BY `mon-dired-naf-artist-letter'
 :CALLED-BY `mon-explorer-naf-brand'
 :CALLED-BY `mon-dired-naf-image-dir'\n
-:SEE-ALSO `*mon-brand-naf-path*'.\n►►►"
+:SEE-ALSO `*mon-brand-naf-path*'.\n▶▶▶"
   :type  'directory
   :group 'mon-dir-locals)
 ;;
@@ -345,7 +345,7 @@ Path relative to the `*mon-artist-naf-path*' directory.\n
 :CALLED-BY `mon-dired-naf-brand-letter'
 :CALLED-BY `mon-explorer-naf-brand'
 :CALLED-BY `mon-dired-naf-image-dir'
-:SEE-ALSO `*mon-artist-naf-path*'.\n►►►"
+:SEE-ALSO `*mon-artist-naf-path*'.\n▶▶▶"
   :type  'directory
   :group 'mon-dir-locals)
 ;;
@@ -361,7 +361,7 @@ Path relative to the alist key ``the-nef-drv'' in `*mon-misc-path-alist*'.\n
 :SEE-ALSO `*mon-nef-scan-base-path*', `*mon-nef-scan-path*',
 `*mon-nef-scan-nefs-path*', `*mon-nef-scan-nef2-path*',
 `*mon-ebay-images-path*', `*mon-ebay-images-bmp-path*',
-`*mon-ebay-images-jpg-path*', `*mon-ebay-images-temp-path*'.\n►►►"
+`*mon-ebay-images-jpg-path*', `*mon-ebay-images-temp-path*'.\n▶▶▶"
   :type  'directory
   :group 'mon-dir-locals)
 
@@ -375,7 +375,7 @@ Path relative to the alist key ``the-nef-drv'' in `*mon-misc-path-alist*'.\n
 :SEE-ALSO `*nef-scan-base-drive*'`*mon-nef-scan-path*',
 `*mon-nef-scan-nefs-path*', `*mon-nef-scan-nef2-path*',
 `*mon-ebay-images-path*', `*mon-ebay-images-bmp-path*',
-`*mon-ebay-images-jpg-path*', `*mon-ebay-images-temp-path*'.\n►►►"
+`*mon-ebay-images-jpg-path*', `*mon-ebay-images-temp-path*'.\n▶▶▶"
   :type  'directory
   :group 'mon-dir-locals)
 ;;
@@ -395,7 +395,7 @@ Path relative to the alist key ``the-nef-drv'' in `*mon-misc-path-alist*'.\n
 `*mon-nef-scan-nefs-path*', `*mon-nef-scan-nef2-path*',
 `*mon-ebay-images-path*', `*mon-ebay-images-bmp-path*',
 `*mon-ebay-images-jpg-path*', `*mon-ebay-images-temp-path*',
-`*mon-ebay-images-lookup-path*'.\n►►►"
+`*mon-ebay-images-lookup-path*'.\n▶▶▶"
   :type  'directory
   :group 'mon-dir-locals)
 ;;
@@ -413,7 +413,7 @@ directory's paths as the directory doesnt' change that much.\n
 :SEE-ALSO `*mon-nef-scan-drive*', `*mon-nef-scan-base-path*',
 `*mon-nef-scan-path*', `*mon-nef-scan-nef2-path*', `*mon-ebay-images-path*',
 `*mon-ebay-images-bmp-path*', `*mon-ebay-images-jpg-path*',
-`*mon-ebay-images-temp-path*' `*mon-ebay-images-lookup-path*'.\n►►►"
+`*mon-ebay-images-temp-path*' `*mon-ebay-images-lookup-path*'.\n▶▶▶"
   :type  'directory
   :group 'mon-dir-locals)
 ;;
@@ -433,7 +433,7 @@ with `mon-bind-nefs-photos-at-loadtime'.\n
 :SEE-ALSO `*mon-nef-scan-drive*', `*mon-nef-scan-base-path*',
 `*mon-nef-scan-path*', `*mon-nef-scan-nefs-path*', `*mon-ebay-images-path*',
 `*mon-ebay-images-bmp-path*', `*mon-ebay-images-jpg-path*',
-`*mon-ebay-images-temp-path*', `*mon-ebay-images-lookup-path*'.\n►►►")
+`*mon-ebay-images-temp-path*', `*mon-ebay-images-lookup-path*'.\n▶▶▶")
 
 ;;; ==============================
 (defcustom *mon-nef-scan-nef2-path* nil
@@ -444,7 +444,7 @@ with `mon-bind-nefs-photos-at-loadtime'.\n
 :SEE-ALSO `*mon-nef-scan-drive*', `*mon-nef-scan-base-path*',
 `*mon-nef-scan-path*', `*mon-nef-scan-nefs-path*', `*mon-ebay-images-path*',
 `*mon-ebay-images-bmp-path*', `*mon-ebay-images-jpg-path*',
-`*mon-ebay-images-temp-path*', `*mon-ebay-images-lookup-path*'.\n►►►"
+`*mon-ebay-images-temp-path*', `*mon-ebay-images-lookup-path*'.\n▶▶▶"
   :type  'directory
   :group 'mon-dir-locals)
 ;;
@@ -462,7 +462,7 @@ with `mon-bind-nefs-photos-at-loadtime'.\n
 :SEE-ALSO `*mon-nef-scan-drive*', `*mon-nef-scan-base-path*',
 `*mon-nef-scan-path*', `*mon-nef-scan-nefs-path*', `*mon-nef-scan-nef2-path*',
 `*mon-ebay-images-bmp-path*', `*mon-ebay-images-jpg-path*',
-`*mon-ebay-images-temp-path*', `*mon-ebay-images-lookup-path*'.\n►►►"
+`*mon-ebay-images-temp-path*', `*mon-ebay-images-lookup-path*'.\n▶▶▶"
   :type  'directory
   :group 'mon-dir-locals)
 ;;
@@ -481,7 +481,7 @@ with `mon-bind-nefs-photos-at-loadtime'.\n
 :SEE-ALSO `*mon-nef-scan-drive*', `*mon-nef-scan-base-path*',
 `*mon-nef-scan-path*', `*mon-nef-scan-nefs-path*', `*mon-nef-scan-nef2-path*',
 `*mon-ebay-images-path*', `*mon-ebay-images-jpg-path*',
-`*mon-ebay-images-temp-path*', `*mon-ebay-images-lookup-path*'.\n►►►"
+`*mon-ebay-images-temp-path*', `*mon-ebay-images-lookup-path*'.\n▶▶▶"
   :type  'directory
   :group 'mon-dir-locals)
 ;;
@@ -500,7 +500,7 @@ with `mon-bind-nefs-photos-at-loadtime'.\n
 :SEE-ALSO `*mon-nef-scan-drive*', `*mon-nef-scan-base-path*',
 `*mon-nef-scan-path*', `*mon-nef-scan-nefs-path*', `*mon-nef-scan-nef2-path*',
 `*mon-ebay-images-path*', `*mon-ebay-images-bmp-path*',
-`*mon-ebay-images-temp-path*', `*mon-ebay-images-lookup-path*'.\n►►►"
+`*mon-ebay-images-temp-path*', `*mon-ebay-images-lookup-path*'.\n▶▶▶"
   :type  'directory
   :group 'mon-dir-locals)
 ;;
@@ -519,7 +519,7 @@ with `mon-bind-nefs-photos-at-loadtime'.\n
 :SEE-ALSO `*mon-nef-scan-drive*', `*mon-nef-scan-base-path*',
 `*mon-nef-scan-path*', `*mon-nef-scan-nefs-path*', `*mon-nef-scan-nef2-path*',
 `*mon-ebay-images-path*', `*mon-ebay-images-bmp-path*',
-`*mon-ebay-images-jpg-path*', `*mon-ebay-images-lookup-path*'.\n►►►"
+`*mon-ebay-images-jpg-path*', `*mon-ebay-images-lookup-path*'.\n▶▶▶"
   :type  'directory
   :group 'mon-dir-locals)
 ;;
@@ -551,7 +551,7 @@ For use when populating variables holding hashtables, e.g:\n
 :SEE-ALSO `mon-image-verify-type', `*mon-nef-scan-drive*',
 `*mon-nef-scan-base-path*', `*mon-nef-scan-path*', `*mon-nef-scan-nefs-path*',
 `*mon-nef-scan-nef2-path*', `*mon-ebay-images-path*',
-`*mon-ebay-images-jpg-path*'.\n►►►"
+`*mon-ebay-images-jpg-path*'.\n▶▶▶"
   :type  '(repeat (list string symbol string))
   :group 'mon-dir-locals)
 
@@ -577,7 +577,7 @@ For example the following backqute template would expand to valid valus:\n
    \(\"Lisp\"           ,*mon-CL-scratch-path*      \".lisp\"\)\)\n
 :EXAMPLE\n\n\(assoc-string \"NAF-mode\" *mon-buffer-mode-defaults*\)\n
 :SEE-ALSO `*mon-ebay-images-bmp-path*', `*mon-artist-naf-path*',
-`*mon-CL-scratch-path*', `*mon-emacs-root*'.\n►►►"
+`*mon-CL-scratch-path*', `*mon-emacs-root*'.\n▶▶▶"
   :type  '(repeat (list 
                    string    ;; :tag "mode-name" 
                    directory 

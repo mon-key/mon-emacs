@@ -25,9 +25,9 @@
 ;; Logs maintained courtesy:
 ;; :SEE (URL `http://tunes.org/~nef/logs/lisp/')
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;; `mon-wget-freenode-lisp-logs', `mon-get-freenode-lisp-logs-dates',
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;;
@@ -125,7 +125,7 @@
   "*A list of IRC logs from freenode #lisp 2004-2010.\n
 :SEE (URL `http://tunes.org/~nef/logs/lisp/').\n
 :SEE-ALSO `mon-wget-freenode-lisp-logs', `mon-cln-freenode-log',
-`mon-cln-freenode-log-TEST', `mon-help-CL-minion'.\n►►►")
+`mon-cln-freenode-log-TEST', `mon-help-CL-minion'.\n▶▶▶")
 
 ;;; ==============================
 ;;; :TODO Build a non wget alternative using `url-insert-file-contents' instead.
@@ -144,7 +144,7 @@ Optional args SAVE-WGET-FNAME and AND-THESE-FLAGS are as per
 :SEE (URL `http://tunes.org/~nef/logs/lisp/').\n
 :SEE-ALSO `mon-wget-list-give-script-to-shell-command',
 `mon-help-CL-wget-pkgs', `mon-help-CL-wget-pkgs-for-shell-command',
-`mon-cln-freenode-log', `mon-cln-freenode-log-TEST', `mon-help-CL-minion'.\n►►►"
+`mon-cln-freenode-log', `mon-cln-freenode-log-TEST', `mon-help-CL-minion'.\n▶▶▶"
   (let (did-bind)
     (unwind-protect
          (if (and (boundp '*freenode-lisp-logs*)
@@ -170,7 +170,7 @@ Optional args SAVE-WGET-FNAME and AND-THESE-FLAGS are as per
 (defun mon-get-freenode-lisp-logs-dates ()
   "Snarf the contents of (URL `http://tunes.org/~nef/logs/lisp/') and extract the date logs.
 :SEE-ALSO `mon-wget-freenode-lisp-logs', `mon-cln-freenode-log',
-`mon-cln-freenode-log-TEST', `mon-help-CL-minion'.\n►►►"
+`mon-cln-freenode-log-TEST', `mon-help-CL-minion'.\n▶▶▶"
   (with-current-buffer (get-buffer-create "*MON-GET-FREENODE-LISP-LOGS-DATES*")
     (erase-buffer)
     (url-insert-file-contents "http://tunes.org/~nef/logs/lisp/" t)

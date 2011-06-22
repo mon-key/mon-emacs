@@ -3,9 +3,9 @@
 ;;; DESCRIPTION:
 ;;; mon-eight-bit-raw-utils provides {description here}.
 ;;;
-;;; FUNCTIONS:►►►
+;;; FUNCTIONS:▶▶▶
 ;;; `mon-cln-eight-bit-raw'
-;;; FUNCTIONS:◄◄◄
+;;; FUNCTIONS:◀◀◀
 ;;;
 ;;; MACROS:
 ;;;
@@ -107,7 +107,7 @@
         :EIGHT-BIT-RAW \(4194283, #o17777753, #x3fffeb\)
 
 :SEE-ALSO :SEE-ALSO `mon-help-bitwise-functions', `mon-help-binary-representation',
-`mon-help-charset-coding-functions', `mon-help-char-composition'.\n►►►"
+`mon-help-charset-coding-functions', `mon-help-char-composition'.\n▶▶▶"
 nil)
 
 ;;; ==============================

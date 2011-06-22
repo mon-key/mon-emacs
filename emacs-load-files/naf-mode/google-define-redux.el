@@ -25,7 +25,7 @@
 ;; No longer relies on `with-output-to-temp-buffer'
 ;; Adds parsing tokens for programatically extracting definitions.
 ;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;; `google-define-get-command', `google-define-parse-buffer', `google-define',
 ;; `google-define-font-lock', `google-define-kill-def-buffers',
 ;; `google-define-word-at-point',
@@ -42,7 +42,7 @@
 ;; `%google-define-verify-query-url-lang-params',
 ;; `%google-define-verify-query-url-xref-type-params',
 ;; `%google-define-set-url-current-object'
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;;
@@ -212,7 +212,7 @@
 `google-define-parse-buffer', `google-define-font-lock',
 `google-define-kill-def-buffers', `*google-define-buffer-suffix*'
 `*google-define-get-buffer*', `*google-define-html-entry-table*', `gg-def-base',
-`gg-def-num', `gg-def-delim', `gg-def-inition', `gg-def-defined'.\n►►►"
+`gg-def-num', `gg-def-delim', `gg-def-inition', `gg-def-defined'.\n▶▶▶"
   :group 'mon-base  
   :group 'google-define
   :prefix "google-define-"
@@ -235,7 +235,7 @@
   "Face definitions for extensions to `google-define'.\n
 :SEE :FILE google-define-redux.el\n
 :SEE-ALSO `gg-def-base', `gg-def-delim', `gg-def-num', `gg-def-inition',
-`gg-def-defined', `mon-doc-help-utils-faces'.\n►►►"
+`gg-def-defined', `mon-doc-help-utils-faces'.\n▶▶▶"
   :group 'faces
   :group 'google-define-redux
   :group  (or (when (featurep 'mon-doc-help-utils)  'mon-doc-help-utils-faces) nil)  
@@ -285,7 +285,7 @@ The symbols contained of this list are defined in :FILE google-define-redux.el\n
 `*mon-seq-utils-xrefs*', `*mon-string-utils-xrefs*', `*mon-type-utils-xrefs*',
 `*mon-window-utils-xrefs*', `*naf-mode-xref-of-xrefs*', `*mon-slime-xrefs*',
 `*naf-mode-faces-xrefs*', `*naf-mode-date-xrefs*', `*mon-ulan-utils-xrefs*',
-`*mon-xrefs-xrefs'.\n►►►"
+`*mon-xrefs-xrefs'.\n▶▶▶"
   :type '(repeat symbol)
   :group 'google-define-redux
   :group 'mon-xrefs)
@@ -300,7 +300,7 @@ The symbols contained of this list are defined in :FILE google-define-redux.el\n
   "A buffer `google-define-get-command' should return results in.\n
 Default is \"*GOOGLE-DEFINE-GET-BUFFER*\".\n
 Dynamically allocated as needed.\n
-:SEE-ALSO `*google-define-buffer-suffix*'.\n►►►"
+:SEE-ALSO `*google-define-buffer-suffix*'.\n▶▶▶"
   :type 'string
   :group 'google-define-redux)
 ;;
@@ -322,7 +322,7 @@ Default is:\n\n\(\"*\" . \":gg-definition*\"\)\n
 can still match the buffer on entry else we can't frob the `help-mode-hook'.\n
 :CALLED-BY `google-define-kill-def-buffers' when cleaning up definition buffers.\n
 :SEE-ALSO `*google-define-get-buffer*' `*google-define-html-entry-table*',
-`google-define-get-command'.\n►►►"
+`google-define-get-command'.\n▶▶▶"
   :type '(cons string string)
   :group 'google-define-redux)
 ;;
@@ -340,7 +340,7 @@ arg ``:name''.\n
 Useful for recovering/debugging hung processes e.g. with:\n
  \(get-process *get-google-defined*\)\n
  \(process-status \(get-process *get-google-defined*\)\)\n
-:SEE-ALSO `*google-define-get-buffer*', `*google-define-buffer-suffix*'.\n►►►")
+:SEE-ALSO `*google-define-get-buffer*', `*google-define-buffer-suffix*'.\n▶▶▶")
 ;;
 (unless (and (intern-soft "*get-google-defined*")
              (bound-and-true-p *get-google-defined*))
@@ -349,6 +349,11 @@ Useful for recovering/debugging hung processes e.g. with:\n
 ;;; :TEST-ME (symbol-value '*get-google-defined*)
 ;;;(progn (makunbound '*google-define-get-buffer*) (unintern "*google-define-get-buffer*" obarray) )
 
+
+
+;;; ==============================
+;;; :GOOGLE-DEFINE-REGEXPS
+;;; ==============================
 
 ;;; ==============================
 ;;; :CHANGESET 2443
@@ -372,7 +377,7 @@ Useful for recovering/debugging hung processes e.g. with:\n
  <h3>Web definitions</h3>\n
  <h3>Related phrases</h3>\n
 :NOTE As implemented regexp will match any heading number not just \"<h3>\".\n
-:SEE-ALSO `*regexp-google-define-itemized*'.\n►►►")
+:SEE-ALSO `*regexp-google-define-itemized*'.\n▶▶▶")
 
 ;;; ==============================
 ;;; :CHANGESET 2443
@@ -400,7 +405,7 @@ Subseq at indexes 48-56 is \"<<TERM>>\" it is replaced dynamically with a valid
 search term for use with `google-define-find-itemized'.\n
 EXAMPLE\n\n\(substring *regexp-google-define-itemized* 48 56\)\n
 \(replace-regexp-in-string \"<<TERM>>\" \"REPLACEMET-TERM\" *regexp-google-define-itemized*\)\n
-:SEE-ALSO `*regexp-google-define-itemized*'.\n►►►")
+:SEE-ALSO `*regexp-google-define-itemized*'.\n▶▶▶")
 
 ;;; ==============================
 ;; :NOTE In the new GG definitions presentation the first definition is:
@@ -436,8 +441,7 @@ EXAMPLE\n\n\(substring *regexp-google-define-itemized* 48 56\)\n
 <div  class=\"dct-eh\">\n
 <span class=\"dct-tt\">yo·gurt\n
 <span class=\"dct-tlb\" title=\"Part-of-speech\">Noun</span></span>\n
-:SEE-ALSO .\n►►►")
-
+:SEE-ALSO .\n▶▶▶")
 
 ;;; ==============================
 ;;; :CHANGESET 2443
@@ -483,7 +487,7 @@ Second group matches patterns with the form:\n
 <a href=\"/dictionary?q=yogurt&hl=en&sl=es&tl=en
 \">español</a>\n
 <a class=\"lightblue\" href=\"http://www.google.com/url?q=<SOME-NON-GG-URL>\">Kirsten Gillibrand</a>\n
-:SEE-ALSO .\n►►►")
+:SEE-ALSO .\n▶▶▶")
 
 ;;; ==============================
 ;;; :CHANGESET 2443
@@ -527,30 +531,11 @@ Matches the follwing pattterns:\n
 en.wiktionary.org/wiki/snarf
 </a>
 </div>\n
-:SEE-ALSO .\n►►►")
-;;
-;; :NOTE a variant of `*regexp-google-define-source-ref*' without match on <div>
-;; (concat 
-;;  "\\("
-;;  "\\([[:blank:][:cntrl:]]*\\)?"
-;;  "\\("
-;;  "\\(<a[[:blank:]]\\)"
-;;  "\\("
-;;  "\\(.*\\)=\"\\(.*\\)\"[[:blank:]]+"
-;;  "\\)?*"
-;;  "\\)" 
-;; "\\(" 
-;;  "href=\"http://www.google.com/url\\?q="
-;;  "\\(.*\\)"
-;;  "\"" ">" 
-;;  "\\([[:blank:][:cntrl:]]*\\)?"
-;;  "\\(.*\\)?"
-;;  "\\([[:blank:][:cntrl:]]*\\)?"
-;;  "</a>" 
-;;  "\\)"
-;; "\\([[:blank:][:cntrl:]]*\\)?"          
-;;  "\\)")
-;;
+:SEE-ALSO .\n▶▶▶")
+
+
+;;; ==============================
+;;; :GOOGLE-DEFINE-FACES
 ;;; ==============================
 
 ;;; ==============================
@@ -564,7 +549,7 @@ en.wiktionary.org/wiki/snarf
           (:foreground "light steel blue" :weight extrabold)) ))
   "*Base face for font-locking buffers returned by `google-define'.\n
 :SEE-ALSO `gg-def-base', `gg-def-delim', `gg-def-defined', `gg-def-num',
-`gg-def-inition', `mon-doc-help-utils-faces'.\n►►►"
+`gg-def-inition', `mon-doc-help-utils-faces'.\n▶▶▶"
   :group 'google-define-redux-faces)
 ;;
 ;;; :TEST-ME (describe-face 'gg-def-base)
@@ -575,12 +560,12 @@ en.wiktionary.org/wiki/snarf
 (defface gg-def-delim 
     '((t :inherit gg-def-base :foreground "sky blue"))
   "*Provides fontlocking of space seperated delmiter charcaters.\n
-Default delimiters characters include:\n ►, |, ◄\n
+Default delimiters characters include:\n ▶, |, ◀\n
 when preceded and followed by whitespace e.g.:\n
- \" ► \" \" | \" \" ◄ \"\n
+ \" ▶ \" \" | \" \" ◀ \"\n
 :NOTE\n\(assq 'definition-delim *regexp-google-defined-fontlock*\)\n
 :SEE-ALSO `gg-def-base', `gg-def-delim', `gg-def-defined', `gg-def-num',
-`gg-def-inition'.\n►►►"
+`gg-def-inition'.\n▶▶▶"
   :group 'google-define-redux-faces)
 ;;
 ;;; :TEST-ME (describe-face 'gg-def-delim)
@@ -596,7 +581,7 @@ when preceded and followed by whitespace e.g.:\n
 :EXAMPLE\n\n\(describe-face 'gg-def-heading\)\n
 :NOTE\n\(assq 'definition-heading *regexp-google-defined-fontlock*\)\n
 :SEE-ALSO `gg-def-base', `gg-def-delim', `gg-def-defined', `gg-def-num',
-`gg-def-inition'.\n►►►"
+`gg-def-inition'.\n▶▶▶"
     :group 'google-define-redux-faces)
 ;;
 ;; (describe-face 'gg-def-heading)
@@ -608,7 +593,7 @@ when preceded and followed by whitespace e.g.:\n
   "*Provides fontlocking of enumerated numbers preceding a definition.\n
 :NOTE\n\(assq 'definition-num *regexp-google-defined-fontlock*\)\n
 :SEE-ALSO `gg-def-base', `gg-def-delim', `gg-def-defined', `gg-def-num',
-`gg-def-inition'.\n►►►"
+`gg-def-inition'.\n▶▶▶"
   :group 'google-define-redux-faces)
 ;;
 ;;; :TEST-ME (describe-face 'gg-def-num)
@@ -623,7 +608,7 @@ Default is anything after the default \"    | \".\n
 :NOTE\n\(assq 'definition-line *regexp-google-defined-fontlock*\)\n
 \(assq 'definition-line-w/o *regexp-google-defined-fontlock*\)\n
 :SEE-ALSO `gg-def-base', `gg-def-delim', `gg-def-defined', `gg-def-num',
-`gg-def-inition'.\n►►►"
+`gg-def-inition'.\n▶▶▶"
   :group 'google-define-redux-faces)
 ;;
 ;;; :TEST-ME (describe-face 'gg-def-inition)
@@ -636,7 +621,7 @@ Default is anything after the default \"    | \".\n
     '((t :inherit gg-def-base :foreground "cadet blue"))
   "*Provides fontlocking of word defined by definition.\n
 :SEE-ALSO `gg-def-base', `gg-def-delim', `gg-def-defined', `gg-def-num',
-`gg-def-inition'.\n►►►"
+`gg-def-inition'.\n▶▶▶"
   :group 'google-define-redux-faces)
 ;;
 ;;; :TEST-ME (describe-face 'gg-def-defined)
@@ -648,16 +633,15 @@ Default is anything after the default \"    | \".\n
   `((definition-hdr-w/o "Definitions for: %s\n\n" 7 (face  default)) ;; :NOTE <INT> and <FACE> unused.
     (definition-hdr    "^Definitions for:"        0 (face gg-def-base))
     (definition-num    "^ +\\([0-9]\\{1,2\\}\\) " 1 (face gg-def-num))
-    (definition-delim  " \\(►\\||\\|◄\\) ?"       1 (face gg-def-delim))
-    (definition-delim-top  "►"                    7 (face default)) ;; :NOTE <INT> and <FACE> unused.
-    (definition-delim-btm  "◄"                    7 (face default)) ;; :NOTE <INT> and <FACE> unused.
+    (definition-delim  " \\(▶\\||\\|◀\\) ?"       1 (face gg-def-delim))
+    (definition-delim-top  "▶"                    7 (face default)) ;; :NOTE <INT> and <FACE> unused.
+    (definition-delim-btm  "◀"                    7 (face default)) ;; :NOTE <INT> and <FACE> unused.
     (definition-line-w/o  "    | "                7 (face default)) ;; :NOTE <INT> and <FACE> unused.
     (definition-line   "^    | \\(.*\\)$"         1 (face gg-def-inition))
     ;; :NOTE (concat " \\(" <SEARCHED-WORD>  "\\)[\\[:punct:]\\[:blank:]\n]")
     (definition-word    " \\(<SEARCHED-WORD>\\)[\\[:punct:]\\[:blank:]\n]" 1 (face gg-def-defined))
     (definition-heading ,(regexp-opt (list ":USAGE-EXAMPLES" ":RELATED-LANGUAGES" ":WEB-DEFINITIONS") t)
-       1 (face gg-def-heading))
-    )
+       1 (face gg-def-heading)))
   "A list of font-lock rules for `google-define-font-lock'.\n
 Elts of list have the form:\n
  \(<KEY> <REGEXP> <MATCH-GRP> \(face <FACE>\)\)\n
@@ -669,7 +653,6 @@ Required values of <KEY> are:\n
 <REGEXP> and <MATCH-GRP> should match according to fontlocks for <FACE>.\n
 The regexp of key definition-word must contain the token \"<SEARCHED-WORD>\",
 this is used as a marker to split on b/c `defcustom' doesn't provide a clean way
-
 to conditionally pass/specify a cons instead of a regexp.\n
 :NOTE The regexp for key `definition-hdr-w/o` associates a format string spec
 for use by `google-define-parse-buffer' and should be reflected by the regexp in
@@ -682,25 +665,27 @@ associates delimiters for use by `google-define-parse-buffer' and should be
 reflected by the regexp in key `definition-delim`.\n
 :EXAMPLE\n\n(assq 'definition-hdr *regexp-google-defined-fontlock*)\n
 \(nth 1 \(assq 'definition-hdr *regexp-google-defined-fontlock*\)\)\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   :type  '(repeat (list symbol regexp integer (list (const face) face)))
   :group 'google-define-redux
   :group 'google-define-redux-faces)
 
 ;;; ==============================
+;;; :PREFIX "gdgc-"
 ;;; :MODIFICATIONS <Timestamp: #{2010-02-04T21:28:01-05:00Z}#{10055} - by MON>
 (defun google-define-get-command (host path)
   "Retrieve google defnitions to process-buffer `*google-define-get-buffer*'.\n
 :EXAMPLE\n\n(google-define-get-command-TEST)\n
 :SEE-ALSO `google-define', `google-define-parse-buffer', `google-define-font-lock',
-`google-define-kill-def-buffers', `google-define-get-command-TEST'.\n►►►"
-  (let* ((timeout 60) ;; 180)
-         (port 80)  ;; http
-         (post-cmd
+`google-define-kill-def-buffers', `google-define-get-command-TEST'.\n▶▶▶"
+  ;; gdgc-
+  (let* ((gdgc-timeout 60) ;; 180)
+         (gdgc-port 80)    ;; http
+         (gdgc-post-cmd
           (concat "GET " path " HTTP/1.0\r\n"
                   "Host: " host "\r\n"
                   "User-Agent: Emacs\r\n"
-                  ;; "User-Agent: wget\r\n" ;; fails
+                  ;; "User-Agent: wget\r\n" ;; fails :0
                   ;; "User-Agent: lynx\r\n"
                   ;; "User-Agent: w3m\r\n"
                   ;; "User-Agent: links\r\n"
@@ -715,32 +700,31 @@ reflected by the regexp in key `definition-delim`.\n
                   ;;"Accept-Charset: UTF-8;q=0.8,ISO-8859-1;q=0.7,*;q=0.7\r\n"
                   "Accept-Charset: ISO-8859-1;q=0.7,*;q=0.7\r\n"
                   "\r\n"))
-         proc
-         buf)
+         (gdgc-proc '())
+         (gdgc-bfr '()))
     (progn
       (when (get-buffer *google-define-get-buffer*)
         (kill-buffer *google-define-get-buffer*))
-      (setq proc (make-network-process :name *get-google-defined* 
+      (setq gdgc-proc (make-network-process :name *get-google-defined* 
                                        :buffer *google-define-get-buffer*
                                        :host host
-                                       :service port))
-      (setq buf (process-buffer proc))
-      (process-send-string proc post-cmd)
+                                       :service gdgc-port))
+      (setq gdgc-bfr (process-buffer gdgc-proc))
+      (process-send-string gdgc-proc gdgc-post-cmd)
       (mon-message :msg-spec '(":FUNCTION `google-define-get-command' "
-                             " -- Snarfing %s -- waiting for response...")
+                               " -- Snarfing %s -- waiting for response...")
                    :msg-args host)
-      (while (equal (process-status proc) 'open)
-        (unless (accept-process-output proc timeout)
+      (while (equal (process-status gdgc-proc) 'open)
+        (unless (accept-process-output gdgc-proc gdgc-timeout)
           (unwind-protect
               (mon-format :w-fun #'error
                           :w-spec '(":FUNCTION `google-define-get-command' "
                                     "-- host %s timed out, deleting network process %S")
-                          :w-args `(,host ,proc))
-            (delete-process proc))
+                          :w-args `(,host ,gdgc-proc))
+            (delete-process gdgc-proc))
           (mon-message :msg-spec '(":FUNCTION `google-define-get-command' "
-                                 "-- response received: processing..."))))
-      
-    buf)))
+                                   "-- response received: processing..."))))
+      gdgc-bfr)))
 ;;
 ;;; :TEST-ME (google-define-get-command-TEST)
 
@@ -748,23 +732,24 @@ reflected by the regexp in key `definition-delim`.\n
 ;;; ==============================
 ;;; :CHANGESET 2443
 ;;; :CREATED <Timestamp: #{2011-05-16T19:52:52-04:00Z}#{11201} - by MON KEY>
-(defun %google-define-verify-query-url-lang-params (lang)
+(defun %google-define-verify-query-url-lang-params (verify-lang)
   "Verify the language parameter for use when constructing a google-define URL.\n
-When LANG is a string comprised of two characters return it.\n
+When VERIFY-LANG is a string comprised of two characters return it.\n
 If it is not return \"en\".\n
 :EXAMPLE\n\n\(%google-define-verify-query-url-lang-params \"fr\"\)\n
  \(%google-define-verify-query-url-lang-params \"esp\"\)\n
  \(%google-define-verify-query-url-lang-params \"\"\)\n
  \(%google-define-verify-query-url-lang-params nil\)\n
  \(%google-define-verify-query-url-lang-params 8\)\n
-:SEE-ALSO .\n►►►"
-  (or (and (or (null lang)
-               (not (stringp lang))
-               (not (eql (length lang) 2)))
+:SEE-ALSO .\n▶▶▶"
+  (or (and (or (null verify-lang)
+               (not (stringp verify-lang))
+               (not (eql (length verify-lang) 2)))
            "en")
-      lang))
+      verify-lang))
 
 ;;; ==============================
+;;; :PREFIX "gdvquxtp-"
 ;;; :CHANGESET 2443
 ;;; :CREATED <Timestamp: #{2011-05-16T20:21:16-04:00Z}#{11201} - by MON KEY>
 (defun %google-define-verify-query-url-xref-type-params (xref-key)
@@ -774,13 +759,15 @@ If it is not return \"en\".\n
   ;; => "&oi=dict_lk"
   ;; (url-parse-query-string (%google-define-verify-query-url-xref-type-params :synonym))
   ;; => (("oi" "dict_lk"))
-  (let ((xref-if
+  ;; 
+  (let ((gdvquxtp-xref-if
          (assoc xref-key
                 '((:related-phrase . "re")
                   (:synonym        . "lk")))))
-    (and xref-if (concat "&oi=dict_" (cdr xref-if) ))))
+    (and gdvquxtp-xref-if (concat "&oi=dict_" (cdr gdvquxtp-xref-if) ))))
 
 ;;; ==============================
+;;; :PREFIX "gdcs-"
 ;;; A poor mans `CL:STRING-TRIM'...
 ;;; :CHANGESET 2443
 ;;; :CREATED <Timestamp: #{2011-05-17T15:38:20-04:00Z}#{11202} - by MON KEY>
@@ -803,7 +790,7 @@ position these are reduced to a single occurence.\n
 \(google-define-clean-string [?a ? ?b ? ?c]\)\n
 \(google-define-clean-string 8\)\n
 :SEE-ALSO `%google-define-clean-term-for-split', `url-eat-trailing-space',
-`url-strip-leading-spaces'.\n►►►"
+`url-strip-leading-spaces'.\n▶▶▶"
   (catch '%google-define-clean-string
     (let* ((gdcs-str (or (and (or (null clean-string)
                                   (not (stringp clean-string))
@@ -842,7 +829,7 @@ Return value is as if by `google-define-make-heading-replacement'.\n
 \(%google-define-clean-term-for-split \"\"\)\n
 \(%google-define-clean-term-for-split nil\)\n
 \(%google-define-clean-term-for-split 8\)\n
-:SEE-ALSO `%google-define-clean-term-for-split'.\n►►►"
+:SEE-ALSO `%google-define-clean-term-for-split'.\n▶▶▶"
   (google-define-clean-string 32 43 term))
 
 ;;; ==============================
@@ -855,7 +842,7 @@ HEADING-MATCH should satisfy `stringp', if not return \"\".\n
 Return value is as if by `google-define-make-heading-replacement'.\n
 :EXAMPLE\n\n\(%google-define-clean-heading-for-replace \"Related Languages\"\)\n
 \(%google-define-clean-heading-for-replace \" Web Definitions    \"\)\n
-:SEE-ALSO `%google-define-clean-term-for-split'.\n►►►"
+:SEE-ALSO `%google-define-clean-term-for-split'.\n▶▶▶"
   (google-define-clean-string 32 45 heading-match))
 
 ;;; ==============================
@@ -867,7 +854,7 @@ Return value is as if by `google-define-make-heading-replacement'.\n
                                                   (target-lang "en") 
                                                   xref-type)
   "Return a URL path suitable for use with `google-define-get-command'
-search-term is a string naming a term to retrieve a definition for.\n
+SEARCH-TERM is a string naming a term to retrieve a definition for.\n
 Keyword SOURCE-LANG is a two character string identifying the language of
 SEARCH-TERM's source. Default is \"en\".\n
 Keyword HOST-LANG is a two character string identifying the host language
@@ -888,25 +875,25 @@ for generating urls when xrefing from an existing definition.\n
                                :source-lang \"es\" 
                                :target-lang \"it\" 
                                :xref-type :related-phrase\)\)\n
-:SEE-ALSO `url-parse-query-string', `url-insert-entities-in-string'.\n►►►"
+:SEE-ALSO `url-parse-query-string'.\n▶▶▶"
   (setq host-lang (%google-define-verify-query-url-lang-params host-lang))
   (setq source-lang (%google-define-verify-query-url-lang-params source-lang))
   (setq target-lang (%google-define-verify-query-url-lang-params target-lang))
-  (and xref-type (setq xref-type 
-                       (%google-define-verify-query-url-xref-type-params xref-type)))
-  
-   ;; :NOTE Wonder what the "aq=f" param is? 
-   ;;  http://www.google.com/dictionary?aq=f&hl=en&langpair=en%7Cen&q=yogurt
-   ;; We'll use this format instead:
-   ;; http://www.google.com/dictionary?hl=fr&sl=pt&tl=en&q=car      
-  ;; url-insert-entities-in-string
+  (and xref-type 
+       (setq xref-type (%google-define-verify-query-url-xref-type-params xref-type)))
+  ;; 
+  ;; :NOTE Wonder what the "aq=f" param is? 
+  ;; Also, the pipe char "|" (char 124) is a ugly and hasslesome when encoded:
+  ;;  http://www.google.com/dictionary?aq=f&hl=en&langpair=en%7Cen&q=yogurt
+  ;;
+  ;; We'll use this format instead:
+  ;; http://www.google.com/dictionary?hl=fr&sl=pt&tl=en&q=car
+  ;;
   (concat  "/dictionary?"
             "hl=" host-lang
             "&sl=" source-lang
             "&tl=" target-lang
-            ;; http://www.google.com/dictionary?hl=en&sl=pt&tl=en&q=car
             "&q="
-            ;; (replace-regexp-in-string " +" "+" search-term)
             (%google-define-clean-term-for-split search-term)
             xref-type))
 
@@ -922,7 +909,7 @@ COMMAND-PARAMS is a cons pair suitable for use with `google-define-get-command'.
 :SEE-ALSO `google-define', `google-define-get-command',
 `google-define-font-lock', `google-define-kill-def-buffers',
 `mon-string-justify-left' `*google-define-buffer-suffix*'
-`*google-define-get-buffer*', `*google-define-html-entry-table*'.\n►►►"
+`*google-define-get-buffer*', `*google-define-html-entry-table*'.\n▶▶▶"
   (let* ((gdpb-cnt 0)
          (gdpb-host-params command-params)
          (gdpb-gthr-bffr ;; <- *standard-output* is here.
@@ -944,6 +931,8 @@ COMMAND-PARAMS is a cons pair suitable for use with `google-define-get-command'.
     ;; set-window-buffer, etc.  In particular, this will affect how we intend to
     ;; eventually add help-mode style xrefs on the returned *<WORD>:gg-definition* buffer.
     ;;
+    ;; ==============================
+    ;;
     ;; :NOTE as of <Timestamp: #{2011-05-16T14:14:09-04:00Z}#{11201} - by MON KEY>
     ;; Google has changed the request parameters for its define/dictionary interface and presentation!
     ;;
@@ -961,14 +950,19 @@ COMMAND-PARAMS is a cons pair suitable for use with `google-define-get-command'.
     (set-buffer (google-define-get-command (car gdpb-host-params) (cdr gdpb-host-params))) 
     (unwind-protect
         (progn
+          ;; Following while loop currently only find definitions under heading
+          ;;  "Web definitions" 
+          ;; The parts specific to that heading are getting factored out to a
+          ;; seperate function and `google-define-find-headings' will take
+          ;; over for dispatch according to the heading type matched.
+          ;;
+          ;; (mon-g2be -1)
+          ;; (google-define-find-headings search-word)
+          ;;
           (mon-g2be -1)
-          (google-define-find-headings search-word)
-          (mon-g2be -1)
-          (while ;; :WAS (search-forward-regexp "<li>\\([^<]+\\)" nil t)
-              (google-define-find-itemized search-word)
+          (while (google-define-find-itemized search-word) 
             (incf gdpb-cnt)
             (let ((gdpb-wrd-def 
-                   ;; :WAS  (replace-regexp-in-string "\\(\n\\|\r\\|\t\\)" "" (match-string 1))))
                    (replace-regexp-in-string "\\(\n\\|\r\\|\t\\|<br>\\)" "" (match-string 5) t)))
               (princ ;; <- spitting to our "*<WORD>:gg-definition*" buffer.
                (with-temp-buffer
@@ -1010,11 +1004,11 @@ COMMAND-PARAMS is a cons pair suitable for use with `google-define-get-command'.
                                        (cadr (assq 'definition-delim-top *regexp-google-defined-fontlock*))))
                        (set-marker gdpb-gt-pnt (point))
                        (insert (replace-regexp-in-string 
-                                (concat "^" gdpb-wspc) ;; :WAS "^    " 
+                                (concat "^" gdpb-wspc)
                                 (cadr (assq 'definition-line-w/o *regexp-google-defined-fontlock*))
                                 (mon-string-justify-left gdpb-wrd-def 64 4) t))
                        (set-marker gdpb-lt-pnt (point))
-                       (insert "\n" gdpb-wspc ;; :WAS "\n    " 
+                       (insert "\n" gdpb-wspc
                                (cadr (assq 'definition-delim-btm *regexp-google-defined-fontlock*))
                                "\n\n")))
                    (fill-region-as-paragraph gdpb-gt-pnt gdpb-lt-pnt)
@@ -1024,13 +1018,9 @@ COMMAND-PARAMS is a cons pair suitable for use with `google-define-get-command'.
                (get-buffer gdpb-gthr-bffr))))
           (set-buffer gdpb-gthr-bffr))      ; :CLOSE progn
       ;;
-      ;; Close current TCP process of current `google-define-get-command' buffer.
-      ;; (process-buffer (process-buffer "url-get-command"))
-      ;; "url-get-command"
-      ;; :WAS (delete-process nil))
-      ;; (delete-process (process-buffer "url-get-command"))
-      ;;
-      ;; Make _sure_ we closed the process.
+      ;; Make _sure_ we the TCP process from current `google-define-get-command'
+      ;; buffer got closed.
+      ;; 
       (when (get-buffer *google-define-get-buffer*)
         (kill-buffer *google-define-get-buffer*))
       ) ;; :CLOSE unwind-protect
@@ -1039,7 +1029,8 @@ COMMAND-PARAMS is a cons pair suitable for use with `google-define-get-command'.
             (google-define-font-lock search-word)
             ;; keep properties!
             (buffer-substring (mon-g2be -1 t) (mon-g2be 1 t)) ))
-    ;; Put name of `gdpb-gthr-bffr' on the `gdpb-cnt' var and kill that buffer too. 
+    ;; Put buffer object at `gdpb-gthr-bffr' on the `gdpb-cnt' var and then kill
+    ;; that buffer too.
     (setq gdpb-cnt (current-buffer))
     (when (get-buffer gdpb-cnt)
       (kill-buffer gdpb-cnt))
@@ -1056,10 +1047,10 @@ COMMAND-PARAMS is a cons pair suitable for use with `google-define-get-command'.
   "Add fontification text-properties to the definitions.\n
 Fontify with the following faces:\n
  `gg-def-base', `gg-def-num', `gg-def-delim',
- `gg-def-inition', `gg-def-defined'\n
+ `gg-def-inition', `gg-def-defined' `gg-def-heading'\n
 :SEE-ALSO `google-define', `google-define-get-command',
 `google-define-parse-buffer', `google-define-kill-def-buffers',
-`*regexp-google-defined-fontlock*'.\n►►►"
+`*regexp-google-defined-fontlock*'.\n▶▶▶"
   (let* ((gdfl-help-props
           `( ;; :NOTE `google-define-parse-buffer' spat strings matched by elt 0 and 3.
             ,(cdr (assq 'definition-hdr *regexp-google-defined-fontlock*))
@@ -1071,8 +1062,7 @@ Fontify with the following faces:\n
             (,(save-match-data 
                 (replace-regexp-in-string "<SEARCHED-WORD>" search-word
                                           (cadr (assq 'definition-word *regexp-google-defined-fontlock*)) t t))
-             ,@(cddr (assq 'definition-word *regexp-google-defined-fontlock*)))
-            )))
+             ,@(cddr (assq 'definition-word *regexp-google-defined-fontlock*))))))
     (mapc #'(lambda (gdfl-L-1)
               (mon-g2be -1)
               (while (search-forward-regexp  (elt gdfl-L-1 0) nil t)
@@ -1081,8 +1071,8 @@ Fontify with the following faces:\n
                  (elt gdfl-L-1 2))))
           gdfl-help-props)))
 
-
 ;;; ==============================
+;;; :PREFIX "gdsuco-"
 ;;; :CHANGESET 2443
 ;;; :CREATED <Timestamp: #{2011-05-17T20:16:14-04:00Z}#{11202} - by MON KEY>
 (defun %google-define-set-url-current-object (definition-buffer url-current-object-params)
@@ -1104,9 +1094,8 @@ and in turn we can then extract the individutal params with
  \(url-parse-query-string \(url-filename url-current-object\)\)\n
 or reconstruct the whole thing with `url-recreate-url', e.g.:\n
  \(url-recreate-url url-current-object\)\n
-:SEE-ALSO .\n►►►"
-  (let ( ;; paranoia
-        (gdsuco-bfr (get-buffer definition-buffer)))
+:SEE-ALSO .\n▶▶▶"
+  (let ((gdsuco-bfr (get-buffer definition-buffer))) ; paranoia
     (and gdsuco-bfr
          (with-current-buffer gdsuco-bfr
            (setq url-current-object
@@ -1141,7 +1130,7 @@ keyword parameters of `google-define-make-query-url' as follows:\n
 :SEE-ALSO `google-define-font-lock', `google-define-parse-buffer',
 `google-define-kill-def-buffers', `google-define-get-command',
 `mon-help-temp-docstring-display',`*google-define-view-map*' `gg-def-base',
-`gg-def-num', `gg-def-delim', `gg-def-inition', `gg-def-defined'.\n►►►"
+`gg-def-num', `gg-def-delim', `gg-def-inition', `gg-def-defined'.\n▶▶▶"
   (interactive "i\np")
   (let* ((ggdfn-sw (cond (intrp
                           (read-from-minibuffer
@@ -1185,10 +1174,10 @@ When called-interactively message with the buffers killed.\n
 :SEE-ALSO `google-define', `google-define-get-command',
 `google-define-parse-buffer', `google-define-font-lock',
 `google-define-kill-def-buffers', `mon-buffer-exists-p',
-`mon-buffer-exists-so-kill'.\n►►►"
+`mon-buffer-exists-so-kill'.\n▶▶▶"
   (let ((gdkdb-bfrs (mapcar #'(lambda (gdkdb-L-1)
                            (buffer-name (get-buffer gdkdb-L-1))) (buffer-list)))
-        gdkdb-def-bfrs)
+        (gdkdb-def-bfrs '()))
     (mapc #'(lambda (gdkdb-L-2) 
               (when (string-match-p (concat ".*" (cdr *google-define-buffer-suffix*)) gdkdb-L-2)
                 (push gdkdb-L-2 gdkdb-def-bfrs)))
@@ -1211,80 +1200,10 @@ When called-interactively message with the buffers killed.\n
 ;;;                     (google-define-kill-def-buffers t))
 ;;;              (google-define i)))
 
+
 ;;; ==============================
-
-
-
+;;; :GOOGLE-DEFINE-HEADING-FUN
 ;;; ==============================
-(defun google-define-button-action (button)
-  "Call BUTTON's associated function and args.\n
-Invoke `google-define-button-do-xref' using buttons google-def-fun property as
-function and google-def-args property as its argument.\n
-:EXAMPLE\n\n
-:SEE-ALSO .\n►►►"
-  (google-define-button-do-xref ;; (button-start button)
-   (button-get button 'google-def-fun)
-   (button-get button 'google-def-args)))
-
-(defun google-define-button-do-xref (function args) ;; (pos function args)
-  ;; There is a reference at point.  Follow it.
-  "Evaluate a button's associated FUNCTION and ARGS.\n
-:EXAMPLE\n\n
-:CALLED-BY `google-define-button-action'\n
-:SEE-ALSO .\n►►►"
-  (apply function args))
-
-(defun google-define-insert-xref-button (string type &rest args)
-  "Insert a google-define button with `insert-text-button'.\n
-Inserted button is part of the text instead of being a property of the buffer.\n
-STRING is a label for the button.\n
-TYPE is button-type from which to inherit other properties.\n
-:EXAMPLE\n\n
- \(google-define-insert-xref-button \"French\" 'google-related-lang-button <ARGS>\)
-:SEE-ALSO `define-button-type', `insert-button'.\n►►►"
-  (insert-text-button string 'type type 'google-def-args args))
-
-
-(define-button-type 'google-define-button
-  'follow-link t
-  'action #'google-define-button-action)
-
-(define-button-type 'google-related-lang-button
-  :supertype 'google-define-button
-  'google-def-fun ;; #'browse-url
-  #'google-define-related-language-xref
-  'help-echo "mouse-2, RET: view this URL in a browser")
-
-;; (defun google-define-related-phrases-xref (term url )
-;; Make xref for a URL with TERM found in current "Related phrases" heading.
-;; :NOTE the href has the relative URL on the next line.  This is in contrast to
-;; what we see for "Related languages" which is otherwise nearly identical. :(
-;; ,----
-;; | <h3>Related phrases</h3>
-;; | <ul class="rlt-snt">
-;; | <li>
-;; | <div>
-;; | <b><a href="
-;; |   /dictionary?q=absorbent+cotton&hl=en&sl=en&tl=en&oi=dict_re
-;; | ">absorbent cotton</a></b>
-;; | </div>
-;; | Fluffy wadding of a kind originally made from raw cotton, used for cleansing wounds, removing cosmetics, and padding delicate objects
-;; | </li>
-;; | <li>
-;; | <div>
-;; | <b><a href="
-;; |   /dictionary?q=cotton+grass&hl=en&sl=en&tl=en&oi=dict_re
-;; | ">cotton grass</a></b>
-;; `----
-;; following is from "Related languages"
-;; ,----
-;; | <a href="/dictionary?q=yogurt&hl=en&sl=it&tl=en
-;; | ">italiano</a>
-;; `----
-;;
-;;; (%google-define-clean-term-for-split term)
-;;
-;;
 
 ;;; ==============================
 ;;; :CHANGESET 2443
@@ -1310,7 +1229,7 @@ Plists :STRING property has the form:
 :EXAMPLE\n
 \(let \(\(rng \(plist-get \(google-define-find-next-heading\) :string\)\)\)
   \(string= \(car rng\) \(mon-buffer-sub-no-prop \(caadr  rng\) \(cdadr rng\)\)\)\)\n
-:SEE-ALSO .\n►►►" 
+:SEE-ALSO .\n▶▶▶" 
   (and (search-forward-regexp *regexp-google-define-headings* nil t)
        `(:string (,(match-string-no-properties 3)
                   (,(match-beginning 3) . ,(match-end 3)))
@@ -1321,14 +1240,14 @@ Plists :STRING property has the form:
 ;;; :CREATED <Timestamp: #{2011-05-17T12:22:08-04:00Z}#{11202} - by MON KEY>
 (defun google-define-make-heading-replacement (match-string)
   "Return a string suitable for use a replacement for MATCH-STRING.\n
-MATCH-STRING should satisfy either `stringp' and have length greater
-than 0, if not return \"\".\n
+MATCH-STRING should satisfy `stringp' and have length non `zerop',
+if not return \"\".\n
 :EXAMPLE\n\n\(google-define-make-heading-replacement \"Related Languages\"\)\n
 \(google-define-make-heading-replacement \"\"\)\n
 \(google-define-make-heading-replacement nil\)\n
 \(google-define-make-heading-replacement 8\)\n
 \(google-define-make-heading-replacement [?a ? ?b ? ?c]\)\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   (or (and (or (stringp match-string)
                (not (zerop (length match-string))))
            (concat (make-string 3 32)
@@ -1365,7 +1284,7 @@ pattern or second.\n
 <a href=\"/dictionary?q=yogurt&hl=en&sl=es&tl=en
 \">español</a>\n
 <a class=\"lightblue\" href=\"http://www.google.com/url?q=<SOME-NON-GG-URL>\">Kirsten Gillibrand</a>\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   (when (search-forward-regexp *regexp-google-define-next-url-in-heading* nil t)
     (match-data t) ))
 
@@ -1387,6 +1306,7 @@ pattern or second.\n
 
 
 ;;; ==============================
+;;; :PREFIX "gdfh-"
 ;;; :CHANGESET 2443
 ;;; :CREATED <Timestamp: #{2011-05-16T18:31:27-04:00Z}#{11201} - by MON KEY>
 (defun google-define-find-headings (match-word) ;; output-buffer (princ <RESULTS> (get-buffer output-buffer))
@@ -1394,8 +1314,10 @@ pattern or second.\n
     (save-excursion
       (mon-g2be -1)
       (let ((gdfh-matchedp '()))
+        ;;
+        ;; :TODO Find the next heading seaction and call its associated handler
+        ;; 
         (while (setq gdfh-matchedp (google-define-find-next-heading))
-          ;; (search-forward-regexp headings-regex  nil t)
           (let* ((gdfh-plist (plist-get gdfh-matchedp :string))
                  (gdfh-match-cur (car gdfh-plist))
                  (gdfh-match-rng (cadr gdfh-plist))
@@ -1440,7 +1362,7 @@ Returned regexp matches either for the following patterns:\n
  `----\n
 Helper function for `google-define-find-itemized'.\n
 :EXAMPLE\n\n\(%google-define-find-itemized-regexp-for-search-term \"yogurt\"\)\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   (save-match-data 
     (replace-regexp-in-string 
      (substring *regexp-google-define-itemized* 48 56) term *regexp-google-define-itemized* t)))
@@ -1471,10 +1393,12 @@ Yogurt is a custard-like food made from curdled milk<br>
 <li>
 a custard-like food made from curdled milk<br>
 </li>\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   (search-forward-regexp 
    (%google-define-find-itemized-regexp-for-search-term search-term) nil t))
 
+;;; ==============================
+;;; :PREFIX "gdfpr-"
 (defun google-define-parse-related-languages (heading-match-data search-word output-buffer)
   (let* ((gdfpr-str-plist (plist-get heading-match-data :string))
          (gdfpr-hdng-plist (plist-get heading-match-data :heading-range))
@@ -1483,18 +1407,19 @@ a custard-like food made from curdled milk<br>
          (gdfpr-beg (car gdfpr-match-rng))
          (gdfpr-end (cdr gdfpr-match-rng))
          (gdfpr-heading (google-define-make-heading-replacement gdfpr-match-str))
-         (gdfh-matchedp '())
+         (gdfpr-matchedp '())
          )
     ;;
     (with-current-buffer (current-buffer)
       (save-excursion
         ;; (save-restriction 
-        (while (setq gdfh-matchedp (google-define-find-next-heading))
+        (while (setq gdfpr-matchedp (google-define-find-next-heading))
           "<DO-SOMETHING-HERE>"
           )
         ))))
 
 ;;; ==============================
+;;; :PREFIX "gdfnrlrfst-"
 ;;; :CHANGESET 2443
 ;;; :CREATED <Timestamp: #{2011-05-17T16:53:00-04:00Z}#{11202} - by MON KEY>
 (defun %google-define-find-next-related-lang-regexp-for-search-term (current-term)
@@ -1508,14 +1433,6 @@ a custard-like food made from curdled milk<br>
   ;; For use with `google-define-find-next-related-language-xref'.
   (let ((gdfnrlrfst-clean
          (%google-define-clean-term-for-split current-term)))
-    ;; (setq *tt--gpu* (url-generic-parse-url "http://www.google.com/dictionary?q=absorbent+cotton&hl=en&sl=en&tl=en&oi=dict_re"))
-    ;; (url-expand-file-name "dictionary?q=absorbent+cotton&hl=en&sl=en&tl=en&oi=dict_re" "http://www.google.com")
-    ;; (url-expand-file-name "dictionary?q=absorbent+cotton&hl=en&sl=en&tl=en&oi=dict_re" "http://www.google.com")
-
-    
-    ;; (url-expand-file-name "dictionary?q=absorbent+cotton&hl=en&sl=en&tl=en&oi=dict_re");; "http://www.google.com")    
-    ;; (url-expander-remove-relative-links "../dictionary?q=absorbent+cotton&hl=en&sl=en&tl=en&oi=dict_re")
-    ;; (url-generic-parse-url "http://www.google.com/dictionary?q=absorbent+cotton&hl=en&sl=en&tl=en&oi=dict_re")
     ;;
     ;; :NOTE following is a  variant of `*regexp-google-define-source-ref*'.
     (concat 
@@ -1561,8 +1478,8 @@ a custard-like food made from curdled milk<br>
   ;; (let ((gdctfs-term (%google-define-clean-term-for-split current-term)))
   (search-forward-regexp current-term-regexp nil t))
 
-
 ;;; ==============================
+;;; :PREFIX "gdrlu-"
 ;;; :CHANGESET 2443
 ;;; :CREATED <Timestamp: #{2011-05-17T12:38:20-04:00Z}#{11202} - by MON KEY>
 (defun google-define-related-language-url (url)
@@ -1576,7 +1493,7 @@ Return value has the form:\n
 \(google-define-related-language-url \"dictionary?q=yogurt&hl=en&sl=it&tl=en\"\)\n
 :NOTE Don't forget about `url-parse-query-string'!\n
  \(url-parse-query-string \"dictionary?q=yogurt&hl=en&sl=it&tl=en\"\)\n
-:SEE-ALSO `url-parse-query-string'.\n►►►"
+:SEE-ALSO `url-parse-query-string'.\n▶▶▶"
   ;; :NOTE (url-parse-query-string "dictionary?aq=f&hl=en&sl=en&tl=en&oi=dict_re&q=absorbent+cotton")
   ;; (url-parse-query-string "dictionary?q=yogurt&hl=en&sl=it&tl=en")
   ;; (url-parse-query-string "dictionary?aq=f&hl=en&langpair=en%7Cen&q=absorbent+cotton")
@@ -1594,7 +1511,6 @@ Return value has the form:\n
          (setq gdrlu-target (cons gdrlu-target (substring url gdrlu-target (+ gdrlu-target 6)))))
     (list :url  url :host-lang gdrlu-host :source-lang gdrlu-source :target-lang gdrlu-target)))
 
-;; url-hexify-string
 (defun google-define-related-language-xref (term url source-language target-language)
   ;; Make google-define xrefs found in current "Related languages" heading
   ;; 
@@ -1615,6 +1531,109 @@ Return value has the form:\n
   ;; `google-define-related-language-url'
   "<DO-SOMETHING-HERE>"
   )
+
+;; (defun google-define-related-phrases-xref (term url )
+;; Make xref for a URL with TERM found in current "Related phrases" heading.
+;; :NOTE the href has the relative URL on the next line.  This is in contrast to
+;; what we see for "Related languages" which is otherwise nearly identical. :(
+;; ,----
+;; | <h3>Related phrases</h3>
+;; | <ul class="rlt-snt">
+;; | <li>
+;; | <div>
+;; | <b><a href="
+;; |   /dictionary?q=absorbent+cotton&hl=en&sl=en&tl=en&oi=dict_re
+;; | ">absorbent cotton</a></b>
+;; | </div>
+;; | Fluffy wadding of a kind originally made from raw cotton, used for cleansing wounds, removing cosmetics, and padding delicate objects
+;; | </li>
+;; | <li>
+;; | <div>
+;; | <b><a href="
+;; |   /dictionary?q=cotton+grass&hl=en&sl=en&tl=en&oi=dict_re
+;; | ">cotton grass</a></b>
+;; `----
+;; following is from "Related languages"
+;; ,----
+;; | <a href="/dictionary?q=yogurt&hl=en&sl=it&tl=en
+;; | ">italiano</a>
+;; `----
+;;
+;;; (%google-define-clean-term-for-split term)
+;;
+
+
+;; (setq *tt--gpu* (url-generic-parse-url "http://www.google.com/dictionary?q=absorbent+cotton&hl=en&sl=en&tl=en&oi=dict_re"))
+;; (url-expand-file-name "dictionary?q=absorbent+cotton&hl=en&sl=en&tl=en&oi=dict_re" "http://www.google.com")
+;; (url-expand-file-name "dictionary?q=absorbent+cotton&hl=en&sl=en&tl=en&oi=dict_re" "http://www.google.com")    
+;; (url-expand-file-name "dictionary?q=absorbent+cotton&hl=en&sl=en&tl=en&oi=dict_re");; "http://www.google.com")    
+;; (url-expander-remove-relative-links "../dictionary?q=absorbent+cotton&hl=en&sl=en&tl=en&oi=dict_re")
+;; (url-generic-parse-url "http://www.google.com/dictionary?q=absorbent+cotton&hl=en&sl=en&tl=en&oi=dict_re")
+;; url-hexify-string
+
+
+;;; ==============================
+;;; :GOOGLE-DEFINE-BUTTON-FUN
+;;; ==============================
+
+;;; ==============================
+;;; :CHANGESET 2443
+;;; :CREATED <Timestamp: #{2011-05-17T21:24:19-04:00Z}#{11202} - by MON KEY>
+(defun google-define-button-action (button)
+  "Call BUTTON's associated function and args.\n
+Invoke `google-define-button-do-xref' using buttons google-def-fun property as
+function and google-def-args property as its argument.\n
+:EXAMPLE\n\n
+:SEE-ALSO .\n▶▶▶"
+  (google-define-button-do-xref ;; (button-start button)
+   (button-get button 'google-def-fun)
+   (button-get button 'google-def-args)))
+
+;;; ==============================
+;;; :CHANGESET 2443
+;;; :CREATED <Timestamp: #{2011-05-17T21:24:15-04:00Z}#{11202} - by MON KEY>
+(defun google-define-button-do-xref (function args) ;; (pos function args)
+  ;; There is a reference at point.  Follow it.
+  "Evaluate a button's associated FUNCTION and ARGS.\n
+:EXAMPLE\n\n
+:CALLED-BY `google-define-button-action'\n
+:SEE-ALSO .\n▶▶▶"
+  (apply function args))
+
+;;; ==============================
+;;; :CHANGESET 2443
+;;; :CREATED <Timestamp: #{2011-05-17T21:24:12-04:00Z}#{11202} - by MON KEY>
+(defun google-define-insert-xref-button (string type &rest args)
+  "Insert a google-define button with `insert-text-button'.\n
+Inserted button is part of the text instead of being a property of the buffer.\n
+STRING is a label for the button.\n
+TYPE is button-type from which to inherit other properties.\n
+:EXAMPLE\n\n
+ \(google-define-insert-xref-button \"French\" 'google-related-lang-button <ARGS>\)
+:SEE-ALSO `define-button-type', `insert-button'.\n▶▶▶"
+  (insert-text-button string 'type type 'google-def-args args))
+
+
+;;; ==============================
+;;; :GOOGLE-DEFINE-BUTTONS
+;;; ==============================
+
+;;; ==============================
+;;; :CHANGESET 2443
+;;; :CREATED <Timestamp: #{2011-05-17T21:24:34-04:00Z}#{11202} - by MON KEY>
+(define-button-type 'google-define-button
+  'follow-link t
+  'action #'google-define-button-action)
+
+
+;;; ==============================
+;;; :CHANGESET 2443
+;;; :CREATED <Timestamp: #{2011-05-17T21:24:37-04:00Z}#{11202} - by MON KEY>
+(define-button-type 'google-related-lang-button
+  :supertype 'google-define-button
+  'google-def-fun ;; #'browse-url
+  #'google-define-related-language-xref
+  'help-echo "mouse-2, RET: view this URL in a browser")
 
 
 ;;; ==============================
@@ -1638,7 +1657,7 @@ Return value has the form:\n
 ;;;     (define-key gg-vm "k" 'View-kill-and-leave)
 ;;;     gg-vm)
 ;;;   "Keybinding for `view-mode'/`help-mode' in `google-define' help buffers.\n
-;;; :SEE-ALSO `*google-define-get-comman', `*google-define-html-entry-table*'.\n►►►")
+;;; :SEE-ALSO `*google-define-get-comman', `*google-define-html-entry-table*'.\n▶▶▶")
 ;;
 ;;; :TEST-ME *google-define-view-map* 
 ;;;(progn (makunbound '*google-define-view-map*) (unintern "*google-define-view-map*" obarray) )
@@ -1667,7 +1686,7 @@ Return value has the form:\n
 ;;; Set the local keymap to `*google-define-view-map*'. 
 ;;; Bind 'view-kill-and-leave to various keys.
 ;;; Set the view-exit-action to kill the buffer.
-;;; :SEE-ALSO `*google-define-buffer-suffix*'.\n►►►"
+;;; :SEE-ALSO `*google-define-buffer-suffix*'.\n▶▶▶"
 ;;;   (when (string-match-p   ;; :NOTE Consider passing in the current-buffers name :)
 ;;;          (concat ".*" (cdr *google-define-buffer-suffix*))
 ;;;          (buffer-name (get-buffer (current-buffer))))
@@ -1805,7 +1824,7 @@ vanilla \" \" (char 32) instead.\n
 :SEE (URL `http://www.w3.org/TR/xhtml1/DTD/xhtml-special.ent')\n
 :SEE-ALSO `*regexp-wrap-url-schemes*', `*regexp-clean-xml-parse*',
 `*regexp-percent-encoding-reserved-chars*', `*regexp-clean-ulan-diacritics*',
-`*regexp-cp1252-to-latin1*'.\n►►►")
+`*regexp-cp1252-to-latin1*'.\n▶▶▶")
 ) ;; :CLOSE unless
 
 

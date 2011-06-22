@@ -6,11 +6,11 @@
 ;;; facilities for documentation of code that is proprietary or which will
 ;;; never fall under the scope of GPL or GFDL.
 ;;;
-;;; FUNCTIONS:►►►
+;;; FUNCTIONS:▶▶▶
 ;;; `mon-help-w32-shell-execute', `mon-help-w32-cmd-commands',
 ;;; `mon-bind-doc-help-proprietery-vars-at-loadtime'
 ;;;
-;;; FUNCTIONS:◄◄◄
+;;; FUNCTIONS:◀◀◀
 ;;;
 ;;; MACROS:
 ;;;
@@ -69,7 +69,7 @@
 If this var remains nil you will not be compromised by potentially proprietary
 MS w32 related content.  Think of this kludge as cherry popping EULA. ;)\n
 :SEE-ALSO `*mon-help-w32-CMD-commands*', `mon-help-w32-cmd-commands',
-`mon-bind-doc-help-proprietery-vars-at-loadtime'.\n►►►")
+`mon-bind-doc-help-proprietery-vars-at-loadtime'.\n▶▶▶")
 
 ;;; ==============================
 ;;; :CREATED <Timestamp: #{2010-02-16T13:34:05-05:00Z}#{10072} - by MON KEY>
@@ -81,7 +81,7 @@ This is usually located in the \"system32\" folder in the Windows folder:
 :SEE (URL `http://www.kapcom.com.au/Windows-CMD-Commands-CMD-Network-Commands.html')\n
 :SEE (URL `http://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/cmd.mspx?mfr=true')\n
 :SEE-ALSO `mon-help-w32-cmd-commands', `mon-help-w32-shell-execute',
-`mon-bind-doc-help-proprietery-vars-at-loadtime'.\n►►►")
+`mon-bind-doc-help-proprietery-vars-at-loadtime'.\n▶▶▶")
 
 ;;; ==============================
 ;;; :CREATED <Timestamp: #{2010-02-16T14:21:34-05:00Z}#{10072} - by MON KEY>
@@ -96,7 +96,7 @@ When called interactively prompt for a command name to search.
 :SEE (URL `http://www.kapcom.com.au/Windows-CMD-Commands-CMD-Network-Commands.html')
 :SEE (URL `http://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/cmd.mspx?mfr=true')\n
 :SEE-ALSO `mon-bind-doc-help-proprietery-vars-at-loadtime', 
-`*mon-help-w32-CMD-commands*' `mon-help-w32-shell-execute'.\n►►►"
+`*mon-help-w32-CMD-commands*' `mon-help-w32-shell-execute'.\n▶▶▶"
 (interactive "i\np")
 (cond (intrp (message
               (mon-help-w32-cmd-commands
@@ -124,7 +124,7 @@ When FORCE-BIND is non-nil clear existing hashtable before populating the key
 value pairs in the sublists of CMD-VAR-LIST.\n
 :SEE-ALSO `mon-bind-cifs-vars-at-loadtime', `mon-set-register-tags-loadtime',
 `mon-bind-iptables-vars-at-loadtime', `mon-CL-cln-colon-swap',
-`mon-bind-doc-help-proprietery-vars-at-loadtime'.\n►►►"
+`mon-bind-doc-help-proprietery-vars-at-loadtime'.\n▶▶▶"
   ;; Not doing `clrhash' because it might not be bound.
   (cond ((not (bound-and-true-p *mon-help-w32-CMD-commands*))
          (setq *mon-help-w32-CMD-commands* (make-hash-table :test 'equal :size 217)))
@@ -358,7 +358,7 @@ Unicode	Implemented as ANSI and Unicode versions.\n
 :SEE \(URL `http://support.microsoft.com/kb/238245'\).
 :SEE \(URL `http://msdn.microsoft.com/en-us/cc300389.aspx#E'\).\n
 :SEE-ALSO `mon-help-w32-cmd-commands', `mon-help-w32-env',
-`*mon-help-w32-CMD-commands*', `mon-bind-doc-help-proprietery-vars-at-loadtime'.\n►►►"
+`*mon-help-w32-CMD-commands*', `mon-bind-doc-help-proprietery-vars-at-loadtime'.\n▶▶▶"
   (interactive "i\nP")
   (if (or insrtp intrp)
       (mon-help-function-spit-doc 'mon-help-w32-shell-execute :insertp t)

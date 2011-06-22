@@ -21,10 +21,10 @@
 ;; DESCRIPTION:
 ;; `naf-mode-faces' build and define faces for use with `naf-mode'.
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;; `mon-face-bold>' `naf-facercise-prop-val', `naf-face-prop-val-p',
 ;; `naf-map-face-key->val', `mon-bind-naf-face-vars-loadtime', 
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;;
@@ -96,7 +96,7 @@
 ;;
 ;; TODO:
 ;; - Xref the facenames with their constants. 
-;; - Refactor the "^:SEE-ALSO .\nUsed in `naf-mode'.\n►►►$": by replaceing "Used
+;; - Refactor the "^:SEE-ALSO .\nUsed in `naf-mode'.\n▶▶▶$": by replaceing "Used
 ;;   in `naf-mode'" -> ":USED-IN `naf-mode'" and moving it above ":SEE-ALSO"
 ;;   But note that this will cause the "face/var/const autodoc" routines - as yet
 ;;   unfinished/buggy - so that will need to be corrected also.
@@ -323,7 +323,7 @@ The symbols contained of this list are defined in :FILE naf-mod-faces.el\n
 :SEE-ALSO `*mon-default-loads-xrefs*', `*mon-default-start-loads-xrefs*',
 `*mon-dir-locals-alist-xrefs*', `*mon-testme-utils-xrefs*',
 `*mon-button-utils-xrefs*', `*naf-mode-xref-of-xrefs*', `*naf-mode-faces-xrefs*'
-`*mon-ulan-utils-xrefs*', `*mon-xrefs-xrefs'.\n►►►"
+`*mon-ulan-utils-xrefs*', `*mon-xrefs-xrefs'.\n▶▶▶"
   :type '(repeat symbol)
   :group 'naf-mode-faces
   :group 'mon-xrefs)
@@ -335,7 +335,7 @@ The symbols contained of this list are defined in :FILE naf-mod-faces.el\n
   "For all faces map face-atrribute :weight from bold -> :weight normal.\n
 :SEE-ALSO `naf-facercise-prop-val', `naf-face-prop-val-p',
 `mon-bind-naf-face-vars-loadtime', `mon-help-naf-mode-faces',
-`mon-help-faces'.\n►►►"
+`mon-help-faces'.\n▶▶▶"
   (mapc (lambda (face)
           (when (eq (face-attribute face :weight) 'bold)
             (set-face-attribute face nil :weight 'normal)))
@@ -353,7 +353,7 @@ Where the car of the list is used to find properties in `*naf-face-vals-alist*'.
 :NOTE bound at loadtime with `mon-bind-naf-face-vars-loadtime'.\n
 :SEE-ALSO `naf-facercise-prop-val', `naf-face-prop-val-p',
 `naf-map-face-key->val', `mon-help-naf-mode-faces', `*naf-face-prop-keywords*',
-`*naf-face-prop-vals*', `*naf-face-keyword->vals*'.\n►►►")
+`*naf-face-prop-vals*', `*naf-face-keyword->vals*'.\n▶▶▶")
 ;;
 ;;; :TEST-ME 
 ;;; (assoc (nth 1 *naf-face-prop-keywords*)
@@ -378,7 +378,7 @@ Where the car of the list is used to find properties in `*naf-face-vals-alist*'.
 :NOTE bound at loadtime with `mon-bind-naf-face-vars-loadtime'.\n
 :SEE-ALSO `naf-facercise-prop-val', `naf-face-prop-val-p',
 `naf-map-face-key->val', `mon-help-naf-mode-faces', `*naf-face-props*',
-`*naf-face-prop-keywords*', `*naf-face-keyword->vals*'.\n►►►")
+`*naf-face-prop-keywords*', `*naf-face-keyword->vals*'.\n▶▶▶")
 ;;
 ;;; :TEST-ME  *naf-face-prop-vals*
 ;;;(progn (makunbound '*naf-face-prop-vals*) (unintern '*naf-face-prop-vals*) )
@@ -396,7 +396,7 @@ and pushed onto such that the values of var are independent of
 :NOTE bound at loadtime with `mon-bind-naf-face-vars-loadtime'.\n
 :SEE-ALSO `naf-facercise-prop-val', `naf-face-prop-val-p',
 `naf-map-face-key->val', `mon-help-naf-mode-faces', `*naf-face-props*',
-`*naf-face-keyword->vals*'.\n►►►")
+`*naf-face-keyword->vals*'.\n▶▶▶")
 ;;
 ;;; :TEST-ME  *naf-face-prop-keywords*
 ;;;(progn (makunbound '*naf-face-prop-keywords*) (unintern '*naf-face-prop-keywords*) )
@@ -417,7 +417,7 @@ modified, its contents may appear identical to `*naf-face-prop-keywords*'.\n
 :NOTE bound at loadtime with `mon-bind-naf-face-vars-loadtime'.\n
 :SEE-ALSO `naf-face-prop-val-p', `naf-map-face-key->val',
 `mon-help-naf-mode-faces', `*naf-face-props*',
-`*naf-face-vals-alist*',`*naf-face-keyword->vals*'.\n►►►")
+`*naf-face-vals-alist*',`*naf-face-keyword->vals*'.\n▶▶▶")
 ;;
 ;;; :TEST-ME 
 ;;; (mapcar '(lambda (x) (progn (newline) (prin1  (car x) (current-buffer)))) *naf-face-vals-alist*)
@@ -439,7 +439,7 @@ modified, its contents may appear identical to `*naf-face-prop-keywords*'.\n
   "*A list 1:1 mapping of `*naf-face-prop-keywords*' -> `*naf-face-prop-vals*'.\n
 :NOTE bound at loadtime with `mon-bind-naf-face-vars-loadtime'.\n
 :SEE-ALSO `naf-facercise-prop-val', `naf-face-prop-val-p', `naf-map-face-key->val',
-`*naf-face-props*', `*naf-face-vals-alist*', `mon-help-naf-mode-faces'.\n►►►")
+`*naf-face-props*', `*naf-face-vals-alist*', `mon-help-naf-mode-faces'.\n▶▶▶")
 ;;
 ;;; :TEST-ME (member 'people-naf (cdr (assoc :naf-ref-type-val *naf-face-keyword->vals*)))
 ;;
@@ -471,7 +471,7 @@ Following maps the order:\n
  :AFTER `*naf-face-keyword->vals*'(7) `*naf-face-props*'(1)\n
 :NOTE Evaluated with `mon-after-mon-utils-loadtime' when predicate
 `IS-MON-SYSTEM-P' is non-nil.\n
-:SEE-ALSO `mon-help-naf-mode-faces', `*naf-mode-faces-xrefs*'.\n►►►"
+:SEE-ALSO `mon-help-naf-mode-faces', `*naf-mode-faces-xrefs*'.\n▶▶▶"
   (unless (and (bound-and-true-p *naf-face-props*)
                (bound-and-true-p *naf-face-prop-vals*)
                (bound-and-true-p *naf-face-prop-keywords*)
@@ -557,7 +557,7 @@ The cdr of the elts of FC-PRP are assoc keys of elts in second alist FC-PRP-VAL.
 The cdr of the elts of FC-PRP-VAL is a list of 'properties' which
 `naf-face-prop-val-p' tests as assignable to the keywords in FC-PRP.\n
 :SEE-ALSO `mon-face-bold->normal', `mon-bind-naf-face-vars-loadtime',
-`mon-help-naf-mode-faces'.\n►►►"
+`mon-help-naf-mode-faces'.\n▶▶▶"
   (let ((fp fc-prp)
         (fpv fc-prp-val)
         put-back)
@@ -607,7 +607,7 @@ should PROP-VAL return nil.\n
  ;=>\(:naf-field-value-type ebay-entry naf-field-value-type-val\)\)\n
 :SEE-ALSO `naf-map-face-key->val', `mon-bind-naf-face-vars-loadtime',
 `mon-help-naf-mode-faces', `*naf-face-vals-alist*', `*naf-face-prop-keywords*',
-`*naf-face-prop-vals*', `*naf-face-keyword->vals*'.\n►►►"
+`*naf-face-prop-vals*', `*naf-face-keyword->vals*'.\n▶▶▶"
   (let* ((key-look   (assoc property-key (or face-keywd-table *naf-face-keyword->vals*)))
          (key->      (cdr (assoc property-key (or face-prop-table *naf-face-props*))))
          (val-look   (member prop-val key-look))
@@ -657,7 +657,7 @@ However, rhe indirection lets us verify/change the values in
                                         \\ --> `*naf-face-keyword->vals*'
      `*naf-face-prop-vals*' :VALUES ____/\n
 :SEE-ALSO `naf-facercise-prop-val', `naf-face-prop-val-p',
-`mon-bind-naf-face-vars-loadtime', `mon-help-naf-mode-faces'.\n►►►"
+`mon-bind-naf-face-vars-loadtime', `mon-help-naf-mode-faces'.\n▶▶▶"
   (let ((trpl-prop     (or face-triple-keys *naf-face-prop-keywords*))
         (val-tbl       (or face-val-table *naf-face-vals-alist*))
         (prop-val-cons (or prop-val-table *naf-face-props*))
@@ -945,7 +945,7 @@ A trailing \":HAS-XREF\" indicates the face/var/constant has an xrefd docstring.
 `*naf-face-prop-vals*', `*naf-face-prop-keywords*', `*naf-face-vals-alist*',
 `*naf-face-keyword->vals*', `mon-help-faces', `mon-help-faces-themes',
 `mon-help-basic-faces', `mon-help-font-lock' `mon-help-font-lock',
-`mon-help-text-property-stickyness'.\n►►►"
+`mon-help-text-property-stickyness'.\n▶▶▶"
   (interactive "i\nP")
   (if (or insertp intrp)
       (mon-help-function-spit-doc 'mon-help-naf-mode-faces :insertp t)
@@ -970,7 +970,7 @@ A trailing \":HAS-XREF\" indicates the face/var/constant has an xrefd docstring.
 :KEYWORD-REGEXPS-IN `naf-mode-db-entry'.
 These are standard `naf-mode' template keywords.
 :FACE-DOCUMENTED-IN `naf-mode-db-entry-face'.
-:SEE-ALSO .\nUsed in `naf-mode'.\n►►►"
+:SEE-ALSO .\nUsed in `naf-mode'.\n▶▶▶"
   :group 'naf-mode
   :group 'naf-mode-faces)
 ;;
@@ -979,7 +979,7 @@ These are standard `naf-mode' template keywords.
 :KEYWORD-REGEXPS-IN `naf-mode-db-entry'.
 These are standard `naf-mode' template keywords.
 :FACE-DEFINED-IN `naf-mode-db-entry-face'
-:SEE-ALSO .\n►►►")
+:SEE-ALSO .\n▶▶▶")
 ;;
 ;;; :TEST-ME (describe-face 'naf-mode-db-entry-face)
 ;;
@@ -994,7 +994,7 @@ These are standard `naf-mode' template keywords.
 These are standard `naf-mode' template keywords.
 :KEYWORD-REGEXPS-IN `naf-mode-delim', `naf-mode-comment-delim'.
 :FACE-DOCUMENTED-IN `naf-mode-delim-fface'.
-:SEE-ALSO .\nUsed in `naf-mode'.\n►►►"
+:SEE-ALSO .\nUsed in `naf-mode'.\n▶▶▶"
   :group 'naf-mode
   :group 'naf-mode-faces)
 ;;
@@ -1003,7 +1003,7 @@ These are standard `naf-mode' template keywords.
 These are standard `naf-mode' template keywords.
 :KEYWORD-REGEXPS-IN `naf-mode-delim' and `naf-mode-comment-delim'.
 :FACE-DEFINED-IN `naf-mode-delim-face'.\n
-:SEE-ALSO .\n►►►")
+:SEE-ALSO .\n▶▶▶")
 ;;
 ;;; :TEST-ME (describe-face 'naf-mode-delim-face)
 ;;
@@ -1018,7 +1018,7 @@ These are standard `naf-mode' template keywords.
 These are standard `naf-mode' template keywords.
 :KEYWORD-REGEXPS-IN `naf-mode-name-divider'.
 :FACE-DOCUMENTED-IN `naf-mode-name-divider-fface'.
-:SEE-ALSO .\nUsed in `naf-mode'.\n►►►"
+:SEE-ALSO .\nUsed in `naf-mode'.\n▶▶▶"
   :group 'naf-mode
   :group 'naf-mode-faces)
 ;;
@@ -1027,7 +1027,7 @@ These are standard `naf-mode' template keywords.
 These are standard `naf-mode' template keywords.
 :KEYWORD-REGEXPS-IN `naf-mode-name-divider'.
 :FACE-DEFINED-IN `naf-mode-name-divider-face'.
-:SEE-ALSO .\n►►►")
+:SEE-ALSO .\n▶▶▶")
 ;;
 ;;; :TEST-ME (describe-face 'naf-mode-name-divider-face)
 ;;
@@ -1042,7 +1042,7 @@ These are standard `naf-mode' template keywords.
 These are standard `naf-mode' template keywords.
 :KEYWORD-REGEXPS-IN `naf-mode-url-flag'.
 :FACE-DOCUMENTED-IN `naf-mode-field-url-flag-face'.
-:SEE-ALSO .\nUsed in `naf-mode'.\n►►►"
+:SEE-ALSO .\nUsed in `naf-mode'.\n▶▶▶"
   :group 'naf-mode
   :group 'naf-mode-faces)
 ;;
@@ -1051,7 +1051,7 @@ These are standard `naf-mode' template keywords.
 These are standard `naf-mode' template keywords.
 :KEYWORD-REGEXPS-IN `naf-mode-url-flag'.
 :FACE-DEFINED-IN `naf-mode-field-url-flag-face'.
-:SEE-ALSO .\n►►►")
+:SEE-ALSO .\n▶▶▶")
 ;;
 ;;; :TEST-ME (describe-face 'naf-mode-field-url-flag-face)
 ;;
@@ -1067,7 +1067,7 @@ These are standard `naf-mode' template keywords.
 :KEYWORD-REGEXPS-IN `naf-mode-url-wrapper-flag'.
 :FACE-INHERITS-FROM `naf-mode-field-url-flag-fface'.
 :FACE-DOCUMENTED-IN `naf-mode-delimit-url-flag-fface'.
-:SEE-ALSO .\nUsed in `naf-mode'.\n►►►"
+:SEE-ALSO .\nUsed in `naf-mode'.\n▶▶▶"
     :group 'naf-mode
     :group 'naf-mode-faces)
 ;;
@@ -1077,7 +1077,7 @@ These are standard `naf-mode' template keywords.
 :KEYWORD-REGEXPS-IN `naf-mode-url-wrapper-flag'.
 :FACE-INHERITS-FROM `naf-mode-field-url-flag-fface'.
 :FACE-DEFINED-IN `naf-mode-delimit-url-flag-face'.
-:SEE-ALSO .\n►►►")
+:SEE-ALSO .\n▶▶▶")
 ;;
 ;;; :TEST-ME (describe-face 'naf-mode-delimit-url-flag-face)
 ;;
@@ -1095,7 +1095,7 @@ Fontlock timestamps generated with FUNCTION(S):
 These are standard `naf-mode' template keywords.
 :KEYWORD-REGEXPS-IN `naf-mode-timestamp-flag'.
 :FACE-DOCUMENTED-IN `naf-mode-timestamp-fface'.
-:SEE-ALSO .\nUsed in `naf-mode'.\n►►►"
+:SEE-ALSO .\nUsed in `naf-mode'.\n▶▶▶"
   :group 'naf-mode
   :group 'naf-mode-faces)
 ;;
@@ -1106,7 +1106,7 @@ Fontlocks timestamps generated with FUNCION(S):
 These are standard `naf-mode' template keywords.
 :KEYWORD-REGEXPS-IN `naf-mode-timestamp-flag'.
 :FACE-DEFINED-IN `naf-mode-timestamp-face'.
-:SEE-ALSO .\n►►►")
+:SEE-ALSO .\n▶▶▶")
 ;;
 ;;; :TEST-ME (describe-face 'naf-mode-timestamp-face)
 ;;
@@ -1123,7 +1123,7 @@ These are standard `naf-mode' template keywords.
 :KEYWORD-REGEXPS-IN `naf-mode-accessed-by-flag'.
 :INHERITS-FROM `naf-mode-timestamp-face'.
 :FACE-DOCUMENTED-IN `naf-mode-accessed-by-fface'.
-:SEE-ALSO .\nUsed in `naf-mode'.\n►►►"
+:SEE-ALSO .\nUsed in `naf-mode'.\n▶▶▶"
   :group 'naf-mode
   :group 'naf-mode-faces)
 ;;
@@ -1135,7 +1135,7 @@ These are standard `naf-mode' template keywords.
 :KEYWORD-REGEXPS-IN `naf-mode-accessed-by-flag'.
 :FACE-INHERITS-FROM `naf-mode-timestamp-face'.
 :FACE-DEFINED-IN `naf-mode-accessed-by-face'.
-:SEE-ALSO .\n►►►")
+:SEE-ALSO .\n▶▶▶")
 ;;
 ;;; :TEST-ME (describe-face 'naf-mode-accessed-by-face)
 ;;
@@ -1154,7 +1154,7 @@ These are standard `naf-mode' template keywords.
   "*Face font-locking of primary National db entries fields in .naf files.
 :KEYWORD-REGEXPS-IN `naf-mode-field-names'.
 :FACE-DOCUMENTED-IN `naf-mode-field-fface'.
-:SEE-ALSO .\nUsed in `naf-mode'.\n►►►"
+:SEE-ALSO .\nUsed in `naf-mode'.\n▶▶▶"
   :group 'naf-mode
   :group 'naf-mode-faces)
 ;;
@@ -1162,7 +1162,7 @@ These are standard `naf-mode' template keywords.
   "*Face for `naf-mode' font-locking of National db entries.
 :KEYWORD-REGEXPS-IN `naf-mode-field-names'.
 :FACE-DEFINED-IN `naf-mode-field-face'.
-:SEE-ALSO .\n►►►")
+:SEE-ALSO .\n▶▶▶")
 ;;
 ;;; :TEST-ME (describe-face 'naf-mode-field-face)
 ;;
@@ -1180,7 +1180,7 @@ These are standard `naf-mode' template keywords.
 :FACE-DOCUMENTED-IN `naf-mode-db-field-entry-fface'.
 :SEE-ALSO
 `naf-mode-db-field-entry-ulan-fface', `naf-mode-db-field-entry-bnf-fface'.\n
-Used in `naf-mode'.\n►►►"
+Used in `naf-mode'.\n▶▶▶"
   :group 'naf-mode
   :group 'naf-mode-faces)
 ;;
@@ -1189,7 +1189,7 @@ Used in `naf-mode'.\n►►►"
 :KEYWORD-REGEXPS-IN `naf-mode-db-numbers-flag'.
 :FACE-DEFINED-IN `naf-mode-db-field-entry-face'.
 :SEE-ALSO 
-`naf-mode-db-field-entry-ulan-fface', `naf-mode-db-field-entry-bnf-fface'.\n►►►")
+`naf-mode-db-field-entry-ulan-fface', `naf-mode-db-field-entry-bnf-fface'.\n▶▶▶")
 ;;
 ;;; :TEST-ME (describe-face 'naf-mode-db-field-entry-face)
 ;;
@@ -1205,7 +1205,7 @@ Used in `naf-mode'.\n►►►"
 :KEYWORD-REGEXPS-IN `naf-mode-field-names-bnf'.
 :FACE-INHERITS-FROM `naf-mode-field-face'.
 :FACE-DOCUMENTED-IN `naf-mode-field-bnf-fface'.
-:SEE-ALSO `naf-mode-db-field-entry-bnf-fface'.\nUsed in `naf-mode'.\n►►►"
+:SEE-ALSO `naf-mode-db-field-entry-bnf-fface'.\nUsed in `naf-mode'.\n▶▶▶"
   :group 'naf-mode
   :group 'naf-mode-faces)
 ;;
@@ -1214,7 +1214,7 @@ Used in `naf-mode'.\n►►►"
 :KEYWORD-REGEXPS-IN `naf-mode-field-names-bnf'.
 :FACE-DEFINED-IN  `naf-mode-field-bnf-face'.
 :FACE-INHERITS-FROM `naf-mode-field-face'.
-:SEE-ALSO `naf-mode-db-field-entry-bnf-fface'.\n►►►")
+:SEE-ALSO `naf-mode-db-field-entry-bnf-fface'.\n▶▶▶")
 ;;
 ;;; :TEST-ME (describe-face 'naf-mode-field-bnf-face)
 ;;
@@ -1230,7 +1230,7 @@ Used in `naf-mode'.\n►►►"
 Face documentation in var `naf-mode-db-field-entry-bnf-fface'.
 :FACE-INHERITS-FROM `naf-mode-db-field-entry-face'.
 :SEE-ALSO `naf-mode-db-field-entry-fface', `naf-mode-field-bnf-fface',
-`naf-mode-db-field-entry-ulan-fface'.\nUsed in `naf-mode'.\n►►►"
+`naf-mode-db-field-entry-ulan-fface'.\nUsed in `naf-mode'.\n▶▶▶"
   	    :group 'naf-mode
   	    :group 'naf-mode-faces)
 ;;
@@ -1240,7 +1240,7 @@ Face documentation in var `naf-mode-db-field-entry-bnf-fface'.
 :FACE-DEFINED-IN `naf-mode-db-field-entry-bnf-face'.
 :FACE-INHERITS-FROM `naf-mode-db-field-entry-face'.
 :SEE-ALSO `naf-mode-db-field-entry-fface', `naf-mode-field-bnf-fface',
-`naf-mode-db-field-entry-ulan-fface'.\n►►►")
+`naf-mode-db-field-entry-ulan-fface'.\n▶▶▶")
 ;;
 ;;; :TEST-ME (describe-face 'naf-mode-db-field-entry-bnf-face)
 ;;
@@ -1257,7 +1257,7 @@ Face documentation in var `naf-mode-db-field-entry-bnf-fface'.
 :KEYWORD-REGEXPS-IN `'.
 :FACE-INHERITS-FROM `naf-mode-field-face'.
 :FACE-DOCUMENTED-IN `naf-mode-field-ulan-fface'.
-:SEE-ALSO `naf-mode-ulan-ppl-corp-face-fface'.\nUsed in `naf-mode'.\n►►►"
+:SEE-ALSO `naf-mode-ulan-ppl-corp-face-fface'.\nUsed in `naf-mode'.\n▶▶▶"
     :group 'naf-mode
     :group 'naf-mode-faces)
 ;;
@@ -1266,7 +1266,7 @@ Face documentation in var `naf-mode-db-field-entry-bnf-fface'.
 :KEYWORD-REGEXPS-IN `'.
 :FACE-INHERITS-FROM `naf-mode-field-face'.
 :FACE-DEFINED-IN `naf-mode-field-ulan-face'.
-:SEE-ALSO `naf-mode-ulan-ppl-corp-face-fface'.\n►►►")
+:SEE-ALSO `naf-mode-ulan-ppl-corp-face-fface'.\n▶▶▶")
 ;;
 ;;; :TEST-ME (describe-face 'naf-mode-field-ulan-face)
 ;;
@@ -1281,7 +1281,7 @@ Face documentation in var `naf-mode-db-field-entry-bnf-fface'.
 :KEYWORD-REGEXPS-IN `naf-mode-db-field-flags-ulan-paren'.
 :FACE-INHERITS-FROM `naf-mode-field-entry-face'.
 :FACE-DOCUMENTED-IN `naf-mode-db-field-entry-ulan-fface'.
-:SEE-ALSO `naf-mode-ulan-ppl-corp-fface'.\nUsed in `naf-mode'.\n►►►"
+:SEE-ALSO `naf-mode-ulan-ppl-corp-fface'.\nUsed in `naf-mode'.\n▶▶▶"
   	    :group 'naf-mode
   	    :group 'naf-mode-faces)
 ;;
@@ -1290,7 +1290,7 @@ Face documentation in var `naf-mode-db-field-entry-bnf-fface'.
 :KEYWORD-REGEXPS-IN `naf-mode-db-field-flags-ulan-paren'.
 :FACE-INHERITS-FROM `naf-mode-field-entry-face'.
 :FACE-DEFINED-IN `naf-mode-db-field-entry-ulan-face'.\n
-:SEE-ALSO `naf-mode-ulan-ppl-corp-fface'.\n►►►")
+:SEE-ALSO `naf-mode-ulan-ppl-corp-fface'.\n▶▶▶")
 ;;
 ;;; :TEST-ME (describe-face 'naf-mode-db-field-entry-ulan-face)
 ;;
@@ -1308,7 +1308,7 @@ Face documentation in var `naf-mode-db-field-entry-bnf-fface'.
 `*naf-mode-ulan-rltd-ppl-corp*', `*naf-mode-x-of-ulan-bol*'.
 :FACE-INHERITS-FROM `naf-mode-db-field-ulan-face'.
 :FACE-DOCUMENTED-IN `naf-mode-ulan-ppl-corp-fface'.\n
-:SEE-ALSO `*naf-mode-x-of*',`naf-mode-field-face'.\n►►►"
+:SEE-ALSO `*naf-mode-x-of*',`naf-mode-field-face'.\n▶▶▶"
     :group 'naf-mode
     :group 'naf-mode-faces)
 ;;
@@ -1318,7 +1318,7 @@ Face documentation in var `naf-mode-db-field-entry-bnf-fface'.
 `*naf-mode-ulan-rltd-ppl-corp*' `*naf-mode-x-of-ulan-bol*'.
 :FACE-INHERITS-FROM `naf-mode-db-field-ulan-face'
 :FACE-DEFINED-IN `naf-mode-ulan-ppl-corp-face'
-:SEE-ALSO `*naf-mode-x-of', `naf-mode-field-face'\nUsed in `naf-mode'.\n►►►")
+:SEE-ALSO `*naf-mode-x-of', `naf-mode-field-face'\nUsed in `naf-mode'.\n▶▶▶")
 ;;
 ;;; :TEST-ME (describe-face 'naf-mode-naf-mode-ulan-ppl-corp-face)
 ;;
@@ -1340,7 +1340,7 @@ Face documentation in var `naf-mode-db-field-entry-bnf-fface'.
 `naf-mode-benezit-date', `naf-mode-circa-dates', `naf-mode-year-range'
 `naf-mode-english-days', `naf-mode-french-days', `naf-mode-simple-date'
 :FACE-DOCUMENTED-IN `naf-mode-date-fface'.
-:SEE-ALSO .\nUsed in `naf-mode'.\n►►►"
+:SEE-ALSO .\nUsed in `naf-mode'.\n▶▶▶"
   :group 'naf-mode
   :group 'naf-mode-faces)
 ;;
@@ -1353,7 +1353,7 @@ Face documentation in var `naf-mode-db-field-entry-bnf-fface'.
 `naf-mode-benezit-date', `naf-mode-circa-dates', `naf-mode-year-range'
 `naf-mode-english-days', `naf-mode-french-days', `naf-mode-simple-date'
 :FACE-DEFINED-IN `naf-mode-date-face'.
-:SEE-ALSO .\n►►►")
+:SEE-ALSO .\n▶▶▶")
 ;;
 ;;; :TEST-ME (describe-face 'naf-mode-date-face)
 ;;
@@ -1367,7 +1367,7 @@ Face documentation in var `naf-mode-db-field-entry-bnf-fface'.
 :KEYWORD-REGEXPS-IN `naf-mode-active-date'.
 :FACE-INHERITS-FROM `naf-mode-date-face'.
 :FACE-DOCUMENTED-IN `naf-mode-date-active-fface'.
-:SEE-ALSO .\nUsed in `naf-mode'.\n►►►"
+:SEE-ALSO .\nUsed in `naf-mode'.\n▶▶▶"
   :group 'naf-mode
   :group 'naf-mode-faces)
 ;;
@@ -1376,7 +1376,7 @@ Face documentation in var `naf-mode-db-field-entry-bnf-fface'.
 :KEYWORD-REGEXPS-IN `naf-mode-active-date'.
 :FACE-INHERITS-FROM `naf-mode-date-face'.
 :FACE-DEFINED-IN `naf-mode-date-active-face'.
-:SEE-ALSO .\n►►►")
+:SEE-ALSO .\n▶▶▶")
 ;;
 ;;; :TEST-ME (describe-face 'naf-mode-date-active-face)
 ;;
@@ -1393,7 +1393,7 @@ Typically comprise auction price flags and auction related infos.
 :KEYWORD-REGEXPS-IN
 `naf-mode-benezit-section-flag', `naf-mode-benezit-currency-acronym'.
 :FACE-DOCUMENTED-IN `naf-mode-benezit-face'.
-:SEE-ALSO `naf-mode-benezit-currency-acronym'.\nUsed in `naf-mode'.\n►►►"
+:SEE-ALSO `naf-mode-benezit-currency-acronym'.\nUsed in `naf-mode'.\n▶▶▶"
   :group 'naf-mode
   :group 'naf-mode-faces)
 ;;
@@ -1403,7 +1403,7 @@ Typically thes are comprised fo auction price flags and auction related infos.
 :KEYWORD-REGEXPS-IN
 `naf-mode-benezit-section-flag', `naf-mode-benezit-currency-acronym'.
 :FACE-DOCUMENTED-IN `naf-mode-benezit-face'.
-:SEE-ALSO `naf-mode-benezit-currency-acronym'.\n►►►")
+:SEE-ALSO `naf-mode-benezit-currency-acronym'.\n▶▶▶")
 ;;
 ;;; :TEST-ME (describe-face 'naf-mode-benezit-face)
 ;;;
@@ -1421,7 +1421,7 @@ Typically thes are comprised fo auction price flags and auction related infos.
 `naf-mode-intnl-auction-city-names',`naf-mode-intnl-city-names'
 `naf-mode-region-names-french',`naf-mode-region-names-other'
 :FACE-DOCUMENTED-IN `naf-mode-place-fface'.
-:SEE-ALSO `naf-mode-city-names-us'.\nUsed in `naf-mode'.\n►►►"
+:SEE-ALSO `naf-mode-city-names-us'.\nUsed in `naf-mode'.\n▶▶▶"
     :group 'naf-mode
     :group 'naf-mode-faces)
 ;;
@@ -1433,7 +1433,7 @@ Typically thes are comprised fo auction price flags and auction related infos.
 `naf-mode-intnl-auction-city-names',`naf-mode-intnl-city-names'
 `naf-mode-region-names-french',`naf-mode-region-names-other'
 :FACE-DEFINED-IN `naf-mode-place-face'.
-:SEE-ALSO `naf-mode-city-names-us'.\n►►►")
+:SEE-ALSO `naf-mode-city-names-us'.\n▶▶▶")
 ;;
 ;;; :TEST-ME (describe-face 'naf-mode-place-face)
 ;;
@@ -1448,7 +1448,7 @@ Typically thes are comprised fo auction price flags and auction related infos.
 :KEYWORD-REGEXPS-IN
 `naf-mode-nationality-english', `naf-mode-nationality-french'.
 :FACE-DOCUMENTED-IN `naf-mode-nationality-fface'.
-:SEE-ALSO .\nUsed in `naf-mode'.\n►►►"
+:SEE-ALSO .\nUsed in `naf-mode'.\n▶▶▶"
   :group 'naf-mode
   :group 'naf-mode-faces)
 ;;;
@@ -1457,7 +1457,7 @@ Typically thes are comprised fo auction price flags and auction related infos.
 :KEYWORD-REGEXPS-IN
 `naf-mode-nationality-english', `naf-mode-nationality-french'.
 :FACE-DEFINED-IN `naf-mode-nationality-face'.
-:SEE-ALSO .\n►►►")
+:SEE-ALSO .\n▶▶▶")
 ;;
 ;;; :TEST-ME (describe-face 'naf-mode-nationality-face)
 ;;
@@ -1490,7 +1490,7 @@ Typically thes are comprised fo auction price flags and auction related infos.
 :FACE-DOCUMENTED-IN `naf-mode-publication-periodical-fface'.
 :SEE-ALSO\n`*naf-publications-periodicals-french-xrefs*'
 `*naf-mode-publications-periodicals-english-xrefs*'
-`*naf-mode-publications-periodicals-intnl-xrefs*'\nUsed in `naf-mode'.\n►►►"
+`*naf-mode-publications-periodicals-intnl-xrefs*'\nUsed in `naf-mode'.\n▶▶▶"
     :group 'naf-mode
     :group 'naf-mode-faces)
 ;;
@@ -1514,7 +1514,7 @@ Typically thes are comprised fo auction price flags and auction related infos.
 :FACE-DOCUMENTED-IN `naf-mode-publication-periodical-fface'.
 :SEE-ALSO\n`*naf-publications-periodicals-french-xrefs*'
 `*naf-mode-publications-periodicals-english-xrefs*'
-`*naf-mode-publications-periodicals-intnl-xrefs*'.\n►►►")
+`*naf-mode-publications-periodicals-intnl-xrefs*'.\n▶▶▶")
 ;;
 ;;; :TEST-ME (describe-face 'naf-mode-publication-periodical-face)
 ;;
@@ -1534,7 +1534,7 @@ Typically thes are comprised fo auction price flags and auction related infos.
 :FACE-DOCUMENTED-IN `naf-mode-publication-periodical-french-fface'.
 :SEE-ALSO `*naf-publications-periodicals-french-xrefs*'
 `*naf-mode-publications-periodicals-english-xrefs*'
-`*naf-mode-publications-periodicals-intnl-xrefs*'.\n►►►"
+`*naf-mode-publications-periodicals-intnl-xrefs*'.\n▶▶▶"
   :group 'naf-mode
   :group 'naf-mode-faces)
 ;;
@@ -1548,7 +1548,7 @@ Typically thes are comprised fo auction price flags and auction related infos.
 :FACE-DOCUMENTED-IN `naf-mode-publication-periodical-french-fface'.
 :SEE-ALSO\n`*naf-publications-periodicals-french-xrefs*'
 `*naf-mode-publications-periodicals-english-xrefs*'
-`*naf-mode-publications-periodicals-intnl-xrefs*'.\n►►►")
+`*naf-mode-publications-periodicals-intnl-xrefs*'.\n▶▶▶")
 ;;
 ;;; :TEST-ME (describe-face 'naf-mode-publication-periodical-french-face)
 ;;
@@ -1566,7 +1566,7 @@ Typically thes are comprised fo auction price flags and auction related infos.
 `*naf-publications-periodicals-english*'
 :FACE-INHERITS-FROM `naf-mode-publication-periodical'.
 :FACE-DOCUMENTED-IN `naf-mode-publication-periodical-english-fface'.
-:SEE-ALSO .\nUsed in `naf-mode'.\n►►►"
+:SEE-ALSO .\nUsed in `naf-mode'.\n▶▶▶"
   :group 'naf-mode
   :group 'naf-mode-faces)
 ;;
@@ -1581,7 +1581,7 @@ Typically thes are comprised fo auction price flags and auction related infos.
 :FACE-DOCUMENTED-IN `naf-mode-publication-periodical-english-fface'.
 :SEE-ALSO\n`*naf-publications-periodicals-french-xrefs*'
 `*naf-mode-publications-periodicals-english-xrefs*'
-`*naf-mode-publications-periodicals-intnl-xrefs*'.\n►►►")
+`*naf-mode-publications-periodicals-intnl-xrefs*'.\n▶▶▶")
 ;;
 ;;; :TEST-ME (describe-face 'naf-mode-publication-periodical-english-face)
 ;;
@@ -1601,7 +1601,7 @@ Typically thes are comprised fo auction price flags and auction related infos.
 :FACE-DOCUMENTED-IN `naf-mode-publication-periodical-one-word-fface'.
 :SEE-ALSO\n`*naf-publications-periodicals-french-xrefs*'
 `*naf-mode-publications-periodicals-english-xrefs*'
-`*naf-mode-publications-periodicals-intnl-xrefs*'.\n►►►"
+`*naf-mode-publications-periodicals-intnl-xrefs*'.\n▶▶▶"
   :group 'naf-mode
   :group 'naf-mode-faces)
 ;;
@@ -1616,7 +1616,7 @@ Typically thes are comprised fo auction price flags and auction related infos.
 :FACE-DOCUMENTED-IN `naf-mode-publication-periodical-english-one-word-fface'.
 :SEE-ALSO\n`*naf-publications-periodicals-french-xrefs*'
 `*naf-mode-publications-periodicals-english-xrefs*'
-`*naf-mode-publications-periodicals-intnl-xrefs*'.\n►►►")
+`*naf-mode-publications-periodicals-intnl-xrefs*'.\n▶▶▶")
 ;;
 ;;; :TEST-ME (describe-face 'naf-mode-publication-periodical-english-one-word-face)
 ;;
@@ -1637,7 +1637,7 @@ Typically thes are comprised fo auction price flags and auction related infos.
 :FACE-DOCUMENTED-IN `naf-mode-publication-periodical-intnl-fface'.
 :SEE-ALSO\n`*naf-publications-periodicals-french-xrefs*'
 `*naf-mode-publications-periodicals-english-xrefs*'
-`*naf-mode-publications-periodicals-intnl-xrefs*'.\n►►►"
+`*naf-mode-publications-periodicals-intnl-xrefs*'.\n▶▶▶"
   :group 'naf-mode
   :group 'naf-mode-faces)
 ;;
@@ -1651,7 +1651,7 @@ Typically thes are comprised fo auction price flags and auction related infos.
 :FACE-DOCUMENTED-IN `naf-mode-publication-periodical-intnl-fface'.
 :SEE-ALSO\n`*naf-publications-periodicals-french-xrefs*'
 `*naf-mode-publications-periodicals-english-xrefs*'
-`*naf-mode-publications-periodicals-intnl-xrefs*'.\n►►►")
+`*naf-mode-publications-periodicals-intnl-xrefs*'.\n▶▶▶")
 ;;
 ;;; :TEST-ME (describe-face 'naf-mode-publication-periodical-intnl-face)
 ;;
@@ -1667,7 +1667,7 @@ Typically thes are comprised fo auction price flags and auction related infos.
 :KEYWORD-REGEXPS-IN
 `naf-mode-world-events', `naf-mode-art-events'.
 :FACE-DOCUMENTED-IN `naf-mode-event-fface'.
-:SEE-ALSO .\nUsed in `naf-mode'\n►►►."
+:SEE-ALSO .\nUsed in `naf-mode'\n▶▶▶."
   :group 'naf-mode
   :group 'naf-mode-faces)
 ;;
@@ -1676,7 +1676,7 @@ Typically thes are comprised fo auction price flags and auction related infos.
 :KEYWORD-REGEXPS-IN
 `naf-mode-world-events', `naf-mode-art-events'.
 :FACE-DEFINED-IN `naf-mode-event-face'.
-:SEE-ALSO .\nUsed in `naf-mode'.\n►►►")
+:SEE-ALSO .\nUsed in `naf-mode'.\n▶▶▶")
 ;;
 ;;; :TEST-ME (describe-face 'naf-mode-event-face)
 ;;
@@ -1690,7 +1690,7 @@ Typically thes are comprised fo auction price flags and auction related infos.
   "*Face for font-locking Group Period Style or artistic names in .naf files.
 :KEYWORD-REGEXPS-IN `naf-mode-group-period-styles'.
 :FACE-DOCUMENTED-IN `naf-mode-group-period-style-fface'.
-:SEE-ALSO .\nUsed in `naf-mode'.\n►►►"
+:SEE-ALSO .\nUsed in `naf-mode'.\n▶▶▶"
   :group 'naf-mode
   :group 'naf-mode-faces)
 ;;
@@ -1698,7 +1698,7 @@ Typically thes are comprised fo auction price flags and auction related infos.
   "*Face for `naf-mode' font-locking of Group Period Style or artistic names.
 :KEYWORD-REGEXPS-IN `naf-mode-group-period-styles'.
 :FACE-DEFINED-IN `naf-mode-group-period-style-face'.
-:SEE-ALSO .\n►►►")
+:SEE-ALSO .\n▶▶▶")
 ;;
 ;;; :TEST-ME (describe-face 'naf-mode-group-period-style-face)
 ;;
@@ -1717,7 +1717,7 @@ Typically thes are comprised fo auction price flags and auction related infos.
 `naf-mode-school-names-english', `naf-mode-institution-names-generic'
 `naf-mode-benezit-museum-short',`naf-mode-inst-names-anchored'
 :FACE-DOCUMENTED-IN `naf-mode-institution-fface'.
-:SEE-ALSO .\nUsed in `naf-mode'.\n►►►"
+:SEE-ALSO .\nUsed in `naf-mode'.\n▶▶▶"
     :group 'naf-mode
     :group 'naf-mode-faces)
 ;;
@@ -1729,7 +1729,7 @@ Typically thes are comprised fo auction price flags and auction related infos.
 `naf-mode-school-names-english', `naf-mode-institution-names-generic'
 `naf-mode-benezit-museum-short',`naf-mode-inst-names-anchored'
 :FACE-DEFINED-IN `naf-mode-institution-face'.
-:SEE-ALSO .\n►►►")
+:SEE-ALSO .\n▶▶▶")
 ;;
 ;;; :TEST-ME (describe-face 'naf-mode-institution-face)
 ;;
@@ -1746,7 +1746,7 @@ Typically thes are comprised fo auction price flags and auction related infos.
 `naf-mode-alternate-name-flags', `*naf-mode-x-of*'.
 :FACE-DOCUMENTED-IN `naf-mode-alternate-name-fface'.
 :SEE-ALSO `*naf-mode-x-of-ulan-bol*', `*naf-mode-ulan-rltd-ppl-corp*'.
-Used in `naf-mode'.\n►►►"
+Used in `naf-mode'.\n▶▶▶"
     :group 'naf-mode
     :group 'naf-mode-faces)
 ;;
@@ -1755,7 +1755,7 @@ Used in `naf-mode'.\n►►►"
 :KEYWORD-REGEXPS-IN
 `naf-mode-alternate-name-flags',`*naf-mode-x-of*'.
 :FACE-DEFINED-IN `naf-mode-alternate-name-face'.
-:SEE-ALSO `*naf-mode-x-of-ulan-bol*',`*naf-mode-ulan-rltd-ppl-corp*'.\n►►►")
+:SEE-ALSO `*naf-mode-x-of-ulan-bol*',`*naf-mode-ulan-rltd-ppl-corp*'.\n▶▶▶")
 ;;
 ;;; :TEST-ME (describe-face 'naf-mode-alternate-name-face)
 ;;;
@@ -1771,7 +1771,7 @@ Used in `naf-mode'.\n►►►"
 :KEYWORD-REGEXPS-IN
 `naf-mode-english-roles-primary', `naf-mode-french-roles-primary'.
 :FACE-DOCUMENTED-IN `naf-mode-primary-role-face'.
-:SEE-ALSO .\nUsed in `naf-mode'.\n►►►"
+:SEE-ALSO .\nUsed in `naf-mode'.\n▶▶▶"
   :group 'naf-mode
   :group 'naf-mode-faces)
 ;;
@@ -1780,7 +1780,7 @@ Used in `naf-mode'.\n►►►"
 :KEYWORD-REGEXPS-IN
 `naf-mode-english-roles-primary', `naf-mode-french-roles-primary'.
 :FACE-DEFINED-IN `naf-mode-primary-role-face'.
-:SEE-ALSO .\n►►►")
+:SEE-ALSO .\n▶▶▶")
 ;;
 ;;; :TEST-ME (describe-face 'naf-mode-primary-role-face)
 ;;
@@ -1796,7 +1796,7 @@ Used in `naf-mode'.\n►►►"
 :KEYWORD-REGEXPS-IN
 `naf-mode-english-roles-secondary', `naf-mode-french-roles-secondary'.
 :FACE-DOCUMENTED-IN `naf-mode-secondary-role-fface'.
-:SEE-ALSO .\nUsed in `naf-mode'.\n►►►"
+:SEE-ALSO .\nUsed in `naf-mode'.\n▶▶▶"
   :group 'naf-mode
   :group 'naf-mode-faces)
 ;;
@@ -1805,7 +1805,7 @@ Used in `naf-mode'.\n►►►"
 :KEYWORD-REGEXPS-IN
 `naf-mode-english-roles-secondary', `naf-mode-french-roles-secondary'.
 :FACE-DEFINED-IN `naf-mode-secondary-role-face'.
-:SEE-ALSO .\n►►►")
+:SEE-ALSO .\n▶▶▶")
 ;;
 ;;; :TEST-ME (describe-face 'naf-mode-secondary-role-face)
 ;;
@@ -1820,7 +1820,7 @@ Used in `naf-mode'.\n►►►"
   "*Face for font-locking art keywords indicating artistic 'role' in .naf files.
 :KEYWORD-REGEXPS-IN `naf-mode-art-keywords'.
 :FACE-DOCUMENTED-IN `naf-mode-art-keywords-role-fface'.
-:SEE-ALSO .\nUsed in `naf-mode'.\n►►►"
+:SEE-ALSO .\nUsed in `naf-mode'.\n▶▶▶"
   :group 'naf-mode
   :group 'naf-mode-faces)
 ;;
@@ -1828,7 +1828,7 @@ Used in `naf-mode'.\n►►►"
   "*Face for `naf-mode' font-locking of `roles' in art related artistic production.
 :KEYWORD-REGEXPS-IN `naf-mode-art-keywords'.
 :FACE-DEFINED-IN `naf-mode-art-keywords-role-face'.
-:SEE-ALSO .\n►►►")
+:SEE-ALSO .\n▶▶▶")
 ;;
 ;;; :TEST-ME (describe-face 'naf-mode-art-keywords-role-face)
 ;;
@@ -1843,7 +1843,7 @@ Used in `naf-mode'.\n►►►"
   "*Face for font-locking of awards and prizes keywords in .naf files.
 :KEYWORD-REGEXPS-IN `naf-mode-awards-prizes-names'.
 :FACE-DOCUMENTED-IN `naf-mode-awards-prizes-fface'.
-:SEE-ALSO .\nUsed in `naf-mode'.\n►►►"
+:SEE-ALSO .\nUsed in `naf-mode'.\n▶▶▶"
   :group 'naf-mode
   :group 'naf-mode-faces)
 ;;
@@ -1851,7 +1851,7 @@ Used in `naf-mode'.\n►►►"
   "*Face for `naf-mode' font-locking of awards and prizes keywords.
 :KEYWORD-REGEXPS-IN `naf-mode-awards-prizes-names'.
 :FACE-DEFINED-IN `naf-mode-awards-prizes-face'.
-:SEE-ALSO .\n►►►")
+:SEE-ALSO .\n▶▶▶")
 ;;
 ;;; :TEST-ME (describe-face 'naf-mode-awards-prizes-face)
 ;;
@@ -1879,7 +1879,7 @@ Used in `naf-mode'.\n►►►"
 :FACE-DOCUMENTED-IN `naf-mode-artist-fface'.
 :FACE-INHERITED-BY 
 `naf-mode-artist-student-of-fface'\n`naf-mode-artist-student-of-julian-fface'.
-:SEE-ALSO .\nUsed in `naf-mode'.\n►►►"
+:SEE-ALSO .\nUsed in `naf-mode'.\n▶▶▶"
    :group 'naf-mode
    :group 'naf-mode-faces)
 ;;
@@ -1889,7 +1889,7 @@ Used in `naf-mode'.\n►►►"
 :FACE-DEFINED-IN `naf-mode-awards-artist-fface'.
 :FACE-INHERITED-BY
 `naf-mode-artist-student-of-fface'\n`naf-mode-artist-student-of-julian-fface'.
-:SEE-ALSO .\n►►►")
+:SEE-ALSO .\n▶▶▶")
 ;;
 ;;; :TEST-ME (describe-face 'naf-mode-artist-face)
 ;;
@@ -1908,7 +1908,7 @@ Used in `naf-mode'.\n►►►"
 :FACE-DOCUMENTED-IN `naf-mode-artist-student-of-fface'.
 :FACE-INHERITS-FROM `naf-mode-artist-fface'
 :FACE-INHERITED-BY `naf-mode-artist-student-of-julian-fface'
-:SEE-ALSO .\nUsed in `naf-mode'.\n►►►"
+:SEE-ALSO .\nUsed in `naf-mode'.\n▶▶▶"
    :group 'naf-mode
    :group 'naf-mode-faces)
 ;;
@@ -1918,7 +1918,7 @@ Used in `naf-mode'.\n►►►"
 :FACE-DEFINED-IN: `naf-mode-awards-artist-student-of-face'.
 :FACE-INHERITS-FROM `naf-mode-artist-student-of-fface'
 :FACE-INHERITED-BY `naf-mode-artist-student-of-julian-fface'
-:SEE-ALSO.\n►►►")
+:SEE-ALSO.\n▶▶▶")
 ;;
 ;;; :TEST-ME (describe-face 'naf-mode-artist-student-of-face)
 ;;
@@ -1941,7 +1941,7 @@ Used in `naf-mode'.\n►►►"
 :KEYWORD-REGEXPS-IN `'.
 :FACE-DOCUMENTED-IN `naf-mode-artist-student-of-julian-fface'.
 :FACE-INHERITS-FROM `naf-mode-artist-student-of-fface'
-:SEE-ALSO .\nUsed in `naf-mode'.\n►►►"
+:SEE-ALSO .\nUsed in `naf-mode'.\n▶▶▶"
    :group 'naf-mode
    :group 'naf-mode-faces)
 ;;
@@ -1972,7 +1972,7 @@ Used in `naf-mode'.\n►►►"
 `*naf-students-of-julian-uk*'
 :FACE-DEFINED-IN `naf-mode-awards-artist-student-of-julian-face'.
 :FACE-INHERITS-FROM `naf-mode-artist-student-of-fface'
-:SEE-ALSO `*naf-mode-students-of-julian-xrefs*'.\n►►►")
+:SEE-ALSO `*naf-mode-students-of-julian-xrefs*'.\n▶▶▶")
 ;;
 ;;; :TEST-ME (describe-face 'naf-mode-artist-student-of-julian-face)
 ;;

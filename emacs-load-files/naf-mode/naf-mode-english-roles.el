@@ -6,9 +6,9 @@
 ;;; Terms ostly taken from ULAN. Used with `naf-mode' for font-locking.
 ;;; `naf-mode-english-roles' --> `naf-mode-artist-name-face'
 ;;;
-;;; FUNCTIONS:►►►
+;;; FUNCTIONS:▶▶▶
 ;;;
-;;; FUNCTIONS:◄◄◄
+;;; FUNCTIONS:◀◀◀
 ;;;
 ;;; CONSTANTS:
 ;;; `naf-mode-english-roles-secondary', `naf-mode-english-roles-primary'
@@ -89,7 +89,7 @@
 
 (defgroup naf-mode-english-roles nil
   "Customization group for variables and functions of :FILE naf-mode-english-roles.el\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   ;; :prefix "<PREFIX>"
   :link '(url-link 
           :tag ":EMACSWIKI-FILE" "http://www.emacswiki.org/emacs/naf-mode-english-roles.el")

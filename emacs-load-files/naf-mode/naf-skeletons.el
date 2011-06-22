@@ -25,9 +25,9 @@
 ;; all headwords defined herein are font-locked by constants defined 
 ;; elsewhere in the naf-mode*.el files.
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;;
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;; `book-naf'             ; <SKELETON>
@@ -134,7 +134,7 @@ Fields interted include:\n
  Artists-associated: Content-and-subjects: Auction-records: LOC: OCLC: BNF:
  OTHER-DB: Book-notes:\n
 :USED-IN `naf-mode'.\n
-:SEE-ALSO `artist-naf', `brand-naf', `people-naf', `author-naf', `item-naf'.\n►►►"
+:SEE-ALSO `artist-naf', `brand-naf', `people-naf', `author-naf', `item-naf'.\n▶▶▶"
   (interactive "p")
 
   ";; -*- mode: NAF; -*-" \n
@@ -207,7 +207,7 @@ Fields interted include:\n
  Appeared-in: LOC: ULAN: BNF: Bios:\n
 :USED-IN `naf-mode'\n
 :SEE-ALSO `book-naf', `brand-naf', `book-naf', `people-naf', `author-naf',
-`item-naf', `mon-dired-naf-artist-letter'.\n►►►"
+`item-naf', `mon-dired-naf-artist-letter'.\n▶▶▶"
   (interactive "p")
 
   ";; -*- mode: NAF; -*-" \n
@@ -257,7 +257,7 @@ Fields inserted include:\n
  Used-for: Other-roles: Born: Died: 
  Appeared-in: Artists-associated: LOC: OCLC: BNF: Bios:\n
 :USED-IN `naf-mode'\n
-:SEE-ALSO `artist-naf', `brand-naf', `book-naf', `author-naf', `item-naf'.\n►►►"
+:SEE-ALSO `artist-naf', `brand-naf', `book-naf', `author-naf', `item-naf'.\n▶▶▶"
   (interactive "p")
 
 ";; -*- mode: NAF; -*-" \n
@@ -310,7 +310,7 @@ Fields inserted include:\n
  Author-naf: Author-doc: Uploaded-by: Display-name: 
  Used-for: Other-roles: Born: Died: 
  Appeared-in: LOC: OCLC: BNF: Bios:\n
-:SEE-ALSO `artist-naf', `brand-naf', `book-naf', `people-naf', `item-naf'.\n►►►"
+:SEE-ALSO `artist-naf', `brand-naf', `book-naf', `people-naf', `item-naf'.\n▶▶▶"
   (interactive "p")
 ";; -*- mode: NAF; -*-" \n
 "Author-naf: " \n
@@ -363,7 +363,7 @@ Fields inserted include:\n
  Artists-associated: Appeared-in: LOC: OCLC: Bios:\n
 :USED-IN `naf-mode'\n
 :SEE-ALSO `artist-naf', `book-naf', `people-naf', `author-naf',
-`item-naf', `mon-dired-naf-brand-letter'.\n►►►"
+`item-naf', `mon-dired-naf-brand-letter'.\n▶▶▶"
   (interactive "p")
 ";; -*- mode: NAF; -*-" \n
 "Brand-naf: " \n
@@ -421,7 +421,7 @@ Fields inserted include:\n
 :USED-IN `naf-mode'.\n
 :SEE-ALSO`non-posting-source', `non-posting-internet-source',
 `non-posting-ebay-source', `non-posting-imdb-source', `non-posting-philsp-source',
-`non-posting-benezit-source', `benezit-naf-template'.\n►►►"
+`non-posting-benezit-source', `benezit-naf-template'.\n▶▶▶"
   (interactive "p")
 "-" \n
 "source:" \n

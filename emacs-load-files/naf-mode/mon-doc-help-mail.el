@@ -23,9 +23,9 @@
 ;; for Emacs mail related features, functions, variables, documentation xrefs,
 ;; file pathnames, info-nodes, etc. 
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;; `mon-help-mail-functons', `mon-help-bbdb-functons',
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;;
@@ -107,7 +107,7 @@
 ;;; 
 ;; (defgroup mon-doc-help-mail nil
 ;;   "Extensions for mail related help and documentation related procedures.\n
-;; :SEE-ALSO `mon-doc-help-utils-faces'.\n►►►"
+;; :SEE-ALSO `mon-doc-help-utils-faces'.\n▶▶▶"
 ;;   :link '(url-link 
 ;;           :tag ":GITHUB-FILE" 
 ;;           "https://github.com/mon-key/mon-emacs/raw/master/emacs-load-files/naf-mode/mon-doc-help-utils.el")
@@ -132,7 +132,7 @@
 ;; `*mon-seq-utils-xrefs*', `*mon-string-utils-xrefs*', `*mon-type-utils-xrefs*',
 ;; `*mon-window-utils-xrefs*', `*naf-mode-xref-of-xrefs*', `*mon-slime-xrefs*',
 ;; `*naf-mode-faces-xrefs*', `*naf-mode-date-xrefs*', `*mon-ulan-utils-xrefs*',
-;; `*mon-xrefs-xrefs'.\n►►►"
+;; `*mon-xrefs-xrefs'.\n▶▶▶"
   ;; :type  '(repeat symbol)
   ;; :group 'mon-xrefs
   ;; :group 'mon-doc-help-mail)
@@ -375,7 +375,7 @@ password-read
 :SEE RFC-1524
 :SEE RFC-2104
 
-:SEE-ALSO `mon-help-bbdb-functions'.\n►►►"
+:SEE-ALSO `mon-help-bbdb-functions'.\n▶▶▶"
 (interactive "i\nP")
   (if (or insertp intrp)
       (mon-help-function-spit-doc 'mon-help-mail-functons :insertp t)
@@ -444,7 +444,7 @@ password-read
 :SEE :FILE bbdb
 :SEE :FILE
 :SEE :FILE
-:SEE-ALSO `mon-set-bbdb-init'.\n►►►"
+:SEE-ALSO `mon-set-bbdb-init'.\n▶▶▶"
   (interactive "i\nP")
   (if (or insertp intrp)
       (mon-help-function-spit-doc 'mon-help-bbdb-functons :insertp t)

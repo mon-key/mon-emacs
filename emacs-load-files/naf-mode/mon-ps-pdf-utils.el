@@ -22,10 +22,10 @@
 ;; mon-ps-pdf-utils provides utilities to help convert .ps and .pdf files to
 ;; plain text.
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;; `mon-get-pdftotext', `mon-get-ps2ascii', `mon-get-pdfinfo',
 ;; `mon-get-ps-pdf',
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;;
@@ -192,7 +192,7 @@ under GPLv2 June 1991.\n
 `*mon-pdftotext-exec-path*', `*mon-pdfinfo-exec-path*',
 `doc-view-ghostscript-program', `doc-view-pdftotext-program',
 `doc-view-dvipdfm-program', `doc-view-dvipdf-program',
-`doc-view-ps2pdf-program', `mon-set-doc-view-programs-init'.\n►►►")
+`doc-view-ps2pdf-program', `mon-set-doc-view-programs-init'.\n▶▶▶")
 ;;
 (when (and (intern-soft "IS-MON-SYSTEM-P")
            (bound-and-true-p IS-MON-SYSTEM-P))
@@ -225,7 +225,7 @@ June 1991.\n
 `*mon-pdftotext-exec-path*', `*mon-pdfinfo-exec-path*',
 `doc-view-ghostscript-program', `doc-view-pdftotext-program',
 `doc-view-dvipdfm-program', `doc-view-dvipdf-program',
-`doc-view-ps2pdf-program', `mon-set-doc-view-programs-init'.\n►►►")
+`doc-view-ps2pdf-program', `mon-set-doc-view-programs-init'.\n▶▶▶")
 ;;
 (when (and (intern-soft "IS-MON-SYSTEM-P")
            (bound-and-true-p IS-MON-SYSTEM-P))
@@ -267,7 +267,7 @@ When keyword IN-BUFFER is an existing buffer output to that buffer.\n
 `*mon-pdftotext-exec-path*', `*mon-pdfinfo-exec-path*',
 `doc-view-ghostscript-program', `doc-view-pdftotext-program',
 `doc-view-dvipdfm-program', `doc-view-dvipdf-program',
-`doc-view-ps2pdf-program', `mon-set-doc-view-programs-init'.\n►►►"
+`doc-view-ps2pdf-program', `mon-set-doc-view-programs-init'.\n▶▶▶"
   (let ((mgp-rgs 
          ;; cpsc-args <- :w-layout :w-nopgbrk :w-htmlmeta
          ;; OPTIONS for `*mon-pdftotext-exec-path*' 
@@ -339,7 +339,7 @@ When OUT-FNAME and IN-BUFFER are nil conversion is output to
 `*mon-pdftotext-exec-path*', `*mon-pdfinfo-exec-path*',
 `doc-view-ghostscript-program', `doc-view-pdftotext-program',
 `doc-view-dvipdfm-program', `doc-view-dvipdf-program',
-`doc-view-ps2pdf-program', `mon-set-doc-view-programs-init'.\n►►►"
+`doc-view-ps2pdf-program', `mon-set-doc-view-programs-init'.\n▶▶▶"
   (cond (out-fname 
          (shell-command (concat "ps2ascii " pdf-fname " " out-fname)))
         (in-buffer
@@ -355,7 +355,7 @@ When keyword W-META is non-nil get fname's metadata info as well.\n
 `*mon-pdftotext-exec-path*', `*mon-pdfinfo-exec-path*',
 `doc-view-ghostscript-program', `doc-view-pdftotext-program',
 `doc-view-dvipdfm-program', `doc-view-dvipdf-program',
-`doc-view-ps2pdf-program', `mon-set-doc-view-programs-init'.\n►►►"
+`doc-view-ps2pdf-program', `mon-set-doc-view-programs-init'.\n▶▶▶"
   ;; (princ (format "\n;;; Output of \"pdfinfo%s%s\"\n" 
   ;;                (if w-meta " -meta " " ")
   ;;                fname)
@@ -384,7 +384,7 @@ When keyword W-META is non-nil get fname's metadata info as well.\n
 ;; `*mon-pdftotext-exec-path*', `*mon-pdfinfo-exec-path*',
 ;; `doc-view-ghostscript-program', `doc-view-pdftotext-program',
 ;; `doc-view-dvipdfm-program', `doc-view-dvipdf-program',
-;; `doc-view-ps2pdf-program', `mon-set-doc-view-programs-init'.\n►►►"
+;; `doc-view-ps2pdf-program', `mon-set-doc-view-programs-init'.\n▶▶▶"
 ;;   (interactive "P\ni\ni\np")
 ;;   (let (psdf  
 ;;         (mapconcat #'identity 

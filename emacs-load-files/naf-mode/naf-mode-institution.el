@@ -5,9 +5,9 @@
 ;;; naf-mode-institution keyword font-locking of institution names.
 ;;; `naf-mode' constants in this file use `naf-mode-institution-face'
 ;;;
-;;; FUNCTIONS:►►►
+;;; FUNCTIONS:▶▶▶
 ;;;
-;;; FUNCTIONS:◄◄◄
+;;; FUNCTIONS:◀◀◀
 ;;;
 ;;; MACROS:
 ;;;
@@ -103,7 +103,7 @@
     mon-help-naf-mode-faces)
   "List of symbol names of variables which xref each other in the
 naf-mode-institution package. 
-See FILE: \"./naf-mode-institution.el\".\n►►►"))
+See FILE: \"./naf-mode-institution.el\".\n▶▶▶"))
 ;;
 ;;;test-me; *naf-mode-institution-xrefs*
 ;;;test-me;(remq 'naf-mode-benezit-museum-short *naf-mode-institution-xrefs*)
@@ -123,7 +123,7 @@ Mus. des Beaux-Arts\nMus. d'Orsay\n
 See also; `naf-mode-institution-museum-names', `naf-mode-academy-names'
 `naf-mode-school-names-intnl', `naf-mode-school-names-english'
 `naf-mode-institution-names-generic',`naf-mode-benezit-museum-short'
-`naf-mode-inst-names-anchored'.\n►►►")
+`naf-mode-inst-names-anchored'.\n▶▶▶")
 ;;
 ;;;test-me;naf-mode-benezit-museum-short
 ;;

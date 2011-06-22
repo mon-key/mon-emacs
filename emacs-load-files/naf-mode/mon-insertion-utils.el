@@ -26,7 +26,7 @@
 ;; unwieldly or are otherwise to large to maintain in their original source
 ;; location.
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;; `mon-insert-string-n-fancy-times', `mon-line-number-region',
 ;; `mon-string-incr',
 ;; `mon-insert-string-n-times', `mon-comment-divider',
@@ -50,7 +50,7 @@
 ;; `mon-insert-lisp-CL-jump-doc', `mon-insert-lisp-CL-debug',
 ;; `mon-insert-lisp-CL-eval-when', `mon-insert-lisp-CL-eol-tilde',
 ;; `mon-insert-lisp-CL-eol-tilde-no-at',
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS: 
 ;;
@@ -210,7 +210,7 @@
 ;;; :CREATED <Timestamp: #{2010-10-04T14:18:03-04:00Z}#{10401} - by MON KEY>
 (defgroup mon-insertion-utils nil
   "Variables and settings for `mon-*' functions which insert.\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   :link '(url-link 
           :tag ":EMACSWIKI-FILE" 
           "http://www.emacswiki.org/emacs/mon-insertion-utils.el")
@@ -254,7 +254,7 @@ The symbols contained of this list are defined in :FILE mon-insertion-utils.el\n
 `*mon-string-utils-xrefs*', `*mon-type-utils-xrefs*',
 `*mon-window-utils-xrefs*', `*naf-mode-xref-of-xrefs*',
 `*naf-mode-faces-xrefs*', `*naf-mode-date-xrefs*', `*mon-ulan-utils-xrefs*',
-`*mon-xrefs-xrefs'.\n►►►"
+`*mon-xrefs-xrefs'.\n▶▶▶"
   :type '(repeat symbol)
   :group 'mon-insertion-utils
   :group 'mon-xrefs)
@@ -265,7 +265,7 @@ The symbols contained of this list are defined in :FILE mon-insertion-utils.el\n
   "Directory elts held by symbol DIR-LIST (list of strings) are inserted in DIR-PATH.\n
 Does minimal error checking, shouldn't be trusted for unfamilar pathnames.\n
 :SEE-ALSO `mon-insert-file-in-dirs', `directory-files',
-`file-expand-wildcards'.\n►►►"
+`file-expand-wildcards'.\n▶▶▶"
   (interactive 
    "X:FUNCTION `mon-insert-dirs-in-path' -- symbol holding list of directorys to create: \nDPath to insert to: ")
   (let ((make-list dir-list) 
@@ -331,7 +331,7 @@ Creates the following directorys and files in c:/home/my-dirs :
 appropriate.\n
 :SEE-ALSO `mon-write-jg-file-in-path', `mon-make-jg-dir-in-path',
 `mon-format-jg-file-for-write', `directory-files',
-`file-expand-wildcards'.\n►►►"
+`file-expand-wildcards'.\n▶▶▶"
   (interactive 
    "X:FUNCTION `mon-insert-file-in-dirs' -- Symbol holding dir/file list: \nXGive Symbol holing insert-text :\nsFile extenison :")
   (while make-dir-list 
@@ -380,7 +380,7 @@ A whitespace is:\n- character: SPC (32, #o40, #x20);\n- code point: 0x20\n- name
  (mon-inhibit-read-only (mon-insert-whitespace 8 t))
 :SEE-ALSO `mon-insert-newlines', `mon-insert-unicode',
 `mon-insert-string-n-times', `mon-insert-string-n-fancy-times',
-`whitespace-cleanup', `untabify'.\n►►►"
+`whitespace-cleanup', `untabify'.\n▶▶▶"
   (interactive "N:FUNCTION `mon-insert-whitespace' -- number of spaces to insert: \ni\np")
   (if (or intrp insrtp)
       (insert-char 32 spc-cnt nil)
@@ -403,7 +403,7 @@ A newline is:\n - code point: '0x0A';\n - character: C-j (10, #o12, #xa);
 :NOTE Does not inherit stickiness of adjoining chars `text-properties-at'.\n
 :EXAMPLE\n\n\(mon-insert-newlines 5\)\n
 :SEE-ALSO `mon-insert-whitespace', `mon-insert-unicode',
-`mon-insert-string-n-times', `mon-insert-string-n-fancy-times', `newline'.\n►►►"
+`mon-insert-string-n-times', `mon-insert-string-n-fancy-times', `newline'.\n▶▶▶"
   (interactive "N:FUNCTION `mon-insert-newlines' -- number of newlines to insert: \ni\np")
   (if (or intrp insrtp)
       (insert-char ?\n nl-cnt nil)
@@ -458,7 +458,7 @@ Does not move point.\n
 :ALIASED-BY `mon-string-n-fancy-times'\n
 :SEE-ALSO `mon-insert-string-n-fancy-times', `mon-string-incr',
 `mon-line-number-region-incr', `mon-insert-whitespace', `mon-insert-newlines',
-`mon-insert-unicode'.\n►►►"
+`mon-insert-unicode'.\n▶▶▶"
   (interactive "p")
   (let*   ((mistnft-fncn "mon-insert-string-n-fancy-times")
            (mistnft-prmpt   (concat ":FUNCTION " mistnft-fncn " -- "))
@@ -571,7 +571,7 @@ When called-interactively prompt for:\n -- how many puts?:\n -- string to put:\n
 :ALIASED-BY `mon-string-insert-n-times'\n
 :SEE-ALSO `mon-insert-string-n-fancy-times', `mon-string-incr',
 `mon-line-number-region-incr', `mon-insert-whitespace', `mon-insert-newlines',
-`mon-insert-unicode'.\n►►►"
+`mon-insert-unicode'.\n▶▶▶"
   (interactive (list (read-number (concat ":FUNCTION `mon-insert-string-n-times' "
                                           "-- how many puts?: "))
                      (read-string (concat ":FUNCTION `mon-insert-string-n-times' "
@@ -616,7 +616,7 @@ will be numbered in descending order. If a line is already prefixed with a
 number, it will be overwritten with the new value.\n
 Unlike `mon-string-incr' allows prefix starting value - numeric argument.\n
 :SEE-ALSO `mon-line-string-incr-padded', `mon-line-number-region-incr',
-`mon-rectangle-sum-column'.\n►►►"
+`mon-rectangle-sum-column'.\n▶▶▶"
   (interactive "*r\np")
   (let* ((mlnr-lns (count-lines start end))
 	 (mlnr-frm (or begin-w 1))
@@ -675,7 +675,7 @@ When both \"With delimiter?\" and \"Insert newlines?\" are nil prompt:\n
 \(mon-string-incr 1 5005 5\)\n
 :NOTE If the range specified will step over 1000 increments signal an error.\n
 :SEE-ALSO `mon-line-string-incr-padded', `mon-line-number-region', 
-`mon-line-number-region-incr', `mon-rectangle-sum-column'.\n►►►"
+`mon-line-number-region-incr', `mon-rectangle-sum-column'.\n▶▶▶"
   (interactive `(,(read-number "Increment from number: ")  ;; start-w
                   ,(read-number "Increment to number: ")   ;; end-w
                   ,(read-number "Step by increments of: ") ;; step-w
@@ -799,7 +799,7 @@ When optional arg INSRTP is non-nil or called-interactively insert list at point
 as if by `print'.\n
 :EXAMPLE\n\n\(mon-insert-string-ify \"a b c\"\)\n=>(\"a\" \"b\" \"c\"\)\).\n
 :SEE-ALSO `mon-string-ify-list', `mon-line-strings-to-list',
-`mon-line-strings-one-list'.\n►►►"
+`mon-line-strings-one-list'.\n▶▶▶"
   (interactive "s:FUNCTION `mon-insert-string-ify' -- stringify: \ni\p")
   (if (or insrtp intrp)
       (print (mon-string-ify-list the-string) (current-buffer))
@@ -835,7 +835,7 @@ from Unicode charts :SEE (URL `http://www.decodeunicode.org/u+2019').\n
 For access/alteration to encoding/coding information:
 :SEE `encode-coding-region', `describe-coding-system', `unicode-insert'.\n
 :SEE-ALSO `ucs-insert', `mon-help-char-functions', `mon-help-diacritics', 
-`mon-help-char-representation'.\n►►►"
+`mon-help-char-representation'.\n▶▶▶"
   (interactive `(,@(let* ((rd-types (list "1 Unicode char in radix 16 e.g. '25BA'"
                                           "2 Unicode char by name w/ completion (octal, hex, decimal)"))
                           (rd-type (completing-read "read Unicode as " rd-types nil t))
@@ -881,18 +881,18 @@ For access/alteration to encoding/coding information:
         miu-t-char)
     miu-t-char))
 ;;
-;;; :TEST-ME (mon-insert-unicode "#o22672" t)►
-;;; :TEST-ME (mon-insert-unicode #o22672 t)►
-;;; :TEST-ME (mon-insert-unicode "#x25ba" t)►
-;;; :TEST-ME (mon-insert-unicode 9658 t)►
-;;; :TEST-ME (mon-insert-unicode "#x25ba" t)►
-;;; :TEST-ME (mon-insert-unicode "BLACK RIGHT-POINTING POINTER" t)►►
-;;; :TEST-ME (mon-insert-unicode "#o22672" t)►
-;;; :TEST-ME (mon-insert-unicode #o22672 t)►
-;;; :TEST-ME (mon-insert-unicode "#x25ba" t)►
-;;; :TEST-ME (mon-insert-unicode 9658 t)►
-;;; :TEST-ME (mon-insert-unicode #x25ba t)►
-;;; :TEST-ME (mon-insert-unicode "BLACK RIGHT-POINTING POINTER" t)►
+;;; :TEST-ME (mon-insert-unicode "#o22672" t)▶
+;;; :TEST-ME (mon-insert-unicode #o22672 t)▶
+;;; :TEST-ME (mon-insert-unicode "#x25ba" t)▶
+;;; :TEST-ME (mon-insert-unicode 9658 t)▶
+;;; :TEST-ME (mon-insert-unicode "#x25ba" t)▶
+;;; :TEST-ME (mon-insert-unicode "BLACK RIGHT-POINTING POINTER" t)▶▶
+;;; :TEST-ME (mon-insert-unicode "#o22672" t)▶
+;;; :TEST-ME (mon-insert-unicode #o22672 t)▶
+;;; :TEST-ME (mon-insert-unicode "#x25ba" t)▶
+;;; :TEST-ME (mon-insert-unicode 9658 t)▶
+;;; :TEST-ME (mon-insert-unicode #x25ba t)▶
+;;; :TEST-ME (mon-insert-unicode "BLACK RIGHT-POINTING POINTER" t)▶
 ;;; :TEST-ME (mon-insert-unicode "#10r10084" t)❤
 ;;; :TEST-ME (mon-insert-unicode "#x2764" t)❤
 ;;; :TEST-ME (call-interactively 'mon-insert-unicode)
@@ -910,7 +910,7 @@ Does not move point.\n
 :USED-IN `naf-mode'.\n
 :SEE-ALSO `non-posting-source', `non-posting-ebay-source', `*naf-comment-prefix*',
 `non-posting-wiki-source', `npps', `benezit-naf-template',
-`mon-comment-divider'.\n►►►"
+`mon-comment-divider'.\n▶▶▶"
   (interactive "i\np")
   (if (or insrtp intrp)
       (save-excursion
@@ -934,7 +934,7 @@ When NO-INSRTP is non-nil return comment divider as string.\n
 :ALIASED-BY `comment-divider'.\n
 :SEE-ALSO `*mon-default-comment-divider*' `mon-comment-divide->col',
 `mon-comment-lisp-to-col' `mon-insert-php-comment-divider',
-`mon-insert-lisp-stamp', `mon-split-designator'.\n►►►"
+`mon-insert-lisp-stamp', `mon-split-designator'.\n▶▶▶"
   (interactive "i\np")
   (if (or (not no-insrtp) intrp)
       (insert *mon-default-comment-divider*)
@@ -971,7 +971,7 @@ When INSRTP is non-nil insert commented region at point, doesn't move point.\n
 implementation.\n
 :SEE-ALSO `*mon-default-comment-divider*', `mon-line-strings-indent-to-col',
 `mon-line-indent-from-to-col', `mon-line-strings-pipe-to-col',
-`mon-string-fill-to-col', `mon-string-justify-left', `mon-split-designator'.\n►►►"
+`mon-string-fill-to-col', `mon-string-justify-left', `mon-split-designator'.\n▶▶▶"
   (interactive "i\nr\nP\ni\np")
   (let ((mcd2c-s-frm   (make-marker))
         (mcd2c-s-ident-at (make-marker))
@@ -1065,7 +1065,7 @@ To provide an alternative comment prefix use `mon-comment-divider-to-col'.\n
 :SEE-ALSO `mon-comment-divider', `*mon-default-comment-divider*'.
 `mon-line-strings-indent-to-col', `mon-line-indent-from-to-col', 
 `mon-line-strings-pipe-to-col', `mon-string-fill-to-col',
-`mon-string-justify-left'.\n►►►"
+`mon-string-justify-left'.\n▶▶▶"
   (interactive "P")
   (if (not (region-active-p))
       (progn
@@ -1081,7 +1081,7 @@ To provide an alternative comment prefix use `mon-comment-divider-to-col'.\n
 Insert `mon-comment-divider' indentented to column 4(four).
 Move contents current line forward 1(one) line indent it to column 4(four).\n
 :SEE-ALSO `*mon-default-comment-divider*', `mon-string-justify-left',
-`mon-line-indent-from-to-col'.\n►►►"
+`mon-line-indent-from-to-col'.\n▶▶▶"
   (interactive)
   (save-excursion
     (open-line 1)
@@ -1098,7 +1098,7 @@ Move contents current line forward 1(one) line indent it to column 4(four).\n
 When called-interactively or INSRTP is non-nil insert at point. Moves point.\n
 :EXAMPLE\n\n(mon-insert-php-comment-divider)\n
 :SEE-ALSO `mon-comment-divider', `mon-comment-divider-to-col-four',
-`split-designator', `*mon-default-comment-divider*'.\n►►►"
+`split-designator', `*mon-default-comment-divider*'.\n▶▶▶"
   (interactive "i\np")
   (if (or insrtp intrp)
       (insert "//***************************//")
@@ -1113,7 +1113,7 @@ When called-interactively or INSRTP is non-nil insert at point. Moves point.\n
 Test for `IS-BUG-P' or `IS-MON-P'.\n
 :EXAMPLE\n\n(mon-insert-user-name-cond)\n
 :SEE-ALSO `mon-user-name-conditionals', `mon-system-type-conditionals',
-`IS-MON-SYSTEM-P', `IS-NOT-A-MON-SYSTEM'.\n►►►"
+`IS-MON-SYSTEM-P', `IS-NOT-A-MON-SYSTEM'.\n▶▶▶"
   (interactive "i\np")
   (let ((miunc-unc (concat
                     "\n(cond\n"
@@ -1146,7 +1146,7 @@ Test for `IS-BUG-P' or `IS-MON-P'.\n
 Currenlty tests for GNU/Linux and windows-nt only.\n
 :EXAMPLE\n\n\(mon-insert-system-type-cond\)\n
 :SEE `IS-W32-P' and `IS-GNU-P' for constants that return t or nil.\n
-:SEE-ALSO `mon-user-name-conditionals', `mon-system-type-conditionals'.\n►►►"
+:SEE-ALSO `mon-user-name-conditionals', `mon-system-type-conditionals'.\n▶▶▶"
   (interactive "i\np")
   (let ((mistc-stc (concat
               "\n(cond\n"
@@ -1168,7 +1168,7 @@ When INSRTP or called-interactively inserts template at point.\n
 :EXAMPLE\n\n(while\n(progn\n  (search-forward-regexp \"\")\n  (replace-match \"\"))\n
 :SEE-ALSO `mon-insert-regexp-template-yyyy', `mon-insert-lisp-stamp',
 `mon-insert-lisp-doc-eg-xref', `mon-insert-lisp-testme', `mon-insert-copyright',
-`mon-insert-file-template'.\n►►►"
+`mon-insert-file-template'.\n▶▶▶"
   (interactive "i\np")
   (let ((mirt-regexp
 	 ";; (while\n(progn\n  (search-forward-regexp \"\")\n  (replace-match \"\"))"))
@@ -1196,7 +1196,7 @@ Yank it back from the kill-ring if that is what you want.\n
 :EXAMPLE\n\n\(mon-insert-regexp-template-yyyy\)\n
 :SEE-ALSO `mon-insert-regexp-template', `mon-insert-lisp-stamp',
 `mon-insert-lisp-doc-eg-xref', `mon-insert-lisp-testme', `mon-insert-copyright',
-`mon-insert-file-template'.\n►►►"
+`mon-insert-file-template'.\n▶▶▶"
   (interactive "P\ni\np")
   (let* ((dbl-slash
 	  (concat
@@ -1242,7 +1242,7 @@ when `slime-current-connection' is non-nil.\n
 `mon-lisp-CL-package-complete', `mon-insert-lisp-CL-debug',
 `mon-insert-lisp-CL-eval-when', `mon-insert-lisp-doc-eg-xref',
 `mon-insert-lisp-CL-jump-doc', `quicklisp-system-complete',
-`mon-help-CL-pkgs'.\n►►►"
+`mon-help-CL-pkgs'.\n▶▶▶"
   (let ((pkg-cmplt (if (or (slime-current-connection)
                            (buffer-local-value 'slime-mode (current-buffer)))
                        `(,(or slime-buffer-package (slime-current-package))
@@ -1288,7 +1288,7 @@ Strip datestrings from  CL-PACKAGE when it matches the regexp:\n
 `generated-autoload-file', `add-file-local-variable-prop-line',
 `delete-file-local-variable-prop-line',
 `copy-dir-locals-to-file-locals-prop-line', `set-auto-mode', `set-auto-mode-0',
-`set-auto-mode-1'.\n►►►"
+`set-auto-mode-1'.\n▶▶▶"
   (interactive "P\ni\np")
   (let* ((mdln-pkg (when (or cl-package current-prefix-arg)
                      (cond ((or (and current-prefix-arg 
@@ -1387,7 +1387,7 @@ package as per `mon-insert-lisp-CL-mode-line-template'.\n
 `mon-insert-lisp-evald',`mon-insert-copyright', `mon-comment-divider',
 `mon-comment-divider-to-col-four', `mon-insert-lisp-stamp', `mon-stamp',
 `mon-file-stamp', `mon-insert-lisp-doc-eg-xref', `mon-insert-lisp-testme',
-`mon-insert-copyright', `mon-insert-file-template'.\n►►►"
+`mon-insert-copyright', `mon-insert-file-template'.\n▶▶▶"
   (interactive "i\np\nP")
   (let* ((milcft-modln (if (and w-pkg-name current-prefix-arg)
                            (mon-insert-lisp-CL-mode-line-template t t t)
@@ -1473,7 +1473,7 @@ the date string will be stripped.
 `mon-insert-lisp-CL-jump-doc', `mon-insert-lisp-doc-eg-xref',
 `mon-insert-lisp-CL-debug', `mon-insert-lisp-CL-eval-when',
 `mon-insert-file-template', `mon-insert-copyright', `mon-insert-lisp-stamp',
-`mon-insert-lisp-testme', `mon-insert-lisp-evald'.\n►►►"
+`mon-insert-lisp-testme', `mon-insert-lisp-evald'.\n▶▶▶"
   (interactive "i\nP\np")
   (let* ((micpt-fname (cond ((and package-nm intrp (not insrtp))
                              (if (or (stringp package-nm)
@@ -1568,7 +1568,7 @@ Inserts following form \(including the newline\):\n
 `mon-insert-lisp-CL-file-template', `mon-insert-lisp-CL-package-template',
 `mon-lisp-CL-package-complete', `mon-insert-lisp-CL-debug',
 `mon-insert-lisp-CL-eval-when' `mon-insert-lisp-doc-eg-xref',
-`mon-insert-lisp-CL-jump-doc'.\n►►►"
+`mon-insert-lisp-CL-jump-doc'.\n▶▶▶"
   (interactive "P")
   (let ((micew-tmplt "(eval-when (:compile-toplevel :load-toplevel :execute)\n"))
     (and (or (and (not no-insert)
@@ -1599,7 +1599,7 @@ Inserts following form \(including the newline\):\n
 `mon-insert-lisp-CL-mode-line-template', `mon-insert-lisp-CL-file-template',
 `mon-insert-lisp-CL-package-template', `mon-lisp-CL-package-complete',
 `mon-insert-lisp-CL-debug', `mon-insert-lisp-doc-eg-xref',
-`mon-insert-lisp-CL-jump-doc'.\n►►►"
+`mon-insert-lisp-CL-jump-doc'.\n▶▶▶"
   (interactive "P")
   (let ((micd-bg 
          "(declare (optimize (speed 0) (safety 0) (compilation-speed 0) (debug 3)))\n"))
@@ -1647,7 +1647,7 @@ With the full return value having the format:\n
     \" <DOCSTR> ~%~@
  :EXAMPLE~%~@
  { ... <EXAMPLE> ... } ~%~@
- :SEE-ALSO `<XREF>'.~%►►►\"\)\)\n
+ :SEE-ALSO `<XREF>'.~%▶▶▶\"\)\)\n
 The slot templates '<SYM> and '<DOC-TYPE> are inserted literally with the intent
 that these be be manually adjusted according to context, such that where <SYM> is
 a symbol-name or list of the form '\(setf <SYM>\) and <DOC-TYPE> is a type
@@ -1671,7 +1671,7 @@ The remaining <DOC-TYPE> specifiers are as per the spec.
 `mon-insert-lisp-CL-package-template', `mon-lisp-CL-package-complete',
 `mon-insert-lisp-CL-debug', `mon-insert-lisp-CL-eval-when'
 `mon-insert-lisp-stamp', `mon-insert-lisp-testme',
-`mon-insert-lisp-evald'.\n►►►"
+`mon-insert-lisp-evald'.\n▶▶▶"
   (interactive "i\np\nP")
   ;; :NOTE Consider refactoring to use following instead: 
   ;; `mon-buffer-check-local-value', `mon-buffer-check-major-mode', 
@@ -1686,8 +1686,8 @@ The remaining <DOC-TYPE> specifiers are as per the spec.
                                   "\" <DOCSTR> ~%~@\n"
                                   ":EXAMPLE~%~@\n"
                                   " { ... <EXAMPLE> ... } ~%~@\n"
-                                  ":SEE-ALSO `<XREF>'.~%►►►\"))")
-                        (concat "\"\n:EXAMPLE\\n\\n"  "\n" ":SEE-ALSO .\\n►►►\""))))
+                                  ":SEE-ALSO `<XREF>'.~%▶▶▶\"))")
+                        (concat "\"\n:EXAMPLE\\n\\n"  "\n" ":SEE-ALSO .\\n▶▶▶\""))))
     (cond (intrp (save-excursion 
                    (newline)
                    (princ mildeg-xref (current-buffer)))
@@ -1722,7 +1722,7 @@ When `IS-MON-SYSTEM-P' bound in `slime-mode-map' by `mon-keybind-slime'.\n
 `mon-insert-lisp-CL-mode-line-template', `mon-insert-lisp-CL-file-template',
 `mon-lisp-CL-package-complete', `mon-insert-lisp-CL-debug',
 `mon-insert-lisp-CL-eval-when', `mon-insert-lisp-doc-eg-xref',
-`mon-insert-lisp-CL-jump-doc'.\n►►►"
+`mon-insert-lisp-CL-jump-doc'.\n▶▶▶"
   (interactive)
   (eval-when-compile (require 'thingatpt))
   ;;
@@ -1849,7 +1849,7 @@ Does not move point.\n
 `mon-insert-lisp-doc-eg-xref', `mon-insert-lisp-CL-mode-line-template',
 `mon-insert-lisp-CL-file-template', `mon-insert-lisp-CL-package-template',
 `mon-lisp-CL-package-complete', `mon-insert-lisp-CL-debug',
-`mon-insert-lisp-CL-eval-when'.\n►►►"
+`mon-insert-lisp-CL-eval-when'.\n▶▶▶"
   (interactive "P")
   (if no-at-sign
       (mon-insert-lisp-CL-eol-tilde-no-at no-at-sign)
@@ -1874,7 +1874,7 @@ Does not move point.\n
 `mon-insert-lisp-doc-eg-xref', `mon-insert-lisp-CL-mode-line-template',
 `mon-insert-lisp-CL-file-template', `mon-insert-lisp-CL-package-template',
 `mon-lisp-CL-package-complete', `mon-insert-lisp-CL-debug',
-`mon-insert-lisp-CL-eval-when'.\n►►►"
+`mon-insert-lisp-CL-eval-when'.\n▶▶▶"
   (interactive "P")
   (let ((milcetna "~%"))
     (save-excursion
@@ -1900,7 +1900,7 @@ code change may be breaking or otherwise alters the semantics of the procedure.\
 :SEE-ALSO `mon-lisp-stamp',`mon-file-stamp', `mon-insert-copyright',
 `mon-insert-lisp-testme', `mon-insert-lisp-CL-file-template',
 `mon-comment-divider', `mon-comment-divider-to-col-four', `mon-insert-lisp-evald',
-`mon-insert-lisp-doc-eg-xref'.\n►►►"
+`mon-insert-lisp-doc-eg-xref'.\n▶▶▶"
   (interactive "i\np\nP")
       (if (or insrtp intrp)
           (if modifications 
@@ -1934,7 +1934,7 @@ When short form is non-nil do not pad the comment delim to col 68.\n
 Construct Comment delims `mon-comment-divider-w-len' padded to 34, 44, or 54
 chars depending value of arg MONKEY or W-ORG.\n
 :EXAMPLE\n\n\(mon-build-copyright-string-TEST\)\n
-:SEE-ALSO `mon-insert-copyright'.\n►►►"
+:SEE-ALSO `mon-insert-copyright'.\n▶▶▶"
   (interactive "i\np\nP") 
   (let ((mbcs-nm (cond (monkey (cond ((and (intern-soft "IS-MON-P")
                                            (bound-and-true-p IS-MON-P))
@@ -2026,7 +2026,7 @@ Default is to return with 68 char length comment dividers.\n
 `mon-insert-lisp-doc-eg-xref', `mon-insert-gnu-licence-gfdl',
 `mon-insert-gnu-licence', `*mon-mit-license-header*',
 `*mon-bsd-license-header*', `*mon-gnu-license-header-gfdl*',
-`*mon-gnu-license-header*'.\n►►►" 
+`*mon-gnu-license-header*'.\n▶▶▶" 
   (interactive "p\nP\ni\np")
   (if (or insrtp intrp)
       (save-excursion 
@@ -2096,7 +2096,7 @@ It should not be contained of leading or traling \"/\" characters.\n
 `*mon-github-repository-name-for-pathname*',
 `*mon-github-repository-default-pathname*', `mon-insert-file-template',
 `mon-build-github-repo-path-defaults', `mon-build-github-default',
-`mon-set-github-paths-init'.\n►►►"
+`mon-set-github-paths-init'.\n▶▶▶"
   :type 'string
   :group 'mon-insertion-utils
   :group 'mon-dir-utils
@@ -2117,7 +2117,7 @@ It should not be contained of leading or trialing \"/\" characters.\n
 `*mon-github-repository-name-for-pathname*',
 `*mon-github-repository-default-pathname*', `mon-insert-file-template',
 `mon-build-github-repo-path-defaults', `mon-build-github-default',
-`mon-set-github-paths-init'.\n►►►"
+`mon-set-github-paths-init'.\n▶▶▶"
   :type 'string
   :group 'mon-insertion-utils
   :group 'mon-dir-utils
@@ -2150,7 +2150,7 @@ whereas the incorrect value would yield an invalid github URL when expanded, e.g
 `*mon-github-repository-name-for-pathname*',
 `*mon-github-repository-default-pathname*', `mon-insert-file-template',
 `mon-build-github-repo-path-defaults', `mon-build-github-default',
-`mon-set-github-paths-init'.\n►►►"
+`mon-set-github-paths-init'.\n▶▶▶"
   :type 'string
   :group 'mon-insertion-utils
   :group 'mon-dir-utils
@@ -2185,18 +2185,17 @@ either of the following forms:\n
 `*mon-github-repository-name-for-pathname*',
 `*mon-github-repository-default-pathname*', `mon-insert-file-template',
 `mon-build-github-repo-path-defaults', `mon-build-github-default',
-`mon-set-github-paths-init'.\n►►►"
-
-                 :type  'string
-                 :group 'mon-insertion-utils
-                 :group 'mon-dir-utils
-                 :group 'mon-dir-locals)
+`mon-set-github-paths-init'.\n▶▶▶"
+  :type  'string
+  :group 'mon-insertion-utils
+  :group 'mon-dir-utils
+  :group 'mon-dir-locals)
 
 ;;; ==============================
 ;;; :CHANGESET 2442
 ;;; :CREATED <Timestamp: #{2011-05-14T16:54:16-04:00Z}#{11196} - by MON KEY>
 (defun mon-build-github-default (&optional no-set-custom)
-  "Set customization value of `*mon-github-pathname-url*'.
+  "Set customization value of `*mon-github-pathname-url*'.\n
 Optional arg NO-SET-CUSTOM when non-nil will not evaluate `custom-set-variables'
 for `*mon-github-pathname-url*'. 
 Default is to bind it \(when all constraints are met\).\n
@@ -2207,7 +2206,7 @@ evaluated at loadtime.\n
 `*mon-github-repository-name-for-pathname*',
 `*mon-github-repository-default-pathname*', `mon-insert-file-template',
 `mon-build-github-repo-path-defaults', `mon-build-github-default',
-`mon-set-github-paths-init'.\n►►►"
+`mon-set-github-paths-init'.\n▶▶▶"
   (let ((mbgd-if  
          (and (equal 
                (mapcar #'(lambda (x) (and 
@@ -2247,14 +2246,14 @@ Default is value of `*mon-github-repository-name-for-pathname*'.\n
 Optional arg REPONAME-SUBDIR-COMPONENT is a Github repository subdir name.
 It should not be contained of leading or traling \"/\" characters, but may have
 have internal occurences, e.g. the following is correct:\n
- \"emacs-load-files/naf-mode/ebay-template-mode\"
+ \"emacs-load-files/naf-mode/ebay-template-mode\"\n
 whereas this is not:\n
  \"/emacs-load-files/naf-mode/ebay-template-mode/\"\n
 Default is value of `*mon-github-repository-default-pathname*'.\n
-:EXAMPLE\n\n
+:EXAMPLE\n
  \(mon-build-github-repo-path-defaults \"<USERNAME-COMPONENT>\" 
                                       \"<REPONAME-COMPONENT>\" 
-                                      \"<REPONAME-SUBDIR-COMPONENT>\"\)
+                                      \"<REPONAME-SUBDIR-COMPONENT>\"\)\n
  \(mon-build-github-repo-path-defaults *mon-github-username-for-pathname* 
                                        *mon-github-repository-name-for-pathname* 
                                        *mon-github-repository-default-pathname*\)\n
@@ -2266,7 +2265,7 @@ Default is value of `*mon-github-repository-default-pathname*'.\n
 `*mon-github-repository-name-for-pathname*',
 `*mon-github-repository-default-pathname*', `mon-insert-file-template',
 `mon-build-github-repo-path-defaults', `mon-build-github-default',
-`mon-set-github-paths-init'.\n►►►"
+`mon-set-github-paths-init'.\n▶▶▶"
   ;; (declare-special *mon-github-username-for-pathname* 
   ;;                  *mon-github-repository-name-for-pathname* 
   ;;                  *mon-github-repository-default-pathname*)
@@ -2307,7 +2306,6 @@ Default is value of `*mon-github-repository-default-pathname*'.\n
 ;;  (mon-string-split-pathname (buffer-file-name)))
 ;;  #'string=)
 
-
 ;;; ==============================
 ;;; :TODO This procedure should be refactored to accomodate other types of
 ;;;  ``known'' files.  If this is dont the curent elisp specific version should
@@ -2337,7 +2335,7 @@ helps ensure multi-os portability.\n
 `mon-build-copyright-string-license', `mon-build-copyright-string',
 `mon-build-copyright-string-TEST', `*mon-bsd-license-header*',
 `*mon-mit-license-header*', `*mon-gnu-license-header-gfdl*',
-`*mon-gnu-license-header*'.\n►►►"
+`*mon-gnu-license-header*'.\n▶▶▶"
   (interactive "i\nP\np")  
   (let* ((mift-cur-nm (buffer-name))
          (mift-fname (cond ((and w-fname (not intrp))
@@ -2349,7 +2347,6 @@ helps ensure multi-os portability.\n
                        (concat (file-name-sans-extension (read-string "Filename for template: ")) ".el"))
                       ((and (mon-buffer-written-p) (string-match-p ".*\\.el" mift-cur-nm)) mift-cur-nm)
                       (t "<PKG-NAME>.el")))
-
          ;; (mift-fname-github-pathname *mon-github-pathname-default*)
          (mift-fnm-sans (file-name-sans-extension mift-fname))
          (mift-tmplt
@@ -2370,7 +2367,7 @@ helps ensure multi-os portability.\n
            (substring (mon-comment-divider-w-len 65 ) 1) "\n"
            ";; DESCRIPTION:\n"
            ";; " mift-fnm-sans " provides { some description here. }\n;;\n"
-           ";; FUNCTIONS:►►►\n;;\n;; FUNCTIONS:◄◄◄\n;;\n"
+           ";; FUNCTIONS:▶▶▶\n;;\n;; FUNCTIONS:◀◀◀\n;;\n"
            ";; MACROS:\n;;\n"
            ";; METHODS:\n;;\n"
            ";; CLASSES:\n;;\n"
@@ -2387,7 +2384,12 @@ helps ensure multi-os portability.\n
            ";; SNIPPETS:\n;;\n"
            ";; REQUIRES:\n;;\n"
            ";; THIRD-PARTY-CODE:\n;;\n" 
-           ";; URL: https://github.com/mon-key/mon-emacs/raw/master/emacs-load-files/naf-mode/" mift-fname "\n"
+           ";; URL: "
+           ;; :TODO Finish adding github related functions/values that frob the pathname:
+           (mon-build-github-repo-path-defaults *mon-github-username-for-pathname* 
+                                                *mon-github-repository-name-for-pathname* 
+                                                (concat *mon-github-repository-default-pathname* "/naf-mode"))
+           mift-fname "\n"
            ";; EMACSWIKI-URL: http://www.emacswiki.org/emacs/" mift-fname "\n"
            ";; FIRST-PUBLISHED:\n;;\n"
            ";; EMACSWIKI: { URL of an EmacsWiki describing " mift-fnm-sans ". }\n;;\n"
@@ -2439,7 +2441,7 @@ Presented with the GPLv3+ clause.\n
 `*mon-gnu-license-header-gfdl*', `mon-insert-gnu-licence-gfdl',
 `mon-insert-gnu-licence', `mon-build-copyright-string',
 `mon-build-copyright-string-license', `mon-build-copyright-string-TEST',
-`mon-insert-file-template'.\n►►►")
+`mon-insert-file-template'.\n▶▶▶")
 ;;
 (unless (bound-and-true-p *mon-gnu-license-header*)
   (setq *mon-gnu-license-header*
@@ -2474,7 +2476,7 @@ Presented with the GPLv3+ clause.\n
 `*mon-gnu-license-header-gfdl*', `mon-insert-gnu-licence-gfdl',
 `mon-insert-gnu-licence', `mon-build-copyright-string',
 `mon-build-copyright-string-license', `mon-build-copyright-string-TEST',
-`mon-insert-file-template'.\n►►►")
+`mon-insert-file-template'.\n▶▶▶")
 ;;
 (unless (bound-and-true-p *mon-gnu-license-header-emacs*)
   (setq *mon-gnu-license-header-emacs*
@@ -2496,7 +2498,7 @@ Presented with the GPLv3+ clause.\n
 `*mon-bsd-license-header*', `*mon-gnu-license-header-gfdl*',
 `mon-insert-gnu-licence-gfdl', `mon-insert-gnu-licence',
 `mon-build-copyright-string', `mon-build-copyright-string-license',
-`mon-build-copyright-string-TEST', `mon-insert-file-template'.\n►►►")
+`mon-build-copyright-string-TEST', `mon-insert-file-template'.\n▶▶▶")
 ;;
 (unless (bound-and-true-p *mon-min-license-header*)
   (setq *mon-mit-license-header*
@@ -2537,7 +2539,7 @@ Presented with the GPLv3+ clause.\n
 `*mon-bsd-license-header*', `*mon-gnu-license-header-gfdl*',
 `mon-insert-gnu-licence-gfdl', `mon-insert-gnu-licence',
 `mon-build-copyright-string', `mon-build-copyright-string-license',
-`mon-build-copyright-string-TEST', `mon-insert-file-template'.\n►►►"
+`mon-build-copyright-string-TEST', `mon-insert-file-template'.\n▶▶▶"
   :type 'string
   :group 'mon-insertion-utils)
 ;;
@@ -2562,7 +2564,7 @@ advertising clause three.\n
 `*mon-gnu-license-header*', `mon-insert-gnu-licence-gfdl',
 `mon-insert-gnu-licence', `mon-build-copyright-string',
 `mon-build-copyright-string-license', `mon-build-copyright-string-TEST',
-`mon-insert-file-template'.\n►►►")
+`mon-insert-file-template'.\n▶▶▶")
 ;;
 (unless (and (intern-soft "*mon-bsd-license-header*")
              (bound-and-true-p *mon-bsd-license-header*))
@@ -2614,7 +2616,7 @@ Insertion provides GFDL clause.\n
 :SEE-ALSO `*mon-gnu-license-header-emacs*', `*mon-mit-license-header*',
 `*mon-bsd-license-header*', `mon-insert-gnu-licence',
 `mon-build-copyright-string', `mon-build-copyright-string-license',
-`mon-build-copyright-string-TEST'.\n►►►")
+`mon-build-copyright-string-TEST'.\n▶▶▶")
 ;;
 (unless (and (intern-soft "*mon-gnu-license-header-gfdl*")
              (bound-and-true-p *mon-gnu-license-header-gfdl*))
@@ -2658,7 +2660,7 @@ License are mapped from the list of strings in:
 :VARIALBE `*mon-bsd-license-header*'\n
 :SEE-ALSO `mon-build-copyright-string', `mon-build-copyright-string-TEST',
 `mon-insert-gnu-licence', `mon-insert-gnu-licence-gfdl',
-`mon-insert-file-template'.\n►►►"
+`mon-insert-file-template'.\n▶▶▶"
   (let ((mbcsl-lic (if gpl-mit-bsd-gfdl 
                  (cond ((eq gpl-mit-bsd-gfdl 'gpl)  'gpl)
                        ((eq gpl-mit-bsd-gfdl 'mit)  'mit)
@@ -2706,7 +2708,7 @@ does not move point.\n
 `mon-build-copyright-string-license', `mon-build-copyright-string-TEST',
 `mon-insert-file-template', `*mon-gnu-license-header-emacs*',
 `*mon-gnu-license-header*', `*mon-gnu-license-header-gfdl*',
-`*mon-mit-license-header*', `*mon-bsd-license-header*'.\n►►►"
+`*mon-mit-license-header*', `*mon-bsd-license-header*'.\n▶▶▶"
   (interactive "i\np")
   (let ((migl-lic (if not-emacs 
                   (mon-build-copyright-string-license 'gpl)
@@ -2735,7 +2737,7 @@ Does not move point.\n
 `mon-build-copyright-string-license', `mon-build-copyright-string-TEST',
 `mon-insert-file-template', `*mon-gnu-license-header*',
 `*mon-gnu-license-header-gfdl*', `*mon-mit-license-header*',
-`*mon-bsd-license-header*'.\n►►►"
+`*mon-bsd-license-header*'.\n▶▶▶"
   (interactive "P\ni\np")
   (let ((bld-gfdl (cond (w-divider
                          (concat 
@@ -2777,7 +2779,7 @@ Does not move point.\n
 `mon-insert-lisp-CL-mode-line-template', `mon-insert-lisp-CL-file-template',
 `mon-insert-lisp-CL-package-template', `mon-lisp-CL-package-complete',
 `mon-insert-lisp-stamp', `mon-insert-lisp-evald' `mon-insert-regexp-template',
-`mon-comment-divider'.\n►►►"
+`mon-comment-divider'.\n▶▶▶"
   (interactive "i\nP\ni\np")
   (let ((c-nm (if class-pfx (format "%s" class-pfx) "<CLASS-NAME>"))
         (s-nm (if class-pfx (concat "<SLOT-"      
@@ -2884,7 +2886,7 @@ buffer to before proceeding with insertion.\n
 `mon-insert-lisp-CL-package-template', `mon-insert-lisp-doc-eg-xref',
 `mon-insert-file-template', `mon-insert-lisp-CL-file-template',
 `mon-insert-lisp-stamp', `mon-insert-lisp-evald' `mon-insert-regexp-template',
-`mon-comment-divider'.\n►►►"
+`mon-comment-divider'.\n▶▶▶"
   (interactive "\i\n\i\n\i\nP")
   (let ((mail-addr (cadr (assoc 9 *MON-ORG-NAME*))) ;WAS: `user-mail-address'
         (organization (getenv "ORGANIZATION"))
@@ -2989,7 +2991,7 @@ Does not move-point.\n
 :TO-PRICE-AT $600 (45% not-on-linen)
 :THEM-AT-LOW $330
 :OURS-AT-LOW $270\n
-:SEE-ALSO `mon-comput-33'.\n►►►"
+:SEE-ALSO `mon-comput-33'.\n▶▶▶"
   (interactive "nprice at low :\ni\np")
   (let ((comp-45 
          (format 
@@ -3018,7 +3020,7 @@ Does not move-point.\n
 :TO-PRICE-AT $750 (33%)
 :THEM-AT-HIGH $502
 :OURS-AT-HIGH $247\n
-:SEE-ALSO `mon-comput-45'.\n►►►"
+:SEE-ALSO `mon-comput-45'.\n▶▶▶"
   (interactive "nprice at high :\ni\np")
   (let ((comp-33 
          (format 

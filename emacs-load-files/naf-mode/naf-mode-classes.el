@@ -4,9 +4,9 @@
 ;;; DESCRIPTION:
 ;;; naf-mode-classes provides {description here}.
 ;;;
-;;; FUNCTIONS:►►►
+;;; FUNCTIONS:▶▶▶
 ;;;
-;;; FUNCTIONS:◄◄◄
+;;; FUNCTIONS:◀◀◀
 ;;;
 ;;; MACROS:
 ;;;

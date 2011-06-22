@@ -8,9 +8,9 @@
 ;;; font-locked by `naf-mode-nationality-face'.
 ;;; Documented with variable `naf-mode-nationality-fface'.
 ;;; 
-;;; FUNCTIONS:►►►
+;;; FUNCTIONS:▶▶▶
 ;;;
-;;; FUNCTIONS:◄◄◄
+;;; FUNCTIONS:◀◀◀
 ;;;
 ;;; MACROS:
 ;;;

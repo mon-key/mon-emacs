@@ -5,9 +5,9 @@
 ;;; naf-mode-benezit-flags Benezit related terms used in/flagged in `naf-mode'.
 ;;; fontlocked by: `naf-mode-benezit-face', `naf-mode-benezit-fface'
 ;;;
-;;; FUNCTIONS:►►►
+;;; FUNCTIONS:▶▶▶
 ;;;
-;;; FUNCTIONS:◄◄◄
+;;; FUNCTIONS:◀◀◀
 ;;;
 ;;; CONSTANTS or VARIABLES:
 ;;; `naf-mode-benezit-section-flag', `naf-mode-benezit-currency-acronym'

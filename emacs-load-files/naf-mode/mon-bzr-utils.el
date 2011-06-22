@@ -21,10 +21,10 @@
 ;; DESCRIPTION:
 ;; mon-bzr-utils provides
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;; `mon-bzr-log-last', `mon-insert-hgignore-template', `mon-help-bzr-init',
 ;; `mon-help-bzr-topics', `mon-help-bzr-usage' `mon-help-bzr-aliases',
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;;
@@ -117,7 +117,7 @@
 ;;; :CREATED <Timestamp: #{2011-01-14T19:12:06-05:00Z}#{11025} - by MON KEY>
 (defgroup mon-bzr-utils nil
   "Customization group for variables and functions of :FILE mon-bzr-utils.el\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   ;; :prefix "<PREFIX>"
   :link '(url-link 
           :tag ":EMACSWIKI-FILE" 
@@ -147,7 +147,7 @@ The symbols contained of this list are defined in :FILE mon-bzr-utils.el\n
 `*mon-seq-utils-xrefs*', `*mon-string-utils-xrefs*', `*mon-type-utils-xrefs*',
 `*mon-window-utils-xrefs*', `*naf-mode-xref-of-xrefs*', `*mon-slime-xrefs*',
 `*naf-mode-faces-xrefs*', `*naf-mode-date-xrefs*', `*mon-ulan-utils-xrefs*',
-`*mon-xrefs-xrefs'.\n►►►"
+`*mon-xrefs-xrefs'.\n▶▶▶"
   :type '(repeat symbol)
   :group 'mon-bzr-utils
   :group 'mon-xrefs)
@@ -288,7 +288,7 @@ version-info         Show version information about this tree
 view                 Manage filtered views
 whoami               Show or set bzr user id.\n
 :ALIASED-By `mon-help-bzr-commands'\n
-:SEE-ALSO `mon-help-bzr-aliases', `mon-help-bzr-usage', `mon-help-bzr-init'.\n►►►"
+:SEE-ALSO `mon-help-bzr-aliases', `mon-help-bzr-usage', `mon-help-bzr-init'.\n▶▶▶"
   (interactive "i\nP")
   (if (or insertp intrp)
       (mon-help-function-spit-doc 'mon-help-bzr-topics :insertp t)
@@ -336,7 +336,7 @@ whoami               Show or set bzr user id.\n
 - Stop tracking a revisioned file but don't delete the file
   shell> bzr remove --keep <FILE>
 
-:SEE-ALSO `mon-help-bzr-topics', `mon-help-bzr-aliases', `mon-help-bzr-init'.\n►►►"
+:SEE-ALSO `mon-help-bzr-topics', `mon-help-bzr-aliases', `mon-help-bzr-init'.\n▶▶▶"
   (interactive "i\nP")
   (if (or insertp intrp)
       (mon-help-function-spit-doc 'mon-help-bzr-usage :insertp t)
@@ -362,7 +362,7 @@ status
 :BZR-ALIASED-BY `st`, `stat`\n
 remove 
 :BZR-ALIASED-BY `rm`, `del`
-:SEE-ALSO `mon-help-bzr-topics', `mon-help-bzr-usage', `mon-help-bzr-init'.\n►►►"
+:SEE-ALSO `mon-help-bzr-topics', `mon-help-bzr-usage', `mon-help-bzr-init'.\n▶▶▶"
 (interactive "i\nP")
   (if (or insertp intrp)
       (mon-help-function-spit-doc 'mon-help-bzr-aliases :insertp t)
@@ -432,7 +432,7 @@ Find the list of branches in a given repo \(This isn't obvious...)\:
 shell> bzr branches
 :SEE (URL `http://lists.gnu.org/archive/html/emacs-devel/2010-01/msg01091.html')
 :SEE (URL `http://bzr.savannah.gnu.org/r/emacs/')\n
-:SEE-ALSO `mon-help-bzr-topics'.\n►►►"
+:SEE-ALSO `mon-help-bzr-topics'.\n▶▶▶"
 (interactive "i\nP")
   (if (or insertp intrp)
       (mon-help-function-spit-doc 'mon-help-bzr-init :insertp t)
@@ -615,7 +615,7 @@ shell> bzr branches
 (defun mon-bzr-log-last (&optional log-last-n)
   "Read last n bzr logs in buffer's default-directory.\n
 When optional arg LOG-LAST-N is non-nil read logs for the last N revisions.\n
-:SEE-ALSO `*mon-hgignore-template*', `mon-insert-hgignore-template'.\n►►►"
+:SEE-ALSO `*mon-hgignore-template*', `mon-insert-hgignore-template'.\n▶▶▶"
   (interactive "p")
   ;; (bzr-log "./"  log-last-n)
   (bzr-log default-directory (or log-last-n 1)))
@@ -766,7 +766,7 @@ inserted from a calling function or command as it could prevent files from being
 tracked with hg. The source is commented with rationale for inclusion of some
 format and includes extension mappings to the full format name/spec where this
 may be unclear or forgotten.\n
-:CALLED-BY `mon-insert-hgignore-template'.\n►►►")
+:CALLED-BY `mon-insert-hgignore-template'.\n▶▶▶")
 ;;
 ;;; :TEST-ME *mon-hgignore-template* 
 ;;; (progn (makunbound '*mon-hgignore-template*)
@@ -785,7 +785,7 @@ Patterns held as a list of strings by:
 :VARIABLE `*mon-hgignore-template*'\n
 :EXAMPLE\n
 \(momentary-string-display \(mon-insert-hgignore-template\) (1+ \(point\)\))\n
-:SEE-ALSO `mon-bzr-log-last'.\n►►►"
+:SEE-ALSO `mon-bzr-log-last'.\n▶▶▶"
   (interactive "i\np")
   (let ((hgignr (mapconcat 'identity *mon-hgignore-template* "\n")))
     (if (or insrtp intrp)

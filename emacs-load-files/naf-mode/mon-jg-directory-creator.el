@@ -25,10 +25,10 @@
 ;; text, video etc. Hierarchy consists of nested numbered sub-directories.  
 ;; "When a directory number is divisible by 10 descend"
 ;; 
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;; `mon-write-jg-file-in-path', `mon-make-jg-dir-in-path',
 ;; `mon-format-jg-file-for-write',
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;;
@@ -119,7 +119,7 @@
   "*A JG file template for inserting into JG archive directories.\n
 :CALLED-BY `mon-format-jg-file-for-write'\n
 :SEE-ALSO `mon-write-jg-file-in-path', `mon-make-jg-dir-in-path'
-`mon-insert-file-in-dirs', `mon-insert-dirs-in-path'.\n►►►")
+`mon-insert-file-in-dirs', `mon-insert-dirs-in-path'.\n▶▶▶")
 ;;
 (unless (bound-and-true-p *mon-jg-file-template*)
   (setq *mon-jg-file-template*
@@ -173,7 +173,7 @@ When keyword arg NO-WRITE is non-nil also write the log to the file named:\n
 ¦  { ... LOTS OF FILES ELIDED ... }\n
 :SEE-ALSO `mon-write-jg-file-in-path', `mon-make-jg-dir-in-path',
 `mon-format-jg-file-for-write', `*mon-jg-file-template*',
-`mon-insert-file-in-dirs', `mon-insert-dirs-in-path'.\n►►►"
+`mon-insert-file-in-dirs', `mon-insert-dirs-in-path'.\n▶▶▶"
   (let ((frmt (make-symbol "frmt")))
     (let (frmt
           (th (number-sequence 
@@ -254,7 +254,7 @@ FL-PREFIX is a string to prepend to generated file-name. Default is \"jg-photo-\
 FL-SUFFIX is a string to append to generated file-name, Default is \".txt\"\n
 When optional arg NO-WRITE-FILE is non-nil do not write file.\n
 :CALLED-BY `mon-make-jg-dir-in-path'\n
-:SEE-ALSO `mon-insert-file-in-dirs', `mon-insert-dirs-in-path'\n►►►"
+:SEE-ALSO `mon-insert-file-in-dirs', `mon-insert-dirs-in-path'\n▶▶▶"
   (let* ((dir-len (length fl-pth))
          (dir-fl (when (> dir-len 15)
                    (concat (directory-file-name fl-pth) "/"
@@ -274,7 +274,7 @@ When optional arg NO-WRITE-FILE is non-nil do not write file.\n
 Return formatted string and insert in buffer at point. Moves point.\n
 :CALLED-BY `mon-write-jg-file-in-path'\n
 :SEE-ALSO `mon-make-jg-dir-in-path', `mon-insert-file-in-dirs',
-`mon-insert-dirs-in-path'.\n►►►"
+`mon-insert-dirs-in-path'.\n▶▶▶"
   (let ((tmpl (mapconcat #'identity *mon-jg-file-template* "\n")))
     (insert (format tmpl fname-to-write))))
 ;;

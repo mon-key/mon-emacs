@@ -27,7 +27,7 @@
 ;; slime-loads-GNU-clbuild configs stored seperately from Slime load defs called from 
 ;; `default-start-loads.el' to prevent the HG synch issues that arise.
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;; `quicklisp-find-slime', `quicklisp-current-swank-loader',
 ;; `quicklisp-write-dot-swank-loader-if', `quicklisp-write-dot-swank-loader',
 ;; `quicklisp-dot-swank-current-p', `quicklisp-hash-system-completions',
@@ -53,7 +53,7 @@
 ;; `slime-insert-integer-at-point',
 ;; `mon-add-lisp-system-paths-to-tags-table-list',
 ;; `slime-macroexpand-again-fix',
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;; 
 ;; MACROS:
 ;;
@@ -302,7 +302,7 @@
 ;;; :CREATED <Timestamp: #{2011-01-12T14:04:51-05:00Z}#{11023} - by MON KEY>
 (defgroup mon-slime nil
   "Customization group for variables and functions of :FILE slime-loads-GNU-clbuild.el\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   ;; :prefix "<PREFIX>"
   :link '(url-link 
           :tag "\n:SLIME-DEVEL (URL `http://news.gmane.org/gmane.lisp.slime.devel')"
@@ -383,7 +383,7 @@ The symbols contained of this list are defined in :FILE slime-loads-GNU-clbuild.
 `*mon-seq-utils-xrefs*', `*mon-string-utils-xrefs*', `*mon-type-utils-xrefs*',
 `*mon-window-utils-xrefs*', `*naf-mode-xref-of-xrefs*',
 `*naf-mode-faces-xrefs*', `*naf-mode-date-xrefs*', `*mon-ulan-utils-xrefs*',
-`*mon-xrefs-xrefs'.\n►►►"
+`*mon-xrefs-xrefs'.\n▶▶▶"
     :type '(repeat symbol)
     :group 'mon-slime
     :group 'mon-xrefs)
@@ -393,7 +393,7 @@ The symbols contained of this list are defined in :FILE slime-loads-GNU-clbuild.
 ;;; :CREATED <Timestamp: #{2010-10-21T18:59:23-04:00Z}#{10424} - by MON KEY>
 (defgroup mon-qucklisp nil
   "Configuations for Zach Beane's Common Lisp Quicklisp related procedures.\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   :link '(url-link 
           :tag "\n:EMACSWIKI-FILE (URL `http://www.emacswiki.org/emacs/slime-loads-GNU-clbuild.el')" 
           "http://www.emacswiki.org/emacs/slime-loads-GNU-clbuild.el")
@@ -440,7 +440,7 @@ Defaults to the value of:\n
 :SEE-ALSO `slime-backend', `quicklisp-find-slime',
 `quicklisp-current-swank-loader', `quicklisp-write-dot-swank-loader-if',
 `quicklisp-write-dot-swank-loader', `quicklisp-dot-swank-current-p',
-`*quicklisp-path*'.\n►►►"
+`*quicklisp-path*'.\n▶▶▶"
   :type  'directory
   :group 'mon-quicklisp
   :group 'mon-doc-help-CL)
@@ -467,7 +467,7 @@ in the software subdir of `*quicklisp-path*'.\n
 \(quicklisp \"~/quicklisp/\")\n
 :SEE-ALSO `slime-backend', `quicklisp-current-swank-loader',
 `quicklisp-write-dot-swank-loader-if', `quicklisp-dot-swank-current-p',
-`quicklisp-write-dot-swank-loader', `*quicklisp-path*'.\n►►►"
+`quicklisp-write-dot-swank-loader', `*quicklisp-path*'.\n▶▶▶"
   (let* ((ql-softs (concat (or ql-path *quicklisp-path*) 
                            "dists/quicklisp/software/")) 
          (fnd-slm-rgxp "\\(slime-\\(%s\\)-cvs\\)") ;; %s -> "[0-9]+" & most-recent
@@ -526,7 +526,7 @@ elt2 is the truename of the most current swank-loader.lisp\n
 \(quicklisp-current-swank-loader \"~/quicklisp/\"\)\n
 :SEE-ALSO `slime-backend', `quicklisp-find-slime',
 `quicklisp-write-dot-swank-loader-if', `quicklisp-write-dot-swank-loader',
-`quicklisp-dot-swank-current-p', `*quicklisp-path*'.\n►►►"
+`quicklisp-dot-swank-current-p', `*quicklisp-path*'.\n▶▶▶"
   (let* ((swk-ldr-pth (quicklisp-find-slime ql-path))
          (swk-ldr     (concat (file-name-as-directory swk-ldr-pth)
                               "swank-loader.lisp"))
@@ -578,7 +578,7 @@ When optional arg W-MSG-USER is non-nil write a message to \"*Messages*\" buffer
 indicating that file has changed.\n
 :SEE-ALSO `slime-backend', `quicklisp-find-slime',
 `quicklisp-current-swank-loader', `quicklisp-write-dot-swank-loader-if',
-`quicklisp-dot-swank-current-p', `*quicklisp-path*'.\n►►►"
+`quicklisp-dot-swank-current-p', `*quicklisp-path*'.\n▶▶▶"
   (let* ((qcsw (or w-swank-loader-list
                    (quicklisp-current-swank-loader ql-path)))
          (dot-swank  (cdar qcsw))
@@ -618,7 +618,7 @@ When optional arg W-MSG-USER is non-nil write a message to \"*Messages*\" buffer
 indicating that file has changed as per `quicklisp-write-dot-swank-loader'.\n
 :SEE-ALSO `slime-backend',`quicklisp-find-slime',
 `quicklisp-current-swank-loader', `quicklisp-write-dot-swank-loader',
-`quicklisp-dot-swank-current-p', `*quicklisp-path*'.\n►►►"
+`quicklisp-dot-swank-current-p', `*quicklisp-path*'.\n▶▶▶"
   (let ((swk-ldr-lst 
          (or w-swank-loader-list
              (quicklisp-current-swank-loader ql-path))))
@@ -648,7 +648,7 @@ quicklisp directory as per `quicklisp-find-slime'./n
  \(quicklisp-current-swank-loader \"~/quicklisp/\"\)\)\n
 :SEE-ALSO `slime-backend', `quicklisp-find-slime',
 `quicklisp-current-swank-loader', `quicklisp-write-dot-swank-loader',
-`quicklisp-write-dot-swank-loader-if', `*quicklisp-path*'.\n►►►"
+`quicklisp-write-dot-swank-loader-if', `*quicklisp-path*'.\n▶▶▶"
   ;; Assumes the swank-loader.lisp path is a namestring.
   (let ((ql-cur-slm (or w-swank-loader-list
                         (quicklisp-current-swank-loader ql-path))))
@@ -680,7 +680,7 @@ quicklisp directory as per `quicklisp-find-slime'./n
 \(hash-table-test *quicklisp-systems*\)\n
 :SEE-ALSO `quicklisp-system-complete', `quicklisp-system-complete-if',
 `quicklisp-hash-system-completions',
-`quicklisp-hash-system-completions-slime-loadtime', `*quicklisp-path*'.\n►►►")
+`quicklisp-hash-system-completions-slime-loadtime', `*quicklisp-path*'.\n▶▶▶")
 ;;
 (unless (and (intern-soft "*quicklisp-systems*" obarray)
              (bound-and-true-p *quicklisp-systems*))
@@ -699,7 +699,7 @@ When optional arg FORCE-REHASH is non-nil clear the `*quicklisp-systems*'
 hash-table, this effectivley forces a rehash of existing systems.\n
 :SEE-ALSO `quicklisp-system-complete', `quicklisp-system-complete-if',
 `quicklisp-hash-system-completions-slime-loadtime', `*quicklisp-systems*',
-`*quicklisp-path*'.\n►►►"
+`*quicklisp-path*'.\n▶▶▶"
   (when force-rehash (clrhash *quicklisp-systems*))
   (if (< (hash-table-count *quicklisp-systems*) 67) ;don't branch needlesly
       (let ((ql-sys-txt ;; :WAS pre-2010/09/01 (concat *quicklisp-path* "index/systems.txt")) 
@@ -745,7 +745,7 @@ When called-interactively or ptional arg INSRTP is non-nil insert retrun value
 in current-buffer moving point.\n
 :EXAMPLE\n\n(quicklisp-system-complete\)\n
 :SEE-ALSO `quicklisp-system-complete-if', `quicklisp-hash-system-completions',
-`*quicklisp-systems*' `mon-help-CL-symbols', `mon-help-CL-pkgs'.\n►►►"
+`*quicklisp-systems*' `mon-help-CL-symbols', `mon-help-CL-pkgs'.\n▶▶▶"
   (interactive "i\np")
   (let ((ql-sys-cmplt 
          (gethash 
@@ -770,7 +770,7 @@ Optional args INSRTP and INTRP are as per `quicklisp-system-complete'.\n
 :EXAMPLE\n\n\(quicklisp-system-complete-if \"^cl-*\" nil t\)\n
 \(call-interactively 'quicklisp-system-complete-if\\\)\)\n
 :SEE-ALSO `quicklisp-hash-system-completions', `*quicklisp-systems*'
-`mon-help-CL-symbols', `mon-help-CL-pkgs'.\n►►►"
+`mon-help-CL-symbols', `mon-help-CL-pkgs'.\n▶▶▶"
   (interactive (list (read-regexp "Filter quiclklisp systems matching regexp") 
                      current-prefix-arg
                      t))
@@ -785,7 +785,7 @@ Optional args INSRTP and INTRP are as per `quicklisp-system-complete'.\n
   "Initialize `quicklisp-hash-system-completions' when loading `slime'.\n
 :SEE-ALSO `quicklisp-hash-system-completions', `quicklisp-system-complete',
 `quicklisp-system-complete-if',
-`quicklisp-hash-system-completions-slime-loadtime'.\n►►►"
+`quicklisp-hash-system-completions-slime-loadtime'.\n▶▶▶"
   (let* ( ;; Find the current slime in `load-path'.
          (get-cur-slm (locate-library "slime"))
          ;; If we found it, make sure it has an ".el" extension not ".elc"
@@ -879,7 +879,7 @@ To customize this variable the following are sufficient:
 :EXAMPLE\n\n\(plist-get :root-path *mon-lisp-system-paths*\)\n
  \(plist-get :base-system-path *mon-lisp-system-paths*\)\n
  \(plist-get :system-paths *mon-lisp-system-paths*\)\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   :type '(plist :options ((:root-path directory) (:base-system-path string) (:system-paths (repeat string))))
   :group 'mon-slime
   :group 'mon-base)
@@ -898,7 +898,7 @@ When optional arg TAGS-PATHS-ONLY is non-nil do not add generated TAGS file
 pathnames to `tags-table-list' instead only return a list of what would have
 been added.\n
 :EXAMPLE\n\n\(mon-add-lisp-system-paths-to-tags-table-list t\)\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   (let* ((paths-plist (bound-and-true-p *mon-lisp-system-paths*))
          (root-path (plist-get paths-plist :root-path))
          (base-system-path (and root-path
@@ -927,7 +927,7 @@ been added.\n
   "Put VALUE on SYMBOL's `lisp-indent-function` property.\n
 Run on the `lisp-mode-hook' by `mon-lisp-set-indentation'.\n
 :EXAMPLE\n\n
-:SEE-ALSO `mon-lisp-set-indent-hook', `lisp-indent-function'.\n►►►"
+:SEE-ALSO `mon-lisp-set-indent-hook', `lisp-indent-function'.\n▶▶▶"
   (put symbol 'lisp-indent-function value))
 ;;
 ;; (remove-hook 'lisp-mode-hook #'mon-lisp-set-indent-hook)
@@ -940,7 +940,7 @@ Run on the `lisp-mode-hook' by `mon-lisp-set-indentation'.\n
 (defun mon-lisp-set-indent-hook ()
   "Put `lisp-indent-function` property for all `*mon-CL-indent-specs*' symbols.\n
 Run on the `lisp-mode-hook'.\n
-:SEE-ALSO `mon-lisp-set-indent'.\n►►►"
+:SEE-ALSO `mon-lisp-set-indent'.\n▶▶▶"
   (interactive)
   (and (bound-and-true-p *mon-CL-indent-specs*)
        (dolist (mlsih-D *mon-CL-indent-specs*)
@@ -985,7 +985,7 @@ Evaluates `slime-setup', `slime-require'.\n
 :SEE-ALSO `mon-set-lisp-init', `mon-slime-start-sbcl', `mon-keybind-slime',
 `mon-help-CL-slime-keys', `slime-cheat-sheet', `mon-slime-setup-init',
 `mon-keybind-lisp-interaction-mode', `mon-keybind-emacs-lisp-mode',
-`slime-setup-contribs', `slime-load-contribs', `slime-required-modules'.\n►►►"
+`slime-setup-contribs', `slime-load-contribs', `slime-required-modules'.\n▶▶▶"
   ;; :NOTE sb-ext:*runtime-pathname* returns the current SBCL runtime
   (set-language-environment "UTF-8")
   ;; :QUICKLISP-SLIME-PATH
@@ -1304,7 +1304,7 @@ Evaluates `slime-setup', `slime-require'.\n
   "Like `slime-compile-defun' but with (debug 3).\n
 :EXAMPLE\n\n
 :ALIASED-BY `slime-compile-defun-for-debug'.\n
-:SEE-ALSO `slime-compute-policy'.\n►►►"
+:SEE-ALSO `slime-compute-policy'.\n▶▶▶"
   (interactive)
   (slime-compile-defun 3))
 
@@ -1337,7 +1337,7 @@ Return value is:
 
 :NOTE Assumes an active slime connection and \(featurep 'slime-autodoc\) non-nil.\n
 :ALIASED-BY `mon-slime-insert-arglist'\n
-:SEE-ALSO `slime-complete-form'.\n►►►"
+:SEE-ALSO `slime-complete-form'.\n▶▶▶"
   (interactive)
   (let ((got-sym 
        (save-match-data
@@ -1379,7 +1379,7 @@ Return value is:
 `slime-next-location', `slime-xref-next-line', `slime-next-location-function',
 `slime-xref-show-location', `slime-show-xref-buffer', `slime-show-xrefs',
 `slime-insert-xrefs', `slime-with-xref-buffer', `slime-xref-last-buffer',
-`slime-xref-mode', `slime-xref-mode-map'.\n►►►"
+`slime-xref-mode', `slime-xref-mode-map'.\n▶▶▶"
   (interactive)
   (slime-goto-next-xref))
 
@@ -1395,7 +1395,7 @@ Return value is:
 `slime-previous-location-function', `slime-xref-show-location',
 `slime-show-xref-buffer', `slime-show-xrefs', `slime-insert-xrefs',
 `slime-with-xref-buffer', `slime-xref-last-buffer', `slime-xref-mode',
-`slime-xref-mode-map'.\n►►►"
+`slime-xref-mode-map'.\n▶▶▶"
   (interactive)
   (slime-goto-next-xref t))
 
@@ -1409,7 +1409,7 @@ Return value is:
 `slime-with-popup-buffer', `slime-make-popup-buffer', `slime-init-popup-buffer',
 `slime-display-popup-buffer', `slime-popup-buffer-mode',
 `slime-popup-buffer-quit-function', `slime-popup-restore-data', `window-buffer',
-`selected-window'.\n►►►"
+`selected-window'.\n▶▶▶"
   (interactive)
   ;; (let ((slm-dscr (get-buffer (slime-buffer-name :description))))
   ;;   (if (and slm-dscr (eq (current-buffer) slm-dscr))
@@ -1434,7 +1434,7 @@ Return value is:
 :ALIASED-BY `slime-description-view-source-file'
 :SEE-ALSO `mon-slime-description-view-source-file',
 `mon-slime-setup-show-description-buffer-locals', `mon-slime-show-description',
-`*slime-show-description-hook*'.\n►►►"
+`*slime-show-description-hook*'.\n▶▶▶"
   (interactive)
   (when (string-equal (buffer-name (current-buffer)) 
                       (slime-buffer-name :description))
@@ -1522,7 +1522,7 @@ Return value is:
 "Like `slime-copy-presentation-at-point-to-kill-ring' but discards text-properties.\n
 :EXAMPLE\n\n
 :ALIASED-BY `slime-copy-presentation-at-point-to-kill-ring-no-props'\n
-:SEE-ALSO `mon-slime-copy-presentation-to-kill-ring-no-props'.\n►►►"
+:SEE-ALSO `mon-slime-copy-presentation-to-kill-ring-no-props'.\n▶▶▶"
   (interactive "d")
   (multiple-value-bind (presentation start end) 
       (slime-presentation-around-or-before-point-or-error point)
@@ -1535,7 +1535,7 @@ Return value is:
   "Like `slime-copy-presentation-to-kill-ring' but discards text-properties.\n
 :EXAMPLE\n\n
 :ALIASED-BY `slime-copy-presentation-to-kill-ring-no-props'
-:SEE-ALSO `mon-slime-copy-presentation-at-point-to-kill-ring-no-props'.\n►►►"
+:SEE-ALSO `mon-slime-copy-presentation-at-point-to-kill-ring-no-props'.\n▶▶▶"
   (let ((presentation-text 
            (with-current-buffer buffer
              (buffer-substring-no-properties start end))))
@@ -1581,7 +1581,7 @@ CL-USER> \(find-symbol \"*RUNTIME-PATHNAME*\"\)
 :SEE-ALSO `mon-set-lisp-init', `mon-keybind-slime', `mon-help-CL-slime-keys',
 `slime-cheat-sheet', `mon-slime-setup-init',
 `mon-keybind-lisp-interaction-mode', `mon-keybind-emacs-lisp-mode',
-`slime-setup-contribs', `slime-load-contribs', `slime-required-modules'.\n►►►"
+`slime-setup-contribs', `slime-load-contribs', `slime-required-modules'.\n▶▶▶"
   (let* ((sbcl-exec (file-truename (or (executable-find "sbcl") "/SOME-NON-EXISTENT-FILE")))
          (sbcl-exec (or (mon-file-truename-p  sbcl-exec) 
                         (mon-file-non-existent-ERROR :w-error  t
@@ -1640,7 +1640,7 @@ CL-USER> \(find-symbol \"*RUNTIME-PATHNAME*\"\)
 :EXAMPLE\n\n
  \(slime-inspect-asdf-defined-systems\)\n
 :SEE-ALSO `slime-inspect-asdf-system', `slime-inspect-quicklisp-systems',
-`slime-inspect', `slime-inspect-presentation', `slime-inspect-definition'.\n►►►"
+`slime-inspect', `slime-inspect-presentation', `slime-inspect-definition'.\n▶▶▶"
   (interactive)
   (slime-eval-async '(swank:init-inspector "ASDF::*DEFINED-SYSTEMS*") 'slime-open-inspector))
 
@@ -1663,7 +1663,7 @@ entries which are keys on the ASDF::*DEFINED-SYSTEMS* hash-table. However, if
 the argument to ASDF:COERCE-NAME is CL:STRINGP the string's case is preserved.\n
 :SEE-ALSO `slime-inspect-asdf-defined-systems',
 `slime-inspect-quicklisp-systems', `slime-inspect',
-`slime-inspect-presentation', `slime-inspect-definition'.\n►►►"
+`slime-inspect-presentation', `slime-inspect-definition'.\n▶▶▶"
   (interactive "s:FUNCTION `slime-inspect-asdf-system' -- name of system to inspect: \np" )
   (setq system-name
         (or (and (stringp system-name) 
@@ -1691,7 +1691,7 @@ the argument to ASDF:COERCE-NAME is CL:STRINGP the string's case is preserved.\n
 ;;  \(slime-inspect-all-dists\)\n
 ;; :SEE-ALSO `slime-inspect-asdf-system', `slime-inspect-quicklisp-dists-all',
 ;; `slime-inspect-enabled-dists-enabled', `slime-inspect-quicklisp-systems',
-;; `slime-inspect', `slime-inspect-presentation', `slime-inspect-definition'.\n►►►"
+;; `slime-inspect', `slime-inspect-presentation', `slime-inspect-definition'.\n▶▶▶"
 ;;   (interactive)
 ;;   (slime-eval-async '(swank:init-inspector "(ql::all-dists)") 'slime-open-inspector))
 ;;
@@ -1700,7 +1700,7 @@ the argument to ASDF:COERCE-NAME is CL:STRINGP the string's case is preserved.\n
 ;; :EXAMPLE\n\n
 ;;  \(slime-inspect-all-dists\)\n
 ;; :SEE-ALSO `slime-inspect-asdf-system', `slime-inspect',
-;; `slime-inspect-presentation', `slime-inspect-definition'.\n►►►"
+;; `slime-inspect-presentation', `slime-inspect-definition'.\n▶▶▶"
 ;;   (interactive)
 ;;   (slime-eval-async '(swank:init-inspector "(ql-dist:enabled-dists)") 'slime-open-inspector))
 ;;; ==============================
@@ -1723,7 +1723,7 @@ the argument to ASDF:COERCE-NAME is CL:STRINGP the string's case is preserved.\n
 :EXAMPLE\n\n\(slime-inspect-quicklisp-systems\)\n
 :SEE-ALSO `slime-inspect-asdf-system', `slime-inspect-quicklisp-dists-all',
 `slime-inspect-enabled-dists-enabled', `slime-inspect-quicklisp-systems',
-`slime-inspect', `slime-inspect-presentation', `slime-inspect-definition'.\n►►►"
+`slime-inspect', `slime-inspect-presentation', `slime-inspect-definition'.\n▶▶▶"
   (interactive)
   (slime-eval-async '(swank:init-inspector "(ql:system-list)") 'slime-open-inspector))
 
@@ -1770,7 +1770,7 @@ Contents of hash generated with `slime-make-quicklisp-completion-table'.\n
 \(hash-table-count *slime-quicklisp-systems*\)\n
 \(hash-table-size *slime-quicklisp-systems*\)\n
 \(hash-table-test *slime-quicklisp-systems*\)\n
-:SEE-ALSO `slime-get-quicklisp-completions', `slime-inspect-quicklisp-system'.\n►►►")
+:SEE-ALSO `slime-get-quicklisp-completions', `slime-inspect-quicklisp-system'.\n▶▶▶")
 
 ;;; ==============================
 ;; (eval-when (compile load)
@@ -1814,7 +1814,7 @@ When optional arg FORCE-REHASH is non-nil clear the existing hash-table in
 `slime-quicklisp-completion-table-compare-hashed-last',
 `slime-quicklisp-completion-table-get-ql-hash-count',
 `slime-quicklisp-completion-table-compare-hash-counts',
-`*slime-quicklisp-systems*'.\n►►►"
+`*slime-quicklisp-systems*'.\n▶▶▶"
   (when (or (and (null (slime-quicklisp-completion-table-get-hashed-last))
                  (null (slime-quicklisp-completion-table-get-hash-count)))
             (and force-rehash
@@ -1851,7 +1851,7 @@ When optional arg FORCE-REHASH is non-nil clear the existing hash-table in
 `slime-quicklisp-completion-table-compare-hashed-last',
 `slime-quicklisp-completion-table-get-ql-hash-count',
 `slime-quicklisp-completion-table-compare-hash-counts',
-`*slime-quicklisp-systems*'.\n►►►"
+`*slime-quicklisp-systems*'.\n▶▶▶"
   (let ((sip (slime-inferior-process)))
     (and sip 
          (setq sip (process-id sip))
@@ -1881,7 +1881,7 @@ When optional arg FORCE-REHASH is non-nil clear the existing hash-table in
 `slime-quicklisp-completion-table-compare-hashed-last',
 `slime-quicklisp-completion-table-get-ql-hash-count',
 `slime-quicklisp-completion-table-compare-hash-counts',
-`*slime-quicklisp-systems*'.\n►►►"
+`*slime-quicklisp-systems*'.\n▶▶▶"
   (if (hash-table-p *slime-quicklisp-systems*)
       (let* ((w-meta-cnt (slime-quicklisp-completion-table-get-hash-count))
              (w-curr-cnt (hash-table-count *slime-quicklisp-systems*)))
@@ -1921,7 +1921,7 @@ When optional arg FORCE-REHASH is non-nil clear the existing hash-table in
 `slime-quicklisp-completion-table-compare-hashed-last',
 `slime-quicklisp-completion-table-get-ql-hash-count',
 `slime-quicklisp-completion-table-compare-hash-counts',
-`*slime-quicklisp-systems*'.\n►►►"
+`*slime-quicklisp-systems*'.\n▶▶▶"
   (let ((slqctghm-gthr '()))
     (dolist (slqctghm-D-0 '(:hashed-last :hash-table-count) slqctghm-gthr)
       (setq slqctghm-gthr 
@@ -1954,7 +1954,7 @@ potentially costly.\n
 `slime-quicklisp-completion-table-compare-hashed-last',
 `slime-quicklisp-completion-table-get-ql-hash-count',
 `slime-quicklisp-completion-table-compare-hash-counts',
-`*slime-quicklisp-systems*'.\n►►►"
+`*slime-quicklisp-systems*'.\n▶▶▶"
   (plist-get (slime-quicklisp-completion-table-get-hash-meta) :hash-table-count))
 
 ;;; ==============================
@@ -1974,7 +1974,7 @@ potentially costly.\n
 `slime-quicklisp-completion-table-compare-hashed-last',
 `slime-quicklisp-completion-table-get-ql-hash-count',
 `slime-quicklisp-completion-table-compare-hash-counts',
-`*slime-quicklisp-systems*'.\n►►►"
+`*slime-quicklisp-systems*'.\n▶▶▶"
   (plist-get (slime-quicklisp-completion-table-get-hash-meta) :hashed-last))
 
 ;;; ==============================
@@ -2004,7 +2004,7 @@ indicates we should rehash, else do nothing.\n
 `slime-quicklisp-completion-table-compare-hashed-last',
 `slime-quicklisp-completion-table-get-ql-hash-count',
 `slime-quicklisp-completion-table-compare-hash-counts',
-`*slime-quicklisp-systems*'.\n►►►"
+`*slime-quicklisp-systems*'.\n▶▶▶"
   (and (slime-connected-p)
        (catch 'ql-hashed-zero-time
          (let* ((last-hash (slime-quicklisp-completion-table-get-hashed-last))
@@ -2032,7 +2032,7 @@ indicates we should rehash, else do nothing.\n
 `slime-quicklisp-completion-table-compare-hashed-last',
 `slime-quicklisp-completion-table-get-ql-hash-count',
 `slime-quicklisp-completion-table-compare-hash-counts',
-`*slime-quicklisp-systems*'.\n►►►"
+`*slime-quicklisp-systems*'.\n▶▶▶"
   (slime-eval '(swank:hash-ql-systems-count)))
 
 ;;; ==============================
@@ -2054,7 +2054,7 @@ their respective hash-table-counts eq?
 `slime-quicklisp-completion-table-compare-hashed-last',
 `slime-quicklisp-completion-table-get-ql-hash-count',
 `slime-quicklisp-completion-table-compare-hash-counts',
-`*slime-quicklisp-systems*'.\n►►►"
+`*slime-quicklisp-systems*'.\n▶▶▶"
   (and (slime-connected-p)
        (let ((el-ht-cnt (slime-quicklisp-completion-table-get-hash-count))
              (ql-ht-cnt (slime-quicklisp-completion-table-get-ql-hash-count))) 
@@ -2089,7 +2089,7 @@ with quicklisp system.\n
 `slime-quicklisp-completion-table-compare-hash-counts',
 `*slime-quicklisp-systems*', `quicklisp-system-complete-if',
 `quicklisp-hash-system-completions', `*quicklisp-systems*'
-`mon-help-CL-symbols', `mon-help-CL-pkgs'.\n►►►"
+`mon-help-CL-symbols', `mon-help-CL-pkgs'.\n▶▶▶"
   (interactive)
   (if (and (not (null *slime-quicklisp-systems*))
            (hash-table-p *slime-quicklisp-systems*))
@@ -2141,7 +2141,7 @@ with quicklisp system.\n
 `slime-quicklisp-completion-table-compare-hashed-last',
 `slime-quicklisp-completion-table-get-ql-hash-count',
 `slime-quicklisp-completion-table-compare-hash-counts',
-`*slime-quicklisp-systems*'.\n►►►"
+`*slime-quicklisp-systems*'.\n▶▶▶"
   (interactive)
   (if  (slime-connected-p)      
       (let ((inspect-if (slime-get-quicklisp-system-completions)))
@@ -2159,7 +2159,7 @@ with quicklisp system.\n
   "Default callback for returning inspectable Quicklisp objects.\n
 If INSPECTED-PARTS is non-nil pass them to `slime-open-inspector'.\n
 If INSPECTED-PARTS is null minibuffer-message that ther is nothing to inspect.\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   (or 
    (and inspected-parts (or (slime-open-inspector inspected-parts) t))
    (minibuffer-message "nothing to inpsect, declining to display with *slime-inspector*")))
@@ -2167,7 +2167,7 @@ If INSPECTED-PARTS is null minibuffer-message that ther is nothing to inspect.\n
 (defun slime-inspect-quicklisp-release ()
   "Inspect a Quicklisp release.
 :EXAMPLE\n\n\(slime-inspect-quicklisp-release \"yason\"\)
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   (interactive)
   (if (slime-connected-p)      
       (let ((inspect-if (slime-get-quicklisp-system-completions)))
@@ -2181,7 +2181,7 @@ If INSPECTED-PARTS is null minibuffer-message that ther is nothing to inspect.\n
 (defun slime-inspect-quicklisp-apropos (term)
   "Inspect QUICKLISP systems matching TERM.\n
 :EXAMPLE\n\n\(slime-inspect-quicklisp-apropos \"anaph\"\)
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   (interactive "sQuicklisp apropos term: ")
   (if (slime-connected-p)      
       (slime-eval-async `(swank:apropos-ql-system ,term)    'slime-quicklisp-open-inspector-if)
@@ -2239,7 +2239,7 @@ If INSPECTED-PARTS is null minibuffer-message that ther is nothing to inspect.\n
 `slime-echo-arglist-behave-or-back-to-your-cage' toggles `slime-echo-arglist'
 back on, and `slime-echo-arglist-STFU' shuts it up again.\n
 Evaluate `slime-show-arglist' explicitly if an arglist is needed.\n
-:SEE-ALSO `slime-echo-arglist-function'.\n►►►")
+:SEE-ALSO `slime-echo-arglist-function'.\n▶▶▶")
 ;;
 (make-variable-buffer-local '*slime-echo-arglist-STFU*)
 (put '*slime-echo-arglist-STFU* 'permanent-local t)
@@ -2251,7 +2251,7 @@ Evaluate `slime-show-arglist' explicitly if an arglist is needed.\n
 (defun slime-echo-arglist-behave-or-back-to-your-cage ()
   "De-gimpify `slime-space's and allow `slime-echo-arglist' in current-buffer.\n
 Evaluate `slime-echo-arglist-STFU' to tone down the minibuffer noise.\n
-:SEE ALSO `*slime-echo-arglist-STFU*', `slime-echo-arglist-function'.\n►►►"
+:SEE ALSO `*slime-echo-arglist-STFU*', `slime-echo-arglist-function'.\n▶▶▶"
   (interactive)
   (with-current-buffer (current-buffer)
     (set (make-local-variable '*slime-echo-arglist-STFU*) nil)))
@@ -2263,7 +2263,7 @@ Evaluate `slime-echo-arglist-STFU' to tone down the minibuffer noise.\n
   "Silence `slime-space's invocation of `slime-echo-arglist' in current-buffer.\n
 Evaluate `slime-echo-arglist-behave-or-back-to-your-cage' to turn it back on.\n
 Evaluate `slime-show-arglist' explicitly if an arglist is needed.\n
-:SEE-ALSO `*slime-echo-arglist-STFU*', `slime-echo-arglist-function'.\n►►►"
+:SEE-ALSO `*slime-echo-arglist-STFU*', `slime-echo-arglist-function'.\n▶▶▶"
   (interactive)
   (with-current-buffer (current-buffer)
     (set (make-local-variable '*slime-echo-arglist-STFU*) t)))
@@ -2285,14 +2285,14 @@ Evaluate `slime-show-arglist' explicitly if an arglist is needed.\n
 ;;                   "Prefix argument can be used to insert more than one space.\n"
 ;;                   ":SEE-ALSO `slime-echo-arglist-STFU', `*slime-echo-arglist-STFU*',"
 ;;                   "`slime-echo-arglist-behave-or-back-to-your-cage', `slime-echo-arglist-function'."
-;;                   "►►►") "\n"))
+;;                   "▶▶▶") "\n"))
 ;;; ==============================
 ;;; :CHANGESET 1978
 ;;; :CREATED <Timestamp: #{2010-07-14T17:41:00-04:00Z}#{10283} - by MON KEY>
 ;; (defun slime-auto-doc-mode-STFU ()
 ;;   "Make `slime-autodoc-mode' STFU. Silence his little buddy `eldoc-mode' too.\n
 ;; :EXAMPLE\n\n
-;; :SEE-ALSO .\n►►►"
+;; :SEE-ALSO .\n▶▶▶"
 ;;   (interactive)
 ;;   (when (buffer-local-value 'slime-autodoc-mode (current-buffer))
 ;;     ;(set (make-local-variable  'slime-autodoc-mode) nil)

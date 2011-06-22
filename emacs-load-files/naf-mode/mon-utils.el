@@ -20,7 +20,7 @@
 ;; DESCRIPTION:
 ;; Provides common utilities and BIG require for other of MON's packages.
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;; `mon-after-mon-utils-loadtime', `mon-recover-nil-t-default-plist',
 ;; `mon-get-emacsd-paths',
 ;;
@@ -49,7 +49,9 @@
 ;; `mon-nuke-and-eval', `mon-unbind-defun', `mon-unbind-symbol',
 ;; `mon-unbind-function', `mon-unbind-command', `mon-unbind-variable',
 ;;
-;; FUNCTIONS:◄◄◄
+;; `mon-list-fonts-display', `mon-font-at-point'
+;;
+;; FUNCTIONS:◀◀◀
 ;; 
 ;; MACROS:
 ;;
@@ -68,6 +70,9 @@
 ;;
 ;; ALIASED:
 ;; :NOTE Aliases defined in :FILE mon-aliases.el
+;;
+;; `mon-font-at-point'               -> `font-at-point'
+;; `mon-list-fonts-display'          -> `list-fonts-display'
 ;;
 ;;  <PREFIX>-<QUALIFIED>                <PREFIX>-<NON-CORE-SYMBOL>
 ;; `mon-lisp-escape-region'          -> `mon-escape-lisp-string-region'
@@ -463,7 +468,7 @@
 ;;; :CREATED <Timestamp: #{2010-10-02T11:32:40-04:00Z}#{10396} - by MON KEY>
 (defgroup mon-base nil
   "Top level group from which other mon related packages and groups inherit.\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   :prefix "mon-"
   :prefix "*mon-"
   :link '(url-link 
@@ -503,7 +508,7 @@ special value to hold the hash-table.\n
 Note also that we do not consider either `defcustom' or is the package feature
 of Emacs 24+ \(at least in their current configurations\) applicable to these
 needs.\n
-:SEE-ALSO `*mon-xrefs-xrefs*'.\n►►►"
+:SEE-ALSO `*mon-xrefs-xrefs*'.\n▶▶▶"
   :link '(emacs-library-link 
           :tag "\n:FILE mon-utils.el" 
           "mon-utils.el")
@@ -537,7 +542,7 @@ needs.\n
 (defvar *mon-utils-post-load-requires* nil
   "*List of features loaded by feature mon-utils.el\n
 :CALLED BY `mon-utils-require-features-at-loadtime'\n
-:SEE-ALSO `mon-after-mon-utils-loadtime'.\n►►►")
+:SEE-ALSO `mon-after-mon-utils-loadtime'.\n▶▶▶")
 ;;
 (unless (and (intern-soft "*mon-utils-post-load-requires*" obarray) ;; *IS-MON-OBARRAY*
              (bound-and-true-p *mon-utils-post-load-requires*))
@@ -627,7 +632,7 @@ needs.\n
 `*mon-slime-xrefs*', `*naf-mode-faces-xrefs*', `*naf-mode-date-xrefs*',
 `*mon-ulan-utils-xrefs*', `*google-define-redux-xrefs*', `*mon-doc-help-CL-xrefs*',
 `*mon-insertion-utils-xrefs*', `*mon-doc-help-char-encoding-lossage-xrefs*',
-`*mon-xrefs-xrefs'.\n►►►"
+`*mon-xrefs-xrefs'.\n▶▶▶"
   :type '(repeat symbol)
   :group 'mon-xrefs)
 
@@ -663,7 +668,7 @@ Such that evaluation of the following two forms returns non-nil:\n
 :SEE-ALSO `*mon-default-comment-divider*', `mon-set-buffer-local-comment-start',
 `mon-set-buffer-local-comment-start-init', `mon-comment-divider-to-col',
 `mon-comment-divider-to-col-four', `mon-comment-divider-w-len',
-`mon-comment-lisp-to-col'.\n►►►"
+`mon-comment-lisp-to-col'.\n▶▶▶"
   ;; :TODO The `:type` key should have required match see docstring for potential tests:
   :type  'string
   :group 'mon-base)
@@ -678,7 +683,7 @@ such that (substring
 Default is the return value of following form:\n
  \(mon-comment-divider-w-len 30\)\n
 :CALLED-BY `mon-comment-divider', `mon-comment-divider-to-col'\n
-:SEE-ALSO `mon-comment-divider-w-len', `mon-comment-divider-to-col'\n►►►"
+:SEE-ALSO `mon-comment-divider-w-len', `mon-comment-divider-to-col'\n▶▶▶"
   :type  'string  
   :group 'mon-base)
 
@@ -692,7 +697,7 @@ cadr is a username to insert when timestamping in a file matching car.\n
 These values are used to inform calling functions according to some heuristic.\n
 :NOTE Used for file based conditional timestamps and obfuscating files/source.
 :SEE-ALSO `mon-timestamp', `mon-accessed-time-stamp', `mon-accessed-stamp',
-`naf-mode-timestamp-flag'.\n►►►"
+`naf-mode-timestamp-flag'.\n▶▶▶"
   :type '(repeat (list string string))
   :group 'mon-base)
 
@@ -706,7 +711,7 @@ Recover plists with `mon-recover-nil-t-default-plist' if they become corrupted.\
 \(memq :nil-default-plist *mon-recover-nil-t-default-plist*\)\n
 \(memq :t-default-plist *mon-recover-nil-t-default-plist*\)\n
 :SEE-ALSO `setplist', `symbol-plist', `mon-after-mon-utils-loadtime',
-`mon-run-post-load-hooks'.\n►►►")
+`mon-run-post-load-hooks'.\n▶▶▶")
 
 ;;; ==============================
 ;;; :TODO This should be evaluated before slime.el b/c she is the one stepping
@@ -721,7 +726,7 @@ Called in a post-loadtime environement restores the plist values stored in
 `*mon-recover-nil-t-default-plist*' keys :nil-default-plist :t-default-plist.\n
 :EXAMPLE\n\n\(mon-recover-nil-t-default-plist t\)\n
 :SEE-ALSO `setplist', `symbol-plist', `mon-after-mon-utils-loadtime', 
-`mon-run-post-load-hooks'.\n►►►"
+`mon-run-post-load-hooks'.\n▶▶▶"
   (interactive "p")
   (if (and (intern-soft "*mon-recover-nil-t-default-plist*" obarray)
            (bound-and-true-p *mon-recover-nil-t-default-plist*))
@@ -778,7 +783,7 @@ the filename of feature FEATURE-AS-SYMBOL when it is in loadpath.\n
 `mon-after-mon-utils-loadtime', `mon-unbind-command', `mon-unbind-symbol',
 `mon-unbind-function', `mon-unbind-variable', `mon-unbind-defun',
 `mon-compile-when-needed' `mon-load-or-alert', `mon-byte-compile-and-load',
-`mon-dump-object-to-file', `mon-nuke-and-eval'.\n►►►"
+`mon-dump-object-to-file', `mon-nuke-and-eval'.\n▶▶▶"
   (declare (indent 2) (debug t))
   (let ((mcffl-lcl (make-symbol "mcffl-lcl"))
         (mcffl-chk (make-symbol "mcffl-chk")))
@@ -825,7 +830,7 @@ the filename of feature FEATURE-AS-SYMBOL when it is in loadpath.\n
   "Evaluated as the last form in mon-utils.el\n
 Evaluates macro `mon-check-feature-for-loadtime' for each feature listed in
 varaible `*mon-utils-post-load-requires*'\n
-:SEE-ALSO `mon-after-mon-utils-loadtime', `mon-run-post-load-hooks'.\n►►►"
+:SEE-ALSO `mon-after-mon-utils-loadtime', `mon-run-post-load-hooks'.\n▶▶▶"
   (let (murfal-did-rqr)
     (dolist (murfal-D-1 *mon-utils-post-load-requires*)
       (let ((murfal-D-1-lcl-rqrd (mon-check-feature-for-loadtime murfal-D-1)))
@@ -881,7 +886,7 @@ Peforms loadtime evaluation of functions defined in mon-utils.el:\n
 `mon-purge-cl-symbol-buffers-on-load', `mon-unbind-defun',
 `mon-after-mon-utils-loadtime', `mon-compile-when-needed' `mon-load-or-alert',
 `mon-byte-compile-and-load', `mon-dump-object-to-file', `mon-nuke-and-eval',
-`mon-cl-compat-loadtime'.\n►►►"
+`mon-cl-compat-loadtime'.\n▶▶▶"
   (progn 
     (mon-recover-nil-t-default-plist)
     (mon-get-bit-table)
@@ -946,7 +951,7 @@ Move back a character at a time while still looking at a match ending at the
 same point.\n
 If no match is found at or before point, return the first match after point, or
 nil if there is no match in the buffer.\n
-:SEE-ALSO `looking-at', `looking-at-p'.\n►►►"
+:SEE-ALSO `looking-at', `looking-at-p'.\n▶▶▶"
   (let (mmap-bkup mmap-beg mmap-end)
     (save-excursion
       (setq mmap-bkup
@@ -988,7 +993,7 @@ nil if there is no match in the buffer.\n
               \(nconc '\(:buba-change-match-data nil\) mb4-aftr\)\)\)
       \(setq mb4-aftr \(nconc '\(:found-bubba t\) mb4-aftr\)\)\)\)
   mb4-aftr\)\n\nOMG theres a bubba back there!\n
-:SEE-ALSO `looking-at-p', `inhibit-changing-match-data'.\n►►►"
+:SEE-ALSO `looking-at-p', `inhibit-changing-match-data'.\n▶▶▶"
   (let ((mlbp-beg (point))
 	(mlbp-psn
 	 (let ((inhibit-changing-match-data t))
@@ -1032,7 +1037,7 @@ unreadable object with the '#' prefix so we strip it.\n
 \"[500006383]\"
 > (mon-string-read-match-string)
 ; => \(\"[500006383]\" 0 11 \(fontified t face font-lock-string-face\)\)\n
-:SEE-ALSO `mon-string-replace-char', `mon-looking-back-p'.\n►►►"
+:SEE-ALSO `mon-string-replace-char', `mon-looking-back-p'.\n▶▶▶"
   (let ((msrms-mtch (if (and (= (match-beginning 0) 1)(> (point) (mon-g2be -1 t) )) 
                         nil ;; Last search didn't move point was a dud don't proceed.
                       (car (read-from-string 
@@ -1058,7 +1063,7 @@ unreadable object with the '#' prefix so we strip it.\n
 ;;; :PREFIX "mvhs-"
 (defun mon-view-help-source ()
   "
-:SEE-ALSO `mon-get-text-properties-category', `mon-line-test-content'.\n►►►"
+:SEE-ALSO `mon-get-text-properties-category', `mon-line-test-content'.\n▶▶▶"
   (interactive)
   (eval-when-compile (require 'ffap))
   (unwind-protect			;body
@@ -1099,7 +1104,7 @@ return results in that buffer creating one if it doesn't exist.\n
 \(mon-map-obarray-symbol-plist-props 'side-effect-free \"*SIDE-EFFECT-FREE*\"\)\n
 :SEE-ALSO `mon-plist-remove!', `mon-map-obarray-symbol-plist-props',
 `mon-plist-remove-if', `mon-plist-remove-consing', `remf', `remprop',
-`mon-plist-keys', `mon-help-plist-functions', `mon-help-plist-properties'.\n►►►"
+`mon-plist-keys', `mon-help-plist-functions', `mon-help-plist-properties'.\n▶▶▶"
   (interactive "SSearch obarray for plist property: \npp")
   ;; (intern-soft (read-string "w-prop-sym: ") )
   (let* ((mmospp-clbrp 'mmospp-clbrp)
@@ -1167,7 +1172,7 @@ return values.\n
 :ALIASED-BY `mon-string-escape-lisp-region'
 :ALIASED-BY `mon-lisp-escape-region'\n
 :SEE-ALSO `mon-unescape-lisp-string-region', `mon-escape-string-for-cmd',
-`mon-exchange-slash-and-backslash', `mon-quote-sexp'.\n►►►"
+`mon-exchange-slash-and-backslash', `mon-quote-sexp'.\n▶▶▶"
   (interactive "*r")
   (save-excursion
     (save-restriction
@@ -1195,7 +1200,7 @@ without the surrounding quotes.\n
 :ALIASED-BY `mon-string-unescape-lisp-region'
 :ALIASED-BY `mon-lisp-unescape-region'\n
 :SEE-ALSO `mon-escape-lisp-string-region', `mon-quote-sexp',
-`mon-escape-string-for-cmd', `mon-exchange-slash-and-backslash'.\n►►►"
+`mon-escape-string-for-cmd', `mon-exchange-slash-and-backslash'.\n▶▶▶"
   (interactive "*r")
   (save-excursion
     (save-restriction
@@ -1217,7 +1222,7 @@ without the surrounding quotes.\n
 \(mon-quote-sexp '\(a . b\)\)\n
 \(mon-quote-sexp :test)\n
 \(mon-quote-sexp #:is-not\)\n
-:SEE-ALSO `mon-escape-lisp-string-region', `mon-unescape-lisp-string-region'.\n►►►"
+:SEE-ALSO `mon-escape-lisp-string-region', `mon-unescape-lisp-string-region'.\n▶▶▶"
   (if (or (memq sexp '(t nil))
 	  (keywordp (intern-soft (format "%S" sexp) obarray))
 	  (and (listp sexp) (eq (car sexp) '(lambda)))
@@ -1245,7 +1250,7 @@ When `eval-expression-print-length' and NEW-DEPTH are non-nil set length.\n
 \(mon-toggle-eval-length nil t\)\n\n\(mon-toggle-eval-length 1 t\)\n
 \(mon-toggle-eval-length\)\n
 :SEE-ALSO `mon-toggle-truncate-line', `mon-naf-mode-toggle-restore-llm',
-`print-length'.\n►►►"  
+`print-length'.\n▶▶▶"  
   (interactive "P\np")
   (let (mtel-nd)
     (if (and new-depth intrp)
@@ -1279,7 +1284,7 @@ When `eval-expression-print-length' and NEW-DEPTH are non-nil set length.\n
  When CL->DOWNCASE is non-nil it is used to clean CL that is `UPCASE'd.\n
 :NOTE This function is meant for interactive use only.\n
 :SEE-ALSO `mon-princ-cb', `mon-eval-sexp-at-point', `mon-eval-expression',
-`mon-eval-print-last-sexp', `mon-toggle-eval-length'.\n►►►"
+`mon-eval-print-last-sexp', `mon-toggle-eval-length'.\n▶▶▶"
   (interactive "r\nP")
   ;; (interactive "r\nP\nip")
   ;; (and (not intrp)
@@ -1339,7 +1344,7 @@ When `eval-expression-print-length' and NEW-DEPTH are non-nil set length.\n
   "Wrap region in a princ->current-buffer to eval and print newline\\result
 after point.\n
 :SEE-ALSO `mon-eval-sexp-at-point', `mon-pretty-print-sexp-at-point', `mon-eval-expression',
-`mon-eval-print-last-sexp'.\n►►►"
+`mon-eval-print-last-sexp'.\n▶▶▶"
   (interactive "i\np")
   (save-excursion
     ;; (let (sexp-pnt
@@ -1355,7 +1360,7 @@ Return point after commented result. Best on trivial expressions.\n
 :EXAMPLE\n\(+ 1 3)\n;;;=> 4\n^point^\n
 :SEE-ALSO `mon-princ-cb', `mon-pretty-print-sexp-at-point', `mon-eval-expression',
 `mon-eval-print-last-sexp', `mon-eval-sexp-at-point', `mon-toggle-eval-length'.
-►►►"
+▶▶▶"
   (interactive)
   (let* ((mesap-wrap (sexp-at-point))
 	 (mesap-val (eval mesap-wrap))      
@@ -1381,7 +1386,7 @@ Return point after commented result. Best on trivial expressions.\n
   "Like `eval-print-last-sexp' but does not move point.\n
 :SEE-ALSO `mon-eval-expression', `mon-eval-sexp-at-point',
 `mon-pretty-print-sexp-at-point', `mon-princ-cb', `mon-toggle-eval-length',
-`pp-eval-last-sexp'.\n►►►"
+`pp-eval-last-sexp'.\n▶▶▶"
   (interactive)
   (save-excursion
     (eval-print-last-sexp)))
@@ -1394,7 +1399,7 @@ Return point after commented result. Best on trivial expressions.\n
   "This is `eval-expression' with EVAL-EXPRESSION-INSERT-VALUE defaulted to t.\n
 Gets us eval-expression automatically inserted into current-buffer.\n
 :SEE-ALSO `mon-eval-print-last-sexp', `mon-eval-sexp-at-point',
-`mon-pretty-print-sexp-at-point', `mon-princ-cb', `mon-toggle-eval-length'.\n►►►"
+`mon-pretty-print-sexp-at-point', `mon-princ-cb', `mon-toggle-eval-length'.\n▶▶▶"
   (interactive
    (list (let ((minibuffer-completing-symbol t))
 	   (read-from-minibuffer "Eval: "
@@ -1429,7 +1434,7 @@ Gets us eval-expression automatically inserted into current-buffer.\n
 (defun mon-extend-selection (arg &optional incremental)
   "Mark symbol surrounding point.\n
 Subsequent calls mark higher levels of sexps.\n
-:SEE-ALSO `mon-semnav-up'.\n►►►"
+:SEE-ALSO `mon-semnav-up'.\n▶▶▶"
   (interactive
    (list (prefix-numeric-value current-prefix-arg)
 	 (or (and transient-mark-mode mark-active)
@@ -1447,13 +1452,79 @@ Subsequent calls mark higher levels of sexps.\n
           (forward-sexp)))
       (mark-sexp -1))))
 
+
+
+;;; ==============================
+;;; :CHANGESET 2447
+;;; :CREATED <Timestamp: #{2011-06-17T19:58:41-04:00Z}#{11245} - by MON KEY>
+;;; :SOURCE (URL `http://lists.gnu.org/archive/html/help-gnu-emacs/2010-06/msg00136.html')
+(defun mon-list-fonts-display (&optional matching)
+  "Display a list of font-families available via font-config, in a new buffer.\n
+If the optional argument MATCHING is non-nil, only font families
+matching that regexp are displayed; interactively, a prefix
+argument will prompt for the regexp.\n
+The name of each font family is displayed using that family, as
+well as in the default font \(to handle the case where a font
+cannot be used to display its own name\).\n
+:EXAMPLE\n\n\(mon-list-fonts-display \"*\"\)\n
+:ALIASED-BY `list-fonts-display'\n
+:SEE-ALSO `mon-font-at-point'.\n▶▶▶"
+  (interactive
+   (list
+    (and current-prefix-arg
+         (read-string "Display font families matching regexp: "))))
+  (let (families)
+    (with-temp-buffer
+      (shell-command "fc-list : family" t)
+      (goto-char (point-min))
+      (while (not (eobp))
+        (let ((fam (buffer-substring (line-beginning-position)
+                                     (line-end-position))))
+          (when (or (null matching) (string-match matching fam))
+            (push fam families)))
+        (forward-line)))
+    (setq families
+          (sort families
+                (lambda (x y) (string-lessp (downcase x) (downcase y)))))
+    (let ((buf (get-buffer-create "*Font Families*")))
+      (with-current-buffer buf
+        (erase-buffer)
+        (dolist (family families)
+          ;; We need to pick one of the comma-separated names to
+          ;; actually use the font; choose the longest one because some
+          ;; fonts have ambiguous general names as well as specific
+          ;; ones.
+          (let ((family-name
+                 (car (sort (split-string family ",")
+                            (lambda (x y) (> (length x) (length y))))))
+                (nice-family (replace-regexp-in-string "," ", " family)))
+            (insert (concat (propertize nice-family
+                                        'face (list :family family-name))
+                            " (" nice-family ")"))
+            (newline)))
+        (goto-char (point-min)))
+      (display-buffer buf))))
+
+
+;;; ==============================
+;;; :CHANGESET 2447
+;;; :CREATED <Timestamp: #{2011-06-17T20:05:45-04:00Z}#{11245} - by MON KEY>
+(defun mon-font-at-point (&optional position)
+"Like `font-at' but returns font at `point' if position is ommitted.
+position is as per `font-at'
+:EXAMPLE\n\n\(mon-font-at-point \(point\)\)▶\n
+:ALIASED-BY `font-at-point'\n
+:SEE-ALSO `mon-list-fonts-display'.\n▶▶▶"
+  (font-at (or position (point))))
+
+
 ;;; ==============================
 ;;; :COURTESY Nikolaj Schumacher  :VERSION 2008-10-20
 ;;; :SEE (URL `http://xahlee.org/emacs/syntax_tree_walk.html')
 ;;; :CREATED <Timestamp: Sunday January 18, 2009 - by MON KEY>
 (defun mon-semnav-up (arg)
   "
-:SEE-ALSO `mon-extend-selection'.\n►►►"
+:SEE-ALSO `mon-extend-selection'.\n▶▶▶"
   (interactive "p")
   (when (nth 3 (syntax-ppss))
     (if (> arg 0)
@@ -1478,7 +1549,7 @@ With ARG, begin column display at current column, not at left margin.\n
 `mon-string-fill-to-col', `mon-comment-lisp-to-col',
 `mon-mysql-cln-pipes-map-col-field', `mon-mysql-csv-map-col-field',
 `mon-mysql-get-field-col', `mon-rectangle-columns',
-`mon-rectangle-sum-column', `show-point-mode'.\n►►►"
+`mon-rectangle-sum-column', `show-point-mode'.\n▶▶▶"
   (interactive)
   (let* ((msc-lead-blnks
           (if (null current-prefix-arg) 0 (current-column)))
@@ -1512,7 +1583,7 @@ With ARG, begin column display at current column, not at left margin.\n
 :SEE-ALSO `mon-unbind-command', `mon-unbind-symbol', `mon-unbind-function',
 `mon-unbind-variable', `mon-compile-when-needed' `mon-load-or-alert',
 `mon-byte-compile-and-load', `mon-dump-object-to-file',
-`mon-after-mon-utils-loadtime'.\n►►►"
+`mon-after-mon-utils-loadtime'.\n▶▶▶"
   (interactive)
   (save-excursion
     (setf (point) (point-min))
@@ -1545,7 +1616,7 @@ With ARG, begin column display at current column, not at left margin.\n
 :SEE-ALSO `mon-unbind-command', `mon-unbind-symbol', `mon-unbind-function',
 `mon-unbind-variable', `mon-compile-when-needed' `mon-load-or-alert',
 `mon-byte-compile-and-load', `mon-dump-object-to-file', `mon-nuke-and-eval',
-`mon-after-mon-utils-loadtime'.\n►►►"
+`mon-after-mon-utils-loadtime'.\n▶▶▶"
   (interactive)
   (save-excursion
     (if (and (beginning-of-defun) (looking-at "(defun"))
@@ -1559,7 +1630,7 @@ Includes unbinding function binding, variable binding, and property list.\n
 :SEE-ALSO `mon-unbind-command', `mon-unbind-symbol', `mon-unbind-function',
 `mon-unbind-variable', `mon-unbind-defun', `mon-compile-when-needed',
 `mon-load-or-alert', `mon-byte-compile-and-load', `mon-dump-object-to-file',
-`mon-nuke-and-eval', `mon-after-mon-utils-loadtime'.\n►►►"
+`mon-nuke-and-eval', `mon-after-mon-utils-loadtime'.\n▶▶▶"
   (interactive "S:FUNCTION `mon-unbind-symbol' -- unbind symbol: ")
   (fmakunbound symbol)
   (makunbound symbol)
@@ -1571,7 +1642,7 @@ Includes unbinding function binding, variable binding, and property list.\n
 :SEE-ALSO `mon-unbind-command', `mon-unbind-symbol', `mon-unbind-function',
 `mon-unbind-variable', `mon-unbind-defun', `mon-compile-when-needed',
 `mon-load-or-alert', `mon-byte-compile-and-load', `mon-dump-object-to-file',
-`mon-nuke-and-eval', `mon-after-mon-utils-loadtime'.\n►►►"
+`mon-nuke-and-eval', `mon-after-mon-utils-loadtime'.\n▶▶▶"
   (interactive "aFunction: ")
   (fmakunbound fncn-symbol))
 ;; :KEEP-WITH-ABOVE
@@ -1581,7 +1652,7 @@ Includes unbinding function binding, variable binding, and property list.\n
 :SEE-ALSO `mon-unbind-command', `mon-unbind-symbol', `mon-unbind-function',
 `mon-unbind-variable', `mon-unbind-defun', `mon-compile-when-needed',
 `mon-load-or-alert', `mon-byte-compile-and-load', `mon-dump-object-to-file',
-`mon-nuke-and-eval', `mon-after-mon-utils-loadtime'.\n►►►"
+`mon-nuke-and-eval', `mon-after-mon-utils-loadtime'.\n▶▶▶"
   (interactive "CCommand: ")
   (fmakunbound cmd-symbol))
 ;; :KEEP-WITH-ABOVE
@@ -1591,7 +1662,7 @@ Includes unbinding function binding, variable binding, and property list.\n
 :SEE-ALSO `mon-unbind-command', `mon-unbind-symbol', `mon-unbind-function',
 `mon-unbind-variable', `mon-unbind-defun', `mon-compile-when-needed',
 `mon-load-or-alert', `mon-byte-compile-and-load', `mon-dump-object-to-file',
-`mon-nuke-and-eval', `mon-after-mon-utils-loadtime'.\n►►►"
+`mon-nuke-and-eval', `mon-after-mon-utils-loadtime'.\n▶▶▶"
   (interactive (list 
                 (completing-read "Variable: "
                                  (loop for s being the symbols
@@ -1620,7 +1691,7 @@ hash-table.
 :SEE-ALSO `mon-unbind-command', `mon-unbind-symbol', `mon-unbind-function',
 `mon-unbind-variable', `mon-unbind-defun', `mon-compile-when-needed',
 `mon-load-or-alert', `mon-byte-compile-and-load', `mon-dump-object-to-file',
-`mon-nuke-and-eval', `mon-after-mon-utils-loadtime'.\n►►►"
+`mon-nuke-and-eval', `mon-after-mon-utils-loadtime'.\n▶▶▶"
   ;; (require 'cl) ;; Be sure we use the CL version of `eval-when-compile'.
   (if (file-exists-p file)
       (mon-format :w-fun #'error 
@@ -1646,7 +1717,7 @@ The function `byte-compile-file' was only easily accesible from the menu.\n
 :SEE-ALSO `mon-unbind-command', `mon-unbind-symbol', `mon-unbind-function',
 `mon-unbind-variable', `mon-unbind-defun', `mon-compile-when-needed',
 `mon-load-or-alert', `mon-byte-compile-and-load', `mon-dump-object-to-file',
-`mon-nuke-and-eval', `mon-after-mon-utils-loadtime'.\n►►►"
+`mon-nuke-and-eval', `mon-after-mon-utils-loadtime'.\n▶▶▶"
   (interactive)
   (byte-compile-file buffer-file-name t))
 
@@ -1664,7 +1735,7 @@ Add .el if required, and use `load-path' to find it.\n
 :SEE-ALSO `mon-unbind-command', `mon-unbind-symbol', `mon-unbind-function',
 `mon-unbind-variable', `mon-unbind-defun', `mon-compile-when-needed',
 `mon-load-or-alert', `mon-byte-compile-and-load', `mon-dump-object-to-file',
-`mon-nuke-and-eval', `mon-after-mon-utils-loadtime'.\n►►►"
+`mon-nuke-and-eval', `mon-after-mon-utils-loadtime'.\n▶▶▶"
   (if (not (string-match "\.el$" comp-fname))
       (mon-compile-when-needed (concat comp-fname ".el"))
     (mapc #'(lambda (dir)
@@ -1694,7 +1765,7 @@ failure.\n
 :SEE-ALSO `mon-unbind-command', `mon-unbind-symbol', `mon-unbind-function',
 `mon-unbind-variable', `mon-unbind-defun', `mon-compile-when-needed',
 `mon-load-or-alert', `mon-byte-compile-and-load', `mon-dump-object-to-file',
-`mon-nuke-and-eval', `mon-after-mon-utils-loadtime'.\n►►►"
+`mon-nuke-and-eval', `mon-after-mon-utils-loadtime'.\n▶▶▶"
   (when compile-when-needed (mon-compile-when-needed lib-name))
   (if (load lib-name t nil) 
       t

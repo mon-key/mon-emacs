@@ -21,7 +21,7 @@
 ;; DESCRIPTION:
 ;; mon-event-utils provides event related procedures for mon-*utils features
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;; `mon-inhibit-modification-hooks', `mon-inhibit-read-only',
 ;; `mon-inhibit-point-motion-hooks', `mon-toggle-read-only-point-motion',
 ;; `mon-scroll-down-in-place', `mon-scroll-up-in-place', `mon-line-move-n',
@@ -31,7 +31,7 @@
 ;; `mon-abort-autosave-when-fucked', `mon-rotate-ascii-cursor',
 ;; `mon-toggle-truncate-line', `mon-kill-appending', `mon-append-to-register',
 ;; `mon-catch-meta-key', `mon-decode-meta-key-event', `mon-multi-isearch-rmv-hook',
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;;
@@ -166,7 +166,7 @@
       )
   "Position for top place an `x-popup-menu'.\n
 :EXAMPLE\n\n
-:SEE-ALSO `*css-complete-popup-pos-x-offset*'.\n►►►"
+:SEE-ALSO `*css-complete-popup-pos-x-offset*'.\n▶▶▶"
   :type  'integer
   :group 'mon-base)
 
@@ -184,7 +184,7 @@ the tedium of building the entire scaffolding.\n
 :SEE-ALSO `mon-with-inhibit-buffer-read-only',
 `mon-with-inhibit-buffer-read-only-TEST', `mon-inhibit-modification-hooks',
 `mon-inhibit-point-motion-hooks', `mon-toggle-read-only-point-motion',
-`view-read-only', `view-mode-disable'.\n►►►"
+`view-read-only', `view-mode-disable'.\n▶▶▶"
   (let ((re-inhibit (if (not inhibit-read-only) t nil)))
     (unwind-protect
         (progn 
@@ -208,7 +208,7 @@ Evaluation occurs inside an unwind protect so 'safe-enough'
 for invoking 'one off functions' such-as `kill-line' without
 the tedium of building the entire scaffolding.\n
 :SEE-ALSO `mon-inhibit-read-only', `mon-inhibit-point-motion-hooks',
-`mon-toggle-read-only-point-motion'.\n►►►"
+`mon-toggle-read-only-point-motion'.\n▶▶▶"
   (let ((re-inhibit (if (not inhibit-modification-hooks) t nil)))
     (unwind-protect
          (progn 
@@ -224,7 +224,7 @@ Evaluation occurs inside an unwind protect so 'safe-enough'
 for invoking 'one off functions' such-as `kill-line' without
 the tedium of building the entire scaffolding.\n
 :SEE-ALSO `mon-inhibit-read-only', `mon-inhibit-modification-hooks',
-`mon-toggle-read-only-point-motion'.\n►►►"
+`mon-toggle-read-only-point-motion'.\n▶▶▶"
   (let ((re-inhibit (if (not inhibit-point-motion-hooks) t nil)))
     (unwind-protect
 	(progn 
@@ -240,7 +240,7 @@ the tedium of building the entire scaffolding.\n
 (defun mon-toggle-read-only-point-motion ()
   "Toggle `inhibit-read-only' and `inhibit-point-motion-hooks'.\n
 :SEE-ALSO `mon-inhibit-read-only', `mon-inhibit-point-motion-hooks',
-`mon-inhibit-modification-hooks', `mon-naf-mode-toggle-restore-llm'.\n►►►"
+`mon-inhibit-modification-hooks', `mon-naf-mode-toggle-restore-llm'.\n▶▶▶"
   (interactive)
   ;; :NOTE What about `buffer-read-only'?
   (if (or (bound-and-true-p inhibit-read-only)
@@ -265,7 +265,7 @@ change has occured.\n
 `mon-toggle-dired-dwim-target', `mon-toggle-menu-bar'
 `mon-toggle-show-point-mode', `mon-naf-mode-toggle-restore-llm', 
 `mon-toggle-read-only-point-motion', `mon-inhibit-modification-hooks',
-`mon-inhibit-point-motion-hooks', `mon-inhibit-read-only'.\n►►►"
+`mon-inhibit-point-motion-hooks', `mon-inhibit-read-only'.\n▶▶▶"
   (interactive "p")
   (toggle-truncate-lines nil)
   ;; (buffer-local-value 'truncate-lines (current-buffer))
@@ -282,7 +282,7 @@ change has occured.\n
 (defun mon-scroll-down-in-place (&optional down-by)
   "Scroll with the cursor in place, moving screen DOWN-BY instead.\n
 :SEE-ALSO `mon-scroll-up-in-place', `scroll-up', `scroll-down',
-`mon-line-move-n', `mon-line-move-next'.\n►►►"
+`mon-line-move-n', `mon-line-move-next'.\n▶▶▶"
   (interactive "p")
   (let* ((inhibit-redisplay t)
         (down-by (abs (or down-by 1)))
@@ -295,7 +295,7 @@ change has occured.\n
 (defun mon-scroll-up-in-place (&optional up-by)
   "Scroll with the cursor in place, moving the screen UP-BY lines instead.\n
 :SEE-ALSO `mon-scroll-down-in-place', `scroll-up', `scroll-down'
-`mon-line-move-n', `mon-line-move-prev'.\n►►►"
+`mon-line-move-n', `mon-line-move-prev'.\n▶▶▶"
   (interactive "P")
   (let* ((inhibit-redisplay t)
          (up-by (abs (or up-by 1)))
@@ -322,7 +322,7 @@ Default is to move 0 lines.
 :NOTE Function is intended for use with `mon-keybind-*' functions which would
 otherwise duplicate anonymous forms with identical behavior.\n
 :SEE-ALSO `mon-line-move-prev', `mon-line-move-next',
-`mon-scroll-down-in-place', `mon-scroll-up-in-place'.\n►►►"
+`mon-scroll-down-in-place', `mon-scroll-up-in-place'.\n▶▶▶"
   (interactive "P")
   (line-move (or (and (integerp move-cnt) move-cnt) 0) t))
 
@@ -336,7 +336,7 @@ When optional arg MOVE-NEXT-CNT non-nil move cursor n lines. Default is 1.\n
 :NOTE Function is intended for invocation from `mon-keybind-*' functions which would
 otherwise duplicate anonymous forms with identical behavior.\n
 :SEE-ALSO `mon-line-move-prev', `mon-scroll-down-in-place',
-`mon-scroll-up-in-place'.\n►►►"
+`mon-scroll-up-in-place'.\n▶▶▶"
   (interactive "P")
   (mon-line-move-n 
    (or (and (integerp move-next-cnt) (abs move-next-cnt)) 1)))
@@ -351,7 +351,7 @@ When optional arg MOVE-PREV-CNT non-nil move cursor n lines. Default is -1.\n
 :NOTE Function is intended for invocation from `mon-keybind-*' functions which would
 otherwise duplicate anonymous forms with identical behavior.\n
 :SEE-ALSO `mon-line-move-next', `mon-scroll-down-in-place',
-`mon-scroll-up-in-place'.\n►►►"
+`mon-scroll-up-in-place'.\n▶▶▶"
   (interactive "P")
   (mon-line-move-n 
    (or (and (integerp move-prev-cnt) (- (abs move-prev-cnt))) -1)))
@@ -367,7 +367,7 @@ When W-KBD-QUIT is non-nil a when C-g is caught tail of list is non-nil.\n
 \(mon-read-keys-as-string t\)\n
 :ALIASED-BY `mon-string-from-keyboard-input'\n
 :SEE-ALSO `mon-test-keypresses', `mon-help-key-functions', `read-key',
-`unread-command-events', `this-single-command-raw-keys'.\n►►►"
+`unread-command-events', `this-single-command-raw-keys'.\n▶▶▶"
   ;; (interactive "P")
   (let ((prompt       (propertize (concat ":FUNCTION `mon-read-keys-as-string' "
                                           " -- keys (RET/ESC to exit): ")
@@ -416,7 +416,7 @@ When non-nil PROMPT args should be ommitted.\n
 \(mon-read-multiple 'read-variable\)\n
 \(mon-read-multiple 'read-char\)\n
 \(mon-read-multiple 'read-command '\(\"doctor\" \"5x5\"\)\)\n
-:SEE-ALSO `read-string', `read-directory-name', `completing-read-multiple'.\n►►►"
+:SEE-ALSO `read-string', `read-directory-name', `completing-read-multiple'.\n▶▶▶"
   (catch 'unsupported
     (let* ((mmrn-var (make-symbol "mmrn-var"))
            (mmrn-bail '((read-variable . "variable")
@@ -507,7 +507,7 @@ Returned value is informed by variable `*mon-popup-pos-x-offset*'.\n
 :EXAMPLE\n\n\(mon-postion-for-x-popup-menu\)\n
 \(popup-menu naf-mode-menu \(mon-postion-for-x-popup-menu\)\)\n
 :SEE-ALSO `posn-at-point', `posn-x-y', `posn-window', `mouse-pixel-position',
-`css-pos-for-x-popup-menu'.\n►►►"
+`css-pos-for-x-popup-menu'.\n▶▶▶"
   (let* ((cpfxpm     (posn-at-point))
          (cpfxpm-x-y (posn-x-y cpfxpm)) ;; (posn-x-y cpfxpm))
          (cpfxpm-win (posn-window cpfxpm)))
@@ -525,7 +525,7 @@ Returned value is informed by variable `*mon-popup-pos-x-offset*'.\n
    \(mon-postion-for-x-popup-menu\)\)\n
 :SEE-ALSO `choose-completion', `x-popup-menu',
 `mon-postion-for-x-popup-menu', `popup-menu', `mouse-pixel-position'
-`mouse-menu-bar-map'.\n►►►"
+`mouse-menu-bar-map'.\n▶▶▶"
   (let (mcfm-item mcfm-item-list)
     (while menu-items
       (setq mcfm-item (car menu-items))
@@ -551,7 +551,7 @@ Returned value is informed by variable `*mon-popup-pos-x-offset*'.\n
 :ALIASED-BY `mon-read-keys-last-event'\n
 :SEE-ALSO `mon-read-keys-as-string', `event-basic-type',
 `this-command-keys-vector', `event-modifiers', `current-prefix-arg',
-`mon-help-key-functions'.\n►►►"
+`mon-help-key-functions'.\n▶▶▶"
   (interactive "P\nP\np")
   (let ((accum-string '())
 	(accum-event '())
@@ -582,7 +582,7 @@ So, to decode M-3 i.e. '<meta>-3' do this:\n
 \(- \(+ ?3 \(expt 2 27\)\) \(expt 2 27\)\) ;=> 51 
 e.g. \(- 134217779  134217728\) ;=> 51\n
 :EXAMPLE\n\(mon-decode-meta-key-event 134217771\)\n
-:SEE-ALSO `mon-catch-meta-key' `mon-coerce->char', `mon-string-to-symbol'.\n►►►"
+:SEE-ALSO `mon-catch-meta-key' `mon-coerce->char', `mon-string-to-symbol'.\n▶▶▶"
   (let ((M-key (expt 2 27)))
     ;; (event-key event))
     (if (> event M-key)
@@ -602,7 +602,7 @@ Can be alled programatically within a wrapper functions.\n
 :EXAMPLE\n\(mon-catch-meta-key\)   ;<- M-3 C-x C-e ;=> (meta 51)
 \(mon-catch-meta-key t\) ;<- M-3 C-x C-e ;=>\"meta-3\"\n
 :SEE-ALSO `mon-decode-meta-key-event', `mon-catch-meta-key' `mon-coerce->char',
-`mon-string-to-symbol'.\n►►►"
+`mon-string-to-symbol'.\n▶▶▶"
   (let ((key-seq (listify-key-sequence (this-command-keys-vector)));event-vect))
         map-events
         psn-if)
@@ -646,7 +646,7 @@ Repeatedly invoke `exit-recursive-edit' and `abort-recursive-edit' when
 `recursion-depth' is greater than 0.\n
 :SEE-ALSO `mon-abort-autosave-when-fucked', `exit-recursive-edit',
 `abort-recursive-edit', `command-error-function', `throw-on-input',
-`top-level', `kill-this-buffer', `mon-help-key-functions'.\n►►►"
+`top-level', `kill-this-buffer', `mon-help-key-functions'.\n▶▶▶"
   (interactive)
   (while (> (recursion-depth) 0)
     (progn (abort-recursive-edit)
@@ -685,7 +685,7 @@ functions don't implode! I loathe this practice of hiding buffers from the user.
 My Emacs, my buffers!
 :SEE-ALSO `mon-abort-recursive-edit', `exit-recursive-edit',
 `abort-recursive-edit', `kill-this-buffer', `command-error-function',
-`throw-on-input', `top-level', `mon-help-key-functions'.\n►►►"
+`throw-on-input', `top-level', `mon-help-key-functions'.\n▶▶▶"
   (interactive)
   (let ((auto-save-interval 0)
         (auto-save-timeout  0)
@@ -704,7 +704,7 @@ My Emacs, my buffers!
 (defvar *mon-ascii-cursor-state* nil
   "Variable to hold state for `mon-rotate-ascii-cursor'.\n
 Its value is set during execution by that functions ROTATE-PRED arg.
-:SEE-ALSO .\n►►►")
+:SEE-ALSO .\n▶▶▶")
 
 ;;; ==============================
 ;;; :TODO This needs to be re-written as a macro in the style of `with-temp-message'
@@ -730,7 +730,7 @@ Default is \"processing .... \"
 :SEE-ALSO `dotimes-with-progress-reporter', `progress-reporter-done',
 `progress-reporter-update', `make-progress-reporter',
 `progress-reporter-force-update', `progress-reporter-do-update'
-`url-display-percentage', `url-show-status'.\n►►►"
+`url-display-percentage', `url-show-status'.\n▶▶▶"
   (when (null *mon-ascii-cursor-state*)
     (error (concat ":FUNCTION `mon-rotate-ascii-cursor' "
                    "-- global variabe `*mon-ascii-cursor-state*' null")))
@@ -762,7 +762,7 @@ Default is \"processing .... \"
   "Append the region current to the kill ring without killing it.\n
 Like `append-next-kill' but skips the C M-w M-w finger-chord hoop jump.
 :ALIASED-BY `mon-append-next-kill'\n
-:SEE-ALSO `mon-append-to-buffer', `mon-append-to-register'.\n►►►"
+:SEE-ALSO `mon-append-to-buffer', `mon-append-to-register'.\n▶▶▶"
   (interactive "r")
   (progn 
     (append-next-kill)
@@ -779,7 +779,7 @@ Called programaticaly, takes four args: REGISTER, START, END and W-REGION-DELETE
 START and END are buffer positions indicating what to append.\n
 Redefines `append-to-register' with a \"\n\".\n
 :ALIASED-BY `mon-region-append-to-register'
-:SEE-ALSO `mon-append-to-buffer', `mon-kill-appending', `mon-append-to-register'.\n►►►"
+:SEE-ALSO `mon-append-to-buffer', `mon-kill-appending', `mon-append-to-register'.\n▶▶▶"
   (interactive "cAppend to register: \nr\nP")
   (let ((matr-reg (get-register register))
         (matr-text (filter-buffer-substring start end)))
@@ -806,7 +806,7 @@ at loadtime with `mon-keybind-put-hooks-init'.\n
 `isearch-mode', `find-change-log', `add-log-file-name',
 `add-log-file-name-function', `add-log-current-defun',
 `add-log-current-defun-header-regexp', `add-log-lisp-like-modes',
-`change-log-name', `change-log-default-name', `change-log-mode-map'.\n►►►"
+`change-log-name', `change-log-default-name', `change-log-mode-map'.\n▶▶▶"
   (with-current-buffer (current-buffer)
     (and (string-match-p 
           (or w-regex

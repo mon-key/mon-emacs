@@ -5,7 +5,7 @@
 ;;; naf-insertion-utils common insertion procedures and miscellaneous
 ;;; tools for working in a `naf-mode' buffer.
 ;;;
-;;; FUNCTIONS:►►►
+;;; FUNCTIONS:▶▶▶
 ;;; `naf-tab-region', `naf-comment-line', `naf-uncomment-line',
 ;;; `naf-comment-region', `naf-uncomment-region', `non-posting-source', `npps',
 ;;; `non-posting-wiki-source', `non-posting-ebay-source',
@@ -15,7 +15,7 @@
 ;;; `mon-insert-naf-file-in-dirs',
 ;;; `mon-insert-naf-mode-xref-template', `mon-build-naf-mode-xref'
 ;;; `mon-insert-naf-mode-var-const-template', `mon-insert-naf-mode-class-template'
-;;; FUNCTIONS:◄◄◄
+;;; FUNCTIONS:◀◀◀
 ;;;
 ;;; MACROS:
 ;;;
@@ -112,7 +112,7 @@
 :EXAMPLE\n\*naf-mode-insertion-utils-xrefs*\n
 \(nth 3 *naf-mode-insertion-utils-xrefs*\)\n
 :SEE :FILE naf-mode-insertion-utils.el\n
-:SEE-ALSO `*naf-mode-xref-of-xrefs*'\n►►►.")
+:SEE-ALSO `*naf-mode-xref-of-xrefs*'\n▶▶▶.")
 ;;
 (unless (bound-and-true-p *naf-mode-insertion-utils-xrefs*)
   (setq *naf-mode-insertion-utils-xrefs*
@@ -147,7 +147,7 @@
 ;;; ==============================
 (defun naf-tab-region (beg end &optional arg)   
   "Indent region by one tab in a `naf-mode' buffer.\n
-:SEE-ALSO \n►►►"
+:SEE-ALSO \n▶▶▶"
   (interactive "r\nP")
   (indent-rigidly beg end tab-width)
   (exchange-point-and-mark))
@@ -157,7 +157,7 @@
   "Comment line in a NAF file.\n
 :USED-IN `naf-mode'.\n
 :SEE-ALSO `naf-uncomment-line', `*naf-comment-prefix*', `naf-uncomment-region',
-`naf-comment-region'.\n►►►"
+`naf-comment-region'.\n▶▶▶"
   (interactive)
   (save-excursion 
     (back-to-indentation) 
@@ -168,7 +168,7 @@
   "Uncomment line in a NAF file.\n
 :USED-IN `naf-mode'.\n
 :SEE-ALSO `*naf-comment-prefix*',`naf-uncomment-line', `naf-uncomment-region',
-`naf-comment-region'.\n►►►"
+`naf-comment-region'.\n▶▶▶"
   (interactive)
   (save-excursion 
     (back-to-indentation)
@@ -180,7 +180,7 @@
   "Comment out region in a NAF file.\n
 :USED-IN `naf-mode'.\n
 :SEE-ALSO `*naf-comment-prefix*', `naf-uncomment-region',`naf-comment-line',
-`naf-uncomment-line'.\n►►►"
+`naf-uncomment-line'.\n▶▶▶"
   (interactive "r\nP")
   (let ((comment-start *naf-comment-prefix*))
     (comment-region beg end arg)))
@@ -190,7 +190,7 @@
   "Uncomment region in a NAF file.\n
 :USED-IN `naf-mode'.\n
 :SEE-ALSO `*naf-comment-prefix*', `naf-comment-region', `naf-comment-line',
-`naf-uncomment-line'.\n►►►"
+`naf-uncomment-line'.\n▶▶▶"
   (interactive "r\nP")
   (let ((comment-start *naf-comment-prefix*))
     (comment-region beg end -1)))
@@ -206,7 +206,7 @@ When INSRTP is non-nil or called-interactively insert w/ newline after :(colon).
 :SEE-ALSO `nps', `non-posting-internet-source', `non-posting-wiki-source',
 `non-posting-ebay-source', `non-posting-imdb-source',
 `non-posting-philsp-source', `non-posting-benezit-source',
-`benezit-naf-template'.\n►►►"
+`benezit-naf-template'.\n▶▶▶"
   (interactive "i\np")
   (mon-naf-mode-toggle-restore-llm nil
       (let ((non-ps (format "\n-\nnon-posting-source:\n")))
@@ -235,7 +235,7 @@ Does not move point.\n
 :SEE-ALSO `non-posting-source', `non-posting-internet-source',
 `non-posting-wiki-source', `non-posting-imdb-source',
 `non-posting-philsp-source', `non-posting-benezit-source',
-`benezit-naf-template'.\n►►►"
+`benezit-naf-template'.\n▶▶▶"
   (interactive "i\np")
   (mon-naf-mode-toggle-restore-llm nil
       (let ((non-pes (mapconcat #'identity 
@@ -270,7 +270,7 @@ Does not move point.\n
 :SEE-ALSO `non-posting-source', `non-posting-internet-source',
 `non-posting-ebay-source', `non-posting-imdb-source',
 `non-posting-philsp-source', `non-posting-benezit-source',
-`non-posting-philsp-source', `benezit-naf-template'.\n►►►"
+`non-posting-philsp-source', `benezit-naf-template'.\n▶▶▶"
   (interactive "i\np") 
   (mon-naf-mode-toggle-restore-llm nil
       (let ((non-pws (mapconcat #'identity `("-" 
@@ -303,7 +303,7 @@ Does not move point.\n
 :SEE-ALSO `non-posting-source', `non-posting-wiki-source',
 `non-posting-internet-source', `non-posting-ebay-source',
 `non-posting-benezit-source', `benezit-naf-template' ,
-`non-posting-imdb-source'.\n►►►"
+`non-posting-imdb-source'.\n▶▶▶"
   (interactive "i\np") 
   (mon-naf-mode-toggle-restore-llm nil
    (let ((non-pps (mapconcat #'identity 
@@ -342,7 +342,7 @@ Return value has the form:
 :SEE-ALSO `non-posting-source', `non-posting-wiki-source',
 `non-posting-internet-source', `non-posting-ebay-source',
 `non-posting-benezit-source', `benezit-naf-template'
-`non-posting-philsp-source'.\n:USED-IN `naf-mode'.\n►►►"
+`non-posting-philsp-source'.\n:USED-IN `naf-mode'.\n▶▶▶"
   (interactive "i\np")
   (mon-naf-mode-toggle-restore-llm nil
    (let ((npis (mapconcat #'identity 
@@ -372,7 +372,7 @@ Does not move point.\n
 \(non-posting-benezit-source \"Cappiello, Leonetto\" \"3\" \"444\"\)\n
 :SEE-ALSO `non-posting-source', `non-posting-wiki-source', `non-posting-internet-source',
 `non-posting-ebay-source', `non-posting-imdb-source', `benezit-naf-template'.
-:USED-IN `naf-mode'.\n►►►"
+:USED-IN `naf-mode'.\n▶▶▶"
   (interactive "sArtist Name (Lastname, Firstname):\nnVolume number:\nnPage number: \ni\np")
   (mon-naf-mode-toggle-restore-llm nil
    (let ((non-pbs
@@ -414,7 +414,7 @@ Does not move point.\n
 \(non-posting-internet-source)\n
 :SEE-ALSO `non-posting-source', `non-posting-wiki-source', `non-posting-imdb-source',
 `non-posting-benezit-source', `non-posting-ebay-source', `benezit-naf-template'.\n
-:USED-IN `naf-mode'.\n►►►"
+:USED-IN `naf-mode'.\n▶▶▶"
   (interactive "sURL:\ni\np")
   (mon-naf-mode-toggle-restore-llm nil
       (let ((non-pis 
@@ -473,7 +473,7 @@ Creates the following directorys and files in /home/my-dirs\n
   |-- Lastname3 (Firstname3 Middlename3 Other3)
   |   `-- Lastname3, Firstname3 Middlename3 Other3.naf
   `-- Lastname4 (Firstname4 Middlename4 Other4)
-    `-- Lastname4, Firstname4 Middlename4 Other4.naf\n►►►"
+    `-- Lastname4, Firstname4 Middlename4 Other4.naf\n▶▶▶"
   (interactive "XGive Symbol holind dir/file list :")
   (while make-dir-list 
     (let* ((file-dir make-dir-list)
@@ -501,7 +501,7 @@ When non-nil CLASS-SFX is a suffix to concatenate onto `naf-mode-'.
 Default is 'naf-mode-'. SLOT-COUNT is the number of slot templates returned.
 When INSRTP in non-nil or called-interactively insert template at point.
 Does not move point.\n\n:EXAMPLE\n\(mon-insert-naf-mode-class-template\)\n
-:SEE-ALSO `mon-insert-defclass-template', `mon-help-eieio-defclass'.\n►►►"
+:SEE-ALSO `mon-insert-defclass-template', `mon-help-eieio-defclass'.\n▶▶▶"
   (interactive "P\ni\ni\np")
   (mon-insert-defclass-template 
    (if class-sfx
@@ -535,7 +535,7 @@ Elements of list are returned as three strings:\n
   \(mon-build-naf-mode-xref\)\)\n
 :CALLED-BY `mon-insert-naf-mode-xref-template'
 :CALLED-BY `mon-insert-naf-mode-var-const-template'
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   (if (buffer-file-name)
     (let* ((nm-match-str (file-name-nondirectory (file-name-sans-extension (buffer-file-name))))
            (nm-match-on  (string-match "naf-mode-" nm-match-str))
@@ -572,7 +572,7 @@ When INSRTP is non-nil or called-interactively insert xref template at point.
 Does not move point.\n
 :EXAMPLE\n\n\(let \(\(buffer-file-name \"naf-mode-dir/naf-mode-xref-example.el\"\)\)
   \(mon-insert-naf-mode-xref-template\)\)\n
-:SEE-ALSO `mon-build-naf-mode-xref', `mon-insert-naf-mode-xref-template'.\n►►►"
+:SEE-ALSO `mon-build-naf-mode-xref', `mon-insert-naf-mode-xref-template'.\n▶▶▶"
   (interactive "i\np")
   (let* ((xref-l (mon-build-naf-mode-xref))
          (xref-sym (car xref-l))
@@ -609,7 +609,7 @@ NAF-SYMBOL-NAME - a string - should be suitable for concatenation as:
 Do not include `-', `*', etc. This function does not check the value given.
 When INSRTP is non-nil or called-interactively insert templates at point.
 Does not move point.\n
-:SEE-ALSO `mon-build-naf-mode-xref', `mon-insert-naf-mode-xref-template'.\n►►►"
+:SEE-ALSO `mon-build-naf-mode-xref', `mon-insert-naf-mode-xref-template'.\n▶▶▶"
   (interactive "sSymbol name for template do not prefix with -, *, etc. :\np")
   (let* ((v-name (concat "*naf-" naf-symbol-name "*"))
          (c-name (concat "naf-mode-" naf-symbol-name))
@@ -652,7 +652,7 @@ Does not move point.\n
   "Insert elisp template for defining new font-lock constants for `naf-mode'.\n
 :EXAMPLE\n\n(mon-insert-naf-mode-constant-template \"some-constant\")\n
 :SEE-ALSO `*naf-mode-faces-as-displayed*', `mon-insert-naf-mode-faces-as-displayed',
-`mon-insert-naf-mode-face-template'.\n►►►"
+`mon-insert-naf-mode-face-template'.\n▶▶▶"
   (interactive "sGive the value for * naf-mode-*-flags: \ni\np")
   (let* ((cnst (if constant-name constant-name "!CONSTANT!"))
          (lcl (replace-regexp-in-string  " " "-" (concat "naf-" cnst "-flags")))
@@ -693,7 +693,7 @@ Does not move point.\n
 Use to make face templates for fontlocking `naf-mode' keywords.\n
 :EXAMPLE\n\(mon-insert-naf-mode-face-template \"some-face-name\")
 :SEE-ALSO `*naf-mode-faces-as-displayed*',`mon-insert-naf-mode-faces-as-displayed' 
-`mon-insert-naf-mode-constant-template'.\n►►►"
+`mon-insert-naf-mode-constant-template'.\n▶▶▶"
   (interactive "sGive the value for * in naf-mode-*-face: \ni\np")
   (let* ((fc-nme   (if face-name face-name "!FACE-NAME!"))
         (the-face  (concat "naf-mode-" fc-nme "-face"))
@@ -739,7 +739,7 @@ Use to make face templates for fontlocking `naf-mode' keywords.\n
 (defun mon-insert-naf-mode-faces-as-displayed (&optional insrtp intrp)
   "Insert font-locked keywords to test fruitsaladness `naf-mode' face/constants.\n
 :SEE-ALSO `*naf-mode-faces-as-displayed*',`mon-insert-naf-mode-face-template',
-`mon-insert-naf-mode-constant-template'.\n►►►"
+`mon-insert-naf-mode-constant-template'.\n▶▶▶"
  (interactive "i\np")
  (let ((i-fad (mapconcat #'identity *naf-mode-faces-as-displayed* "\n")))
    (if (or insrtp intrp)
@@ -1311,7 +1311,7 @@ will be font-locked.\n
 Indicates that font-locking is for a Benezit field.\n
 :CALLED-BY `mon-insert-naf-mode-faces-as-displayed'.
 :SEE-ALSO `mon-insert-naf-mode-face-template',
-`mon-insert-naf-mode-constant-template'.\n►►►")
+`mon-insert-naf-mode-constant-template'.\n▶▶▶")
 ;;
 ;;; :TEST-ME  *naf-mode-faces-as-displayed* 
 ;;;(progn (makunbound '*naf-mode-faces-as-displayed*)

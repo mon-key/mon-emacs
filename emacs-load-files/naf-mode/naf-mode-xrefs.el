@@ -24,9 +24,9 @@
 ;; list is used to put associative docstrings on various constants, variables,
 ;; functions, etc. going forward. Consider as the xrefing wheel for `naf-mode'.
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;;
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;;
@@ -114,7 +114,7 @@
 
 (defgroup naf-mode-xrefs nil
   "Customization group for variables and functions of :FILE naf-mode-xrefs.el\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   ;; :prefix "<PREFIX>"
   :link '(url-link 
           :tag ":EMACSWIKI-FILE" "http://www.emacswiki.org/emacs/naf-mode-xrefs.el")
@@ -147,7 +147,7 @@
 :SEE-ALSO `*mon-default-loads-xrefs*', `*mon-default-start-loads-xrefs*',
 `*mon-dir-locals-alist-xrefs*', `*mon-testme-utils-xrefs*',
 `*mon-button-utils-xrefs*', `*naf-mode-xref-of-xrefs*',
-`*mon-ulan-utils-xrefs*', `*mon-xrefs-xrefs'.\n►►►"
+`*mon-ulan-utils-xrefs*', `*mon-xrefs-xrefs'.\n▶▶▶"
   :type '(repeat symbol)
   :group 'naf-mode-xrefs
   :group 'mon-xrefs)

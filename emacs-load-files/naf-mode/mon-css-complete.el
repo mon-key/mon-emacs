@@ -157,7 +157,7 @@
 `*css-complete-pseudo-ids*', `*css-complete-tag-ids*',
 `*css-complete-look-back-regexp*', `*css-complete-popup-pos-x-offset*',
 `mon-help-css-complete', `mon-help-css-properties', `mon-help-css-mode',
-`mon-help-css-check', `mon-help-css-color'.\n►►►")
+`mon-help-css-check', `mon-help-css-color'.\n▶▶▶")
 ;; 
 (unless (bound-and-true-p *css-complete-at-ids*)
   (if (and (intern-soft "css-at-ids")
@@ -180,7 +180,7 @@
 `*css-complete-pseudo-ids*', `*css-complete-tag-ids*',
 `*css-complete-look-back-regexp*', `*css-complete-popup-pos-x-offset*',
 `mon-help-css-complete', `mon-help-css-properties', `mon-help-css-mode',
-`mon-help-css-check', `mon-help-css-color'.\n►►►")
+`mon-help-css-check', `mon-help-css-color'.\n▶▶▶")
 ;;
 (unless (bound-and-true-p *css-complete-tag-ids*)
   (setq *css-complete-tag-ids*
@@ -236,7 +236,7 @@ to value of `*css-complete-media-ids*' at loadtime with `mon-css-complete-loadti
 `*css-complete-pseudo-ids*', `*css-complete-tag-ids*',
 `*css-complete-look-back-regexp*', `*css-complete-popup-pos-x-offset*',
 `mon-help-css-complete', `mon-help-css-properties', `mon-help-css-mode',
-`mon-help-css-check', `mon-help-css-color'.\n►►►")
+`mon-help-css-check', `mon-help-css-color'.\n▶▶▶")
 ;;
 (unless (bound-and-true-p *css-complete-media-ids*)
   (setq *css-complete-media-ids*
@@ -258,7 +258,7 @@ to value of `*css-complete-media-ids*' at loadtime with `mon-css-complete-loadti
 `*css-complete-pseudo-ids*', `*css-complete-tag-ids*',
 `*css-complete-look-back-regexp*', `*css-complete-popup-pos-x-offset*',
 `mon-help-css-complete', `mon-help-css-properties', `mon-help-css-mode',
-`mon-help-css-check', `mon-help-css-color'.\n►►►")
+`mon-help-css-check', `mon-help-css-color'.\n▶▶▶")
 ;;
 (unless (bound-and-true-p *css-complete-property-ids*)
   (setq *css-complete-property-ids* css-property-ids))
@@ -276,7 +276,7 @@ to value of `*css-complete-media-ids*' at loadtime with `mon-css-complete-loadti
 `*css-complete-pseudo-ids*', `*css-complete-tag-ids*',
 `*css-complete-look-back-regexp*', `*css-complete-popup-pos-x-offset*',
 `mon-help-css-complete', `mon-help-css-properties', `mon-help-css-mode',
-`mon-help-css-check', `mon-help-css-color'.\n►►►")
+`mon-help-css-check', `mon-help-css-color'.\n▶▶▶")
 ;;
 (unless (bound-and-true-p *css-complete-pseudo-ids*)
   (setq *css-complete-pseudo-ids* css-pseudo-ids))
@@ -306,7 +306,7 @@ bearing the same name, these include:\n
 `*css-complete-pseudo-ids*', `*css-complete-tag-ids*',
 `*css-complete-look-back-regexp*', `*css-complete-popup-pos-x-offset*',
 `mon-help-css-complete', `mon-help-css-properties', `mon-help-css-mode',
-`mon-help-css-check', `mon-help-css-color'.\n►►►")
+`mon-help-css-check', `mon-help-css-color'.\n▶▶▶")
 ;;
 (unless (bound-and-true-p *css-complete-props-and-vals*)
   (setq *css-complete-props-and-vals*
@@ -471,7 +471,7 @@ Elts of array map as follows:\n
 `*css-complete-pseudo-ids*', `*css-complete-tag-ids*',
 `*css-complete-look-back-regexp*', `*css-complete-popup-pos-x-offset*',
 `mon-help-css-complete', `mon-help-css-properties', `mon-help-css-mode',
-`mon-help-css-check', `mon-help-css-color'.\n►►►")
+`mon-help-css-check', `mon-help-css-color'.\n▶▶▶")
 ;;
 (unless (bound-and-true-p *css-complete-look-back-regexp*)
   (setq *css-complete-look-back-regexp*
@@ -494,7 +494,7 @@ Elts of array map as follows:\n
 (defvar *css-complete-popup-pos-x-offset* nil
   "*A position offset for `x-popup-menu'.\n
 :SEE-ALSO `mon-help-css-complete', `mon-help-css-properties',
-`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n►►►")
+`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n▶▶▶")
 ;;
 (unless (bound-and-true-p *css-complete-popup-pos-x-offset*)
   (setq *css-complete-popup-pos-x-offset*
@@ -541,7 +541,7 @@ Elts of array map as follows:\n
 :CALLED-BY `css-possible-tag-completions'
 :CALLED-BY `css-possible-at-completions'\n
 :SEE-ALSO `mon-help-css-complete', `mon-help-css-properties',
-`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n►►►"
+`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n▶▶▶"
   ;; :WAS
   ;;  (declare (indent 1) (debug t))
   ;; `(loop for css-gthr-v in ,css-collect-list
@@ -583,7 +583,7 @@ Its first two args should be buffer positions, e.g. beginning and end.\n
 `css-delete-partial-pseud', `css-delete-partial-at',
 `css-delete-partial-value', `css-maybe-part-val-at-point',
 `css-maybe-part-prop-at-point', `css-maybe-part-pseudo-at-point',
-`css-maybe-part-tag-at-point', `css-maybe-part-at-at-point'.\n►►►"
+`css-maybe-part-tag-at-point', `css-maybe-part-at-at-point'.\n▶▶▶"
   (declare (indent 1) (debug t))
   ;; :WAS 
   ;; (let ((css-rgn (make-symbol "css-rgn")))  
@@ -634,7 +634,7 @@ Return value has the form:
 `css-value-completion-menu', `css-prop-completion-menu',
 `css-pseudo-completion-menu', `css-tag-completion-menu',
 `mon-help-css-complete', `mon-help-css-properties',
-`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n►►►"
+`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n▶▶▶"
   (declare (indent 1) (debug t))
   `(list ,menu-str-1 
          (cons ,menu-str-2
@@ -659,7 +659,7 @@ abcd-aasos\n
 :SEE-ALSO `css-delims-maybe-part-generic', `css-delims-maybe-part-val-at-point',
 `css-delims-maybe-part-tag-at-point', `mon-help-css-complete',
 `mon-help-css-properties', `mon-help-css-mode', `mon-help-css-check',
-`mon-help-css-color'.\n►►►"
+`mon-help-css-color'.\n▶▶▶"
   (declare (indent 1) (debug t))
   `(save-excursion
      `(,(point)
@@ -682,7 +682,7 @@ COMPLETION-MENU-FNCN is a function whith returns a completion menu.\n
 :SEE-ALSO `css-value-popup-completions', `css-at-popup-completions',
 `css-at-popup-completions', `css-media-popup-completions',
 `mon-help-css-complete', `mon-help-css-properties', `mon-help-css-mode',
-`mon-help-css-check', `mon-help-css-color'.\n►►►"
+`mon-help-css-check', `mon-help-css-color'.\n▶▶▶"
   (declare (indent 1) (debug t))
   `(x-popup-menu (funcall 'css-pos-for-x-popup-menu)
                  (,completion-menu-fncn)))
@@ -698,7 +698,7 @@ COMPLETION-MENU-FNCN is a function whith returns a completion menu.\n
 :SEE-ALSO `css-at-value-p', `css-after-at-p', `css-at-tag-id-p',
 `css-at-at-id-p', `css-at-prop-p', `css-complete-after-at',
 `mon-help-css-complete', `mon-help-css-properties', `mon-help-css-mode',
-`mon-help-css-check', `mon-help-css-color'.\n►►►"
+`mon-help-css-check', `mon-help-css-color'.\n▶▶▶"
   (declare (indent 1) (debug t))
   (let ((lb-msnp (make-symbol "lb-msnp"))
         (this-md (make-symbol "this-md")))
@@ -721,7 +721,7 @@ Return value is a list of elts which satisfy the predicate `stringp'.\n
             \(css-vals-for-prop \"font\"\)\)\)\n
 :SEE-ALSO `css-complete-collect', `mon-help-css-complete',
 `mon-help-css-properties', `mon-help-css-mode', `mon-help-css-check',
-`mon-help-css-color'.\n►►►"
+`mon-help-css-color'.\n▶▶▶"
   (css-complete-collect stringp 
     (cdr (assoc css-comp-prop *css-complete-props-and-vals*))))
 
@@ -735,7 +735,7 @@ Return match-string 1 when string before point matches the formats:\n
      some-css-thing:  with-val;\n     vertical-align:\n
 :CALLED-BY `css-vals-for-point'\n
 :SEE-ALSO `mon-help-css-complete', `mon-help-css-properties',
-`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n►►►"
+`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n▶▶▶"
   (save-match-data
     (save-excursion
       (search-backward-regexp (aref *css-complete-look-back-regexp* 1) nil t)
@@ -747,7 +747,7 @@ Return match-string 1 when string before point matches the formats:\n
      some-css-thing:  with-val;\n     vertical-align:\n
 :CALLED-BY `css-possible-value-completions'\n
 :SEE-ALSO `mon-help-css-complete', `mon-help-css-properties',
-`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n►►►"
+`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n▶▶▶"
   (css-vals-for-prop (css-prop-for-point)))
 
 ;;; ==============================
@@ -763,7 +763,7 @@ Does not move point.\n
 :ALIASED-BY `css-delims-maybe-part-at-at-point'\n
 :SEE-ALSO `css-delims-maybe-generate', `mon-help-css-complete',
 `mon-help-css-properties', `mon-help-css-mode', `mon-help-css-check',
-`mon-help-css-color'.\n►►►"
+`mon-help-css-color'.\n▶▶▶"
   ;; :WAS
   ;; (save-excursion
   ;;     `(,(point)
@@ -783,7 +783,7 @@ Does not move point.\n\n"
 :CALLED-BY `css-delete-partial-prop'
 :CALLED-BY `css-complete-prop'\n
 :SEE-ALSO `mon-help-css-complete', `mon-help-css-properties',
-`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n►►►"))
+`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n▶▶▶"))
 ;;
 (defalias 'css-delims-maybe-part-pseudo-at-point 'css-delims-maybe-part-generic
   (concat    
@@ -795,7 +795,7 @@ Does not move point.\n\n"
 :CALLED-BY `css-delete-partial-pseudo'
 :CALLED-BY `css-complete-pseudo'\n
 :SEE-ALSO `mon-help-css-complete', `mon-help-css-properties',
-`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n►►►"))
+`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n▶▶▶"))
 ;;
 (defalias 'css-delims-maybe-part-at-at-point 'css-delims-maybe-part-generic
   (concat    
@@ -809,7 +809,7 @@ Does not move point.\n\n"
 :CALLED-BY `css-complete-at'
 :CALLED-BY `css-complete-media'\n
 :SEE-ALSO `mon-help-css-complete', `mon-help-css-properties',
-`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n►►►"))
+`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n▶▶▶"))
 
 ;;; ==============================
 ;;; :CHANGESET 2025
@@ -824,7 +824,7 @@ Return value has the form:\n
 :CALLED-BY `css-complete-value'\n
 :SEE-ALSO `css-delims-maybe-generate', `mon-help-css-complete',
 `mon-help-css-properties', `mon-help-css-mode', `mon-help-css-check',
-`mon-help-css-color'.\n►►►"
+`mon-help-css-color'.\n▶▶▶"
   ;; :WAS
   ;; (save-excursion
   ;;   `(,(point)
@@ -838,7 +838,7 @@ Return value has the form:\n
   "Get value `css-delims-maybe-part-val-at-point'.\n 
 :SEE-ALSO `css-delete-partial', `mon-help-css-complete',
 `mon-help-css-properties', `mon-help-css-mode', `mon-help-css-check',
-`mon-help-css-color'.\n►►►"
+`mon-help-css-color'.\n▶▶▶"
   ;; (destructuring-bind (end beg) (css-delims-maybe-part-val-at-point)
   ;;   (buffer-substring-no-properties beg end)))
   (css-delete-partial 
@@ -856,7 +856,7 @@ the list returned from `css-vals-for-point'.\n
     vertical-align: text-
                          ^^^^^^ <- completes \"bottom\"\n
 :SEE-ALSO `mon-help-css-complete', `mon-help-css-properties',
-`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n►►►"
+`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n▶▶▶"
   (css-complete-collect 
       (lambda (css-cmprd-str)
         ;;:WAS (string-match (concat "^" css-cmp-str) css-cmprd-str))
@@ -869,13 +869,13 @@ the list returned from `css-vals-for-point'.\n
 :CALLED-BY `css-complete-value'
 :CALLED-BY `css-value-completion-menu'\n
 :SEE-ALSO `mon-help-css-complete', `mon-help-css-properties',
-`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n►►►"
+`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n▶▶▶"
   (css-possible-value-completions (css-maybe-part-val-at-point)))
 
 (defun css-delete-partial-value ()
   "If non-nil, `delete-region' returned by `css-delims-maybe-part-val-at-point'.\n
 :SEE-ALSO `css-delete-partial', `mon-help-css-complete', `mon-help-css-properties',
-`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n►►►"
+`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n▶▶▶"
   ;; :WAS
   ;; (destructuring-bind (end beg) (css-delims-maybe-part-val-at-point) 
   ;;   (delete-region beg end)))
@@ -887,7 +887,7 @@ at position `css-pos-for-x-popup-menu'.\n
 :EXAMPLE\n\n\(css-value-popup-completions\)\n
 :SEE-ALSO `css-popup-generate', `mon-help-css-complete',
 `mon-help-css-properties', `mon-help-css-mode', `mon-help-css-check',
-`mon-help-css-color'.\n►►►"
+`mon-help-css-color'.\n▶▶▶"
   ;; :WAS (x-popup-menu (css-pos-for-x-popup-menu) (css-value-completion-menu)))
   (css-popup-generate css-value-completion-menu))
 
@@ -896,7 +896,7 @@ at position `css-pos-for-x-popup-menu'.\n
 :EXAMPLE\n\n\(css-value-completion-menu\)\n
 :SEE-ALSO `css-complete-menu-generate', `mon-help-css-complete',
 `mon-help-css-properties', `mon-help-css-mode', `mon-help-css-check',
-`mon-help-css-color'.\n►►►"
+`mon-help-css-color'.\n▶▶▶"
   ;; :WAS
   ;; (list "Complete: "
   ;;       (cons 
@@ -914,7 +914,7 @@ at position `css-pos-for-x-popup-menu'.\n
 Return value from calculated `posn-at-point' according to the offsets specified
 by `*css-complete-popup-pos-x-offset*'.\n
 :SEE-ALSO `mon-help-css-complete', `mon-help-css-properties',
-`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n►►►"
+`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n▶▶▶"
  ;; :WAS (destructuring-bind (win area (x . y) &rest rest) (posn-at-point)
  ;;       (values (list (+ *css-complete-popup-pos-x-offset* x) y) win))
  (let* ((cpfxpm (posn-at-point))
@@ -930,7 +930,7 @@ by `*css-complete-popup-pos-x-offset*'.\n
 identified with `css-delims-maybe-part-val-at-point'.\n
 `css-complete-value' -> `css-value-popup-completions' <- `css-value-completion-menu'\n
 :SEE-ALSO `mon-help-css-complete', `mon-help-css-properties',
-`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n►►►"
+`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n▶▶▶"
   (let* ((css-comp-pssbl (css-possible-value-completions-at-point))
 	 (css-comp-newval (if (null (cdr css-comp-pssbl))
 		     (car css-comp-pssbl)
@@ -949,7 +949,7 @@ This is predicate for `css-complete' to trigger completion with
 `css-complete-value'.\n
 :SEE-ALSO `css-at-p-generate', `mon-help-css-complete',
 `mon-help-css-properties', `mon-help-css-mode', `mon-help-css-check',
-`mon-help-css-color'.\n►►►"
+`mon-help-css-color'.\n▶▶▶"
   (and  (> (car (syntax-ppss)) 0)
         ;; :WAS (not (looking-back (aref *css-complete-look-back-regexp* 0)))
         (not (css-at-p-generate 0))
@@ -963,7 +963,7 @@ matches the regexp at idx 0 of `*css-complete-look-back-regexp*'.\n
 This is predicate for `css-complete' to trigger .\n
 :SEE-ALSO `css-at-p-generate', `mon-help-css-complete',
 `mon-help-css-properties', `mon-help-css-mode', `mon-help-css-check',
-`mon-help-css-color'.\n►►►"
+`mon-help-css-color'.\n▶▶▶"
   ;; :WAS (and (looking-back (aref *css-complete-look-back-regexp* 0))
   (and (css-at-p-generate 0) (css-possible-prop-completions-at-point)))
        
@@ -971,7 +971,7 @@ This is predicate for `css-complete' to trigger .\n
   "When `css-delims-maybe-part-prop-at-point' is non-nil retrun a string.\n
 :SEE-ALSO `css-delete-partial', `mon-help-css-complete',
 `mon-help-css-properties', `mon-help-css-mode', `mon-help-css-check',
-`mon-help-css-color'.\n►►►"
+`mon-help-css-color'.\n▶▶▶"
   ;; :WAS
   ;; (destructuring-bind (end beg) (css-delims-maybe-part-prop-at-point)
   ;;   (buffer-substring-no-properties beg end)))
@@ -983,7 +983,7 @@ This is predicate for `css-complete' to trigger .\n
   "Return completions for CSS-CMP-STR with `css-props-for-point'.\n
 :SEE-ALSO `css-complete-collect', `mon-help-css-complete',
 `mon-help-css-properties', `mon-help-css-mode', `mon-help-css-check',
-`mon-help-css-color'.\n►►►"
+`mon-help-css-color'.\n▶▶▶"
   (css-complete-collect 
       (lambda (css-cmprd-str)
         ;; :WAS (string-match  (concat "^" css-cmp-str) css-cmprd-str)) 
@@ -995,7 +995,7 @@ This is predicate for `css-complete' to trigger .\n
 :CALLED-BY `css-complete-prop'
 :CALLED-BY `css-prop-completion-menu'\n
 :SEE-ALSO `mon-help-css-complete', `mon-help-css-properties',
-`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n►►►"
+`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n▶▶▶"
   (css-possible-prop-completions (css-maybe-part-prop-at-point)))
 
 (defun css-props-for-point ()
@@ -1003,14 +1003,14 @@ This is predicate for `css-complete' to trigger .\n
 :EXAMPLE\n\n\(car \(member \"list-style-type\" \(css-props-for-point\)\)\)\n
 :CALLED-BY `css-possible-prop-completions'\n
 :SEE-ALSO `mon-help-css-complete', `mon-help-css-properties',
-`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n►►►"
+`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n▶▶▶"
   ;; :WAS  css-property-ids)
   *css-complete-property-ids*)
 
 (defun css-delete-partial-prop ()
   "If non-nil, `delete-region' returned by `css-delims-maybe-part-prop-at-point'.\n
 :SEE-ALSO `css-delete-partial', `mon-help-css-complete', `mon-help-css-properties',
-`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color',.\n►►►"
+`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color',.\n▶▶▶"
   ;; :WAS (destructuring-bind (end beg) (css-delims-maybe-part-prop-at-point)
   ;;   (delete-region beg end)))
   (css-delete-partial css-delims-maybe-part-prop-at-point delete-region))
@@ -1020,7 +1020,7 @@ This is predicate for `css-complete' to trigger .\n
   "Return `x-popup-menu' with CSS completions from `css-prop-completion-menu' at
 position `css-pos-for-x-popup-menu'.\n
 :SEE-ALSO `mon-help-css-complete', `mon-help-css-properties',
-`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n►►►"
+`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n▶▶▶"
   (x-popup-menu (css-pos-for-x-popup-menu) (css-prop-completion-menu)))
 
 (defun css-prop-completion-menu ()
@@ -1028,7 +1028,7 @@ position `css-pos-for-x-popup-menu'.\n
 :CALLED-BY `css-prop-popup-completions'\n
 :SEE-ALSO `css-complete-menu-generate', `mon-help-css-complete',
 `mon-help-css-properties', `mon-help-css-mode', `mon-help-css-check',
-`mon-help-css-color'.\n►►►"
+`mon-help-css-color'.\n▶▶▶"
   ;; :WAS
   ;; (list "Complete: "
   ;;       (cons 
@@ -1047,7 +1047,7 @@ identified with `css-delims-maybe-part-tag-prop-point'.\n
 :EXAMPLE\n\n\(save-excursion\n  \(end-of-line 3\)\n  \(css-complete-prop\)\)\n
     display: table-\n
 :SEE-ALSO `mon-help-css-complete', `mon-help-css-properties',
-`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n►►►"
+`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n▶▶▶"
   (css-indent-line)
   (let* ((css-comp-pssbl (css-possible-prop-completions-at-point))
 	 (css-comp-newval (if (null (cdr css-comp-pssbl))
@@ -1065,7 +1065,7 @@ completion.\n
 :EXAMPLE\n\n\(save-excursion \(end-of-line 3\) \(css-at-pseudo-id-p\)\)\n
 some:first-child\n
 :SEE-ALSO `css-at-p-generate', `mon-help-css-complete', `mon-help-css-properties',
-`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n►►►"
+`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n▶▶▶"
   ;; :WAS (looking-back ":[a-z-]*"))
   (css-at-p-generate 3))
 
@@ -1074,7 +1074,7 @@ some:first-child\n
   "When `css-delims-maybe-part-val-at-point' is non-nil return a string.\n
 :SEE-ALSO `css-delete-partial', `mon-help-css-complete',
 `mon-help-css-properties', `mon-help-css-mode', `mon-help-css-check',
-`mon-help-css-color'.\n►►►"
+`mon-help-css-color'.\n▶▶▶"
   ;; :WAS
   ;; (destructuring-bind (end beg) (css-delims-maybe-part-pseudo-at-point)
   ;;   (buffer-substring-no-properties beg end)))
@@ -1085,7 +1085,7 @@ some:first-child\n
   "Return completions for CSS-CMP-STR with `css-pseudos-for-point'.\n
 :SEE-ALSO `css-complete-collect',`mon-help-css-complete',
 `mon-help-css-properties', `mon-help-css-mode', `mon-help-css-check',
-`mon-help-css-color'.\n►►►"
+`mon-help-css-color'.\n▶▶▶"
   (css-complete-collect 
       (lambda (css-cmprd-str)
         ;; :WAS (string-match  (concat "^" css-cmp-str) css-cmprd-str)) 
@@ -1095,14 +1095,14 @@ some:first-child\n
 (defun css-possible-pseudo-completions-at-point ()
   "Return `css-possible-pseudo-completions' if `css-maybe-part-pseudo-at-point'.\n
 :SEE-ALSO `mon-help-css-complete', `mon-help-css-properties',
-`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n►►►"
+`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n▶▶▶"
   (css-possible-pseudo-completions (css-maybe-part-pseudo-at-point)))
 
 (defun css-pseudos-for-point ()
   "Return value of `*css-complete-pseudo-ids*'.\n
 :EXAMPLE\n\n\(car \(member \"first-child\" \(css-pseudos-for-point\)\)\)\n
 :SEE-ALSO `mon-help-css-complete', `mon-help-css-properties',
-`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n►►►"
+`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n▶▶▶"
   ;; :WAS css-pseudo-ids)
   *css-complete-pseudo-ids*)
 
@@ -1110,7 +1110,7 @@ some:first-child\n
   "If non-nil, `delete-region' returned by `css-delims-maybe-part-pseudov-at-point'.\n
 :SEE-ALSO `css-delete-partial', `mon-help-css-complete',
 `mon-help-css-properties', `mon-help-css-mode', `mon-help-css-check',
-`mon-help-css-color'.\n►►►"
+`mon-help-css-color'.\n▶▶▶"
   ;; :WAS
   ;; (destructuring-bind (end beg) (css-delims-maybe-part-pseudo-at-point)
   ;;   (delete-region beg end)))
@@ -1121,14 +1121,14 @@ some:first-child\n
 at position `css-pos-for-x-popup-menu'.\n
 :EXAMPLE\n\n\(css-pseudo-popup-completions\)\n
 :SEE-ALSO `mon-help-css-complete', `mon-help-css-properties',
-`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n►►►"
+`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n▶▶▶"
   (x-popup-menu (css-pos-for-x-popup-menu) (css-pseudo-completion-menu)))
 
 (defun css-pseudo-completion-menu ()
   "Return CSS completion menu with `css-possible-pseudo-completions-at-point'.\n
 :SEE-ALSO `css-complete-menu-generate', `mon-help-css-complete',
 `mon-help-css-properties', `mon-help-css-mode', `mon-help-css-check',
-`mon-help-css-color'.\n►►►"
+`mon-help-css-color'.\n▶▶▶"
   ;; :WAS
   ;; (list "Complete: "
   ;;       (cons 
@@ -1144,7 +1144,7 @@ at position `css-pos-for-x-popup-menu'.\n
 with `css-pseudo-popup-completions' and insert the completion value in the
 region identified with `css-delims-maybe-part-pseudo-at-point'.\n
 :SEE-ALSO `mon-help-css-complete', `mon-help-css-properties',
-`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n►►►"
+`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n▶▶▶"
   (css-indent-line)
   (let* ((css-comp-pssbl (css-possible-pseudo-completions-at-point))
 	 (css-comp-newval (if (null (cdr css-comp-pssbl))
@@ -1162,7 +1162,7 @@ Predicate to test if matches for the regexp:
  sometag1\n
 This is predicate for `css-complete' to trigger `css-complete-tag' completion.\n
 :SEE-ALSO `css-at-p-generate', `mon-help-css-complete', `mon-help-css-properties',
-`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n►►►"
+`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n▶▶▶"
   ;; :WAS (looking-back (aref *css-complete-look-back-regexp* 2)))
   (css-at-p-generate 2))
 
@@ -1177,7 +1177,7 @@ Does not move point.\n
 	color: #000066;\n
 :SEE-ALSO `css-delims-maybe-generate', `mon-help-css-complete',
 `mon-help-css-properties', `mon-help-css-mode', `mon-help-css-check',
-`mon-help-css-color'.\n►►►"
+`mon-help-css-color'.\n▶▶▶"
   ;; :WAS 
   ;; (save-excursion
   ;;   `(,(point)
@@ -1190,7 +1190,7 @@ Does not move point.\n
   "When `css-delims-maybe-part-val-at-point' is non-nil return a string.\n
 :SEE-ALSO `css-delete-partial', `mon-help-css-complete',
 `mon-help-css-properties', `mon-help-css-mode', `mon-help-css-check',
-`mon-help-css-color'.\n►►►"
+`mon-help-css-color'.\n▶▶▶"
   ;; :WAS
   ;; (destructuring-bind (end beg) (css-delims-maybe-part-tag-at-point)
   ;;   (buffer-substring-no-properties beg end)))
@@ -1201,14 +1201,14 @@ Does not move point.\n
   "Return value of `*css-complete-tag-ids*'.\n
 :EXAMPLE\n\n\(car \(member \"meta\" \(css-tags-for-point\)\)\)\n
 :SEE-ALSO `mon-help-css-complete', `mon-help-css-properties',
-`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n►►►"
+`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n▶▶▶"
   *css-complete-tag-ids*)
 
 (defun css-possible-tag-completions (css-cmp-str)
   "Return completions for CSS-CMP-STR with `css-tags-for-point'.\n
 :SEE-ALSO `css-complete-collect',`mon-help-css-complete',
 `mon-help-css-properties', `mon-help-css-mode', `mon-help-css-check',
-`mon-help-css-color'.\n►►►"
+`mon-help-css-color'.\n▶▶▶"
   (css-complete-collect 
       (lambda (css-cmprd-str)
         ;; :WAS (string-match  (concat "^" css-cmp-str) css-cmprd-str))
@@ -1218,13 +1218,13 @@ Does not move point.\n
 (defun css-possible-tag-completions-at-point ()
   "Return `css-possible-tag-completions' with `css-maybe-part-tag-at-point'.\n
 :SEE-ALSO `mon-help-css-complete', `mon-help-css-properties',
-`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n►►►"
+`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n▶▶▶"
   (css-possible-tag-completions (css-maybe-part-tag-at-point)))
 
 (defun css-delete-partial-tag ()
   "If non-nil, `delete-region' returned by `css-delims-maybe-part-tag-at-point'.\n
 :SEE-ALSO `mon-help-css-complete', `mon-help-css-properties',
-`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n►►►"
+`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n▶▶▶"
   ;; :WAS
   ;; (destructuring-bind (end beg) (css-delims-maybe-part-tag-at-point)
   ;;   (delete-region beg end)))
@@ -1236,7 +1236,7 @@ position `css-pos-for-x-popup-menu'.\n
 :EXAMPLE\n\n\(css-tag-popup-completions\)\n
 :SEE-ALSO `css-popup-generate', `mon-help-css-complete',
 `mon-help-css-properties', `mon-help-css-mode', `mon-help-css-check',
-`mon-help-css-color'.\n►►►"
+`mon-help-css-color'.\n▶▶▶"
   ;;   (completing-read "Tag: " (css-possible-tag-completions-at-point) nil t 
   ;; 		   (css-maybe-part-tag-at-point))
   (css-popup-generate css-tag-completion-menu))
@@ -1245,7 +1245,7 @@ position `css-pos-for-x-popup-menu'.\n
   "Return CSS completion menu with `css-possible-tag-completions-at-point'.\n
 :SEE-ALSO `css-complete-menu-generate', `mon-help-css-complete',
 `mon-help-css-properties', `mon-help-css-mode', `mon-help-css-check',
-`mon-help-css-color'.\n►►►"
+`mon-help-css-color'.\n▶▶▶"
   ;; :WAS
   ;; (list "Complete tag: "
   ;;       (cons "Tags" (mapcar #'(lambda (c)
@@ -1260,7 +1260,7 @@ position `css-pos-for-x-popup-menu'.\n
 identified with `css-delims-maybe-part-tag-at-point'.\n
 `css-complete-tag' -> `css-tag-popup-completions' <- `css-tag-completion-menu'\n
 :SEE-ALSO `mon-help-css-complete', `mon-help-css-properties',
-`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n►►►"
+`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n▶▶▶"
   (css-indent-line)
   (let* ((css-comp-pssbl (css-possible-tag-completions-at-point))
 	 (css-comp-newval (if (null (cdr css-comp-pssbl))
@@ -1276,14 +1276,14 @@ This is a predicate for `css-complete' to trigger completion with
 `css-complete-at'.\n
 :SEE-ALSO `css-at-p-generate', `mon-help-css-complete',
 `mon-help-css-properties', `mon-help-css-mode', `mon-help-css-check',
-`mon-help-css-color'.\n►►►"
+`mon-help-css-color'.\n▶▶▶"
   ;; :WAS (looking-back (aref *css-complete-look-back-regexp* 3)))
   (css-at-p-generate 3))
 
 (defun css-maybe-part-at-at-point ()
   "If non-nil, return string from `css-delims-maybe-part-val-at-point'.\n
 :SEE-ALSO `css-delete-partial', `mon-help-css-complete', `mon-help-css-properties',
-`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n►►►"
+`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n▶▶▶"
   ;; :WAS 
   ;; (destructuring-bind (end beg) (css-delims-maybe-part-at-at-point)
   ;;   (buffer-substring-no-properties beg end)))
@@ -1294,14 +1294,14 @@ This is a predicate for `css-complete' to trigger completion with
   "Return value of `*css-complete-at-ids*'.\n
 :EXAMPLE\n\n\(car \(member \"charset\" (css-ats-for-point\)\)\)\n
 :SEE-ALSO `mon-help-css-complete', `mon-help-css-properties',
-`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n►►►"
+`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n▶▶▶"
   *css-complete-at-ids*)
 
 (defun css-possible-at-completions (css-cmp-str)
   "Return completions for CSS-CMP-STR with `css-ats-for-point'.\n
 :SEE-ALSO `css-complete-collect', `mon-help-css-complete',
 `mon-help-css-properties', `mon-help-css-mode', `mon-help-css-check',
-`mon-help-css-color'.\n►►►"
+`mon-help-css-color'.\n▶▶▶"
   (css-complete-collect 
       (lambda (css-cmprd-str)
         ;; :WAS (string-match (concat "^" css-cmp-str) css-cmprd-str))
@@ -1311,14 +1311,14 @@ This is a predicate for `css-complete' to trigger completion with
 (defun css-possible-at-completions-at-point ()
   "Return `css-possible-at-completions' if `css-maybe-part-at-at-point'.\n
 :SEE-ALSO `mon-help-css-complete', `mon-help-css-properties',
-`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n►►►"
+`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n▶▶▶"
   (css-possible-at-completions (css-maybe-part-at-at-point)))
 
 (defun css-delete-partial-at ()
   "If non-nil, `delete-region' returned by `css-delims-maybe-part-at-at-point'.\n
 :SEE-ALSO `css-delete-partial', `mon-help-css-complete',
 `mon-help-css-properties', `mon-help-css-mode', `mon-help-css-check',
-`mon-help-css-color'.\n►►►"
+`mon-help-css-color'.\n▶▶▶"
   ;; (destructuring-bind (end beg) (css-delims-maybe-part-at-at-point)
   ;;   (delete-region beg end)))
   (css-delete-partial css-delims-maybe-part-at-at-point delete-region))
@@ -1328,14 +1328,14 @@ This is a predicate for `css-complete' to trigger completion with
 :EXAMPLE\n\n\(css-at-popup-completions\)\n
 :SEE-ALSO `css-popup-generate', `mon-help-css-complete',
 `mon-help-css-properties', `mon-help-css-mode', `mon-help-css-check',
-`mon-help-css-color'.\n►►►"
+`mon-help-css-color'.\n▶▶▶"
   (css-popup-generate css-at-completion-menu))
 
 (defun css-at-completion-menu ()
   "Return CSS completion menu with `css-possible-at-completions-at-point'.\n
 :SEE-ALSO `css-complete-menu-generate', `mon-help-css-complete',
 `mon-help-css-properties', `mon-help-css-mode', `mon-help-css-check',
-`mon-help-css-color'.\n►►►"
+`mon-help-css-color'.\n▶▶▶"
   ;; :WAS
   ;; (list "Complete at: "
   ;;       (cons 
@@ -1354,7 +1354,7 @@ identified with `css-delims-maybe-part-at-at-point'.\n
 :SEE-ALSO `css-possible-at-completions-at-point',
 `css-delims-maybe-part-at-at-point', `mon-help-css-complete',
 `mon-help-css-properties', `mon-help-css-mode', `mon-help-css-check',
-`mon-help-css-color'.\n►►►"
+`mon-help-css-color'.\n▶▶▶"
   (css-indent-line)
   (let* ((css-comp-pssbl (css-possible-at-completions-at-point))
 	 (css-comp-newval (if (null (cdr css-comp-pssbl))
@@ -1374,7 +1374,7 @@ identified with `css-delims-maybe-part-at-at-point'.\n
 This is predicate for `css-complete' to either message or find a filename
 when the nearest parseable CSS thing around point is a string.\n
 :SEE-ALSO `css-at-comment-p', `mon-help-css-complete', `mon-help-css-properties',
-`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n►►►"
+`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n▶▶▶"
    (nth 3 (syntax-ppss)))
 
 (defun css-at-filename-p ()
@@ -1382,14 +1382,14 @@ when the nearest parseable CSS thing around point is a string.\n
 This is predicate for `css-complete' to trigger `css-complete-filename'
 completion with `comint-dynamic-complete-filename'.\n
 :SEE-ALSO `mon-help-css-complete', `mon-help-css-properties',
-`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n►►►"
+`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n▶▶▶"
   (css-at-string-p))
 
 (defun css-complete-filename ()
   "Complete filename around point with `comint-dynamic-complete-filename'.\n
 :SEE-ALSO `css-at-filename-p', `mon-help-css-complete',
 `mon-help-css-properties', `mon-help-css-mode', `mon-help-css-check',
-`mon-help-css-color'.\n►►►"
+`mon-help-css-color'.\n▶▶▶"
   (call-interactively 'comint-dynamic-complete-filename))
 
 (defun css-at-comment-p ()
@@ -1397,7 +1397,7 @@ completion with `comint-dynamic-complete-filename'.\n
 This is predicate for `css-complete' to message when the nearest parseable thing
 around point has CSS comment syntax and no other completion is possible.\n
 :SEE-ALSO `css-at-string-p', `mon-help-css-complete', `mon-help-css-properties',
-`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n►►►"
+`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n▶▶▶"
   (nth 4 (syntax-ppss)))
 
 (defun css-after-at-p ()
@@ -1409,7 +1409,7 @@ This is a predicate for `css-complete' to trigger `css-complete-after-at'
 completion.\n
 :SEE-ALSO `css-at-p-generate', `mon-help-css-complete',
 `mon-help-css-properties', `mon-help-css-mode', `mon-help-css-check',
-`mon-help-css-color'.\n►►►"
+`mon-help-css-color'.\n▶▶▶"
   ;; :WAS (looking-back "@\\(?:charset\\|font-face\\|import\\|media\\|page\\)[[:space:]]+"))
   (css-at-p-generate 4))
 
@@ -1423,7 +1423,7 @@ completion.\n
 @media \n
 :SEE-ALSO `css-at-p-generate', `mon-help-css-complete',
 `mon-help-css-properties', `mon-help-css-mode', `mon-help-css-check',
-`mon-help-css-color'.\n►►►"
+`mon-help-css-color'.\n▶▶▶"
   ;; :NOTE Why did this invoke `read'?
   ;; :WAS (looking-back (aref *css-complete-look-back-regexp* 5))
   (let* ((myb-mtch (css-at-p-generate 5))
@@ -1445,7 +1445,7 @@ completion.\n
   "Return value of `*css-complete-media-ids*'.\n
 :EXAMPLE\n\n\(car \(member \"aural\" \(css-media-for-point\)\)\)\n
 :SEE-ALSO `mon-help-css-complete', `mon-help-css-properties',
-`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n►►►"
+`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n▶▶▶"
   *css-complete-media-ids*)
 
 (defun css-media-completion-menu ()
@@ -1453,7 +1453,7 @@ completion.\n
 :EXAMPLE\n\n\(css-media-completion-menu\)\n
 :SEE-ALSO `css-complete-menu-generate', `mon-help-css-complete',
 `mon-help-css-properties', `mon-help-css-mode', `mon-help-css-check',
-`mon-help-css-color'.\n►►►"
+`mon-help-css-color'.\n▶▶▶"
   ;; :WAS
   ;; (list "Medium: "
   ;;       (cons 
@@ -1469,7 +1469,7 @@ completion.\n
 insert the completion value in the region identified with
 `css-delims-maybe-part-at-at-point'.\n
 :SEE-ALSO `mon-help-css-complete', `mon-help-css-properties',
-`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n►►►"
+`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n▶▶▶"
   (css-indent-line)
   (let* ((css-comp-pssbl *css-complete-media-ids*)
 	 (css-comp-newval (if (null (cdr css-comp-pssbl))
@@ -1484,7 +1484,7 @@ insert the completion value in the region identified with
 :EXAMPLE\n\n\(css-media-popup-completions\)\n
 :SEE-ALSO `css-popup-generate', `mon-help-css-complete',
 `mon-help-css-properties', `mon-help-css-mode', `mon-help-css-check',
-`mon-help-css-color'.\n►►►"
+`mon-help-css-color'.\n▶▶▶"
   ;; :WAS (x-popup-menu (css-pos-for-x-popup-menu) (css-media-completion-menu)))  
   (css-popup-generate css-media-completion-menu))
 
@@ -1503,7 +1503,7 @@ CSS at predicates map to following CSS completion functions:\n
 When `css-at-string-p' or `css-at-comment-p' return non-nil or no completions
 are found message user as accordingly.\n
 :SEE-ALSO `mon-help-css-complete', `mon-help-css-properties',
-`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n►►►"
+`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n▶▶▶"
   (interactive)
   (css-indent-line)
   (cond ((css-at-string-p)
@@ -1526,7 +1526,7 @@ are found message user as accordingly.\n
 (defun css-electric-left-brace ()
   "
 :SEE-ALSO `mon-help-css-complete', `mon-help-css-properties',
-`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n►►►"
+`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n▶▶▶"
   (interactive)
   (css-indent-line)
   (let ((char ?\{))
@@ -1538,7 +1538,7 @@ are found message user as accordingly.\n
 (defun css-electric-left-bracket ()
   "
 :SEE-ALSO `mon-help-css-complete', `mon-help-css-properties',
-`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n►►►"
+`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n▶▶▶"
   (interactive)
   (let ((char ?\[))
     (insert char 
@@ -1549,7 +1549,7 @@ are found message user as accordingly.\n
 (defun css-electric-left-paren ()
   "
 :SEE-ALSO `mon-help-css-complete', `mon-help-css-properties',
-`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n►►►"
+`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n▶▶▶"
   (interactive)
   (let ((char ?\())
     (insert char (matching-paren char))) 
@@ -1559,7 +1559,7 @@ are found message user as accordingly.\n
 (defun css-electric-quotes ()
   "
 :SEE-ALSO `mon-help-css-complete', `mon-help-css-properties',
-`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n►►►"
+`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n▶▶▶"
   (interactive)
   (let ((char ?\"))
     (insert char  char))
@@ -1568,7 +1568,7 @@ are found message user as accordingly.\n
 (defun css-electric-semicolon ()
   "
 :SEE-ALSO `mon-help-css-complete', `mon-help-css-properties',
-`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n►►►"
+`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n▶▶▶"
   (interactive)
   (let ((char ?\;))
     (insert char))
@@ -1590,7 +1590,7 @@ are found message user as accordingly.\n
 When `IS-MON-SYSTEM-P' is non-nil evaluated by `mon-after-mon-utils-loadtime'.\n
 :SEE :FILE lisp/textmodes/css-mode.el
 :SEE-ALSO `mon-help-css-complete', `mon-help-css-properties',
-`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n►►►"
+`mon-help-css-mode', `mon-help-css-check', `mon-help-css-color'.\n▶▶▶"
   (when (and (intern-soft "IS-MON-SYSTEM-P" obarray)
              (bound-and-true-p IS-MON-SYSTEM-P)
              (intern-soft "css-media-ids" obarray)

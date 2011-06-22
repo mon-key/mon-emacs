@@ -22,13 +22,13 @@
 ;; mon-rename-image-utils provides utility functions for converting, renaming
 ;; and extracting usefull information from images and Emacs Image manipulation.
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;; `mon-check-image-type', `mon-rename-imgs-in-dir',
 ;; `mon-ebay-image-directory-not-ok', `mon-ebay-image-directory-ok-p',
 ;; `mon-image-rename-propertize', `mon-parse-rename-images',
 ;; `mon-shorten-rename-image-path', `mon-parse-rename-lengths',
 ;; `mon-pad-rename-lengths', `mon-build-rename-buffer' 
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; :EXTERNAL-FUNCTIONS
 ;; `mon-get-buffer-parent-dir'         -> mon-dir-utils.el
@@ -453,7 +453,7 @@ When ALT-PATH is non-nil use dir-path as value instead of current-buffers.
 :SEE-ALSO `mon-get-ebay-nefs-in-dir', `mon-insert-ebay-bmps-in-file', 
 `mon-get-ebay-jpgs-list', `mon-insert-ebay-jpgs-in-file', 
 `mon-get-ebay-bmps-count', `mon-get-ebay-jpgs-count', 
-`mon-get-ebay-bmps-in-dir'.\n►►►"
+`mon-get-ebay-bmps-in-dir'.\n▶▶▶"
   (let (this-dir get-files)
     (if (and alt-path
 	(file-exists-p alt-path))
@@ -475,7 +475,7 @@ When ALT-PATH is non-nil use dir-path as value instead of current-buffers.\n
 :CALLED-BY `mon-insert-ebay-bmps-in-file' to build a .nef insertion list.\n
 :SEE-ALSO `mon-get-ebay-bmps-in-dir', `mon-insert-ebay-bmps-in-file', 
 `mon-get-ebay-jpgs-list', `mon-insert-ebay-jpgs-in-file', `mon-get-ebay-bmps-count', 
-`mon-get-ebay-jpgs-count', `mon-get-ebay-bmps-in-dir'.\n►►►"
+`mon-get-ebay-jpgs-count', `mon-get-ebay-bmps-in-dir'.\n▶▶▶"
   (let (this-dir get-files)
     (if (and alt-path
 	(file-exists-p alt-path))	
@@ -538,7 +538,7 @@ When FULL-PATH non-nil insert full-path of .bmp files.\n
   "Insert the items' .jpg image file path from relative dir.\n
 Should be called from an ebay-template file with appropriate pathnames configured.
 Signal an error if item's .jpg image file path doesn't exist.\n
-:SEE-ALSO `mon-insert-ebay-bmps-in-file', `mon-get-ebay-jpgs-list'.\n►►►"
+:SEE-ALSO `mon-insert-ebay-bmps-in-file', `mon-get-ebay-jpgs-list'.\n▶▶▶"
   (interactive)
   (let ((find-jpgs (nreverse (mon-get-ebay-jpgs-list)))
 	(jpg-dir (concat *mon-ebay-images-jpg-path* "/"
@@ -558,7 +558,7 @@ When called-interactively or optional arg INTRP is non-nil message the count of
 associated .jpg images found.\n
 :SEE-ALSO `mon-insert-ebay-bmps-in-file', `mon-get-ebay-jpgs-list',
 `mon-insert-ebay-jpgs-in-file', `mon-get-ebay-bmps-count',
-`mon-get-ebay-bmps-in-dir'.\n►►►"
+`mon-get-ebay-bmps-in-dir'.\n▶▶▶"
   (interactive "p")
   (let ((jpg-count  (length (mon-get-ebay-jpgs-list t))))
     (when intrp 
@@ -575,7 +575,7 @@ When called-interactively or optional arg INTRP is non-nil message the count of
 associated .bmp images found.\n
  :SEE-ALSO `mon-insert-ebay-bmps-in-file', `mon-get-ebay-jpgs-list',
 `mon-insert-ebay-jpgs-in-file', `mon-get-ebay-jpgs-count',
-`mon-get-ebay-bmps-in-dir'.\n►►►"
+`mon-get-ebay-bmps-in-dir'.\n▶▶▶"
   (interactive)
   (let ((bmp-count (length (mon-get-ebay-bmps-in-dir))))
     (when intrp
@@ -590,7 +590,7 @@ associated .bmp images found.\n
   "Return message, and t or nil for image counts (bmp|jpg) of ebay buffers' dir.\n
 :SEE-ALSO `mon-insert-ebay-bmps-in-file', `mon-get-ebay-jpgs-list',
 `mon-insert-ebay-jpgs-in-file', `mon-get-ebay-bmps-count',
-`mon-get-ebay-jpgs-count'.\n►►►"
+`mon-get-ebay-jpgs-count'.\n▶▶▶"
   (interactive)
   (if (equal (mon-get-ebay-bmps-count) (mon-get-ebay-jpgs-count))
       (prog1
@@ -621,7 +621,7 @@ Return only hex color values.\n
 `mon-hexcolor-add-to-font-lock',`hexl-hex-string-to-integer',
 `url-hexify-string', `url-unhex-string', `url-unhex', `*css-color:hex-chars*',
 `*regexp-rgb-hex*', `*regexp-css-color-hex*', `*regexp-hexcolor-keywords*',
-`*regexp-hexcolor-keywords*'.\n►►►"
+`*regexp-hexcolor-keywords*'.\n▶▶▶"
   (interactive)
   (let ((count 4))
     (search-forward-regexp "^\\(# Image\\)") ;"\\(^# Image\\)")
@@ -674,7 +674,7 @@ Return only hex color values.\n
 :SEE-ALSO `mon-get-ebay-img-name-to-col', `mon-get-ebay-css-pp-region-to-file',
 `mon-get-ebay-bmps-count', `mon-get-ebay-bmps-in-dir', `mon-insert-css-colors',
 `mon-cln-img-magic-hex', `thumbs-conversion-program',
-`mon-set-thumbs-conversion-program-init', `mon-set-boxcutter-init'.\n►►►"
+`mon-set-thumbs-conversion-program-init', `mon-set-boxcutter-init'.\n▶▶▶"
   ;; mgeic-
   (let ((mgeic-bfr-str '())
         (mgeic-bmp-imgs (mon-get-ebay-bmps-in-dir))
@@ -735,7 +735,7 @@ Helper function for `mon-get-ebay-css-pp' don't evaluate elsewhere.
 :SEE-ALSO `mon-get-ebay-img-name-to-col', `mon-get-ebay-img-css',
 `mon-get-ebay-css-pp-region-to-file', `mon-get-ebay-bmps-count',
 `mon-get-ebay-bmps-in-dir', `mon-insert-css-colors',
-`mon-cln-img-magic-hex'.\n►►►"
+`mon-cln-img-magic-hex'.\n▶▶▶"
   (let ((put-cols (mon-get-ebay-bmps-in-dir))
 	(img-cnt (string-to-number (mon-get-ebay-bmps-count)))
 	img-strt)
@@ -760,7 +760,7 @@ Helper function for `mon-get-ebay-css-pp' don't evaluate elsewhere.
   "Helper function for `mon-get-ebay-css-pp' don't evaluate elsewhere.\n
 :SEE-ALSO `mon-get-ebay-img-name-to-col', `mon-get-ebay-img-css', 
 `mon-get-ebay-css-pp-region-to-file', `mon-get-ebay-bmps-count', 
-`mon-get-ebay-bmps-in-dir', `mon-insert-css-colors'.\n►►►"
+`mon-get-ebay-bmps-in-dir', `mon-insert-css-colors'.\n▶▶▶"
   (let (start-pnt end-pnt)
     ;; :WAS (previous-line) 
     (line-move -1 t) ;; (next-line -1) ;; (line-move-visual -1 t)
@@ -796,7 +796,7 @@ Helper function for `mon-get-ebay-css-pp' don't evaluate elsewhere.
 #001a33 #001a33 #001a33 #001a33 #001a33 #001a33 #001a33\n
 :SEE-ALSO `mon-get-ebay-img-name-to-col', `mon-get-ebay-img-css', 
 `mon-get-ebay-css-pp-region-to-file', `mon-get-ebay-bmps-count', 
-`mon-get-ebay-bmps-in-dir', `mon-insert-css-colors'.\n►►►"
+`mon-get-ebay-bmps-in-dir', `mon-insert-css-colors'.\n▶▶▶"
   (interactive)
   (let  ((assoc-bmp (mon-get-ebay-bmps-in-dir))
 	 (css-col (mon-get-ebay-img-css))
@@ -856,7 +856,7 @@ Helper function for `mon-get-ebay-css-pp' don't evaluate elsewhere.
                            \"#576061\" \"#996631\" \"#ac5341\")))
       \(mon-insert-css-colors some-css)\)\n
 ;=> #222220 #663122 #666631 #576061 #996631 #ac5341\n
-:SEE-ALSO `mon-get-ebay-css-pp'.\n►►►"
+:SEE-ALSO `mon-get-ebay-css-pp'.\n▶▶▶"
   (interactive "X symbol holding list of CSS hex colors :")
   (let (micc-clrs frob-css-colors)
     ;;(setq micc-clrs css)
@@ -902,7 +902,7 @@ Else, path defaults to:\n
  b) if not, get the IMAGE-TYPE alist `mon-ebay-image-directory-ok-p' 
     and use `completing-read' to prompt for a dir beneath;\n
 build a list of filenames of IMAGE-TYPE in resulting path.
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   (interactive "s:FUNCTION `mon-rename-imgs-in-dir' -- rename images of type: ")
   (let (starting 
         rnm-prompt
@@ -959,7 +959,7 @@ for completion with require-match on choice defaults to \".bmp\".
 Helper function for `ebay-template-mode's image related functions.
 :SEE-ALSO `mon-image-verify-type',`image-type-available-p',
 `image-type-from-file-name',\n `image-file-name-extensions',
-`image-type-file-name-regexps', `image-file-name-regexps'.\n►►►"
+`image-type-file-name-regexps', `image-file-name-regexps'.\n▶▶▶"
   (let* ((img-typ '(".nef" ".jpg" ".bmp"))
          (prompt 
           (format "%s not a valid image-type. Select a string of type %s (TAB completes): " 
@@ -975,7 +975,7 @@ Helper function for `ebay-template-mode's image related functions.
 ;;; :CREATED <Timestamp: Friday May 29, 2009 @ 07:54.24 PM - by MON KEY>
 (defun mon-ebay-image-directory-not-ok (image-type in-directory from-dir) 
   "Helper function for `mon-ebay-image-directory-ok-p'.\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   (let* ((img-type (mon-check-image-type image-type))
 	 (img-alist *mon-ebay-images-lookup-path*)
 	 (dir-type (nth 1 (assoc img-type img-alist)))
@@ -1019,7 +1019,7 @@ Return a list of three elements:\n\car: image-type;\n
 \cadr: path containing the image type;\n
 \caddr: calling buffer's filename (if any, else nil)\n
 :EXAMPLE\n\(mon-ebay-image-directory-ok-p \".bmp\")\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   (let* (;;(get-back-to-def (default-directory))
 	 (img-type (mon-check-image-type image-type))
 	 (img-alist *mon-ebay-images-lookup-path*)
@@ -1098,7 +1098,7 @@ image-rename-suffix: [ ]\nimage-rename-start#: [ ]
 06) this-is-a-file-name ▪▪▪▪▪▪▪▪▪▪ [ ]\n5) this-is-a-file-namex ▪▪▪▪▪▪▪▪▪▪ [ ]\n\n
 :SEE-ALSO `mon-rename-imgs-in-dir', `mon-parse-rename-images',
 `mon-shorten-rename-image-path', `mon-parse-rename-lengths',
-`mon-pad-rename-lengths', `mon-build-rename-buffer'.\n►►►"
+`mon-pad-rename-lengths', `mon-build-rename-buffer'.\n▶▶▶"
   (unwind-protect
        (mon-toggle-read-only-point-motion)
     (save-excursion
@@ -1196,7 +1196,7 @@ image-rename-suffix: [ ]\nimage-rename-start#: [ ]
 IMG-LIST acquired with: `mon-rename-imgs-in-dir'.\n\n
 :SEE-ALSO `mon-rename-imgs-in-dir',`mon-shorten-rename-image-path',
 `mon-parse-rename-lengths',`mon-pad-rename-lengths',
-`mon-image-rename-propertize',`mon-build-rename-buffer'.\n►►►"
+`mon-image-rename-propertize',`mon-build-rename-buffer'.\n▶▶▶"
   (let* ((prs--rnm img-list)
 	 (shrt-pth-alist (car prs--rnm))
 	 (lng-pth-alist (cadr prs--rnm))
@@ -1213,7 +1213,7 @@ IMG-LIST acquired with: `mon-rename-imgs-in-dir'.\n\n
   "Shorten a path for presentation in rename buffer.
 :SEE-ALSO `mon-rename-imgs-in-dir',`mon-parse-rename-images',
 ,`mon-parse-rename-lengths',`mon-pad-rename-lengths',
-`mon-image-rename-propertize',`mon-build-rename-buffer'.\n►►►"
+`mon-image-rename-propertize',`mon-build-rename-buffer'.\n▶▶▶"
   (let* ( ;;include `file-name-sans-extension' if we want to use this on files also
 	 (shorten  (last (split-string (directory-file-name shorten-path) "/" ) 3 ))
 	 (showpath (concat "../" (mapconcat 'identity shorten "/"))))
@@ -1228,7 +1228,7 @@ Keys of alist1 are shared alist2, so keys of alist1 are indexes into alist2.
 IMAGES should be a list of two alists generated with `mon-rename-imgs-in-dir'.\n\n
 :SEE-ALSO `mon-rename-imgs-in-dir',`mon-parse-rename-images',
 `mon-shorten-rename-image-path', `mon-pad-rename-lengths',
-`mon-image-rename-propertize',`mon-build-rename-buffer'.\n►►►"
+`mon-image-rename-propertize',`mon-build-rename-buffer'.\n▶▶▶"
   (let (get-imgs 
 	short-assoc 
 	parse-short-keys 
@@ -1285,7 +1285,7 @@ So is this: \(length \"this-is-a-file-namexxxxxxxxxxxxx\") ;=> 32\n
 :SEE-ALSO `mon-rename-imgs-in-dir',`mon-parse-rename-images',
 `mon-shorten-rename-image-path',`mon-parse-rename-lengths',
 `mon-pad-rename-lengths',`mon-image-rename-propertize',
-`mon-build-rename-buffer'.\n►►►"
+`mon-build-rename-buffer'.\n▶▶▶"
   (let* ((cp-pad pad-list) ;;(cp-pad this-4)
          (to-pad (copy-tree cp-pad))
          (len-nms (car to-pad))
@@ -1349,7 +1349,7 @@ image-rename-prefix: [ ]\nimage-rename-suffix: [ ]\nimage-rename-start#: [ ]
 9) this-is-a-file-namexxxxxx ▪▪▪▪▪ [ ]\n8) this-is-a-file-namexxxxx ▪▪▪▪▪▪ [ ]
 3) this-is-a-file-namexx ▪▪▪▪▪▪▪▪▪ [ ]\n5) this-is-a-file-namexx ▪▪▪▪▪▪▪▪▪ [ ]
 --------------------------------------\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   (let* ((get-images (mon-rename-imgs-in-dir image-type)) ;alt-path?
 	 (image-count (length (car get-images)))
 	 (parse-imgs (mon-parse-rename-images get-images))

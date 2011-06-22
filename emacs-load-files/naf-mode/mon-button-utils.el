@@ -21,11 +21,11 @@
 ;; DESCRIPTION:
 ;; mon-button-utils provides { some description here. }
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;; `mon-button-get-plist', `mon-button-get-plist-props',
 ;; `mon-button-at-point-p', `mon-button-at-point-describe-button-plist',
 ;; `mon-follow-button', 
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;;
@@ -123,7 +123,7 @@
 ;;; :CREATED <Timestamp: #{2011-01-11T14:21:04-05:00Z}#{11022} - by MON KEY>
 (defgroup mon-button-utils nil
   "Customization group for variables and functions of :FILE mon-button-utils.el.\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   :link '(url-link 
           :tag ":EMACSWIKI-FILE" "http://www.emacswiki.org/emacs/mon-button-utils.el")
   :link '(url-link 
@@ -148,7 +148,7 @@ Symbols  defined in :FILE mon-button-utils.el\n
 :SEE-ALSO `*mon-regexp-symbols-xrefs*', `*mon-button-utils-xrefs*',
 `*mon-default-loads-xrefs*', `*mon-default-start-loads-xrefs*',
 `*mon-dir-locals-alist-xrefs*', `*naf-mode-xref-of-xrefs*',
-`*mon-testme-utils-xrefs*', `*mon-xrefs-xrefs*'.\n►►►"
+`*mon-testme-utils-xrefs*', `*mon-xrefs-xrefs*'.\n▶▶▶"
   :type '(repeat symbol)
   :group 'mon-button-utils
   :group 'mon-xrefs)
@@ -164,7 +164,7 @@ Symbols  defined in :FILE mon-button-utils.el\n
     map)
   "*Keymap for buttons inheriting from button-type `naf-dir`.\n
 :EXAMPLE\n
-:SEE-ALSO .\n►►►")
+:SEE-ALSO .\n▶▶▶")
 
 ;;; ==============================
 (define-button-type 'mon-default-button ;:supertype 'default-button
@@ -195,7 +195,7 @@ Arg PUTATIVE-BUTTON-AT is a buffer-position to check.
 `mon-help-overlay-for-example', `mon-help-overlay-on-region',
 `mon-help-overlay-result', `mon-get-overlays-buffer',
 `mon-help-overlay-functions', `mon-help-text-property-functions',
-`mon-help-text-property-properties'.\n►►►"
+`mon-help-text-property-properties'.\n▶▶▶"
   (let ((gcp-btn (get-char-property (or putative-button-at (point)) 'button))
         hld-prps)
     (when gcp-btn
@@ -231,7 +231,7 @@ Arg PUTATIVE-BUTTON-AT is a buffer-position to check.
 `mon-help-overlay-for-example', `mon-help-overlay-on-region',
 `mon-help-overlay-result', `mon-get-overlays-buffer',
 `mon-help-overlay-functions', `mon-help-text-property-functions',
-`mon-help-text-property-properties'.\n►►►"
+`mon-help-text-property-properties'.\n▶▶▶"
   (interactive)
   (let ((mbapp (make-symbol "--temp-adp--"))) 
     (setplist mbapp 
@@ -270,7 +270,7 @@ is implemented by both overlays and text-properties this indirection allows:
 `mon-help-overlay-for-example', `mon-help-overlay-on-region',
 `mon-help-overlay-result', `mon-get-overlays-buffer',
 `mon-help-overlay-functions', `mon-help-text-property-functions',
-`mon-help-text-property-properties'.\n►►►"
+`mon-help-text-property-properties'.\n▶▶▶"
   (let ((get-bcs (and (bound-and-true-p type-button)
                       (get type-button 'button-category-symbol))))
     (unless (null get-bcs)
@@ -292,7 +292,7 @@ TYPE-OF-BUTTON is a button constructed with `define-button-type'.\n
 `mon-help-find-result-for-overlay', `mon-help-overlay-for-example',
 `mon-help-overlay-on-region', `mon-help-overlay-result',
 `mon-get-overlays-buffer', `mon-help-overlay-functions',
-`mon-help-text-property-functions', `mon-help-text-property-properties'.\n►►►"
+`mon-help-text-property-functions', `mon-help-text-property-properties'.\n▶▶▶"
   (let* ((cp-sypl (mon-button-get-plist type-of-button))
          (cp-pl   (unless (null cp-sypl) 
                     (plist-get cp-sypl :BUTTON-PLIST)))
@@ -314,7 +314,7 @@ TYPE-OF-BUTTON is a button constructed with `define-button-type'.\n
 (defun mon-follow-button ()
   "
 :EXAMPLE\n\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   (interactive)
   (button-activate (button-at (point))))
 
@@ -335,7 +335,7 @@ TYPE-OF-BUTTON is a button constructed with `define-button-type'.\n
 ;; (defun mon-button-describe ()
 ;;   "Return a nice pp'd display of buttons current props and echo them with `help-echo' <FUNCTION>
 ;; :EXAMPLE\n\n
-;; :SEE-ALSO .\n►►►"
+;; :SEE-ALSO .\n▶▶▶"
 ;;   (if (not bap )
 ;;       (minibuffer-message (concat ":FUNCTION `mon-button-describe'"
 ;;                                   "-- no button at point %d:") (point))
@@ -380,7 +380,7 @@ TYPE-OF-BUTTON is a button constructed with `define-button-type'.\n
 (defun tt--make-test-button ()
   "
 :EXAMPLE\n\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   (interactive)
   (save-excursion 
     (print ':TEXT-PROP-SYTLE-BUTTON (current-buffer))
@@ -411,7 +411,7 @@ TYPE-OF-BUTTON is a button constructed with `define-button-type'.\n
     map)
   "*Keymap for buttons inheriting from button-type `naf-dir`.
 :EXAMPLE
-:SEE-ALSO .\n►►►")
+:SEE-ALSO .\n▶▶▶")
 
 
 ;;; ==============================
@@ -483,7 +483,7 @@ PATH is a path to the artist naf directory.\n
 :EXAMPLE\(let \(\(inhibit-read-only t\)\)
    \(insert-naf-artist-button \"bubba the grand\" default-directory\))
 
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   (let ((name-l (length name)))
     (apply #'make-text-button
            (prog1 (point) (insert name))
@@ -500,7 +500,7 @@ PATH is a path to the artist naf directory.\n
 (defun naf-btn-activate (button)
   "
 :EXAMPLE\n\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   (button-activate 
    (or (naf-next-label-button (button-start button))
        (minibuffer-message (concat ":FUNCTION `naf-btn-activate' "
@@ -515,7 +515,7 @@ PATH is a path to the artist naf directory.\n
 (defun naf-next-label-button (bttn-psn)
   "
 :EXAMPLE\n\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   (let* ((button (next-button bttn-psn t))
 	 (already-hit-symbol nil)
 	 (label (and button (button-get button :naf-label)))

@@ -21,9 +21,9 @@
 ;; DESCRIPTION:
 ;; ebay-template-mode provides a handy template for editing auction listings.
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;;
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;;
@@ -153,13 +153,13 @@
 ;;; :CREATED <Timestamp: #{2009-08-07T12:46:00-04:00Z}#{09325} - by MON>
 (defconst *mon-ebay-template-mode-version* "2010-10"
   "Return current version of `ebay-template-mode'.\n
-:SEE-ALSO `ebay-template-mode-faces'.\n►►►")
+:SEE-ALSO `ebay-template-mode-faces'.\n▶▶▶")
 
 ;;; ==============================
 ;;; :CREATED <Timestamp: #{2009-08-07T12:46:08-04:00Z}#{09325} - by MON>
 (defgroup ebay-template-mode nil
   "Customization of `ebay-template-mode'.\n
-:SEE-ALSO `ebay-template-mode-faces'.\n►►►"
+:SEE-ALSO `ebay-template-mode-faces'.\n▶▶▶"
   ;; :link (url-link URL)
   ;; :link (file-link FILE)
   :group 'mon-base
@@ -169,7 +169,7 @@
 ;;; :CREATED <Timestamp: #{2009-08-07T12:46:05-04:00Z}#{09325} - by MON>
 (defgroup ebay-template-mode-faces nil
   "Customization of `ebay-template-mode' font-locking faces.\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   ;; :link (file-link FILE)
   :group 'faces
   ;; :group naf-mode-faces
@@ -188,7 +188,7 @@ naming an ebay account id.  Elements have the format:\n
                                 \(2 . \"account-id3\"\)\)\)\)
   \(assq 1  *mon-ebay-account-ids*\)\)\n
 :CALLED-BY `mon-choose-ebay-account'\n
-:SEE-ALSO `*mon-ebay-template*'.\n►►►"
+:SEE-ALSO `*mon-ebay-template*'.\n▶▶▶"
   :type '(alist :key-type integer :value-type string)
   :group 'ebay-template-mode)
 
@@ -197,7 +197,7 @@ naming an ebay account id.  Elements have the format:\n
 (defcustom *mon-ebay-comment-prefix* ";;; "
   "*String used by `comment-region' to comment out region in a NAF buffer.\n
 :SEE-ALSO .\n
-:USED-IN `ebay-template-mode'.\n►►►"
+:USED-IN `ebay-template-mode'.\n▶▶▶"
   :type 'string
   :group 'ebay-template-mode)
 
@@ -215,7 +215,7 @@ naming an ebay account id.  Elements have the format:\n
 'ebay-item-watchlist-count:'; \n'ebay-item-offers:'; 
 'ebay-item-listed-in-category:'; \n'ebay-item-notes:'; \n
 :SEE-ALSO `*mon-ebay-template-font-lock-keywords*', `*mon-ebay-field-delims*',
-`*mon-ebay-line-delims*'.\n►►►")
+`*mon-ebay-line-delims*'.\n▶▶▶")
 ;;
 (unless (bound-and-true-p *mon-ebay-field-entry*)
   (setq *mon-ebay-field-entry*
@@ -249,16 +249,16 @@ naming an ebay account id.  Elements have the format:\n
 ;;; ==============================
 ;;; :CREATED <Timestamp: #{2009-08-07T11:12:21-04:00Z}#{09325} - by MON>
 (defvar *mon-ebay-field-delims* nil
-  "Regexp for fontlocking delims `◄◄◄' `►►►' in ebay-dbc-files.\n
+  "Regexp for fontlocking delims `◀◀◀' `▶▶▶' in ebay-dbc-files.\n
 These delims are are fontlocked in `ebay-template-mode'.\n
 :SEE-ALSO`mon-ebay-field-trigger', `mon-insert-ebay-field-trigger-l',
 `mon-insert-ebay-field-trigger-r', `mon-insert-ebay-field-trigger-l-and-r',
 `*doc-cookie*', `mon-insert-doc-help-cookie',
 `*mon-ebay-template-font-lock-keywords*', `*mon-ebay-field-entry*',
-`*mon-ebay-line-delims*'.\n►►►")
+`*mon-ebay-line-delims*'.\n▶▶▶")
 ;;
 (unless (bound-and-true-p *mon-ebay-field-delims*)
-  (setq *mon-ebay-field-delims* "^\\(◄◄◄\\|►►►\\)"))
+  (setq *mon-ebay-field-delims* "^\\(◀◀◀\\|▶▶▶\\)"))
 ;;
 ;;; :TEST-ME  *mon-ebay-field-delims*
 ;;;(progn (makunbound '*mon-ebay-field-delims*) (unintern "*mon-ebay-field-delims*" obarray) )
@@ -277,7 +277,7 @@ These delims are are fontlocked in `ebay-template-mode' with:
 \";;; =====================================\" ;-> grp2 ;'count of `=' chars -> 37
 \"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~¦\";-> grp4\n
 :SEE-ALSO `*mon-ebay-template-font-lock-keywords*', `*mon-ebay-field-entry*', 
-`*mon-ebay-line-delims*'.\n►►►")
+`*mon-ebay-line-delims*'.\n▶▶▶")
 ;;
 (unless (bound-and-true-p *mon-ebay-line-delims*)
   (setq *mon-ebay-line-delims* 
@@ -317,7 +317,7 @@ These delims are are fontlocked in `ebay-template-mode' with:
 (defvar *mon-ebay-template-font-lock-keywords* nil
   "Fontlock keywords for ebay-dbc-file templates using `ebay-template-mode'.\n
 :SEE-ALSO `ebay-template-mode-faces', `*mon-ebay-field-entry*',
-`*mon-ebay-field-delims*', `*mon-ebay-line-delims*'.\n►►►")
+`*mon-ebay-field-delims*', `*mon-ebay-line-delims*'.\n▶▶▶")
 ;;
 (unless (bound-and-true-p *mon-ebay-template-font-lock-keywords*)
   (setq *mon-ebay-template-font-lock-keywords*
@@ -358,7 +358,7 @@ Some keys bound also global in `mon-keybindings'.
 Globals are included here in order that `describe-mode' in `*Help*'
 buffers can show the global-bindings too as they are still used most by naf-mode.
 Typically `naf-mode' binds ``\C-c\\M-##\''.\n
-:SEE-ALSO `ebay-template-mode-map'.\n►►►")
+:SEE-ALSO `ebay-template-mode-map'.\n▶▶▶")
 ;;
 ;;;(progn (makunbound '*mon-ebay-template-mode-map*) 
 ;;        (unintern "*mon-ebay-template-mode-map*" obarray) )
@@ -371,9 +371,9 @@ Typically `naf-mode' binds ``\C-c\\M-##\''.\n
   ;; MENU:
   '("Ebay-Template-mode"
     ["Ebay clean time string" mon-cln-ebay-time-string :help "eBay timestring -> local fromat"]
-    ["Ebay insert ►►► ◄◄◄" mon-insert-ebay-field-trigger-l-and-r :help "Insert ►►► ◄◄◄ delimters"]
-    ["Ebay insert ►►►"  mon-insert-ebay-field-trigger-r :help "insert ►►► delimiter"]
-    ["Ebay insert ◄◄◄"  mon-insert-ebay-field-trigger-l :help "Insert ◄◄◄ delimiter"]
+    ["Ebay insert ▶▶▶ ◀◀◀" mon-insert-ebay-field-trigger-l-and-r :help "Insert ▶▶▶ ◀◀◀ delimters"]
+    ["Ebay insert ▶▶▶"  mon-insert-ebay-field-trigger-r :help "insert ▶▶▶ delimiter"]
+    ["Ebay insert ◀◀◀"  mon-insert-ebay-field-trigger-l :help "Insert ◀◀◀ delimiter"]
     ["Ebay Smith sale template" mon-set-smith-poster-register-e :help "Insert Smith Poster Sales template"]
     "---"))
 
@@ -389,7 +389,7 @@ Typically `naf-mode' binds ``\C-c\\M-##\''.\n
  ;; :type 'hook ;; when we make the defvar a (defcustom
   "The `ebay-template-mode' hook.\n
 :CALLED-BY `ebay-template-mode'\n
-:SEE-ALSO .\n►►►")
+:SEE-ALSO .\n▶▶▶")
 
 ;;; ==============================
 ;;; (defvar ebay-template-mode-imenu-generic-expression
@@ -408,7 +408,7 @@ Typically `naf-mode' binds ``\C-c\\M-##\''.\n
 `*mon-ebay-field-delims*', `*mon-ebay-line-delims*',
 `*mon-ebay-template-mode-map*', `*mon-ebay-template-mode-hook*',
 `*mon-ebay-template-mode-syntax-table*',
-`ebay-template-mode-menu'.\n►►►")
+`ebay-template-mode-menu'.\n▶▶▶")
 
 ;;; ==============================
 
@@ -420,7 +420,7 @@ Typically `naf-mode' binds ``\C-c\\M-##\''.\n
 `*mon-ebay-template-font-lock-keywords*', `*mon-ebay-field-entry*',
 `*mon-ebay-field-delims*', `*mon-ebay-line-delims*',
 `*mon-ebay-template-mode-map*', `*mon-ebay-template-mode-hook*',
-`*mon-ebay-template-mode-syntax-table*', `ebay-template-mode-menu'.\n►►►"
+`*mon-ebay-template-mode-syntax-table*', `ebay-template-mode-menu'.\n▶▶▶"
   ;;from Sample-mode.el -> Stephan Monnier   
    :group 'ebay-template-mode
    ;; :link

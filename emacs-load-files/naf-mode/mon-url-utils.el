@@ -22,7 +22,7 @@
 ;; Provides interactive utilities for URL data lookups and in-buffer
 ;; modification of web/internet scrapes.
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;; `mon-htmlfontify-buffer-to-firefox',`mon-htmlfontify-region-to-firefox'
 ;; `mon-htmlfontify-dir-purge-on-quit',
 ;; `mon-hexcolor-add-to-font-lock', `mon-search-ulan',
@@ -35,7 +35,7 @@
 ;; `mon-url-encode', `mon-url-decode' `mon-get-host-address',
 ;; `mon-url-retrieve-to-new-buffer', `mon-its-all-text-purge-on-quit',
 ;; `mon-html-fontify-generate-file-name', `mon-w3m-goto-url-at-point',
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;;
@@ -200,7 +200,7 @@
 ;;; :CREATED <Timestamp: #{2010-10-04T14:07:58-04:00Z}#{10401} - by MON KEY>
 (defgroup mon-url-utils nil
   "Variables required by various `mon-*' web and url related functions.\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   :link '(url-link 
           :tag "\n:EMACSWIKI-FILE (URL `http://www.emacswiki.org/emacs/mon-url-utils.el')" 
           "http://www.emacswiki.org/emacs/mon-url-utils.el")
@@ -241,7 +241,7 @@ The symbols contained of this list are defined in :FILE mon-url-utils.el\n
 `*mon-string-utils-xrefs*', `*mon-type-utils-xrefs*',
 `*mon-window-utils-xrefs*', `*naf-mode-xref-of-xrefs*', `*mon-slime-xrefs*',
 `*naf-mode-faces-xrefs*', `*naf-mode-date-xrefs*', `*mon-ulan-utils-xrefs*',
-`*google-define-redux-xrefs*', `*mon-xrefs-xrefs'.\n►►►"
+`*google-define-redux-xrefs*', `*mon-xrefs-xrefs'.\n▶▶▶"
   :type '(repeat symbol)
   :group 'mon-url-utils
   :group 'mon-xrefs)
@@ -283,7 +283,7 @@ Each element of list has the format:\n
 :SEE-ALSO `webjump-sample-sites', `mon-search-bnf', `mon-search-loc',
 `mon-search-ulan', `mon-search-ulan-for-name', `mon-search-wiki',
 `mon-search-wikipedia', `mon-wget-rfc', `*mon-unidata-file-list*',
-`mon-help-cl-pkgs'.\n►►►"
+`mon-help-cl-pkgs'.\n▶▶▶"
   :type   '(alist :key-type symbol    ;; :tag "<KEY>"
                   :value-type string) ;; :tag "<URL>"
   :group 'mon-url-utils)
@@ -299,7 +299,7 @@ Each element of list has the format:\n
 :SEE-ALSO `mon-htmlfontify-dir-purge-on-quit',
 `mon-purge-doc-view-cache-directory', `mon-purge-thumbs-directory',
 `mon-purge-temporary-file-directory',
-`*mon-purge-emacs-temp-file-dir-fncns*'.\n►►►"
+`*mon-purge-emacs-temp-file-dir-fncns*'.\n▶▶▶"
   :type 'boolean
   :group 'mon-url-utils)
 ;;
@@ -320,7 +320,7 @@ Each element of list has the format:\n
 :SEE-ALSO `*mon-purge-on-its-all-text-on-quit*',
 `mon-htmlfontify-dir-purge-on-quit', `mon-purge-doc-view-cache-directory',
 `mon-purge-thumbs-directory', `mon-purge-temporary-file-directory',
-`*mon-purge-emacs-temp-file-dir-fncns*'.\n►►►"
+`*mon-purge-emacs-temp-file-dir-fncns*'.\n▶▶▶"
   :type 'boolean
   :group 'mon-url-utils)
 ;; 
@@ -339,7 +339,7 @@ Each element of list has the format:\n
 `mon-string-to-hex-list-cln-chars', `url-hexify-string', `url-unhex-string',
 `url-unhex', `hexl-hex-string-to-integer', `*regexp-rgb-hex*',
 `*css-color:hex-chars*', `*regexp-rgb-hex*', `*regexp-css-color-hex*',
-`mon-help-css-color', `mon-help-color-chart', `mon-help-color-functions'.\n►►►"
+`mon-help-css-color', `mon-help-color-chart', `mon-help-color-functions'.\n▶▶▶"
   ;;:type  'sexp
   :type  '(repeat (list regexp (list integer sexp)))
   :group 'mon-regexp-symbols
@@ -380,7 +380,7 @@ When `IS-MON-SYSTEM-P', this function is evaluated with:`n
 :SEE-ALSO `mon-htmlfontify-dir-purge-on-quit',
 `mon-purge-doc-view-cache-directory', `mon-purge-thumbs-directory',
 `mon-purge-temporary-file-directory',
-`*mon-purge-emacs-temp-file-dir-fncns*'.\n►►►"
+`*mon-purge-emacs-temp-file-dir-fncns*'.\n▶▶▶"
   (let (chk-i-a-t)
     (when (and 
            ;; Check that variable `*mon-purge-on-its-all-text-on-quit*' is
@@ -418,7 +418,7 @@ When `IS-MON-SYSTEM-P', this function is evaluated with:`n
 :EXAMPLE\n\n(mon-html-fontify-generate-file-name)\n
 :NOTE Variables `*mon-html-fontify-file-name-template*', `*emacs2html-temp*' in:
 :FILE mon-dir-locals-alist.el\n
-:SEE-ALSO `mon-htmlfontify-region-to-firefox', `mon-htmlfontify-dir-purge-on-quit'.\n►►►"
+:SEE-ALSO `mon-htmlfontify-region-to-firefox', `mon-htmlfontify-dir-purge-on-quit'.\n▶▶▶"
   (and (or (and (intern-soft "*mon-html-fontify-file-name-template*" obarray)
                 (bound-and-true-p *mon-html-fontify-file-name-template*))
            (mon-format :w-fun  #'error 
@@ -459,7 +459,7 @@ Signals an error when any of the following occur:\n
 :EXAMPLE\n\(directory-files *emacs2html-temp* t \"emacs2firefox-.*\.html\")\n
 \n\(mon-htmlfontify-dir-purge-on-quit\)\n
 :SEE-ALSO `mon-its-all-text-purge-on-quit', `mon-purge-doc-view-cache-directory',
-`mon-purge-thumbs-directory', `mon-purge-temporary-file-directory'.\n►►►"
+`mon-purge-thumbs-directory', `mon-purge-temporary-file-directory'.\n▶▶▶"
   (interactive)
   (when (and (or *mon-purge-htmlfontify-dir-on-quit*
                  (mon-format :w-fun  #'error 
@@ -497,7 +497,7 @@ Signals an error when any of the following occur:\n
 :SEE `hfy-tags-cache', `hfy-load-tags-cache', `hfy-etags-cmd', `hfy-parse-tags-buffer'
 :SEE-ALSO `mon-htmlfontify-region-to-firefox', `*emacs2html-temp*',
 `mon-html-fontify-generate-file-name', `*mon-html-fontify-file-name-template*',
-`mon-htmlfontify-dir-purge-on-quit'.\n►►►"
+`mon-htmlfontify-dir-purge-on-quit'.\n▶▶▶"
   (interactive)
   (let* ((ffox-fname (mon-html-fontify-generate-file-name))
          (this-bfr-file (buffer-file-name))
@@ -530,7 +530,7 @@ Signals an error when any of the following occur:\n
   "Convert fontified region to an html file and display it with Firefox.\n
 :SEE-ALSO `mon-htmlfontify-region-to-firefox', 
 `mon-htmlfontify-dir-purge-on-quit', `mon-html-fontify-generate-file-name',
-`*mon-html-fontify-file-name-template*', `*emacs2html-temp*'.\n►►►"
+`*mon-html-fontify-file-name-template*', `*emacs2html-temp*'.\n▶▶▶"
   (interactive "r")
   (let ((ffox-rg-fname (mon-html-fontify-generate-file-name))
         mhr2f-fontify-this
@@ -567,7 +567,7 @@ Signals an error when any of the following occur:\n
 `mon-string-to-hex-string', `mon-string-to-hex-list-cln-chars',
 `hexl-hex-string-to-integer', `url-hexify-string', `url-unhex-string',
 `url-unhex', `*regexp-hexcolor-keywords*', `*regexp-rgb-hex*',
-`*css-color:hex-chars*', `*regexp-rgb-hex*', `*regexp-css-color-hex*', .\n►►►"
+`*css-color:hex-chars*', `*regexp-rgb-hex*', `*regexp-css-color-hex*', .\n▶▶▶"
   (font-lock-add-keywords nil *regexp-hexcolor-keywords*))
 
 ;;; ==============================
@@ -584,7 +584,7 @@ at point. Moves point.\n
 :ALIASED-BY `mon-url-escape'\n
 :ALIASED-BY `mon-encode-url'\n
 :SEE-ALSO `mon-url-decode', `url-insert-entities-in-string', 
-`url-unhex', `url-unhex-string', `url-hexify-string'.\n►►►"
+`url-unhex', `url-unhex-string', `url-hexify-string'.\n▶▶▶"
   (interactive "s:FUNCTION `mon-url-encode' -- URL-encode: \ni\p")
   (let ((mud-encd (url-hexify-string url-enc-str)))
     (if (or intrp insrtp)
@@ -610,7 +610,7 @@ at point. Moves point.\n
 :ALIASED-BY `mon-url-unescape'\n
 :ALIASED-BY `mon-decode-url'\n
 :SEE-ALSO `mon-url-encode', `url-insert-entities-in-string', `url-unhex',
-`url-unhex-string', `url-hexify-string'.\n►►►"
+`url-unhex-string', `url-hexify-string'.\n▶▶▶"
   (interactive "s:FUNCTION `mon-url-decode' -- URL-decode: \ni\p")
   (let ((mud-decd (decode-coding-string (url-unhex-string url-dec-str) 'utf-8)))
     (if (or insrtp intrp)
@@ -644,7 +644,7 @@ is not active and W-ULAN-QUERY is ommitted or null open a blank ULAN query in br
 \(mon-search-ulan t\)\n
 :NOTE for an interactive version which automatically defaults to a prompt for
 ULAN name to search use: `mon-search-ulan-for-name'.\n
-:SEE-ALSO `mon-search-wikipedia', `mon-search-loc', `mon-search-bnf'.\nUsed in `naf-mode'.\n►►►"
+:SEE-ALSO `mon-search-wikipedia', `mon-search-loc', `mon-search-bnf'.\nUsed in `naf-mode'.\n▶▶▶"
   (interactive "p")
   (let* ((use-empty-active-region nil)
          (msu-base (cdr (assoc 'ulan *mon-url-search-paths*)))
@@ -701,7 +701,7 @@ ULAN name to search use: `mon-search-ulan-for-name'.\n
 (defun mon-search-ulan-for-name ()
   "Interactive version of `mon-search-ulan'.
 Default behavior is to prompt for name to search.\n
-:SEE-ALSO `mon-search-wikipedia'.\nUsed in `naf-mode'.\n►►►"
+:SEE-ALSO `mon-search-wikipedia'.\nUsed in `naf-mode'.\n▶▶▶"
   (interactive)
   (mon-search-ulan t))
 
@@ -714,7 +714,7 @@ opens it in a browser.\n
 When optional arg WIKI-WORD is non-nil use it instead.
 :EXAMPLE\n\n(mon-search-wikipedia \"monkey meat\")\n
 :SEE-ALSO `mon-search-ulan', `mon-search-ulan-for-name',
-`mon-search-loc', `mon-search-bnf'.\n\nUsed in `naf-mode'.►►►"
+`mon-search-loc', `mon-search-bnf'.\n\nUsed in `naf-mode'.▶▶▶"
   (interactive "s:FUNCTION `mon-search-wikipedia' -- search wiki for: ")
   (let ((msw-word wiki-word))
     (when (null msw-word)
@@ -737,7 +737,7 @@ When optional arg WIKI-WORD is non-nil use it instead.
 :SEE \(URL `http://authorities.loc.gov/cgi-bin/Pwebrecon.cgi?DB=local&PAGE=First')\n
 :USED-IN `naf-mode'.
 :SEE-ALSO `*mon-url-search-paths*', `mon-search-ulan',
-`mon-search-ulan-for-name', `mon-search-bnf', `mon-search-wikipedia'.\n►►►"
+`mon-search-ulan-for-name', `mon-search-bnf', `mon-search-wikipedia'.\n▶▶▶"
   (interactive)
   (or (and (intern-soft "*mon-url-search-paths*" obarray)
            (bound-and-true-p *mon-url-search-paths*) t)
@@ -754,7 +754,7 @@ When optional arg WIKI-WORD is non-nil use it instead.
 :SEE \(URL `http://catalogue.bnf.fr/jsp/recherche_autorites_bnf.jsp?host=catalogue')\n
 :USED-IN `naf-mode'.\n
 :SEE-ALSO `*mon-url-search-paths*', `mon-search-ulan',
-`mon-search-ulan-for-name', `mon-search-loc', `mon-search-wikipedia'.\n►►►"
+`mon-search-ulan-for-name', `mon-search-loc', `mon-search-wikipedia'.\n▶▶▶"
   (interactive)
   (or (and (intern-soft "*mon-url-search-paths*" obarray)
            (bound-and-true-p *mon-url-search-paths*) t)
@@ -772,7 +772,7 @@ Link will be colored according to to DBC .css for link_gree_bold.\n
 :USED-IN `naf-mode'.\n
 For a pre-formatted href to doc-detail page:
 :SEE `mon-insert-dbc-doc-link'
-:SEE-ALSO  .\n►►►"
+:SEE-ALSO  .\n▶▶▶"
   (interactive)
   (insert "<a class=\"link_green_bold\" href=\"../insert-path-here\" \"> insert-link-text </a>"))
 
@@ -795,7 +795,7 @@ Inserts:\n
  | }
  `----\n
 :USED-IN `naf-mode'.\n
-:SEE-ALSO `mon-insert-dbc-link'.\n►►►"
+:SEE-ALSO `mon-insert-dbc-link'.\n▶▶▶"
 (interactive "n3-4 digit document number:\nsDoc's NAF type:\nsText for link title: ")
   (let* ((dn (if (and doc-num)
                  doc-num
@@ -830,7 +830,7 @@ and is therefor dependent on the variables:\n
 :SEE (URL `http://www.iana.org/assignments/uri-schemes.html')\n
 :SEE-ALSO `mon-wrap-all-urls', `thing-at-point-url-at-point',
 `mon-wrap-url', `mon-wrap-text', `mon-wrap-span', `mon-wrap-with',
-`mon-wrap-selection'.\n►►►"
+`mon-wrap-selection'.\n▶▶▶"
   (interactive "p")
   (save-excursion
     (let* ((thing-at-point-url-regexp *regexp-wrap-url-schemes*)
@@ -883,7 +883,7 @@ Won't replace recursively on pre-existing wrapped URLs.\n
   \(mon-wrap-all-urls\)
    \(buffer-substring-no-properties \(buffer-end 0\)\(buffer-end 1\)\)\)=n
 :SEE-ALSO `thing-at-point-url-at-point', `mon-wrap-url', `mon-wrap-text', 
-`mon-wrap-span', `mon-wrap-selection', `mon-wrap-with'.\n►►►"
+`mon-wrap-span', `mon-wrap-selection', `mon-wrap-with'.\n▶▶▶"
   (interactive)
   (let ((thing-at-point-url-regexp *regexp-wrap-url-schemes*))
     (save-excursion
@@ -926,7 +926,7 @@ Won't replace recursively on pre-existing wrapped URLs.\n
 Or:\n'test' becomes <a href=\"test\">test</a>\n
 :SEE-ALSO `mon-wrap-all-urls', `mon-wrap-one-url', `*regexp-wrap-url-schemes*',
 `thing-at-point-url-at-point',`mon-wrap-text', `mon-wrap-span',
-`mon-wrap-selection', `mon-wrap-with'.\n►►►"
+`mon-wrap-selection', `mon-wrap-with'.\n▶▶▶"
   (interactive)
   (search-backward-regexp "[\n\t ()]" nil t)
   (looking-at "[\n\t ()]?\\([^\n\t ()]+\\)")
@@ -956,7 +956,7 @@ Uses MON's link_green_bold CSS.\n
 | }
 `----\n
 :SEE-ALSO `mon-wrap-selection', `mon-wrap-text', `mon-wrap-with',
-`mon-wrap-url', `mon-wrap-all-urls'.\n►►►"
+`mon-wrap-url', `mon-wrap-all-urls'.\n▶▶▶"
   (interactive)
   (mon-wrap-text "<span class=\"link_green_bold\">" "</span>"))
 
@@ -979,7 +979,7 @@ Helper function for `mon-make-html-table'.\n
 AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
 IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
 DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR\" 1\)\) 18 4\)\"A\"\)\n :)
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   (let ( ;; I really don't like setq'ing args outside of let bindings...
         (mmhts-txtblk textblock)
         (mmhts-dlm    delim))
@@ -1009,7 +1009,7 @@ Into the following html table:\n
  <tr><td>a</td><td>b</td><td>c</td></tr>
  <tr><td>1</td><td>2</td><td>3</td></tr>
  <tr><td>this</td><td>and</td><td>that</td></tr>\n </table>\n
-:SEE-ALSO `mon-make-html-table-string'.\n►►►"
+:SEE-ALSO `mon-make-html-table-string'.\n▶▶▶"
   (interactive "s:FUNCTION `mon-make-html-table' -- enter string pattern for column separation: ")
   (let (mmht-bnds mmht-par1 mmht-par2 mmht-str)
     (setq mmht-bnds (bounds-of-thing-at-point 'paragraph))
@@ -1034,7 +1034,7 @@ non-descript sources and the returned data may have its encoding clobbered.\n
 :SEE-ALSO `url-copy-file', `url-retrieve', `url-retrieve-synchronously', 
 `url-http', `mon-get-w3m-url-at-point-maybe', `google-define',
 `mon-get-host-address', `mon-url-encode', `mon-url-decode',
-`mon-get-w3m-url-at-point', `mon-w3m-dired-file'.\n►►►"
+`mon-get-w3m-url-at-point', `mon-w3m-dired-file'.\n▶▶▶"
   ;; :SEE `process-coding-system' process
   ;; `url-http-chunked-encoding-after-change-function'
   (let ((murtnb-bfr (url-retrieve-synchronously fetch-this-url)))
@@ -1048,7 +1048,7 @@ non-descript sources and the returned data may have its encoding clobbered.\n
 If the arg is an IP number, return the host name, else return the address
 corresponding to the host name arg.\n
 :EXAMPLE\n\(mon-get-host-address \"google.com\"\)\n
-:SEE-ALSO `mon-url-retrieve-to-new-buffer'.\n►►►"
+:SEE-ALSO `mon-url-retrieve-to-new-buffer'.\n▶▶▶"
   (if (string-match-p "^[[:digit:]]+\\(\\.[[:digit:]]+\\)\\{3\\}$" name-or-number)
       name-or-number
     (let ((str (shell-command-to-string
@@ -1083,7 +1083,7 @@ corresponding to the host name arg.\n
 :SEE-ALSO `mon-w3m-kill-url-at-point', `mon-get-w3m-url-at-point-maybe',
 `mon-get-w3m-url-at-point', `mon-w3m-read-gnu-lists-nxt-prv',
 `mon-copy-file-dired-as-list', `mon-copy-file-dired-as-string',
-`dired-get-marked-files', `mon-keybind-w3m', `mon-set-w3m-init'.\n►►►"
+`dired-get-marked-files', `mon-keybind-w3m', `mon-set-w3m-init'.\n▶▶▶"
   (interactive)
   (w3m-find-file 
    (or file-to-w3m (car (dired-get-marked-files)))))
@@ -1097,7 +1097,7 @@ the property value on the kill ring and message user.\n
 :SEE-ALSO `mon-get-w3m-dired-file', `mon-get-w3m-url-at-point-maybe',
 `mon-get-w3m-url-at-point', `mon-w3m-read-gnu-lists-nxt-prv',
 `w3m-print-this-url', `mon-get-w3m-url-at-point-maybe',
-`mon-get-w3m-url-at-point', `mon-keybind-w3m', `mon-set-w3m-init'.\n►►►"
+`mon-get-w3m-url-at-point', `mon-keybind-w3m', `mon-set-w3m-init'.\n▶▶▶"
   (interactive)
   (let ((w3mgtp (get-text-property (point) 'w3m-href-anchor)))
       (when (and w3mgtp (stringp w3mgtp))
@@ -1112,7 +1112,7 @@ w3m-href-anchor value and is a 'file 'http 'https.\n
 :ALIASED-BY `mon-w3m-get-url-at-point-maybe'\n
 :SEE-ALSO `mon-get-w3m-url-at-point', `mon-w3m-read-gnu-lists-nxt-prv',
 `mon-w3m-dired-file', `w3m-print-this-url', `mon-get-w3m-url-at-point-maybe',
-`mon-get-w3m-url-at-point', `mon-keybind-w3m', `mon-set-w3m-init'.\n►►►"
+`mon-get-w3m-url-at-point', `mon-keybind-w3m', `mon-set-w3m-init'.\n▶▶▶"
   (let* ((is-url (get-text-property (point) 'w3m-href-anchor))
          (match-with "\\(file\\|http\\|https\\)")
          (is-match (and (stringp is-url)
@@ -1137,7 +1137,7 @@ BUFFER. If BUFFER is nil or does no exist return URL.\n
 :SEE-ALSO `mon-get-w3m-url-at-point-maybe', `mon-w3m-read-gnu-lists-nxt-prv',
 `mon-w3m-kill-url-at-point', `mon-w3m-dired-file', `w3m-print-this-url',
 `mon-get-w3m-url-at-point-maybe', `mon-get-w3m-url-at-point', 
-`mon-keybind-w3m', `mon-set-w3m-init'.\n►►►"
+`mon-keybind-w3m', `mon-set-w3m-init'.\n▶▶▶"
   (interactive "i\ni\np")
   (let ((url-maybe (mon-get-w3m-url-at-point-maybe))
         (do-buff (if buffer (get-buffer buffer))))
@@ -1158,7 +1158,7 @@ When optional arg W-NEW-SESSION is non-nil find url as if by `w3m-goto-url-new-s
 Default is to find the url as if by `w3m-goto-url'.
 When optional arg W-INTRP-MSG is non-nil or called-interactively and there is
 not a URL at point message the user as such.\n
-:SEE-ALSO `mon-get-w3m-url-at-point', `w3m-find-file'.\n►►►"
+:SEE-ALSO `mon-get-w3m-url-at-point', `w3m-find-file'.\n▶▶▶"
   (interactive "P\ni\np")
   (let* ((u-at-pnt (mon-get-w3m-url-at-point-maybe))
          (u-at-pnt-p (cadr u-at-pnt)))
@@ -1183,7 +1183,7 @@ not a URL at point message the user as such.\n
 :SEE \(URL `http://lists.gnu.org'\)\n
 :SEE-ALSO `mon-get-w3m-url-at-point', `mon-get-w3m-url-at-point-maybe',
 `mon-w3m-dired-file', `w3m-print-this-url', `mon-get-w3m-url-at-point-maybe',
-`mon-get-w3m-url-at-point', `mon-keybind-w3m', `mon-set-w3m-init'.\n►►►"
+`mon-get-w3m-url-at-point', `mon-keybind-w3m', `mon-set-w3m-init'.\n▶▶▶"
   (let ((nxt-prev-p
          (save-match-data
            (and (save-excursion
@@ -1299,7 +1299,7 @@ Updated by the RIPE Network Coordination Centre.
 :SEE \(URL `http://www.iso.org/iso/en/prods-services/iso3166ma/02iso-3166-code-lists/list-en1-semic.txt');
 :SEE \(URL `http://www.iana.org/domain-names.htm');
 :SEE \(URL `http://www.iana.org/cctld/cctld-whois.htm').\n
-:SEE-ALSO `mon-tld-find-name', `mon-tld-tld', `mon-tld-find-tld', `mon-tld-name', `mon-tld'.\n►►►"
+:SEE-ALSO `mon-tld-find-name', `mon-tld-tld', `mon-tld-find-tld', `mon-tld-name', `mon-tld'.\n▶▶▶"
   :type  'sexp 
   :group 'mon-regexp-symbols)
 ;;
@@ -1591,13 +1591,13 @@ Updated by the RIPE Network Coordination Centre.
 (defsubst mon-tld-tld (tld)
   "Return the TLD portion of a TLD pair.\n
 :SEE-ALSO `mon-tld-find-name',`mon-tld-find-tld', `mon-tld-name',
-`mon-tld',`*mon-tld-list*'.\n►►►"
+`mon-tld',`*mon-tld-list*'.\n▶▶▶"
   (car tld))
 ;;; :WAS `tld-name' -> `mon-tld-name'
 (defsubst mon-tld-name (tld)
   "Return the name portion of a TLD pair.\n
 :SEE-ALSO `mon-tld-find-name', `mon-tld-tld', `mon-tld-find-tld',
-`mon-tld',`*mon-tld-list*'.\n►►►"
+`mon-tld',`*mon-tld-list*'.\n▶▶▶"
   (cdr tld))
 ;;
 ;; :FIXME THIS  `*mon-tld-list*' changed to hash-table but callers not adjusted.
@@ -1606,7 +1606,7 @@ Updated by the RIPE Network Coordination Centre.
   "Lookup a TLD.\n
 If found a (TLD . NAME) pair is returned.\n
 :SEE-ALSO `mon-tld-find-name', `mon-tld-tld',`mon-tld-name', `mon-tld',
-`*mon-tld-list*'.\n►►►"
+`*mon-tld-list*'.\n▶▶▶"
   ;; (gethash "ARPA" *mon-tld-list*)
    ;; (let ((tld *mon-tld-list*))
    ;;   (mon-hash-get-symbol-name-if tld t))
@@ -1617,7 +1617,7 @@ If found a (TLD . NAME) pair is returned.\n
 (defun mon-tld-find-name (name)
   "Lookup a TLD name. Returns a list of hits.\n
 :SEE-ALSO `mon-tld-tld', `mon-tld-find-tld', `mon-tld-name', `mon-tld', 
-`*mon-tld-list*'.\n►►►"
+`*mon-tld-list*'.\n▶▶▶"
   (let ((case-fold-search t))
     (loop for tld in *mon-tld-list*
           when (string-match-p name (mon-tld-name tld))
@@ -1630,7 +1630,7 @@ If found a (TLD . NAME) pair is returned.\n
 :EXAMPLE\n\n\(mon-tld \"UUCP\"\)\n
 \(call-interactively 'mon-tld\)\n
 :SEE-ALSO `mon-tld-find-name', `mon-tld-tld', `mon-tld-find-tld', `mon-tld-name',
-`*mon-tld-list*'.\n►►►"
+`*mon-tld-list*'.\n▶▶▶"
   (interactive "s:FUNCTION `mon-tld' -- search TLD: ")
   (let* ((mtld-lkup (string= (substring search-tld 0 1) "."))
          (mtld-rslt     (if mtld-lkup 

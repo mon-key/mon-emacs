@@ -22,7 +22,7 @@
 ;; mon-alphabet-list-utils.el provides functions that return alphabetic sequences
 ;; in variaous formats, plists, alists, lists of strings, conses, etc.
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;; `mon-alphabet-as-type', `mon-alphabet-as-bc', `mon-alphabet-as-map-bc',
 ;; `mon-alphabet-as-doc-loadtime', `mon-alphabet-as-map-fun-prop',
 ;; `mon-alphabet-as-unintern-fun', `mon-alphabet-as-cons-keyU->num',
@@ -37,7 +37,7 @@
 ;; `mon-alphabet-as-stringD-w-nl', `mon-alphabet-as-stringU-w-spc',
 ;; `mon-alphabet-as-stringD-w-spc', `mon-string-alpha-list'
 ;;
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;; `mon-alphabet-as-defun',
@@ -166,7 +166,7 @@
 ;;; :CREATED <Timestamp: #{2010-11-05T15:36:19-04:00Z}#{10445} - by MON KEY>
 ;; (defgroup mon-alphabet-list nil
 ;;   "Configure which `mon-alphabet-as-*' functions are compiled and loaded.\n
-;; :SEE-ALSO .\n►►►"
+;; :SEE-ALSO .\n▶▶▶"
 ;;   :prefix "mon-alphabet-as-"
 ;;   :link '(url-link 
 ;;           :tag ":EMACSWIKI-FILE" "http://www.emacswiki.org/emacs/mon-alphabet-utils.el")
@@ -203,7 +203,7 @@ functions symbol-name will appear on the plist property `is-bytcomp`.\n
 :NOTE Elements of the plist value may be `unintern' and `fmakunbound'd
 by evaluating `mon-alphabet-as-unintern-fun'\n
 :SEE-ALSO `mon-alphabet-as-bc', `mon-alphabet-as-defun',
-`mon-alphabet-as-map-fun-prop', `*mon-alphabet-as-type-generate*'.\n►►►")
+`mon-alphabet-as-map-fun-prop', `*mon-alphabet-as-type-generate*'.\n▶▶▶")
 ;;
 (unless (and (intern-soft "*mon-alphabet-as-type-generate*" obarray)
              (bound-and-true-p *mon-alphabet-as-type-generate*))
@@ -264,7 +264,7 @@ of being entirely self contained, and therefor does not rely on external calls.\
 `mon-is-letter', `mon-is-digit', `mon-is-alphanum-simp', `mon-is-letter-simp',
 `mon-is-digit-simp', `mon-string-ify-list', `mon-string-chop-spaces',
 `mon-string-replace-char', `mon-string-from-sequence',
-`mon-string-to-sequence'.\n►►►"
+`mon-string-to-sequence'.\n▶▶▶"
   (let ((maat-alph '(?A ?B ?C ?D ?E ?F ?G ?H ?I ?J ?K ?L 
                         ?M ?N ?O ?P ?Q ?R ?S ?T ?U ?V ?W ?X ?Y ?Z))
         (maat-tycon #'(lambda (maat-L-0)
@@ -420,7 +420,7 @@ of being entirely self contained, and therefor does not rely on external calls.\
                '\(mon-alphabet-as-defun \"cons-keyU->num\"\)\)\n
 :SEE-ALSO `mon-alphabet-as-bc', `mon-alphabet-as-defun',
 `mon-alphabet-as-doc-loadtime', `mon-alphabet-as-unintern-fun',
-`mon-alphabet-as-map-fun-prop', `*mon-alphabet-as-type-generate*'.\n►►►"
+`mon-alphabet-as-map-fun-prop', `*mon-alphabet-as-type-generate*'.\n▶▶▶"
   (let ((as-fun (make-symbol "as-fun")) 
         (as-typ (make-symbol "as-typ")))
     `(let ((,as-fun  (intern (symbol-name 
@@ -443,7 +443,7 @@ Return a cons with the format:\n
  \( <SYMBOL> . FUN-NAME \)\n
 :SEE-ALSO `mon-alphabet-as-bc', `mon-alphabet-as-defun',
 `mon-alphabet-as-doc-loadtime', `mon-alphabet-as-unintern-fun',
-`mon-alphabet-as-map-fun-prop', `*mon-alphabet-as-type-generate*'.\n►►►"
+`mon-alphabet-as-map-fun-prop', `*mon-alphabet-as-type-generate*'.\n▶▶▶"
   (let ((maac (mon-alphabet-as-defun fun-name)))
     (eval (cadr maac))
     (byte-compile (car maac))
@@ -485,7 +485,7 @@ function.\n
   \(unintern 'mon-alphabet-as-cons-keyU->num\)\)\n
 :SEE-ALSO `mon-alphabet-as-bc', `mon-alphabet-as-defun',
 `mon-alphabet-as-doc-loadtime', `mon-alphabet-as-unintern-fun',
-`mon-alphabet-as-map-fun-prop', `*mon-alphabet-as-type-generate*'.\n►►►"
+`mon-alphabet-as-map-fun-prop', `*mon-alphabet-as-type-generate*'.\n▶▶▶"
   (let ((rtn-if-bcd (mapcar #'(lambda (fnl)
                                 (mon-alphabet-as-bc fnl))
                             fun-name-lst)))
@@ -536,7 +536,7 @@ Add function-documentation property to functions plist for following functions:
  `mon-alphabet-as-stringU-w-spc', `mon-alphabet-as-stringD-w-spc',\n
 :SEE-ALSO `mon-alphabet-as-bc', `mon-alphabet-as-defun',
 `mon-alphabet-as-doc-loadtime', `mon-alphabet-as-unintern-fun',
-`mon-alphabet-as-map-fun-prop', `*mon-alphabet-as-type-generate*'.\n►►►"
+`mon-alphabet-as-map-fun-prop', `*mon-alphabet-as-type-generate*'.\n▶▶▶"
   (let* ((map-xrfs (mon-string-justify-left
                     (mapconcat #'identity
                                `(,":SEE-ALSO "
@@ -557,7 +557,7 @@ Add function-documentation property to functions plist for following functions:
                        "`mon-is-letter', `mon-is-digit', `mon-is-alphanum-simp', `mon-is-letter-simp',"
                        "`mon-is-digit-simp', `mon-string-ify-list', `mon-string-chop-spaces',"
                        "`mon-string-replace-char', `mon-string-from-sequence',"
-                       "`mon-string-to-sequence'.\n►►►") "\n"))
+                       "`mon-string-to-sequence'.\n▶▶▶") "\n"))
          (ldtm-msg (concat ":FUNCTION `mon-set-mon-alphabet-as-doc-loadtime' "
                            "-- byte-compiled and documented `%s' at loadtime")))
     ;; :DEBUGGING    ;; map-xrfs))  ;; maat-doc-tmplt)) 
@@ -587,7 +587,7 @@ Used for symbol-> string lookup via intern-soft  if/when we want to unintern.\n
         \(get '*mon-alphabet-as-type-generate* 'is-bytcomp\)\)\n
 :SEE-ALSO `mon-alphabet-as-bc', `mon-alphabet-as-defun',
 `mon-alphabet-as-doc-loadtime', `mon-alphabet-as-unintern-fun',
-`mon-alphabet-as-map-fun-prop', `*mon-alphabet-as-type-generate*'.\n►►►"
+`mon-alphabet-as-map-fun-prop', `*mon-alphabet-as-type-generate*'.\n▶▶▶"
   (put '*mon-alphabet-as-type-generate* 'is-bytcomp 
        (mapcar #'(lambda (pfl) (symbol-name (car pfl)))
                prop-fun-lst)))
@@ -609,7 +609,7 @@ Where the first most form \(a list of strings\) is the preferred format.\n
  \(get '*mon-alphabet-as-type-generate* 'is-bytcomp\)\n
 :SEE-ALSO `mon-alphabet-as-bc', `mon-alphabet-as-defun',
 `mon-alphabet-as-doc-loadtime', `mon-alphabet-as-unintern-fun',
-`mon-alphabet-as-map-fun-prop', `*mon-alphabet-as-type-generate*'.\n►►►"
+`mon-alphabet-as-map-fun-prop', `*mon-alphabet-as-type-generate*'.\n▶▶▶"
   (let ((maatg (get '*mon-alphabet-as-type-generate* 'is-bytcomp)))
     (when (or (null maatg) (not (consp maatg)))
       (mon-format :w-fun #'error 
@@ -684,7 +684,7 @@ swapped; this check is exclusive of case check.\n
 \(princ \(mon-string-alpha-list \"m\" \"r\"\)\)\n
 :SEE-ALSO `mon-alphabet-as-type', `number-sequence', `mon-string-to-sequence', 
 `mon-string-from-sequence',  `mon-is-alphanum', `mon-is-digit',
-`mon-is-letter'.\n►►►"
+`mon-is-letter'.\n▶▶▶"
   (let ((msal-frm (string-to-char from-letter))
         (msal-to (string-to-char to-letter))
         msal-swp

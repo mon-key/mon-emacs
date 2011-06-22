@@ -71,10 +71,10 @@
 ;; procedures in the ../lisp and ../emacs subdirs at:
 ;; :SEE (URL `http://darcs.informatimago.com/local/darcs/public/')
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;; `mon-CL-namespace-colonic', `mon-CL-cln-colon-swap',
 ;; `mon-CL-escape-star', `mon-CL-escape-regexp',
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;;
@@ -214,7 +214,7 @@ To edit or add additional regexps to this variable adjust the list in the
 :VARIABLE `byte-compile-cl-functions'.\n
 :SEE-ALSO  `mon-CL-escape-star', `mon-CL-escape-regexp',
 `mon-CL-namespace-colonic', `byte-compile-cl-file-p',
-`byte-compile-find-cl-functions', `byte-compile-cl-warn'.\n►►►")
+`byte-compile-find-cl-functions', `byte-compile-cl-warn'.\n▶▶▶")
 ;;
 ;;; :TEST-ME *regexp-clean-cl-symbols*
 ;;
@@ -424,7 +424,7 @@ before there non-destructive counterparts.\n
 :NOTE Eventually this list should incorporate all elts from:
 :VARIABLE `byte-compile-cl-functions'.\n
 :SEE-ALSO `mon-replace-region-regexp-lists', `byte-compile-find-cl-functions',
-`byte-compile-cl-warn', `byte-compile-cl-file-p'.\n►►►")
+`byte-compile-cl-warn', `byte-compile-cl-file-p'.\n▶▶▶")
 ;;
 ;;; :TEST-ME *clean-cl-symbols-with-regexp*
 ;;
@@ -451,7 +451,7 @@ Return values are as follows:\n
 `mon-CL-cln-colon-swap', `*regexp-clean-cl-symbols*',
 `*clean-cl-symbols-with-regexp*', `byte-compile-cl-functions',
 `byte-compile-find-cl-functions', `byte-compile-cl-warn',
-`byte-compile-cl-file-p'.\n►►►"
+`byte-compile-cl-file-p'.\n▶▶▶"
   (let ((star-test '("[a-z-]+\\*" . "cl::[a-z-]+\\*"))
         (star-rep  '("\\([a-z-]+\\)\\(\\*\\)"
                      . "\\(cl::[a-z-]+\\)\\(\\*\\)"))
@@ -491,7 +491,7 @@ edits of the resulting regexp transformations should this be what is wanted.\n
 `mon-CL-cln-colon-swap', `*regexp-clean-cl-symbols*',
 `*clean-cl-symbols-with-regexp*', `byte-compile-cl-functions',
 `byte-compile-find-cl-functions', `byte-compile-cl-warn',
-`byte-compile-cl-file-p'.\n►►►"
+`byte-compile-cl-file-p'.\n▶▶▶"
   (let ((trans-to-regexp (mon-CL-escape-star symbol-string has-colon))
         (with-regexp
             (if has-colon
@@ -524,7 +524,7 @@ When optional arg REMOVE-COLON is non-nil invert colon symbols to substitute
 :SEE-ALSO `mon-CL-escape-star', `mon-CL-escape-regexp', `mon-CL-cln-colon-swap',
 `*regexp-clean-cl-symbols*', `*clean-cl-symbols-with-regexp*',
 `byte-compile-cl-functions', `byte-compile-find-cl-functions',
-`byte-compile-cl-warn', `byte-compile-cl-file-p'.\n►►►" 
+`byte-compile-cl-warn', `byte-compile-cl-file-p'.\n▶▶▶" 
   (interactive "r\nP")
   (unless (eq (caar *regexp-clean-cl-symbols*) :TO-COLON) (mon-CL-cln-colon-swap))
   (mon-replace-region-regexp-lists 
@@ -548,7 +548,7 @@ unless optional arg FORCED-COLONIC is non-nil.\n
 `mon-CL-namespace-colonic', `*regexp-clean-cl-symbols*',
 `*clean-cl-symbols-with-regexp*', `byte-compile-cl-functions',
 `byte-compile-find-cl-functions', `byte-compile-cl-warn',
-`byte-compile-cl-file-p'.\n►►►"
+`byte-compile-cl-file-p'.\n▶▶▶"
   (if  (or forced-colonic
            (not (eq (caar *regexp-clean-cl-symbols*) :TO-COLON)))
        (let ((colonic-mogrifications

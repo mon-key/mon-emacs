@@ -6,9 +6,9 @@
 ;;;  with `naf-mode'.
 ;;; `naf-mode-state-names' -> `naf-mode-place-face', `naf-mode-place-fface'.
 ;;;
-;;; FUNCTIONS:►►►
+;;; FUNCTIONS:▶▶▶
 ;;;
-;;; FUNCTIONS:◄◄◄
+;;; FUNCTIONS:◀◀◀
 ;;;
 ;;; CONSTANTS:
 ;;; `naf-mode-name-state-names'
@@ -135,7 +135,7 @@
 :EXAMPLE\n\n\(assoc-string \"Puerto Rico\" *naf-mode-state-to-postal*\)\n
 \(rassoc \"PR\" *naf-mode-state-to-postal*\)\n
 \(naf-mode-state-to-postal-TEST\)\n
-:SEE-ALSO `naf-mode-state-names', `webjump-state-to-postal-alist'.\n►►►")
+:SEE-ALSO `naf-mode-state-names', `webjump-state-to-postal-alist'.\n▶▶▶")
 
 
 ;;; ==============================
@@ -213,7 +213,7 @@
   "List of States of United States.\n
 Includes provincial regions of Ye olde Canada.:P\n
 Keyword highlighting for `naf-mode' font-lock faces.\n
-:SEE-ALSO *naf-mode-state-to-postal*.\n►►►")
+:SEE-ALSO *naf-mode-state-to-postal*.\n▶▶▶")
 
 
 

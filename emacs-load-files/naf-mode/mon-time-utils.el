@@ -22,7 +22,7 @@
 ;; MON utilities for working with time. In particular Routines for converting
 ;; from 'eBay official time' to 'YOUR Official Time®'
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;; `mon-get-current-year', `mon-format-iso-8601-time',
 ;; `mon-file-older-than-file-p', `mon-get-file-mod-times',
 ;; `mon-conv-time-flt-pnt', `mon-comp-times-flt-pnt',
@@ -34,7 +34,7 @@
 ;; `mon-file-stamp-minibuffer', `mon-file-stamp-buffer-filename',
 ;; `calendar-goto-doomsday', `mon-stamp-in-context',
 ;;
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;;
@@ -326,7 +326,7 @@ If ALT-DIVIDE-CHAR \(a character or string\) is non-nil use it to instead.\n
 \(length \(mon-comment-divider-w-len 85 95 45\)\)\n
 :SEE-ALSO `*mon-default-comment-divider*', `mon-comment-divider',
 `mon-comment-lisp-to-col', `mon-comment-divider-to-col',
-`mon-comment-divider-w-len'.\n►►►"
+`mon-comment-divider-w-len'.\n▶▶▶"
   (let ((d-char (typecase alt-divide-char
                   (string    (aref alt-divide-char 0))
                   (character alt-divide-char)
@@ -380,7 +380,7 @@ When keyword INSRTP is non-nil insert return value at point as if with `prin1'\n
 `mon-lisp-stamp', `mon-file-stamp', `mon-file-stamp-buffer-filename',
 `mon-file-stamp-minibuffer', `mon-help-time-functions',
 `mon-help-mon-time-functions', `mon-help-iso-8601', `mon-help-CL-time',
-`mon-help-CL-local-time'.\n►►►"
+`mon-help-CL-local-time'.\n▶▶▶"
   (interactive (list :intrp t))
   (let ((mds-2day (format-time-string "%Y-%m-%d")))
     (setq mds-2day
@@ -418,7 +418,7 @@ When keyword INSRTP is non-nil insert return value at point as if with `prin1'\n
 :EXAMPLE\n\n\(mon-get-current-year\)\n
 :SEE-ALSO `mon-date-stamp', `mon-format-iso-8601-time',
 `mon-help-time-functions', `mon-help-mon-time-functions', `mon-help-iso-8601',
-`mon-help-CL-time', `mon-help-CL-local-time'.\n►►►"
+`mon-help-CL-time', `mon-help-CL-local-time'.\n▶▶▶"
   (interactive "i\np")
   (let ((mgcy-cur-yr (format "%s" (nth 5 (decode-time (current-time))))))
     ;; :WAS (setq mgcy-cur-yr (format "%s" (nth 5 (decode-time (current-time)))))
@@ -475,7 +475,7 @@ This timestring is per the return value of the following format spec:
 `encode-time-value', `time-subtract', `current-time-string',
 `format-time-string', `format-seconds', `float-time',
 `mon-help-time-functions', `mon-help-mon-time-functions', `mon-help-iso-8601',
-`mon-help-CL-time', `mon-help-CL-local-time'.\n►►►"
+`mon-help-CL-time', `mon-help-CL-local-time'.\n▶▶▶"
   (interactive "i\ni\np")
   (let* ( ;; :NOTE `#{' is a reserved user dispatching macro char in CL
          (colon-z-stamp (format-time-string "#{%Y-%m-%dT%T%zZ}#{%y%V%u}" time)) 
@@ -501,7 +501,7 @@ This timestring is per the return value of the following format spec:
 :SEE-ALSO `file-newer-than-file-p', `mon-get-file-mod-times',
 `timer--time-less-p', `time-less-p', `file-attributes-lessp',
 `tramp-time-less-p', `mon-help-time-functions', `mon-help-mon-time-functions',
-`mon-help-iso-8601', `mon-help-CL-time', `mon-help-CL-local-time'.\n►►►"
+`mon-help-iso-8601', `mon-help-CL-time', `mon-help-CL-local-time'.\n▶▶▶"
   ;;
   ;; :NOTE Can we use `mon-file-truename-p' here?
   ;;       (mon-file-truename-p (buffer-file-name))
@@ -563,7 +563,7 @@ When AS-LIST is non-nil return value is a list with the form:\n
 `decode-time', `encode-time', `with-decoded-time-value' `encode-time-value',
 `time-subtract', `current-time-string', `format-time-string', `format-seconds',
 `float-time', `mon-help-time-functions', `mon-help-mon-time-functions',
-`mon-help-iso-8601', `mon-help-CL-time', `mon-help-CL-local-time'.\n►►►"
+`mon-help-iso-8601', `mon-help-CL-time', `mon-help-CL-local-time'.\n▶▶▶"
   (let* ((get-attr (file-attributes file-or-dir))
 	 (last-mod (mon-format-iso-8601-time (nth 5 get-attr)))
 	 (last-acc (mon-format-iso-8601-time (nth 4 get-attr)))
@@ -602,7 +602,7 @@ Conversion  is calculated from the high and low bits of `current-time' e.g.:\n
 :SEE-ALSO `mon-comp-times-flt-pnt', `mon-get-file-mod-times',
 `mon-file-older-than-file-p', `file-newer-than-file-p',
 `mon-help-time-functions', `mon-help-mon-time-functions', `mon-help-iso-8601',
-`mon-help-CL-time', `mon-help-CL-local-time'.\n►►►"
+`mon-help-CL-time', `mon-help-CL-local-time'.\n▶▶▶"
   (let (mctfp-cnvt-tm)
     (setq mctfp-cnvt-tm (or time (current-time)))
     (/ (+ (* (car mctfp-cnvt-tm) 65536.0)  (cadr mctfp-cnvt-tm)) 3600.0)))
@@ -632,7 +632,7 @@ returned it is dropped.\n
 :SEE-ALSO `mon-conv-time-flt-pnt', `mon-get-file-mod-times',
 `mon-file-older-than-file-p', `file-newer-than-file-p',
 `mon-help-time-functions', `mon-help-mon-time-functions', `mon-help-iso-8601',
-`mon-help-CL-time', `mon-help-CL-local-time'.\n►►►"
+`mon-help-CL-time', `mon-help-CL-local-time'.\n▶▶▶"
   (let ((mctfp-tm1 (or time-1))
         (mctfp-tm2 (or time-2)))
     (> (mon-conv-time-flt-pnt mctfp-tm1) (mon-conv-time-flt-pnt mctfp-tm2))))
@@ -647,7 +647,7 @@ returned it is dropped.\n
 :SEE-ALSO `mon-accessed-stamp', `mon-timestamp', `mon-stamp',
 `mon-stamp-in-context', `mon-lisp-stamp', `mon-help-time-functions',
 `mon-help-mon-time-functions', `mon-help-iso-8601', `mon-help-CL-time',
-`mon-help-CL-local-time'\n►►►"
+`mon-help-CL-local-time'\n▶▶▶"
   (insert (format-time-string "%A %B %d, %Y")))
 ;;
 ;;; :TEST-ME (mon-accessed-time-stamp)
@@ -672,7 +672,7 @@ the NAME value associated with buffer-filename.\n
 :SEE-ALSO `mon-accessed-time-stamp', `mon-timestamp', `mon-stamp',
 `mon-stamp-in-context', `mon-lisp-stamp', `mon-help-time-functions',
 `mon-help-mon-time-functions', `mon-help-iso-8601', `mon-help-CL-time',
-`mon-help-CL-local-time'.\n►►►"
+`mon-help-CL-local-time'.\n▶▶▶"
   (interactive (list :intrp t))
   (let* ((mt-TS (cond 
                  (accessed (mon-format-iso-8601-time))
@@ -753,7 +753,7 @@ Insert following formatted date/time at point:\n
 `mon-lisp-stamp', `mon-stamp-in-context', `*mon-timestamp-cond*',
 `mon-file-stamp', `mon-get-new-buffer-w-stamp', `mon-help-time-functions',
 `mon-help-mon-time-functions', `mon-help-iso-8601', `mon-help-CL-time',
-`mon-help-CL-local-time'.\n►►►"
+`mon-help-CL-local-time'.\n▶▶▶"
   (interactive "i\np")
   (let ((tstmp (format  "<Timestamp: %s" (mon-timestamp :naf t))))
     (if (or insrtp intrp)
@@ -780,7 +780,7 @@ Invoked from a `naf-mode' buffer acessed-stamp fontlocked by
 `mon-stamp-in-context', `mon-lisp-stamp', `mon-file-stamp',
 `mon-get-new-buffer-w-stamp', `mon-help-time-functions',
 `mon-help-mon-time-functions', `mon-help-iso-8601', `mon-help-CL-time',
-`mon-help-CL-local-time'.\n►►►"
+`mon-help-CL-local-time'.\n▶▶▶"
   (interactive "i\nP\np")
   (let ((mas-tstmp (concat 
                     (or (and commented ";;; :ACCESSED ") "accessed: ")
@@ -844,7 +844,7 @@ the ALT-DIVIDE-CHAR to `mon-comment-divider-w-len'. Default is \"=\" \(char 61\)
 :SEE-ALSO `mon-lisp-stamp', `mon-insert-lisp-stamp', `mon-accessed-stamp',
 `mon-date-stamp', `mon-timestamp', `mon-get-new-buffer-w-stamp',
 `mon-help-time-functions', `mon-help-mon-time-functions', `mon-help-iso-8601',
-`mon-help-CL-time', `mon-help-CL-local-time'.\n►►►"
+`mon-help-CL-time', `mon-help-CL-local-time'.\n▶▶▶"
   (interactive "i\np")
   (let* ((w-divider :w-divider)
          (msic-cur-cmnt-start (or (and (stringp w-comment-start)
@@ -914,7 +914,7 @@ Use after creating new elisp functions to delimit and date them.\n
 `mon-insert-naf-mode-xref-template' `mon-insert-naf-mode-var-const-template',
 `mon-insert-naf-mode-constant-template', `mon-help-time-functions',
 `mon-help-mon-time-functions', `mon-help-iso-8601', `mon-help-CL-time',
-`mon-help-CL-local-time'.\n►►►"
+`mon-help-CL-local-time'.\n▶▶▶"
   (interactive "i\np\nP")
   (let* ((mls-cur-chngst (if buffer-file-name
                          (when (vc-working-revision buffer-file-name)
@@ -969,7 +969,7 @@ Does not move point.\n
 `mon-insert-file-template', `mon-insert-lisp-CL-file-template',
 `*mon-default-comment-divider*', `mon-comment-divider-w-len',
 `mon-help-CL-time', `mon-help-iso-8601', `mon-help-CL-local-time',
-`mon-help-mon-time-functions', `mon-help-time-functions'.\n►►►"
+`mon-help-mon-time-functions', `mon-help-time-functions'.\n▶▶▶"
   (interactive "p")
   (let  (;; :NOTE Using *mon-default-comment-divider* for granularity/portablility.
          (mfsvpe-end-of-dlm *mon-default-comment-divider*)
@@ -1056,7 +1056,7 @@ When AT-POINT is non-nil insert return value at point. Does not move point.
 `mon-file-dir-attributes->plist', `mon-lisp-stamp', `mon-timestamp',
 `mon-stamp', `mon-accessed-stamp', `*mon-default-comment-divider*',
 `mon-help-time-functions', `mon-help-mon-time-functions', `mon-help-iso-8601',
-`mon-help-CL-time', `mon-help-CL-local-time'.\n►►►"
+`mon-help-CL-time', `mon-help-CL-local-time'.\n▶▶▶"
   (interactive "i\np\nP")
   (let* ((the-url (cond ((and intrp w/url)
                          (concat ";;; :SOURCE (URL `" (read-string "URL to wrap :") "')"))
@@ -1228,7 +1228,7 @@ Append `-' to timestamp unless char-after timestamp is:\n
 :SEE-ALSO `mon-file-stamp-buffer-filename', `mon-get-new-buffer-w-stamp',
 `mon-file-stamp', `mon-timestamp', `mon-help-time-functions',
 `mon-help-mon-time-functions', `mon-help-iso-8601', `mon-help-CL-time',
-`mon-help-CL-local-time'.\n►►►"
+`mon-help-CL-local-time'.\n▶▶▶"
   (interactive)
   (if (minibufferp)
       (progn
@@ -1281,7 +1281,7 @@ will appear before the extension.\n
 :SEE-ALSO `mon-file-stamp-buffer-filename-TEST', `mon-file-stamp-minibuffer',
 `mon-get-new-buffer-w-stamp', `mon-file-stamp', `mon-file-dir-attributes->plist',
 `mon-help-time-functions', `mon-help-mon-time-functions', `mon-help-iso-8601',
-`mon-help-CL-time', `mon-help-CL-local-time'.\n►►►"
+`mon-help-CL-time', `mon-help-CL-local-time'.\n▶▶▶"
   (interactive)
   (let* ((bfn (buffer-name)) ;; (window-buffer (minibuffer-selected-window))))
          (bfn-fl-p (buffer-file-name (get-buffer bfn))) 
@@ -1340,7 +1340,7 @@ But, `decode-time' and `parse-time-string' both return:\n
 `mon-calculate-ebay-timezone-diff', `mon-convert-ebay-time',
 `mon-convert-ebay-time-mvb', `mon-help-time-functions',
 `mon-help-mon-time-functions', `mon-help-iso-8601', `mon-help-CL-time',
-`mon-help-CL-local-time'.\n►►►"
+`mon-help-CL-local-time'.\n▶▶▶"
   (let* ((ts (parse-time-string time-string))
          (sec (nth 0 ts))               ;; <- SEC
          (min (nth 1 ts))               ;; <- MINUTE
@@ -1365,7 +1365,7 @@ But, `decode-time' and `parse-time-string' both return:\n
 :EXAMPLE\n\n\(mon-convert-ebay-time-mvb \"29 Jul 2009 Tuesday 11:05:27 PDT\"\)\n
 :SEE-ALSO `mon-convert-ebay-time', `parse-time-string', `encode-time',
 `mon-help-time-functions', `mon-help-mon-time-functions', `mon-help-iso-8601',
-`mon-help-CL-time', `mon-help-CL-local-time'\n►►►"
+`mon-help-CL-time', `mon-help-CL-local-time'\n▶▶▶"
   (multiple-value-bind 
       (sec min hr day mon yr dow dst tz) 
       (parse-time-string time-string)
@@ -1425,7 +1425,7 @@ Replaces existing time-string in region with converted form.\n
 `*regexp-clean-ebay-month->canonical-style2*',
 `*regexp-clean-ebay-month->canonical-style3*', `mon-help-time-functions',
 `mon-help-mon-time-functions', `mon-help-iso-8601', `mon-help-CL-time',
-`mon-help-CL-local-time'.\n►►►"
+`mon-help-CL-local-time'.\n▶▶▶"
   (interactive "\i\nr\ni\np")
   (let ((cln-ebay *regexp-clean-ebay-month->canonical-style1*)
         (curr-yr (mon-get-current-year))
@@ -1568,7 +1568,7 @@ done.\n
 :SEE-ALSO `mon-cln-ebay-time-string', `mon-convert-ebay-time',
 `mon-convert-ebay-time-mvb', `current-time-zone', `parse-time-string'
 `mon-help-time-functions', `mon-help-mon-time-functions', `mon-help-iso-8601',
-`mon-help-CL-time', `mon-help-CL-local-time'.\n►►►"
+`mon-help-CL-time', `mon-help-CL-local-time'.\n▶▶▶"
   (let ((ets ebay-time-string))
     (/ (- (abs (car (last (parse-time-string ets))))
           (abs (car (current-time-zone))))
@@ -1590,7 +1590,7 @@ done.\n
 :SEE-ALSO `mon-cln-ebay-time-string', `mon-convert-ebay-time',
 `mon-convert-ebay-time-mvb', `current-time-zone', `parse-time-string'
 `mon-help-time-functions', `mon-help-mon-time-functions', `mon-help-iso-8601',
-`mon-help-CL-time', `mon-help-CL-local-time'.\n►►►"
+`mon-help-CL-time', `mon-help-CL-local-time'.\n▶▶▶"
   (interactive)
   (eval-when-compile (require 'warnings))
   (let* ((cnt-dwn (format-seconds "%Y %D %H %M and %S"

@@ -25,13 +25,13 @@
 ;; Idea :COURTESY Nelson H. F. Beebe <beebe@math.utah.edu> :HIS bibtex-regs.el
 ;;
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;; `mon-reset-registers', `mon-set-all-registers-to-char',
 ;; `mon-query-replace-register1<-reg2', `mon-set-register->tags',
 ;; `mon-make-set-register->tags-docs', `mon-set-register->tags-semic',
 ;; `mon-set-register->tags-sharp', `mon-set-register-tags-loadtime',
 ;; `mon-cntl-char-registers-loadtime',
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;;
@@ -145,7 +145,7 @@ Keys map as follows:
 :NO-COMMENT-PFX -> Strings without whitespace wrapping.\n
 :CALLED-BY `mon-set-register->tags'.\n
 :NOTE Bound with `eval-after-load' call to `mon-set-register-tags-loadtime'.\n
-:SEE-ALSO `mon-make-set-register->tags-docs'.\n►►►")
+:SEE-ALSO `mon-make-set-register->tags-docs'.\n▶▶▶")
 ;;
 ;;; :NOTE Following commented out:
 ;;; <Timestamp: #{2010-01-13T12:13:02-05:00Z}#{10023} - by MON>
@@ -191,7 +191,7 @@ Keys map as follows:
   "
 :SEE-ALSO `mon-set-all-registers-to-char', `mon-set-register->tags'
 `mon-set-register->tags-semic', `mon-set-register->tags-sharp',
-`mon-set-register-tags-loadtime'.\n►►►"
+`mon-set-register-tags-loadtime'.\n▶▶▶"
   (let ((mp-keys *mon-register-config-tags*)
         (setr-wsp #'(lambda (x) 
                       (set-register (car x) 
@@ -225,7 +225,7 @@ Keys map as follows:
 ;;; :CREATED <Timestamp: #{2009-12-07T17:29:54-05:00Z}#{09501} - by MON>
 (defun mon-set-register->tags-semic ()
 "Set the prefix comment style of `mon-set-register->tags' to `;; '.\n
-:SEE-ALSO `mon-set-register->tags-sharp', `*mon-register-config-tags*'.\n►►►"
+:SEE-ALSO `mon-set-register->tags-sharp', `*mon-register-config-tags*'.\n▶▶▶"
   (interactive)
   (mon-set-register->tags :semic t))
 ;;
@@ -235,7 +235,7 @@ Keys map as follows:
 ;;; :CREATED <Timestamp: #{2009-12-07T17:29:52-05:00Z}#{09501} - by MON>
 (defun mon-set-register->tags-sharp ()
 "Set the prefix comment style of `mon-set-register->tags' to `# '.\n
-:SEE-ALSO `mon-set-register->tags-semic', `*mon-register-config-tags*'.\n►►►"
+:SEE-ALSO `mon-set-register->tags-semic', `*mon-register-config-tags*'.\n▶▶▶"
   (interactive)
   (mon-set-register->tags :sharp t))
 ;;
@@ -248,7 +248,7 @@ Keys map as follows:
 docstring of `mon-set-register->tags'.\n
 :NOTE Docstring is added at loadtime with `eval-after-load's call to
 `mon-set-register-tags-loadtime'.\n
-:SEE-ALSO `*mon-register-config-tags*'.\n►►►"
+:SEE-ALSO `*mon-register-config-tags*'.\n▶▶▶"
   (let* ((build-doc)
          (do-s t)        
          (map-sym #'(lambda (q) 
@@ -302,7 +302,7 @@ When optional arg W-MSG-USER is non-nil message user that variable
 `mon-bind-iptables-vars-at-loadtime', `mon-bind-nefs-photos-at-loadtime',
 `mon-bind-doc-help-proprietery-vars-at-loadtime',
 `mon-set-register-tags-loadtime', `mon-CL-cln-colon-swap', 
-`mon-after-mon-utils-loadtime', `mon-check-feature-for-loadtime'.\n►►►"
+`mon-after-mon-utils-loadtime', `mon-check-feature-for-loadtime'.\n▶▶▶"
   (unless (bound-and-true-p *mon-register-config-tags*)
     (setq w-msg-user t)
     (setq *mon-register-config-tags*
@@ -351,7 +351,7 @@ insertion keybindings: \"\C-xri<CHAR>\"\n\n:EXAMPLE"
         nil
         "\n:NOTE Bound with `eval-after-load' call to `mon-set-register-tags-loadtime'.\n
 :SEE-ALSO `mon-set-register->tags-semic', `mon-set-register->tags-sharp',
-`mon-make-set-register->tags-docs'.\n►►►"))
+`mon-make-set-register->tags-docs'.\n▶▶▶"))
     (when w-msg-user
       (message (concat ":FUNCTION `mon-set-register-tags-loadtime' "
                    "-- bound  `*mon-register-config-tags*' and documented "
@@ -386,7 +386,7 @@ insertion keybindings: \"\C-xri<CHAR>\"\n\n:EXAMPLE"
 When `IS-MON-SYSTEM-P' evaluated at loadtime by `mon-after-mon-utils-loadtime'.\n
 :EXAMPLE\n\n\(progn \(mon-cntl-char-registers-loadtime\)
        \(get '*mon-cntl-char-registers* 'variable-documentation\)\)\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   (let ((char-rep (mapcar #'char-to-string `(,@(number-sequence 1 8) ,@(number-sequence 11 26))))
         self-puke)
     (setq self-puke
@@ -413,7 +413,7 @@ When `IS-MON-SYSTEM-P' evaluated at loadtime by `mon-after-mon-utils-loadtime'.\
             "`*mon-symbol-registers*', `*mon-upper-case-registers*',\n"
             "`*mon-lower-case-registers*', `*mon-registr-of-registers*',\n"
             "`*mon-ascii-alpha-chars*', `*mon-digit-chars*', `*mon-whitespace-chars*',\n"
-            "`mon-help-ascii-chars'.\n►►►")
+            "`mon-help-ascii-chars'.\n▶▶▶")
            ;; 1-6
            (nth 0 char-rep)(nth 1 char-rep)(nth 2 char-rep)
            (nth 3 char-rep)(nth 4 char-rep)(nth 5 char-rep)
@@ -455,7 +455,7 @@ When `IS-MON-SYSTEM-P' evaluated at loadtime by `mon-after-mon-utils-loadtime'.\
 `*mon-symbol-registers*', `*mon-upper-case-registers*',
 `*mon-lower-case-registers*', `*mon-registr-of-registers*',
 `*mon-ascii-alpha-chars*', `*mon-whitespace-chars*', `*mon-digit-chars*',
-`mon-help-ascii-chars'.\n►►►")
+`mon-help-ascii-chars'.\n▶▶▶")
 ;;
 (unless (bound-and-true-p  *mon-digit-registers*)
   (setq *mon-digit-registers*
@@ -480,7 +480,7 @@ When `IS-MON-SYSTEM-P' evaluated at loadtime by `mon-after-mon-utils-loadtime'.\
 `*mon-digit-registers*', `*mon-symbol-registers*', `*mon-upper-case-registers*',
 `*mon-lower-case-registers*', `*mon-registr-of-registers*',
 `*mon-ascii-alpha-chars*', `*mon-whitespace-chars*', `*mon-digit-chars*',
-`mon-help-ascii-chars'.\n►►►")
+`mon-help-ascii-chars'.\n▶▶▶")
 ;;
 (unless (bound-and-true-p  *mon-digit-shifted-registers*)
   (setq *mon-digit-shifted-registers*
@@ -506,7 +506,7 @@ When `IS-MON-SYSTEM-P' evaluated at loadtime by `mon-after-mon-utils-loadtime'.\
 `*mon-digit-registers*', `*mon-digit-shifted-registers*',
 `*mon-upper-case-registers*', `*mon-lower-case-registers*',
 `*mon-registr-of-registers*', `*mon-ascii-alpha-chars*',
-`*mon-whitespace-chars*', `*mon-digit-chars*', `mon-help-ascii-chars'.\n►►►")
+`*mon-whitespace-chars*', `*mon-digit-chars*', `mon-help-ascii-chars'.\n▶▶▶")
 ;;
 (unless (bound-and-true-p  *mon-symbol-registers*)
   (setq *mon-symbol-registers*
@@ -533,7 +533,7 @@ When `IS-MON-SYSTEM-P' evaluated at loadtime by `mon-after-mon-utils-loadtime'.\
 :SEE-ALSO `*mon-cntl-char-registers*', `*mon-cntl-char-registers*',
 `*mon-digit-registers*', `*mon-digit-shifted-registers*',
 `*mon-symbol-registers*', `*mon-lower-case-registers*',
-`*mon-registr-of-registers*', .\n►►►")
+`*mon-registr-of-registers*', .\n▶▶▶")
 ;;
 (unless (bound-and-true-p  *mon-upper-case-registers*)
   (setq *mon-upper-case-registers*
@@ -562,7 +562,7 @@ When `IS-MON-SYSTEM-P' evaluated at loadtime by `mon-after-mon-utils-loadtime'.\
 `*mon-digit-registers*', `*mon-digit-shifted-registers*',
 `*mon-symbol-registers*', `*mon-upper-case-registers*',
 `*mon-registr-of-registers*', `*mon-ascii-alpha-chars*',
-`*mon-whitespace-chars*', `*mon-digit-chars*', `mon-help-ascii-chars'.\n►►►")
+`*mon-whitespace-chars*', `*mon-digit-chars*', `mon-help-ascii-chars'.\n▶▶▶")
 ;;
 (unless (bound-and-true-p  *mon-lower-case-registers*)
   (setq *mon-lower-case-registers*
@@ -588,7 +588,7 @@ When `IS-MON-SYSTEM-P' evaluated at loadtime by `mon-after-mon-utils-loadtime'.\
 :UPPER    -> `*mon-upper-case-registers*'
 :LOWER    -> `*mon-lower-case-registers*'\n
 :SEE-ALSO `*mon-ascii-alpha-chars*', `*mon-whitespace-chars*',
-`*mon-digit-chars*', `mon-help-ascii-chars'.\n►►►")
+`*mon-digit-chars*', `mon-help-ascii-chars'.\n▶▶▶")
 ;;
 (unless (bound-and-true-p *mon-registr-of-registers*)
   (setq *mon-registr-of-registers*
@@ -619,7 +619,7 @@ replace contents of buffer or region as if by `query-replace-regexp'.\n
 Default is to replace as if by `query-replace'.
 Does not move point.\n
 :SEE-ALSO `mon-coerce->char', `mon-set-all-registers-to-char',
-`mon-reset-registers'.\n►►►"
+`mon-reset-registers'.\n▶▶▶"
   (interactive (list 
                 (read-string "Replace string-matching contents of register: ")
                 (read-string "With string-matching contents of register: ")
@@ -650,7 +650,7 @@ Does not move point.\n
 :LOWER    -> `*mon-lower-case-registers*';
 :ALL      ->  everything in `*mon-registr-of-registers*'
 When called interactively or INTRP is non-nil resets all registers.\n
-:SEE-ALSO `mon-set-all-registers-to-char', `*mon-registr-of-registers*'.\n►►►"
+:SEE-ALSO `mon-set-all-registers-to-char', `*mon-registr-of-registers*'.\n▶▶▶"
   (interactive (list :intrp t))
   (let ((mrr-rgstr-kys `(,cntrl ,digit ,digit-S ,symbol ,upper ,lower))
         (mrr-rgstr-lst  '(cntrl  digit  digit-S  symbol  upper lower))
@@ -720,7 +720,7 @@ Useful when testing/debugging register contents. Examining an empty register
 returns nil. Having zapped all register contents it is difficult to tell 
 whether if it was emptied programatically or simply never set! We need to reset
 all registers to 'something' in order to test they are _NOT_ empty.
-:SEE-ALSO `mon-reset-registers', `*mon-registr-of-registers*'.\n►►►"
+:SEE-ALSO `mon-reset-registers', `*mon-registr-of-registers*'.\n▶▶▶"
   (interactive)
   (progn
     ;; :CNTRL-CHAR-REGISTERS

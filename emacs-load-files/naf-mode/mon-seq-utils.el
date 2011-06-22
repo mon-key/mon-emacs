@@ -21,7 +21,7 @@
 ;; DESCRIPTION:
 ;; mon-seq-utils provides procedures for frobbing sequences.
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;; `mon-set-difference'
 ;; `mon-intersection'
 ;; `mon-maptree'
@@ -85,7 +85,7 @@
 ;; `mon-elt-<'
 ;; `mon-elt->'
 ;;
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;;
@@ -252,7 +252,7 @@
 ;;; :CREATED <Timestamp: #{2011-01-11T19:01:43-05:00Z}#{11022} - by MON KEY>
 (defgroup mon-seq-utils nil
   "Customization group for variables and functions of :FILE mon-seq-utils.el\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   ;; :prefix "<PREFIX>"
   :link '(url-link 
           :tag "\n:EMACSWIKI-FILE (URL `http://www.emacswiki.org/emacs/mon-seq-utils.el')" 
@@ -288,7 +288,7 @@ The symbols contained of this list are defined in :FILE mon-seq-utils.el\n
 `*mon-line-utils-xrefs*', `*mon-plist-utils-xrefs*' `*mon-seq-utils-xrefs*',
 `*mon-window-utils-xrefs*', `*naf-mode-xref-of-xrefs*',
 `*naf-mode-faces-xrefs*', `*naf-mode-date-xrefs*', `*mon-ulan-utils-xrefs*',
-`*mon-xrefs-xrefs'.\n►►►"
+`*mon-xrefs-xrefs'.\n▶▶▶"
   :type '(repeat symbol)
   :group 'mon-seq-utils
   :group 'mon-xrefs)
@@ -307,7 +307,7 @@ The symbols contained of this list are defined in :FILE mon-seq-utils.el\n
 :SEE-ALSO `mon-elt->', `mon-elt->elt', `mon-elt-<', `mon-elt-<elt',
 `mon-sublist', `mon-sublist-gutted', `mon-map-append', `mon-maptree',
 `mon-transpose', `mon-flatten', `mon-combine', `mon-recursive-apply',
-`mon-intersection', `mon-remove-if', `mon-mapcar'.\n►►►"
+`mon-intersection', `mon-remove-if', `mon-mapcar'.\n▶▶▶"
   (unless (mon-list-proper-p  w-after-lst) 
     (mon-list-proper-p-ERROR :w-error  t
                              :function "mon-elt->"
@@ -324,7 +324,7 @@ The symbols contained of this list are defined in :FILE mon-seq-utils.el\n
 :SEE-ALSO `mon-elt->', `mon-elt->elt', `mon-elt-<', `mon-elt-<elt',
 `mon-sublist', `mon-sublist-gutted', `mon-map-append', `mon-maptree',
 `mon-transpose', `mon-flatten', `mon-combine', `mon-recursive-apply',
-`mon-intersection', `mon-remove-if', `mon-mapcar'.\n►►►"
+`mon-intersection', `mon-remove-if', `mon-mapcar'.\n▶▶▶"
   (unless (mon-list-proper-p  w-before-lst) 
     (mon-format :w-fun  #'error 
                 :w-spec '(":FUNCTION `mon-elt-<' " 
@@ -338,7 +338,7 @@ The symbols contained of this list are defined in :FILE mon-seq-utils.el\n
 :SEE-ALSO `mon-elt->', `mon-elt->elt', `mon-elt-<', `mon-elt-<elt',
 `mon-sublist', `mon-sublist-gutted', `mon-map-append', `mon-maptree',
 `mon-transpose', `mon-flatten', `mon-combine', `mon-recursive-apply',
-`mon-intersection', `mon-mapcar'.\n►►►"
+`mon-intersection', `mon-mapcar'.\n▶▶▶"
   (unless (mon-list-proper-p  w-old-make-new-lst) 
     (mon-list-proper-p-ERROR :w-error  t
                              :function "mon-elt->elt" 
@@ -357,7 +357,7 @@ Signal an error when wither is not.\n
 :SEE-ALSO `mon-elt->', `mon-elt->elt', `mon-elt-<', `mon-elt-<elt',
 `mon-sublist', `mon-sublist-gutted', `mon-map-append', `mon-maptree',
 `mon-transpose', `mon-flatten', `mon-combine', `mon-recursive-apply',
-`mon-intersection', `mon-remove-if', `mon-mapcar'.\n►►►"
+`mon-intersection', `mon-remove-if', `mon-mapcar'.\n▶▶▶"
   (or (and (not (mon-list-proper-p  w-exchange-lst))
            (mon-list-proper-p-ERROR :w-error  t
                                     :function "mon-elt-<elt"
@@ -394,7 +394,7 @@ If not, cons em up.\n
 `mon-combine', `mon-map-append', `mon-maptree', `mon-transpose', `mon-flatten',
 `mon-recursive-apply', `mon-sublist', `mon-sublist-gutted', `mon-remove-dups',
 `mon-assoc-replace', `mon-moveq', `mon-elt->', `mon-elt-<', `mon-elt->elt',
-`mon-elt-<elt', `mon-mapcar'.\n►►►"
+`mon-elt-<elt', `mon-mapcar'.\n▶▶▶"
   (if (and (eq w-car (car original-cons)) 
            (eq w-cdr (cdr original-cons)))
       original-cons
@@ -416,7 +416,7 @@ If not, cons em up.\n
 `mon-mapcar', `mon-map-append', `mon-maptree', `mon-transpose', `mon-flatten',
 `mon-recursive-apply', `mon-sublist', `mon-sublist-gutted', `mon-remove-dups',
 `mon-assoc-replace', `mon-moveq', `mon-elt->', `mon-elt-<', `mon-elt->elt',
-`mon-elt-<elt'.\n►►►"
+`mon-elt-<elt'.\n▶▶▶"
   (if (eq w-cons w-list)
       (cdr w-list)
     (let ((mdc-p w-list))
@@ -464,7 +464,7 @@ uses O(log n) space.\n
 `mon-mapcar',`mon-transpose', `mon-flatten', `mon-recursive-apply',
 `mon-sublist', `mon-sublist-gutted', `mon-remove-dups', `mon-assoc-replace',
 `mon-moveq', `mon-elt->', `mon-elt-<', `mon-elt->elt', `mon-elt-<elt',
-`slime-shuffle-list', `shuffle-vector'.\n►►►"
+`slime-shuffle-list', `shuffle-vector'.\n▶▶▶"
   (labels ((mrndz-f (mrndz-p mrndz-len mrndz-tl)
               (cond ((null mrndz-p) mrndz-tl)
                    (t (loop
@@ -524,7 +524,7 @@ When optional arg W-NO-ERRORS is non-nil do not signal an error instead return n
 `mon-mapcar', `mon-transpose', `mon-flatten', `mon-recursive-apply', `mon-sublist',
 `mon-sublist-gutted', `mon-remove-dups', `mon-assoc-replace', `mon-moveq',
 `mon-elt->', `mon-elt-<', `mon-elt->elt', `mon-elt-<elt',
-`mon-list-nshuffle-TEST', `shuffle-vector', `slime-shuffle-list'.\n►►►"
+`mon-list-nshuffle-TEST', `shuffle-vector', `slime-shuffle-list'.\n▶▶▶"
   (let* ((vflg (vectorp list-to-shuffle))
          (mlss-lst (or (and vflg (copy-tree list-to-shuffle t))
                        (copy-tree list-to-shuffle))))
@@ -568,7 +568,7 @@ Of several `eq' occurrences of an element in DUP-LIST, the first one is kept.\n
 `mon-nshuffle-vector', `mon-list-nshuffle', `mon-list-shuffle-safe',
 `mon-combine', `mon-mapcar', `mon-map-append', `mon-maptree', `mon-transpose',
 `mon-flatten', `mon-recursive-apply', `mon-sublist', `mon-sublist-gutted',
-`mon-moveq', `mon-elt->', `mon-elt-<', `mon-elt->elt', `mon-elt-<elt'.\n►►►"
+`mon-moveq', `mon-elt->', `mon-elt-<', `mon-elt->elt', `mon-elt-<elt'.\n▶▶▶"
   (let ((md-dq-tail dup-list))
     (while md-dq-tail
       (setcdr md-dq-tail (delq (car md-dq-tail) (cdr md-dq-tail)))
@@ -598,7 +598,7 @@ are the same Lisp object.\n
 :ALIASED-BY `mon-delete-dups-eql'
 :ALIASED-BY `mon-list-deleql-dups'\n
 :SEE-ALSO `mon-delete-first', `mon-list-last', `mon-delete-if',
-`mon-remove-if-not', `mon-remove-dups'.\n►►►"
+`mon-remove-if-not', `mon-remove-dups'.\n▶▶▶"
   (let (mdql-gthr-eql mdql-fnlz-eql)
     (while dup-eql-list
       (let* ((mdql-mmql-pop (car (push (pop dup-eql-list) mdql-gthr-eql)))
@@ -671,7 +671,7 @@ the dotted list at tail not the atom in cdr of dotted list, e.g.\n
  \(last '\(nil \"e\"\)\)\n
  \(mon-list-last '\(nil \"e\"\)\)\n
 :SEE-ALSO `mon-list-sift', `mon-list-filter', `mon-delete-first',
-`mon-list-proper-p', `mon-sequence-mappable-p'.\n►►►"
+`mon-list-proper-p', `mon-sequence-mappable-p'.\n▶▶▶"
   (if (listp in-list)
       (cond ((mon-list-proper-p  in-list)
              (car (last in-list)))
@@ -703,7 +703,7 @@ When optional arg AS-TWO-LIST is non-nil return as two elt list.\n
 `mon-intersection', `mon-combine', `mon-map-append', `mon-maptree',
 `mon-mapcar', `mon-transpose', `mon-flatten', `mon-recursive-apply',
 `mon-sublist', `mon-sublist-gutted', `mon-assoc-replace', `mon-moveq',
-`mon-elt->', `mon-elt-<', `mon-elt->elt', `mon-elt-<elt'.\n►►►"
+`mon-elt->', `mon-elt-<', `mon-elt->elt', `mon-elt-<elt'.\n▶▶▶"
   (let* ((mlma-acopy (copy-sequence list-a))
 	 (mlma-bcopy (copy-sequence list-b))
 	 (mlma-tail mlma-acopy))
@@ -740,7 +740,7 @@ When optional arg AS-TWO-LIST is non-nil return as two elt list.\n
 `mon-flatten', `mon-recursive-apply', `mon-sublist', `mon-sublist-gutted',
 `mon-remove-dups', `mon-assoc-replace', `mon-moveq', `mon-elt->', `mon-elt-<',
 `mon-elt->elt', `mon-elt-<elt', `mon-list-match-tails', `mon-list-reorder',
-`mon-list-proper-p', `mon-maybe-cons'.\n►►►"
+`mon-list-proper-p', `mon-maybe-cons'.\n▶▶▶"
   (let (mrd-tmp-list mrd-head)
     (while maybe-twins-lst
       (setq mrd-head (pop maybe-twins-lst))
@@ -768,7 +768,7 @@ When W-PRED is non-nil, it is a function which further filters FROM-LST for remo
 `\(:l1-filtered-w-pred 
   ,\(mon-list-filter l1 l2 #'\(lambda \(ch\) \(and \(> \(mon-char-code ch\) 97\)\)\)\)
    :l1-modified ,l1\)\)\n
-:SEE-ALSO `mon-list-sift', `mon-list-last', `mon-list-match-tails'.\n►►►"
+:SEE-ALSO `mon-list-sift', `mon-list-last', `mon-list-match-tails'.\n▶▶▶"
   (while (and from-lst (or (and match-lst (member (car from-lst) match-lst))
                            (and w-pred
                                 (funcall w-pred (car from-lst)))))
@@ -801,7 +801,7 @@ When the last items of the two do not satsify equivialence return nil.\n
 `mon-mapcar', `mon-map-append', `mon-maptree', `mon-transpose', `mon-flatten',
 `mon-recursive-apply', `mon-maybe-cons', `mon-delq-cons', `mon-remove-dups',
 `mon-sublist', `mon-sublist-gutted', `mon-assoc-replace', `mon-moveq',
-`mon-elt->', `mon-elt-<', `mon-elt->elt', `mon-elt-<elt', `car-less-than-car'.\n►►►"
+`mon-elt->', `mon-elt-<', `mon-elt->elt', `mon-elt-<elt', `car-less-than-car'.\n▶▶▶"
   (let ((mlct-a (length comp-a))
 	(mlct-b (length comp-b)))
     ;; Make sure they are the same length
@@ -836,7 +836,7 @@ ADD-ELTS-TO list with ADD-ELTS-FRM list.\n
 `mon-transpose', `mon-flatten', `mon-recursive-apply', `mon-maybe-cons',
 `mon-delq-cons', `mon-remove-dups', `mon-sublist', `mon-sublist-gutted',
 `mon-assoc-replace', `mon-moveq', `mon-elt->', `mon-elt-<', `mon-elt->elt',
-`mon-elt-<elt'.\n►►►"
+`mon-elt-<elt'.\n▶▶▶"
   (let ((mlann-atl 
          (and (not (unless (consp add-elts-to)
                      (mon-format :w-fun  #'error 
@@ -877,7 +877,7 @@ ADD-ELTS-TO list with ADD-ELTS-FRM list.\n
 \(mon-list-ensure nil\)\n
 \(mon-list-ensure \(mon-list-ensure nil\)\)\n
 :SEE-ALSO `mon-list-proper-p', `mon-list-add-non-nil', `mon-maybe-cons',
-`mon-delq-cons', `consp', `listp', `nlistp', `atom'.\n►►►"
+`mon-delq-cons', `consp', `listp', `nlistp', `atom'.\n▶▶▶"
   (or (and (nlistp obj-or-lst)
            (list obj-or-lst))
       obj-or-lst))
@@ -895,7 +895,7 @@ ADD-ELTS-TO list with ADD-ELTS-FRM list.\n
 Args LIST-ITEMS and LIST-ORDER are actual proper-lists.\n
 Return value from `mon-list-reorder' is coerced back to vector when SEQ-ITEMS
 arg was `vectorp'.\n
-:SEE-ALSO `mon-list-reorder-TEST'.\n►►►"
+:SEE-ALSO `mon-list-reorder-TEST'.\n▶▶▶"
   (let ((mlr-lst-itm  list-items)
         (mlr-lst-ordr list-order)
         mlr-rtn)
@@ -963,7 +963,7 @@ SEQ-ORDER takes precedence else default to elt at index in SEQ-ITEMS, e.g.:\n
 `mon-mapcar', `mon-map-append', `mon-maptree', `mon-transpose', `mon-flatten',
 `mon-recursive-apply', `mon-sublist', `mon-sublist-gutted', `mon-remove-dups',
 `mon-assoc-replace', `mon-moveq', `mon-elt->', `mon-elt-<', `mon-elt->elt',
-`mon-elt-<elt', `car-less-than-car'.\n►►►"
+`mon-elt-<elt', `car-less-than-car'.\n▶▶▶"
   (let (mlr-vec-flag)
     (if ;; Both SEQ-ITEMS/SEQ-ORDER or SEQ-ITEMS null. Don't bother.
         (or (and (not seq-items) (not seq-order)) (not seq-items))
@@ -1041,7 +1041,7 @@ to avoid corrupting the original lst1 and lst2.\n
   `\(,\(mon-union L1 L2\) ,L1 ,L2\)\)\n
 :ALIASED-BY `mon-list-union'\n
 :SEE-ALSO `mon-intersection', `mon-member-if', `mon-equality-or-predicate',
-`cvs-union', `car-less-than-car'.\n►►►"
+`cvs-union', `car-less-than-car'.\n▶▶▶"
   (or (and (null lst-1) lst-2)
       (and (null lst-2) lst-1)
       (and (equal lst-1 lst-2) lst-1)
@@ -1068,7 +1068,7 @@ Return the sublist of IN-LIST whose car matches.\n
 :ALIASED-BY `mon-list-member-if'\n
 :SEE-ALSO `mon-mapl', `mon-maplist', `mon-mapcar', `mon-mapcan', `mon-mapcon',
 `mon-remove-if', `mon-remove-if-not', `mon-delete-if', `mon-char-code',
-`mon-union', `mon-intersection'.\n►►►"
+`mon-union', `mon-intersection'.\n▶▶▶"
   ;; :TODO incorporate `mon-function-object-p'/`mon-mappable-sequence-p'
   (unless (functionp predicate)
     (mon-format :w-fun #'error 
@@ -1096,7 +1096,7 @@ whenever possible.\n
 :ALIASED-BY `mon-list-delete-if'\n
 :SEE-ALSO `mon-mapl', `mon-maplist', `mon-mapcar', `mon-mapcan', `mon-mapcon',
 `mon-remove-if', `mon-remove-if-not', `mon-delete-if', `mon-member-if',
-`mon-char-code', `mon-subseq', `car-less-than-car'.\n►►►"
+`mon-char-code', `mon-subseq', `car-less-than-car'.\n▶▶▶"
   ;; :TODO incorporate `mon-function-object-p'/`mon-mappable-sequence-p'
   (unless (functionp predicate)
     (mon-format :w-fun #'error 
@@ -1133,7 +1133,7 @@ avoid corrupting IN-SEQ.\n
 :ALIASED-BY `mon-list-remove-if-not'\n
 :SEE-ALSO `mon-mapl', `mon-maplist', `mon-mapcar', `mon-mapcan', `mon-mapcon',
 `mon-remove-if', `mon-remove-if-not', `mon-delete-if', `mon-member-if',
-`mon-subseq', `mon-intersection', `mon-char-code', `car-less-than-car'.\n►►►"
+`mon-subseq', `mon-intersection', `mon-char-code', `car-less-than-car'.\n▶▶▶"
   ;; :TODO incorporate `mon-function-object-p'/`mon-mappable-sequence-p'/`mon-equality-or-predicate'
   (unless (functionp predicate)
     (mon-format :w-fun #'error 
@@ -1168,7 +1168,7 @@ RMV-IF-PREDICATE is unary function.\n
 `mon-elt-<elt', `mon-delq-cons', `mon-list-make-unique', `mon-list-match-tails',
 `mon-nshuffle-vector', `mon-list-nshuffle', `mon-list-shuffle-safe',
 `mon-list-reorder', `mon-list-proper-p', `mon-maybe-cons',
-`mon-delq-cons', `car-less-than-car'.\n►►►"
+`mon-delq-cons', `car-less-than-car'.\n▶▶▶"
   ;; :TODO incorporate `mon-function-object-p'/`mon-mappable-sequence-p'/`mon-equality-or-predicate'
   (unless (functionp rmv-if-predicate)
     (mon-format :w-fun #'error 
@@ -1223,7 +1223,7 @@ and does not provide intelligent type checking.\n
 `mon-elt->', `mon-elt-<', `mon-elt->elt', `mon-elt-<elt', `mon-delq-cons',
 `mon-list-make-unique', `mon-list-match-tails', `mon-list-reorder',
 `mon-nshuffle-vector', `mon-list-nshuffle', `mon-list-shuffle-safe',
-`mon-list-proper-p', `hfy-interq', `smtpmail-intersection', `car-less-than-car'.\n►►►"
+`mon-list-proper-p', `hfy-interq', `smtpmail-intersection', `car-less-than-car'.\n▶▶▶"
   ;; :TODO Use `mon-list-proper-p'/`mon-sequence-mappable-p' here instead.
   ;; :WAS (unless (and (or (consp list1) (null list1))
   ;;              (or (consp list2) (null list2)))
@@ -1299,7 +1299,7 @@ Eliminates duplicates between SET1-LST and SET2-LST using COMPARISON-FUNC.\n
 :SEE-ALSO `mon-equality-or-predicate', `mon-intersection', `mon-union',
 `mon-mismatch', `mon-remove-if', `mon-mapcar', `mon-map-append', `mon-mapl',
 `mon-maplist', `mon-mapcar', `mon-mapcan', `mon-mapcon', `mon-remove-if-not',
-`mon-delete-if', `mon-member-if', `mon-subseq', `mon-char-code', `car-less-than-car'.\n►►►"
+`mon-delete-if', `mon-member-if', `mon-subseq', `mon-char-code', `car-less-than-car'.\n▶▶▶"
   (let ((msd-rslt (list 'a)) ;; The 'a gives `list' something to hold onto.
         ;; :WAS `ediff-member' Use comparison-func to decide who is a member
         (msd-pred 
@@ -1352,7 +1352,7 @@ When supplied optional arg W-ALIST must satisfy `mon-list-proper-and-dotted-p'.
 ;; :Following fail succesfully
 \(mon-pairlis '\(\"a\" \"b\" . \"c\"\) '\(a b c\)\)\n
 \(mon-pairlis '\(\"a\" \"b\" \"c\"\) '\(a b . c\)\)\n
-:SEE-ALSO `mon-mapcar', `car-less-than-car'.\n►►►"
+:SEE-ALSO `mon-mapcar', `car-less-than-car'.\n▶▶▶"
   (nconc 
    (mon-mapcar #'cons 
                (or (and (mon-list-proper-p keys-lst) keys-lst)
@@ -1387,7 +1387,7 @@ following applicable constraints hold for the value of mapped thing:\n
 :EXAMPLE\n\n\(map 'list #'- '\(1 2 3 4\)\)\n
 \(map 'string #'\(lambda \(x\) \(if \(oddp x\) ?1 ?0\)\) '\(1 2 3 4\)\)\n
 \(map 'vector #'cons \"abc\" \"de\"\)
-:SEE-ALSO `mon-every', `mon-map1', `cvs-map', `map', `coerce', `type-of',`typep'.\n►►►
+:SEE-ALSO `mon-every', `mon-map1', `cvs-map', `map', `coerce', `type-of',`typep'.\n▶▶▶
 \n(fn W-RSLT-TYPE MAP-FUNC MAP-LST MAP-LSTS)"
   (setq map-lsts (nconc map-lst map-lsts))
   (let ((mmp-gthr ()))
@@ -1500,7 +1500,7 @@ the resulting sequence.\n
 :SEE :FILE sblc/src/code/list.lisp
 :SEE-ALSO `mon-remove-if-not', `mon-delete-if', `mon-member-if', `mon-subseq',
 `mon-intersection', `mon-mismatch', `mon-set-difference', `mon-char-code'
-`cvs-map'.\n►►►"
+`cvs-map'.\n▶▶▶"
   ;; :TODO Use (memq (mon-function-object-p fun-designator)
   ;;                 (remq 'macro *mon-function-object-types*))
   (unless 
@@ -1561,7 +1561,7 @@ With one sequence like elisp's `mapc' with several, it is like the Common Lisp
               #::dummy ,dummy\)\)\n
 :SEE-ALSO `mon-map1', `mon-mapl', `mon-maplist', `mon-mapcar', `mon-mapcan',
 `mon-mapcon', `mon-remove-if-not', `mon-delete-if', `mon-member-if',
-`mon-intersection', `mon-set-difference', `mon-mismatch', `mon-subseq'.\n►►►"
+`mon-intersection', `mon-set-difference', `mon-mismatch', `mon-subseq'.\n▶▶▶"
   (if more-lsts
       (mon-map1 mapc-fun (cons mapc-lst more-lsts) nil t)
     (mapc mapc-fun mapc-lst)))
@@ -1588,7 +1588,7 @@ list runs out, any excess elements remaining in other lists are ignored.\n
 \(mon-mapcar #'cons '\(a b c\) '\(1 2 3\)\)\n
 :SEE-ALSO `mon-map1', `mon-mapc', `mon-mapl', `mon-maplist', `mon-mapcar',
 `mon-mapcan', `mon-mapcon', `mon-remove-if-not', `mon-delete-if',
-`mon-member-if', `mon-intersection', `mon-subseq', `mon-char-code'.\n►►►"
+`mon-member-if', `mon-intersection', `mon-subseq', `mon-char-code'.\n▶▶▶"
   (mon-map1 
    ;; fun-designator
    mapcar-fun 
@@ -1633,7 +1633,7 @@ combined into a list as if by `nconc' rather than `list', e.g.:\n
 \(mon-mapcan #'\(lambda \(x\) \(and \(numberp x\) \(list x\)\)\)
             '\(a 1 b c 3 4 d 5\)\)\n
 :SEE-ALSO `mon-map1', `mon-mapc', `mon-mapl', `mon-maplist', `mon-mapcar',
-`mon-mapcan', `mon-mapcon', `mon-intersection', `mon-subseq'.\n►►►"
+`mon-mapcan', `mon-mapcon', `mon-intersection', `mon-subseq'.\n▶▶▶"
   (mon-map1 mapcan-fun (cons mapcan-lst rest-lst) :nconc t))
 ;;
 ;; ,---- :UNCOMMENT-BELOW-TO-TEST
@@ -1697,7 +1697,7 @@ are not accumulated; mapl-lst is returned.\n
   bubba\)\n
 :SEE-ALSO `mon-map1', `mon-mapc', `mon-mapl', `mon-maplist', `mon-mapcar', `mon-mapcan',
 `mon-mapcon', `mon-remove-if-not', `mon-delete-if', `mon-member-if',
-`mon-intersection', `mon-subseq', `mon-char-code'.\n►►►"
+`mon-intersection', `mon-subseq', `mon-char-code'.\n▶▶▶"
   (mon-map1 mapl-fun (cons mapl-lst more-lsts) nil nil))
 
 ;;; ==============================
@@ -1717,7 +1717,7 @@ are combined into a list as if by `nconc' rather than `list', e.g:
             '\(b q \(c r\) \(d s\)\)\)\n
 :SEE-ALSO `mon-map1', `mon-mapc', `mon-mapl', `mon-maplist', `mon-mapcar', `mon-mapcan',
 `mon-mapcon', `mon-remove-if-not', `mon-delete-if', `mon-member-if',
-`mon-intersection', `mon-subseq', `mon-char-code'.\n►►►"
+`mon-intersection', `mon-subseq', `mon-char-code'.\n▶▶▶"
   (mon-map1 mapcon-fun (cons mapcon-lst more-lsts) :nconc nil))
 
 ;;; ==============================
@@ -1745,7 +1745,7 @@ cdr of each list, and then to the cdr of the cdr of each list, and so on.\n
 list was the last instance of that element in the input list.\n
 :SEE-ALSO `mon-map1', `mon-mapc', `mon-mapl', `mon-maplist', `mon-mapcar', `mon-mapcan',
 `mon-mapcon', `mon-remove-if-not', `mon-delete-if', `mon-member-if',
-`mon-intersection', `mon-subseq', `mon-char-code'.\n►►►"
+`mon-intersection', `mon-subseq', `mon-char-code'.\n▶▶▶"
   (mon-map1 maplist-fun (cons maplist-lst more-lsts) :list nil))
 ;;
 ;; ,---- :UNCOMMENT-BELOW-TO-TEST
@@ -1800,7 +1800,7 @@ If SEQ-END is omitted, it defaults to the length of SEQ.\n
 `mon-transpose', `mon-maptree', `mon-mapcar', `mon-recursive-apply',
 `mon-combine', `mon-elt->', `mon-elt-<', `mon-elt->elt', `mon-elt-<elt',
 `mon-moveq', `mon-nshuffle-vector', `mon-list-nshuffle',
-`mon-list-shuffle-safe', `mon-list-reorder', `car-less-than-car'.\n►►►"
+`mon-list-shuffle-safe', `mon-list-reorder', `car-less-than-car'.\n▶▶▶"
   (cond ((null in-seq) 
          (mon-format :w-fun #'error 
                      :w-spec '(":FUNCTON `mon-subseq'"
@@ -1874,7 +1874,7 @@ If SEQ-END is omitted, it defaults to the length of SEQ.\n
 `mon-moveq', `mon-flatten', `mon-transpose', `mon-maptree', `mon-mapcar',
 `mon-recursive-apply', `mon-map-append', `mon-combine', `mon-intersection',
 `mon-elt->', `mon-elt-<', `mon-elt->elt', `mon-elt-<elt', `mon-nshuffle-vector',
-`mon-list-nshuffle', `mon-list-shuffle-safe', `mon-list-reorder'.\n►►►"
+`mon-list-nshuffle', `mon-list-shuffle-safe', `mon-list-reorder'.\n▶▶▶"
   (let* ((msbl-sub (nthcdr skip-n in-list)) 
 	 (msbl-q (length msbl-sub)))
     (reverse (nthcdr (- msbl-q return-n) (reverse msbl-sub)))))
@@ -1903,7 +1903,7 @@ If SEQ-END is omitted, it defaults to the length of SEQ.\n
 `mon-nshuffle-vector', `mon-list-nshuffle', `mon-list-shuffle-safe',
 `mon-maybe-cons', `mon-moveq', `mon-elt->', `mon-elt-<', `mon-elt->elt',
 `mon-elt-<elt', `mon-list-match-tails', `mon-list-reorder',
-`mon-list-proper-p'.\n►►►"
+`mon-list-proper-p'.\n▶▶▶"
   (let* ((msblg-pre-guts 
           (nthcdr (length (nthcdr gut-from-n gut-lst)) (reverse gut-lst))) ;; msblg-pre-guts reversed
 	 (msblg-pst-guts 
@@ -1930,7 +1930,7 @@ If SEQ-END is omitted, it defaults to the length of SEQ.\n
 `mon-moveq', `mon-elt->', `mon-elt-<', `mon-elt->elt', `mon-elt-<elt',
 `mon-delq-cons', `mon-delq-dups', `mon-list-make-unique', `mon-remove-if',
 `mon-remove-dups', `mon-assoc-replace', `mon-list-reorder',
-`mon-nshuffle-vector', `mon-list-nshuffle', `mon-list-shuffle-safe'.\n►►►"
+`mon-nshuffle-vector', `mon-list-nshuffle', `mon-list-shuffle-safe'.\n▶▶▶"
   (cond ((null mapping-lst) nil)
 	(t (append (car mapping-lst) (mon-map-append (cdr mapping-lst))))))
 
@@ -1952,7 +1952,7 @@ SEQ1 where the car of elt SEQ1 matches the car of elt SEQ2.\n
 `mon-mapcar', `mon-map-append', `mon-maptree', `mon-transpose', `mon-flatten',
 `mon-recursive-apply', `mon-list-match-tails', `mon-sublist',
 `mon-sublist-gutted', `mon-moveq', `mon-elt->', `mon-elt-<', `mon-elt->elt',
-`mon-elt-<elt', `mon-maybe-cons', `mon-list-proper-p', `car-less-than-car'.\n►►►"
+`mon-elt-<elt', `mon-maybe-cons', `mon-list-proper-p', `car-less-than-car'.\n▶▶▶"
   (let (mar-rtn)
     (setq mar-rtn
           (mapcar #'(lambda (mar-L-1)
@@ -1982,7 +1982,7 @@ well... null.\n
 `mon-recursive-apply', `mon-delq-cons', `mon-delq-dups', `mon-remove-if',
 `mon-remove-dups', `mon-list-make-unique', `mon-assoc-replace',
 `mon-list-match-tails', `mon-list-reorder', `mon-nshuffle-vector',
-`mon-list-nshuffle', `mon-list-shuffle-safe', `car-less-than-car'.\n►►►"
+`mon-list-nshuffle', `mon-list-shuffle-safe', `car-less-than-car'.\n▶▶▶"
   ;; :WAS  (list 'progn (list 'setq enqueue-new with-old-to-null) 
   ;;       (list 'setq with-old-to-null 'nil)) )
   `(prog1 
@@ -2008,7 +2008,7 @@ TREE-TO-FLATTEN is a proper-list, consed pair, or vector.\n
 `mon-elt-<elt', `mon-remove-if', `mon-remove-dups', `mon-delq-dups'
 `mon-delq-cons', `mon-list-make-unique', `mon-remove-dups', `mon-assoc-replace',
 `mon-list-reorder', `mon-nshuffle-vector', `mon-list-nshuffle',
-`mon-list-shuffle-safe'.\n►►►"
+`mon-list-shuffle-safe'.\n▶▶▶"
   ;; (copy-tree tree-to-flatten)
   (do ((mfltn-rslt   nil)
        (mfltn-stack  nil))
@@ -2041,7 +2041,7 @@ TREE-TO-FLATTEN is a proper-list, consed pair, or vector.\n
 :ALIASED-BY `mon-rotate-flatten-list'\n
 :SEE-ALSO `mon-flatten', `mon-rotate-string', `mon-rotate-next',
 `mon-rotate-region', `mon-rotate-get-rotations-for',
-`mon-string-rotate-to-regexp', `mon-indent-or-rotate'.\n►►►"
+`mon-string-rotate-to-regexp', `mon-indent-or-rotate'.\n▶▶▶"
   (if (null lst-of-lsts)
       lst-of-lsts
     (if (listp lst-of-lsts)
@@ -2066,7 +2066,7 @@ TREE-TO-FLATTEN is a proper-list, consed pair, or vector.\n
 `mon-elt->elt', `mon-elt-<elt', `mon-delq-cons', `mon-delq-dups'
 `mon-remove-if', `mon-remove-dups', `mon-assoc-replace', `mon-list-make-unique',
 `mon-list-reorder', `mon-nshuffle-vector',
-`mon-list-nshuffle'. `car-less-than-car'.\n►►►"
+`mon-list-nshuffle'. `car-less-than-car'.\n▶▶▶"
   (if (atom trans-tree)
       trans-tree
       (cons (mon-transpose (cdr trans-tree))
@@ -2087,7 +2087,7 @@ TREE-TO-FLATTEN is a proper-list, consed pair, or vector.\n
                 \(mon-list-intersperse `\(,x ,@y\) '_\)\)
             '\(a s d f g\) '\(g f d s a\)
             '\(q w e r t\) '\(t r e w q\)\)\n
-:SEE-ALSO `mon-transpose', `mon-map-append', `mon-mapcan', `mon-mapcon'.\n►►►"
+:SEE-ALSO `mon-transpose', `mon-map-append', `mon-mapcan', `mon-mapcon'.\n▶▶▶"
   (let ((mil-list* ;; this is cl.el's `list*' 
          #'(lambda (mil-L-1-arg &rest mil-L-1-rest)
              (cond ((not mil-L-1-rest) mil-L-1-arg)
@@ -2144,7 +2144,7 @@ Each sequence should satisfy `mon-sequence-mappable-p', signal an error if not.\
                  \(and \(numberp x\) \(numberp y\) \(numberp z\)\)\)
              '\(0 1 2 3 4\) '\(5 6 7 8 9 mmm\) '\(4 3 2 1 0\)\)\n
 :SEE-ALSO `mon-mapc', `mon-sequence-mappable-p', `mon-mismatch',
-`cvs-every', `car-less-than-car'.\n►►►"
+`cvs-every', `car-less-than-car'.\n▶▶▶"
   (setq ev-lsts
         (mapcar #'(lambda (me-L-1-lsts)
                     (or (and (consp me-L-1-lsts) me-L-1-lsts)
@@ -2187,7 +2187,7 @@ Should byte-compile without CL runtime package warnings.\n
 `mon-maptree', `mon-transpose', `mon-elt->', `mon-elt-<', `mon-elt->elt',
 `mon-elt-<elt', `mon-flatten', `mon-combine', `mon-recursive-apply',
 `mon-delq-cons', `mon-list-make-unique', `mon-list-match-tails',
-`mon-list-reorder', `mon-list-proper-p', `mon-maybe-cons', `car-less-than-car'.\n►►►"
+`mon-list-reorder', `mon-list-proper-p', `mon-maybe-cons', `car-less-than-car'.\n▶▶▶"
   (edmacro-mismatch sqn1 sqn2 sqn1-str sqn1-end  sqn2-str sqn2-end))
 
 ;;; ==============================
@@ -2207,7 +2207,7 @@ Should byte-compile without CL runtime package warnings.\n
 `mon-elt-<elt', `mon-sublist', `mon-sublist-gutted', `mon-remove-if',
 `mon-remove-dups', `mon-delq-dups', `mon-delq-cons', `mon-list-make-unique',
 `mon-assoc-replace', `mon-list-reorder', `mon-nshuffle-vector',
-`mon-list-nshuffle', `car-less-than-car'.\n►►►"
+`mon-list-nshuffle', `car-less-than-car'.\n▶▶▶"
   ;; :WAS
   ;; (cond ((null trees) nil)
   ;;       ((every (function null)  trees) nil)
@@ -2243,7 +2243,7 @@ Only the elements from LIST-A must be an atom to be passed to ATOM-FUN.\n
 `mon-elt->', `mon-elt-<', `mon-elt->elt', `mon-elt-<elt', `mon-delq-cons',
 `mon-delq-dups', `mon-remove-dups', `mon-remove-if', `mon-list-make-unique',
 `mon-assoc-replace', `mon-list-reorder', `mon-nshuffle-vector',
-`mon-list-nshuffle', `car-less-than-car'.\n►►►"
+`mon-list-nshuffle', `car-less-than-car'.\n▶▶▶"
   (cond ((null list-a) nil)
         ((atom list-a) (apply atom-fun (list list-a list-b)))
         (t (cons (mon-recursive-apply atom-fun (car list-a) (car list-b)) 
@@ -2267,7 +2267,7 @@ predicate on the elements.\n
 `mon-elt-<', `mon-elt->elt', `mon-elt-<elt', `mon-delq-cons', `mon-delq-dups',
 `mon-remove-dups', `mon-remove-if', `mon-assoc-replace', `mon-list-make-unique',
 `mon-list-reorder', `mon-nshuffle-vector', `mon-list-nshuffle',
-`car-less-than-car'.\n►►►"
+`car-less-than-car'.\n▶▶▶"
   (let ((mlm-res nil))
     (while (and list1 list2)
       (if (funcall pred (car list2) (car list1))
@@ -2293,7 +2293,7 @@ in COMBINE-LSTS.\n
 `mon-moveq', `mon-elt->', `mon-elt-<', `mon-elt->elt', `mon-elt-<elt',
 `mon-delq-cons', `mon-delq-dups', `mon-remove-dups', `mon-remove-if',
 `mon-assoc-replace', `mon-list-make-unique', `mon-list-reorder',
-`mon-nshuffle-vector', `mon-list-nshuffle', `car-less-than-car'.\n►►►"
+`mon-nshuffle-vector', `mon-list-nshuffle', `car-less-than-car'.\n▶▶▶"
   ;; :NOTE cl--mapcan -> `mapcan' from cl*.el 
   ;; :WAS (defun mon-combine (&rest rest) 
   ;; (flet ((cl--mapcan (func seq &rest rest)
@@ -2332,7 +2332,7 @@ ITEM's postion is cycled for each possible position in LIST.\n
 \(mon-list-variant-forms 'a '\(\)\)\n
 :SEE-ALSO `mon-list-permute-variants', `mon-list-permute-1',
 `mon-list-permute-2',`mon-permute-combine', `mon-permute-combine-1',
-`mon-permute-combine-functions-TEST'.\n►►►"
+`mon-permute-combine-functions-TEST'.\n▶▶▶"
   (if (null variegate-lst)
       (list (list variegate-item))
     (cons (cons variegate-item variegate-lst)
@@ -2365,7 +2365,7 @@ Result is a list of permuted lists.\n
 This one accumulates permuatations by leveraging `mon-mapcan',
 `mon-list-variant-forms' and recursion.\n
 :SEE-ALSO `mon-list-permute-1', `mon-list-permute-2',`mon-permute-combine',
-`mon-permute-combine-1', `mon-permute-combine-functions-TEST'.\n►►►"
+`mon-permute-combine-1', `mon-permute-combine-functions-TEST'.\n▶▶▶"
   (cond ((null elements) (list elements))
         ((null (cdr elements)) (list elements))
         (t (mon-mapcan #'(lambda (mprmt-L-1)
@@ -2391,7 +2391,7 @@ This one accumulates permuatations by leveraging nested `mon-mapcan' forms,
 recursion and non-local exits with catch/throw.\n
 :SEE-ALSO , `mon-list-variant-forms', `mon-list-permute-1',
 `mon-list-permute-2', `mon-permute-combine', `mon-permute-combine-1',
-`mon-permute-combine-functions-TEST'.\n►►►"
+`mon-permute-combine-functions-TEST'.\n▶▶▶"
   (if (atom perm-lst)
       (list perm-lst)
     (mon-mapcan #'(lambda (mprm-L-1)    
@@ -2422,7 +2422,7 @@ PERM-LST is a list of lists.\n
 :NOTE This is one of three list permuting functions.
 This one accumulates permutations as if by `loop'.\n
 :SEE-ALSO `mon-list-permute-1', `mon-list-permute-variants',
-`mon-list-variant-forms', `mon-permute-combine', `mon-permute-combine-1'.\n►►►"
+`mon-list-variant-forms', `mon-permute-combine', `mon-permute-combine-1'.\n▶▶▶"
   (if (< (length perm-lst) 2)
       (list perm-lst)
     (loop with len = (length perm-lst)
@@ -2455,7 +2455,7 @@ membership inside the innermost dolist loop.\n
 :ALIASED-BY `mon-list-permute-combine'\n
 :SEE-ALSO `mon-permute-combine-1', `mon-list-variant-forms',
 `mon-list-permute-variants', `mon-list-permute-1', `mon-list-permute-2',
-`mon-permute-combine-functions-TEST'.\n►►►"
+`mon-permute-combine-functions-TEST'.\n▶▶▶"
   (if (null prm-cmbn-lst1)
       (list '()) ;; '(())
     (let ((mpc-lst3 (mon-permute-combine (cdr prm-cmbn-lst1) prm-cmbn-lst2))
@@ -2496,7 +2496,7 @@ This one leverages `mon-mapcan' and recurses inside the an inner mapcar form.\n
 :ALIASED-BY `mon-list-permute-combine-1'\n
 :SEE-ALSO `mon-permute-combine', `mon-list-variant-forms',
 `mon-list-permute-variants', `mon-list-permute-1', `mon-list-permute-2',
-`mon-permute-combine-functions-TEST'.\n►►►"
+`mon-permute-combine-functions-TEST'.\n▶▶▶"
   (if (null combine-lst1)
       (list '());; '(())
     (mon-mapcan #'(lambda (mpc1-L-1)
@@ -2513,7 +2513,7 @@ This one leverages `mon-mapcan' and recurses inside the an inner mapcar form.\n
 ;;   "Permutations/combinations permute COMBINE-LST-1 withe COMBINE-LST-2.\n
 ;; :EXAMPLE:\n\n\(mon-permute-combine-2 '\(a b \"StringC\" 1\) '\(1 \"string2\" 3 A\)\)\n
 ;; :SEE-ALSO `mon-permute-combine', , `mon-list-variant-forms',
-;; `mon-permute-combine-functions-TEST', `mon-list-permute-variants', `mon-list-permute-1'.\n►►►"
+;; `mon-permute-combine-functions-TEST', `mon-list-permute-variants', `mon-list-permute-1'.\n▶▶▶"
 ;;   (let ((mpc2-rslt nil))
 ;;     (dolist (mpc2-D-1 combine-lst-1) ;; (mpc2-D-1 combine-lst-2)
 ;;       (dolist (mpc2-D-2 combine-lst-2)
@@ -2554,7 +2554,7 @@ a calling function which maps a sequence of strings can reuse an existing vector
 rather than repeatedly instantiating a new vector with each iteration.\n
 :ALIASED-BY `mon-string-longest-in-list'\n
 :SEE-ALSO `mon-sequence-mappable-p' ,`mon-list-string-reader',
-`mon-string-or-null-and-zerop', `string-or-null-p'.\n►►►"
+`mon-string-or-null-and-zerop', `string-or-null-p'.\n▶▶▶"
   (let ((mlsrca-lngst 0))
     (mapc #'(lambda (mlsr-L-1) 
               (or (and (mon-string-not-null-nor-zerop mlsr-L-1)
@@ -2635,7 +2635,7 @@ representation for `bit-vector's e.g.:\n
 :NOTE Assumes return value of `byteorder' is 108 \(big end first\).\n
 :SEE-ALSO `mon-get-bit-table', `*mon-bit-table*', `mon-booleanp',
 `mon-booleanp-to-binary', `mon-zero-or-onep', `mon-help-char-raw-bytes',
-`mon-help-binary-representation', `logb', `fillarray'.\n►►►"
+`mon-help-binary-representation', `logb', `fillarray'.\n▶▶▶"
  (if (= (length bool-vec) 0)
      (mon-format :w-fun #'error 
                :w-spec '(":FUNCTION `mon-bool-vector-pp' "

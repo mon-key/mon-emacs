@@ -21,14 +21,14 @@
 ;; DESCRIPTION:
 ;; mon-env-proc-utils provides procedures for interacting w/ process environment
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;; `mon-get-env-vars-symbols', `mon-get-env-vars-emacs',
 ;; `mon-get-env-vars-strings', `mon-get-emacsd-paths', `mon-get-proc-w-name',
 ;; `mon-get-sys-proc-list', `mon-insert-sys-proc-list', `mon-get-process',
 ;; `mon-get-system-specs', `mon-escape-string-for-cmd', `mon-cmd',
 ;; `mon-terminal', `mon-firefox', `mon-conkeror',
 ;;
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;;
@@ -136,7 +136,7 @@
 ;;; :CREATED <Timestamp: #{2011-01-19T15:54:00-05:00Z}#{11033} - by MON KEY>
 (defgroup mon-env-proc-utils nil
   "Customization group for variables and functions of :FILE mon-env-proc-utils.el\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   ;; :prefix "<PREFIX>"
   :link '(url-link 
           :tag "\n:EMACSWIKI-FILE (URL `http://www.emacswiki.org/emacs/mon-env-proc-utils.el')" 
@@ -165,7 +165,7 @@ The symbols contained of this list are defined in :FILE mon-env-proc-utils.el\n
 `*mon-seq-utils-xrefs*', `*mon-string-utils-xrefs*', `*mon-type-utils-xrefs*',
 `*mon-window-utils-xrefs*', `*naf-mode-xref-of-xrefs*', `*mon-slime-xrefs*',
 `*naf-mode-faces-xrefs*', `*naf-mode-date-xrefs*', `*mon-ulan-utils-xrefs*',
-`*google-define-redux-xrefs*', `*mon-xrefs-xrefs'.\n►►►"
+`*google-define-redux-xrefs*', `*mon-xrefs-xrefs'.\n▶▶▶"
   :type '(repeat symbol)
   :group 'mon-env-proc-utils
   :group 'mon-xrefs)
@@ -186,7 +186,7 @@ Does not move point.\n
 `mon-get-env-vars-emacs', `mon-get-proc-w-name', `mon-get-sys-proc-list',
 `mon-insert-sys-proc-list', `setenv', `setenv-internal', `getenv',
 `read-envvar-name', `substitute-in-file-name', `substitute-env-vars',
-`process-environment', `initial-environment'.\n►►►"
+`process-environment', `initial-environment'.\n▶▶▶"
   (interactive "i\np")
   (if (executable-find "uname")
       (let ((mgss-unm (shell-command-to-string "uname -a")))
@@ -215,7 +215,7 @@ like `mon-get-env-vars-strings' but returns symbols instead of strings.\n
 :SEE-ALSO `mon-get-env-vars-strings', `mon-get-system-specs',
 `mon-help-emacs-introspect', `setenv', `setenv-internal', `getenv',
 `read-envvar-name', `substitute-in-file-name', `substitute-env-vars',
-`process-environment', `initial-environment'.\n►►►"
+`process-environment', `initial-environment'.\n▶▶▶"
   (interactive) 
   ;; :WAS 
   ;; (let ((mgevsym-proc-env process-environment)
@@ -253,7 +253,7 @@ When insrtp or called-interactively insert returned vars at point.\n
     \(mon-get-env-vars-strings nil t\)\)\)\n
 :SEE-ALSO `mon-get-env-vars-symbols', `mon-get-env-vars-emacs',
 `mon-get-system-specs', `mon-help-emacs-introspect', `process-environment',
-`initial-environment', `setenv', `getenv', `read-envvar-name'.\n►►►"
+`initial-environment', `setenv', `getenv', `read-envvar-name'.\n▶▶▶"
   (interactive "P\ni\np")
   (let ((mgevs-getenvs
          (mapcar #'(lambda (mgevs-L-1)
@@ -306,7 +306,7 @@ When called-interactively pretty-print return value in buffer named
 `mon-get-system-specs', `mon-insert-sys-proc-list',
 `mon-get-sys-proc-list', `mon-get-proc-w-name', `mon-get-process',
 `mon-help-process-functions', `mon-help-emacs-introspect', `emacs-pid',
-`process-environment', `initial-environment', `getenv', `setenv'.\n►►►"
+`process-environment', `initial-environment', `getenv', `setenv'.\n▶▶▶"
   (interactive "i\np")
   (let ((mgeve-vars (mon-intersection 
                      (mon-get-env-vars-symbols)
@@ -370,7 +370,7 @@ When called-interactively return results in buffer \"*MON-GET-SYS-PROCESSES*\".\
 :SEE-ALSO `mon-get-process',`mon-insert-sys-proc-list',
 `mon-help-process-functions', `mon-get-env-vars-strings',
 `mon-get-env-vars-symbols', `mon-get-env-vars-emacs', `mon-get-system-specs',
-`mon-help-emacs-introspect', `emacs-pid'.\n►►►"
+`mon-help-emacs-introspect', `emacs-pid'.\n▶▶▶"
   (interactive "p")
   (let (mgspl)
     (dolist (sys-proc (list-system-processes) 
@@ -395,7 +395,7 @@ Does not move point.\n
 `mon-insert-sys-proc-list', `emacs-pid',
 `mon-get-env-vars-strings', `mon-get-env-vars-symbols'
 `mon-get-env-vars-emacs', `mon-get-system-specs'
-`mon-help-emacs-introspect'.\n►►►"
+`mon-help-emacs-introspect'.\n▶▶▶"
   (interactive)
   (save-excursion
     (newline)
@@ -416,7 +416,7 @@ process first.\n
 :EXAMPLE\n\n\(mon-get-proc-w-name \"emacs\"\)\n
 :NOTE On w32 it is not required give the .exe suffix.\n
 :SEE-ALSO `mon-get-process', `mon-get-sys-proc-list', `mon-get-sys-proc-list',
-`mon-help-process-functions', `list-system-processes'.\n►►►"
+`mon-help-process-functions', `list-system-processes'.\n▶▶▶"
   (eval-when-compile (require 'time-date))
   (let (mgpwn-fnd-proc)
     (mapc #'(lambda (mgpwn-L-1)
@@ -460,7 +460,7 @@ this function can match multiple processes with identical invocation commands.\n
     \(mon-get-process \(concat \(invocation-name\) \".exe\"\)\)
     \(mon-get-process \(invocation-name\)\)\)\n
 :SEE-ALSO `mon-insert-sys-proc-list', `mon-get-sys-proc-list',
-`mon-help-process-functions'.\n►►►"
+`mon-help-process-functions'.\n▶▶▶"
   (interactive)
   (let* (mgp-mtchs
          (mpg-prc-lst (list-system-processes)) ;;(nreverse (list-system-processes)))
@@ -502,7 +502,7 @@ When MORE-STRINGS is non-nil escape these also.\n
 When UNESCAPE is non-nil unescape A-STRING and/or MORE-STRINGS.\n
 :SEE-ALSO `convert-standard-filename', `w32-shell-dos-semantics'.
 `w32-quote-process-args', `mon-exchange-slash-and-backslash',
-`mon-escape-lisp-string-region', `mon-unescape-lisp-string-region'.\n►►►"
+`mon-escape-lisp-string-region', `mon-unescape-lisp-string-region'.\n▶▶▶"
   (let ((mesfc-mr-str (if more-strings
                           (cons a-string more-strings)
                         a-string))
@@ -521,7 +521,7 @@ When UNESCAPE is non-nil unescape A-STRING and/or MORE-STRINGS.\n
 When `win32p' invoke Cygwin Bash in cmd console.\n
 :SEE-ALSO `mon-cmd' which when win32p returns the NT Command console.
 `mon-shell', `mon-make-shell-buffer', `w32shell-cmd-here', `w32shell-cmd',
-`w32shell-explorer', `mon-help-process-functions'.\n►►►"
+`w32shell-explorer', `mon-help-process-functions'.\n▶▶▶"
   (interactive)
   (cond  ((and (intern-soft "IS-BUG-P" obarray)         ;; *IS-MON-OBARRAY*
                (bound-and-true-p IS-BUG-P))
@@ -542,7 +542,7 @@ When `gnu-linuxp' launch a terminal \(mrxvt\).\n
 in a cmd console.\n
 :SEE-ALSO `mon-shell', `mon-make-shell-buffer', `w32shell-cmd-here',
 `w32shell-cmd', `w32-shell-execute', `w32shell-explorer', `shell-command',
-`shell', `mon-help-process-functions'.\n►►►"
+`shell', `mon-help-process-functions'.\n▶▶▶"
   (interactive)
   (cond ((and (intern-soft "IS-W32-P" obarray)           ;; *IS-MON-OBARRAY*
               (bound-and-true-p IS-W32-P))
@@ -558,7 +558,7 @@ in a cmd console.\n
   "Jump to the running firefox and open URL in new tab.\n
 :SEE-ALSO `browse-url-firefox-program',`mon-conkeror',
 `browse-url-generic-program', `browse-url-browser-function',
-`browse-url-generic'.\n►►►"
+`browse-url-generic'.\n▶▶▶"
   (interactive "i\np")
   (when intrp
     (setq url (read-string ":FUNCTION `mon-firefox' -- which URL: ")))
@@ -573,7 +573,7 @@ conkeror-rc file:
  require\(\"clicks-in-new-buffer.js\");\n
 :SEE-ALSO `mon-firefox', `browse-url-firefox-program',
 `browse-url-generic-program',`browse-url-browser-function',
-`browse-url-generic'.\n►►►"
+`browse-url-generic'.\n▶▶▶"
   (interactive "s:FUNCTION `mon-conkeror' -- what URL: ")
   (eval-when-compile (require 'browse-url))
   (if (string-match "conkeror" browse-url-generic-program)

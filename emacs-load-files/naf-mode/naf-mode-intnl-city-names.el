@@ -7,9 +7,9 @@
 ;;; and occassionaly German. Used with `naf-mode' for font-locks.
 ;;; naf-mode-name -> naf-mode-place-face.
 ;;;
-;;; FUNCTIONS:►►►
+;;; FUNCTIONS:▶▶▶
 ;;;
-;;; FUNCTIONS:◄◄◄
+;;; FUNCTIONS:◀◀◀
 ;;;
 ;;; CONSTANTS or VARIABLES:
 ;;;

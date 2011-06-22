@@ -21,9 +21,9 @@
 ;; DESCRIPTION:
 ;; mon-doc-help-undocd provides { some description here. }
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;;
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;;
@@ -1606,7 +1606,7 @@
 ;;; !!!UNFINISHED!!!!
 (defun mon-help-doc-no-docd (undocd-sym w-doc f-or-v)
   "Add documentation to undocumented symbols.\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   (let ((f/v (and (or (eq f-or-v 'variable)
                       (eq f-or-v 'function)) 
                   f-or-v))

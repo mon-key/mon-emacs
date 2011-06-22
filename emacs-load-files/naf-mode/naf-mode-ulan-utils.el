@@ -22,10 +22,10 @@
 ;; naf-mode-ulan-utils provides utility fncns for converting ULAN data for
 ;; `naf-mode' Name Authority Files.
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;; `mon-ulan-tsv-assc-rels-type->list', `mon-invert-ulan-triples',
 ;; `mon-rotate-ulan-triples',
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;;
@@ -152,7 +152,7 @@
 ;;; :CHANGESET 2292
 ;;; :CREATED <Timestamp: #{2010-11-09T19:26:16-05:00Z}#{10452} - by MON KEY>
 (defgroup naf-mode-ulan-help-utils nil
-  "Customizations for ULAN utils for use with `naf-mode'.\n►►►"
+  "Customizations for ULAN utils for use with `naf-mode'.\n▶▶▶"
   :link  '(url-link :tag ":EMACSWIKI-FILE" 
                     "http://www.emacswiki.org/emacs/naf-mode-ulan-utils.el")
   :link  '(emacs-library-link "naf-mode-ulan-utils.el")
@@ -180,7 +180,7 @@
 The symbols contained of this list are defined in :FILE <FILE>\n
 :SEE-ALSO `*mon-default-loads-xrefs*', `*mon-default-start-loads-xrefs*',
 `*mon-dir-locals-alist-xrefs*', `*mon-testme-utils-xrefs*',
-`*mon-button-utils-xrefs*', `*naf-mode-xref-of-xrefs*', `*mon-xrefs-xrefs''.\n►►►"
+`*mon-button-utils-xrefs*', `*naf-mode-xref-of-xrefs*', `*mon-xrefs-xrefs''.\n▶▶▶"
   :type '(repeat symbol)
   :group 'naf-mode-ulan-help-utils
   :group 'mon-xrefs)
@@ -192,7 +192,7 @@ The symbols contained of this list are defined in :FILE <FILE>\n
 As made available here:
 \(URL `http://www.getty.edu/research/conducting_research/vocabularies/ulan/ulan_rel_sample09.zip')
 \(URL `http://www.getty.edu/research/conducting_research/vocabularies/download.html')
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   :type 'directory 
   :group 'naf-mode-ulan-utils)
 
@@ -205,7 +205,7 @@ These are generated from contents in
 :FILE \"ASSOCIATIVE_RELS_TYPE.out\" 
 :NOTE The list can be inserted into buffer at point with
 `mon-ulan-tsv-assc-rels-type->list'.\n
-:SEE-ALSO .\n►►►")
+:SEE-ALSO .\n▶▶▶")
 
 
 ;;; ==============================
@@ -219,7 +219,7 @@ These are generated from contents in
   "*Regexp for font-locking ULAN record ID numbers in `naf-mode'.\n
 ID's have the form '[500006383]'.\n
 Occurences are font-locked by `naf-mode-db-field-entry-ulan-face'.\n
-:SEE-ALSO .\n►►►")
+:SEE-ALSO .\n▶▶▶")
 ;;
 ;;; :TEST-ME (search-forward-regexp *naf-mode-db-numbers-flag-ulan* nil t)
 ;;   [500006383]
@@ -240,7 +240,7 @@ When INSRTP is non-nil insert return value. Return value as the form:\n
  #{:ULAN-RECORD-NUM <INTEGER>}
  \(<POSN> <POSN> <STRING>)\n
 :EXAMPLE\n\n(call-interactively 'mon-get-next-ulan-record)\n\n[500006383]\n\n
-:SEE-ALSO `*naf-mode-db-numbers-flag-ulan*'.\n►►►"
+:SEE-ALSO `*naf-mode-db-numbers-flag-ulan*'.\n▶▶▶"
   (interactive "P\ni\np")
   (let (st-end st-str record-str str-data str-id-int)
     (search-forward-regexp *naf-mode-db-numbers-flag-ulan* nil t)
@@ -279,7 +279,7 @@ These are prefixed with the LCNAF flag as:\n
 :NOTE ULAN records also conctain references to LOC naf ids as: 'n 88630604'.
 This regexp does not match on these.\n
 :SEE (URL `http://authorities.loc.gov/')\n
-:SEE-ALSO `*naf-mode-db-numbers-flag-ulan*'.\n►►►")
+:SEE-ALSO `*naf-mode-db-numbers-flag-ulan*'.\n▶▶▶")
 
 ;;; ==============================
 ;;; :MODIFICATIONS <Timestamp: Wednesday July 29, 2009 @ 03:58.01 PM  - by MON KEY>
@@ -289,7 +289,7 @@ This regexp does not match on these.\n
   "*Regexp for keyword fontlocking ULAN flags occuring after name forms.\n
 :EXAMPLE:\n\(preferred, index, display, V\)\n\(inhabited place\)\n\(preferred, index, V\)
 \(preferred, index\)\n\(preferred\)\n\(display, V\)\n\(display\)\n\(index\)\n\(V\)
-:SEE-ALSO `mon-help-naf-mode-ulan-flags'.\n►►►")
+:SEE-ALSO `mon-help-naf-mode-ulan-flags'.\n▶▶▶")
 ;;
 ;;; :TEST-ME naf-mode-db-field-flags-ulan-paren
 ;;
@@ -325,7 +325,7 @@ Return a TRIPLE-LIST such that:\n \(\"godchild of\" 1575 1574\)\n
  Becomes\n
  \(1575 \"godchild of\" 1574)\n
 :SEE-ALSO `mon-list-flatten-rotated', `mon-rotate-get-rotations-for',
-`mon-rotate-next', `mon-rotate-region', `mon-rotate-string'.\n►►►"
+`mon-rotate-next', `mon-rotate-region', `mon-rotate-string'.\n▶▶▶"
   (let ((y '()))
     (mapc #'(lambda (x) 
               (push `(,(cadr x) ,(car x) ,(caddr x)) y))
@@ -340,7 +340,7 @@ Return a TRIPLE-LIST such that:\n \(\"godchild of\" 1575 1574\)\n
   "Invert the alist of ULAN triples TRIPLE-LIST.\n
 TRIPLE-LIST has the form <ROLE-NUM-NUM> where:
  role1<->role2  role2<->role1 discard keys.\n
-:SEE-ALSO `mon-rotate-ulan-triples'.\n►►►"
+:SEE-ALSO `mon-rotate-ulan-triples'.\n▶▶▶"
   (let ((role-n-n triple-list)
 	(n-role-n (mon-rotate-ulan-triples triple-list))
 	(rtn))
@@ -397,7 +397,7 @@ of relational table data of ULAN associative relation types i.e. somethign like:
 \"./ulan_rel_utf8_sample09/ASSOCIATIVE_RELS_TYPE.out\" as made available here:\n
 :SEE \(URL `http://www.getty.edu/research/conducting_research/vocabularies/ulan/ulan_rel_sample09.zip')
 :SEE \(URL `http://www.getty.edu/research/conducting_research/vocabularies/download.html')\n
-:SEE-ALSO `mon-invert-ulan-triples', `*ulan-associative-roles*', `*ulan-sample-data*'.\n►►►"
+:SEE-ALSO `mon-invert-ulan-triples', `*ulan-associative-roles*', `*ulan-sample-data*'.\n▶▶▶"
   (let ((assctv-rels-type 
 	 (cond (fname (if (file-readable-p fname) 
 			  fname
@@ -466,7 +466,7 @@ of relational table data of ULAN associative relation types i.e. somethign like:
 (defconst *naf-mode-ulan-rltd-ppl-corp* (regexp-opt naf-ulan-rltd-ppl-corp 'paren)
   "*Keywords for `naf-mode' font-locking with `naf-mode-ulan-ppl-corp-face'\n
 :USED-IN `naf-mode'.\n
-:SEE-ALSO `*naf-mode-x-of-ulan-bol*', `*naf-mode-x-of*'.\n►►►")) 
+:SEE-ALSO `*naf-mode-x-of-ulan-bol*', `*naf-mode-x-of*'.\n▶▶▶")) 
 ;;
 ;;; :TEST-ME *naf-mode-ulan-rltd-ppl-corp*
 ;;
@@ -507,7 +507,7 @@ or without '-' and/or trailing whitespace.\n
 Other ULAN specific keywords flagged with `*naf-mode-ulan-rltd-ppl-corp*' with
 the remainder matched with `*naf-mode-x-of*'.\n
 :USED-IN `naf-mode'.\n
-:SEE-ALSO .\n►►►"))
+:SEE-ALSO .\n▶▶▶"))
 
 
 ;;; ==============================

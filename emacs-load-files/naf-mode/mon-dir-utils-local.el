@@ -22,7 +22,7 @@
 ;; mon-dir-utils-local provides local directory and file utilities 
 ;; Mostly specific to MON site
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;; `mon-file-map-elisp-fileset', `mon-dir-save-current',
 ;; `mon-explorer-naf-artist', `mon-explorer-naf-brand',
 ;; `mon-dired-naf-artist-letter' `mon-dired-naf-brand-letter',
@@ -35,7 +35,7 @@
 ;; `mon-dir-try-comp', `mon-file-path-for-bug', `mon--local-url-for-bug',
 ;; `mon-get-local-url-for-bug',
 ;;
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;;
@@ -176,7 +176,7 @@ Image directories defined in global vars:\n
  `*mon-ebay-images-path*',`*mon-ebay-images-bmp-path*', `*mon-ebay-images-jpg-path*',
  `*mon-ebay-images-temp-path*'\n
 :CALLED-BY `mon-dir-hash-images', `mon-dir-try-comp', `mon-dir-hashed-complete'.\n
-:SEE-ALSO .\n►►►")
+:SEE-ALSO .\n▶▶▶")
 ;;
 (unless (and (intern-soft "*mon-img-hash*" obarray)
              (bound-and-true-p *mon-img-hash*))
@@ -195,7 +195,7 @@ Image directories defined in global variable `*mon-nefs_photos_nefs-alist*':
  `*mon-ebay-images-path*', `*mon-ebay-images-bmp-path*', `*mon-ebay-images-jpg-path*',
  `*mon-ebay-images-temp-path*'\n
 :CALLED-BY `mon-dir-hash-images', `mon-dir-try-comp', `mon-dir-hashed-complete'.\n
-:SEE-ALSO .\n►►►")
+:SEE-ALSO .\n▶▶▶")
 ;;
 (unless (and (intern-soft "*mon-nef-img-hash*" obarray)
              (bound-and-true-p *mon-nef-img-hash*))
@@ -214,7 +214,7 @@ Image directories defined in global variables:\n
  `*mon-ebay-images-path*', `*mon-ebay-images-bmp-path*', `*mon-ebay-images-jpg-path*',
  `*mon-ebay-images-temp-path*'\n
 :CALLED-BY `mon-dir-hash-images', `mon-dir-try-comp', `mon-dir-hashed-complete'.\n
-:SEE-ALSO .\n►►►")
+:SEE-ALSO .\n▶▶▶")
 ;;
 (unless (and (intern-soft "*mon-bmp-img-hash*" obarray)
              (bound-and-true-p *mon-bmp-img-hash*))
@@ -233,7 +233,7 @@ Image directories defined in global variables: \n
  `*mon-ebay-images-path*', `*mon-ebay-images-bmp-path*', `*mon-ebay-images-jpg-path*',
  `*mon-ebay-images-temp-path*'\n
 :CALLED-BY `mon-dir-hash-images', `mon-dir-try-comp', `mon-dir-hashed-complete'.\n
-:SEE-ALSO .\n►►►")
+:SEE-ALSO .\n▶▶▶")
 ;;
 (unless (and (intern-soft "*mon-jpg-img-hash*" obarray)
              (bound-and-true-p *mon-jpg-img-hash*))
@@ -275,7 +275,7 @@ does not satisfy the predicate `stringp' signal an error.\n
 :NOTE Will not find files of type: *.el.gz IOW anything under subdir of Emacs'
 lisp/ source tree when Emacs was built with the\n
 :SEE-ALSO `*mon-el-library*', `mon-file-ensure-extension-is-el',
-`mon-file-truename-p', `mon-file-dir-attributes->plist'.\n►►►"
+`mon-file-truename-p', `mon-file-dir-attributes->plist'.\n▶▶▶"
   (interactive "i\ni\np")
   (let ((mfmef-to-flset (cond ((stringp to-fileset-file)
                                to-fileset-file)
@@ -372,7 +372,7 @@ lisp/ source tree when Emacs was built with the\n
        \(file-readable-p rlvnt-p\)
        \(file-writable-p rlvnt-p\)\)\)\n
 :SEE-ALSO `mon-dir-save-current-to-file', `mon-file-dir-attributes->plist'
-`append-to-file'.\n►►►"
+`append-to-file'.\n▶▶▶"
   (interactive)
   (let ((rlvnt-p  (concat *mon-emacs-root* "/current-directory")))
     (or (and (file-exists-p rlvnt-p) 
@@ -406,7 +406,7 @@ lisp/ source tree when Emacs was built with the\n
 Default file is held by global var `*mon-record-current-directory*'.\n
 :SEE-ALSO `mon-dir-save-current', `mon-append-to-register',
 `append-to-buffer', `append-output-to-file', `mon-cat',
-`mon-file-dir-attributes->plist'.\n►►►"
+`mon-file-dir-attributes->plist'.\n▶▶▶"
   (interactive "p")
   (let* ((mdsctf-intrp intrp)
 	 (mdsctf-wntng (when (and mdsctf-intrp)
@@ -456,7 +456,7 @@ When called-interactively, prompt for an alphabetic directory PREFIX.
 Default path held by global var: `*mon-artist-naf-path*'.\n
 :USED-IN `naf-mode'.\n
 :SEE-ALSO `mon-explorer-naf-brand',`mon-dired-naf-artist-letter',
-`mon-dired-naf-brand-letter', `mon-explorer-open'.\n►►►"
+`mon-dired-naf-brand-letter', `mon-explorer-open'.\n▶▶▶"
   (interactive "p")
   (if IS-W32-P
     (let ((dl (format "%s-Artists names"
@@ -487,7 +487,7 @@ Default path held in var: `*mon-brand-naf-path*'.\n
 :USED-IN `naf-mode'.\n
 :SEE-ALSO `mon-explorer-naf-artist',`mon-dired-naf-artist-letter',
 `mon-dired-naf-brand-letter', `mon-dired-naf-image-dir',
-`mon-explorer-open'.\n►►►"
+`mon-explorer-open'.\n▶▶▶"
   (interactive "p")
   (if (and (intern-soft "IS-W32-P" obarray) ;; *IS-MON-OBARRAY*
            (bound-and-true-p IS-W32-P))
@@ -523,7 +523,7 @@ Default naf path held by the var: `*mon-artist-naf-path*'.\n
 :USED-IN `naf-mode'.\n
 :SEE-ALSO `mon-explorer-naf-artist',`mon-explorer-naf-brand',
 `mon-dired-naf-brand-letter', `mon-dired-naf-image-dir',
-`mon-open-explorer'.\n►►►"
+`mon-open-explorer'.\n▶▶▶"
   (interactive "p")
   (let* ((dl (format "/%s-Artists-names/"
                        (if (numberp prefix)
@@ -548,7 +548,7 @@ Default naf path held by the var: `*mon-brand-naf-path*'.\n
 :ALIASED-BY `naf-dired-brand-letter'\n
 :USED-IN `naf-mode'.\n
 :SEE-ALSO `mon-dired-naf-artist-letter', `mon-explorer-naf-artist',
-`mon-explorer-naf-brand', `mon-dired-naf-image-dir', `mon-open-explorer'.\n►►►"
+`mon-explorer-naf-brand', `mon-dired-naf-image-dir', `mon-open-explorer'.\n▶▶▶"
   (interactive "p")
   (let* ((dl (format "/%s-Brand-NAFs/"
                        (if (numberp prefix)
@@ -584,7 +584,7 @@ When called-interactively complete the key to dired to the directory val.\n
 :EXAMPLE\n\n(mon-dired-naf-image-dir \"ebay-bmp\")\n
 :SEE-ALSO `mon-dired-naf-artist-letter', `mon-explorer-naf-artist', 
 `mon-explorer-naf-brand', `mon-open-explorer', `mon-dired-nef-dir',
-`mon-dir-nef-big', `*mon-nefs_photos_nefs-alist*'.\n►►►"
+`mon-dir-nef-big', `*mon-nefs_photos_nefs-alist*'.\n▶▶▶"
   (interactive "p\nP")
   ;; "mdnid-"
   (let* ((mdnid-img-pths ;; This is `pairlis'
@@ -650,7 +650,7 @@ Return an alist as:\n
 :CALLED-BY `mon-dired-nef-dir', `mon-dir-nef-big'.\n
 :SEE-ALSO `mon-bind-cifs-vars-at-loadtime', `mon-set-register-tags-loadtime',
 `mon-bind-iptables-vars-at-loadtime', `mon-bind-doc-help-proprietery-vars-at-loadtime',
-`mon-CL-cln-colon-swap'.\n►►►"
+`mon-CL-cln-colon-swap'.\n▶▶▶"
   (or (and (intern-soft "*mon-nef-scan-nefs-path*" obarray)
            (bound-and-true-p *mon-nef-scan-nefs-path*))
       (warn (concat ":FUNCTION `mon-dir-nef-update-photos-alist' "
@@ -686,7 +686,7 @@ Return an alist as:\n
 Finds `directory-files' in `*mon-nef-scan-nefs-path*' with
 `mon-dir-nef-update-photos-alist'.\n
 :SEE-ALSO `mon-bind-cifs-vars-at-loadtime', `mon-set-register-tags-loadtime',
-`mon-bind-iptables-vars-at-loadtime', `mon-CL-cln-colon-swap'.\n►►►"
+`mon-bind-iptables-vars-at-loadtime', `mon-CL-cln-colon-swap'.\n▶▶▶"
   ;; :NOTE __DON'T SNARF IF ON REMOTE MACHINES!!__
   (when (and (intern-soft "IS-MON-SYSTEM-P" obarray) ;; *IS-MON-OBARRAY*
              (bound-and-true-p IS-MON-SYSTEM-P)
@@ -717,7 +717,7 @@ Return value is a two elt list each a string. It has the format:
 :SEE-ALSO `mon-dired-nef-dir', `mon-dir-nef-big', `mon-dir-nef-converge',
 `mon-dir-nef-keep-3',`mon-dir-nef-name-to-head',`mon-dir-nef-conc-ranges',
 `mon-dir-nef-conc-dups',`mon-dir-nef-find-dups',`mon-dir-nef-remove-if-empty',
-`*mon-nefs_photos_nefs-alist*', `*mon-nef-scan-nefs-path*'.\n►►►"
+`*mon-nefs_photos_nefs-alist*', `*mon-nef-scan-nefs-path*'.\n▶▶▶"
   (let (mdnr-grtr-rng)
     (setq mdnr-grtr-rng 
           ;; :PREFIX "mdnr-L-1-"
@@ -749,7 +749,7 @@ Return value is a two string list. It has the format:\n
 :SEE-ALSO `mon-dired-nef-dir', `mon-dir-nef-big', `mon-dir-nef-converge',
 `mon-dir-nef-keep-3',`mon-dir-nef-conc-ranges',`mon-dir-nef-ranges',
 `mon-dir-nef-conc-dups',`mon-dir-nef-find-dups', `mon-dir-nef-remove-if-empty', 
-`*mon-nefs_photos_nefs-alist*', `*mon-nef-scan-nefs-path*'.\n►►►"
+`*mon-nefs_photos_nefs-alist*', `*mon-nef-scan-nefs-path*'.\n▶▶▶"
   (let (mdna-grtr-fldr)
     (setq mdna-grtr-fldr 
           ;; :PREFIX "mdna-L-1-"
@@ -778,7 +778,7 @@ An directory is considered empty  if it has the format:\n
 :SEE-ALSO `mon-dired-nef-dir', `mon-dir-nef-big', `mon-dir-nef-converge',
 `mon-dir-nef-keep-3',`mon-dir-nef-name-to-head',`mon-dir-nef-conc-ranges',
 `mon-dir-nef-ranges',`mon-dir-nef-conc-dups', `*mon-nefs_photos_nefs-alist*',
-`*mon-nef-scan-nefs-path*'.\n►►►"
+`*mon-nef-scan-nefs-path*'.\n▶▶▶"
   ;; :NOTE The name is "free" in the sense that it may or may not occur at index 2.
   (let (mdnre-free-nm->idx-1) 
     (setq mdnre-free-nm->idx-1
@@ -806,7 +806,7 @@ Rotate tail-position to head-position.\n
 :SEE-ALSO `mon-dired-nef-dir', `mon-dir-nef-big', `mon-dir-nef-converge',
 `mon-dir-nef-keep-3', `mon-dir-nef-name-to-head', `mon-dir-nef-conc-ranges',
 `mon-dir-nef-ranges', `mon-dir-nef-conc-dups', `*mon-nefs_photos_nefs-alist*',
-`*mon-nef-scan-nefs-path*'.\n►►►"
+`*mon-nef-scan-nefs-path*'.\n▶▶▶"
   ;; :NOTE The name is "free" in the sense that it may/may-not occur at index 2.
   (let (mdnfd-cmpr free-nm->idx-2) 
     (setq mdnfd-cmpr (mon-dir-nef-remove-if-empty folder-alist))    
@@ -846,7 +846,7 @@ matching an existing namestring needs a unique name so build it.
 :SEE-ALSO `mon-dired-nef-dir', `mon-dir-nef-big', `mon-dir-nef-converge',
 `mon-dir-nef-keep-3', `mon-dir-nef-name-to-head', `mon-dir-nef-conc-ranges',
 `mon-dir-nef-ranges', `mon-dir-nef-remove-if-empty', `*mon-nefs_photos_nefs-alist*',
-`*mon-nef-scan-nefs-path*'.\n►►►"
+`*mon-nef-scan-nefs-path*'.\n▶▶▶"
   ;; mdncd-
   (let ((freename>4 (mon-dir-nef-find-dups folder-alist))
         ;; Bind mon-dir-nef-name-to-head in wrapping defun.
@@ -877,7 +877,7 @@ Directory names of FOLDER-ALIST are folded back into the surronding alist.\n
 :SEE-ALSO `mon-dired-nef-dir', `mon-dir-nef-big', `mon-dir-nef-keep-3',
 `mon-dir-nef-name-to-head', `mon-dir-nef-conc-ranges', `mon-dir-nef-ranges',
 `mon-dir-nef-conc-dups', `mon-dir-nef-find-dups', `mon-dir-nef-remove-if-empty',
-`*mon-nefs_photos_nefs-alist*', `*mon-nef-scan-nefs-path*'.\n►►►"
+`*mon-nefs_photos_nefs-alist*', `*mon-nef-scan-nefs-path*'.\n▶▶▶"
   (let ((mdnc-big-dupd (mapcar #'(lambda (mdnc-L-1) 
                               (nreverse mdnc-L-1))
                           (mon-dir-nef-remove-if-empty folder-alist)))
@@ -912,7 +912,7 @@ Second elt is its range.\n
 :SEE-ALSO; `mon-dired-nef-dir', `mon-dir-nef-big', `mon-dir-nef-converge',
 `mon-dir-nef-keep-3', `mon-dir-nef-name-to-head', `mon-dir-nef-ranges',
 `mon-dir-nef-conc-dups', `mon-dir-nef-find-dups', `mon-dir-nef-remove-if-empty',
-`*mon-nefs_photos_nefs-alist*', `*mon-nef-scan-nefs-path*'.\n►►►"
+`*mon-nefs_photos_nefs-alist*', `*mon-nef-scan-nefs-path*'.\n▶▶▶"
   (let ((mdncr-not-empty (mapcar #'(lambda (mdncr-L-1) (nreverse mdncr-L-1)) 
                           (mon-dir-nef-remove-if-empty folder-alist)))
         (mdncr-rngs (mapcar #'(lambda (mdncr-L-2) (nreverse mdncr-L-2))
@@ -946,7 +946,7 @@ These were removed from surrounding list by `mon-dir-nef-remove-if-empty' for us
 :SEE-ALSO `mon-dired-nef-dir', `mon-dir-nef-big', `mon-dir-nef-converge',
 `mon-dir-nef-name-to-head', `mon-dir-nef-conc-ranges', `mon-dir-nef-ranges',
 `mon-dir-nef-conc-dups', `mon-dir-nef-find-dups', `mon-dir-nef-remove-if-empty',
-`*mon-nefs_photos_nefs-alist*', `*mon-nef-scan-nefs-path*'.\n►►►"
+`*mon-nefs_photos_nefs-alist*', `*mon-nef-scan-nefs-path*'.\n▶▶▶"
   (eval-when-compile (require 'mon-cl-compat nil t)) ;; <- `cl::set-difference'
   (let* ((mdnk-lst-1 (mapcar #'(lambda (mdnk-L-1) 
                          (cadr mdnk-L-1)) 
@@ -988,7 +988,7 @@ Return value includes those formatted with:\n
 :CALLED-BY `mon-dired-nef-dir', `mon-dired-naf-image-dir'\n
 :SEE-ALSO `mon-dir-nef-keep-3', `mon-dir-nef-name-to-head', `mon-dir-nef-ranges',
 `mon-dir-nef-conc-dups', `mon-dir-nef-find-dups', `mon-dir-nef-remove-if-empty',
-`*mon-nefs_photos_nefs-alist*', `*mon-nef-scan-nefs-path*'.\n►►►"
+`*mon-nefs_photos_nefs-alist*', `*mon-nef-scan-nefs-path*'.\n▶▶▶"
   (let (mdnb-newp)
     (setq mdnb-newp (nconc 
                      (mon-dir-nef-converge folder-alist)
@@ -1012,7 +1012,7 @@ Prompts directory using completions generated `*mon-nefs_photos_nefs-alist*'.\n
 :SEE-ALSO `mon-dired-other-window', `mon-dired-nef-dir', `mon-dir-nef-big',
 `mon-dir-nef-converge', `mon-dir-nef-keep-3', `mon-dir-nef-name-to-head',
 `mon-dir-nef-conc-ranges', `mon-dir-nef-ranges', `mon-dir-nef-conc-dups',
-`mon-dir-nef-find-dups', `mon-dir-nef-remove-if-empty'.\n►►►"
+`mon-dir-nef-find-dups', `mon-dir-nef-remove-if-empty'.\n▶▶▶"
   (interactive)
   (let ((mdnd-nef-alist (mon-dir-nef-big *mon-nefs_photos_nefs-alist*))
         mdnd-get-nef-dir)
@@ -1040,7 +1040,7 @@ Prompts directory using completions generated `*mon-nefs_photos_nefs-alist*'.\n
 When non-nil DIR-TO-HASH supplies an alternate img directory to hash.
 Defaults to value of global variable `*mon-img-hash*'.\n
 :SEE-ALSO `mon-dir-try-comp', `mon-dir-hashed-complete', `mon-dir-build-list',
-`mon-dir-hash-images'.\n►►►"
+`mon-dir-hash-images'.\n▶▶▶"
   (let* ((dir-list 
           ;; :NOTE Use `mon-add-subdirs-to-list' instead.
           (mon-get-proc-buffers-directories nil dir-to-hash))
@@ -1094,7 +1094,7 @@ Defaults to value of global variable `*mon-img-hash*'.\n
 (defun mon-dir-hashed-complete (comp-hsh dir-string common-string)
   "Return a buffer displaying possible completions for DIR-STRING in COMP-HSH.\n
 COMP-HSH \(a hash-table\) should contain a common substring COMMON-STRING.\n
-:SEE-ALSO `mon-dir-hash-images', `mon-dir-try-comp', `mon-dir-build-list'.\n►►►"
+:SEE-ALSO `mon-dir-hash-images', `mon-dir-try-comp', `mon-dir-build-list'.\n▶▶▶"
   (let ((compl (mon-hash-all-keys comp-hsh)) ; *temp-hash*))
 	(dir-st dir-string)                  ; *mon-ebay-images-path*
 	(comm-st common-string))             ; "e1")) 
@@ -1125,7 +1125,7 @@ When non-nil COMP-COLLECTION is a list of direotories in PTH.\n
 Default is `*mon-img-hash*'.\n
 List value built with `mon-dir-build-list' per completion specs.\n
 :SEE-ALSO `mon-dir-hashed-complete', `mon-dir-hash-images',
-`try-completion', `all-completions', `completing-read'.\n►►►"
+`try-completion', `all-completions', `completing-read'.\n▶▶▶"
   (let* ((comp-str str)
 	 (path (if pth 
 		   (directory-file-name pth)
@@ -1161,7 +1161,7 @@ FILE-NAME-PATH \(a string\) should be a full pathname string and be located
 beneath `*mon-emacs-root*'.\n
 When `*bug-HG-path*' is local return a path suitable for a remote machine.
 When `*bug-HG-path*' is remote return a path suitable for the local machine.\n
-:SEE-ALSO `mon-get-local-url-for-bug'.\n►►►"
+:SEE-ALSO `mon-get-local-url-for-bug'.\n▶▶▶"
   (interactive "i\ni\nP\np")
   (let* ((fnp-tst (cond ((not file-name-path) "Path not under ")
                         ((and (not intrp) file-name-path)
@@ -1209,13 +1209,13 @@ When `*bug-HG-path*' is remote return a path suitable for the local machine.\n
 ;;; :CREATED <Timestamp: Wednesday July 15, 2009 @ 02:19.43 PM - by MON>
 (defun mon--local-url-for-bug (is-url file-string)
   "Helper function for interactive `mon-get-local-url-for-bug'.\n
-:SEE-ALSO `mon-get-local-url-for-bug' and `*bug-HG-path*'.\n►►►"
+:SEE-ALSO `mon-get-local-url-for-bug' and `*bug-HG-path*'.\n▶▶▶"
   (concat "file:///" *bug-HG-path* "/" file-string))
 ;;
 (defun mon-get-local-url-for-bug (file-string)
   "Prompt for a url to concat onto the common path shared between the MON KEY 
 machine and the BUG'd system.\n
-:SEE-ALSO `mon--local-url-for-bug', `*bug-HG-path*'.\n►►►"
+:SEE-ALSO `mon--local-url-for-bug', `*bug-HG-path*'.\n▶▶▶"
   (interactive (list (read-string (format "Url beneath file: %s" 
                                   (concat (nth 6 (assoc 3 *mon-emacsd*)) "/")))))
    ;; (prin1 (mon--local-url-for-bug file-string) (current-buffer))

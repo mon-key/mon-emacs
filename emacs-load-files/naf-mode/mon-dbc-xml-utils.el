@@ -21,9 +21,9 @@
 ;; DESCRIPTION:
 ;; mon-dbc-xml-utils provides { some description here. }
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;; `mon-dbc-xml-parse-clean-fields',
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;;
@@ -128,7 +128,7 @@ Return value has the format:\n
  ;; :EXAMPLE-VALUES 
  ;;\n
 :EXAMPLE\n\n
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   (interactive "r")
   (unwind-protect
       (progn 

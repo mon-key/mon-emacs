@@ -6,9 +6,9 @@
 ;;; These fields are present in one or more NAF types defined by skeletons in
 ;;; in ./naf-skeletons.el
 ;;;
-;;; FUNCTIONS:►►►
+;;; FUNCTIONS:▶▶▶
 ;;;
-;;; FUNCTIONS:◄◄◄
+;;; FUNCTIONS:◀◀◀
 ;;;
 ;;; CONSTANTS:
 ;;;

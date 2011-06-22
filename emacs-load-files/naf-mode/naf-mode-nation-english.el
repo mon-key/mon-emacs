@@ -5,9 +5,9 @@
 ;;; naf-mode-nation-english keyword lists naton names in Engrish.
 ;;; Used for font-lock highlighting in `naf-mode'.
 ;;; 
-;;; FUNCTIONS:►►►
+;;; FUNCTIONS:▶▶▶
 ;;;
-;;; FUNCTIONS:◄◄◄
+;;; FUNCTIONS:◀◀◀
 ;;;
 ;;; MACROS:
 ;;;

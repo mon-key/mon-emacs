@@ -24,9 +24,9 @@
 ;; J.P. Getty Trust affiliates.  The docs are verbose and it is considered
 ;; overkill to include them in :FILE "naf-mode-ulan-utils.el"
 ;; 
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;; `mon-help-naf-mode-ulan-flags', `mon-help-naf-mode-ulan-fields',
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; CONSTANTS:
 ;;
@@ -159,7 +159,7 @@ U = Undetermined\n
 
 :SOURCE ULAN Code Lookup, VERSION: Wednesday, May 13, 2009 12:29:23 PM
 :SEE \(URL `http://www.getty.edu/research/conducting_research/vocabularies/ulan/ULANCodeLookup.html?flag=#preferred_role')
-:SEE-ALSO .\n►►►"
+:SEE-ALSO .\n▶▶▶"
   (interactive "i\nP")
   (if (or insertp intrp)
       (mon-help-function-spit-doc 'mon-help-naf-mode-ulan-flags :insertp t)
@@ -208,7 +208,7 @@ U = Undetermined\n
 ;;
 ;; :SOURCE ULAN Editorial Guidelines VERSION: 2008-11-12.\n
 ;; :SEE \(URL `http://www.getty.edu/research/conducting_research/vocabularies/ulan/')
-;; ►►►"
+;; ▶▶▶"
 
 ;;; ==============================
 ;;; :SOURCE ULAN Editorial Guidelines VERSION: 2008-11-12

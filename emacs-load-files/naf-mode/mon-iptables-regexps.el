@@ -24,12 +24,12 @@
 ;; help-mode to document order of postion for the symbols, flags, etc. used with
 ;; `iptables' AKA `netfilter'.
 ;;
-;; FUNCTIONS:►►►
+;; FUNCTIONS:▶▶▶
 ;; `mon-iptables-pp-as-sym', `mon-iptables-pp-key',
 ;; `mon-cln-iptables-short-form', `mon-iptables-make-regexps',
 ;; `mon-cln-iptables-long-form', `mon-iptables-make-regexps-long',
 ;; `mon-bind-iptables-vars-at-loadtime',
-;; FUNCTIONS:◄◄◄
+;; FUNCTIONS:◀◀◀
 ;;
 ;; MACROS:
 ;;
@@ -134,7 +134,7 @@ List produced from :SOURCE iptables man page.\n
 :SEE-ALSO `*regexp-clean-iptables*', `mon-bind-iptables-vars-at-loadtime',
 `mon-iptables-pp-key', `mon-iptables-pp-as-sym',
 `mon-iptables-make-regexps', `mon-iptables-make-regexps-long',
-`mon-cln-iptables-short-form', `mon-cln-iptables-long-form',\n►►►")
+`mon-cln-iptables-short-form', `mon-cln-iptables-long-form',\n▶▶▶")
 ;;
 ;;
 ;;; :TEST-ME (mapcar 'cdr *mon-iptables-alist-as-sym*)
@@ -149,7 +149,7 @@ alist key :IPTABLES-REGEXPS-SHORT->LONG  <- `mon-iptables-make-regexps'.
 alist key :IPTABLES-REGEXPS-LONG->SHORT  <- `mon-iptables-make-regexps-long'.\n
 :CALLED-BY `mon-cln-iptables-short-form', `mon-iptables-make-regexps-long'\n
 :SEE-ALSO `mon-help-ipv4-header', `*mon-iptables-alst*', 
-`*mon-iptables-alist-as-sym*',`mon-iptables-pp-key', `mon-iptables-pp-as-sym'.\n►►►")
+`*mon-iptables-alist-as-sym*',`mon-iptables-pp-key', `mon-iptables-pp-as-sym'.\n▶▶▶")
 ;; 
 ;;; :TEST-ME (cdr (assoc :IPTABLES-REGEXPS-SHORT->LONG *regexp-clean-iptables*))
 ;;; :TEST-ME (cdr (assoc :IPTABLES-REGEXPS-LONG->SHORT *regexp-clean-iptables*))
@@ -171,7 +171,7 @@ the match.\n
 :CALLED-BY `*regexp-clean-iptables*'.\n
 :SEE-ALSO `mon-iptables-make-regexps-long', `mon-cln-iptables-short-form', 
 `mon-cln-iptables-long-form',`*mon-iptables-alist-as-sym*', 
-`mon-bind-iptables-vars-at-loadtime'.\n►►►"
+`mon-bind-iptables-vars-at-loadtime'.\n▶▶▶"
   (let ((mk-shrt-lng
          (append
           (cdr (assoc :IPTABLES-COMMANDS *mon-iptables-alst*))
@@ -199,7 +199,7 @@ the match.\n
 :EXAMPLE\n\(mon-iptables-make-regexps\)\n
 :CALLED-BY `*regexp-clean-iptables*'.\n
 :SEE-ALSO `mon-cln-iptables-short-form', `*mon-iptables-alist-as-sym*',
-`mon-bind-iptables-vars-at-loadtime'.\n►►►"
+`mon-bind-iptables-vars-at-loadtime'.\n▶▶▶"
   (let ((mk-shrt-lng
          (append
           (cdr (assoc :IPTABLES-COMMANDS *mon-iptables-alst*))
@@ -224,7 +224,7 @@ otherwise replace all in buffer.\n
 `mon-iptables-make-regexps', `mon-iptables-make-regexps-long'
 `*regexp-clean-iptables*', `*mon-iptables-regexps*', 
 `*mon-iptables-alist-as-sym*', `*mon-iptables-alst*',
-`mon-bind-iptables-vars-at-loadtime',.\n►►►"
+`mon-bind-iptables-vars-at-loadtime',.\n▶▶▶"
   (interactive "i\n\i\np")
   (let* ((reg-or-buffer (cond ((and intrp (use-region-p)
                                     `(,(region-beginning) . ,(region-end))))
@@ -263,12 +263,12 @@ otherwise replace all in buffer.\n
           (erase-buffer)
           (insert rep)))))
 ;;; 
-;;; :TEST-ME (let ((st-nd (save-excursion `(,(search-forward-regexp "►") . 
-;;;                           ,(search-forward-regexp "◄")))))
+;;; :TEST-ME (let ((st-nd (save-excursion `(,(search-forward-regexp "▶") . 
+;;;                           ,(search-forward-regexp "◀")))))
 ;;;            (mon-cln-iptables-short-form (car st-nd) (cdr st-nd)))
 ;;
 ;;,---- :UNCOMMENT-TO-TEST
-;;| ►
+;;| ▶
 ;;| $TBL -A STLTHSCAN -p tcp --tcp-flags ALL NONE -j DROP
 ;;| $TBL -A STLTHSCAN -p tcp --tcp-flags SYN,FIN SYN,FIN -j DROP
 ;;| $TBL -A STLTHSCAN -p tcp --tcp-flags SYN,RST SYN,RST -j DROP
@@ -276,7 +276,7 @@ otherwise replace all in buffer.\n
 ;;| $TBL -A STLTHSCAN -p tcp --tcp-flags ACK,FIN FIN -j DROP
 ;;| $TBL -A STLTHSCAN -p tcp --tcp-flags ACK,PSH PSH -j DROP
 ;;| $TBL -A STLTHSCAN -p tcp --tcp-flags ACK,URG URG -j DROP
-;;| ◄
+;;| ◀
 ;;`----
 
 ;;; ==============================
@@ -290,7 +290,7 @@ otherwise replace all in buffer.\n
 :SEE-ALSO `mon-cln-iptables-short-form', `mon-iptables-make-regexps', 
 `*regexp-clean-iptables*', `*mon-iptables-regexps*',
 `*mon-iptables-alist-as-sym*',`*mon-iptables-alst*',
-`mon-bind-iptables-vars-at-loadtime'.\n►►►"
+`mon-bind-iptables-vars-at-loadtime'.\n▶▶▶"
   (interactive "i\n\i\np")
   (let* ((reg-or-buffer (cond ((and intrp (use-region-p)
                                     `(,(region-beginning) . ,(region-end))))
@@ -329,12 +329,12 @@ otherwise replace all in buffer.\n
           (erase-buffer)
           (insert rep)))))
 ;;
-;;; :TEST-ME (let ((st-nd (save-excursion `(,(search-forward-regexp "►") . 
-;;;                           ,(search-forward-regexp "◄")))))
+;;; :TEST-ME (let ((st-nd (save-excursion `(,(search-forward-regexp "▶") . 
+;;;                           ,(search-forward-regexp "◀")))))
 ;;;            (mon-cln-iptables-long-form (car st-nd) (cdr st-nd)))
 ;;
 ;;,---- :UNCOMMENT-TO-TEST
-;;| ►
+;;| ▶
 ;;| $TBL --append STLTHSCAN --protocol tcp --tcp-flags ALL NONE --jump DROP
 ;;| $TBL --append STLTHSCAN --protocol tcp --tcp-flags SYN,FIN SYN,FIN --jump DROP
 ;;| $TBL --append STLTHSCAN --protocol tcp --tcp-flags SYN,RST SYN,RST --jump DROP
@@ -342,7 +342,7 @@ otherwise replace all in buffer.\n
 ;;| $TBL --append STLTHSCAN --protocol tcp --tcp-flags ACK,FIN FIN --jump DROP
 ;;| $TBL --append STLTHSCAN --protocol tcp --tcp-flags ACK,PSH PSH --jump DROP
 ;;| $TBL --append STLTHSCAN --protocol tcp --tcp-flags ACK,URG URG --jump DROP
-;;| ◄
+;;| ◀
 ;;`----
 
 ;;; ==============================
@@ -355,7 +355,7 @@ IPTBL-KEY is one of:\n
  :EXAMPLE\n\n(mon-iptables-pp-key :IPTABLES-COMMANDS)\n
 :SEE-ALSO `mon-iptables-pp-as-sym', `mon-iptables-make-regexps',
 `*regexp-clean-iptables*', `*mon-iptables-alist-as-sym*',
-`mon-bind-iptables-vars-at-loadtime'.\n►►►"
+`mon-bind-iptables-vars-at-loadtime'.\n▶▶▶"
   (let ((map-ipt-k (car (member iptbl-key (mapcar 'car *mon-iptables-alst*))))
         (ipt-k #'(lambda (x) ;(cdr
                    (assoc x *mon-iptables-alst*)))
@@ -379,7 +379,7 @@ IPTBL-KEY is one of:\n
 (defun mon-iptables-pp-as-sym (&optional insrtp)
   "Pretty-print the iptable list `*mon-iptables-alst*' as symbol values.\n
 :SEE-ALSO `mon-iptables-pp-key', `*mon-iptables-alist-as-sym*',
-`mon-bind-iptables-vars-at-loadtime'.\n►►►"
+`mon-bind-iptables-vars-at-loadtime'.\n▶▶▶"
   (let (ipt-v)
     (setq ipt-v 
           (with-temp-buffer
@@ -406,7 +406,7 @@ When optional arg W-MSG-USER is non-nil and/or if `*regexp-clean-iptables*',
 :SEE-ALSO `mon-bind-cifs-vars-at-loadtime', `mon-set-register-tags-loadtime',
 `mon-iptables-pp-as-sym', `mon-cln-iptables-long-form',
 `mon-cln-iptables-short-form', `mon-iptables-make-regexps-long',
-`mon-iptables-make-regexps'.\n►►►"
+`mon-iptables-make-regexps'.\n▶▶▶"
 (progn
   (unless (bound-and-true-p *regexp-clean-iptables*)
     (setq w-msg-user (or w-msg-user (null *regexp-clean-iptables*)))
